@@ -137,29 +137,31 @@
       "target_baronies_audited": 288,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 864,
-      "unique_replacement_names": 106,
-      "candidates_with_multilingual_variants": 828,
+      "unique_replacement_names": 120,
+      "candidates_with_multilingual_variants": 827,
       "wikipedia_source_attached": 864,
-      "unique_source_urls": 106,
+      "unique_source_urls": 120,
       "candidates_by_category": {
-        "choronym": 73,
-        "hydronym": 337,
-        "oronym": 153,
-        "topographic_feature": 13,
+        "choronym": 70,
+        "hydronym": 336,
+        "oronym": 158,
+        "topographic_feature": 12,
         "tribe": 288
       },
       "baronies_with_category": {
-        "has_choronym_candidate": 71,
-        "has_hydronym_candidate": 234,
-        "has_oronym_candidate": 132,
-        "has_topographic_feature_candidate": 13,
+        "has_choronym_candidate": 68,
+        "has_hydronym_candidate": 235,
+        "has_oronym_candidate": 135,
+        "has_topographic_feature_candidate": 12,
         "has_tribe_candidate": 288
       },
       "unique_language_codes": [
         "alt",
         "ara",
+        "fas",
         "grc",
         "kaz",
+        "kir",
         "lat",
         "mon",
         "otk",
@@ -180,8 +182,8 @@
       "candidates_by_attestation_basis": {
         "attested_1066_to_1178": 36,
         "attested_867_to_1066": 22,
-        "attested_pre_867": 345,
-        "indigenous_pre_literate": 461
+        "attested_pre_867": 338,
+        "indigenous_pre_literate": 468
       },
       "bookmark_valid_candidates": {
         "867": 806,
@@ -189,7 +191,7 @@
         "1178": 864
       },
       "baronies_with_867_valid_candidate": 288,
-      "unique_localisation_stems": 106
+      "unique_localisation_stems": 120
     }
   },
   "baronies": {
@@ -266,45 +268,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Pechenegs"
         },
         {
-          "name": "Aral Sea",
+          "name": "Kamyslybas",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
+          "localisation_stem": "Kamyslybas",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Prominent sea associated with the Aral Karakum landscape near Kalmas.",
+          "feature_subtype": "lake",
+          "relationship": "Large freshwater lake on the lower Syr Darya delta bordering the Aral Karakum.",
           "language_variants": [
             {
-              "form": "Aral teñizi",
-              "native_script": "Арал теñізі",
+              "form": "Qamystybas",
+              "native_script": "Қамыстыбас",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh ('Sea of Islands')"
+              "notes": "Kazakh name ('Reedy Head')"
             },
             {
-              "form": "Bahr al-Khwarizm",
-              "native_script": null,
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographers ('Sea of Khwarazm')"
-            },
-            {
-              "form": "Aralskoye more",
-              "native_script": "Аралское море",
+              "form": "Kamyslybas",
+              "native_script": "Камыслыбас",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian name"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Turkic hydronym of the lower Syr Darya delta.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Turkic aral ('island'), referring to the numerous islands in the endorheic sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "Large freshwater lake linked to the lower Syr Darya in the Aral Karakum margin; from Turkic qamïs ('reed') and bas ('head').",
+          "source_url": "https://en.wikipedia.org/wiki/Kamyslybas"
         },
         {
           "name": "Syr Darya",
@@ -1443,45 +1438,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ural_(river)"
         },
         {
-          "name": "Aral Sea",
+          "name": "Shalkarteniz",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
+          "localisation_stem": "Shalkarteniz",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Prominent sea associated with the Barsuki landscape near Barsuki.",
+          "feature_subtype": "lake",
+          "relationship": "Endorheic salt lake lying east of the Barsuki sands.",
           "language_variants": [
             {
-              "form": "Aral teñizi",
-              "native_script": "Арал теñізі",
+              "form": "Shalqartengiz",
+              "native_script": "Шалқартеңіз",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh ('Sea of Islands')"
+              "notes": "Kazakh name (Shalqarteñiz, 'Broad Sea')"
             },
             {
-              "form": "Bahr al-Khwarizm",
-              "native_script": null,
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographers ('Sea of Khwarazm')"
-            },
-            {
-              "form": "Aralskoye more",
-              "native_script": "Аралское море",
-              "language": "Russian",
-              "language_code": "rus",
-              "notes": "Russian name"
+              "form": "Shalqār-Tengīz",
+              "native_script": "شلقارتنگیز",
+              "language": "Persian",
+              "language_code": "fas",
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (early modern Kazakh hydronym Shalqar-teñiz)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Turkic aral ('island'), referring to the numerous islands in the endorheic sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "Large seasonal salt lake in the northeastern Turan Depression.",
+          "source_url": "https://en.wikipedia.org/wiki/Shalkarteniz"
         }
       ]
     },
@@ -1551,45 +1539,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Oghuz_Turks"
         },
         {
-          "name": "Aral Sea",
+          "name": "Irgiz River",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
+          "localisation_stem": "Irgiz",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Prominent sea associated with the Barsuki landscape near Chushka-Kol.",
+          "feature_subtype": "river",
+          "relationship": "Steppe river descending from the Mugalzhar hills into Shalkarteniz.",
           "language_variants": [
             {
-              "form": "Aral teñizi",
-              "native_script": "Арал теñізі",
+              "form": "Yrghyz",
+              "native_script": "Ырғыз",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh ('Sea of Islands')"
+              "notes": "Kazakh river name"
             },
             {
-              "form": "Bahr al-Khwarizm",
-              "native_script": null,
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographers ('Sea of Khwarazm')"
-            },
-            {
-              "form": "Aralskoye more",
-              "native_script": "Аралское море",
+              "form": "Irgiz",
+              "native_script": "Иргиз",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian name"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
+          "earliest_attestation_year": 1697,
+          "earliest_attestation_note": "Attested in 17th-century CE Russian steppe cartography (Remezov, c. 1697 CE).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Turkic aral ('island'), referring to the numerous islands in the endorheic sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "Steppe river rising in the eastern Mugodzhar Hills and joining the Turgay basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Irgiz_(Turgay)"
         },
         {
           "name": "Aral Karakum Desert",
@@ -5200,38 +5181,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Mugalzhar"
         },
         {
-          "name": "Turgay River",
+          "name": "Irgiz River",
           "disambiguation_note": null,
-          "localisation_stem": "Turgay",
+          "localisation_stem": "Irgiz",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent river associated with the Turgay landscape near Jaman Akkul.",
+          "relationship": "Main right tributary joining the Turgay River in the Turgay depression.",
           "language_variants": [
             {
-              "form": "Torğay",
-              "native_script": null,
+              "form": "Yrghyz",
+              "native_script": "Ырғыз",
               "language": "Kazakh",
               "language_code": "kaz",
               "notes": "Kazakh river name"
             },
             {
-              "form": "Turgay",
-              "native_script": "Тургай",
+              "form": "Irgiz",
+              "native_script": "Иргиз",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian form"
+              "notes": "Russian geographical name"
             }
           ],
           "earliest_attestation_year": 1697,
-          "earliest_attestation_note": "Attested in late 17th-century CE Russian maps (Remezov's Chertezhnaya Kniga, c. 1697 CE).",
+          "earliest_attestation_note": "Attested in 17th-century CE Russian steppe cartography (Remezov, c. 1697 CE).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major seasonal river of the Turgay Depression flowing toward Lake Shalkarteniz.",
-          "source_url": "https://en.wikipedia.org/wiki/Turgay_(river)"
+          "etymology_notes": "Steppe river rising in the eastern Mugodzhar Hills and joining the Turgay basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Irgiz_(Turgay)"
         }
       ]
     },
@@ -11301,38 +11282,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Bosten_Lake"
         },
         {
-          "name": "Turpan Depression",
+          "name": "Kumtag Desert",
           "disambiguation_note": null,
-          "localisation_stem": "Turpan",
-          "category": "topographic_feature",
-          "feature_subtype": "valley",
-          "relationship": "Prominent valley associated with the Kara Khoja landscape near Kara Khoja.",
+          "localisation_stem": "Kumtag",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Arid dune desert bordering the Turpan basin on the east.",
           "language_variants": [
             {
-              "form": "Turpan",
-              "native_script": null,
+              "form": "Qumtagh Qumluqi",
+              "native_script": "قۇمتاغ قۇملۇقى",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Uyghur oasis and basin name"
+              "notes": "Uyghur name ('Sand Mountain')"
             },
             {
-              "form": "Tǔlǔfān",
-              "native_script": null,
+              "form": "Kùmǔtǎgé Shāmò",
+              "native_script": "庫姆塔格沙漠",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese historical form"
+              "notes": "Chinese name"
+            },
+            {
+              "form": "Qūm-Tāgh",
+              "native_script": "قوم‌تاغ",
+              "language": "Persian",
+              "language_code": "fas",
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": -108,
-          "earliest_attestation_note": "108 BCE (Han dynasty annals of Jushi / Turpan basin)",
+          "earliest_attestation_year": -100,
+          "earliest_attestation_note": "1st century BCE (eastern edge attested as Bailongdui in Han records west of Yumen)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Deep endorheic fault trough south of the Bogda Shan in eastern Xinjiang.",
-          "source_url": "https://en.wikipedia.org/wiki/Turpan_Depression"
+          "etymology_notes": "From Turkic qum ('sand') and tağ ('mountain'); desert east of Lop Nur.",
+          "source_url": "https://en.wikipedia.org/wiki/Kumtag_Desert"
         }
       ]
     },
@@ -11402,38 +11390,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Uyghurs"
         },
         {
-          "name": "Turpan Depression",
+          "name": "Kuruktag",
           "disambiguation_note": null,
-          "localisation_stem": "Turpan",
-          "category": "topographic_feature",
-          "feature_subtype": "valley",
-          "relationship": "Prominent valley associated with the Kara Khoja landscape near Yarkhoto.",
+          "localisation_stem": "Kuruktag",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range framing the southern rim of the Turpan-Hami depression.",
           "language_variants": [
             {
-              "form": "Turpan",
-              "native_script": null,
+              "form": "Quruq Tagh",
+              "native_script": "قۇرۇق تاغ",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Uyghur oasis and basin name"
+              "notes": "Uyghur name ('Dry Mountain')"
             },
             {
-              "form": "Tǔlǔfān",
-              "native_script": null,
+              "form": "Kuluketage",
+              "native_script": "库鲁克塔格",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese historical form"
+              "notes": "Chinese transcription"
             }
           ],
-          "earliest_attestation_year": -108,
-          "earliest_attestation_note": "108 BCE (Han dynasty annals of Jushi / Turpan basin)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Turkic-Uyghur oronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Deep endorheic fault trough south of the Bogda Shan in eastern Xinjiang.",
-          "source_url": "https://en.wikipedia.org/wiki/Turpan_Depression"
+          "etymology_notes": "Arid range separating the Turpan-Hami depression from the Lop Nur basin; from Turkic quruq ('dry') and tagh ('mountain').",
+          "source_url": "https://en.wikipedia.org/wiki/Kuruktag"
         },
         {
           "name": "Flaming Mountains",
@@ -12616,38 +12604,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Khovd_River"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Ulungur River",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Prominent region associated with the Naiman Gobi landscape near Balgun.",
+          "localisation_stem": "Ulungur River",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Trans-Altai river whose upper course is the Bulgan Gol.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Bulgan gol",
+              "native_script": "Булган гол",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian ('Gravelly/Waterless Plain')"
+              "notes": "Mongolian upper-course name ('Sable River')"
             },
             {
-              "form": "Gobi",
-              "native_script": "Гоби",
-              "language": "Russian",
-              "language_code": "rus",
-              "notes": "Russian form"
+              "form": "Ulingir ozeni",
+              "native_script": "Үліңгір өзені",
+              "language": "Kazakh",
+              "language_code": "kaz",
+              "notes": "Kazakh name"
+            },
+            {
+              "form": "Wulungu He",
+              "native_script": "乌伦古河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Chinese river name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1650,
+          "earliest_attestation_note": "Attested in 17th-century CE Oirat and Qing geographical surveys.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mongolic gobi ('semi-desert/gravelly plain'), spanning southern Mongolia and eastern Dzungaria.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Major river rising in the Altai Mountains and flowing west into Ulungur Lake.",
+          "source_url": "https://en.wikipedia.org/wiki/Ulungur_River"
         }
       ]
     },
@@ -12717,38 +12712,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Naimans"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Sutai Mountain",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Prominent region associated with the Naiman Gobi landscape near Chumy-su.",
+          "localisation_stem": "Sutai",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Glaciated Altai massif rising northeast of the Bulgan and Chumy-Su valley.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Sutay khayrkhan",
+              "native_script": "Сутай хайрхан",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian ('Gravelly/Waterless Plain')"
+              "notes": "Mongolian name ('Milky Mountain')"
             },
             {
-              "form": "Gobi",
-              "native_script": "Гоби",
+              "form": "Sutay-Uul",
+              "native_script": "Сутай-Уул",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian form"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian oronym",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mongolic gobi ('semi-desert/gravelly plain'), spanning southern Mongolia and eastern Dzungaria.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Glaciated peak on the Govi-Altai–Khovd border; from Mongolic süü ('milk').",
+          "source_url": "https://en.wikipedia.org/wiki/Sutai_Mountain"
         },
         {
           "name": "Altai Mountains",
@@ -13454,38 +13449,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Khovd_River"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Qarliq Tagh",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Prominent region associated with the Naiman Gobi landscape near Sugi.",
+          "localisation_stem": "Qarliq Tagh",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Glaciated eastern Tian Shan massif rising south of the Barkol basin.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
-              "language": "Mongolian",
-              "language_code": "mon",
-              "notes": "Mongolian ('Gravelly/Waterless Plain')"
+              "form": "Qarliq Tagh",
+              "native_script": "قارلىق تاغ",
+              "language": "Uyghur",
+              "language_code": "uig",
+              "notes": "Uyghur name ('Snowy Mountain')"
             },
             {
-              "form": "Gobi",
-              "native_script": "Гоби",
-              "language": "Russian",
-              "language_code": "rus",
-              "notes": "Russian form"
+              "form": "Kharlig tag",
+              "native_script": "Харлиг таг",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian form"
+            },
+            {
+              "form": "Kaerlike Shan",
+              "native_script": "卡尔里克山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Chinese transcription"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation under this specific peak name; traditional Turkic-Uyghur oronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mongolic gobi ('semi-desert/gravelly plain'), spanning southern Mongolia and eastern Dzungaria.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Easternmost glaciated massif of the Tian Shan rising between Hami and Barkol; from Turkic qarliq ('snowy') and tagh ('mountain').",
+          "source_url": "https://en.wikipedia.org/wiki/Qarliq_Tagh"
         }
       ]
     },
@@ -13555,38 +13557,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Keraites"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Ulungur River",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Prominent region associated with the Naiman Gobi landscape near Kara-Asirgan.",
+          "localisation_stem": "Ulungur River",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River crossing the northern Dzungarian steppe south of the Altai.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Bulgan gol",
+              "native_script": "Булган гол",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian ('Gravelly/Waterless Plain')"
+              "notes": "Mongolian upper-course name ('Sable River')"
             },
             {
-              "form": "Gobi",
-              "native_script": "Гоби",
-              "language": "Russian",
-              "language_code": "rus",
-              "notes": "Russian form"
+              "form": "Ulingir ozeni",
+              "native_script": "Үліңгір өзені",
+              "language": "Kazakh",
+              "language_code": "kaz",
+              "notes": "Kazakh name"
+            },
+            {
+              "form": "Wulungu He",
+              "native_script": "乌伦古河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Chinese river name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1650,
+          "earliest_attestation_note": "Attested in 17th-century CE Oirat and Qing geographical surveys.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mongolic gobi ('semi-desert/gravelly plain'), spanning southern Mongolia and eastern Dzungaria.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Major river rising in the Altai Mountains and flowing west into Ulungur Lake.",
+          "source_url": "https://en.wikipedia.org/wiki/Ulungur_River"
         },
         {
           "name": "Altai Mountains",
@@ -14299,31 +14308,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Salair_Ridge"
         },
         {
-          "name": "Aley River",
-          "disambiguation_note": null,
-          "localisation_stem": "Aley",
+          "name": "Peschanaya",
+          "disambiguation_note": "Ob",
+          "localisation_stem": "Peschanaya",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent river associated with the Aley landscape near Charych.",
+          "relationship": "Altai foothill tributary of the Ob flowing east of the Charysh.",
           "language_variants": [
             {
-              "form": "Aley",
-              "native_script": "Алей",
+              "form": "Peschanaya",
+              "native_script": "Песчаная",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "17th-century Russian Siberian form"
+              "notes": "Russian geographical name ('Sandy River')"
             }
           ],
-          "earliest_attestation_year": 1697,
-          "earliest_attestation_note": "Attested in late 17th-century CE Russian Siberian cartography.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; Russian descriptive hydronym for the Altai foothill river.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Left tributary of the upper Ob flowing through the Altai foothills and steppe.",
-          "source_url": "https://en.wikipedia.org/wiki/Aley_(river)"
+          "etymology_notes": "Left tributary of the upper Ob flowing from the Altai foothills between the Anuy and Katun; from Russian peschany ('sandy').",
+          "source_url": "https://en.wikipedia.org/wiki/Peschanaya_(river)"
         }
       ]
     },
@@ -14386,65 +14395,58 @@
           "source_url": "https://en.wikipedia.org/wiki/Tiele_people"
         },
         {
-          "name": "Aley River",
+          "name": "Barnaulka",
           "disambiguation_note": null,
-          "localisation_stem": "Aley",
+          "localisation_stem": "Barnaulka",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent river associated with the Aley landscape near Anyu.",
+          "relationship": "Left tributary of the upper Ob flowing across the plateau north of the Aley.",
           "language_variants": [
             {
-              "form": "Aley",
-              "native_script": "Алей",
+              "form": "Barnaulka",
+              "native_script": "Барнаулка",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "17th-century Russian Siberian form"
+              "notes": "Russian geographical name from Turkic Boronoul"
             }
           ],
-          "earliest_attestation_year": 1697,
-          "earliest_attestation_note": "Attested in late 17th-century CE Russian Siberian cartography.",
+          "earliest_attestation_year": 1730,
+          "earliest_attestation_note": "Recorded in 18th-century Russian Altai mining surveys (from earlier Teleut-Turkic Boronoul/Porongyul).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Left tributary of the upper Ob flowing through the Altai foothills and steppe.",
-          "source_url": "https://en.wikipedia.org/wiki/Aley_(river)"
+          "etymology_notes": "Left tributary of the upper Ob flowing parallel to the Aley; from Teleut-Turkic boro-ul ('wolf river') or porongy-ul ('muddy river').",
+          "source_url": "https://en.wikipedia.org/wiki/Barnaulka"
         },
         {
-          "name": "Charysh River",
+          "name": "Kasmala",
           "disambiguation_note": null,
-          "localisation_stem": "Charysh",
+          "localisation_stem": "Kasmala",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent river associated with the Aley landscape near Anyu.",
+          "relationship": "Steppe-forest tributary of the upper Ob parallel to the Barnaulka.",
           "language_variants": [
             {
-              "form": "Charysh",
-              "native_script": "Чарыш",
+              "form": "Kasmala",
+              "native_script": "Касмала",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "17th-century Russian Siberian form"
-            },
-            {
-              "form": "Čarïš",
-              "native_script": null,
-              "language": "Southern Altai",
-              "language_code": "alt",
-              "notes": "Altai river name"
+              "notes": "Russian adaptation of Turkic hydronym"
             }
           ],
-          "earliest_attestation_year": 1697,
-          "earliest_attestation_note": "Attested in late 17th-century CE Russian Siberian cartography.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; indigenous Turkic steppe hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Left tributary of the upper Ob rising in the Korgon Range of the Altai.",
-          "source_url": "https://en.wikipedia.org/wiki/Charysh"
+          "etymology_notes": "Left tributary of the upper Ob flowing across the Ob Plateau north of the Aley; from Turkic kaz- ('dig, channel').",
+          "source_url": "https://en.wikipedia.org/wiki/Kasmala_(river)"
         }
       ]
     },
@@ -16154,31 +16156,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ob"
         },
         {
-          "name": "Chumysh River",
+          "name": "Katun River",
           "disambiguation_note": null,
-          "localisation_stem": "Chumysh",
+          "localisation_stem": "Katun",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent river associated with the Salair landscape near Biia.",
+          "relationship": "Glacial Altai river joining the Biya to form the Ob.",
           "language_variants": [
             {
-              "form": "Chumysh",
-              "native_script": "Чумыш",
+              "form": "Kadyn",
+              "native_script": "Кадын",
+              "language": "Southern Altai",
+              "language_code": "alt",
+              "notes": "Altai river name"
+            },
+            {
+              "form": "Katun",
+              "native_script": "Катунь",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "17th-century Russian Siberian form"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1697,
-          "earliest_attestation_note": "Attested in late 17th-century CE Russian Siberian maps.",
+          "earliest_attestation_year": 1633,
+          "earliest_attestation_note": "Attested in 17th-century CE Russian and Altai records.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Right tributary of the upper Ob rising on the Salair Ridge.",
-          "source_url": "https://en.wikipedia.org/wiki/Chumysh"
+          "etymology_notes": "From Turkic qatun ('queen/lady'), the main western headstream of the Ob.",
+          "source_url": "https://en.wikipedia.org/wiki/Katun_(river)"
         }
       ]
     },
@@ -16241,38 +16250,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Shors"
         },
         {
-          "name": "Biya River",
+          "name": "Salair Ridge",
           "disambiguation_note": null,
-          "localisation_stem": "Biya",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Prominent river associated with the Salair landscape near Chumych.",
+          "localisation_stem": "Salair",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Forested ridge where the Chumysh River originates.",
           "language_variants": [
             {
-              "form": "Biya",
-              "native_script": "Бия",
+              "form": "Salairskiy kryazh",
+              "native_script": "Салаирский кряж",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "17th-century Russian Siberian records"
-            },
-            {
-              "form": "Biy",
-              "native_script": "Бий",
-              "language": "Southern Altai",
-              "language_code": "alt",
-              "notes": "Altai ('Lord/Master')"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1633,
-          "earliest_attestation_note": "Attested in 17th-century CE Russian Siberian records (c. 1633 CE).",
+          "earliest_attestation_year": 1697,
+          "earliest_attestation_note": "Attested in pre-1700 CE Teleut and Russian Siberian geographical accounts.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Headstream of the Ob flowing out of Lake Teletskoye.",
-          "source_url": "https://en.wikipedia.org/wiki/Biya_(river)"
+          "etymology_notes": "Low mountain ridge between the upper Ob plain and the Kuznetsk Basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Salair_Ridge"
         },
         {
           "name": "Tom",
@@ -18310,38 +18312,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Kipchaks"
         },
         {
-          "name": "Betpak-Dala",
+          "name": "Moiynkum Desert",
           "disambiguation_note": null,
-          "localisation_stem": "Betpak-Dala",
+          "localisation_stem": "Moiynkum",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Prominent region associated with the Betpa landscape near Bos-Tau.",
+          "relationship": "Sandy desert plain lying immediately south of Betpak-Dala across the Chu.",
           "language_variants": [
             {
-              "form": "Betpaqdala",
-              "native_script": "Бетпақдала",
+              "form": "Moyynqum",
+              "native_script": "Мойынқум",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh ('Unlucky/Barren Steppe')"
+              "notes": "Kazakh name (Moyınqum)"
             },
             {
-              "form": "Betpak-Dala",
-              "native_script": "Бетпак-Дала",
-              "language": "Russian",
-              "language_code": "rus",
-              "notes": "Russian form"
+              "form": "Mūyūn-Qūm",
+              "native_script": "مویون‌قوم",
+              "language": "Persian",
+              "language_code": "fas",
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "Traditional Kazakh choronym attested in pre-1700 CE steppe itineraries.",
+          "earliest_attestation_year": 1072,
+          "earliest_attestation_note": "1072 CE (Mahmud al-Kashgari, Diwan Lughat al-Turk, describing the steppe sands south of the Chu)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Vast clay-and-sand desert plateau between the Sarysu and Chu rivers in central Kazakhstan.",
-          "source_url": "https://en.wikipedia.org/wiki/Betpak-Dala"
+          "etymology_notes": "Kazakh Moyınqum ('Neck Sand'), sandy desert stretching between the Chu and Talas rivers.",
+          "source_url": "https://en.wikipedia.org/wiki/Moiynkum_Desert"
         },
         {
           "name": "Sarysu River",
@@ -22081,38 +22083,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Saka"
         },
         {
-          "name": "Bayanaul Range",
+          "name": "Shiderti",
           "disambiguation_note": null,
-          "localisation_stem": "Bayanaul",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Prominent mountain range associated with the Karabas landscape near Uliuty.",
+          "localisation_stem": "Shiderti",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Steppe river flowing northwest between the Bayanaul highlands and Olenti.",
           "language_variants": [
             {
-              "form": "Bayanauıl",
-              "native_script": "Баянауıл",
+              "form": "Shiderti",
+              "native_script": "Шідерті",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh mountain name"
+              "notes": "Kazakh name ('Hobbled')"
             },
             {
-              "form": "Bayanaul",
-              "native_script": "Баянаул",
+              "form": "Shiderty",
+              "native_script": "Шидерты",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian form"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "Traditional Kazakh-Mongol oronym attested in pre-1700 CE Saryarka traditions.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Kazakh-Kipchak hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Granite massif in northeastern Saryarka between the Irtysh and Nura basins.",
-          "source_url": "https://en.wikipedia.org/wiki/Bayanaul_Range"
+          "etymology_notes": "Endorheic steppe river rising near Bayanaul and flowing northwest toward the Sileti-Irtysh divide; from Kazakh shider ('horse hobble').",
+          "source_url": "https://en.wikipedia.org/wiki/Shiderti"
         },
         {
           "name": "Sileti River",
@@ -28055,38 +28057,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ulytau"
         },
         {
-          "name": "Nura River",
+          "name": "Terisakkan",
           "disambiguation_note": null,
-          "localisation_stem": "Nura",
+          "localisation_stem": "Terisakkan",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent river associated with the Saryarka landscape near Kokjetau.",
+          "relationship": "Left tributary of the Ishim flowing along the western Tengiz rim.",
           "language_variants": [
             {
-              "form": "Nura",
-              "native_script": "Нура",
+              "form": "Terisaqqan",
+              "native_script": "Терісаққан",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh river name"
+              "notes": "Kazakh name ('Flowing Backwards')"
             },
             {
-              "form": "Nura",
-              "native_script": "Нура",
+              "form": "Tersakkan",
+              "native_script": "Терсаккан",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian form"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1697,
-          "earliest_attestation_note": "Attested in late 17th-century CE Russian steppe maps.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Kazakh-Kipchak hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Steppe river of central Kazakhstan flowing into Lake Tengiz.",
-          "source_url": "https://en.wikipedia.org/wiki/Nura_(river)"
+          "etymology_notes": "Left tributary of the Ishim rising near Ulytau and flowing north past the Tengiz basin; from Kazakh teris ('reverse') and aqqan ('flowing').",
+          "source_url": "https://en.wikipedia.org/wiki/Terisakkan"
         }
       ]
     },
@@ -28163,38 +28165,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Kipchaks"
         },
         {
-          "name": "Nura River",
+          "name": "Korgalzhyn",
           "disambiguation_note": null,
-          "localisation_stem": "Nura",
+          "localisation_stem": "Korgalzhyn",
           "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Prominent river associated with the Saryarka landscape near Koja Kul.",
+          "feature_subtype": "lake",
+          "relationship": "Freshwater wetland lake immediately east of Lake Tengiz on the Nura.",
           "language_variants": [
             {
-              "form": "Nura",
-              "native_script": "Нура",
+              "form": "Qorgaljyn",
+              "native_script": "Қорғалжын",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh river name"
+              "notes": "Kazakh name"
             },
             {
-              "form": "Nura",
-              "native_script": "Нура",
+              "form": "Korgalzhyn",
+              "native_script": "Коргалжын",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian form"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1697,
-          "earliest_attestation_note": "Attested in late 17th-century CE Russian steppe maps.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Kazakh steppe hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Steppe river of central Kazakhstan flowing into Lake Tengiz.",
-          "source_url": "https://en.wikipedia.org/wiki/Nura_(river)"
+          "etymology_notes": "Large freshwater wetland lake fed by the Nura River immediately east of Lake Tengiz in Saryarka.",
+          "source_url": "https://en.wikipedia.org/wiki/Korgalzhyn"
         },
         {
           "name": "Lake Tengiz",
@@ -30683,38 +30685,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Lake_Sasykkol"
         },
         {
-          "name": "Lepsy River",
+          "name": "Dzungarian Alatau",
           "disambiguation_note": null,
-          "localisation_stem": "Lepsy",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Prominent river associated with the Alakol landscape near Sarkand.",
+          "localisation_stem": "Dzungarian Alatau",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range rising directly above Sarkand and feeding the Lepsy.",
           "language_variants": [
             {
-              "form": "Lepsi",
-              "native_script": "Лепсі",
+              "form": "Jetisu Alatauy",
+              "native_script": "Жетісу Алатауы",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh river name"
+              "notes": "Kazakh name ('Seven Rivers Alatau')"
             },
             {
-              "form": "Lepsy",
-              "native_script": "Лепсы",
+              "form": "Dzhungarsky Alatau",
+              "native_script": "Джунгарский Алатау",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian form"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "Traditional Kazakh hydronym attested in pre-1700 CE Jetisu itineraries.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation under this compound; traditional Turkic Alatau ('variegated mountains') oronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river of Jetisu flowing northwest into eastern Lake Balkhash.",
-          "source_url": "https://en.wikipedia.org/wiki/Lepsy_(river)"
+          "etymology_notes": "Major mountain range separating the Ili and Balkhash-Alakol basins along the Zhetysu-Dzungaria border.",
+          "source_url": "https://en.wikipedia.org/wiki/Dzungarian_Alatau"
         }
       ]
     },
@@ -30784,38 +30786,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Wusun"
         },
         {
-          "name": "Lepsy River",
+          "name": "Urzhar",
           "disambiguation_note": null,
-          "localisation_stem": "Lepsy",
+          "localisation_stem": "Urzhar",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent river associated with the Alakol landscape near Usharal.",
+          "relationship": "Steppe-mountain river emptying into Lake Alakol near Usharal.",
           "language_variants": [
             {
-              "form": "Lepsi",
-              "native_script": "Лепсі",
+              "form": "Urjar",
+              "native_script": "Үржар",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh river name"
+              "notes": "Kazakh name"
             },
             {
-              "form": "Lepsy",
-              "native_script": "Лепсы",
+              "form": "Urdzhar",
+              "native_script": "Урджар",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian form"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "Traditional Kazakh hydronym attested in pre-1700 CE Jetisu itineraries.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Turkic-Kazakh hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river of Jetisu flowing northwest into eastern Lake Balkhash.",
-          "source_url": "https://en.wikipedia.org/wiki/Lepsy_(river)"
+          "etymology_notes": "River rising on the southern slopes of the Tarbagatai Mountains and draining south into Lake Alakol.",
+          "source_url": "https://en.wikipedia.org/wiki/Urzhar_(river)"
         },
         {
           "name": "Karatal River",
@@ -32771,45 +32773,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Lake_Zaysan"
         },
         {
-          "name": "Altai Mountains",
+          "name": "Ulba",
           "disambiguation_note": null,
-          "localisation_stem": "Altai",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Prominent mountain range associated with the Semey landscape near Ridder.",
+          "localisation_stem": "Ulba",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Right tributary of the Irtysh flowing past Ridder from the western Altai.",
           "language_variants": [
             {
-              "form": "Altun Yïš",
-              "native_script": null,
-              "language": "Old Turkic",
-              "language_code": "otk",
-              "notes": "Orkhon inscriptions ('Golden Mountain Forest')"
+              "form": "Ulbi",
+              "native_script": "Үлбі",
+              "language": "Kazakh",
+              "language_code": "kaz",
+              "notes": "Kazakh name"
             },
             {
-              "form": "Altai",
-              "native_script": "Алтаи",
-              "language": "Mongolian",
-              "language_code": "mon",
-              "notes": "Mongolian ('Gold')"
-            },
-            {
-              "form": "Altay",
-              "native_script": "Алтай",
+              "form": "Ulba",
+              "native_script": "Ульба",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian form"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "c. 100 BCE (Shiji, as Jinshan / Golden Mountains)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Altai-Irtysh hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Turkic-Mongolic altan/altun ('gold'), the great mountain system of Inner Asia.",
-          "source_url": "https://en.wikipedia.org/wiki/Altai_Mountains"
+          "etymology_notes": "Right tributary of the upper Irtysh draining the western Altai slopes through Ridder and Oskemen.",
+          "source_url": "https://en.wikipedia.org/wiki/Ulba_(river)"
         }
       ]
     },
@@ -32879,45 +32874,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Saka"
         },
         {
-          "name": "Altai Mountains",
+          "name": "Lake Markakol",
           "disambiguation_note": null,
-          "localisation_stem": "Altai",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Prominent mountain range associated with the Semey landscape near Bukhtarma.",
+          "localisation_stem": "Markakol",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Highland alpine lake in the southern Altai adjacent to the Bukhtarma.",
           "language_variants": [
             {
-              "form": "Altun Yïš",
-              "native_script": null,
-              "language": "Old Turkic",
-              "language_code": "otk",
-              "notes": "Orkhon inscriptions ('Golden Mountain Forest')"
+              "form": "Marqaköl",
+              "native_script": "Марқакөл",
+              "language": "Kazakh",
+              "language_code": "kaz",
+              "notes": "Kazakh ('Lamb Lake')"
             },
             {
-              "form": "Altai",
-              "native_script": "Алтаи",
-              "language": "Mongolian",
-              "language_code": "mon",
-              "notes": "Mongolian ('Gold')"
-            },
-            {
-              "form": "Altay",
-              "native_script": "Алтай",
+              "form": "Markakol",
+              "native_script": "Маркакол",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian form"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "c. 100 BCE (Shiji, as Jinshan / Golden Mountains)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1697,
+          "earliest_attestation_note": "Attested in pre-1700 CE Kazakh and Altai steppe itineraries.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Turkic-Mongolic altan/altun ('gold'), the great mountain system of Inner Asia.",
-          "source_url": "https://en.wikipedia.org/wiki/Altai_Mountains"
+          "etymology_notes": "High-altitude alpine lake in the southern Altai of eastern Kazakhstan.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Markakol"
         },
         {
           "name": "Tarbagatai Mountains",
@@ -33461,38 +33449,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Karluks"
         },
         {
-          "name": "Uba River",
+          "name": "Chingiztau",
           "disambiguation_note": null,
-          "localisation_stem": "Uba",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Prominent river associated with the Semey landscape near Semey.",
+          "localisation_stem": "Chingiztau",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Range of the eastern Kazakh Uplands rising south of Semey.",
           "language_variants": [
             {
-              "form": "Oba",
-              "native_script": "Оба",
+              "form": "Shyngystau",
+              "native_script": "Шыңғыстау",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh river name"
+              "notes": "Kazakh name"
             },
             {
-              "form": "Uba",
-              "native_script": "Уба",
+              "form": "Chingiztau",
+              "native_script": "Чингизтау",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "17th-century Russian Siberian form"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1697,
-          "earliest_attestation_note": "Attested in late 17th-century CE Russian Siberian cartography.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional steppe oronym of the eastern Kazakh Uplands.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Right tributary of the Irtysh rising in the western Altai Mountains.",
-          "source_url": "https://en.wikipedia.org/wiki/Uba_(river)"
+          "etymology_notes": "Mountain range of the eastern Kazakh Uplands rising south of Semey toward the Irtysh-Balkhash divide.",
+          "source_url": "https://en.wikipedia.org/wiki/Chingiztau"
         },
         {
           "name": "Lake Zaysan",
@@ -34171,38 +34159,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Tuhsi"
         },
         {
-          "name": "Naryn",
+          "name": "Kyrgyz Ala-Too Range",
           "disambiguation_note": null,
-          "localisation_stem": "Naryn",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Prominent river associated with the Talas Alatau landscape near Pishkek.",
+          "localisation_stem": "Kyrgyz Ala-Too",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "High Tian Shan range rising directly above the Chu Valley and Bishkek.",
           "language_variants": [
             {
-              "form": "Narın",
-              "native_script": "Нарıн",
-              "language": "Kazakh",
-              "language_code": "kaz",
-              "notes": "Turkic river name"
+              "form": "Kyrgyz Ala-Toosu",
+              "native_script": "Кыргыз Ала-Тоосу",
+              "language": "Kyrgyz",
+              "language_code": "kir",
+              "notes": "Kyrgyz mountain range name"
             },
             {
-              "form": "Naryn",
-              "native_script": "Нарын",
+              "form": "Qyrghyz Alatauy",
+              "native_script": "Қырғыз Алатауы",
+              "language": "Kazakh",
+              "language_code": "kaz",
+              "notes": "Kazakh mountain range name"
+            },
+            {
+              "form": "Kirgizskiy khrebet",
+              "native_script": "Киргизский хребет",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian form"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 982,
-          "earliest_attestation_note": "982 CE (Hudud al-'Alam, as Khashart / upper Syr Darya)",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (Tarikh-i Rashidi / Baburnama, as Ala-tağ)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major Tian Shan river forming the main headstream of the Syr Darya.",
-          "source_url": "https://en.wikipedia.org/wiki/Naryn_(river)"
+          "etymology_notes": "Major northern Tian Shan range bordering the Chu River valley.",
+          "source_url": "https://en.wikipedia.org/wiki/Kyrgyz_Ala-Too_Range"
         },
         {
           "name": "Tian Shan",
@@ -35462,45 +35457,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tarbagatai_Mountains"
         },
         {
-          "name": "Emil River",
+          "name": "Urzhar",
           "disambiguation_note": null,
-          "localisation_stem": "Emil",
+          "localisation_stem": "Urzhar",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent river associated with the Tarbagatai landscape near Sarychulsyn.",
+          "relationship": "River descending from the Tarbagatai Mountains into Lake Alakol.",
           "language_variants": [
             {
-              "form": "Emil",
-              "native_script": "Эміл",
+              "form": "Urjar",
+              "native_script": "Үржар",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh river name"
+              "notes": "Kazakh name"
             },
             {
-              "form": "Imil",
-              "native_script": "Имил",
-              "language": "Mongolian",
-              "language_code": "mon",
-              "notes": "13th-century Mongol chronicle form"
-            },
-            {
-              "form": "Emel",
-              "native_script": "Эмел",
+              "form": "Urdzhar",
+              "native_script": "Урджар",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian form"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1221,
-          "earliest_attestation_note": "Attested in 13th-century CE Mongol and Persian chronicles (Juvayni, c. 1221 CE).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Turkic-Kazakh hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River rising in the Tarbagatai Mountains and flowing west into Lake Alakol.",
-          "source_url": "https://en.wikipedia.org/wiki/Emil_(river)"
+          "etymology_notes": "River rising on the southern slopes of the Tarbagatai Mountains and draining south into Lake Alakol.",
+          "source_url": "https://en.wikipedia.org/wiki/Urzhar_(river)"
         }
       ]
     },
@@ -35570,45 +35558,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Wusun"
         },
         {
-          "name": "Emil River",
+          "name": "Dzungarian Gate",
           "disambiguation_note": null,
-          "localisation_stem": "Emil",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Prominent river associated with the Tarbagatai landscape near Ala-Kul.",
+          "localisation_stem": "Dzungarian Gate",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "Mountain corridor connecting the Lake Alakol basin to Ebi Lake.",
           "language_variants": [
             {
-              "form": "Emil",
-              "native_script": "Эміл",
+              "form": "Zhonghar qaqpasy",
+              "native_script": "Жоңғар қақпасы",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh river name"
+              "notes": "Kazakh name ('Dzungarian Gate')"
             },
             {
-              "form": "Imil",
-              "native_script": "Имил",
-              "language": "Mongolian",
-              "language_code": "mon",
-              "notes": "13th-century Mongol chronicle form"
+              "form": "Alashankou",
+              "native_script": "阿拉山口",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Chinese pass name"
             },
             {
-              "form": "Emel",
-              "native_script": "Эмел",
+              "form": "Dzhungarskiye vorota",
+              "native_script": "Джунгарские ворота",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian form"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1221,
-          "earliest_attestation_note": "Attested in 13th-century CE Mongol and Persian chronicles (Juvayni, c. 1221 CE).",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -430,
+          "earliest_attestation_note": "Associated with the Hyperborean/Boreas wind pass in Herodotus (c. 430 BCE) and medieval Mongol routes.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River rising in the Tarbagatai Mountains and flowing west into Lake Alakol.",
-          "source_url": "https://en.wikipedia.org/wiki/Emil_(river)"
+          "etymology_notes": "Strategic mountain pass between the Dzungarian Alatau and Barlik mountains linking Kazakhstan and Dzungaria.",
+          "source_url": "https://en.wikipedia.org/wiki/Dzungarian_Gate"
         },
         {
           "name": "Ebi Lake",
@@ -37934,45 +37922,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Lake_Balkhash"
         },
         {
-          "name": "Chu River",
+          "name": "Kyrgyz Ala-Too Range",
           "disambiguation_note": null,
-          "localisation_stem": "Chu",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Prominent river associated with the Zhetysu landscape near Kurdai.",
+          "localisation_stem": "Kyrgyz Ala-Too",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Northern Tian Shan range rising across the Chu Valley south of Korday.",
           "language_variants": [
             {
-              "form": "Şu",
-              "native_script": "Şу",
+              "form": "Kyrgyz Ala-Toosu",
+              "native_script": "Кыргыз Ала-Тоосу",
+              "language": "Kyrgyz",
+              "language_code": "kir",
+              "notes": "Kyrgyz mountain range name"
+            },
+            {
+              "form": "Qyrghyz Alatauy",
+              "native_script": "Қырғыз Алатауы",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh river name"
+              "notes": "Kazakh mountain range name"
             },
             {
-              "form": "Ču",
-              "native_script": null,
-              "language": "Old Turkic",
-              "language_code": "otk",
-              "notes": "Medieval Turkic river name"
-            },
-            {
-              "form": "Chu",
-              "native_script": "Чу",
+              "form": "Kirgizskiy khrebet",
+              "native_script": "Киргизский хребет",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian form"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 629,
-          "earliest_attestation_note": "629 CE (Xuanzang, Great Tang Records on the Western Regions, as Suye)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (Tarikh-i Rashidi / Baburnama, as Ala-tağ)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river flowing from the Tian Shan into the Betpak-Dala desert.",
-          "source_url": "https://en.wikipedia.org/wiki/Chu_(river)"
+          "etymology_notes": "Major northern Tian Shan range bordering the Chu River valley.",
+          "source_url": "https://en.wikipedia.org/wiki/Kyrgyz_Ala-Too_Range"
         }
       ]
     },
@@ -39363,7 +39351,7 @@
           "localisation_stem": "Naimans",
           "category": "tribe",
           "feature_subtype": "medieval_people",
-          "relationship": "Historical nomadic confederation active in the x_script_8046 steppe around Chuguchak.",
+          "relationship": "Historical nomadic confederation active in the steppe around Chuguchak.",
           "language_variants": [
             {
               "form": "Naiman",
@@ -39404,7 +39392,7 @@
           "localisation_stem": "Emil",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent river associated with the x_script_8046 landscape near Chuguchak.",
+          "relationship": "Prominent river associated with the landscape near Chuguchak.",
           "language_variants": [
             {
               "form": "Emil",
@@ -39445,7 +39433,7 @@
           "localisation_stem": "Alakol",
           "category": "hydronym",
           "feature_subtype": "lake",
-          "relationship": "Prominent lake associated with the x_script_8046 landscape near Chuguchak.",
+          "relationship": "Prominent lake associated with the landscape near Chuguchak.",
           "language_variants": [
             {
               "form": "Alaköl",
@@ -39539,7 +39527,7 @@
           "localisation_stem": "Alakol",
           "category": "hydronym",
           "feature_subtype": "lake",
-          "relationship": "Prominent lake associated with the x_script_8046 landscape near Cherga.",
+          "relationship": "Prominent lake associated with the landscape near Cherga.",
           "language_variants": [
             {
               "form": "Alaköl",
@@ -39573,7 +39561,7 @@
           "localisation_stem": "Saur",
           "category": "oronym",
           "feature_subtype": "mountain_range",
-          "relationship": "Prominent mountain range associated with the x_script_8046 landscape near Cherga.",
+          "relationship": "Prominent mountain range associated with the landscape near Cherga.",
           "language_variants": [
             {
               "form": "Sauır",
@@ -39633,7 +39621,7 @@
           "localisation_stem": "Karluks",
           "category": "tribe",
           "feature_subtype": "turkic_tribe",
-          "relationship": "Historical nomadic confederation active in the x_script_8046 steppe around Zatsan.",
+          "relationship": "Historical nomadic confederation active in the steppe around Zatsan.",
           "language_variants": [
             {
               "form": "Qarluq",
@@ -39674,7 +39662,7 @@
           "localisation_stem": "Saur",
           "category": "oronym",
           "feature_subtype": "mountain_range",
-          "relationship": "Prominent mountain range associated with the x_script_8046 landscape near Zatsan.",
+          "relationship": "Prominent mountain range associated with the landscape near Zatsan.",
           "language_variants": [
             {
               "form": "Sauır",
@@ -39708,7 +39696,7 @@
           "localisation_stem": "Dzungarian Gate",
           "category": "topographic_feature",
           "feature_subtype": "valley",
-          "relationship": "Prominent valley associated with the x_script_8046 landscape near Zatsan.",
+          "relationship": "Prominent valley associated with the landscape near Zatsan.",
           "language_variants": [
             {
               "form": "Joñğar qaqpası",

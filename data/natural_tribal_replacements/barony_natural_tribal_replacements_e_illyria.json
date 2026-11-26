@@ -137,10 +137,10 @@
       "target_baronies_audited": 107,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 321,
-      "unique_replacement_names": 284,
+      "unique_replacement_names": 283,
       "candidates_with_multilingual_variants": 224,
       "wikipedia_source_attached": 321,
-      "unique_source_urls": 284,
+      "unique_source_urls": 283,
       "candidates_by_category": {
         "choronym": 17,
         "hydronym": 99,
@@ -180,8 +180,8 @@
       "candidates_by_attestation_basis": {
         "attested_1066_to_1178": 2,
         "attested_867_to_1066": 5,
-        "attested_pre_867": 164,
-        "indigenous_pre_literate": 150
+        "attested_pre_867": 165,
+        "indigenous_pre_literate": 149
       },
       "bookmark_valid_candidates": {
         "867": 314,
@@ -189,7 +189,7 @@
         "1178": 321
       },
       "baronies_with_867_valid_candidate": 107,
-      "unique_localisation_stems": 283
+      "unique_localisation_stems": 282
     }
   },
   "baronies": {
@@ -4990,38 +4990,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Cornacates"
         },
         {
-          "name": "Usora",
+          "name": "Bosna",
           "disambiguation_note": null,
-          "localisation_stem": "Usora",
+          "localisation_stem": "Bosna",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Left tributary of the Bosna north of Maglaj.",
+          "relationship": "Major river flowing northward directly through Maglaj before receiving the Usora near Doboj.",
           "language_variants": [
             {
-              "form": "Usora",
+              "form": "Bosna",
               "native_script": null,
               "language": "Bosnian",
               "language_code": "bos",
-              "notes": "Bosnian name"
+              "notes": "Bosnian/Serbo-Croatian hydronym"
             },
             {
-              "form": "Usora",
+              "form": "Bathinus",
               "native_script": null,
-              "language": "Croatian",
-              "language_code": "hrv",
-              "notes": "Croatian name"
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin hydronym attested in Velleius Paterculus"
+            },
+            {
+              "form": "Bosona",
+              "native_script": "Βόσονα",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Byzantine Greek form recorded by Constantine VII Porphyrogenitus"
             }
           ],
-          "earliest_attestation_year": 1225,
-          "earliest_attestation_note": "13th century CE (1225 CE in papal and Hungarian charters)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 9,
+          "earliest_attestation_note": "1st century CE (9 CE as Bathinus flumen in Velleius Paterculus)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Medieval Bosnian hydronym of pre-Slavic or Slavic origin.",
-          "source_url": "https://en.wikipedia.org/wiki/Usora_(river)"
+          "etymology_notes": "From Illyrian *Bassinus / *Bosona (likely from Proto-Indo-European *bheg- 'flowing water'), giving its name to Bosnia.",
+          "source_url": "https://en.wikipedia.org/wiki/Bosna_(river)"
         },
         {
           "name": "Trebava",

@@ -137,22 +137,22 @@
       "target_baronies_audited": 912,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 2736,
-      "unique_replacement_names": 1321,
-      "candidates_with_multilingual_variants": 2367,
+      "unique_replacement_names": 1330,
+      "candidates_with_multilingual_variants": 2363,
       "wikipedia_source_attached": 2736,
-      "unique_source_urls": 1333,
+      "unique_source_urls": 1343,
       "candidates_by_category": {
         "choronym": 195,
-        "hydronym": 1112,
+        "hydronym": 1113,
         "oronym": 388,
-        "topographic_feature": 129,
+        "topographic_feature": 128,
         "tribe": 912
       },
       "baronies_with_category": {
         "has_choronym_candidate": 191,
-        "has_hydronym_candidate": 859,
-        "has_oronym_candidate": 372,
-        "has_topographic_feature_candidate": 128,
+        "has_hydronym_candidate": 858,
+        "has_oronym_candidate": 371,
+        "has_topographic_feature_candidate": 127,
         "has_tribe_candidate": 912
       },
       "unique_language_codes": [
@@ -220,8 +220,8 @@
         "unattested_indigenous_or_minor": 17
       },
       "candidates_by_attestation_basis": {
-        "attested_pre_867": 1719,
-        "indigenous_pre_literate": 1017
+        "attested_pre_867": 1708,
+        "indigenous_pre_literate": 1028
       },
       "bookmark_valid_candidates": {
         "867": 2736,
@@ -229,7 +229,7 @@
         "1178": 2736
       },
       "baronies_with_867_valid_candidate": 912,
-      "unique_localisation_stems": 1315
+      "unique_localisation_stems": 1324
     }
   },
   "baronies": {
@@ -26056,45 +26056,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Allobroges"
         },
         {
-          "name": "Lake Geneva",
-          "disambiguation_note": null,
-          "localisation_stem": "Geneva",
+          "name": "Dranse",
+          "disambiguation_note": "Haute-Savoie",
+          "localisation_stem": "Dranse",
           "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Great subalpine lake on whose southern shore Thonon-les-Bains sits.",
+          "feature_subtype": "river",
+          "relationship": "Alpine torrent descending through the Chablais valleys to form a delta immediately east of Thonon-les-Bains.",
           "language_variants": [
             {
-              "form": "Lac Léman",
+              "form": "Dranse",
               "native_script": null,
               "language": "French",
               "language_code": "fra",
-              "notes": "Standard regional French name"
+              "notes": "French hydronym"
             },
             {
-              "form": "Lèc Lèman",
+              "form": "Dransa",
               "native_script": null,
               "language": "Arpitan",
               "language_code": "frp",
-              "notes": "Savoyard Arpitan form"
-            },
-            {
-              "form": "Lacus Lemannus",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name in Caesar"
+              "notes": "Savoyard Franco-Provençal form"
             }
           ],
-          "earliest_attestation_year": -58,
-          "earliest_attestation_note": "Attested as Lacus Lemannus in Julius Caesar's Commentarii de Bello Gallico (1.2), 58 BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-Roman Alpine hydronym of the Chablais basin.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Lemannus derives from a Celtic or pre-Celtic root related to Greek limne ('lake, marsh') or Gaulish *lemo- ('elm').",
-          "source_url": "https://en.wikipedia.org/wiki/Lake_Geneva"
+          "etymology_notes": "From pre-Celtic or Gaulish *Drantia / *Drancus (root *dr-/*dreu- 'to run swiftly'), shared by several Alpine torrents.",
+          "source_url": "https://en.wikipedia.org/wiki/Dranse_(Haute-Savoie)"
         },
         {
           "name": "Chablais",
@@ -40475,52 +40468,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Wagri"
         },
         {
-          "name": "Baltic Sea",
+          "name": "Hohwacht Bay",
           "disambiguation_note": null,
-          "localisation_stem": "Baltic Sea",
+          "localisation_stem": "Hohwacht",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea surrounding the island on the southwestern Baltic strait.",
+          "feature_subtype": "bay",
+          "relationship": "Coastal bight lying immediately southwest of Fehmarn along the Wagrian shoreline.",
           "language_variants": [
             {
-              "form": "Ostsee",
+              "form": "Hohwachter Bucht",
               "native_script": null,
               "language": "German",
               "language_code": "deu",
-              "notes": "Modern German name ('East Sea')"
-            },
-            {
-              "form": "Oostsee",
-              "native_script": null,
-              "language": "Low German",
-              "language_code": "nds",
-              "notes": "Low German name"
-            },
-            {
-              "form": "Østersøen",
-              "native_script": null,
-              "language": "Danish",
-              "language_code": "dan",
-              "notes": "Danish name in the Holstein–Schleswig borderland"
-            },
-            {
-              "form": "Mare Suebicum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name in Tacitus, Germania 45; also 'Mare Balticum' — Medieval Latin name first attested in Adam of Bremen (c. 1075 CE)."
+              "notes": "German name of the bay"
             }
           ],
-          "earliest_attestation_year": 98,
-          "earliest_attestation_note": "98 CE (Tacitus, Germania 45, as Mare Suebicum; Mare Balticum in Adam of Bremen c. 1075 CE)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Natural coastal bight of northeastern Wagria opposite Fehmarn.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Classical Mare Suebicum ('Suebian Sea'); medieval Mare Balticum possibly from Germanic *balt- ('belt, strait').",
-          "source_url": "https://en.wikipedia.org/wiki/Baltic_Sea"
+          "etymology_notes": "Named after Hohwacht (Low German hooge Wacht, 'high watch/lookout'), a medieval coastal watchpoint.",
+          "source_url": "https://en.wikipedia.org/wiki/Hohwacht_Bay"
         },
         {
           "name": "Bay of Kiel",
@@ -40672,52 +40644,52 @@
           "source_url": "https://en.wikipedia.org/wiki/Schwentine"
         },
         {
-          "name": "Baltic Sea",
+          "name": "Eider",
           "disambiguation_note": null,
-          "localisation_stem": "Baltic Sea",
+          "localisation_stem": "Eider",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea opening directly northward from the fjord.",
+          "feature_subtype": "river",
+          "relationship": "Longest river of Schleswig-Holstein, rising directly south of Kiel before turning westward across the peninsula.",
           "language_variants": [
             {
-              "form": "Ostsee",
+              "form": "Eider",
               "native_script": null,
               "language": "German",
               "language_code": "deu",
-              "notes": "Modern German name ('East Sea')"
+              "notes": "German hydronym"
             },
             {
-              "form": "Oostsee",
-              "native_script": null,
-              "language": "Low German",
-              "language_code": "nds",
-              "notes": "Low German name"
-            },
-            {
-              "form": "Østersøen",
-              "native_script": null,
-              "language": "Danish",
-              "language_code": "dan",
-              "notes": "Danish name in the Holstein–Schleswig borderland"
-            },
-            {
-              "form": "Mare Suebicum",
+              "form": "Egidora",
               "native_script": null,
               "language": "Latin",
               "language_code": "lat",
-              "notes": "Classical Latin name in Tacitus, Germania 45; also 'Mare Balticum' — Medieval Latin name first attested in Adam of Bremen (c. 1075 CE)."
+              "notes": "Carolingian Latin river name in the Royal Frankish Annals and Adam of Bremen"
+            },
+            {
+              "form": "Ægisdyr",
+              "native_script": null,
+              "language": "Old Norse",
+              "language_code": "non",
+              "notes": "Old Norse name meaning 'Aegir's door'"
+            },
+            {
+              "form": "Ejderen",
+              "native_script": null,
+              "language": "Danish",
+              "language_code": "dan",
+              "notes": "Danish historical hydronym"
             }
           ],
-          "earliest_attestation_year": 98,
-          "earliest_attestation_note": "98 CE (Tacitus, Germania 45, as Mare Suebicum; Mare Balticum in Adam of Bremen c. 1075 CE)",
+          "earliest_attestation_year": 808,
+          "earliest_attestation_note": "808 CE (Royal Frankish Annals, as Egidora, boundary between Franks/Saxons and Danes)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Classical Mare Suebicum ('Suebian Sea'); medieval Mare Balticum possibly from Germanic *balt- ('belt, strait').",
-          "source_url": "https://en.wikipedia.org/wiki/Baltic_Sea"
+          "etymology_notes": "From Old Saxon/Old Norse *Agidora / Ægisdyr ('door of the sea/Aegir'), referring to its broad tidal estuary.",
+          "source_url": "https://en.wikipedia.org/wiki/Eider"
         }
       ]
     },
@@ -57493,45 +57465,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Ordovices"
         },
         {
-          "name": "Anglesey",
+          "name": "River Cefni",
           "disambiguation_note": null,
-          "localisation_stem": "Anglesey",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major island region of northwest Wales containing the western headland.",
+          "localisation_stem": "Cefni",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Principal river of Anglesey draining the central marshes southwestward toward Malltraeth Bay.",
           "language_variants": [
             {
-              "form": "Ynys Môn",
+              "form": "Afon Cefni",
               "native_script": null,
               "language": "Welsh",
               "language_code": "cym",
-              "notes": "Welsh island name"
-            },
-            {
-              "form": "Mona",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin island name in Tacitus and Pliny"
-            },
-            {
-              "form": "*Monā",
-              "native_script": null,
-              "language": "Brittonic",
-              "language_code": "cel-bry",
-              "notes": "Reconstructed Common Brittonic island name"
+              "notes": "Welsh vernacular hydronym"
             }
           ],
-          "earliest_attestation_year": 77,
-          "earliest_attestation_note": "c. 77 CE in Pliny the Elder's Naturalis Historia and c. 98 CE in Tacitus's Agricola (Mona)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Brittonic-Welsh river name of central Anglesey.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Welsh Môn derives from Brittonic *Monā (possibly 'mountainous/high'); English Anglesey is from Old Norse Öngulsey.",
-          "source_url": "https://en.wikipedia.org/wiki/Anglesey"
+          "etymology_notes": "From Welsh afon ('river') + Cefni, derived from a Brittonic hydronymic root related to Welsh cefn ('ridge, back').",
+          "source_url": "https://en.wikipedia.org/wiki/Afon_Cefni"
         },
         {
           "name": "Menai Strait",
@@ -60359,31 +60317,31 @@
           "source_url": "https://en.wikipedia.org/wiki/River_Idle"
         },
         {
-          "name": "Sherwood Forest",
+          "name": "River Ryton",
           "disambiguation_note": null,
-          "localisation_stem": "Sherwood",
-          "category": "topographic_feature",
-          "feature_subtype": "forest",
-          "relationship": "Ancient Nottinghamshire woodland extending immediately southwest of Retford.",
+          "localisation_stem": "Ryton",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Northern Nottinghamshire stream flowing eastward to join the River Idle just north of Retford.",
           "language_variants": [
             {
-              "form": "Scīrwudu",
+              "form": "River Ryton",
               "native_script": null,
-              "language": "Old English",
-              "language_code": "ang",
-              "notes": "Old English name, 'shire wood'"
+              "language": "English",
+              "language_code": "eng",
+              "notes": "English hydronym"
             }
           ],
-          "earliest_attestation_year": 958,
-          "earliest_attestation_note": "958 CE in an Anglo-Saxon charter (Scirwudu)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-Conquest or early medieval northern Nottinghamshire river name.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Old English scīr ('shire, boundary') + wudu ('wood'), the ancient royal woodland of Nottinghamshire.",
-          "source_url": "https://en.wikipedia.org/wiki/Sherwood_Forest"
+          "etymology_notes": "Likely a back-formation from the riverside settlement of Ryton (Old English ryge 'rye' + tūn 'enclosure/farmstead').",
+          "source_url": "https://en.wikipedia.org/wiki/River_Ryton"
         }
       ]
     },
@@ -75385,45 +75343,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Crasna",
+          "name": "Plopiș Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Crasna",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Primary river flowing directly through Șimleu Silvaniei (Szilágysomlyó) northward toward the Tisza.",
+          "localisation_stem": "Plopiș",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Forested Apuseni range rising immediately southwest of Șimleu Silvaniei between the Barcău and Crasna valleys.",
           "language_variants": [
             {
-              "form": "Crasna",
+              "form": "Munții Plopiș",
               "native_script": null,
               "language": "Romanian",
               "language_code": "ron",
-              "notes": "Romanian hydronym"
+              "notes": "Romanian name of the mountain range"
             },
             {
-              "form": "Kraszna",
+              "form": "Réz-hegység",
               "native_script": null,
               "language": "Hungarian",
               "language_code": "hun",
-              "notes": "Hungarian hydronym"
-            },
-            {
-              "form": "Crasna",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Medieval Latin charter form (1164 CE)"
+              "notes": "Hungarian name meaning 'Copper Mountains'"
             }
           ],
-          "earliest_attestation_year": 1164,
-          "earliest_attestation_note": "Attested in 12th-century CE royal charters (1164 CE), flowing from the Meseș foothills past Șimleu Silvaniei and Carei to the Tisza.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous western Transylvanian range forming the southern rim of the Sălaj basin.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Slavic *krasьna ('beautiful, red'), referring to the reddish clay soils or clear waters of its upper course.",
-          "source_url": "https://en.wikipedia.org/wiki/Crasna_(Tisza)"
+          "etymology_notes": "Romanian Plopiș derives from plop ('poplar tree', from Latin populus); Hungarian Réz-hegység ('copper mountains') reflects local mineral deposits.",
+          "source_url": "https://en.wikipedia.org/wiki/Plopi%C8%99_Mountains"
         },
         {
           "name": "Meseș Mountains",
@@ -75690,45 +75641,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Crasna",
+          "name": "Ier",
           "disambiguation_note": null,
-          "localisation_stem": "Crasna",
+          "localisation_stem": "Ier",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Primary river flowing through the hilly lowlands immediately east of Tășnad.",
+          "relationship": "Lowland marsh river flowing southwestward immediately west of Tășnad toward the Barcău.",
           "language_variants": [
             {
-              "form": "Crasna",
+              "form": "Ier",
               "native_script": null,
               "language": "Romanian",
               "language_code": "ron",
               "notes": "Romanian hydronym"
             },
             {
-              "form": "Kraszna",
+              "form": "Ér",
               "native_script": null,
               "language": "Hungarian",
               "language_code": "hun",
-              "notes": "Hungarian hydronym"
-            },
-            {
-              "form": "Crasna",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Medieval Latin charter form (1164 CE)"
+              "notes": "Hungarian hydronym meaning 'brook, stream'"
             }
           ],
-          "earliest_attestation_year": 1164,
-          "earliest_attestation_note": "Attested in 12th-century CE royal charters (1164 CE), flowing from the Meseș foothills past Șimleu Silvaniei and Carei to the Tisza.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Partium lowland watercourse attested in early medieval Hungarian charters (Ér).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Slavic *krasьna ('beautiful, red'), referring to the reddish clay soils or clear waters of its upper course.",
-          "source_url": "https://en.wikipedia.org/wiki/Crasna_(Tisza)"
+          "etymology_notes": "From Hungarian ér ('stream, rivulet, channel'), borrowed into Romanian as Ier.",
+          "source_url": "https://en.wikipedia.org/wiki/Ier_(river)"
         },
         {
           "name": "Barcău",
@@ -75839,45 +75783,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Crasna",
+          "name": "Nyírség",
           "disambiguation_note": null,
-          "localisation_stem": "Crasna",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Primary river flowing across the plain immediately east of Carei (Nagykároly).",
+          "localisation_stem": "Nyírség",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Sandy dune and birch-woodland region extending across the Great Plain directly up to Carei.",
           "language_variants": [
             {
-              "form": "Crasna",
-              "native_script": null,
-              "language": "Romanian",
-              "language_code": "ron",
-              "notes": "Romanian hydronym"
-            },
-            {
-              "form": "Kraszna",
+              "form": "Nyírség",
               "native_script": null,
               "language": "Hungarian",
               "language_code": "hun",
-              "notes": "Hungarian hydronym"
-            },
-            {
-              "form": "Crasna",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Medieval Latin charter form (1164 CE)"
+              "notes": "Hungarian regional choronym meaning 'birchland'"
             }
           ],
-          "earliest_attestation_year": 1164,
-          "earliest_attestation_note": "Attested in 12th-century CE royal charters (1164 CE), flowing from the Meseș foothills past Șimleu Silvaniei and Carei to the Tisza.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Traditional medieval Hungarian landscape region bordering Szatmár and Szabolcs.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Slavic *krasьna ('beautiful, red'), referring to the reddish clay soils or clear waters of its upper course.",
-          "source_url": "https://en.wikipedia.org/wiki/Crasna_(Tisza)"
+          "etymology_notes": "From Hungarian nyír ('birch') + collective suffix -ség ('birch-land, birch-woods').",
+          "source_url": "https://en.wikipedia.org/wiki/Ny%C3%ADrs%C3%A9g"
         },
         {
           "name": "Someș",
@@ -82470,45 +82400,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Borzhava",
+          "name": "Batár",
           "disambiguation_note": null,
-          "localisation_stem": "Borzhava",
+          "localisation_stem": "Batár",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major Carpathian tributary river flowing past Berehove (Beregszász) toward the Tisza.",
+          "relationship": "Right tributary of the Tisza flowing across the lowland plain just south of Berehove.",
           "language_variants": [
             {
-              "form": "Borzhava",
-              "native_script": null,
-              "language": "Ukrainian",
-              "language_code": "ukr",
-              "notes": "Ukrainian hydronym"
-            },
-            {
-              "form": "Borzhava",
-              "native_script": null,
-              "language": "Rusyn",
-              "language_code": "rue",
-              "notes": "Rusyn hydronym"
-            },
-            {
-              "form": "Borsova",
+              "form": "Batár",
               "native_script": null,
               "language": "Hungarian",
               "language_code": "hun",
               "notes": "Hungarian hydronym"
+            },
+            {
+              "form": "Batar",
+              "native_script": "Батар",
+              "language": "Ukrainian",
+              "language_code": "ukr",
+              "notes": "Ukrainian hydronym"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested as Borsoa in Anonymus's Gesta Hungarorum (c. 1200 CE) as a major right-bank tributary of the Upper Tisza.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Pannonian lowland tributary of the upper Tisza attested in early Hungarian county charters.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Slavic *bъrzava ('swift, rapid river'), describing its fast descent from the Polonyna Borzhava mountains.",
-          "source_url": "https://en.wikipedia.org/wiki/Borzhava"
+          "etymology_notes": "Recorded in medieval Hungarian as Batár / Batar; of uncertain Slavic or pre-Slavic origin.",
+          "source_url": "https://en.wikipedia.org/wiki/Batar_(river)"
         },
         {
           "name": "Tisza",
@@ -82688,45 +82611,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tisza"
         },
         {
-          "name": "Borzhava",
+          "name": "Oaș Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Borzhava",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Tributary river joining the Tisza just downstream of Vynohradiv.",
+          "localisation_stem": "Oaș",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Volcanic Carpathian range rising directly across the Tisza valley southeast of Vynohradiv.",
           "language_variants": [
             {
-              "form": "Borzhava",
+              "form": "Munții Oaș",
               "native_script": null,
-              "language": "Ukrainian",
-              "language_code": "ukr",
-              "notes": "Ukrainian hydronym"
+              "language": "Romanian",
+              "language_code": "ron",
+              "notes": "Romanian name of the mountain range"
             },
             {
-              "form": "Borzhava",
-              "native_script": null,
-              "language": "Rusyn",
-              "language_code": "rue",
-              "notes": "Rusyn hydronym"
-            },
-            {
-              "form": "Borsova",
+              "form": "Avas",
               "native_script": null,
               "language": "Hungarian",
               "language_code": "hun",
-              "notes": "Hungarian hydronym"
+              "notes": "Hungarian regional name ('old-growth forest')"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested as Borsoa in Anonymus's Gesta Hungarorum (c. 1200 CE) as a major right-bank tributary of the Upper Tisza.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Carpathian volcanic massif overlooking the upper Tisza basin.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Slavic *bъrzava ('swift, rapid river'), describing its fast descent from the Polonyna Borzhava mountains.",
-          "source_url": "https://en.wikipedia.org/wiki/Borzhava"
+          "etymology_notes": "Romanian Oaș derives from Hungarian Avas ('forbidden/ancient woodland', from ó 'old' + -as).",
+          "source_url": "https://en.wikipedia.org/wiki/Oa%C8%99_Mountains"
         },
         {
           "name": "Dacians",
@@ -86156,38 +86072,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Zemplén Mountains",
+          "name": "Sajó",
           "disambiguation_note": null,
-          "localisation_stem": "Zemplén",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Volcanic mountain range rising immediately northeast of Szerencs.",
+          "localisation_stem": "Sajó",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major tributary of the Tisza flowing just south of Szerencs along the Borsod plain.",
           "language_variants": [
             {
-              "form": "Zempléni-hegység",
+              "form": "Sajó",
               "native_script": null,
               "language": "Hungarian",
               "language_code": "hun",
-              "notes": "Hungarian oronym (also Tokaji-hegység)"
+              "notes": "Hungarian hydronym ('salt river')"
             },
             {
-              "form": "Zemplínske vrchy",
+              "form": "Slaná",
               "native_script": null,
               "language": "Slovak",
               "language_code": "slk",
-              "notes": "Slovak oronym"
+              "notes": "Slovak hydronym ('salty')"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Volcanic range of northeastern Hungary between the Hernád and Bodrog rivers; regional name attested in the Gesta Hungarorum (c. 1200 CE).",
+          "earliest_attestation_year": 1075,
+          "earliest_attestation_note": "Attested as Soyo / Sajo in 11th-century CE charters (1075 CE) and in the Gesta Hungarorum; site of the 1241 CE Battle of Mohi.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Slavic *zemlja ('earth, land') via medieval Zemplén, rising directly above the Tokaj–Hegyalja foothills.",
-          "source_url": "https://en.wikipedia.org/wiki/Zempl%C3%A9n_Mountains"
+          "etymology_notes": "Hungarian Sajó derives from Old Hungarian *sav-jó ('salty river', cf. savanyú 'sour' + jó 'river'), calqued in Slovak as Slaná.",
+          "source_url": "https://en.wikipedia.org/wiki/Saj%C3%B3"
         },
         {
           "name": "Hornád",
@@ -93224,31 +93140,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ti%C3%A9tar_(river)"
         },
         {
-          "name": "Sierra de Gredos",
+          "name": "Alberche",
           "disambiguation_note": null,
-          "localisation_stem": "Sierra de Gredos",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Mountain range rising dramatically immediately north of the valley.",
+          "localisation_stem": "Alberche",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Mountain-fed river flowing immediately east of La Adrada along the southern Ávila valleys toward the Tagus.",
           "language_variants": [
             {
-              "form": "Sierra de Gredos",
+              "form": "Alberche",
               "native_script": null,
               "language": "Spanish",
               "language_code": "spa",
-              "notes": "Modern Spanish name."
+              "notes": "Spanish hydronym"
+            },
+            {
+              "form": "al-Birka",
+              "native_script": "البركة",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Andalusi Arabic hydronym ('the pool/pond')"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Central granite massif of the Sistema Central dominating southern Ávila and northern Extremadura.",
+          "earliest_attestation_note": "Major tributary of the Tagus draining Sierra de Gredos; attested in medieval Castilian and Andalusi sources.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Spanish sierra ('mountain range') and Gredos (likely from Latin creta 'clay, chalky earth' or pre-Roman *gred-).",
-          "source_url": "https://en.wikipedia.org/wiki/Sierra_de_Gredos"
+          "etymology_notes": "Likely from Andalusi Arabic al-birka ('the pond/basin') or Mozarabic adaptation of a pre-Roman Iberian root.",
+          "source_url": "https://en.wikipedia.org/wiki/Alberche"
         }
       ]
     },
@@ -97769,38 +97692,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Wied",
+          "name": "Brexbach",
           "disambiguation_note": null,
-          "localisation_stem": "Wied",
+          "localisation_stem": "Brexbach",
           "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Westerwald river valley lying directly north and west of Isenburg.",
+          "feature_subtype": "stream",
+          "relationship": "Wooded Westerwald stream flowing directly past Isenburg to join the Saynbach.",
           "language_variants": [
             {
-              "form": "Wied",
+              "form": "Brexbach",
               "native_script": null,
               "language": "German",
               "language_code": "deu",
-              "notes": "Modern German name of the Rhine tributary"
-            },
-            {
-              "form": "Wida",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Early medieval Latinized form attested in 857 CE"
+              "notes": "German hydronym"
             }
           ],
-          "earliest_attestation_year": 857,
-          "earliest_attestation_note": "Attested in 857 CE as Wida in Carolingian charters.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Rhenish Slate Mountains stream along the ancient Roman Limes in the lower Westerwald.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Old High German *wīda ('willow') or *witu ('wood, forest'), denoting a wooded valley stream of the Westerwald.",
-          "source_url": "https://en.wikipedia.org/wiki/Wied_(river)"
+          "etymology_notes": "Germanic/Celtic-substrate stream name (earlier Brechsa/Brex) combined with German Bach ('brook, stream').",
+          "source_url": "https://en.wikipedia.org/wiki/Brexbach"
         },
         {
           "name": "Westerwald",
@@ -102466,38 +102382,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Bay_of_Mecklenburg"
         },
         {
-          "name": "Baltic Sea",
+          "name": "Poel",
           "disambiguation_note": null,
-          "localisation_stem": "Baltic Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering the barony's northern coastline.",
+          "localisation_stem": "Poel",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Coastal island sheltering the harbour and approaches immediately north of Wismar.",
           "language_variants": [
             {
-              "form": "Ostsee",
+              "form": "Poel",
               "native_script": null,
               "language": "German",
               "language_code": "deu",
-              "notes": "Standard German name"
+              "notes": "German name of the island"
             },
             {
-              "form": "Mare Balticum",
+              "form": "Pöl",
               "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Medieval Latin name attested in Adam of Bremen (1075 CE)"
+              "language": "Low German",
+              "language_code": "nds",
+              "notes": "Low German vernacular form"
             }
           ],
-          "earliest_attestation_year": 98,
-          "earliest_attestation_note": "98 CE (Tacitus, Germania 45, as Mare Suebicum; Mare Balticum in Adam of Bremen c. 1075 CE)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Coastal Mecklenburg island attested in 12th-century charters as Pole.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Inland sea of northern Europe bordering Mecklenburg and Pomerania.",
-          "source_url": "https://en.wikipedia.org/wiki/Baltic_Sea"
+          "etymology_notes": "From Polabian Slavic *Polje ('field, flat open land'), reflecting the island's flat arable terrain.",
+          "source_url": "https://en.wikipedia.org/wiki/Poel"
         },
         {
           "name": "Obotrites",
@@ -103356,38 +103272,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Baltic Sea",
+          "name": "Kubitzer Bodden",
           "disambiguation_note": null,
-          "localisation_stem": "Baltic Sea",
+          "localisation_stem": "Kubitzer Bodden",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering the barony's coastal strait.",
+          "feature_subtype": "bay",
+          "relationship": "Shallow coastal lagoon immediately north of Stralsund between southwestern Rügen and the Strelasund.",
           "language_variants": [
             {
-              "form": "Ostsee",
+              "form": "Kubitzer Bodden",
               "native_script": null,
               "language": "German",
               "language_code": "deu",
-              "notes": "Standard German name"
-            },
-            {
-              "form": "Mare Balticum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Medieval Latin name attested in Adam of Bremen (1075 CE)"
+              "notes": "German name of the lagoon"
             }
           ],
-          "earliest_attestation_year": 98,
-          "earliest_attestation_note": "98 CE (Tacitus, Germania 45, as Mare Suebicum; Mare Balticum in Adam of Bremen c. 1075 CE)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Natural coastal lagoon off southwestern Rügen named after the Slavic coastal village of Kubitz.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Inland sea of northern Europe bordering Mecklenburg and Pomerania.",
-          "source_url": "https://en.wikipedia.org/wiki/Baltic_Sea"
+          "etymology_notes": "Named after Kubitz (from Polabian Slavic personal/place name) + Low German Bodden ('shallow bay/lagoon').",
+          "source_url": "https://en.wikipedia.org/wiki/Kubitzer_Bodden"
         },
         {
           "name": "Bay of Greifswald",
@@ -106794,38 +106703,45 @@
       },
       "replacement_candidates": [
         {
-          "name": "Tuchola Forest",
+          "name": "Wierzyca",
           "disambiguation_note": null,
-          "localisation_stem": "Tuchola",
-          "category": "topographic_feature",
-          "feature_subtype": "forest",
-          "relationship": "Vast pine woodland complex bordering the barony to the east.",
+          "localisation_stem": "Wierzyca",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Pomerelian river draining the Kashubian moraine lakes northeast of Chojnice toward the Vistula.",
           "language_variants": [
             {
-              "form": "Bory Tucholskie",
+              "form": "Wierzyca",
               "native_script": null,
               "language": "Polish",
               "language_code": "pol",
-              "notes": "Standard Polish name"
+              "notes": "Polish hydronym"
             },
             {
-              "form": "Tucholer Heide",
+              "form": "Wierzëca",
+              "native_script": null,
+              "language": "Kashubian",
+              "language_code": "csb",
+              "notes": "Kashubian vernacular name"
+            },
+            {
+              "form": "Ferse",
               "native_script": null,
               "language": "German",
               "language_code": "deu",
-              "notes": "Historical German name"
+              "notes": "German historical hydronym"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "One of the largest pine woodland complexes in northern Poland",
+          "earliest_attestation_note": "Indigenous Pomerelian hydronym attested in 12th-century Pomerelian charters (Verissa).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Extensive sandur pine forest stretching between the Brda and Wda rivers in Pomerelia.",
-          "source_url": "https://en.wikipedia.org/wiki/Tuchola_Forest"
+          "etymology_notes": "From West Slavic/Pomeranian *Verica (possibly connected to *ver- 'to boil/well up' or Baltic-Slavic substrate).",
+          "source_url": "https://en.wikipedia.org/wiki/Wierzyca"
         },
         {
           "name": "Brda",
@@ -107106,45 +107022,45 @@
       },
       "replacement_candidates": [
         {
-          "name": "Gdańsk Bay",
+          "name": "Radunia",
           "disambiguation_note": null,
-          "localisation_stem": "Gdańsk",
+          "localisation_stem": "Radunia",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Baltic bay forming the eastern coastline of the barony.",
+          "feature_subtype": "river",
+          "relationship": "Pomerelian river descending from the Kashubian moraine hills directly behind Sopot into the Vistula delta.",
           "language_variants": [
             {
-              "form": "Zatoka Gdańska",
+              "form": "Radunia",
               "native_script": null,
               "language": "Polish",
               "language_code": "pol",
-              "notes": "Standard Polish name"
+              "notes": "Polish hydronym"
             },
             {
-              "form": "Danziger Bucht",
-              "native_script": null,
-              "language": "German",
-              "language_code": "deu",
-              "notes": "German name"
-            },
-            {
-              "form": "Gduńskô Hôwinga",
+              "form": "Radëniô",
               "native_script": null,
               "language": "Kashubian",
               "language_code": "csb",
-              "notes": "Kashubian name"
+              "notes": "Kashubian vernacular name"
+            },
+            {
+              "form": "Radaune",
+              "native_script": null,
+              "language": "German",
+              "language_code": "deu",
+              "notes": "German historical hydronym"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Southeastern bay of the Baltic Sea fed by the Vistula delta",
+          "earliest_attestation_note": "Indigenous Pomerelian river attested in medieval Pomerelian charters (Raduna).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Broad sheltered bay of the southern Baltic Sea enclosing the Vistula estuary.",
-          "source_url": "https://en.wikipedia.org/wiki/Gda%C5%84sk_Bay"
+          "etymology_notes": "Likely from Proto-Slavic or Old European *Radunja ('swift/clear stream', cf. Proto-Indo-European *er- 'to flow').",
+          "source_url": "https://en.wikipedia.org/wiki/Radunia"
         },
         {
           "name": "Kashubia",
@@ -107303,52 +107219,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Hel_Peninsula"
         },
         {
-          "name": "Baltic Sea",
+          "name": "Bay of Puck",
           "disambiguation_note": null,
-          "localisation_stem": "Baltic Sea",
+          "localisation_stem": "Bay of Puck",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering the northern shore of the barony.",
+          "feature_subtype": "bay",
+          "relationship": "Sheltered shallow bay enclosed between the Hel Peninsula and the Kashubian coast at Władysławowo.",
           "language_variants": [
             {
-              "form": "Ostsee",
-              "native_script": null,
-              "language": "German",
-              "language_code": "deu",
-              "notes": "Standard German name"
-            },
-            {
-              "form": "Mare Balticum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Medieval Latin name attested in Adam of Bremen (1075 CE)"
-            },
-            {
-              "form": "Morze Bałtyckie",
+              "form": "Zatoka Pucka",
               "native_script": null,
               "language": "Polish",
               "language_code": "pol",
-              "notes": "Standard Polish name"
+              "notes": "Polish name of the bay"
             },
             {
-              "form": "Bôłt",
+              "form": "Pùckô Hôwinga",
               "native_script": null,
               "language": "Kashubian",
               "language_code": "csb",
-              "notes": "Kashubian name"
+              "notes": "Kashubian vernacular name"
+            },
+            {
+              "form": "Putziger Wiek",
+              "native_script": null,
+              "language": "German",
+              "language_code": "deu",
+              "notes": "German historical name"
             }
           ],
-          "earliest_attestation_year": 98,
-          "earliest_attestation_note": "98 CE (Tacitus, Germania 45, as Mare Suebicum; Mare Balticum in Adam of Bremen c. 1075 CE)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Natural sheltered bay behind the Hel spit; early medieval Pomerelian trading port of Puck attested on its shore.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Inland sea of northern Europe bordering Mecklenburg and Pomerania.",
-          "source_url": "https://en.wikipedia.org/wiki/Baltic_Sea"
+          "etymology_notes": "Named after Puck (early medieval Putzig/Puczek, possibly from Slavic *puk- or Baltic *put- 'foam, swamp').",
+          "source_url": "https://en.wikipedia.org/wiki/Bay_of_Puck"
         },
         {
           "name": "Kashubians",
@@ -108048,45 +107957,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Pars%C4%99ta"
         },
         {
-          "name": "Baltic Sea",
+          "name": "Lake Jamno",
           "disambiguation_note": null,
-          "localisation_stem": "Baltic Sea",
+          "localisation_stem": "Jamno",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea lying directly north of the barony beyond Lake Jamno.",
+          "feature_subtype": "lake",
+          "relationship": "Coastal lagoon lying directly north of Koszalin behind the Pomeranian sandbar.",
           "language_variants": [
             {
-              "form": "Ostsee",
-              "native_script": null,
-              "language": "German",
-              "language_code": "deu",
-              "notes": "Standard German name"
-            },
-            {
-              "form": "Mare Balticum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Medieval Latin name attested in Adam of Bremen (1075 CE)"
-            },
-            {
-              "form": "Morze Bałtyckie",
+              "form": "Jezioro Jamno",
               "native_script": null,
               "language": "Polish",
               "language_code": "pol",
-              "notes": "Standard Polish name"
+              "notes": "Polish name of the coastal lagoon"
+            },
+            {
+              "form": "Jamunder See",
+              "native_script": null,
+              "language": "German",
+              "language_code": "deu",
+              "notes": "German historical name"
             }
           ],
-          "earliest_attestation_year": 98,
-          "earliest_attestation_note": "98 CE (Tacitus, Germania 45, as Mare Suebicum; Mare Balticum in Adam of Bremen c. 1075 CE)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Natural coastal bay-lagoon attested in medieval Pomeranian charters as Jamund / Jamno.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Inland sea of northern Europe bordering Mecklenburg and Pomerania.",
-          "source_url": "https://en.wikipedia.org/wiki/Baltic_Sea"
+          "etymology_notes": "From West Slavic *jama ('pit, depression, hollow'), referring to the shallow coastal basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Jamno_(lake)"
         },
         {
           "name": "Pomeranians",
@@ -108509,45 +108411,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Dziwna"
         },
         {
-          "name": "Baltic Sea",
+          "name": "Świna",
           "disambiguation_note": null,
-          "localisation_stem": "Baltic Sea",
+          "localisation_stem": "Świna",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea lying immediately north of the barony's coastal channel.",
+          "feature_subtype": "strait",
+          "relationship": "Central tidal strait separating Wolin and Usedom immediately west of Kamień Pomorski and the Dziwna.",
           "language_variants": [
             {
-              "form": "Ostsee",
-              "native_script": null,
-              "language": "German",
-              "language_code": "deu",
-              "notes": "Standard German name"
-            },
-            {
-              "form": "Mare Balticum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Medieval Latin name attested in Adam of Bremen (1075 CE)"
-            },
-            {
-              "form": "Morze Bałtyckie",
+              "form": "Świna",
               "native_script": null,
               "language": "Polish",
               "language_code": "pol",
-              "notes": "Standard Polish name"
+              "notes": "Polish name of the strait"
+            },
+            {
+              "form": "Swine",
+              "native_script": null,
+              "language": "German",
+              "language_code": "deu",
+              "notes": "German historical name"
             }
           ],
-          "earliest_attestation_year": 98,
-          "earliest_attestation_note": "98 CE (Tacitus, Germania 45, as Mare Suebicum; Mare Balticum in Adam of Bremen c. 1075 CE)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Natural Pomeranian lagoon outlet attested in 12th-century Pomeranian charters as Zwina / Swine.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Inland sea of northern Europe bordering Mecklenburg and Pomerania.",
-          "source_url": "https://en.wikipedia.org/wiki/Baltic_Sea"
+          "etymology_notes": "From West Slavic *Svina (cognate with Polish świnia, 'swine/boar', or a pre-Slavic coastal root).",
+          "source_url": "https://en.wikipedia.org/wiki/%C5%9Awina"
         },
         {
           "name": "Wolinians",
@@ -109084,45 +108979,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Pars%C4%99ta"
         },
         {
-          "name": "Baltic Sea",
+          "name": "Radew",
           "disambiguation_note": null,
-          "localisation_stem": "Baltic Sea",
+          "localisation_stem": "Radew",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering the barony's northern coast.",
+          "feature_subtype": "river",
+          "relationship": "Principal right tributary of the Parsęta draining the Pomeranian lakeland southeast of Kołobrzeg.",
           "language_variants": [
             {
-              "form": "Ostsee",
-              "native_script": null,
-              "language": "German",
-              "language_code": "deu",
-              "notes": "Standard German name"
-            },
-            {
-              "form": "Mare Balticum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Medieval Latin name attested in Adam of Bremen (1075 CE)"
-            },
-            {
-              "form": "Morze Bałtyckie",
+              "form": "Radew",
               "native_script": null,
               "language": "Polish",
               "language_code": "pol",
-              "notes": "Standard Polish name"
+              "notes": "Polish hydronym"
+            },
+            {
+              "form": "Radüe",
+              "native_script": null,
+              "language": "German",
+              "language_code": "deu",
+              "notes": "German historical hydronym"
             }
           ],
-          "earliest_attestation_year": 98,
-          "earliest_attestation_note": "98 CE (Tacitus, Germania 45, as Mare Suebicum; Mare Balticum in Adam of Bremen c. 1075 CE)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Pomeranian river attested in medieval Pomeranian charters (Raduya).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Inland sea of northern Europe bordering Mecklenburg and Pomerania.",
-          "source_url": "https://en.wikipedia.org/wiki/Baltic_Sea"
+          "etymology_notes": "From West Slavic/Pomeranian *Raduja (linked to Proto-Indo-European *er-/*or- 'to move, flow').",
+          "source_url": "https://en.wikipedia.org/wiki/Radew"
         },
         {
           "name": "Pomeranians",
@@ -110917,38 +110805,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Szczecin Lagoon",
+          "name": "Randow",
           "disambiguation_note": null,
-          "localisation_stem": "Szczecin",
+          "localisation_stem": "Randow",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Brackish coastal lagoon bordering the barony directly to the north.",
+          "feature_subtype": "river",
+          "relationship": "Lowland glacial-valley river flowing northward through the Ueckermünde heath to join the Uecker near its mouth.",
           "language_variants": [
             {
-              "form": "Zalew Szczeciński",
-              "native_script": null,
-              "language": "Polish",
-              "language_code": "pol",
-              "notes": "Standard Polish name"
-            },
-            {
-              "form": "Stettiner Haff",
+              "form": "Randow",
               "native_script": null,
               "language": "German",
               "language_code": "deu",
-              "notes": "German name"
+              "notes": "German hydronym"
+            },
+            {
+              "form": "Rędowa",
+              "native_script": null,
+              "language": "Polish",
+              "language_code": "pol",
+              "notes": "Polish historical hydronym"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Large brackish lagoon at the mouth of the Oder river",
+          "earliest_attestation_note": "Indigenous Polabian-Pomeranian river attested in medieval charters as Lochnitza / Rando.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Estuarine lagoon shared by Western Pomerania and Vorpommern at the Oder outlet.",
-          "source_url": "https://en.wikipedia.org/wiki/Szczecin_Lagoon"
+          "etymology_notes": "From Polabian Slavic *Rędova (connected with *ręd- 'row, ridge' or a pre-Slavic hydronym).",
+          "source_url": "https://en.wikipedia.org/wiki/Randow"
         },
         {
           "name": "Peenestrom",
@@ -125934,45 +125822,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Bastetani"
         },
         {
-          "name": "Mediterranean Sea",
+          "name": "Guadalentín",
           "disambiguation_note": null,
-          "localisation_stem": "Mediterranean Sea",
+          "localisation_stem": "Guadalentín",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea washing the twin bays and rocky headland of this coastal holding.",
+          "feature_subtype": "river",
+          "relationship": "Major tectonic valley and intermittent river running immediately inland of Águilas toward the Segura.",
           "language_variants": [
             {
-              "form": "Mare Internum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Roman name (also Mare Nostrum; later Mare Mediterraneum in Isidore of Seville)."
-            },
-            {
-              "form": "Mar Mediterráneo",
+              "form": "Guadalentín",
               "native_script": null,
               "language": "Spanish",
               "language_code": "spa",
-              "notes": "Modern Spanish name."
+              "notes": "Spanish hydronym"
             },
             {
-              "form": "Al-Bahr al-Mutawassit",
-              "native_script": null,
+              "form": "Wādī al-Lantīn",
+              "native_script": "وادي اللنتين",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Classical Arabic name (also Bahr al-Rum)."
+              "notes": "Andalusi Arabic hydronym ('river of mud/sludge')"
             }
           ],
-          "earliest_attestation_year": 630,
-          "earliest_attestation_note": "c. 630 CE — Isidore of Seville (Etymologiae 13.16) coined Mare Mediterraneum; earlier attested as Mare Internum in Pomponius Mela (43 CE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Andalusi-period hydronym of the Murcian pre-littoral depression.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Latin mediterraneus ('inland, middle of the earth'), coined by the Visigothic scholar Isidore of Seville.",
-          "source_url": "https://en.wikipedia.org/wiki/Mediterranean_Sea"
+          "etymology_notes": "From Andalusi Arabic Wādī al-Lantīn ('river of mud' or 'river of the muddy course', cf. Arabic līn/ṭīn).",
+          "source_url": "https://en.wikipedia.org/wiki/Guadalent%C3%ADn"
         },
         {
           "name": "Baetic System",

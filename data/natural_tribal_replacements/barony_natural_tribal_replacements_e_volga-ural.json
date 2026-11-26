@@ -137,10 +137,10 @@
       "target_baronies_audited": 139,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 417,
-      "unique_replacement_names": 105,
-      "candidates_with_multilingual_variants": 397,
+      "unique_replacement_names": 114,
+      "candidates_with_multilingual_variants": 396,
       "wikipedia_source_attached": 417,
-      "unique_source_urls": 105,
+      "unique_source_urls": 114,
       "candidates_by_category": {
         "choronym": 1,
         "hydronym": 242,
@@ -164,6 +164,7 @@
         "lat",
         "mdf",
         "myv",
+        "otk",
         "rus",
         "tat",
         "udm"
@@ -186,7 +187,7 @@
         "1178": 417
       },
       "baronies_with_867_valid_candidate": 139,
-      "unique_localisation_stems": 104
+      "unique_localisation_stems": 113
     }
   },
   "baronies": {
@@ -2195,45 +2196,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Bashkirs"
         },
         {
-          "name": "Belaya",
-          "disambiguation_note": null,
-          "localisation_stem": "Belaya",
+          "name": "Sim",
+          "disambiguation_note": "river",
+          "localisation_stem": "Sim",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "On the middle Belaya River.",
+          "relationship": "Major right tributary of the Belaya entering immediately north of Tabynskoye and the Zilim mouth.",
           "language_variants": [
             {
-              "form": "Belaya",
-              "native_script": null,
+              "form": "Sim",
+              "native_script": "Сим",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian Белая ('White River')."
+              "notes": "Russian hydronym"
             },
             {
-              "form": "Ağiźel",
-              "native_script": null,
+              "form": "Esem",
+              "native_script": "Эҫем",
               "language": "Bashkir",
               "language_code": "bak",
-              "notes": "Bashkir Ағиҙел ('White Volga')."
-            },
-            {
-              "form": "Ağidel",
-              "native_script": null,
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Tatar Агыйдел."
+              "notes": "Bashkir hydronym"
             }
           ],
-          "earliest_attestation_year": 1557,
-          "earliest_attestation_note": "1557 CE (Russian diplomatic and chronicle records of Bashkiria; Bashkir Ağiźel attested in medieval epics).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Southern Ural river of the Belaya watershed.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Bashkir Ağiźel ('white river/Volga'), calqued into Russian as Belaya.",
-          "source_url": "https://en.wikipedia.org/wiki/Belaya_(Kama)"
+          "etymology_notes": "From Bashkir Esem / Sim (possibly related to Turkic isim or an older Finno-Ugric substrate hydronym).",
+          "source_url": "https://en.wikipedia.org/wiki/Sim_(river)"
         },
         {
           "name": "Zilim",
@@ -2614,45 +2608,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Bashkirs"
         },
         {
-          "name": "Ufa",
+          "name": "Yuryuzan",
           "disambiguation_note": null,
-          "localisation_stem": "Ufa",
+          "localisation_stem": "Yuryuzan",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Tributary basin of the Ufa River.",
+          "relationship": "Major Southern Ural river flowing northwestward immediately north of the Sim valley.",
           "language_variants": [
             {
-              "form": "Ufa",
-              "native_script": null,
+              "form": "Yuryuzan",
+              "native_script": "Юрюзань",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian Уфа."
+              "notes": "Russian hydronym"
             },
             {
-              "form": "Qara-iźel",
-              "native_script": null,
+              "form": "Yüryüzän",
+              "native_script": "Йүрүҙән",
               "language": "Bashkir",
               "language_code": "bak",
-              "notes": "Bashkir Ҡариҙел ('Black Idel')."
-            },
-            {
-              "form": "Qaraidel",
-              "native_script": null,
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Tatar Караидел."
+              "notes": "Bashkir hydronym meaning 'big river/valley'"
             }
           ],
-          "earliest_attestation_year": 1574,
-          "earliest_attestation_note": "1574 CE (16th-century Russian charters; Bashkir Qara-iźel in traditional oral epics).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-1700 Ural-basin hydronym without a single dated written first-mention year in cited sources.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Bashkir Qara-iźel ('black river') contrasted with Ağiźel (Belaya); Ufa possibly from Turkic ufa ('small') or Iranian ap ('water').",
-          "source_url": "https://en.wikipedia.org/wiki/Ufa_(river)"
+          "etymology_notes": "From Bashkir yür / yör ('big/great') + üzän ('river valley, creek').",
+          "source_url": "https://en.wikipedia.org/wiki/Yuryuzan_(river)"
         },
         {
           "name": "Southern Urals",
@@ -5758,38 +5745,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Chusovaya"
         },
         {
-          "name": "Sylva",
+          "name": "Koyva",
           "disambiguation_note": null,
-          "localisation_stem": "Sylva",
+          "localisation_stem": "Koyva",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "North of the Sylva River.",
+          "relationship": "Right tributary of the Chusovaya descending from the western Urals just northeast of Kutamysh.",
           "language_variants": [
             {
-              "form": "Sylva",
-              "native_script": null,
+              "form": "Koyva",
+              "native_script": "Койва",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian Сылва."
+              "notes": "Russian hydronym"
             },
             {
-              "form": "Sylva",
-              "native_script": null,
+              "form": "Koyva",
+              "native_script": "Койва",
               "language": "Komi",
               "language_code": "kom",
-              "notes": "Komi Сылва ('meltwater')."
+              "notes": "Komi-Permyak hydronym meaning 'splash-water'"
             }
           ],
-          "earliest_attestation_year": 1596,
-          "earliest_attestation_note": "1596 CE (Stroganov and Kungur land grants).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Permic mountain river of the western Ural slopes.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Komi-Permyak syl ('melt') + va ('water').",
-          "source_url": "https://en.wikipedia.org/wiki/Sylva_(river)"
+          "etymology_notes": "From Komi-Permyak koy- ('to splash, spray') + va ('water, river'), referring to its rocky rapids.",
+          "source_url": "https://en.wikipedia.org/wiki/Koyva"
         }
       ]
     },
@@ -5859,38 +5846,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Komi_peoples"
         },
         {
-          "name": "Sylva",
-          "disambiguation_note": null,
-          "localisation_stem": "Sylva",
+          "name": "Barda",
+          "disambiguation_note": "Sylva",
+          "localisation_stem": "Barda",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "On the Sylva River.",
+          "relationship": "Major right tributary of the Sylva flowing across the Kungur-Sylva forest-steppe near Serga.",
           "language_variants": [
             {
-              "form": "Sylva",
-              "native_script": null,
+              "form": "Barda",
+              "native_script": "Барда",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian Сылва."
+              "notes": "Russian hydronym"
             },
             {
-              "form": "Sylva",
-              "native_script": null,
-              "language": "Komi",
-              "language_code": "kom",
-              "notes": "Komi Сылва ('meltwater')."
+              "form": "Barda",
+              "native_script": "Барда",
+              "language": "Tatar",
+              "language_code": "tat",
+              "notes": "Tatar/Bashkir hydronym"
             }
           ],
-          "earliest_attestation_year": 1596,
-          "earliest_attestation_note": "1596 CE (Stroganov and Kungur land grants).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Cis-Ural river of the Sylva basin.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Komi-Permyak syl ('melt') + va ('water').",
-          "source_url": "https://en.wikipedia.org/wiki/Sylva_(river)"
+          "etymology_notes": "Connected to Turkic/Bashkir bärde ('grayling fish') or an older Permic-Ugric hydronymic root.",
+          "source_url": "https://en.wikipedia.org/wiki/Barda_(river)"
         },
         {
           "name": "Shakva",
@@ -7719,38 +7706,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Bashkirs"
         },
         {
-          "name": "Sakmara",
+          "name": "Bolshoy Ik",
           "disambiguation_note": null,
-          "localisation_stem": "Sakmara",
+          "localisation_stem": "Bolshoy Ik",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "On the Sakmara River.",
+          "relationship": "Major right tributary of the Sakmara descending from the Zilair Plateau immediately west of Yuldybayevo.",
           "language_variants": [
             {
-              "form": "Sakmara",
-              "native_script": null,
+              "form": "Bolshoy Ik",
+              "native_script": "Большой Ик",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian Сакмара."
+              "notes": "Russian hydronym meaning 'Great Ik'"
             },
             {
-              "form": "Haqmar",
-              "native_script": null,
+              "form": "Olo Eyyek",
+              "native_script": "Оло Эйек",
               "language": "Bashkir",
               "language_code": "bak",
-              "notes": "Bashkir Һаҡмар."
+              "notes": "Bashkir hydronym meaning 'Great Ik'"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Pre-1700 regional Bashkir hydronym without a single dated written first-mention year in cited sources.",
+          "earliest_attestation_note": "Indigenous Southern Ural steppe-mountain river of the Sakmara basin.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Bashkir Haqmar, variously linked to Turkic saq ('clear, pure') or Iranian substrate.",
-          "source_url": "https://en.wikipedia.org/wiki/Sakmara_(river)"
+          "etymology_notes": "Bashkir olo ('great') + Eyyek / Ik (from an old Turkic or Ugric root meaning 'river, flowing water').",
+          "source_url": "https://en.wikipedia.org/wiki/Bolshoy_Ik"
         },
         {
           "name": "Tanalyk",
@@ -9152,38 +9139,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Kama_(river)"
         },
         {
-          "name": "Obva",
+          "name": "Tulva",
           "disambiguation_note": null,
-          "localisation_stem": "Obva",
+          "localisation_stem": "Tulva",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "South of the Obva River.",
+          "relationship": "Left-bank tributary of the Kama flowing northward opposite the Nytva reach.",
           "language_variants": [
             {
-              "form": "Obva",
-              "native_script": null,
+              "form": "Tulva",
+              "native_script": "Тулва",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian Обва."
+              "notes": "Russian hydronym"
             },
             {
-              "form": "Öb-va",
-              "native_script": null,
+              "form": "Tolva",
+              "native_script": "Толва",
               "language": "Komi",
               "language_code": "kom",
-              "notes": "Komi Ӧбва ('snowdrift water')."
+              "notes": "Komi-Permyak hydronym meaning 'wind-water'"
             }
           ],
-          "earliest_attestation_year": 1579,
-          "earliest_attestation_note": "1579 CE (Yakhontov's census of Perm).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-1700 Perm-basin hydronym without a single dated written first-mention year in cited sources.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Komi öb ('snowdrift') + va ('water').",
-          "source_url": "https://en.wikipedia.org/wiki/Obva"
+          "etymology_notes": "From Komi-Permyak tol ('wind') + va ('water, river') or tul- ('spring flood').",
+          "source_url": "https://en.wikipedia.org/wiki/Tulva"
         }
       ]
     },
@@ -9402,38 +9389,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Komi_peoples"
         },
         {
-          "name": "Obva",
+          "name": "Mulyanka",
           "disambiguation_note": null,
-          "localisation_stem": "Obva",
+          "localisation_stem": "Mulyanka",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "South of the Obva River.",
+          "relationship": "Left-bank tributary of the Kama entering just upstream of Krasnokamsk.",
           "language_variants": [
             {
-              "form": "Obva",
-              "native_script": null,
+              "form": "Mulyanka",
+              "native_script": "Мулянка",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian Обва."
-            },
-            {
-              "form": "Öb-va",
-              "native_script": null,
-              "language": "Komi",
-              "language_code": "kom",
-              "notes": "Komi Ӧбва ('snowdrift water')."
+              "notes": "Russian hydronym"
             }
           ],
-          "earliest_attestation_year": 1579,
-          "earliest_attestation_note": "1579 CE (Yakhontov's census of Perm).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous middle Kama tributary adjacent to ancient Lomovatovo and Rodanovo archaeological sites.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Komi öb ('snowdrift') + va ('water').",
-          "source_url": "https://en.wikipedia.org/wiki/Obva"
+          "etymology_notes": "Derived from the Permic/Turkic substrate root mul- (historically associated with Mulla / Mully settlements along its banks).",
+          "source_url": "https://en.wikipedia.org/wiki/Mulyanka"
         },
         {
           "name": "Siva",
@@ -11157,38 +11137,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Mansi_people"
         },
         {
-          "name": "Iset",
+          "name": "Techa",
           "disambiguation_note": null,
-          "localisation_stem": "Iset",
+          "localisation_stem": "Techa",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "On the Iset River.",
+          "relationship": "Right-bank tributary of the Iset flowing northeastward to join it just upstream of Shadrinsk.",
           "language_variants": [
             {
-              "form": "Iset",
-              "native_script": null,
+              "form": "Techa",
+              "native_script": "Теча",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian Исеть."
+              "notes": "Russian hydronym"
             },
             {
-              "form": "İset",
-              "native_script": null,
+              "form": "Tisä",
+              "native_script": "Тисә",
               "language": "Bashkir",
               "language_code": "bak",
-              "notes": "Bashkir Иҫәт."
+              "notes": "Bashkir hydronym"
             }
           ],
-          "earliest_attestation_year": 1627,
-          "earliest_attestation_note": "17th century CE in Russian Tobolsk and Ural records.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Trans-Ural steppe river of the Tobol-Iset watershed.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Ob-Ugric or Samoyedic substrate hydronym *Is-et ('fish river' or 'cold river').",
-          "source_url": "https://en.wikipedia.org/wiki/Iset_(river)"
+          "etymology_notes": "Possibly from an Ugric/Samoyedic or Turkic substrate hydronym adapted into Russian as Techa (influenced by Russian tech', 'to flow').",
+          "source_url": "https://en.wikipedia.org/wiki/Techa"
         },
         {
           "name": "Miass",
@@ -11406,38 +11386,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Khanty"
         },
         {
-          "name": "Iset",
+          "name": "Pyshma",
           "disambiguation_note": null,
-          "localisation_stem": "Iset",
+          "localisation_stem": "Pyshma",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "On the Iset River.",
+          "relationship": "Major Trans-Ural river flowing parallel to and immediately north of the lower Iset near Baklanskoye.",
           "language_variants": [
             {
-              "form": "Iset",
-              "native_script": null,
+              "form": "Pyshma",
+              "native_script": "Пышма",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian Исеть."
+              "notes": "Russian hydronym"
             },
             {
-              "form": "İset",
-              "native_script": null,
-              "language": "Bashkir",
-              "language_code": "bak",
-              "notes": "Bashkir Иҫәт."
+              "form": "Pıshma",
+              "native_script": "Пышма",
+              "language": "Tatar",
+              "language_code": "tat",
+              "notes": "Siberian Tatar hydronym"
             }
           ],
-          "earliest_attestation_year": 1627,
-          "earliest_attestation_note": "17th century CE in Russian Tobolsk and Ural records.",
+          "earliest_attestation_year": 1582,
+          "earliest_attestation_note": "Late 16th century CE in Russian Siberian Chronicles.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Ob-Ugric or Samoyedic substrate hydronym *Is-et ('fish river' or 'cold river').",
-          "source_url": "https://en.wikipedia.org/wiki/Iset_(river)"
+          "etymology_notes": "From an Ugric (Mansi) or Siberian Tatar substrate hydronym (Mansi *Posma / Tatar Pyshma, 'calm/deep river').",
+          "source_url": "https://en.wikipedia.org/wiki/Pyshma_(river)"
         },
         {
           "name": "Tobol River",
@@ -12984,38 +12964,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Komi_peoples"
         },
         {
-          "name": "Kosa",
+          "name": "Inva",
           "disambiguation_note": null,
-          "localisation_stem": "Kosa",
+          "localisation_stem": "Inva",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "South of the Kosa River.",
+          "relationship": "Principal right tributary of the Kama flowing through the Komi-Permyak heartland immediately south of Kasib.",
           "language_variants": [
             {
-              "form": "Kosa",
-              "native_script": null,
+              "form": "Inva",
+              "native_script": "Иньва",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian Коса."
+              "notes": "Russian hydronym"
             },
             {
-              "form": "Kös",
-              "native_script": null,
+              "form": "Ynva",
+              "native_script": "Ынва",
               "language": "Komi",
               "language_code": "kom",
-              "notes": "Komi Кӧс."
+              "notes": "Komi-Permyak hydronym"
             }
           ],
-          "earliest_attestation_year": 1579,
-          "earliest_attestation_note": "1579 CE (Yakhontov's census of Great Perm).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Permic river of the upper Kama basin.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Komi-Permyak kös ('dry, shallow').",
-          "source_url": "https://en.wikipedia.org/wiki/Kosa_(river)"
+          "etymology_notes": "Komi-Permyak in/yn ('big/wide' or 'mother') + va ('water, river').",
+          "source_url": "https://en.wikipedia.org/wiki/Inva"
         },
         {
           "name": "Kama",
@@ -17431,38 +17411,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Mari_people"
         },
         {
-          "name": "Vetluga",
+          "name": "Yug",
           "disambiguation_note": null,
-          "localisation_stem": "Vetluga",
+          "localisation_stem": "Yug",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "In the upper Vetluga basin.",
+          "relationship": "Major northern river rising along the Northern Ridge watershed immediately north of Vokhma.",
           "language_variants": [
             {
-              "form": "Vetluga",
-              "native_script": null,
+              "form": "Yug",
+              "native_script": "Юг",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian Ветлуга."
+              "notes": "Russian hydronym"
             },
             {
-              "form": "Vütla",
-              "native_script": null,
-              "language": "Mari",
-              "language_code": "chm",
-              "notes": "Mari Вӱтла."
+              "form": "Ju",
+              "native_script": "Ю",
+              "language": "Komi",
+              "language_code": "kom",
+              "notes": "Komi hydronym meaning 'river'"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "1200 CE (Early Russian chronicles of the Upper/Middle Volga).",
+          "earliest_attestation_year": 1212,
+          "earliest_attestation_note": "13th century CE (c. 1212 CE) in chronicles of Veliky Ustyug.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mari Vütla ('watery, full of water').",
-          "source_url": "https://en.wikipedia.org/wiki/Vetluga_(river)"
+          "etymology_notes": "From Komi/Permic ju ('river, water') or Finnic *joki ('river'), unrelated to Slavic yug ('south').",
+          "source_url": "https://en.wikipedia.org/wiki/Yug_(river)"
         },
         {
           "name": "Unzha",
@@ -19438,45 +19418,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Burtas"
         },
         {
-          "name": "Samara",
+          "name": "Bolshoy Irgiz River",
           "disambiguation_note": null,
-          "localisation_stem": "Samara",
+          "localisation_stem": "Bolshoy Irgiz",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "South of the Samara River.",
+          "relationship": "Long meandering steppe river rising on the Obshchy Syrt directly south of Neftegorsk.",
           "language_variants": [
             {
-              "form": "Samara",
-              "native_script": null,
+              "form": "Bolshoy Irgiz",
+              "native_script": "Большой Иргиз",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian Самара."
+              "notes": "Russian hydronym"
             },
             {
-              "form": "Samar",
+              "form": "Irghiz",
               "native_script": null,
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Tatar Самар."
-            },
-            {
-              "form": "Samur",
-              "native_script": null,
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Ibn Fadlan (922 CE) as Samur."
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Steppe Turkic hydronym ('flowing/running river')"
             }
           ],
           "earliest_attestation_year": 922,
-          "earliest_attestation_note": "922 CE (Ibn Fadlan's Risala recording the river Samur on his journey to Volga Bulgaria).",
+          "earliest_attestation_note": "922 CE — Mentioned as Irghiz in Ahmad ibn Fadlan's travelogue across the Volga-Ural steppe.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Attested as Samur in 922 CE; variously linked to Turkic, Iranian, or Finno-Ugric roots.",
-          "source_url": "https://en.wikipedia.org/wiki/Samara_(Volga)"
+          "etymology_notes": "From Turkic yrgyz / irgiz ('swift/winding stream', cf. Bashkir Yrgiz) + Russian bolshoy ('great').",
+          "source_url": "https://en.wikipedia.org/wiki/Bolshoy_Irgiz"
         },
         {
           "name": "Bolshoy Kinel",
@@ -19573,45 +19546,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Sarmatians"
         },
         {
-          "name": "Samara",
-          "disambiguation_note": null,
-          "localisation_stem": "Samara",
+          "name": "Tok",
+          "disambiguation_note": "Samara",
+          "localisation_stem": "Tok",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "On the Samara River.",
+          "relationship": "Right-bank tributary of the Samara descending from the Obshchy Syrt immediately east of Buzuluk.",
           "language_variants": [
             {
-              "form": "Samara",
-              "native_script": null,
+              "form": "Tok",
+              "native_script": "Ток",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian Самара."
+              "notes": "Russian hydronym"
             },
             {
-              "form": "Samar",
-              "native_script": null,
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Tatar Самар."
-            },
-            {
-              "form": "Samur",
-              "native_script": null,
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Ibn Fadlan (922 CE) as Samur."
+              "form": "Tuq",
+              "native_script": "Туҡ",
+              "language": "Bashkir",
+              "language_code": "bak",
+              "notes": "Bashkir hydronym"
             }
           ],
-          "earliest_attestation_year": 922,
-          "earliest_attestation_note": "922 CE (Ibn Fadlan's Risala recording the river Samur on his journey to Volga Bulgaria).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Trans-Volga steppe tributary of the Samara River.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Attested as Samur in 922 CE; variously linked to Turkic, Iranian, or Finno-Ugric roots.",
-          "source_url": "https://en.wikipedia.org/wiki/Samara_(Volga)"
+          "etymology_notes": "From Turkic/Bashkir tuq ('abundant, rich, full-flowing') or Iranian *taka ('course, stream').",
+          "source_url": "https://en.wikipedia.org/wiki/Tok_(tributary_of_Samara)"
         },
         {
           "name": "Obshchy Syrt",

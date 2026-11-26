@@ -137,10 +137,10 @@
       "target_baronies_audited": 103,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 309,
-      "unique_replacement_names": 91,
+      "unique_replacement_names": 93,
       "candidates_with_multilingual_variants": 210,
       "wikipedia_source_attached": 309,
-      "unique_source_urls": 91,
+      "unique_source_urls": 93,
       "candidates_by_category": {
         "choronym": 56,
         "hydronym": 44,
@@ -158,10 +158,13 @@
       "unique_language_codes": [
         "ara",
         "ber",
+        "fra",
         "grc",
         "kab",
+        "kau",
         "lat",
         "shi",
+        "tmh",
         "tzm",
         "zgh"
       ],
@@ -174,17 +177,17 @@
         "unattested_indigenous_or_minor": 53
       },
       "candidates_by_attestation_basis": {
-        "attested_867_to_1066": 17,
-        "attested_pre_867": 117,
-        "indigenous_pre_literate": 175
+        "attested_867_to_1066": 16,
+        "attested_pre_867": 119,
+        "indigenous_pre_literate": 174
       },
       "bookmark_valid_candidates": {
-        "867": 292,
+        "867": 293,
         "1066": 309,
         "1178": 309
       },
       "baronies_with_867_valid_candidate": 103,
-      "unique_localisation_stems": 91
+      "unique_localisation_stems": 93
     }
   },
   "baronies": {
@@ -3957,7 +3960,7 @@
           "localisation_stem": "Gulf of Gabès",
           "category": "hydronym",
           "feature_subtype": "bay",
-          "relationship": "Local bay associated with the x script 4732 area around Al Hamma.",
+          "relationship": "Local bay associated with the area around Al Hamma.",
           "language_variants": [
             {
               "form": "Khalīj Qābis",
@@ -3998,7 +4001,7 @@
           "localisation_stem": "Chott el Djerid",
           "category": "hydronym",
           "feature_subtype": "lake",
-          "relationship": "Local lake associated with the x script 4732 area around Al Hamma.",
+          "relationship": "Local lake associated with the area around Al Hamma.",
           "language_variants": [
             {
               "form": "Shaṭṭ al-Jarīd",
@@ -7538,38 +7541,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tuareg_people"
         },
         {
-          "name": "Aïr Mountains",
+          "name": "Mount Gréboun",
           "disambiguation_note": null,
-          "localisation_stem": "Aïr",
+          "localisation_stem": "Gréboun",
           "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Local mountain range associated with the air area around Agadez.",
+          "feature_subtype": "mountain",
+          "relationship": "High granite peak in the northern Aïr massif north of Agadez.",
           "language_variants": [
             {
-              "form": "Jibāl Āyir",
-              "native_script": "جبال آير",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic Jibāl Āyīr"
+              "form": "Adrar n Greboun",
+              "native_script": null,
+              "language": "Tamashek",
+              "language_code": "tmh",
+              "notes": "Tuareg/Berber mountain name"
             },
             {
-              "form": "Ayăr",
+              "form": "Mont Gréboun",
               "native_script": null,
-              "language": "Central Atlas Tamazight",
-              "language_code": "tzm",
-              "notes": "Tuareg Berber mountain massif name"
+              "language": "French",
+              "language_code": "fra",
+              "notes": "Established Niger French form"
             }
           ],
-          "earliest_attestation_year": 1353,
-          "earliest_attestation_note": "1353 CE (Ibn Battuta's Rihla; medieval Sultanate of Agadez)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Ancient granite massif in the northern Aïr Mountains of Niger.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Triangular volcanic massif in northern Niger rising above the Ténéré desert.",
-          "source_url": "https://en.wikipedia.org/wiki/A%C3%AFr_Mountains"
+          "etymology_notes": "High granite peak (1,944 m) in the northern Aïr massif overlooking the Ténéré.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Gr%C3%A9boun"
         },
         {
           "name": "Mont Idoukal-n-Taghès",
@@ -9645,38 +9648,45 @@
       },
       "replacement_candidates": [
         {
-          "name": "Tuareg",
+          "name": "Toubou",
           "disambiguation_note": null,
-          "localisation_stem": "Tuareg",
+          "localisation_stem": "Toubou",
           "category": "tribe",
-          "feature_subtype": "berber_tribe",
-          "relationship": "Saharan Berber confederation of the Ghat oasis.",
+          "feature_subtype": "saharan_people",
+          "relationship": "Pre-867 Saharan people historically active across the Fezzan oases around Al-Fewet.",
           "language_variants": [
             {
-              "form": "Ṭawāriq",
-              "native_script": "طوارق",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic Ṭawāriq"
+              "form": "Tubu",
+              "native_script": null,
+              "language": "Kanuri",
+              "language_code": "kau",
+              "notes": "Kanuri name meaning 'rock people' (referring to Tibesti)"
             },
             {
-              "form": "Kel Tamasheq",
+              "form": "Tibū",
+              "native_script": "تبو",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic ethnonym for the Teda and Daza peoples"
+            },
+            {
+              "form": "Toubou",
               "native_script": null,
-              "language": "Central Atlas Tamazight",
-              "language_code": "tzm",
-              "notes": "Endonym meaning 'Speakers of Tamasheq'"
+              "language": "French",
+              "language_code": "fra",
+              "notes": "Established Chad/Niger French spelling"
             }
           ],
-          "earliest_attestation_year": 950,
-          "earliest_attestation_note": "Attested in 10th century CE medieval Arabic geographers (Ibn Hawqal) as Sanhaja veil-wearing Saharan nomads.",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": -430,
+          "earliest_attestation_note": "c. 430 BCE (Herodotus's account of the Garamantes and Troglodytae of Tibesti, later Kanuri Tubu)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Berber-speaking nomadic confederation of the central Sahara (Ahaggar, Tassili n'Ajjer, Aïr, and Adrar des Ifoghas). Onomastic note: Central Atlas Tamazight 'Kel Tamasheq' (Endonym meaning 'Speakers of Tamasheq').",
-          "source_url": "https://en.wikipedia.org/wiki/Tuareg_people"
+          "etymology_notes": "Kanuri-derived name ('people of Tu/Tibesti') encompassing the Teda and Daza Saharan peoples.",
+          "source_url": "https://en.wikipedia.org/wiki/Toubou_people"
         },
         {
           "name": "Tadrart Acacus",
@@ -9807,38 +9817,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tuareg_people"
         },
         {
-          "name": "Tadrart Acacus",
+          "name": "Messak Settafet",
           "disambiguation_note": null,
-          "localisation_stem": "Tadrart Acacus",
+          "localisation_stem": "Messak Settafet",
           "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Local mountain range associated with the ghat area around Al-Barka.",
+          "feature_subtype": "plateau",
+          "relationship": "Sandstone escarpment and rock-art plateau east of Al-Barkat in Fezzan.",
           "language_variants": [
             {
-              "form": "Tadrārt Akākūs",
-              "native_script": "تدرارت أكاكوس",
+              "form": "Masāk Saṭṭāfat",
+              "native_script": "مساك سطافت",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic Tadrārt Akākūs"
+              "notes": "Arabic plateau name"
             },
             {
-              "form": "Tadrart",
+              "form": "Messak Seṭṭafet",
               "native_script": null,
-              "language": "Central Atlas Tamazight",
-              "language_code": "tzm",
-              "notes": "Berber 'Mountain'"
+              "language": "Tamashek",
+              "language_code": "tmh",
+              "notes": "Berber name meaning 'Black Plateau'"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "Attested by 1500 CE in traditional Tuareg toponymy east of Ghat in southwestern Libya.",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -5000,
+          "earliest_attestation_note": "Neolithic rock-art escarpment inhabited since the African Humid Period (c. 5000 BCE).",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Berber tadrart ('mountain'); sandstone mountain range east of Ghat.",
-          "source_url": "https://en.wikipedia.org/wiki/Tadrart_Acacus"
+          "etymology_notes": "Sandstone escarpment in southwestern Fezzan renowned for prehistoric rock engravings. Onomastic note: Tamashek 'Messak Seṭṭafet' (Berber name meaning 'Black Plateau').",
+          "source_url": "https://en.wikipedia.org/wiki/Messak_Settafet"
         },
         {
           "name": "Tassili n'Ajjer",

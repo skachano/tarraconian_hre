@@ -137,10 +137,10 @@
       "target_baronies_audited": 351,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 1053,
-      "unique_replacement_names": 684,
+      "unique_replacement_names": 683,
       "candidates_with_multilingual_variants": 834,
       "wikipedia_source_attached": 1053,
-      "unique_source_urls": 688,
+      "unique_source_urls": 687,
       "candidates_by_category": {
         "choronym": 40,
         "hydronym": 540,
@@ -174,6 +174,7 @@
         "nor",
         "rus",
         "sco",
+        "sju",
         "sma",
         "sme",
         "smj",
@@ -202,7 +203,7 @@
         "1178": 1053
       },
       "baronies_with_867_valid_candidate": 351,
-      "unique_localisation_stems": 682
+      "unique_localisation_stems": 680
     }
   },
   "baronies": {
@@ -10813,7 +10814,7 @@
         {
           "name": "Onega Bay",
           "disambiguation_note": null,
-          "localisation_stem": "Onega Bay",
+          "localisation_stem": "Onega",
           "category": "hydronym",
           "feature_subtype": "bay",
           "relationship": "Local water feature in the Soma area.",
@@ -28422,45 +28423,38 @@
           "source_url": "https://sv.wikipedia.org/wiki/Sydsamer"
         },
         {
-          "name": "Ume River",
+          "name": "Vindel River",
           "disambiguation_note": null,
-          "localisation_stem": "Ume",
+          "localisation_stem": "Vindel",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Primary river system of the Lusspie/Storuman valley.",
+          "relationship": "Largest tributary of the Ume, flowing parallel to the Lusspie highlands from the Norwegian border.",
           "language_variants": [
             {
-              "form": "Ubmejeiednuo",
-              "native_script": null,
-              "language": "Southern Sámi",
-              "language_code": "sma",
-              "notes": "Southern Sámi name"
-            },
-            {
-              "form": "Umeälven",
+              "form": "Vindelälven",
               "native_script": null,
               "language": "Swedish",
               "language_code": "swe",
-              "notes": "Swedish name"
+              "notes": "Swedish hydronym"
             },
             {
-              "form": "Uumajanjoki",
+              "form": "Vyöddale",
               "native_script": null,
-              "language": "Finnish",
-              "language_code": "fin",
-              "notes": "Finnish name"
+              "language": "Ume Sami",
+              "language_code": "sju",
+              "notes": "Ume Sámi name of the river"
             }
           ],
-          "earliest_attestation_year": 1314,
-          "earliest_attestation_note": "1314 CE (attested as Uma in the Uppsala diocese tithe list)",
+          "earliest_attestation_year": 1539,
+          "earliest_attestation_note": "1539 CE (attested on Olaus Magnus Carta Marina; medieval coastal trade route)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Old Norse *Úma* (\"the howling/roaring one\"), referring to the river rapids.",
-          "source_url": "https://en.wikipedia.org/wiki/Ume_River"
+          "etymology_notes": "From Old Norse *Vindil / Swedish vindel ('winding, meandering') + älv ('river').",
+          "source_url": "https://en.wikipedia.org/wiki/Vindel_River"
         },
         {
           "name": "Juktån",

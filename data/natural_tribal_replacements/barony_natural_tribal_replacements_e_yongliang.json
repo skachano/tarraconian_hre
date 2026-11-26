@@ -143,15 +143,15 @@
       "unique_source_urls": 43,
       "candidates_by_category": {
         "choronym": 25,
-        "hydronym": 40,
-        "oronym": 29,
+        "hydronym": 37,
+        "oronym": 32,
         "topographic_feature": 0,
         "tribe": 47
       },
       "baronies_with_category": {
         "has_choronym_candidate": 24,
         "has_hydronym_candidate": 33,
-        "has_oronym_candidate": 26,
+        "has_oronym_candidate": 29,
         "has_topographic_feature_candidate": 0,
         "has_tribe_candidate": 47
       },
@@ -171,8 +171,8 @@
       },
       "candidates_by_attestation_basis": {
         "attested_867_to_1066": 2,
-        "attested_pre_867": 126,
-        "indigenous_pre_literate": 13
+        "attested_pre_867": 128,
+        "indigenous_pre_literate": 11
       },
       "bookmark_valid_candidates": {
         "867": 139,
@@ -1087,45 +1087,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tao_River"
         },
         {
-          "name": "Daxia River",
+          "name": "Qilian Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Daxia",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Prominent local river associated with Dingqiang (Longyou).",
+          "localisation_stem": "Qilian",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Easternmost spurs of the Qilian system framing the Hezhou basin and upper Tao-Daxia divide.",
           "language_variants": [
             {
-              "form": "Dàxià Hé",
-              "native_script": "大夏河",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": null
-            },
-            {
-              "form": "Lí Shuǐ",
-              "native_script": "漓水",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": null
-            },
-            {
-              "form": "Bsang-chu",
-              "native_script": "བསང་ཆུ",
+              "form": "Mdo-la-ri-rgyud",
+              "native_script": "མདོ་ལ་རི་རྒྱུད",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": null
+              "notes": "Tibetan name (Mdo la ri rgyud)"
+            },
+            {
+              "form": "Qílián Shān",
+              "native_script": "祁連山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Chinese name (Qíliánshān)"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "Attested in Northern and Southern Dynasties chronicles as Lishui (5th century CE).",
+          "earliest_attestation_year": -121,
+          "earliest_attestation_note": "Attested in the Shiji (Records of the Grand Historian) (c. 2nd–1st century BCE).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Yellow River tributary flowing through Xiahe and Linxia (Hezhou).",
-          "source_url": "https://en.wikipedia.org/wiki/Daxia_River"
+          "etymology_notes": "From Xiongnu *qilian* ('sky'); mountain range bordering northern Amdo, Xining, and Aksay.",
+          "source_url": "https://en.wikipedia.org/wiki/Qilian_Mountains"
         }
       ]
     },
@@ -1195,45 +1188,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tuyuhun"
         },
         {
-          "name": "Huangshui River",
+          "name": "Qilian Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Huangshui",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Prominent local river associated with Miaochuan (Longyou).",
+          "localisation_stem": "Qilian",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range forming the northern rim of the Huangshui valley above Miaochuan.",
           "language_variants": [
             {
-              "form": "Huáng Shuǐ",
-              "native_script": "湟水",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": null
-            },
-            {
-              "form": "Huáng Shuǐ",
-              "native_script": "潢水",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": null
-            },
-            {
-              "form": "Tsong-chu",
-              "native_script": "ཙོང་ཆུ",
+              "form": "Mdo-la-ri-rgyud",
+              "native_script": "མདོ་ལ་རི་རྒྱུད",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": null
+              "notes": "Tibetan name (Mdo la ri rgyud)"
+            },
+            {
+              "form": "Qílián Shān",
+              "native_script": "祁連山",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Chinese name (Qíliánshān)"
             }
           ],
           "earliest_attestation_year": -121,
-          "earliest_attestation_note": "Attested in Han dynasty chronicles during Western Han campaigns into Xining (2nd century BCE).",
+          "earliest_attestation_note": "Attested in the Shiji (Records of the Grand Historian) (c. 2nd–1st century BCE).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major Yellow River tributary flowing through Xining; Tibetan Tsong-chu.",
-          "source_url": "https://en.wikipedia.org/wiki/Huangshui_River"
+          "etymology_notes": "From Xiongnu *qilian* ('sky'); mountain range bordering northern Amdo, Xining, and Aksay.",
+          "source_url": "https://en.wikipedia.org/wiki/Qilian_Mountains"
         },
         {
           "name": "Qinghai Lake",
@@ -1344,45 +1330,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Tuyuhun"
         },
         {
-          "name": "Huangshui River",
+          "name": "Riyue Mountain",
           "disambiguation_note": null,
-          "localisation_stem": "Huangshui",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Prominent local river associated with Gemen (Longyou).",
+          "localisation_stem": "Riyue",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Historic mountain pass on the western rim of the Huangshui valley dividing Xining from Qinghai Lake.",
           "language_variants": [
             {
-              "form": "Huáng Shuǐ",
-              "native_script": "湟水",
+              "form": "Rìyuè Shān",
+              "native_script": "日月山",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": null
+              "notes": "Chinese name meaning Sun-Moon Mountain"
             },
             {
-              "form": "Huáng Shuǐ",
-              "native_script": "潢水",
+              "form": "Chìlǐng",
+              "native_script": "赤嶺",
               "language": "Literary Chinese",
               "language_code": "lzh",
-              "notes": null
+              "notes": "Tang-dynasty name Chiling ('Red Ridge')"
             },
             {
-              "form": "Tsong-chu",
-              "native_script": "ཙོང་ཆུ",
+              "form": "Nyima Dawa La",
+              "native_script": "ཉི་མ་ཟླ་བ་ལ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": null
+              "notes": "Tibetan name meaning Sun and Moon Pass"
             }
           ],
-          "earliest_attestation_year": -121,
-          "earliest_attestation_note": "Attested in Han dynasty chronicles during Western Han campaigns into Xining (2nd century BCE).",
+          "earliest_attestation_year": 641,
+          "earliest_attestation_note": "641 CE (Attested as Chiling along the Tang-Tibet Ancient Road during Princess Wencheng's journey)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major Yellow River tributary flowing through Xining; Tibetan Tsong-chu.",
-          "source_url": "https://en.wikipedia.org/wiki/Huangshui_River"
+          "etymology_notes": "Strategic watershed pass separating the Yellow-Huangshui drainage from the Qinghai Lake endorheic basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Riyue_Mountain"
         },
         {
           "name": "Datong River",
@@ -3176,9 +3162,9 @@
               "notes": null
             }
           ],
-          "earliest_attestation_year": 1400,
-          "earliest_attestation_note": "15th century CE (Ming-era term for the fertile Yellow River bend)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -127,
+          "earliest_attestation_note": "Attested in Han-dynasty historical records (Henan/Shuofang) from the 2nd century BCE.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -3270,9 +3256,9 @@
               "notes": null
             }
           ],
-          "earliest_attestation_year": 1400,
-          "earliest_attestation_note": "15th century CE (Ming-era term for the fertile Yellow River bend)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -127,
+          "earliest_attestation_note": "Attested in Han-dynasty historical records (Henan/Shuofang) from the 2nd century BCE.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,

@@ -137,10 +137,10 @@
       "target_baronies_audited": 109,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 327,
-      "unique_replacement_names": 121,
-      "candidates_with_multilingual_variants": 281,
+      "unique_replacement_names": 125,
+      "candidates_with_multilingual_variants": 277,
       "wikipedia_source_attached": 327,
-      "unique_source_urls": 122,
+      "unique_source_urls": 127,
       "candidates_by_category": {
         "choronym": 29,
         "hydronym": 132,
@@ -162,6 +162,7 @@
         "hun",
         "lat",
         "ron",
+        "tur",
         "ukr"
       ],
       "anachronism_type_counts": {
@@ -173,18 +174,18 @@
         "unattested_indigenous_or_minor": 2
       },
       "candidates_by_attestation_basis": {
-        "attested_1066_to_1178": 13,
+        "attested_1066_to_1178": 12,
         "attested_867_to_1066": 7,
-        "attested_pre_867": 153,
-        "indigenous_pre_literate": 154
+        "attested_pre_867": 148,
+        "indigenous_pre_literate": 160
       },
       "bookmark_valid_candidates": {
-        "867": 307,
-        "1066": 314,
+        "867": 308,
+        "1066": 315,
         "1178": 327
       },
       "baronies_with_867_valid_candidate": 109,
-      "unique_localisation_stems": 119
+      "unique_localisation_stems": 123
     }
   },
   "baronies": {
@@ -7323,38 +7324,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Sclaveni"
         },
         {
-          "name": "Argeș",
+          "name": "Vedea",
           "disambiguation_note": null,
-          "localisation_stem": "Argeș",
+          "localisation_stem": "Vedea",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major river flowing directly through Pitești.",
+          "relationship": "Major Wallachian river rising in the Cotmeana piedmont immediately southwest of Pitești.",
           "language_variants": [
             {
-              "form": "Ordēssós",
-              "native_script": "Ὀρδησσός",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name (Ordessos) in Herodotus (c. 440 BCE)"
-            },
-            {
-              "form": "Argeș",
+              "form": "Vedea",
               "native_script": null,
               "language": "Romanian",
               "language_code": "ron",
-              "notes": "Romanian river name"
+              "notes": "Romanian hydronym"
             }
           ],
-          "earliest_attestation_year": -440,
-          "earliest_attestation_note": "Attested c. 440 BCE as Ordessos in Herodotus's Histories (Book IV) and in medieval Wallachian charters from 1369 CE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Dacian-Slavic hydronym of the Wallachian Plain.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river of Muntenia rising in the Făgăraș Mountains and flowing into the Danube.",
-          "source_url": "https://en.wikipedia.org/wiki/Arge%C8%99_(river)"
+          "etymology_notes": "Often linked to an Indo-European hydronymic root *wed- ('water') or Slavic voda via Dacian/South Slavic mediation.",
+          "source_url": "https://en.wikipedia.org/wiki/Vedea"
         },
         {
           "name": "Râul Doamnei",
@@ -8337,59 +8331,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Dniester_Estuary"
         },
         {
-          "name": "Black Sea",
+          "name": "Cogâlnic",
           "disambiguation_note": null,
-          "localisation_stem": "Black Sea",
+          "localisation_stem": "Cogâlnic",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea immediately east of the Dniester Estuary.",
+          "feature_subtype": "river",
+          "relationship": "Steppe river crossing the Budjak plain just west of the Dniester Estuary and Bilhorod-Dnistrovskyi.",
           "language_variants": [
             {
-              "form": "Póntos Eúxeinos",
-              "native_script": "Πόντος Εὔξεινος",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name (Pontos Euxeinos)"
-            },
-            {
-              "form": "Pontus Euxinus",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
-            },
-            {
-              "form": "Marea Neagră",
+              "form": "Cogâlnic",
               "native_script": null,
               "language": "Romanian",
               "language_code": "ron",
-              "notes": "Romanian name"
+              "notes": "Romanian hydronym"
             },
             {
-              "form": "Cherno more",
-              "native_script": "Черно море",
-              "language": "Bulgarian",
-              "language_code": "bul",
-              "notes": "Bulgarian name"
-            },
-            {
-              "form": "Chorne more",
-              "native_script": "Чорне море",
+              "form": "Kogylnyk",
+              "native_script": "Когильник",
               "language": "Ukrainian",
               "language_code": "ukr",
-              "notes": "Ukrainian name"
+              "notes": "Ukrainian hydronym"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested from the 5th century BCE as Pontos Euxeinos in Classical Greek sources (Herodotus, Pindar).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1590,
+          "earliest_attestation_note": "Attested in 16th-century CE Moldavian and Ottoman-era sources in the Bugeac steppe.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea bordering Dobruja and Bugeac.",
-          "source_url": "https://en.wikipedia.org/wiki/Black_Sea"
+          "etymology_notes": "Derived from Turkic kagal / kugal ('reed, sedge, marsh grass'), reflecting the reed-lined steppe river valley.",
+          "source_url": "https://en.wikipedia.org/wiki/Cog%C3%A2lnic"
         }
       ]
     },
@@ -10836,52 +10809,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Costoboci"
         },
         {
-          "name": "Siret",
+          "name": "Șomuzul Mare",
           "disambiguation_note": null,
-          "localisation_stem": "Siret",
+          "localisation_stem": "Șomuzul Mare",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major river flowing east of Suceava.",
+          "relationship": "Right tributary of the Siret draining the Moldavian Plateau hills immediately south of Suceava.",
           "language_variants": [
             {
-              "form": "Hierasós",
-              "native_script": "Ἱερασός",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Ancient Greek name (Hierasos) in Ptolemy (c. 150 CE); also 'Seretos' (Σερετος) — Byzantine Greek name in Constantine VII (c. 950 CE)."
-            },
-            {
-              "form": "Siret",
+              "form": "Șomuzul Mare",
               "native_script": null,
               "language": "Romanian",
               "language_code": "ron",
-              "notes": "Romanian name"
-            },
-            {
-              "form": "Seret",
-              "native_script": "Серет",
-              "language": "Ukrainian",
-              "language_code": "ukr",
-              "notes": "Ukrainian name"
-            },
-            {
-              "form": "Szeret",
-              "native_script": null,
-              "language": "Hungarian",
-              "language_code": "hun",
-              "notes": "Hungarian name"
+              "notes": "Romanian hydronym meaning 'Great Șomuz'"
             }
           ],
-          "earliest_attestation_year": 150,
-          "earliest_attestation_note": "Attested c. 150 CE as Hierasos in Ptolemy's Geographia and c. 950 CE as Seretos in De Administrando Imperio.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous medieval Moldavian hydronym attested in 15th-century Moldavian princely charters.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Longest river of Moldavia, rising in Bukovina and flowing into the Danube near Galați.",
-          "source_url": "https://en.wikipedia.org/wiki/Siret_(river)"
+          "etymology_notes": "Derived from Romanian/Slavic Șomuz (possibly from Hungarian som 'cornelian cherry' or Slavic *šum- 'murmur') + mare ('great').",
+          "source_url": "https://en.wikipedia.org/wiki/%C8%98omuzul_Mare"
         },
         {
           "name": "Moldova",
@@ -11384,72 +11336,65 @@
       },
       "replacement_candidates": [
         {
-          "name": "Bolokhovians",
+          "name": "Carpi",
           "disambiguation_note": null,
-          "localisation_stem": "Bolokhovians",
+          "localisation_stem": "Carpi",
           "category": "tribe",
-          "feature_subtype": "medieval_people",
-          "relationship": "Medieval population of the upper Siret-Prut-Dniester borderlands.",
+          "feature_subtype": "dacian_tribe",
+          "relationship": "Free Dacian people inhabiting the Eastern Carpathian foothills and upper Siret-Prut valleys of northern Moldavia.",
           "language_variants": [
             {
-              "form": "Bolohoveni",
+              "form": "Carpi",
               "native_script": null,
-              "language": "Romanian",
-              "language_code": "ron",
-              "notes": "Romanian historical ethnonym"
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym attested in Roman imperial inscriptions and historiography"
             },
             {
-              "form": "Bolokhovtsi",
-              "native_script": "Болоховці",
-              "language": "Ukrainian",
-              "language_code": "ukr",
-              "notes": "Ukrainian historical ethnonym from Old East Slavic"
+              "form": "Kárpoi",
+              "native_script": "Κάρποι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Greek ethnonym attested in Ptolemy and Zosimus"
             }
           ],
-          "earliest_attestation_year": 1150,
-          "earliest_attestation_note": "Attested in the Hypatian Codex from the mid-12th to 13th century CE (1150–1257 CE).",
-          "attestation_basis": "attested_1066_to_1178",
+          "earliest_attestation_year": 140,
+          "earliest_attestation_note": "Attested c. 140 CE as Karpianoi in Ptolemy's Geographia and prominently in 3rd-century CE Roman chronicles.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
-            "1066": false,
+            "867": true,
+            "1066": true,
             "1178": true
           },
-          "etymology_notes": "Medieval population of the upper Dniester–Bukovina–Galicia borderlands. Onomastic note: Ukrainian historical ethnonym from Old East Slavic ('Bolokhovtsi').",
-          "source_url": "https://en.wikipedia.org/wiki/Bolokhovians"
+          "etymology_notes": "Traditionally connected to Proto-Indo-European *(s)kerp- or Albanian karpë ('rock'), giving its name to the Carpathian Mountains.",
+          "source_url": "https://en.wikipedia.org/wiki/Carpi_(people)"
         },
         {
-          "name": "Suceava",
-          "disambiguation_note": null,
-          "localisation_stem": "Suceava",
+          "name": "Putna",
+          "disambiguation_note": "Suceava",
+          "localisation_stem": "Putna",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Right tributary of the Siret flowing just south of Siret.",
+          "relationship": "Carpathian river flowing northeastward through northern Bukovina near Siret before joining the Suceava River.",
           "language_variants": [
             {
-              "form": "Suceava",
+              "form": "Putna",
               "native_script": null,
               "language": "Romanian",
               "language_code": "ron",
-              "notes": "Romanian river name"
-            },
-            {
-              "form": "Suchava",
-              "native_script": "Сучава",
-              "language": "Ukrainian",
-              "language_code": "ukr",
-              "notes": "Ukrainian name"
+              "notes": "Romanian hydronym for the river in northern Bukovina"
             }
           ],
-          "earliest_attestation_year": 1388,
-          "earliest_attestation_note": "Attested in 1388 CE in charters of Petru I of Moldavia.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Slavic-Romanian hydronym attested in early Moldavian monastic charters.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Right tributary of the Siret rising in Bukovina.",
-          "source_url": "https://en.wikipedia.org/wiki/Suceava_(river)"
+          "etymology_notes": "From Slavic *pǫtьna ('road-river, way-stream', cf. pǫtь 'way, road'), reflecting a mountain valley passage.",
+          "source_url": "https://en.wikipedia.org/wiki/Putna_(Suceava)"
         },
         {
           "name": "Bukovina",
@@ -11716,59 +11661,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Bastarnae"
         },
         {
-          "name": "Black Sea",
+          "name": "Chilia branch",
           "disambiguation_note": null,
-          "localisation_stem": "Black Sea",
+          "localisation_stem": "Chilia branch",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea immediately bordering Sulina at the mouth of the Danube.",
+          "feature_subtype": "river",
+          "relationship": "Northernmost and largest distributary channel of the Danube Delta, running north of Letea Forest and Sulina.",
           "language_variants": [
             {
-              "form": "Póntos Eúxeinos",
-              "native_script": "Πόντος Εὔξεινος",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name (Pontos Euxeinos)"
-            },
-            {
-              "form": "Pontus Euxinus",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
-            },
-            {
-              "form": "Marea Neagră",
+              "form": "Brațul Chilia",
               "native_script": null,
               "language": "Romanian",
               "language_code": "ron",
-              "notes": "Romanian name"
+              "notes": "Romanian name of the northern Danube distributary"
             },
             {
-              "form": "Cherno more",
-              "native_script": "Черно море",
-              "language": "Bulgarian",
-              "language_code": "bul",
-              "notes": "Bulgarian name"
-            },
-            {
-              "form": "Chorne more",
-              "native_script": "Чорне море",
+              "form": "Kiliiske hyrlo",
+              "native_script": "Кілійське гирло",
               "language": "Ukrainian",
               "language_code": "ukr",
-              "notes": "Ukrainian name"
+              "notes": "Ukrainian name of the arm"
+            },
+            {
+              "form": "Kellia",
+              "native_script": "Κελλία",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Byzantine Greek toponym for the Chilia mouth"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested from the 5th century BCE as Pontos Euxeinos in Classical Greek sources (Herodotus, Pindar).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Major natural distributary of the Danube Delta known in Byzantine Greek as Lykostomon/Kellia.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea bordering Dobruja and Bugeac.",
-          "source_url": "https://en.wikipedia.org/wiki/Black_Sea"
+          "etymology_notes": "Named after Chilia (from Greek kellia, 'granaries/cellars'), a medieval riverine emporium on the northern Danube mouth.",
+          "source_url": "https://en.wikipedia.org/wiki/Chilia_branch"
         },
         {
           "name": "Letea Forest",
@@ -11872,59 +11803,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Krobyzoi"
         },
         {
-          "name": "Black Sea",
+          "name": "Lake Techirghiol",
           "disambiguation_note": null,
-          "localisation_stem": "Black Sea",
+          "localisation_stem": "Techirghiol",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea immediately bordering Mangalia to the east.",
+          "feature_subtype": "lake",
+          "relationship": "Hypersaline coastal lagoon located along the Dobrujan shore between Constanța and Mangalia.",
           "language_variants": [
             {
-              "form": "Póntos Eúxeinos",
-              "native_script": "Πόντος Εὔξεινος",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name (Pontos Euxeinos)"
-            },
-            {
-              "form": "Pontus Euxinus",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
-            },
-            {
-              "form": "Marea Neagră",
+              "form": "Lacul Techirghiol",
               "native_script": null,
               "language": "Romanian",
               "language_code": "ron",
-              "notes": "Romanian name"
+              "notes": "Romanian name of the coastal lagoon"
             },
             {
-              "form": "Cherno more",
-              "native_script": "Черно море",
-              "language": "Bulgarian",
-              "language_code": "bul",
-              "notes": "Bulgarian name"
-            },
-            {
-              "form": "Chorne more",
-              "native_script": "Чорне море",
-              "language": "Ukrainian",
-              "language_code": "ukr",
-              "notes": "Ukrainian name"
+              "form": "Tekirgöl",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Ottoman/Dobrujan Turkish hydronym"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested from the 5th century BCE as Pontos Euxeinos in Classical Greek sources (Herodotus, Pindar).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Natural coastal liman formed along the Dobrujan Black Sea shore prior to medieval settlement.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea bordering Dobruja and Bugeac.",
-          "source_url": "https://en.wikipedia.org/wiki/Black_Sea"
+          "etymology_notes": "From Turkic tekir ('striped/spotted' or personal name Tekir) + göl ('lake').",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Techirghiol"
         },
         {
           "name": "Scythia Minor",
@@ -12069,59 +11979,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Kaliakra"
         },
         {
-          "name": "Black Sea",
+          "name": "Lake Shabla",
           "disambiguation_note": null,
-          "localisation_stem": "Black Sea",
+          "localisation_stem": "Shabla",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea immediately bordering Kavarna to the south.",
+          "feature_subtype": "lake",
+          "relationship": "Coastal brackish liman lying immediately northeast of Kavarna and Cape Kaliakra along the Dobrujan coast.",
           "language_variants": [
             {
-              "form": "Póntos Eúxeinos",
-              "native_script": "Πόντος Εὔξεινος",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name (Pontos Euxeinos)"
-            },
-            {
-              "form": "Pontus Euxinus",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
-            },
-            {
-              "form": "Marea Neagră",
-              "native_script": null,
-              "language": "Romanian",
-              "language_code": "ron",
-              "notes": "Romanian name"
-            },
-            {
-              "form": "Cherno more",
-              "native_script": "Черно море",
+              "form": "Shablensko ezero",
+              "native_script": "Шабленско езеро",
               "language": "Bulgarian",
               "language_code": "bul",
-              "notes": "Bulgarian name"
-            },
-            {
-              "form": "Chorne more",
-              "native_script": "Чорне море",
-              "language": "Ukrainian",
-              "language_code": "ukr",
-              "notes": "Ukrainian name"
+              "notes": "Bulgarian name of the coastal lagoon"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested from the 5th century BCE as Pontos Euxeinos in Classical Greek sources (Herodotus, Pindar).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Natural Black Sea coastal liman adjacent to the ancient Pontic port of Caron Limen (Shabla).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea bordering Dobruja and Bugeac.",
-          "source_url": "https://en.wikipedia.org/wiki/Black_Sea"
+          "etymology_notes": "Named after Shabla (Caron Limen in antiquity; later Ottoman Şabla), a coastal headland and port north of Kaliakra.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Shabla"
         }
       ]
     },
@@ -12382,31 +12264,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Cumans"
         },
         {
-          "name": "Bârlad",
+          "name": "Tutova",
           "disambiguation_note": null,
-          "localisation_stem": "Bârlad",
+          "localisation_stem": "Tutova",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major Siret tributary flowing directly past Vaslui.",
+          "relationship": "Steppe-forest river draining the hills southwest of Vaslui southward into the Bârlad valley.",
           "language_variants": [
             {
-              "form": "Bârlad",
+              "form": "Tutova",
               "native_script": null,
               "language": "Romanian",
               "language_code": "ron",
-              "notes": "Romanian river name"
+              "notes": "Romanian hydronym for the river and surrounding hills"
             }
           ],
-          "earliest_attestation_year": 1174,
-          "earliest_attestation_note": "Attested in the Hypatian Codex under 1174 CE (Berlad) and in 15th-century CE Moldavian charters.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous medieval Moldavian hydronym attested in early 15th-century Moldavian charters.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major left tributary of the Siret flowing through central and southern Moldavia.",
-          "source_url": "https://en.wikipedia.org/wiki/B%C3%A2rlad_(river)"
+          "etymology_notes": "Old Slavic or Cuman-substrate hydronym recorded in early Moldavian land grants (Colinele Tutovei).",
+          "source_url": "https://en.wikipedia.org/wiki/Tutova_(river)"
         },
         {
           "name": "Moldavia",

@@ -137,22 +137,22 @@
       "target_baronies_audited": 216,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 648,
-      "unique_replacement_names": 207,
-      "candidates_with_multilingual_variants": 458,
+      "unique_replacement_names": 254,
+      "candidates_with_multilingual_variants": 425,
       "wikipedia_source_attached": 648,
-      "unique_source_urls": 207,
+      "unique_source_urls": 254,
       "candidates_by_category": {
-        "choronym": 4,
-        "hydronym": 334,
-        "oronym": 89,
-        "topographic_feature": 5,
-        "tribe": 216
+        "choronym": 2,
+        "hydronym": 294,
+        "oronym": 101,
+        "topographic_feature": 34,
+        "tribe": 217
       },
       "baronies_with_category": {
-        "has_choronym_candidate": 4,
-        "has_hydronym_candidate": 210,
-        "has_oronym_candidate": 83,
-        "has_topographic_feature_candidate": 5,
+        "has_choronym_candidate": 2,
+        "has_hydronym_candidate": 203,
+        "has_oronym_candidate": 94,
+        "has_topographic_feature_candidate": 32,
         "has_tribe_candidate": 216
       },
       "unique_language_codes": [
@@ -160,11 +160,15 @@
         "ara",
         "ban",
         "bjn",
+        "hin",
         "ind",
         "jav",
+        "ljp",
         "mad",
+        "mhy",
         "min",
         "msa",
+        "ncb",
         "san",
         "sas",
         "sun",
@@ -181,8 +185,8 @@
         "unattested_indigenous_or_minor": 91
       },
       "candidates_by_attestation_basis": {
-        "attested_pre_867": 257,
-        "indigenous_pre_literate": 391
+        "attested_pre_867": 198,
+        "indigenous_pre_literate": 450
       },
       "bookmark_valid_candidates": {
         "867": 648,
@@ -190,7 +194,7 @@
         "1178": 648
       },
       "baronies_with_867_valid_candidate": 216,
-      "unique_localisation_stems": 205
+      "unique_localisation_stems": 250
     }
   },
   "baronies": {
@@ -274,31 +278,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Malays_(ethnic_group)"
         },
         {
-          "name": "Kedah River",
+          "name": "Merbok River",
           "disambiguation_note": null,
-          "localisation_stem": "Kedah",
+          "localisation_stem": "Merbok",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Principal river draining the northern Kedah plain.",
+          "relationship": "Ancient trade river rising at Mount Jerai and draining the Bujang Valley south of Terang.",
           "language_variants": [
             {
-              "form": "Sungai Kedah",
+              "form": "Sungai Merbok",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
               "notes": "Malay hydronym"
             }
           ],
-          "earliest_attestation_year": 671,
-          "earliest_attestation_note": "Kedah (Chieh-ch'a) riverine port attested in 671 CE by Yijing.",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 5th-7th century CE (Bujang Valley archaeological port complexes along its estuary)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Principal river draining the northern Kedah plain into the Strait of Malacca.",
-          "source_url": "https://en.wikipedia.org/wiki/Kedah_River"
+          "etymology_notes": "Estuarine river in Kedah that hosted early Hindu-Buddhist entrepots of Old Kedah.",
+          "source_url": "https://en.wikipedia.org/wiki/Merbok_River"
         },
         {
           "name": "Mount Jerai",
@@ -713,45 +717,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Titiwangsa_Mountains"
         },
         {
-          "name": "South China Sea",
+          "name": "Golok River",
           "disambiguation_note": null,
-          "localisation_stem": "South China Sea",
+          "localisation_stem": "Golok",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering the Kelantan delta on the northeast.",
+          "feature_subtype": "river",
+          "relationship": "Major river forming the northern boundary of the Kelantan plain.",
           "language_variants": [
             {
-              "form": "Laut China Selatan",
+              "form": "Sungai Golok",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
               "notes": "Malay hydronym"
             },
             {
-              "form": "Laut Tiongkok Selatan",
+              "form": "Maenam Kolok",
               "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Nán Hǎi",
-              "native_script": "南海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical name (Nanhai, 'South Sea')"
+              "language": "Thai",
+              "language_code": "tha",
+              "notes": "Thai hydronym"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Nanhai (South Sea) in Han dynasty maritime records by the 1st century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-modern Malay-Thai border river attested in local Patani-Kelantan geographical traditions.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea separating the Malay Peninsula and Sumatra from Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/South_China_Sea"
+          "etymology_notes": "River descending from the Sankalakhiri hills along the northern Kelantan frontier.",
+          "source_url": "https://en.wikipedia.org/wiki/Golok_River"
         }
       ]
     },
@@ -862,45 +859,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Terengganu_River"
         },
         {
-          "name": "South China Sea",
+          "name": "Redang Island",
           "disambiguation_note": null,
-          "localisation_stem": "South China Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering the Dungun coast on the east.",
+          "localisation_stem": "Redang",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Offshore island lying north of Dungun along the Terengganu coast.",
           "language_variants": [
             {
-              "form": "Laut China Selatan",
+              "form": "Pulau Redang",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Laut Tiongkok Selatan",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Nán Hǎi",
-              "native_script": "南海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical name (Nanhai, 'South Sea')"
+              "notes": "Malay island name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Nanhai (South Sea) in Han dynasty maritime records by the 1st century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate coastal island off northeastern Peninsular Malaysia.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea separating the Malay Peninsula and Sumatra from Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/South_China_Sea"
+          "etymology_notes": "Largest island of the Redang archipelago off Terengganu.",
+          "source_url": "https://en.wikipedia.org/wiki/Redang_Island"
         }
       ]
     },
@@ -1665,45 +1648,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Tenasserim_Hills"
         },
         {
-          "name": "Andaman Sea",
+          "name": "Similan Islands",
           "disambiguation_note": null,
-          "localisation_stem": "Andaman Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering the Takua Pa tin-trading port.",
+          "localisation_stem": "Similan",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Granite island chain lying offshore west of Takua Pa.",
           "language_variants": [
             {
-              "form": "Laut Andaman",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Thale Andaman",
-              "native_script": "ทะเลอันดามัน",
+              "form": "Mu Ko Similan",
+              "native_script": "หมู่เกาะสิมิลัน",
               "language": "Thai",
               "language_code": "tha",
-              "notes": "Thai hydronym"
-            },
-            {
-              "form": "Laut Andaman",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "notes": "Thai name derived from Malay sembilan ('nine')"
             }
           ],
-          "earliest_attestation_year": 150,
-          "earliest_attestation_note": "c. 2nd century CE (Ptolemy's 'Agathou Daimonos' / Bay of Bengal eastern sea)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate offshore archipelago along the western Malay Peninsula.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea of the Indian Ocean west of the Malay Peninsula and north of Sumatra.",
-          "source_url": "https://en.wikipedia.org/wiki/Andaman_Sea"
+          "etymology_notes": "Chain of nine granite islands off Phang Nga, named from Malay sembilan.",
+          "source_url": "https://en.wikipedia.org/wiki/Similan_Islands"
         }
       ]
     },
@@ -1910,7 +1879,7 @@
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Sheltered Andaman Sea bay south of Takua Pa.",
+          "earliest_attestation_note": "Pre-literate coastal bay of the western Malay Peninsula.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -1921,45 +1890,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Phang_Nga_Bay"
         },
         {
-          "name": "Andaman Sea",
+          "name": "Ko Lanta",
           "disambiguation_note": null,
-          "localisation_stem": "Andaman Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering the Krabi coast on the southwest.",
+          "localisation_stem": "Ko Lanta",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Major coastal island group directly south of Krabi and Gerbi.",
           "language_variants": [
             {
-              "form": "Laut Andaman",
+              "form": "Ko Lanta",
+              "native_script": "เกาะลันตา",
+              "language": "Thai",
+              "language_code": "tha",
+              "notes": "Thai island name"
+            },
+            {
+              "form": "Pulau Satak",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Thale Andaman",
-              "native_script": "ทะเลอันดามัน",
-              "language": "Thai",
-              "language_code": "tha",
-              "notes": "Thai hydronym"
-            },
-            {
-              "form": "Laut Andaman",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "notes": "Historical Malay island name"
             }
           ],
-          "earliest_attestation_year": 150,
-          "earliest_attestation_note": "c. 2nd century CE (Ptolemy's 'Agathou Daimonos' / Bay of Bengal eastern sea)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate island archipelago inhabited by Urak Lawoi sea peoples.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea of the Indian Ocean west of the Malay Peninsula and north of Sumatra.",
-          "source_url": "https://en.wikipedia.org/wiki/Andaman_Sea"
+          "etymology_notes": "Limestone and forested island group off Krabi traditionally settled by Chao Ley mariners.",
+          "source_url": "https://en.wikipedia.org/wiki/Ko_Lanta"
         }
       ]
     },
@@ -2447,45 +2409,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Nakhon_Si_Thammarat_Range"
         },
         {
-          "name": "Andaman Sea",
+          "name": "Phang Nga Bay",
           "disambiguation_note": null,
-          "localisation_stem": "Andaman Sea",
+          "localisation_stem": "Phang Nga",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering the Trang estuary on the west.",
+          "feature_subtype": "bay",
+          "relationship": "Sheltered limestone-karst bay along the western coast northwest of Trang.",
           "language_variants": [
             {
-              "form": "Laut Andaman",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Thale Andaman",
-              "native_script": "ทะเลอันดามัน",
+              "form": "Ao Phang Nga",
+              "native_script": "อ่าวพังงา",
               "language": "Thai",
               "language_code": "tha",
               "notes": "Thai hydronym"
-            },
-            {
-              "form": "Laut Andaman",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
             }
           ],
-          "earliest_attestation_year": 150,
-          "earliest_attestation_note": "c. 2nd century CE (Ptolemy's 'Agathou Daimonos' / Bay of Bengal eastern sea)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate coastal bay of the western Malay Peninsula.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea of the Indian Ocean west of the Malay Peninsula and north of Sumatra.",
-          "source_url": "https://en.wikipedia.org/wiki/Andaman_Sea"
+          "etymology_notes": "Karst-studded coastal embayment opening between Phuket and Krabi.",
+          "source_url": "https://en.wikipedia.org/wiki/Phang_Nga_Bay"
         }
       ]
     },
@@ -2697,31 +2645,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Senoi"
         },
         {
-          "name": "Klang River",
+          "name": "Langat River",
           "disambiguation_note": null,
-          "localisation_stem": "Klang",
+          "localisation_stem": "Langat",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Principal river flowing through Klang to the coast.",
+          "relationship": "Major river draining southern Selangor just south of Kelang toward Jugra.",
           "language_variants": [
             {
-              "form": "Sungai Klang",
+              "form": "Sungai Langat",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
               "notes": "Malay hydronym"
             }
           ],
-          "earliest_attestation_year": 1365,
-          "earliest_attestation_note": "Klang (Kalang) attested in the 1365 CE Nagarakretagama.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate river basin of western Peninsular Malaysia.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River flowing from the Titiwangsa foothills into the Strait of Malacca.",
-          "source_url": "https://en.wikipedia.org/wiki/Klang_River"
+          "etymology_notes": "River rising at Mount Nuang in the Titiwangsa Range and flowing past Jugra to the Malacca Strait.",
+          "source_url": "https://en.wikipedia.org/wiki/Langat_River"
         },
         {
           "name": "Strait of Malacca",
@@ -3229,45 +3177,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Rompin_River"
         },
         {
-          "name": "South China Sea",
+          "name": "Tioman Island",
           "disambiguation_note": null,
-          "localisation_stem": "South China Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering the Endau estuary on the east.",
+          "localisation_stem": "Tioman",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Volcanic island lying offshore northeast of the Endau river mouth.",
           "language_variants": [
             {
-              "form": "Laut China Selatan",
+              "form": "Pulau Tioman",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
+              "notes": "Malay island name"
             },
             {
-              "form": "Laut Tiongkok Selatan",
+              "form": "Lungya",
               "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Nán Hǎi",
-              "native_script": "南海",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese historical name (Nanhai, 'South Sea')"
+              "notes": "Early Chinese maritime navigational reference"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Nanhai (South Sea) in Han dynasty maritime records by the 1st century BCE.",
+          "earliest_attestation_year": 851,
+          "earliest_attestation_note": "9th century CE (recorded in Arab sailing accounts along the Srivijayan route as Betumah)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea separating the Malay Peninsula and Sumatra from Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/South_China_Sea"
+          "etymology_notes": "Steep forested island off the eastern coast of Peninsular Malaysia serving as a freshwater stop for mariners.",
+          "source_url": "https://en.wikipedia.org/wiki/Tioman_Island"
         }
       ]
     },
@@ -3534,38 +3475,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Singapore_Strait"
         },
         {
-          "name": "Johor River",
+          "name": "Pulau Ubin",
           "disambiguation_note": null,
-          "localisation_stem": "Johor",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river emptying immediately northeast of Temasek.",
+          "localisation_stem": "Pulau Ubin",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Granite island situated in the eastern Singapore-Johor strait directly northeast of Temasek.",
           "language_variants": [
             {
-              "form": "Sungai Johor",
+              "form": "Pulau Ubin",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Jūhur",
-              "native_script": "جوهر",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic-derived Malay toponym (Jauhar)"
+              "notes": "Malay island name meaning Granite Island"
             }
           ],
-          "earliest_attestation_year": 1528,
-          "earliest_attestation_note": "Principal river of the Johor Sultanate attested from 1528 CE.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate island in the eastern Johor Strait.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river of southern Johor emptying into the Singapore Strait. Onomastic note: Arabic-derived Malay toponym (Jauhar) ('Jūhur').",
-          "source_url": "https://en.wikipedia.org/wiki/Johor_River"
+          "etymology_notes": "Granite island between Singapore and the Johor mainland, named from Malay batu ubin.",
+          "source_url": "https://en.wikipedia.org/wiki/Pulau_Ubin"
         }
       ]
     },
@@ -3798,79 +3732,58 @@
           "source_url": "https://en.wikipedia.org/wiki/Malays_(ethnic_group)"
         },
         {
-          "name": "Johor River",
+          "name": "Skudai River",
           "disambiguation_note": null,
-          "localisation_stem": "Johor",
+          "localisation_stem": "Skudai",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Principal river flowing immediately west of Penawar.",
+          "relationship": "Major river of southern Johor draining into the Johor Strait west of Penawar.",
           "language_variants": [
             {
-              "form": "Sungai Johor",
+              "form": "Sungai Skudai",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
               "notes": "Malay hydronym"
-            },
-            {
-              "form": "Jūhur",
-              "native_script": "جوهر",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic-derived Malay toponym (Jauhar)"
             }
           ],
-          "earliest_attestation_year": 1528,
-          "earliest_attestation_note": "Principal river of the Johor Sultanate attested from 1528 CE.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate river of the southern Malay Peninsula.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river of southern Johor emptying into the Singapore Strait. Onomastic note: Arabic-derived Malay toponym (Jauhar) ('Jūhur').",
-          "source_url": "https://en.wikipedia.org/wiki/Johor_River"
+          "etymology_notes": "River flowing from the Pulai hills southward into the Straits of Johor.",
+          "source_url": "https://en.wikipedia.org/wiki/Skudai_River"
         },
         {
-          "name": "South China Sea",
+          "name": "Mount Pulai",
           "disambiguation_note": null,
-          "localisation_stem": "South China Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering the Penawar coast on the east.",
+          "localisation_stem": "Pulai",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Prominent southern Malay peak rising inland northwest of Penawar.",
           "language_variants": [
             {
-              "form": "Laut China Selatan",
+              "form": "Gunung Pulai",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Laut Tiongkok Selatan",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Nán Hǎi",
-              "native_script": "南海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical name (Nanhai, 'South Sea')"
+              "notes": "Malay mountain name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Nanhai (South Sea) in Han dynasty maritime records by the 1st century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate highland peak of southern Johor.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea separating the Malay Peninsula and Sumatra from Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/South_China_Sea"
+          "etymology_notes": "Forested granite mountain in southern Johor forming the headwaters of local rivers.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Pulai"
         }
       ]
     },
@@ -3988,45 +3901,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Pahang_River"
         },
         {
-          "name": "South China Sea",
+          "name": "Kuantan River",
           "disambiguation_note": null,
-          "localisation_stem": "South China Sea",
+          "localisation_stem": "Kuantan",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering Pekan on the east.",
+          "feature_subtype": "river",
+          "relationship": "Coastal river entering the sea immediately north of Pekan and the Pahang delta.",
           "language_variants": [
             {
-              "form": "Laut China Selatan",
+              "form": "Sungai Kuantan",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
               "notes": "Malay hydronym"
-            },
-            {
-              "form": "Laut Tiongkok Selatan",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Nán Hǎi",
-              "native_script": "南海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical name (Nanhai, 'South Sea')"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Nanhai (South Sea) in Han dynasty maritime records by the 1st century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Upper course of the Indragiri River through the Minangkabau-Riau borderlands.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea separating the Malay Peninsula and Sumatra from Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/South_China_Sea"
+          "etymology_notes": "River flowing eastward through central Pahang to the coast north of Pekan.",
+          "source_url": "https://en.wikipedia.org/wiki/Kuantan_River"
         }
       ]
     },
@@ -4721,45 +4620,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Singapore_Strait"
         },
         {
-          "name": "South China Sea",
+          "name": "Bintan",
           "disambiguation_note": null,
-          "localisation_stem": "South China Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea surrounding the eastern Riau archipelago.",
+          "localisation_stem": "Bintan",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Largest island of the Riau Archipelago forming the core of the Riau barony.",
           "language_variants": [
             {
-              "form": "Laut China Selatan",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Laut Tiongkok Selatan",
+              "form": "Pulau Bintan",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "notes": "Indonesian island name"
             },
             {
-              "form": "Nán Hǎi",
-              "native_script": "南海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical name (Nanhai, 'South Sea')"
+              "form": "Pulau Bentan",
+              "native_script": null,
+              "language": "Malay",
+              "language_code": "msa",
+              "notes": "Classical Malay island name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Nanhai (South Sea) in Han dynasty maritime records by the 1st century BCE.",
+          "earliest_attestation_year": 200,
+          "earliest_attestation_note": "3rd century CE (attested as Bentan/Pentan in classical Malay and early Chinese maritime traditions)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea separating the Malay Peninsula and Sumatra from Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/South_China_Sea"
+          "etymology_notes": "Strategic maritime island guarding the eastern approaches of the Singapore Strait.",
+          "source_url": "https://en.wikipedia.org/wiki/Bintan"
         }
       ]
     },
@@ -4829,45 +4721,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Orang_Laut"
         },
         {
-          "name": "South China Sea",
+          "name": "Anambas Islands",
           "disambiguation_note": null,
-          "localisation_stem": "South China Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Open sea surrounding the Siantan archipelago.",
+          "localisation_stem": "Anambas",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Volcanic island group centered around Siantan Island between the Malay Peninsula and Borneo.",
           "language_variants": [
             {
-              "form": "Laut China Selatan",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Laut Tiongkok Selatan",
+              "form": "Kepulauan Anambas",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Nán Hǎi",
-              "native_script": "南海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical name (Nanhai, 'South Sea')"
+              "notes": "Indonesian archipelago name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Nanhai (South Sea) in Han dynasty maritime records by the 1st century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate archipelago enclosing Siantan Island.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea separating the Malay Peninsula and Sumatra from Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/South_China_Sea"
+          "etymology_notes": "Cluster of granite and coral islands in the southern maritime corridor, with Siantan as its hub.",
+          "source_url": "https://en.wikipedia.org/wiki/Anambas_Islands"
         },
         {
           "name": "Karimata Strait",
@@ -7052,38 +6930,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Malays_(ethnic_group)"
         },
         {
-          "name": "Indragiri River",
+          "name": "Bukit Tigapuluh",
           "disambiguation_note": null,
-          "localisation_stem": "Indragiri",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Principal river flowing north of Karitang.",
+          "localisation_stem": "Bukit Tigapuluh",
+          "category": "oronym",
+          "feature_subtype": "hill",
+          "relationship": "Forested foothill massif lying along the southern watershed near Karitang.",
           "language_variants": [
             {
-              "form": "Sungai Indragiri",
+              "form": "Bukit Tigapuluh",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "notes": "Indonesian name meaning Thirty Hills"
             },
             {
-              "form": "Indragiri",
+              "form": "Bukit Tigapuluh",
               "native_script": null,
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskrit-derived name meaning 'Mountain of Indra'"
+              "language": "Malay",
+              "language_code": "msa",
+              "notes": "Malay hill name"
             }
           ],
-          "earliest_attestation_year": 1300,
-          "earliest_attestation_note": "Major river artery linking the Minangkabau highlands (Kuantan) to the eastern Sumatran coast.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate upland range between the Indragiri and Batang Hari basins.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Lower course of the Kuantan River in Riau. Onomastic note: Sanskrit-derived name meaning 'Mountain of Indra' ('Indragiri').",
-          "source_url": "https://en.wikipedia.org/wiki/Indragiri_River"
+          "etymology_notes": "Lowland foothill system on the Riau-Jambi borderland. Onomastic note: Indonesian name meaning Thirty Hills ('Bukit Tigapuluh').",
+          "source_url": "https://en.wikipedia.org/wiki/Bukit_Tigapuluh_National_Park"
         },
         {
           "name": "Batang Hari River",
@@ -7201,38 +7079,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Malays_(ethnic_group)"
         },
         {
-          "name": "Indragiri River",
+          "name": "Berhala Strait",
           "disambiguation_note": null,
-          "localisation_stem": "Indragiri",
+          "localisation_stem": "Berhala",
           "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Principal river flowing past Rengat.",
+          "feature_subtype": "strait",
+          "relationship": "Coastal strait off the Indragiri and Batang Hari estuaries separating Sumatra from Singkep.",
           "language_variants": [
             {
-              "form": "Sungai Indragiri",
+              "form": "Selat Berhala",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian hydronym"
             },
             {
-              "form": "Indragiri",
+              "form": "Selat Berhala",
               "native_script": null,
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskrit-derived name meaning 'Mountain of Indra'"
+              "language": "Malay",
+              "language_code": "msa",
+              "notes": "Malay hydronym"
             }
           ],
-          "earliest_attestation_year": 1300,
-          "earliest_attestation_note": "Major river artery linking the Minangkabau highlands (Kuantan) to the eastern Sumatran coast.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate coastal strait of eastern Sumatra.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Lower course of the Kuantan River in Riau. Onomastic note: Sanskrit-derived name meaning 'Mountain of Indra' ('Indragiri').",
-          "source_url": "https://en.wikipedia.org/wiki/Indragiri_River"
+          "etymology_notes": "Sheltered sea passage along the eastern Sumatran coast between Jambi, Indragiri, and Singkep.",
+          "source_url": "https://en.wikipedia.org/wiki/Berhala_Strait"
         },
         {
           "name": "Kampar River",
@@ -8315,45 +8193,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Karimata_Strait"
         },
         {
-          "name": "South China Sea",
+          "name": "Singkep",
           "disambiguation_note": null,
-          "localisation_stem": "South China Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea surrounding the Lingga islands.",
+          "localisation_stem": "Singkep",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Southern sister island of the Lingga archipelago.",
           "language_variants": [
             {
-              "form": "Laut China Selatan",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Laut Tiongkok Selatan",
+              "form": "Pulau Singkep",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "notes": "Indonesian island name"
             },
             {
-              "form": "Nán Hǎi",
-              "native_script": "南海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical name (Nanhai, 'South Sea')"
+              "form": "Pulau Singkep",
+              "native_script": null,
+              "language": "Malay",
+              "language_code": "msa",
+              "notes": "Malay island name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Nanhai (South Sea) in Han dynasty maritime records by the 1st century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate island of the southern Riau-Lingga archipelago.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea separating the Malay Peninsula and Sumatra from Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/South_China_Sea"
+          "etymology_notes": "Major tin-bearing island immediately south of Lingga Island.",
+          "source_url": "https://en.wikipedia.org/wiki/Singkep"
         }
       ]
     },
@@ -8620,45 +8491,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Singapore_Strait"
         },
         {
-          "name": "South China Sea",
+          "name": "Bintan",
           "disambiguation_note": null,
-          "localisation_stem": "South China Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering Bintan on the east.",
+          "localisation_stem": "Bintan",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Largest island of the Riau Archipelago, on which Tanjungpinang sits.",
           "language_variants": [
             {
-              "form": "Laut China Selatan",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Laut Tiongkok Selatan",
+              "form": "Pulau Bintan",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "notes": "Indonesian island name"
             },
             {
-              "form": "Nán Hǎi",
-              "native_script": "南海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical name (Nanhai, 'South Sea')"
+              "form": "Pulau Bentan",
+              "native_script": null,
+              "language": "Malay",
+              "language_code": "msa",
+              "notes": "Classical Malay island name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Nanhai (South Sea) in Han dynasty maritime records by the 1st century BCE.",
+          "earliest_attestation_year": 200,
+          "earliest_attestation_note": "3rd century CE (attested as Bentan/Pentan in classical Malay and early Chinese maritime traditions)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea separating the Malay Peninsula and Sumatra from Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/South_China_Sea"
+          "etymology_notes": "Strategic maritime island guarding the southern entrance of the Singapore Strait.",
+          "source_url": "https://en.wikipedia.org/wiki/Bintan"
         }
       ]
     },
@@ -8762,45 +8626,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Barisan_Mountains"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Enggano Island",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Great ocean bordering the Bengkulu coast on the west.",
+          "localisation_stem": "Enggano",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Outlying oceanic island situated southwest of Bengkulu.",
           "language_variants": [
             {
-              "form": "Samudra Hindia",
+              "form": "Pulau Enggano",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Lautan Hindi",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Baḥr al-Hind",
-              "native_script": "بحر الهند",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic medieval name (Bahr al-Hind)"
+              "notes": "Indonesian island name"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate island off southwestern Sumatra.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great ocean bordering the western coast of Sumatra and southern Java.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Isolated island lying about 100 kilometers southwest of Bengkulu.",
+          "source_url": "https://en.wikipedia.org/wiki/Enggano_Island"
         }
       ]
     },
@@ -8911,45 +8761,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Barisan_Mountains"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Mount Dempo",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Ocean bordering the western Sumatran coast.",
+          "localisation_stem": "Dempo",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Highest stratovolcano of southern Sumatra rising inland east of Bengkulu.",
           "language_variants": [
             {
-              "form": "Samudra Hindia",
+              "form": "Gunung Dempo",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "notes": "Indonesian mountain name"
             },
             {
-              "form": "Lautan Hindi",
+              "form": "Gunung Dempo",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Baḥr al-Hind",
-              "native_script": "بحر الهند",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic medieval name (Bahr al-Hind)"
+              "notes": "Malay mountain name"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Sacred peak overlooking the megalithic Pasemah plateau in South Sumatra.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great ocean bordering the western coast of Sumatra and southern Java.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Twin-peaked active stratovolcano dominating the Pasemah highlands.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Dempo"
         }
       ]
     },
@@ -9053,45 +8896,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Mount_Talang"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Mentawai Strait",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
+          "localisation_stem": "Mentawai Strait",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Ocean bordering the port of Padang on the west.",
+          "feature_subtype": "strait",
+          "relationship": "Deep coastal strait directly fronting Padang between mainland Sumatra and Siberut.",
           "language_variants": [
             {
-              "form": "Samudra Hindia",
+              "form": "Selat Mentawai",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian hydronym"
             },
             {
-              "form": "Lautan Hindi",
+              "form": "Selat Mentawai",
               "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Baḥr al-Hind",
-              "native_script": "بحر الهند",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic medieval name (Bahr al-Hind)"
+              "language": "Minangkabau",
+              "language_code": "min",
+              "notes": "Minangkabau hydronym"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Maritime channel separating the Mentawai Islands from western Sumatra.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great ocean bordering the western coast of Sumatra and southern Java.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Sea channel separating western Sumatra from the Mentawai archipelago.",
+          "source_url": "https://en.wikipedia.org/wiki/Mentawai_Strait"
         }
       ]
     },
@@ -9465,45 +9301,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Mount_Kerinci"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Lake Kerinci",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
+          "localisation_stem": "Lake Kerinci",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Ocean bordering the Inderapura littoral.",
+          "feature_subtype": "lake",
+          "relationship": "Highland tectonic lake lying just inland of Inderajati in the Kerinci valley.",
           "language_variants": [
             {
-              "form": "Samudra Hindia",
+              "form": "Danau Kerinci",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "notes": "Indonesian lake name"
             },
             {
-              "form": "Lautan Hindi",
+              "form": "Danau Kerinci",
               "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Baḥr al-Hind",
-              "native_script": "بحر الهند",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic medieval name (Bahr al-Hind)"
+              "language": "Minangkabau",
+              "language_code": "min",
+              "notes": "Minangkabau lake name"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1350,
+          "earliest_attestation_note": "Highland lake of the Kerinci basin attested in 14th century CE Tanjung Tanah manuscripts.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great ocean bordering the western coast of Sumatra and southern Java.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Large upland lake nestled beneath Mount Kerinci in the Barisan Mountains.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Kerinci"
         }
       ]
     },
@@ -9607,45 +9436,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Barisan_Mountains"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Mentawai Strait",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
+          "localisation_stem": "Mentawai Strait",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Ocean bordering the Mukomuko coast on the west.",
+          "feature_subtype": "strait",
+          "relationship": "Coastal marine passage lying offshore northwest of Mukomuko.",
           "language_variants": [
             {
-              "form": "Samudra Hindia",
+              "form": "Selat Mentawai",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Lautan Hindi",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Baḥr al-Hind",
-              "native_script": "بحر الهند",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic medieval name (Bahr al-Hind)"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Maritime channel separating the Mentawai Islands from western Sumatra.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great ocean bordering the western coast of Sumatra and southern Java.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Strait separating mainland West Sumatra and Bengkulu's northern coast from the Mentawai islands.",
+          "source_url": "https://en.wikipedia.org/wiki/Mentawai_Strait"
         }
       ]
     },
@@ -9715,31 +9530,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Orang_Laut"
         },
         {
-          "name": "Bangka Strait",
+          "name": "Gelasa Strait",
           "disambiguation_note": null,
-          "localisation_stem": "Bangka",
+          "localisation_stem": "Gelasa",
           "category": "hydronym",
           "feature_subtype": "strait",
-          "relationship": "Strait immediately west of Kota Kapur.",
+          "relationship": "Marine strait separating Bangka and Belitung east of Kota Kapur.",
           "language_variants": [
             {
-              "form": "Selat Bangka",
+              "form": "Selat Gelasa",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "notes": "Indonesian hydronym; also 'Selat Gaspar' — Alternate Indonesian name."
             }
           ],
-          "earliest_attestation_year": 686,
-          "earliest_attestation_note": "Maritime passage between Palembang and Bangka Island attested via the 686 CE Kota Kapur inscription.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate sea lane between Bangka and Belitung.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Strait separating Sumatra from Bangka Island.",
-          "source_url": "https://en.wikipedia.org/wiki/Bangka_Strait"
+          "etymology_notes": "Navigable strait linking southern Sumatran waters with Borneo and Java.",
+          "source_url": "https://en.wikipedia.org/wiki/Gelasa_Strait"
         },
         {
           "name": "Musi River",
@@ -9857,45 +9672,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Malays_(ethnic_group)"
         },
         {
-          "name": "Java Sea",
+          "name": "Mount Maras",
           "disambiguation_note": null,
-          "localisation_stem": "Java Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Shallow sea bordering Bangka on the south.",
+          "localisation_stem": "Maras",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Highest peak on Bangka Island, rising above its northern lowlands.",
           "language_variants": [
             {
-              "form": "Laut Jawa",
+              "form": "Gunung Maras",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "notes": "Indonesian mountain name"
             },
             {
-              "form": "Segara Jawa",
-              "native_script": null,
-              "language": "Javanese",
-              "language_code": "jav",
-              "notes": "Javanese hydronym"
-            },
-            {
-              "form": "Laut Jawa",
+              "form": "Gunung Maras",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
+              "notes": "Malay mountain name"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "Central maritime highway of the Indonesian archipelago between Java, Sumatra, and Borneo.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate highland landmark on Bangka Island.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Shallow sea of the Sunda Shelf.",
-          "source_url": "https://en.wikipedia.org/wiki/Java_Sea"
+          "etymology_notes": "Granitic mountain summit on northern Bangka Island reaching 699 meters.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Maras"
         },
         {
           "name": "Karimata Strait",
@@ -10033,45 +9841,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Karimata_Strait"
         },
         {
-          "name": "Java Sea",
+          "name": "Mendanau Island",
           "disambiguation_note": null,
-          "localisation_stem": "Java Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Shallow sea bordering Belitung on the south.",
+          "localisation_stem": "Mendanau",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Largest satellite island lying directly off the western coast of Belitung.",
           "language_variants": [
             {
-              "form": "Laut Jawa",
+              "form": "Pulau Mendanau",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Segara Jawa",
-              "native_script": null,
-              "language": "Javanese",
-              "language_code": "jav",
-              "notes": "Javanese hydronym"
-            },
-            {
-              "form": "Laut Jawa",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
+              "notes": "Indonesian island name"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "Central maritime highway of the Indonesian archipelago between Java, Sumatra, and Borneo.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate offshore island of the Belitung group.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Shallow sea of the Sunda Shelf.",
-          "source_url": "https://en.wikipedia.org/wiki/Java_Sea"
+          "etymology_notes": "Island situated in the Gelasa Strait off western Belitung.",
+          "source_url": "https://en.wikipedia.org/wiki/Mendanau_Island"
         }
       ]
     },
@@ -10161,45 +9955,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tulang_Bawang_River"
         },
         {
-          "name": "Java Sea",
+          "name": "Seputih River",
           "disambiguation_note": null,
-          "localisation_stem": "Java Sea",
+          "localisation_stem": "Seputih",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering the eastern Sumatran marsh coast.",
+          "feature_subtype": "river",
+          "relationship": "Major eastern Sumatran river draining southward from the Mesuji-Lampung lowlands.",
           "language_variants": [
             {
-              "form": "Laut Jawa",
+              "form": "Way Seputih",
+              "native_script": null,
+              "language": "Lampung",
+              "language_code": "ljp",
+              "notes": "Lampung hydronym"
+            },
+            {
+              "form": "Sungai Seputih",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Segara Jawa",
-              "native_script": null,
-              "language": "Javanese",
-              "language_code": "jav",
-              "notes": "Javanese hydronym"
-            },
-            {
-              "form": "Laut Jawa",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "Central maritime highway of the Indonesian archipelago between Java, Sumatra, and Borneo.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate riverine corridor of southeastern Sumatra.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Shallow sea of the Sunda Shelf.",
-          "source_url": "https://en.wikipedia.org/wiki/Java_Sea"
+          "etymology_notes": "Major river of central Lampung descending east from the Barisan slopes.",
+          "source_url": "https://en.wikipedia.org/wiki/Seputih_River"
         }
       ]
     },
@@ -10404,31 +10191,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Lampung_people"
         },
         {
-          "name": "Tulang Bawang River",
+          "name": "Sekampung River",
           "disambiguation_note": null,
-          "localisation_stem": "Tulang Bawang",
+          "localisation_stem": "Sekampung",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Principal river flowing past Menggala.",
+          "relationship": "Longest river of Lampung, draining the southern uplands below Menggala.",
           "language_variants": [
             {
-              "form": "Sungai Tulang Bawang",
+              "form": "Way Sekampung",
+              "native_script": null,
+              "language": "Lampung",
+              "language_code": "ljp",
+              "notes": "Lampung hydronym"
+            },
+            {
+              "form": "Sungai Sekampung",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian hydronym"
             }
           ],
-          "earliest_attestation_year": 686,
-          "earliest_attestation_note": "Principal river of northern Lampung, attested in 7th century CE Srivijayan-era inscriptions.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate riverine basin of southern Sumatra.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river of Lampung flowing east into the Java Sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Tulang_Bawang_River"
+          "etymology_notes": "Two-hundred-sixty-five-kilometer river draining southern Lampung eastward.",
+          "source_url": "https://en.wikipedia.org/wiki/Sekampung_River"
         },
         {
           "name": "Mesuji River",
@@ -10673,31 +10467,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Lake_Ranau"
         },
         {
-          "name": "Tulang Bawang River",
+          "name": "Semangka Bay",
           "disambiguation_note": null,
-          "localisation_stem": "Tulang Bawang",
+          "localisation_stem": "Semangka",
           "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river draining northern Lampung.",
+          "feature_subtype": "bay",
+          "relationship": "Deep southern coastal bay near the Batu Bedil megalithic site.",
           "language_variants": [
             {
-              "form": "Sungai Tulang Bawang",
+              "form": "Teluk Semangka",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian hydronym"
+            },
+            {
+              "form": "Teluk Semangka",
+              "native_script": null,
+              "language": "Lampung",
+              "language_code": "ljp",
+              "notes": "Lampung bay name"
             }
           ],
-          "earliest_attestation_year": 686,
-          "earliest_attestation_note": "Principal river of northern Lampung, attested in 7th century CE Srivijayan-era inscriptions.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate bay on the southern coast of Lampung.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river of Lampung flowing east into the Java Sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Tulang_Bawang_River"
+          "etymology_notes": "Large tectonic bay opening onto the Sunda Strait at the southern tip of Sumatra.",
+          "source_url": "https://en.wikipedia.org/wiki/Semangka_Bay"
         }
       ]
     },
@@ -10794,45 +10595,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Sunda_Strait"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Mount Rajabasa",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Ocean bordering the western Lampung coast.",
+          "localisation_stem": "Rajabasa",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Isolated coastal stratovolcano rising near Pugung at Sumatra's southeasternmost tip.",
           "language_variants": [
             {
-              "form": "Samudra Hindia",
+              "form": "Gunung Rajabasa",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "notes": "Indonesian mountain name"
             },
             {
-              "form": "Lautan Hindi",
+              "form": "Gunung Rajabasa",
               "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Baḥr al-Hind",
-              "native_script": "بحر الهند",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic medieval name (Bahr al-Hind)"
+              "language": "Lampung",
+              "language_code": "ljp",
+              "notes": "Lampung mountain name"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate volcanic landmark overlooking the Sunda Strait.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great ocean bordering the western coast of Sumatra and southern Java.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Conical volcano standing at 1,281 meters along the southeastern tip of Lampung.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Rajabasa"
         }
       ]
     },
@@ -10916,38 +10710,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Malays_(ethnic_group)"
         },
         {
-          "name": "Musi River",
-          "disambiguation_note": "Indonesia",
-          "localisation_stem": "Musi",
+          "name": "Rawas River",
+          "disambiguation_note": null,
+          "localisation_stem": "Rawas",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Great river flowing through Palembang.",
+          "relationship": "Major northern tributary feeding the Musi basin upstream of Palembang.",
           "language_variants": [
             {
-              "form": "Sungai Musi",
+              "form": "Sungai Rawas",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian hydronym"
             },
             {
-              "form": "Sungai Musi",
+              "form": "Batang Rawas",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
+              "notes": "Sumatran Malay hydronym"
             }
           ],
-          "earliest_attestation_year": 682,
-          "earliest_attestation_note": "Riverine heartland of Srivijaya attested in the 682 CE Kedukan Bukit inscription at Palembang.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate riverine artery of upper South Sumatra.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great river of South Sumatra flowing past Palembang into the Bangka Strait.",
-          "source_url": "https://en.wikipedia.org/wiki/Musi_River_(Indonesia)"
+          "etymology_notes": "Principal northern tributary of the Musi River draining the Musi Rawas uplands.",
+          "source_url": "https://en.wikipedia.org/wiki/Rawas_River"
         },
         {
           "name": "Bangka Strait",
@@ -11085,38 +10879,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ogan_River"
         },
         {
-          "name": "Musi River",
-          "disambiguation_note": "Indonesia",
-          "localisation_stem": "Musi",
+          "name": "Lematang River",
+          "disambiguation_note": null,
+          "localisation_stem": "Lematang",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Principal river of the Palembang plain.",
+          "relationship": "Major southern Sumatran tributary joining the Musi system near Baros.",
           "language_variants": [
             {
-              "form": "Sungai Musi",
+              "form": "Sungai Lematang",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian hydronym"
             },
             {
-              "form": "Sungai Musi",
+              "form": "Batang Lematang",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
+              "notes": "Sumatran Malay hydronym"
             }
           ],
-          "earliest_attestation_year": 682,
-          "earliest_attestation_note": "Riverine heartland of Srivijaya attested in the 682 CE Kedukan Bukit inscription at Palembang.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Major tributary draining the Pasemah highlands into the Musi River.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great river of South Sumatra flowing past Palembang into the Bangka Strait.",
-          "source_url": "https://en.wikipedia.org/wiki/Musi_River_(Indonesia)"
+          "etymology_notes": "Major tributary of the Musi River flowing down from the Pasemah highlands.",
+          "source_url": "https://en.wikipedia.org/wiki/Lematang_River"
         }
       ]
     },
@@ -11227,38 +11021,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Komering_River"
         },
         {
-          "name": "Musi River",
-          "disambiguation_note": "Indonesia",
-          "localisation_stem": "Musi",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Great river of South Sumatra.",
+          "name": "Mount Dempo",
+          "disambiguation_note": null,
+          "localisation_stem": "Dempo",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Dominant volcanic peak of the upper South Sumatran uplands west of Salekar.",
           "language_variants": [
             {
-              "form": "Sungai Musi",
+              "form": "Gunung Dempo",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "notes": "Indonesian mountain name"
             },
             {
-              "form": "Sungai Musi",
+              "form": "Gunung Dempo",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
+              "notes": "Malay mountain name"
             }
           ],
-          "earliest_attestation_year": 682,
-          "earliest_attestation_note": "Riverine heartland of Srivijaya attested in the 682 CE Kedukan Bukit inscription at Palembang.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Sacred peak overlooking the megalithic Pasemah plateau in South Sumatra.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great river of South Sumatra flowing past Palembang into the Bangka Strait.",
-          "source_url": "https://en.wikipedia.org/wiki/Musi_River_(Indonesia)"
+          "etymology_notes": "Highest volcano of South Sumatra rising to 3,173 meters in the Barisan Range.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Dempo"
         }
       ]
     },
@@ -11882,38 +11676,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Malays_(ethnic_group)"
         },
         {
-          "name": "Siak River",
+          "name": "Mandau River",
           "disambiguation_note": null,
-          "localisation_stem": "Siak",
+          "localisation_stem": "Mandau",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Neighboring great river immediately north of Kampar.",
+          "relationship": "Major blackwater tributary draining the central Riau peatlands north of Kampar.",
           "language_variants": [
             {
-              "form": "Sungai Siak",
+              "form": "Sungai Mandau",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian hydronym"
             },
             {
-              "form": "Sungai Siak",
+              "form": "Sungai Mandau",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
               "notes": "Malay hydronym"
             }
           ],
-          "earliest_attestation_year": 1365,
-          "earliest_attestation_note": "Siak attested in the 1365 CE Nagarakretagama.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate lowland river of central Riau.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Deepest river in Indonesia, flowing through Riau into the Strait of Malacca.",
-          "source_url": "https://en.wikipedia.org/wiki/Siak_River"
+          "etymology_notes": "Eastern Sumatran blackwater river feeding the lower Siak basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Mandau_River_(Indonesia)"
         },
         {
           "name": "Strait of Malacca",
@@ -12045,38 +11839,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Malays_(ethnic_group)"
         },
         {
-          "name": "Kampar River",
+          "name": "Rangsang",
           "disambiguation_note": null,
-          "localisation_stem": "Kampar",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river immediately south of Siak.",
+          "localisation_stem": "Rangsang",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Alluvial coastal island lying directly off the Siak estuary.",
           "language_variants": [
             {
-              "form": "Sungai Kampar",
+              "form": "Pulau Rangsang",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "notes": "Indonesian island name"
             },
             {
-              "form": "Sungai Kampar",
+              "form": "Pulau Rangsang",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
+              "notes": "Malay island name"
             }
           ],
-          "earliest_attestation_year": 900,
-          "earliest_attestation_note": "Riverine corridor of the medieval Muara Takus Buddhist complex.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate coastal island of the Riau strait littoral.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river of Riau flowing from the Minangkabau highlands into the Strait of Malacca.",
-          "source_url": "https://en.wikipedia.org/wiki/Kampar_River"
+          "etymology_notes": "Lowland peat island in the Meranti group off the mouth of the Siak and Kampar rivers.",
+          "source_url": "https://en.wikipedia.org/wiki/Rangsang"
         },
         {
           "name": "Rupat",
@@ -12187,38 +11981,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Malays_(ethnic_group)"
         },
         {
-          "name": "Kampar River",
+          "name": "Bengkalis Island",
           "disambiguation_note": null,
-          "localisation_stem": "Kampar",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Principal river of the Kampar basin.",
+          "localisation_stem": "Bengkalis",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Large alluvial island guarding the coastal approaches near Boron.",
           "language_variants": [
             {
-              "form": "Sungai Kampar",
+              "form": "Pulau Bengkalis",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "notes": "Indonesian island name"
             },
             {
-              "form": "Sungai Kampar",
+              "form": "Pulau Bengkalis",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
+              "notes": "Malay island name"
             }
           ],
-          "earliest_attestation_year": 900,
-          "earliest_attestation_note": "Riverine corridor of the medieval Muara Takus Buddhist complex.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate estuarine island in the Strait of Malacca off Riau.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river of Riau flowing from the Minangkabau highlands into the Strait of Malacca.",
-          "source_url": "https://en.wikipedia.org/wiki/Kampar_River"
+          "etymology_notes": "Low-lying island separated from mainland Sumatra by the narrow Bengkalis Strait.",
+          "source_url": "https://en.wikipedia.org/wiki/Bengkalis_Island"
         },
         {
           "name": "Strait of Malacca",
@@ -13819,38 +13613,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Malays_(ethnic_group)"
         },
         {
-          "name": "Rokan River",
+          "name": "Rupat",
           "disambiguation_note": null,
-          "localisation_stem": "Rokan",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Principal river of the Rokan basin.",
+          "localisation_stem": "Rupat",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Large coastal island fronting the Strait of Malacca just north of Kalowang.",
           "language_variants": [
             {
-              "form": "Sungai Rokan",
+              "form": "Pulau Rupat",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "notes": "Indonesian island name"
             },
             {
-              "form": "Sungai Rokan",
+              "form": "Pulau Rupat",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
+              "notes": "Malay island name"
             }
           ],
-          "earliest_attestation_year": 1365,
-          "earliest_attestation_note": "Rokan attested in the 1365 CE Nagarakretagama.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Large coastal island in the Strait of Malacca off the Rokan estuary.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river of Riau emptying into the Strait of Malacca.",
-          "source_url": "https://en.wikipedia.org/wiki/Rokan_River"
+          "etymology_notes": "Peatland island separated from Dumai and the Rokan approaches by the Rupat Strait.",
+          "source_url": "https://en.wikipedia.org/wiki/Rupat"
         },
         {
           "name": "Strait of Malacca",
@@ -13961,45 +13755,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Andamanese_peoples"
         },
         {
-          "name": "Andaman Sea",
+          "name": "Baratang Island",
           "disambiguation_note": null,
-          "localisation_stem": "Andaman Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea surrounding the Andaman Islands.",
+          "localisation_stem": "Baratang",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Central limestone and mangrove island of the Andaman chain.",
           "language_variants": [
             {
-              "form": "Laut Andaman",
+              "form": "Baratang",
               "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Thale Andaman",
-              "native_script": "ทะเลอันดามัน",
-              "language": "Thai",
-              "language_code": "tha",
-              "notes": "Thai hydronym"
-            },
-            {
-              "form": "Laut Andaman",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "language": "Hindi",
+              "language_code": "hin",
+              "notes": "Local island designation"
             }
           ],
-          "earliest_attestation_year": 150,
-          "earliest_attestation_note": "c. 2nd century CE (Ptolemy's 'Agathou Daimonos' / Bay of Bengal eastern sea)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate island of the Great Andaman group.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea of the Indian Ocean west of the Malay Peninsula and north of Sumatra.",
-          "source_url": "https://en.wikipedia.org/wiki/Andaman_Sea"
+          "etymology_notes": "Island situated between South and Middle Andaman noted for mud volcanoes and mangrove creeks.",
+          "source_url": "https://en.wikipedia.org/wiki/Baratang_Island"
         },
         {
           "name": "Duncan Passage",
@@ -14116,45 +13896,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Duncan_Passage"
         },
         {
-          "name": "Andaman Sea",
-          "disambiguation_note": null,
-          "localisation_stem": "Andaman Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering Little Andaman on the east.",
+          "name": "Jarawa",
+          "disambiguation_note": "Andaman Islands",
+          "localisation_stem": "Jarawa",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Indigenous Andamanese people inhabiting the forested interior north of Onge.",
           "language_variants": [
             {
-              "form": "Laut Andaman",
+              "form": "Jarawa",
               "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Thale Andaman",
-              "native_script": "ทะเลอันดามัน",
-              "language": "Thai",
-              "language_code": "tha",
-              "notes": "Thai hydronym"
-            },
-            {
-              "form": "Laut Andaman",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "language": "Hindi",
+              "language_code": "hin",
+              "notes": "Designation derived from Aka-Bea exonym"
             }
           ],
-          "earliest_attestation_year": 150,
-          "earliest_attestation_note": "c. 2nd century CE (Ptolemy's 'Agathou Daimonos' / Bay of Bengal eastern sea)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate indigenous people of the Andaman archipelago.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea of the Indian Ocean west of the Malay Peninsula and north of Sumatra.",
-          "source_url": "https://en.wikipedia.org/wiki/Andaman_Sea"
+          "etymology_notes": "Indigenous Andamanese hunter-gatherer community speaking an Ongan language. Onomastic note: Hindi 'Jarawa' (Designation derived from Aka-Bea exonym).",
+          "source_url": "https://en.wikipedia.org/wiki/Jarawa_(Andaman_Islands)"
         }
       ]
     },
@@ -14244,45 +14010,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Narcondam_Island"
         },
         {
-          "name": "Andaman Sea",
+          "name": "Kalpong River",
           "disambiguation_note": null,
-          "localisation_stem": "Andaman Sea",
+          "localisation_stem": "Kalpong",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea surrounding North Andaman.",
+          "feature_subtype": "river",
+          "relationship": "Principal river flowing northward past Diglipur on North Andaman.",
           "language_variants": [
             {
-              "form": "Laut Andaman",
+              "form": "Kalpong Nadi",
               "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Thale Andaman",
-              "native_script": "ทะเลอันดามัน",
-              "language": "Thai",
-              "language_code": "tha",
-              "notes": "Thai hydronym"
-            },
-            {
-              "form": "Laut Andaman",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "language": "Hindi",
+              "language_code": "hin",
+              "notes": "Local river designation"
             }
           ],
-          "earliest_attestation_year": 150,
-          "earliest_attestation_note": "c. 2nd century CE (Ptolemy's 'Agathou Daimonos' / Bay of Bengal eastern sea)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate perennial river of North Andaman.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea of the Indian Ocean west of the Malay Peninsula and north of Sumatra.",
-          "source_url": "https://en.wikipedia.org/wiki/Andaman_Sea"
+          "etymology_notes": "Only major perennial river of the Andaman Islands, draining northern highlands past Diglipur.",
+          "source_url": "https://en.wikipedia.org/wiki/Kalpong_River"
         }
       ]
     },
@@ -14352,79 +14104,58 @@
           "source_url": "https://en.wikipedia.org/wiki/Nias_people"
         },
         {
-          "name": "Nias",
+          "name": "Banyak Islands",
           "disambiguation_note": null,
-          "localisation_stem": "Nias",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Neighboring barrier island southeast of Simeulue.",
+          "localisation_stem": "Banyak",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Archipelago lying directly southeast of Simeulue toward Nias.",
           "language_variants": [
             {
-              "form": "Pulau Nias",
+              "form": "Kepulauan Banyak",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian toponym"
-            },
-            {
-              "form": "Niyān",
-              "native_script": "نيان",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic medieval form (Niyān)"
+              "notes": "Indonesian archipelago name"
             }
           ],
-          "earliest_attestation_year": 851,
-          "earliest_attestation_note": "Attested as Niyan in 851 CE Arab navigational texts.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate island cluster between Simeulue and Nias.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Largest of the barrier islands off western Sumatra.",
-          "source_url": "https://en.wikipedia.org/wiki/Nias"
+          "etymology_notes": "Group of coastal islands guarding the sea channel between Simeulue and mainland Sumatra.",
+          "source_url": "https://en.wikipedia.org/wiki/Banyak_Islands"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Hinako Islands",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Great ocean surrounding Simeulue.",
+          "localisation_stem": "Hinako",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Offshore island cluster lying south of Simeulue off the western coast of Nias.",
           "language_variants": [
             {
-              "form": "Samudra Hindia",
+              "form": "Kepulauan Hinako",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Lautan Hindi",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Baḥr al-Hind",
-              "native_script": "بحر الهند",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic medieval name (Bahr al-Hind)"
+              "notes": "Indonesian archipelago name"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate offshore island group of western North Sumatra.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great ocean bordering the western coast of Sumatra and southern Java.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Chain of eight small islands off the western littoral of Nias.",
+          "source_url": "https://en.wikipedia.org/wiki/Hinako_Islands"
         }
       ]
     },
@@ -14528,45 +14259,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Alas_River"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Kluet River",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
+          "localisation_stem": "Kluet",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Ocean bordering the Singkil coast on the west.",
+          "feature_subtype": "river",
+          "relationship": "Mountain river draining the Leuser foothills north of Singkil.",
           "language_variants": [
             {
-              "form": "Samudra Hindia",
+              "form": "Krueng Kluet",
+              "native_script": null,
+              "language": "Acehnese",
+              "language_code": "ace",
+              "notes": "Acehnese hydronym"
+            },
+            {
+              "form": "Sungai Kluet",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Lautan Hindi",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Baḥr al-Hind",
-              "native_script": "بحر الهند",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic medieval name (Bahr al-Hind)"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate river basin of southern Aceh.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great ocean bordering the western coast of Sumatra and southern Java.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "River descending from Mount Leuser through South Aceh toward the western coast.",
+          "source_url": "https://en.wikipedia.org/wiki/Kluet_River"
         }
       ]
     },
@@ -14677,45 +14401,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Leuser_Range"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Woyla River",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
+          "localisation_stem": "Woyla",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Ocean bordering the Tripa coast on the southwest.",
+          "feature_subtype": "river",
+          "relationship": "Major western Acehnese river flowing north of the Tripa peatlands.",
           "language_variants": [
             {
-              "form": "Samudra Hindia",
+              "form": "Krueng Woyla",
+              "native_script": null,
+              "language": "Acehnese",
+              "language_code": "ace",
+              "notes": "Acehnese hydronym"
+            },
+            {
+              "form": "Sungai Woyla",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Lautan Hindi",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Baḥr al-Hind",
-              "native_script": "بحر الهند",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic medieval name (Bahr al-Hind)"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate coastal river of West Aceh.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great ocean bordering the western coast of Sumatra and southern Java.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "River draining the northern Barisan slopes through West Aceh.",
+          "source_url": "https://en.wikipedia.org/wiki/Woyla_River"
         }
       ]
     },
@@ -14826,45 +14543,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Aceh_River"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Banyak Islands",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Ocean bordering Calang on the west.",
+          "localisation_stem": "Banyak",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Archipelago lying off the southwestern Acehnese coast opposite the Barus-Singkil littoral.",
           "language_variants": [
             {
-              "form": "Samudra Hindia",
+              "form": "Kepulauan Banyak",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "notes": "Indonesian archipelago name"
             },
             {
-              "form": "Lautan Hindi",
+              "form": "Pulau Banyak",
               "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Baḥr al-Hind",
-              "native_script": "بحر الهند",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic medieval name (Bahr al-Hind)"
+              "language": "Acehnese",
+              "language_code": "ace",
+              "notes": "Local Acehnese name"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate island cluster between Simeulue and Nias.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great ocean bordering the western coast of Sumatra and southern Java.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Cluster of coastal islands lying between Simeulue and Nias off Singkil.",
+          "source_url": "https://en.wikipedia.org/wiki/Banyak_Islands"
         }
       ]
     },
@@ -14954,45 +14664,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mentawai_Strait"
         },
         {
-          "name": "Indian Ocean",
+          "name": "North Pagai",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Ocean bordering Siberut on the west.",
+          "localisation_stem": "North Pagai",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Southern island of the Mentawai chain lying south of Siberut and Sipura.",
           "language_variants": [
             {
-              "form": "Samudra Hindia",
+              "form": "Pagai Utara",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Lautan Hindi",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Baḥr al-Hind",
-              "native_script": "بحر الهند",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic medieval name (Bahr al-Hind)"
+              "notes": "Indonesian island name"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate island of the Mentawai archipelago.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great ocean bordering the western coast of Sumatra and southern Java.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Forested island forming the northern half of the Pagai group in Mentawai.",
+          "source_url": "https://en.wikipedia.org/wiki/North_Pagai"
         }
       ]
     },
@@ -15055,31 +14751,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mentawai_people"
         },
         {
-          "name": "Siberut",
+          "name": "South Pagai",
           "disambiguation_note": null,
-          "localisation_stem": "Siberut",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Largest Mentawai island immediately north of Sipora.",
+          "localisation_stem": "South Pagai",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Southernmost island of the Mentawai chain situated south of Sipura.",
           "language_variants": [
             {
-              "form": "Pulau Siberut",
+              "form": "Pagai Selatan",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian toponym"
+              "notes": "Indonesian island name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Largest of the Mentawai Islands off West Sumatra.",
+          "earliest_attestation_note": "Pre-literate island of the southern Mentawai chain.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Northernmost main island of the Mentawai archipelago.",
-          "source_url": "https://en.wikipedia.org/wiki/Siberut"
+          "etymology_notes": "Southernmost main island of the Mentawai archipelago off West Sumatra.",
+          "source_url": "https://en.wikipedia.org/wiki/South_Pagai"
         },
         {
           "name": "Mentawai Strait",
@@ -15210,45 +14906,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Nias"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Hinako Islands",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Ocean surrounding the Batu Islands.",
+          "localisation_stem": "Hinako",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Small island group lying northwest of the Batu Islands off western Nias.",
           "language_variants": [
             {
-              "form": "Samudra Hindia",
+              "form": "Kepulauan Hinako",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Lautan Hindi",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Baḥr al-Hind",
-              "native_script": "بحر الهند",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic medieval name (Bahr al-Hind)"
+              "notes": "Indonesian archipelago name"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate offshore island group of western North Sumatra.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great ocean bordering the western coast of Sumatra and southern Java.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Cluster of eight coral and forested islands off the western coast of Nias.",
+          "source_url": "https://en.wikipedia.org/wiki/Hinako_Islands"
         }
       ]
     },
@@ -15338,45 +15020,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ten_Degree_Channel"
         },
         {
-          "name": "Andaman Sea",
+          "name": "Katchal",
           "disambiguation_note": null,
-          "localisation_stem": "Andaman Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering the Nicobars on the east.",
+          "localisation_stem": "Katchal",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Central island of the Nicobar chain known locally as Tihnyu.",
           "language_variants": [
             {
-              "form": "Laut Andaman",
+              "form": "Tihnyu",
               "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
+              "language": "Central Nicobarese",
+              "language_code": "ncb",
+              "notes": "Indigenous Nicobarese island name"
             },
             {
-              "form": "Thale Andaman",
-              "native_script": "ทะเลอันดามัน",
-              "language": "Thai",
-              "language_code": "tha",
-              "notes": "Thai hydronym"
-            },
-            {
-              "form": "Laut Andaman",
+              "form": "Katchal",
               "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "language": "Hindi",
+              "language_code": "hin",
+              "notes": "Standard Indian rendering"
             }
           ],
-          "earliest_attestation_year": 150,
-          "earliest_attestation_note": "c. 2nd century CE (Ptolemy's 'Agathou Daimonos' / Bay of Bengal eastern sea)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate island of the central Nicobar archipelago.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea of the Indian Ocean west of the Malay Peninsula and north of Sumatra.",
-          "source_url": "https://en.wikipedia.org/wiki/Andaman_Sea"
+          "etymology_notes": "Forested central Nicobar island lying west of Nancowry and Camorta.",
+          "source_url": "https://en.wikipedia.org/wiki/Katchal"
         }
       ]
     },
@@ -15466,45 +15141,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Great_Nicobar_Island"
         },
         {
-          "name": "Andaman Sea",
+          "name": "Kamorta",
           "disambiguation_note": null,
-          "localisation_stem": "Andaman Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering Great Nicobar on the east.",
+          "localisation_stem": "Kamorta",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Central Nicobar island enclosing Nancowry Harbour directly opposite Muot.",
           "language_variants": [
             {
-              "form": "Laut Andaman",
+              "form": "Kamorta",
               "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Thale Andaman",
-              "native_script": "ทะเลอันดามัน",
-              "language": "Thai",
-              "language_code": "tha",
-              "notes": "Thai hydronym"
-            },
-            {
-              "form": "Laut Andaman",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "language": "Central Nicobarese",
+              "language_code": "ncb",
+              "notes": "Indigenous Nicobarese island name"
             }
           ],
-          "earliest_attestation_year": 150,
-          "earliest_attestation_note": "c. 2nd century CE (Ptolemy's 'Agathou Daimonos' / Bay of Bengal eastern sea)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate island of the central Nicobar group.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea of the Indian Ocean west of the Malay Peninsula and north of Sumatra.",
-          "source_url": "https://en.wikipedia.org/wiki/Andaman_Sea"
+          "etymology_notes": "Hilly island forming the northern shore of sheltered Nancowry Harbour.",
+          "source_url": "https://en.wikipedia.org/wiki/Kamorta"
         }
       ]
     },
@@ -15615,45 +15276,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Belait_River"
         },
         {
-          "name": "South China Sea",
+          "name": "Temburong River",
           "disambiguation_note": null,
-          "localisation_stem": "South China Sea",
+          "localisation_stem": "Temburong",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering northwestern Borneo.",
+          "feature_subtype": "river",
+          "relationship": "Mountain river draining the eastern Brunei interior into the coastal bay.",
           "language_variants": [
             {
-              "form": "Laut China Selatan",
+              "form": "Sungai Temburong",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
               "notes": "Malay hydronym"
-            },
-            {
-              "form": "Laut Tiongkok Selatan",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Nán Hǎi",
-              "native_script": "南海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical name (Nanhai, 'South Sea')"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Nanhai (South Sea) in Han dynasty maritime records by the 1st century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate rainforest river of northern Borneo.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea separating the Malay Peninsula and Sumatra from Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/South_China_Sea"
+          "etymology_notes": "Principal river of eastern Brunei flowing north from the Borneo interior.",
+          "source_url": "https://en.wikipedia.org/wiki/Temburong_River"
         }
       ]
     },
@@ -15736,45 +15383,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Padas_River"
         },
         {
-          "name": "South China Sea",
+          "name": "Kimanis Bay",
           "disambiguation_note": null,
-          "localisation_stem": "South China Sea",
+          "localisation_stem": "Kimanis",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering the Papar coast.",
+          "feature_subtype": "bay",
+          "relationship": "Coastal embayment immediately south of Papar along western Sabah.",
           "language_variants": [
             {
-              "form": "Laut China Selatan",
+              "form": "Teluk Kimanis",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
               "notes": "Malay hydronym"
-            },
-            {
-              "form": "Laut Tiongkok Selatan",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Nán Hǎi",
-              "native_script": "南海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical name (Nanhai, 'South Sea')"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Nanhai (South Sea) in Han dynasty maritime records by the 1st century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate coastal bay on the northwestern shore of Borneo.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea separating the Malay Peninsula and Sumatra from Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/South_China_Sea"
+          "etymology_notes": "Broad sheltered bay along Sabah's west coast south of the Crocker foothills.",
+          "source_url": "https://en.wikipedia.org/wiki/Kimanis_Bay"
         }
       ]
     },
@@ -15864,45 +15497,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Belait_River"
         },
         {
-          "name": "South China Sea",
+          "name": "Tutong River",
           "disambiguation_note": null,
-          "localisation_stem": "South China Sea",
+          "localisation_stem": "Tutong",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering the Seria coast.",
+          "feature_subtype": "river",
+          "relationship": "Coastal river flowing parallel to the Belait basin northeast of Seria.",
           "language_variants": [
             {
-              "form": "Laut China Selatan",
+              "form": "Sungai Tutong",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
               "notes": "Malay hydronym"
-            },
-            {
-              "form": "Laut Tiongkok Selatan",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Nán Hǎi",
-              "native_script": "南海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical name (Nanhai, 'South Sea')"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Nanhai (South Sea) in Han dynasty maritime records by the 1st century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate coastal river basin of western Brunei.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea separating the Malay Peninsula and Sumatra from Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/South_China_Sea"
+          "etymology_notes": "One of the four main river systems draining Brunei into coastal waters.",
+          "source_url": "https://en.wikipedia.org/wiki/Tutong_River"
         }
       ]
     },
@@ -16072,31 +15691,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Kadazan-Dusun"
         },
         {
-          "name": "Marudu Bay",
+          "name": "Banggi Island",
           "disambiguation_note": null,
-          "localisation_stem": "Marudu",
-          "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Deep bay immediately east of Kudat.",
+          "localisation_stem": "Banggi",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Largest offshore island north of the Kudat peninsula across the Banggi channel.",
           "language_variants": [
             {
-              "form": "Teluk Marudu",
+              "form": "Pulau Banggi",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
+              "notes": "Malay island name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Deep bay at the northern tip of Borneo.",
+          "earliest_attestation_note": "Pre-literate island off the northernmost tip of Borneo.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Bay in northern Sabah opening onto the Sulu Sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Marudu_Bay"
+          "etymology_notes": "Large forested island guarding the sea passage between the Sulu Sea and northern Borneo.",
+          "source_url": "https://en.wikipedia.org/wiki/Banggi_Island"
         },
         {
           "name": "Sulu Sea",
@@ -17725,7 +17344,7 @@
         {
           "name": "Makassar Strait",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar Strait",
+          "localisation_stem": "Makassar",
           "category": "hydronym",
           "feature_subtype": "strait",
           "relationship": "Strait bordering the eastern Borneo coast.",
@@ -17933,7 +17552,7 @@
         {
           "name": "Makassar Strait",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar Strait",
+          "localisation_stem": "Makassar",
           "category": "hydronym",
           "feature_subtype": "strait",
           "relationship": "Strait bordering Sangkulirang on the east.",
@@ -18088,7 +17707,7 @@
         {
           "name": "Makassar Strait",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar Strait",
+          "localisation_stem": "Makassar",
           "category": "hydronym",
           "feature_subtype": "strait",
           "relationship": "Strait bordering eastern Kalimantan.",
@@ -18444,7 +18063,7 @@
         {
           "name": "Makassar Strait",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar Strait",
+          "localisation_stem": "Makassar",
           "category": "hydronym",
           "feature_subtype": "strait",
           "relationship": "Strait bordering the Kutai coast.",
@@ -18565,7 +18184,7 @@
         {
           "name": "Makassar Strait",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar Strait",
+          "localisation_stem": "Makassar",
           "category": "hydronym",
           "feature_subtype": "strait",
           "relationship": "Maritime strait bordering Kutai.",
@@ -18659,7 +18278,7 @@
         {
           "name": "Makassar Strait",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar Strait",
+          "localisation_stem": "Makassar",
           "category": "hydronym",
           "feature_subtype": "strait",
           "relationship": "Strait bordering Bontang on the east.",
@@ -18926,45 +18545,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mendawai_River"
         },
         {
-          "name": "Java Sea",
+          "name": "Mentaya River",
           "disambiguation_note": null,
-          "localisation_stem": "Java Sea",
+          "localisation_stem": "Mentaya",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Shallow sea bordering the Katingan estuary.",
+          "feature_subtype": "river",
+          "relationship": "Parallel southern Borneo river flowing immediately west of the Katingan basin.",
           "language_variants": [
             {
-              "form": "Laut Jawa",
+              "form": "Sungai Mentaya",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Segara Jawa",
-              "native_script": null,
-              "language": "Javanese",
-              "language_code": "jav",
-              "notes": "Javanese hydronym"
-            },
-            {
-              "form": "Laut Jawa",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "Central maritime highway of the Indonesian archipelago between Java, Sumatra, and Borneo.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Dayak river basin of southern Kalimantan.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Shallow sea of the Sunda Shelf.",
-          "source_url": "https://en.wikipedia.org/wiki/Java_Sea"
+          "etymology_notes": "Major southern Borneo river also known locally as the Sampit River.",
+          "source_url": "https://en.wikipedia.org/wiki/Mentaya_River"
         }
       ]
     },
@@ -18993,45 +18598,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Banjar people",
+          "name": "Ma'anyan people",
           "disambiguation_note": null,
-          "localisation_stem": "Banjar",
+          "localisation_stem": "Ma'anyan",
           "category": "tribe",
           "feature_subtype": "austronesian_people",
-          "relationship": "Banjarese people of the Negara Daha heartland.",
+          "relationship": "Ancient Dayak group of the southeastern Barito basin around Kota Raden and Nan Sarunai.",
           "language_variants": [
             {
-              "form": "Urang Banjar",
-              "native_script": null,
-              "language": "Banjarese",
-              "language_code": "bjn",
-              "notes": "Banjarese endonym"
-            },
-            {
-              "form": "Suku Banjar",
+              "form": "Suku Dayak Ma'anyan",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian ethnonym"
             },
             {
-              "form": "Orang Banjar",
+              "form": "Ma'anyan",
               "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay ethnonym"
+              "language": "Ma'anyan",
+              "language_code": "mhy",
+              "notes": "Endonym"
             }
           ],
-          "earliest_attestation_year": 1365,
-          "earliest_attestation_note": "Southeastern Bornean polity of Negara Dipa and Banjarmasin attested in the 14th century CE Nagarakretagama.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Dayak people celebrated in the Nan Sarunai oral tradition.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Malayic Austronesian people of the Barito and Meratus basins in southeastern Kalimantan. Onomastic note: Banjarese endonym ('Urang Banjar').",
-          "source_url": "https://en.wikipedia.org/wiki/Banjar_people"
+          "etymology_notes": "Barito Austronesian Dayak people linguistically closest to Malagasy. Onomastic note: Ma'anyan 'Ma'anyan' (Endonym).",
+          "source_url": "https://en.wikipedia.org/wiki/Ma%27anyan_people"
         },
         {
           "name": "Negara River",
@@ -19310,45 +18908,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mendawai_River"
         },
         {
-          "name": "Java Sea",
+          "name": "Katingan River",
           "disambiguation_note": null,
-          "localisation_stem": "Java Sea",
+          "localisation_stem": "Katingan",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering Sampit Bay on the south.",
+          "feature_subtype": "river",
+          "relationship": "Major river running parallel east of the Sampit basin through southern Kalimantan.",
           "language_variants": [
             {
-              "form": "Laut Jawa",
+              "form": "Sungai Katingan",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Segara Jawa",
-              "native_script": null,
-              "language": "Javanese",
-              "language_code": "jav",
-              "notes": "Javanese hydronym"
-            },
-            {
-              "form": "Laut Jawa",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "Central maritime highway of the Indonesian archipelago between Java, Sumatra, and Borneo.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Dayak river basin of Central Kalimantan.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Shallow sea of the Sunda Shelf.",
-          "source_url": "https://en.wikipedia.org/wiki/Java_Sea"
+          "etymology_notes": "Long river of Central Kalimantan known along its lower course as the Mendawai.",
+          "source_url": "https://en.wikipedia.org/wiki/Katingan_River"
         }
       ]
     },
@@ -19438,45 +19022,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Seruyan_River"
         },
         {
-          "name": "Java Sea",
+          "name": "Mount Bukit Raya",
           "disambiguation_note": null,
-          "localisation_stem": "Java Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering the Pembuang estuary.",
+          "localisation_stem": "Bukit Raya",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Highest peak of Kalimantan rising in the Schwaner Range above the Pembuang headwaters.",
           "language_variants": [
             {
-              "form": "Laut Jawa",
+              "form": "Gunung Bukit Raya",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Segara Jawa",
-              "native_script": null,
-              "language": "Javanese",
-              "language_code": "jav",
-              "notes": "Javanese hydronym"
-            },
-            {
-              "form": "Laut Jawa",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
+              "notes": "Indonesian mountain name"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "Central maritime highway of the Indonesian archipelago between Java, Sumatra, and Borneo.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate summit of the Schwaner Range in interior Borneo.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Shallow sea of the Sunda Shelf.",
-          "source_url": "https://en.wikipedia.org/wiki/Java_Sea"
+          "etymology_notes": "Sacred summit of the central Kalimantan interior at 2,278 meters elevation.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Bukit_Raya"
         }
       ]
     },
@@ -19696,7 +19266,7 @@
         {
           "name": "Makassar Strait",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar Strait",
+          "localisation_stem": "Makassar",
           "category": "hydronym",
           "feature_subtype": "strait",
           "relationship": "Strait bordering the Pasir coast on the east.",
@@ -20316,7 +19886,7 @@
         {
           "name": "Makassar Strait",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar Strait",
+          "localisation_stem": "Makassar",
           "category": "hydronym",
           "feature_subtype": "strait",
           "relationship": "Strait bordering Pulau Laut on the east.",
@@ -20341,45 +19911,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Makassar_Strait"
         },
         {
-          "name": "Java Sea",
-          "disambiguation_note": null,
-          "localisation_stem": "Java Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering Pulau Laut on the south.",
+          "name": "Sebuku Island",
+          "disambiguation_note": "Borneo",
+          "localisation_stem": "Sebuku",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Coastal island lying immediately east of Laut Island off southeastern Borneo.",
           "language_variants": [
             {
-              "form": "Laut Jawa",
+              "form": "Pulau Sebuku",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Segara Jawa",
-              "native_script": null,
-              "language": "Javanese",
-              "language_code": "jav",
-              "notes": "Javanese hydronym"
-            },
-            {
-              "form": "Laut Jawa",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
+              "notes": "Indonesian island name"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "Central maritime highway of the Indonesian archipelago between Java, Sumatra, and Borneo.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate island off southeastern Kalimantan.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Shallow sea of the Sunda Shelf.",
-          "source_url": "https://en.wikipedia.org/wiki/Java_Sea"
+          "etymology_notes": "Offshore island separated from Pulau Laut by a narrow coastal strait.",
+          "source_url": "https://en.wikipedia.org/wiki/Sebuku,_Borneo"
         }
       ]
     },
@@ -20469,45 +20025,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Rajang_River"
         },
         {
-          "name": "South China Sea",
+          "name": "Iran Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "South China Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea west of the Rajang delta.",
+          "localisation_stem": "Iran",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Interior Bornean mountain range forming the headwaters of the Rajang above Sibu.",
           "language_variants": [
             {
-              "form": "Laut China Selatan",
+              "form": "Pergunungan Iran",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
+              "notes": "Malay mountain range name"
             },
             {
-              "form": "Laut Tiongkok Selatan",
+              "form": "Pegunungan Muller-Schwaner",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Nán Hǎi",
-              "native_script": "南海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical name (Nanhai, 'South Sea')"
+              "notes": "Indonesian designation"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Nanhai (South Sea) in Han dynasty maritime records by the 1st century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Central Bornean mountain range forming the watershed between Sarawak and Kalimantan.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea separating the Malay Peninsula and Sumatra from Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/South_China_Sea"
+          "etymology_notes": "Border mountain range separating Sarawak's major river headwaters from Kalimantan.",
+          "source_url": "https://en.wikipedia.org/wiki/Iran_Mountains"
         }
       ]
     },
@@ -20590,45 +20139,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Oya_River"
         },
         {
-          "name": "South China Sea",
+          "name": "Mukah River",
           "disambiguation_note": null,
-          "localisation_stem": "South China Sea",
+          "localisation_stem": "Mukah",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering the Melanau coast.",
+          "feature_subtype": "river",
+          "relationship": "Coastal river flowing through the Melanau heartland adjacent to Melano.",
           "language_variants": [
             {
-              "form": "Laut China Selatan",
+              "form": "Batang Mukah",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Laut Tiongkok Selatan",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Nán Hǎi",
-              "native_script": "南海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical name (Nanhai, 'South Sea')"
+              "notes": "Sarawak Malay hydronym"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Nanhai (South Sea) in Han dynasty maritime records by the 1st century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate coastal river of the Melanau littoral in Sarawak.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea separating the Malay Peninsula and Sumatra from Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/South_China_Sea"
+          "etymology_notes": "Major central Sarawak river entering the sea at the historic Melanau settlement of Mukah.",
+          "source_url": "https://en.wikipedia.org/wiki/Mukah_River"
         }
       ]
     },
@@ -20711,45 +20246,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Kemena_River"
         },
         {
-          "name": "South China Sea",
+          "name": "Tatau River",
           "disambiguation_note": null,
-          "localisation_stem": "South China Sea",
+          "localisation_stem": "Tatau",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering Bintulu.",
+          "feature_subtype": "river",
+          "relationship": "Coastal river draining the forested interior immediately southwest of Bintulu.",
           "language_variants": [
             {
-              "form": "Laut China Selatan",
+              "form": "Batang Tatau",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Laut Tiongkok Selatan",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Nán Hǎi",
-              "native_script": "南海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical name (Nanhai, 'South Sea')"
+              "notes": "Sarawak Malay hydronym"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Nanhai (South Sea) in Han dynasty maritime records by the 1st century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate river basin of central Sarawak.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea separating the Malay Peninsula and Sumatra from Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/South_China_Sea"
+          "etymology_notes": "Major Sarawak coastal river flowing west of the Kemena basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Tatau_River"
         }
       ]
     },
@@ -20832,45 +20353,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Baram_River"
         },
         {
-          "name": "South China Sea",
+          "name": "Mount Mulu",
           "disambiguation_note": null,
-          "localisation_stem": "South China Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering Miri.",
+          "localisation_stem": "Mulu",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Towering sandstone and karst massif rising inland southeast of Miri.",
           "language_variants": [
             {
-              "form": "Laut China Selatan",
+              "form": "Gunung Mulu",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Laut Tiongkok Selatan",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Nán Hǎi",
-              "native_script": "南海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical name (Nanhai, 'South Sea')"
+              "notes": "Malay mountain name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Nanhai (South Sea) in Han dynasty maritime records by the 1st century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Sandstone massif rising in northern Sarawak near the Brunei-Baram divide.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea separating the Malay Peninsula and Sumatra from Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/South_China_Sea"
+          "etymology_notes": "Second-highest mountain in Sarawak, dominating the upper Baram and Tutoh watersheds.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Mulu"
         }
       ]
     },
@@ -21195,45 +20702,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Sarawak_River"
         },
         {
-          "name": "South China Sea",
+          "name": "Tanjung Datu",
           "disambiguation_note": null,
-          "localisation_stem": "South China Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering the Santubong peninsula.",
+          "localisation_stem": "Tanjung Datu",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Prominent rocky headland west of Santubong marking the western tip of Sarawak.",
           "language_variants": [
             {
-              "form": "Laut China Selatan",
+              "form": "Tanjung Datu",
               "native_script": null,
               "language": "Malay",
               "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Laut Tiongkok Selatan",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Nán Hǎi",
-              "native_script": "南海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical name (Nanhai, 'South Sea')"
+              "notes": "Malay cape name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Nanhai (South Sea) in Han dynasty maritime records by the 1st century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate coastal headland of southwestern Borneo.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea separating the Malay Peninsula and Sumatra from Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/South_China_Sea"
+          "etymology_notes": "Forested promontory jutting into the sea at the Sarawak-Kalimantan border.",
+          "source_url": "https://en.wikipedia.org/wiki/Tanjung_Datu"
         }
       ]
     },
@@ -21901,45 +21394,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Malays_(ethnic_group)"
         },
         {
-          "name": "South China Sea",
+          "name": "Pawan River",
           "disambiguation_note": null,
-          "localisation_stem": "South China Sea",
+          "localisation_stem": "Pawan",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering Sambas on the northwest.",
+          "feature_subtype": "river",
+          "relationship": "Major western Kalimantan river draining southward toward the Karimata Strait.",
           "language_variants": [
             {
-              "form": "Laut China Selatan",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Laut Tiongkok Selatan",
+              "form": "Sungai Pawan",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Nán Hǎi",
-              "native_script": "南海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical name (Nanhai, 'South Sea')"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Nanhai (South Sea) in Han dynasty maritime records by the 1st century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Principal river of Sukadana and Ketapang in West Kalimantan.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major marginal sea separating the Malay Peninsula and Sumatra from Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/South_China_Sea"
+          "etymology_notes": "Major river of West Kalimantan flowing from the Schwaner foothills to the Karimata coast.",
+          "source_url": "https://en.wikipedia.org/wiki/Pawan_River"
         },
         {
           "name": "Karimata Strait",
@@ -23080,45 +22559,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Lamandau_River"
         },
         {
-          "name": "Java Sea",
+          "name": "Mount Bukit Raya",
           "disambiguation_note": null,
-          "localisation_stem": "Java Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Shallow sea bordering the Kotawaringin coast.",
+          "localisation_stem": "Bukit Raya",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Highest summit of Kalimantan rising in the interior Schwaner Range north of Kotawaringin.",
           "language_variants": [
             {
-              "form": "Laut Jawa",
+              "form": "Gunung Bukit Raya",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Segara Jawa",
-              "native_script": null,
-              "language": "Javanese",
-              "language_code": "jav",
-              "notes": "Javanese hydronym"
-            },
-            {
-              "form": "Laut Jawa",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
+              "notes": "Indonesian mountain name"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "Central maritime highway of the Indonesian archipelago between Java, Sumatra, and Borneo.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate summit of the Schwaner Range in interior Borneo.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Shallow sea of the Sunda Shelf.",
-          "source_url": "https://en.wikipedia.org/wiki/Java_Sea"
+          "etymology_notes": "Highest mountain of Indonesian Borneo, feeding southern Kalimantan river headwaters.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Bukit_Raya"
         }
       ]
     },
@@ -23208,15 +22673,15 @@
           "source_url": "https://en.wikipedia.org/wiki/Lamandau_River"
         },
         {
-          "name": "Seruyan River",
+          "name": "Kahayan River",
           "disambiguation_note": null,
-          "localisation_stem": "Seruyan",
+          "localisation_stem": "Kahayan",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Neighboring river to the east.",
+          "relationship": "Major southern Borneo river draining Central Kalimantan east of the Warau region.",
           "language_variants": [
             {
-              "form": "Sungai Seruyan",
+              "form": "Sungai Kahayan",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
@@ -23224,15 +22689,15 @@
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "River of Central Kalimantan flowing into the Java Sea.",
+          "earliest_attestation_note": "Major river of Central Kalimantan flowing south into the Java Sea.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River of southern Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/Seruyan_River"
+          "etymology_notes": "Six-hundred-fifty-eight-kilometer river flowing from the Schwaner Range to the southern coast.",
+          "source_url": "https://en.wikipedia.org/wiki/Kahayan_River"
         }
       ]
     },
@@ -23322,45 +22787,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Sampit_River"
         },
         {
-          "name": "Java Sea",
+          "name": "Katingan River",
           "disambiguation_note": null,
-          "localisation_stem": "Java Sea",
+          "localisation_stem": "Katingan",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Shallow sea bordering the Seruyan coast.",
+          "feature_subtype": "river",
+          "relationship": "Large river running immediately east of the Sampit and Seruyan basins.",
           "language_variants": [
             {
-              "form": "Laut Jawa",
+              "form": "Sungai Katingan",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Segara Jawa",
-              "native_script": null,
-              "language": "Javanese",
-              "language_code": "jav",
-              "notes": "Javanese hydronym"
-            },
-            {
-              "form": "Laut Jawa",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "Central maritime highway of the Indonesian archipelago between Java, Sumatra, and Borneo.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Dayak river basin of Central Kalimantan.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Shallow sea of the Sunda Shelf.",
-          "source_url": "https://en.wikipedia.org/wiki/Java_Sea"
+          "etymology_notes": "Major Central Kalimantan waterway draining the Schwaner uplands southward.",
+          "source_url": "https://en.wikipedia.org/wiki/Katingan_River"
         }
       ]
     },
@@ -23741,45 +23192,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Bali_Strait"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Ayung River",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
+          "localisation_stem": "Ayung",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Ocean bordering Jembrana on the south.",
+          "feature_subtype": "river",
+          "relationship": "Longest river on Bali, draining the central volcanic highlands southeast of Jembrana.",
           "language_variants": [
             {
-              "form": "Samudra Hindia",
+              "form": "Tukad Ayung",
+              "native_script": null,
+              "language": "Balinese",
+              "language_code": "ban",
+              "notes": "Balinese hydronym"
+            },
+            {
+              "form": "Sungai Ayung",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Lautan Hindi",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Baḥr al-Hind",
-              "native_script": "بحر الهند",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic medieval name (Bahr al-Hind)"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Balinese riverine artery.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great ocean bordering the western coast of Sumatra and southern Java.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Longest river of Bali, running sixty-eight kilometers from the central mountains to Sanur.",
+          "source_url": "https://en.wikipedia.org/wiki/Ayung_River"
         }
       ]
     },
@@ -24260,45 +23704,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Madura_Strait"
         },
         {
-          "name": "Java Sea",
+          "name": "Sapudi Islands",
           "disambiguation_note": null,
-          "localisation_stem": "Java Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering Madura on the north.",
+          "localisation_stem": "Sapudi",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Island group located east of Madura between Sampang-Sumenep and Kangean.",
           "language_variants": [
             {
-              "form": "Laut Jawa",
+              "form": "Kepulauan Sapudi",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Segara Jawa",
-              "native_script": null,
-              "language": "Javanese",
-              "language_code": "jav",
-              "notes": "Javanese hydronym"
-            },
-            {
-              "form": "Laut Jawa",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
+              "notes": "Indonesian archipelago name"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "Central maritime highway of the Indonesian archipelago between Java, Sumatra, and Borneo.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Madurese island cluster east of Madura.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Shallow sea of the Sunda Shelf.",
-          "source_url": "https://en.wikipedia.org/wiki/Java_Sea"
+          "etymology_notes": "Chain of low-lying islands in the Sumenep archipelago between Madura and Kangean.",
+          "source_url": "https://en.wikipedia.org/wiki/Sapudi_Islands"
         }
       ]
     },
@@ -24544,45 +23974,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Bali_Sea"
         },
         {
-          "name": "Java Sea",
+          "name": "Raas Island",
           "disambiguation_note": null,
-          "localisation_stem": "Java Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering Kangean on the northwest.",
+          "localisation_stem": "Raas",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Island located midway between Madura and the Kangean archipelago.",
           "language_variants": [
             {
-              "form": "Laut Jawa",
+              "form": "Pulau Raas",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Segara Jawa",
-              "native_script": null,
-              "language": "Javanese",
-              "language_code": "jav",
-              "notes": "Javanese hydronym"
-            },
-            {
-              "form": "Laut Jawa",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
+              "notes": "Indonesian island name"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "Central maritime highway of the Indonesian archipelago between Java, Sumatra, and Borneo.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate island of the eastern Madurese archipelago.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Shallow sea of the Sunda Shelf.",
-          "source_url": "https://en.wikipedia.org/wiki/Java_Sea"
+          "etymology_notes": "Small island in the Sapudi-Kangean chain inhabited by Madurese seafarers.",
+          "source_url": "https://en.wikipedia.org/wiki/Raas_Island"
         }
       ]
     },
@@ -25261,45 +24677,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Bengawan_Solo"
         },
         {
-          "name": "Java Sea",
+          "name": "Bawean",
           "disambiguation_note": null,
-          "localisation_stem": "Java Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Shallow sea bordering Tuban on the north.",
+          "localisation_stem": "Bawean",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Volcanic island lying directly north of Kambang Putih and Tuban across coastal waters.",
           "language_variants": [
             {
-              "form": "Laut Jawa",
+              "form": "Pulau Bawean",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
+              "notes": "Indonesian island name"
             },
             {
-              "form": "Segara Jawa",
+              "form": "Bawean",
               "native_script": null,
               "language": "Javanese",
               "language_code": "jav",
-              "notes": "Javanese hydronym"
-            },
-            {
-              "form": "Laut Jawa",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
+              "notes": "Javanese island name"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "Central maritime highway of the Indonesian archipelago between Java, Sumatra, and Borneo.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate maritime island north of East Java.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Shallow sea of the Sunda Shelf.",
-          "source_url": "https://en.wikipedia.org/wiki/Java_Sea"
+          "etymology_notes": "Small volcanic island 150 kilometers north of Surabaya along northern Java sea lanes.",
+          "source_url": "https://en.wikipedia.org/wiki/Bawean"
         }
       ]
     },
@@ -25511,38 +24920,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Javanese_people"
         },
         {
-          "name": "Dieng Plateau",
+          "name": "Mount Sumbing",
           "disambiguation_note": null,
-          "localisation_stem": "Dieng",
+          "localisation_stem": "Sumbing",
           "category": "oronym",
-          "feature_subtype": "plateau",
-          "relationship": "Sacred volcanic plateau in Central Java.",
+          "feature_subtype": "mountain",
+          "relationship": "Prominent stratovolcano rising in the Kedu uplands south of Poh Pitu.",
           "language_variants": [
             {
-              "form": "Dataran Tinggi Dièng",
+              "form": "Gunung Sumbing",
               "native_script": null,
               "language": "Javanese",
               "language_code": "jav",
               "notes": "Javanese oronym"
             },
             {
-              "form": "Di-Hyang",
+              "form": "Gunung Sumbing",
               "native_script": null,
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Old Javanese/Sanskrit ('Abode of the Gods')"
+              "language": "Indonesian",
+              "language_code": "ind",
+              "notes": "Indonesian oronym"
             }
           ],
-          "earliest_attestation_year": 750,
-          "earliest_attestation_note": "Sacred volcanic plateau hosting the 8th century CE Hindu temples of Mataram.",
+          "earliest_attestation_year": 732,
+          "earliest_attestation_note": "At least 8th century CE (Central Javanese Kedu inscriptions in the Sumbing-Sindoro basin)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Highland volcanic plateau in Central Java.",
-          "source_url": "https://en.wikipedia.org/wiki/Dieng_Plateau"
+          "etymology_notes": "Active stratovolcano paired with Mount Sindoro overlooking central Java.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Sumbing"
         },
         {
           "name": "Serang River",
@@ -27186,45 +26595,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Mount_Ciremai"
         },
         {
-          "name": "Java Sea",
+          "name": "Citarum River",
           "disambiguation_note": null,
-          "localisation_stem": "Java Sea",
+          "localisation_stem": "Citarum",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Shallow sea into which the Cimanuk empties.",
+          "feature_subtype": "river",
+          "relationship": "Longest river of West Java, flowing west of the Cimanuk basin toward the Taruma coast.",
           "language_variants": [
             {
-              "form": "Laut Jawa",
+              "form": "Walungan Citarum",
+              "native_script": null,
+              "language": "Sundanese",
+              "language_code": "sun",
+              "notes": "Sundanese hydronym"
+            },
+            {
+              "form": "Sungai Citarum",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Segara Jawa",
-              "native_script": null,
-              "language": "Javanese",
-              "language_code": "jav",
-              "notes": "Javanese hydronym"
-            },
-            {
-              "form": "Laut Jawa",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "Central maritime highway of the Indonesian archipelago between Java, Sumatra, and Borneo.",
+          "earliest_attestation_year": 450,
+          "earliest_attestation_note": "Heartland river of 5th century CE Tarumanagara (named after the tarum indigo plant).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Shallow sea of the Sunda Shelf.",
-          "source_url": "https://en.wikipedia.org/wiki/Java_Sea"
+          "etymology_notes": "Major Sundanese river whose name derives from the Sundanese word tarum for indigo.",
+          "source_url": "https://en.wikipedia.org/wiki/Citarum_River"
         }
       ]
     },
@@ -27747,45 +27149,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Mount_Ciremai"
         },
         {
-          "name": "Java Sea",
+          "name": "Pemali River",
           "disambiguation_note": null,
-          "localisation_stem": "Java Sea",
+          "localisation_stem": "Pemali",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering Cirebon on the northeast.",
+          "feature_subtype": "river",
+          "relationship": "Major river immediately east of Cirebon along the northern Sunda-Java borderland.",
           "language_variants": [
             {
-              "form": "Laut Jawa",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Segara Jawa",
+              "form": "Kali Pemali",
               "native_script": null,
               "language": "Javanese",
               "language_code": "jav",
               "notes": "Javanese hydronym"
             },
             {
-              "form": "Laut Jawa",
+              "form": "Sungai Pemali",
               "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
+              "language": "Indonesian",
+              "language_code": "ind",
+              "notes": "Indonesian hydronym"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "Central maritime highway of the Indonesian archipelago between Java, Sumatra, and Borneo.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate northern coastal river of western Central Java.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Shallow sea of the Sunda Shelf.",
-          "source_url": "https://en.wikipedia.org/wiki/Java_Sea"
+          "etymology_notes": "One-hundred-twenty-five-kilometer river flowing north past Brebes from Mount Slamet.",
+          "source_url": "https://en.wikipedia.org/wiki/Pemali_River"
         }
       ]
     },
@@ -27889,45 +27284,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ci_Tanduy"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Mount Slamet",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Great ocean bordering Pangandaran on the south.",
+          "localisation_stem": "Slamet",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Towering active stratovolcano east of the Galuh heartland and Pangandaran hinterland.",
           "language_variants": [
             {
-              "form": "Samudra Hindia",
+              "form": "Gunung Slamet",
+              "native_script": null,
+              "language": "Javanese",
+              "language_code": "jav",
+              "notes": "Javanese oronym"
+            },
+            {
+              "form": "Gunung Slamet",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Lautan Hindi",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
-            },
-            {
-              "form": "Baḥr al-Hind",
-              "native_script": "بحر الهند",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic medieval name (Bahr al-Hind)"
+              "notes": "Indonesian oronym"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Highest mountain of Central Java, rising above Purwokerto.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great ocean bordering the western coast of Sumatra and southern Java.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Second-highest volcano on Java, dominating the watershed between Serayu and Pemali.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Slamet"
         }
       ]
     },
@@ -28416,45 +27804,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Sundanese_people"
         },
         {
-          "name": "Java Sea",
+          "name": "Ciujung River",
           "disambiguation_note": null,
-          "localisation_stem": "Java Sea",
+          "localisation_stem": "Ciujung",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Shallow sea bordering Banten on the north.",
+          "feature_subtype": "river",
+          "relationship": "Major river draining the Banten uplands northward into coastal Banten Bay.",
           "language_variants": [
             {
-              "form": "Laut Jawa",
+              "form": "Walungan Ciujung",
+              "native_script": null,
+              "language": "Sundanese",
+              "language_code": "sun",
+              "notes": "Sundanese hydronym"
+            },
+            {
+              "form": "Sungai Ciujung",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Segara Jawa",
-              "native_script": null,
-              "language": "Javanese",
-              "language_code": "jav",
-              "notes": "Javanese hydronym"
-            },
-            {
-              "form": "Laut Jawa",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "Central maritime highway of the Indonesian archipelago between Java, Sumatra, and Borneo.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Sundanese river basin of western Java.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Shallow sea of the Sunda Shelf.",
-          "source_url": "https://en.wikipedia.org/wiki/Java_Sea"
+          "etymology_notes": "Principal river of Banten flowing from Mount Halimun Salak to the northern coast.",
+          "source_url": "https://en.wikipedia.org/wiki/Ciujung_River"
         },
         {
           "name": "Sunda Strait",
@@ -28592,45 +27973,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Cisadane_River"
         },
         {
-          "name": "Java Sea",
+          "name": "Mount Karang",
           "disambiguation_note": null,
-          "localisation_stem": "Java Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering northern Tangerang.",
+          "localisation_stem": "Karang",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Dominant stratovolcano of western Java rising inland southwest of Tangerang.",
           "language_variants": [
             {
-              "form": "Laut Jawa",
+              "form": "Gunung Karang",
+              "native_script": null,
+              "language": "Sundanese",
+              "language_code": "sun",
+              "notes": "Sundanese oronym"
+            },
+            {
+              "form": "Gunung Karang",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian hydronym"
-            },
-            {
-              "form": "Segara Jawa",
-              "native_script": null,
-              "language": "Javanese",
-              "language_code": "jav",
-              "notes": "Javanese hydronym"
-            },
-            {
-              "form": "Laut Jawa",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay hydronym"
+              "notes": "Indonesian oronym"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "Central maritime highway of the Indonesian archipelago between Java, Sumatra, and Borneo.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate volcanic landmark of western Java.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Shallow sea of the Sunda Shelf.",
-          "source_url": "https://en.wikipedia.org/wiki/Java_Sea"
+          "etymology_notes": "Highest volcanic peak of Banten, sacred in early Sundanese tradition.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Karang"
         }
       ]
     },

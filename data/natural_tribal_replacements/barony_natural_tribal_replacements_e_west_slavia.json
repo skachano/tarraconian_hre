@@ -137,21 +137,21 @@
       "target_baronies_audited": 239,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 717,
-      "unique_replacement_names": 173,
-      "candidates_with_multilingual_variants": 707,
+      "unique_replacement_names": 174,
+      "candidates_with_multilingual_variants": 705,
       "wikipedia_source_attached": 717,
-      "unique_source_urls": 173,
+      "unique_source_urls": 174,
       "candidates_by_category": {
         "choronym": 63,
-        "hydronym": 325,
-        "oronym": 82,
+        "hydronym": 322,
+        "oronym": 85,
         "topographic_feature": 8,
         "tribe": 239
       },
       "baronies_with_category": {
         "has_choronym_candidate": 63,
-        "has_hydronym_candidate": 235,
-        "has_oronym_candidate": 79,
+        "has_hydronym_candidate": 233,
+        "has_oronym_candidate": 80,
         "has_topographic_feature_candidate": 8,
         "has_tribe_candidate": 239
       },
@@ -174,8 +174,8 @@
         "renamed_post_867": 1
       },
       "candidates_by_attestation_basis": {
-        "attested_pre_867": 265,
-        "indigenous_pre_literate": 452
+        "attested_pre_867": 264,
+        "indigenous_pre_literate": 453
       },
       "bookmark_valid_candidates": {
         "867": 717,
@@ -183,7 +183,7 @@
         "1178": 717
       },
       "baronies_with_867_valid_candidate": 239,
-      "unique_localisation_stems": 173
+      "unique_localisation_stems": 174
     }
   },
   "baronies": {
@@ -12639,45 +12639,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Thaya"
         },
         {
-          "name": "Jihlava",
+          "name": "Javořice",
           "disambiguation_note": null,
-          "localisation_stem": "Jihlava",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river draining the highlands north of Telč.",
+          "localisation_stem": "Javořice",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Highest summit of the Moravian highlands rising immediately northwest of Telč.",
           "language_variants": [
             {
-              "form": "Jihlava",
+              "form": "Javořice",
               "native_script": null,
               "language": "Czech",
               "language_code": "ces",
-              "notes": "Standard Czech hydronym."
-            },
-            {
-              "form": "Igel",
-              "native_script": null,
-              "language": "German",
-              "language_code": "deu",
-              "notes": "Historical German form."
-            },
-            {
-              "form": "*Iglava",
-              "native_script": null,
-              "language": "Proto-Slavic",
-              "language_code": "sla-pro",
-              "notes": "Slavic adaptation of Germanic *Igulaha ('hedgehog/muddy river')."
+              "notes": "Czech oronym"
             }
           ],
-          "earliest_attestation_year": 1197,
-          "earliest_attestation_note": "1197 CE (Iglawa in Moravian charters).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous West Slavic highland oronym on the historic Bohemian-Moravian border.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Likely from Germanic *Igulaha ('hedgehog river' or 'leech river'), adapted into Slavic as Jihlava.",
-          "source_url": "https://en.wikipedia.org/wiki/Jihlava_(river)"
+          "etymology_notes": "From Czech javor ('maple tree', Proto-Slavic *javorъ) + suffix -ice ('maple-covered mountain').",
+          "source_url": "https://en.wikipedia.org/wiki/Javo%C5%99ice"
         }
       ]
     },
@@ -16913,52 +16899,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Slovaks"
         },
         {
-          "name": "Nitra",
+          "name": "Vtáčnik",
           "disambiguation_note": null,
-          "localisation_stem": "Nitra",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "River flowing past Bojnice (Bajmóc).",
+          "localisation_stem": "Vtáčnik",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Volcanic mountain range bordering the upper Nitra valley immediately southeast of Bojnice.",
           "language_variants": [
             {
-              "form": "Nitra",
+              "form": "Vtáčnik",
               "native_script": null,
               "language": "Slovak",
               "language_code": "slk",
-              "notes": "Standard Slovak hydronym."
-            },
-            {
-              "form": "Nyitra",
-              "native_script": null,
-              "language": "Hungarian",
-              "language_code": "hun",
-              "notes": "Standard Hungarian hydronym."
-            },
-            {
-              "form": "Neutra",
-              "native_script": null,
-              "language": "German",
-              "language_code": "deu",
-              "notes": "Historical German hydronym."
-            },
-            {
-              "form": "*Nitra",
-              "native_script": null,
-              "language": "Proto-Slavic",
-              "language_code": "sla-pro",
-              "notes": "Slavic adaptation of Old European *Nitra."
+              "notes": "Slovak name of the mountain range"
             }
           ],
-          "earliest_attestation_year": 828,
-          "earliest_attestation_note": "828 CE (Nitrava in the Conversio Bagoariorum et Carantanorum).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Western Carpathian mountain range overlooking the Upper Nitra basin.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Pre-Slavic Old European hydronym *Neitra / *Nitra ('shining/flowing water').",
-          "source_url": "https://en.wikipedia.org/wiki/Nitra_(river)"
+          "etymology_notes": "From Slovak vták ('bird', Proto-Slavic *pъtakъ) + suffix -nik ('bird mountain').",
+          "source_url": "https://en.wikipedia.org/wiki/Vt%C3%A1%C4%8Dnik"
         },
         {
           "name": "Strážov Mountains",
@@ -19258,52 +19223,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Golensizi"
         },
         {
-          "name": "Opava",
+          "name": "Nízký Jeseník",
           "disambiguation_note": null,
-          "localisation_stem": "Opava",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major Sudetic river flowing just north of Hradec nad Moravicí.",
+          "localisation_stem": "Nízký Jeseník",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Broad upland massif flanking the Moravice gorge immediately around Hradec nad Moravicí.",
           "language_variants": [
             {
-              "form": "Opava",
+              "form": "Nízký Jeseník",
               "native_script": null,
               "language": "Czech",
               "language_code": "ces",
-              "notes": "Czech hydronym"
+              "notes": "Czech name meaning 'Low Ash Mountains'"
             },
             {
-              "form": "Opawa",
-              "native_script": null,
-              "language": "Polish",
-              "language_code": "pol",
-              "notes": "Polish hydronym"
-            },
-            {
-              "form": "Oppa",
+              "form": "Niederes Gesenke",
               "native_script": null,
               "language": "German",
               "language_code": "deu",
-              "notes": "German hydronym"
-            },
-            {
-              "form": "Opava",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Medieval Latin hydronym"
+              "notes": "German historical name"
             }
           ],
-          "earliest_attestation_year": 1031,
-          "earliest_attestation_note": "1031 CE — Attested in 11th-century Moravian charters.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Sudetic upland forming the eastern foothills south of Opava.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From an ancient Indo-European or Celtic hydronymic root *apa ('water, river').",
-          "source_url": "https://en.wikipedia.org/wiki/Opava_(river)"
+          "etymology_notes": "From Czech nízký ('low') + Jeseník ('ash-tree mountain', from jasan 'ash tree', Proto-Slavic *asenь).",
+          "source_url": "https://en.wikipedia.org/wiki/N%C3%ADzk%C3%BD_Jesen%C3%ADk"
         },
         {
           "name": "Sudetes",

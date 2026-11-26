@@ -138,19 +138,19 @@
       "candidates_per_barony": 3,
       "total_replacement_candidates": 303,
       "unique_replacement_names": 107,
-      "candidates_with_multilingual_variants": 192,
+      "candidates_with_multilingual_variants": 191,
       "wikipedia_source_attached": 303,
       "unique_source_urls": 107,
       "candidates_by_category": {
         "choronym": 3,
-        "hydronym": 127,
+        "hydronym": 128,
         "oronym": 55,
-        "topographic_feature": 17,
+        "topographic_feature": 16,
         "tribe": 101
       },
       "baronies_with_category": {
         "has_choronym_candidate": 3,
-        "has_hydronym_candidate": 94,
+        "has_hydronym_candidate": 95,
         "has_oronym_candidate": 53,
         "has_topographic_feature_candidate": 16,
         "has_tribe_candidate": 101
@@ -9937,38 +9937,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Khmer_people"
         },
         {
-          "name": "Cà Mau Peninsula",
+          "name": "Gành Hào River",
           "disambiguation_note": null,
-          "localisation_stem": "Cà Mau",
-          "category": "topographic_feature",
-          "feature_subtype": "coastal_feature",
-          "relationship": "Southernmost mangrove peninsula of the Mekong Delta.",
+          "localisation_stem": "Gành Hào",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Coastal delta river flowing across the eastern Cà Mau lowlands past the barony.",
           "language_variants": [
             {
-              "form": "Bán đảo Cà Mau",
+              "form": "Sông Gành Hào",
               "native_script": null,
               "language": "Vietnamese",
               "language_code": "vie",
-              "notes": "Vietnamese name"
-            },
-            {
-              "form": "Tuek Khmau",
-              "native_script": "ទឹកខ្មៅ",
-              "language": "Khmer",
-              "language_code": "khm",
-              "notes": "Khmer name (Tuek Khmau, 'Black Water')"
+              "notes": "Vietnamese hydronym"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "Southernmost mangrove peninsula of the Mekong Delta attested in 17th century CE Khmer and Vietnamese records.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate deltaic waterway of the southern Mekong Delta coast.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Southernmost tip of mainland Vietnam between the South China Sea and the Gulf of Thailand.",
-          "source_url": "https://en.wikipedia.org/wiki/C%C3%A0_Mau_Peninsula"
+          "etymology_notes": "Fifty-five-kilometer tidal river draining the eastern tip of the Mekong Delta into the sea.",
+          "source_url": "https://en.wikipedia.org/wiki/G%C3%A0nh_H%C3%A0o_river"
         },
         {
           "name": "U Minh",

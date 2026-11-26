@@ -137,10 +137,10 @@
       "target_baronies_audited": 46,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 138,
-      "unique_replacement_names": 51,
-      "candidates_with_multilingual_variants": 137,
+      "unique_replacement_names": 49,
+      "candidates_with_multilingual_variants": 135,
       "wikipedia_source_attached": 138,
-      "unique_source_urls": 51,
+      "unique_source_urls": 49,
       "candidates_by_category": {
         "choronym": 3,
         "hydronym": 55,
@@ -150,8 +150,8 @@
       },
       "baronies_with_category": {
         "has_choronym_candidate": 3,
-        "has_hydronym_candidate": 44,
-        "has_oronym_candidate": 31,
+        "has_hydronym_candidate": 43,
+        "has_oronym_candidate": 30,
         "has_topographic_feature_candidate": 1,
         "has_tribe_candidate": 46
       },
@@ -175,7 +175,7 @@
         "1178": 138
       },
       "baronies_with_867_valid_candidate": 46,
-      "unique_localisation_stems": 51
+      "unique_localisation_stems": 49
     }
   },
   "baronies": {
@@ -260,8 +260,8 @@
               "notes": "Classical oronym attested in the Shiji"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "c. 100 BCE (Attested in the Shiji in connection with Han worship of Wuyi Jun)",
+          "earliest_attestation_year": -110,
+          "earliest_attestation_note": "Worshipped as a sacred mountain by Emperor Wu of Han following the conquest of Minyue (c. 110 BCE, Shiji).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -294,8 +294,8 @@
               "notes": "Standard Chinese Min Jiang"
             }
           ],
-          "earliest_attestation_year": -200,
-          "earliest_attestation_note": "c. 200 BCE (Named after the ancient Min region and Minyue people of Fujian)",
+          "earliest_attestation_year": -202,
+          "earliest_attestation_note": "Named after the Minyue state and people attested in Han-dynasty records (202 BCE) across northern and coastal Fujian.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -388,8 +388,8 @@
               "notes": "Standard Chinese Min Jiang"
             }
           ],
-          "earliest_attestation_year": -200,
-          "earliest_attestation_note": "c. 200 BCE (Named after the ancient Min region and Minyue people of Fujian)",
+          "earliest_attestation_year": -202,
+          "earliest_attestation_note": "Named after the Minyue state and people attested in Han-dynasty records (202 BCE) across northern and coastal Fujian.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -422,8 +422,8 @@
               "notes": "Classical oronym attested in the Shiji"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "c. 100 BCE (Attested in the Shiji in connection with Han worship of Wuyi Jun)",
+          "earliest_attestation_year": -110,
+          "earliest_attestation_note": "Worshipped as a sacred mountain by Emperor Wu of Han following the conquest of Minyue (c. 110 BCE, Shiji).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -550,8 +550,8 @@
               "notes": "Classical oronym attested in the Shiji"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "c. 100 BCE (Attested in the Shiji in connection with Han worship of Wuyi Jun)",
+          "earliest_attestation_year": -110,
+          "earliest_attestation_note": "Worshipped as a sacred mountain by Emperor Wu of Han following the conquest of Minyue (c. 110 BCE, Shiji).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -644,8 +644,8 @@
               "notes": "Standard Chinese Min Jiang"
             }
           ],
-          "earliest_attestation_year": -200,
-          "earliest_attestation_note": "c. 200 BCE (Named after the ancient Min region and Minyue people of Fujian)",
+          "earliest_attestation_year": -202,
+          "earliest_attestation_note": "Named after the Minyue state and people attested in Han-dynasty records (202 BCE) across northern and coastal Fujian.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -806,8 +806,8 @@
               "notes": "Classical oronym attested in the Shiji"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "c. 100 BCE (Attested in the Shiji in connection with Han worship of Wuyi Jun)",
+          "earliest_attestation_year": -110,
+          "earliest_attestation_note": "Worshipped as a sacred mountain by Emperor Wu of Han following the conquest of Minyue (c. 110 BCE, Shiji).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -900,8 +900,8 @@
               "notes": "Classical oronym attested in the Shiji"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "c. 100 BCE (Attested in the Shiji in connection with Han worship of Wuyi Jun)",
+          "earliest_attestation_year": -110,
+          "earliest_attestation_note": "Worshipped as a sacred mountain by Emperor Wu of Han following the conquest of Minyue (c. 110 BCE, Shiji).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -1062,8 +1062,8 @@
               "notes": "Standard Chinese Min Jiang"
             }
           ],
-          "earliest_attestation_year": -200,
-          "earliest_attestation_note": "c. 200 BCE (Named after the ancient Min region and Minyue people of Fujian)",
+          "earliest_attestation_year": -202,
+          "earliest_attestation_note": "Named after the Minyue state and people attested in Han-dynasty records (202 BCE) across northern and coastal Fujian.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -1673,38 +1673,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mount_Taimu"
         },
         {
-          "name": "East China Sea",
-          "disambiguation_note": null,
-          "localisation_stem": "East China Sea",
+          "name": "Min River",
+          "disambiguation_note": "Fujian",
+          "localisation_stem": "Min",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering the Ningde archipelago and bays.",
+          "feature_subtype": "river",
+          "relationship": "Primary trunk river of coastal Fujian south of the Ningde-Sanduao littoral, whose ancient Minyue name defines the province.",
           "language_variants": [
             {
-              "form": "Dōnghǎi",
-              "native_script": "東海",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Classical Chinese Donghai (Eastern Sea)"
-            },
-            {
-              "form": "Dōng Hǎi",
-              "native_script": "东海",
+              "form": "Min Jiang",
+              "native_script": null,
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Standard Chinese Donghai"
+              "notes": "Mandarin Pinyin; Min retains the ancient Yue/Minyue ethnonym."
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 300 BCE (Attested in Warring States and Han texts as Donghai)",
+          "earliest_attestation_year": -202,
+          "earliest_attestation_note": "Named after the Minyue state and people attested in Han-dynasty records (202 BCE) across northern and coastal Fujian.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea bordering Zhejiang and northern Fujian.",
-          "source_url": "https://en.wikipedia.org/wiki/East_China_Sea"
+          "etymology_notes": "Preserves the ancient Min ethnonym of the Minyue inhabitants of Fujian.",
+          "source_url": "https://en.wikipedia.org/wiki/Min_River_(Fujian)"
         }
       ]
     },
@@ -1801,38 +1794,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mount_Taimu"
         },
         {
-          "name": "East China Sea",
+          "name": "Wuyi Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "East China Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea into which the Fu'an Baima-Jiaoxi estuary opens.",
+          "localisation_stem": "Wuyi",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Major granite-sandstone mountain massif bounding northern Fujian inland west of the Funing highlands.",
           "language_variants": [
             {
-              "form": "Dōnghǎi",
-              "native_script": "東海",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Classical Chinese Donghai (Eastern Sea)"
-            },
-            {
-              "form": "Dōng Hǎi",
-              "native_script": "东海",
+              "form": "Wuyi Shan",
+              "native_script": null,
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Standard Chinese Donghai"
+              "notes": "Classical Chinese Wuyi Mountains, venerated since the Han dynasty."
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 300 BCE (Attested in Warring States and Han texts as Donghai)",
+          "earliest_attestation_year": -110,
+          "earliest_attestation_note": "Worshipped as a sacred mountain by Emperor Wu of Han following the conquest of Minyue (c. 110 BCE, Shiji).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea bordering Zhejiang and northern Fujian.",
-          "source_url": "https://en.wikipedia.org/wiki/East_China_Sea"
+          "etymology_notes": "Ancient Han and Minyue sacred mountain name in northern Fujian.",
+          "source_url": "https://en.wikipedia.org/wiki/Wuyi_Mountains"
         }
       ]
     },
@@ -3453,8 +3439,8 @@
               "notes": "Classical oronym attested in the Shiji"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "c. 100 BCE (Attested in the Shiji in connection with Han worship of Wuyi Jun)",
+          "earliest_attestation_year": -110,
+          "earliest_attestation_note": "Worshipped as a sacred mountain by Emperor Wu of Han following the conquest of Minyue (c. 110 BCE, Shiji).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -3871,8 +3857,8 @@
               "notes": "Classical oronym attested in the Shiji"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "c. 100 BCE (Attested in the Shiji in connection with Han worship of Wuyi Jun)",
+          "earliest_attestation_year": -110,
+          "earliest_attestation_note": "Worshipped as a sacred mountain by Emperor Wu of Han following the conquest of Minyue (c. 110 BCE, Shiji).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -4127,8 +4113,8 @@
               "notes": "Classical oronym attested in the Shiji"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "c. 100 BCE (Attested in the Shiji in connection with Han worship of Wuyi Jun)",
+          "earliest_attestation_year": -110,
+          "earliest_attestation_note": "Worshipped as a sacred mountain by Emperor Wu of Han following the conquest of Minyue (c. 110 BCE, Shiji).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -5023,8 +5009,8 @@
               "notes": "Classical oronym attested in the Shiji"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "c. 100 BCE (Attested in the Shiji in connection with Han worship of Wuyi Jun)",
+          "earliest_attestation_year": -110,
+          "earliest_attestation_note": "Worshipped as a sacred mountain by Emperor Wu of Han following the conquest of Minyue (c. 110 BCE, Shiji).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -5151,8 +5137,8 @@
               "notes": "Classical oronym attested in the Shiji"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "c. 100 BCE (Attested in the Shiji in connection with Han worship of Wuyi Jun)",
+          "earliest_attestation_year": -110,
+          "earliest_attestation_note": "Worshipped as a sacred mountain by Emperor Wu of Han following the conquest of Minyue (c. 110 BCE, Shiji).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -5769,38 +5755,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yuan_River"
         },
         {
-          "name": "Wuling Mountains",
+          "name": "Dongting Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Wuling",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Mountain range rising west of Taoyuan.",
+          "localisation_stem": "Dongting",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Large flood-basin lake into which the Yuan River drains immediately east of Taoyuan and Langzhou.",
           "language_variants": [
             {
-              "form": "Wǔlíng Shān",
-              "native_script": "武陵山",
+              "form": "Dòngtíng Hú",
+              "native_script": "洞庭湖",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Standard Chinese Wuling Shan"
+              "notes": "Standard Chinese Dongting Hu"
             },
             {
-              "form": "Wǔlíng",
-              "native_script": "武陵",
+              "form": "Dòngtíng",
+              "native_script": "洞庭",
               "language": "Literary Chinese",
               "language_code": "lzh",
-              "notes": "Classical Han-era commandery and mountain name"
+              "notes": "Classical name attested in the Chuci and Zhuangzi"
             }
           ],
-          "earliest_attestation_year": -202,
-          "earliest_attestation_note": "2nd century BCE (associated with Han-era Wuling Commandery)",
+          "earliest_attestation_year": -300,
+          "earliest_attestation_note": "c. 300 BCE (Attested in the Chuci and Zhanguo Ce)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Rugged karst mountain range of northwestern Hunan and eastern Guizhou.",
-          "source_url": "https://en.wikipedia.org/wiki/Wuling_Mountains"
+          "etymology_notes": "Great flood-basin lake of northern Hunan receiving the Xiang, Zi, Yuan, and Li rivers.",
+          "source_url": "https://en.wikipedia.org/wiki/Dongting_Lake"
         }
       ]
     },

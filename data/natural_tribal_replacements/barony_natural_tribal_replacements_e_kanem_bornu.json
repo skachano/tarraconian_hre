@@ -138,19 +138,19 @@
       "candidates_per_barony": 3,
       "total_replacement_candidates": 510,
       "unique_replacement_names": 96,
-      "candidates_with_multilingual_variants": 222,
+      "candidates_with_multilingual_variants": 224,
       "wikipedia_source_attached": 510,
       "unique_source_urls": 96,
       "candidates_by_category": {
         "choronym": 35,
-        "hydronym": 201,
-        "oronym": 78,
+        "hydronym": 202,
+        "oronym": 77,
         "topographic_feature": 26,
         "tribe": 170
       },
       "baronies_with_category": {
         "has_choronym_candidate": 35,
-        "has_hydronym_candidate": 135,
+        "has_hydronym_candidate": 136,
         "has_oronym_candidate": 64,
         "has_topographic_feature_candidate": 26,
         "has_tribe_candidate": 170
@@ -162,6 +162,8 @@
         "grc",
         "hau",
         "kau",
+        "mnk",
+        "yor",
         "zag"
       ],
       "anachronism_type_counts": {
@@ -173,8 +175,8 @@
       },
       "candidates_by_attestation_basis": {
         "attested_867_to_1066": 4,
-        "attested_pre_867": 110,
-        "indigenous_pre_literate": 396
+        "attested_pre_867": 119,
+        "indigenous_pre_literate": 387
       },
       "bookmark_valid_candidates": {
         "867": 506,
@@ -238,31 +240,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Berti_people"
         },
         {
-          "name": "Tagabo Hills",
+          "name": "Wadi al-Malik",
           "disambiguation_note": null,
-          "localisation_stem": "Tagabo",
-          "category": "oronym",
-          "feature_subtype": "hill",
-          "relationship": "Hill range in the Dar al-Rih area.",
+          "localisation_stem": "Wadi al-Malik",
+          "category": "hydronym",
+          "feature_subtype": "stream",
+          "relationship": "Major extinct river valley running northeast from northern Darfur toward the Nile.",
           "language_variants": [
             {
-              "form": "Tilāl Tāghābū",
-              "native_script": "تلال تاغابو",
+              "form": "Wādī al-Malik",
+              "native_script": "وادي الملك",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Regional Arabic name for the hills of northern Darfur"
+              "notes": "Arabic name (Wadi el-Milk)"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "Pre-1700 CE (Berti and Zaghawa highland settlement)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -2000,
+          "earliest_attestation_note": "Holocene palaeochannel running from North Kordofan and eastern Darfur to the Nile bend.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Sandstone and volcanic hill range in North Darfur.",
-          "source_url": "https://en.wikipedia.org/wiki/Tagabo_Hills"
+          "etymology_notes": "Major extinct river valley stretching 560 km northeast from Darfur/Kordofan toward the Nile.",
+          "source_url": "https://en.wikipedia.org/wiki/Wadi_al-Malik"
         },
         {
           "name": "Meidob Hills",
@@ -687,31 +689,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Zaghawa_people"
         },
         {
-          "name": "Tagabo Hills",
+          "name": "Ennedi Plateau",
           "disambiguation_note": null,
-          "localisation_stem": "Tagabo",
+          "localisation_stem": "Ennedi",
           "category": "oronym",
-          "feature_subtype": "hill",
-          "relationship": "Hill range in the Teiga Plateau area.",
+          "feature_subtype": "plateau",
+          "relationship": "Sandstone Saharan massif rising immediately northwest of the Teiga Plateau.",
           "language_variants": [
             {
-              "form": "Tilāl Tāghābū",
-              "native_script": "تلال تاغابو",
+              "form": "Haḍabat Innīdī",
+              "native_script": "هضبة إنيدي",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Regional Arabic name for the hills of northern Darfur"
+              "notes": "Regional Arabic name"
+            },
+            {
+              "form": "Massif de l'Ennedi",
+              "native_script": null,
+              "language": "French",
+              "language_code": "fra",
+              "notes": "Established Chad French name"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "Pre-1700 CE (Berti and Zaghawa highland settlement)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -4000,
+          "earliest_attestation_note": "c. 4000 BCE (Neolithic rock art of the Ennedi gueltas)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Sandstone and volcanic hill range in North Darfur.",
-          "source_url": "https://en.wikipedia.org/wiki/Tagabo_Hills"
+          "etymology_notes": "Sandstone massif in northeastern Chad north of Wadai and Darfur.",
+          "source_url": "https://en.wikipedia.org/wiki/Ennedi_Plateau"
         },
         {
           "name": "Meidob Hills",
@@ -1941,9 +1950,9 @@
               "notes": "Arabic 'Valley of the King', paleochannel across northern Kordofan"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "Pre-1700 CE (caravan route between Kordofan and the Nile Bend)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -2000,
+          "earliest_attestation_note": "Holocene palaeochannel running from North Kordofan and eastern Darfur to the Nile bend.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -2269,9 +2278,9 @@
               "notes": "Arabic 'Valley of the King', paleochannel across northern Kordofan"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "Pre-1700 CE (caravan route between Kordofan and the Nile Bend)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -2000,
+          "earliest_attestation_note": "Holocene palaeochannel running from North Kordofan and eastern Darfur to the Nile bend.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -2490,9 +2499,9 @@
               "notes": "Arabic 'Valley of the King', paleochannel across northern Kordofan"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "Pre-1700 CE (caravan route between Kordofan and the Nile Bend)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -2000,
+          "earliest_attestation_note": "Holocene palaeochannel running from North Kordofan and eastern Darfur to the Nile bend.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -2570,9 +2579,9 @@
               "notes": "Arabic 'Valley of the King', paleochannel across northern Kordofan"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "Pre-1700 CE (caravan route between Kordofan and the Nile Bend)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -2000,
+          "earliest_attestation_note": "Holocene palaeochannel running from North Kordofan and eastern Darfur to the Nile bend.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -3858,38 +3867,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Zaghawa_people"
         },
         {
-          "name": "Bahr el-Ghazal",
-          "disambiguation_note": "wadi in Chad",
-          "localisation_stem": "Bahr el-Ghazal",
+          "name": "Lake Fitri",
+          "disambiguation_note": null,
+          "localisation_stem": "Fitri",
           "category": "hydronym",
-          "feature_subtype": "stream",
-          "relationship": "Local watercourse draining the Wagna area.",
+          "feature_subtype": "lake",
+          "relationship": "Shallow seasonal lake located in central Chad southeast of Wagna.",
           "language_variants": [
             {
-              "form": "Baḥr al-Ghazāl",
-              "native_script": "بحر الغزال",
+              "form": "Buḥayrat Fītrī",
+              "native_script": "بحيرة فيتري",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic 'River of the Gazelles'"
+              "notes": "Regional Arabic name"
             },
             {
-              "form": "Soro",
+              "form": "Lac Fitri",
               "native_script": null,
-              "language": "Kanuri",
-              "language_code": "kau",
-              "notes": "Kanembu/Kanuri name for the dry channel"
+              "language": "French",
+              "language_code": "fra",
+              "notes": "Established Chad French name"
             }
           ],
-          "earliest_attestation_year": 1100,
-          "earliest_attestation_note": "Medieval CE (paleochannel linking Lake Chad to the Bodélé Depression)",
+          "earliest_attestation_year": 1400,
+          "earliest_attestation_note": "15th century CE (Bulala and Yao kingdom centered on Lake Fitri)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Dry paleoriver channel running northeast from Lake Chad into the Bodélé.",
-          "source_url": "https://en.wikipedia.org/wiki/Bahr_el-Ghazal_(wadi_in_Chad)"
+          "etymology_notes": "Shallow endorheic lake in central Chad fed by the Batha River.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Fitri"
         },
         {
           "name": "Bodélé Depression",
@@ -5376,38 +5385,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Masalit",
+          "name": "Fur",
           "disambiguation_note": null,
-          "localisation_stem": "Masalit",
+          "localisation_stem": "Fur",
           "category": "tribe",
           "feature_subtype": "nilo_saharan_people",
-          "relationship": "Indigenous people historically inhabiting the Kabkabiya region.",
+          "relationship": "Indigenous Nilo-Saharan people inhabiting the Jebel Marra highlands around Kabkabiya.",
           "language_variants": [
             {
-              "form": "Masālīt",
-              "native_script": "مساليت",
+              "form": "Fūrāwa",
+              "native_script": "فوراوة",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Regional Arabic ethnonym in western Darfur and Wadai"
-            },
-            {
-              "form": "Massalit",
-              "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established Chad French spelling"
+              "notes": "Arabic ethnonym for the Fur people of Darfur; also 'For' — Transliterated regional Arabic form."
             }
           ],
-          "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "17th century CE (Darfur-Wadai borderland traditions)",
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE (Keira Sultanate of Darfur oral and Arabic chronicles)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Maban-speaking people of western Darfur and eastern Chad (endonym Masara).",
-          "source_url": "https://en.wikipedia.org/wiki/Masalit_people"
+          "etymology_notes": "Endonym Fora; gave their name to Dar Fur ('home of the Fur').",
+          "source_url": "https://en.wikipedia.org/wiki/Fur_people"
         },
         {
           "name": "Deriba Caldera",
@@ -5902,9 +5904,9 @@
               "notes": "Arabic 'Valley of the King', paleochannel across northern Kordofan"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "Pre-1700 CE (caravan route between Kordofan and the Nile Bend)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -2000,
+          "earliest_attestation_note": "Holocene palaeochannel running from North Kordofan and eastern Darfur to the Nile bend.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -6257,9 +6259,9 @@
               "notes": "Arabic 'Valley of the King', paleochannel across northern Kordofan"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "Pre-1700 CE (caravan route between Kordofan and the Nile Bend)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -2000,
+          "earliest_attestation_note": "Holocene palaeochannel running from North Kordofan and eastern Darfur to the Nile bend.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -7082,31 +7084,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Hadejia-Nguru_wetlands"
         },
         {
-          "name": "Gongola River",
+          "name": "Yobe River",
           "disambiguation_note": null,
-          "localisation_stem": "Gongola",
+          "localisation_stem": "Yobe",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Fika area.",
+          "relationship": "Major river draining northern Borno and Yobe northeastward toward Lake Chad.",
           "language_variants": [
             {
-              "form": "Kogin Gongola",
+              "form": "Komadugu Yobe",
               "native_script": null,
-              "language": "Hausa",
-              "language_code": "hau",
-              "notes": "Hausa kogi ('river') + Gongola"
+              "language": "Kanuri",
+              "language_code": "kau",
+              "notes": "Kanuri 'River of Yobe', heartland river of Bornu"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "Pre-1700 CE (longest tributary of the Benue River)",
+          "earliest_attestation_year": 1470,
+          "earliest_attestation_note": "c. 1470 CE (foundation of Ngazargamu on the Komadugu Yobe)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Principal northern tributary of the Benue flowing through Bauchi, Gombe, and Fika.",
-          "source_url": "https://en.wikipedia.org/wiki/Gongola_River"
+          "etymology_notes": "Kanuri komadugu ('river') + Yobe; flows eastward into Lake Chad.",
+          "source_url": "https://en.wikipedia.org/wiki/Yobe_River"
         }
       ]
     },
@@ -7169,31 +7171,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Ngizim_people"
         },
         {
-          "name": "Gongola River",
+          "name": "Benue River",
           "disambiguation_note": null,
-          "localisation_stem": "Gongola",
+          "localisation_stem": "Benue",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Gombe area.",
+          "relationship": "Great West African river receiving the Gongola south of Gombe.",
           "language_variants": [
             {
-              "form": "Kogin Gongola",
+              "form": "Bénoué",
               "native_script": null,
-              "language": "Hausa",
-              "language_code": "hau",
-              "notes": "Hausa kogi ('river') + Gongola"
+              "language": "French",
+              "language_code": "fra",
+              "notes": "Established French orthography"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "Pre-1700 CE (longest tributary of the Benue River)",
+          "earliest_attestation_year": 1350,
+          "earliest_attestation_note": "14th century CE (Kwararafa/Jukun riverine heartland)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Principal northern tributary of the Benue flowing through Bauchi, Gombe, and Fika.",
-          "source_url": "https://en.wikipedia.org/wiki/Gongola_River"
+          "etymology_notes": "Major eastern tributary of the Niger River joining at Lokoja.",
+          "source_url": "https://en.wikipedia.org/wiki/Benue_River"
         },
         {
           "name": "Komadugu Gana River",
@@ -7517,31 +7519,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Gongola_River"
         },
         {
-          "name": "Biu Plateau",
+          "name": "Mandara Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Biu",
+          "localisation_stem": "Mandara Mountains",
           "category": "oronym",
-          "feature_subtype": "plateau",
-          "relationship": "Local plateau in the Galaga area.",
+          "feature_subtype": "mountain_range",
+          "relationship": "Volcanic mountain range rising along the southeastern Borno borderlands near Galaga.",
           "language_variants": [
             {
-              "form": "Tsaunin Biu",
+              "form": "Monts Mandara",
+              "native_script": null,
+              "language": "French",
+              "language_code": "fra",
+              "notes": "Established Cameroon French name"
+            },
+            {
+              "form": "Tsauni Mandara",
               "native_script": null,
               "language": "Hausa",
               "language_code": "hau",
-              "notes": "Hausa regional highland name"
+              "notes": "Hausa regional reference"
             }
           ],
           "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "Pre-1700 CE (volcanic plateau of the Babur-Bura and Marghi)",
+          "earliest_attestation_note": "c. 1500 CE (Wandala/Mandara highland state)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Basalt volcanic plateau in southern Bornu between the Gongola and Ngadda basins.",
-          "source_url": "https://en.wikipedia.org/wiki/Biu_Plateau"
+          "etymology_notes": "Volcanic mountain range along the northern Nigeria-Cameroon border.",
+          "source_url": "https://en.wikipedia.org/wiki/Mandara_Mountains"
         }
       ]
     },
@@ -8087,31 +8096,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Dala_Hill"
         },
         {
-          "name": "Hadejia River",
+          "name": "Yobe River",
           "disambiguation_note": null,
-          "localisation_stem": "Hadejia",
+          "localisation_stem": "Yobe",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Kano area.",
+          "relationship": "Major river system fed by the Hadejia and Jama'are channels east of Kano.",
           "language_variants": [
             {
-              "form": "Kogin Hadejia",
+              "form": "Komadugu Yobe",
               "native_script": null,
-              "language": "Hausa",
-              "language_code": "hau",
-              "notes": "Hausa kogi ('river') + Hadejia"
+              "language": "Kanuri",
+              "language_code": "kau",
+              "notes": "Kanuri 'River of Yobe', heartland river of Bornu"
             }
           ],
-          "earliest_attestation_year": 1400,
-          "earliest_attestation_note": "Pre-1700 CE (major river of eastern Kano and Hadejia)",
+          "earliest_attestation_year": 1470,
+          "earliest_attestation_note": "c. 1470 CE (foundation of Ngazargamu on the Komadugu Yobe)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river of northern Hausaland forming the Komadugu Yobe.",
-          "source_url": "https://en.wikipedia.org/wiki/Hadejia_River"
+          "etymology_notes": "Kanuri komadugu ('river') + Yobe; flows eastward into Lake Chad.",
+          "source_url": "https://en.wikipedia.org/wiki/Yobe_River"
         }
       ]
     },
@@ -10267,31 +10276,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ka_River"
         },
         {
-          "name": "Sokoto River",
+          "name": "Niger River",
           "disambiguation_note": null,
-          "localisation_stem": "Sokoto",
+          "localisation_stem": "Niger",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Dutsi area.",
+          "relationship": "Great West African river receiving the Sokoto-Rima system west of Dutsi.",
           "language_variants": [
             {
-              "form": "Kogin Sakkwato",
+              "form": "Kwara",
               "native_script": null,
-              "language": "Hausa",
-              "language_code": "hau",
-              "notes": "Hausa kogi ('river') + Sakkwato"
+              "language": "Yoruba",
+              "language_code": "yor",
+              "notes": "Regional lower Niger name"
+            },
+            {
+              "form": "Joliba",
+              "native_script": null,
+              "language": "Mandinka",
+              "language_code": "mnk",
+              "notes": "Upper Niger Mandinka name"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "Pre-1700 CE (Kebbi and Zamfara river valley)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -450,
+          "earliest_attestation_note": "c. 450 BCE possible classical reference in Herodotus; 1352 CE Ibn Battuta.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major tributary of the Niger River flowing through Kebbi and Zamfara.",
-          "source_url": "https://en.wikipedia.org/wiki/Sokoto_River"
+          "etymology_notes": "Great river of West Africa bordering eastern Borgu.",
+          "source_url": "https://en.wikipedia.org/wiki/Niger_River"
         }
       ]
     },
@@ -10347,31 +10363,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Dakarkari_people"
         },
         {
-          "name": "Sokoto River",
+          "name": "Kaduna River",
           "disambiguation_note": null,
-          "localisation_stem": "Sokoto",
+          "localisation_stem": "Kaduna",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Anka area.",
+          "relationship": "Major Niger tributary draining the savanna plateau southeast of Anka.",
           "language_variants": [
             {
-              "form": "Kogin Sakkwato",
+              "form": "Lavun",
               "native_script": null,
-              "language": "Hausa",
-              "language_code": "hau",
-              "notes": "Hausa kogi ('river') + Sakkwato"
+              "language": "Yoruba",
+              "language_code": "yor",
+              "notes": "Regional middle-belt river reference"
             }
           ],
           "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "Pre-1700 CE (Kebbi and Zamfara river valley)",
+          "earliest_attestation_note": "Pre-1700 CE (major tributary of the Niger through Zazzau)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major tributary of the Niger River flowing through Kebbi and Zamfara.",
-          "source_url": "https://en.wikipedia.org/wiki/Sokoto_River"
+          "etymology_notes": "Major northern tributary of the Niger River flowing through Nupeland.",
+          "source_url": "https://en.wikipedia.org/wiki/Kaduna_River"
         },
         {
           "name": "Zamfara River",

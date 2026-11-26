@@ -137,22 +137,22 @@
       "target_baronies_audited": 262,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 786,
-      "unique_replacement_names": 137,
-      "candidates_with_multilingual_variants": 786,
+      "unique_replacement_names": 140,
+      "candidates_with_multilingual_variants": 783,
       "wikipedia_source_attached": 786,
-      "unique_source_urls": 137,
+      "unique_source_urls": 140,
       "candidates_by_category": {
-        "choronym": 81,
-        "hydronym": 285,
-        "oronym": 135,
-        "topographic_feature": 23,
-        "tribe": 262
+        "choronym": 88,
+        "hydronym": 259,
+        "oronym": 145,
+        "topographic_feature": 30,
+        "tribe": 264
       },
       "baronies_with_category": {
-        "has_choronym_candidate": 79,
-        "has_hydronym_candidate": 243,
-        "has_oronym_candidate": 130,
-        "has_topographic_feature_candidate": 22,
+        "has_choronym_candidate": 85,
+        "has_hydronym_candidate": 229,
+        "has_oronym_candidate": 138,
+        "has_topographic_feature_candidate": 27,
         "has_tribe_candidate": 262
       },
       "unique_language_codes": [
@@ -164,6 +164,7 @@
         "kbd",
         "kir",
         "lat",
+        "mon",
         "oss",
         "sog",
         "tgk",
@@ -182,8 +183,8 @@
       },
       "candidates_by_attestation_basis": {
         "attested_867_to_1066": 14,
-        "attested_pre_867": 509,
-        "indigenous_pre_literate": 263
+        "attested_pre_867": 499,
+        "indigenous_pre_literate": 273
       },
       "bookmark_valid_candidates": {
         "867": 772,
@@ -191,7 +192,7 @@
         "1178": 786
       },
       "baronies_with_867_valid_candidate": 262,
-      "unique_localisation_stems": 134
+      "unique_localisation_stems": 137
     }
   },
   "baronies": {
@@ -1034,45 +1035,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Xiongnu"
         },
         {
-          "name": "Lop Nur",
+          "name": "Kumtag Desert",
           "disambiguation_note": null,
-          "localisation_stem": "Lop Nur",
-          "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Terminal salt lake of the eastern Tarim Basin.",
+          "localisation_stem": "Kumtag",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Sand desert lying directly west of the Nanhu oasis toward Lop Nur.",
           "language_variants": [
             {
-              "form": "Lopnur",
-              "native_script": "لوپنۇر",
+              "form": "Qumtagh Qumluqi",
+              "native_script": "قۇمتاغ قۇملۇقى",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Modern Uyghur name"
+              "notes": "Uyghur name ('Sand Mountain')"
             },
             {
-              "form": "Luóbù Pō",
-              "native_script": "羅布泊",
+              "form": "Kùmǔtǎgé Shāmò",
+              "native_script": "庫姆塔格沙漠",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name (Luóbù Pō; ancient Puchang Hai)"
+              "notes": "Chinese name"
             },
             {
-              "form": "Lūp Nūr",
-              "native_script": "لوپ نور",
+              "form": "Qūm-Tāgh",
+              "native_script": "قوم‌تاغ",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian geographical rendering"
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": -120,
-          "earliest_attestation_note": "Attested in Han Chinese chronicles (Yan Ze / Puchang Hai, 2nd century BCE) and Marco Polo (Lop).",
+          "earliest_attestation_year": -100,
+          "earliest_attestation_note": "1st century BCE (eastern edge attested as Bailongdui in Han records west of Yumen)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Historic terminal salt lake of the Tarim and Qarqan rivers in the eastern Tarim Basin; Mongolic nuur ('lake').",
-          "source_url": "https://en.wikipedia.org/wiki/Lop_Nur"
+          "etymology_notes": "From Turkic qum ('sand') and tağ ('mountain'); desert east of Lop Nur.",
+          "source_url": "https://en.wikipedia.org/wiki/Kumtag_Desert"
         },
         {
           "name": "Shule River",
@@ -1190,45 +1191,52 @@
           "source_url": "https://en.wikipedia.org/wiki/Tocharians"
         },
         {
-          "name": "Bosten Lake",
+          "name": "Tian Shan",
           "disambiguation_note": null,
-          "localisation_stem": "Bosten",
-          "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Large freshwater lake adjacent to Karashar.",
+          "localisation_stem": "Tian Shan",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "High mountain range rising immediately north of the Karashar oasis.",
           "language_variants": [
             {
-              "form": "Baghrash Köli",
-              "native_script": "باغراش كۆلى",
+              "form": "Tengritagh",
+              "native_script": "تەڭرىتاغ",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Uyghur name (Baghrash Köli)"
+              "notes": "Uyghur name (Tengritagh)"
             },
             {
-              "form": "Bósīténg Hú",
-              "native_script": "博斯騰湖",
+              "form": "Tyan-Shan",
+              "native_script": "Тян-Шан",
+              "language": "Kazakh",
+              "language_code": "kaz",
+              "notes": "Kazakh name (Täñir tauy); also 'Tängir taūy' — Kazakh name (Täñir tauy)."
+            },
+            {
+              "form": "Tiān Shān",
+              "native_script": "天山",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name (Bósīténg Hú)"
+              "notes": "Classical Chinese name (Tiānshān, 'Celestial Mountains')"
             },
             {
-              "form": "Daryācheh-ye Būsten",
-              "native_script": "دریاچه بوستن",
+              "form": "Tiyān-Shān",
+              "native_script": "تیان‌شان",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian rendering"
+              "notes": "Persian geographical rendering"
             }
           ],
-          "earliest_attestation_year": 300,
-          "earliest_attestation_note": "4th century CE (Chinese Shui Jing Zhu as Dunhong Hai / Western Sea of Yanqi)",
+          "earliest_attestation_year": -120,
+          "earliest_attestation_note": "Attested in Han Chinese chronicles (Shiji, 2nd century BCE) as Tian Shan.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Largest freshwater lake in the Tarim Basin, fed by the Kaidu River.",
-          "source_url": "https://en.wikipedia.org/wiki/Bosten_Lake"
+          "etymology_notes": "Great mountain system forming the northern rim of the Tarim Basin; Turkic Tengri Tağ / Chinese Tian Shan ('Heavenly Mountains').",
+          "source_url": "https://en.wikipedia.org/wiki/Tian_Shan"
         },
         {
           "name": "Kaidu River",
@@ -1509,45 +1517,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tocharians"
         },
         {
-          "name": "Bosten Lake",
+          "name": "Bayanbulak Grassland",
           "disambiguation_note": null,
-          "localisation_stem": "Bosten",
-          "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Large freshwater lake adjacent to Karashar.",
+          "localisation_stem": "Bayanbulak Grassland",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "High-altitude Tian Shan basin feeding the upper Kaidu River north of Narinkira.",
           "language_variants": [
             {
-              "form": "Baghrash Köli",
-              "native_script": "باغراش كۆلى",
-              "language": "Uyghur",
-              "language_code": "uig",
-              "notes": "Uyghur name (Baghrash Köli)"
+              "form": "Bayanbulag",
+              "native_script": "Баянбулаг",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian name meaning 'Rich Spring'"
             },
             {
-              "form": "Bósīténg Hú",
-              "native_script": "博斯騰湖",
+              "form": "Bāyīnbùlǔkè",
+              "native_script": "巴音布鲁克",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name (Bósīténg Hú)"
-            },
-            {
-              "form": "Daryācheh-ye Būsten",
-              "native_script": "دریاچه بوستن",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian rendering"
+              "notes": "Chinese transcription"
             }
           ],
-          "earliest_attestation_year": 300,
-          "earliest_attestation_note": "4th century CE (Chinese Shui Jing Zhu as Dunhong Hai / Western Sea of Yanqi)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Permanent high-altitude intermontane basin of the upper Kaidu River in the Tian Shan north of Karashar.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Largest freshwater lake in the Tarim Basin, fed by the Kaidu River.",
-          "source_url": "https://en.wikipedia.org/wiki/Bosten_Lake"
+          "etymology_notes": "Mongolic and Turkic bayan bulaq ('abundant spring'), referring to the fertile marshy headwaters of the Kaidu. Onomastic note: Mongolian name meaning 'Rich Spring' ('Bayanbulag').",
+          "source_url": "https://en.wikipedia.org/wiki/Bayanbulak_Grassland"
         },
         {
           "name": "Kaidu River",
@@ -1665,45 +1666,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Tocharians"
         },
         {
-          "name": "Bosten Lake",
+          "name": "Taklamakan Desert",
           "disambiguation_note": null,
-          "localisation_stem": "Bosten",
-          "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Large freshwater lake adjacent to Karashar.",
+          "localisation_stem": "Taklamakan",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Vast sand desert extending south of the Korla oasis.",
           "language_variants": [
             {
-              "form": "Baghrash Köli",
-              "native_script": "باغراش كۆلى",
+              "form": "Teklimakan Qumluqi",
+              "native_script": "تەكلىماكان قۇملۇقى",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Uyghur name (Baghrash Köli)"
+              "notes": "Modern Uyghur name"
             },
             {
-              "form": "Bósīténg Hú",
-              "native_script": "博斯騰湖",
+              "form": "Tǎkèlāmǎgān Shāmò",
+              "native_script": "塔克拉玛干沙漠",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name (Bósīténg Hú)"
+              "notes": "Chinese name"
             },
             {
-              "form": "Daryācheh-ye Būsten",
-              "native_script": "دریاچه بوستن",
+              "form": "Takleh-Makān",
+              "native_script": "تکله‌مکان",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian rendering"
+              "notes": "Persian geographical rendering"
             }
           ],
-          "earliest_attestation_year": 300,
-          "earliest_attestation_note": "4th century CE (Chinese Shui Jing Zhu as Dunhong Hai / Western Sea of Yanqi)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1072,
+          "earliest_attestation_note": "1072 CE (Mahmud al-Kashgari's Dīwān Lughāt al-Turk and medieval Silk Road accounts)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Largest freshwater lake in the Tarim Basin, fed by the Kaidu River.",
-          "source_url": "https://en.wikipedia.org/wiki/Bosten_Lake"
+          "etymology_notes": "Vast sand desert occupying the central Tarim Basin; popular etymology linked to Turkic/Arabic elements.",
+          "source_url": "https://en.wikipedia.org/wiki/Taklamakan_Desert"
         },
         {
           "name": "Kaidu River",
@@ -1821,45 +1822,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Tocharians"
         },
         {
-          "name": "Bosten Lake",
+          "name": "Tarim River",
           "disambiguation_note": null,
-          "localisation_stem": "Bosten",
+          "localisation_stem": "Tarim",
           "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Large freshwater lake feeding the river at Korla.",
+          "feature_subtype": "river",
+          "relationship": "Main trunk river of the Tarim Basin receiving the outflow of the Karashar basin.",
           "language_variants": [
             {
-              "form": "Baghrash Köli",
-              "native_script": "باغراش كۆلى",
+              "form": "Tarim Deryasi",
+              "native_script": "تارىم دەرياسى",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Uyghur name (Baghrash Köli)"
+              "notes": "Modern Uyghur name"
             },
             {
-              "form": "Bósīténg Hú",
-              "native_script": "博斯騰湖",
+              "form": "Tǎlǐmù Hé",
+              "native_script": "塔里木河",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name (Bósīténg Hú)"
+              "notes": "Chinese name (Tǎlǐmù Hé)"
             },
             {
-              "form": "Daryācheh-ye Būsten",
-              "native_script": "دریاچه بوستن",
+              "form": "Tārīm",
+              "native_script": "تاریم",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian rendering"
+              "notes": "Persian geographical rendering"
             }
           ],
-          "earliest_attestation_year": 300,
-          "earliest_attestation_note": "4th century CE (Chinese Shui Jing Zhu as Dunhong Hai / Western Sea of Yanqi)",
+          "earliest_attestation_year": -110,
+          "earliest_attestation_note": "c. 110 BCE (Han dynasty Shiji as Qishi / Yutian River system)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Largest freshwater lake in the Tarim Basin, fed by the Kaidu River.",
-          "source_url": "https://en.wikipedia.org/wiki/Bosten_Lake"
+          "etymology_notes": "Principal endorheic river of the Tarim Basin; Old Turkic tarım ('branch of a river / cultivated land').",
+          "source_url": "https://en.wikipedia.org/wiki/Tarim_River"
         },
         {
           "name": "Tian Shan",
@@ -2514,52 +2515,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Muzat_River"
         },
         {
-          "name": "Tian Shan",
+          "name": "Tarim River",
           "disambiguation_note": null,
-          "localisation_stem": "Tian Shan",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Great mountain range rising immediately north of Kucha.",
+          "localisation_stem": "Tarim",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Main river of the Tarim Basin flowing immediately south of the Shayar oasis.",
           "language_variants": [
             {
-              "form": "Tengritagh",
-              "native_script": "تەڭرىتاغ",
+              "form": "Tarim Deryasi",
+              "native_script": "تارىم دەرياسى",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Uyghur name (Tengritagh)"
+              "notes": "Modern Uyghur name"
             },
             {
-              "form": "Tyan-Shan",
-              "native_script": "Тян-Шан",
-              "language": "Kazakh",
-              "language_code": "kaz",
-              "notes": "Kazakh name (Täñir tauy); also 'Tängir taūy' — Kazakh name (Täñir tauy)."
-            },
-            {
-              "form": "Tiān Shān",
-              "native_script": "天山",
+              "form": "Tǎlǐmù Hé",
+              "native_script": "塔里木河",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Classical Chinese name (Tiānshān, 'Celestial Mountains')"
+              "notes": "Chinese name (Tǎlǐmù Hé)"
             },
             {
-              "form": "Tiyān-Shān",
-              "native_script": "تیان‌شان",
+              "form": "Tārīm",
+              "native_script": "تاریم",
               "language": "Persian",
               "language_code": "fas",
               "notes": "Persian geographical rendering"
             }
           ],
-          "earliest_attestation_year": -120,
-          "earliest_attestation_note": "Attested in Han Chinese chronicles (Shiji, 2nd century BCE) as Tian Shan.",
+          "earliest_attestation_year": -110,
+          "earliest_attestation_note": "c. 110 BCE (Han dynasty Shiji as Qishi / Yutian River system)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great mountain system forming the northern rim of the Tarim Basin; Turkic Tengri Tağ / Chinese Tian Shan ('Heavenly Mountains').",
-          "source_url": "https://en.wikipedia.org/wiki/Tian_Shan"
+          "etymology_notes": "Principal endorheic river of the Tarim Basin; Old Turkic tarım ('branch of a river / cultivated land').",
+          "source_url": "https://en.wikipedia.org/wiki/Tarim_River"
         }
       ]
     },
@@ -3947,45 +3941,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Saka"
         },
         {
-          "name": "Kashgar River",
+          "name": "Taklamakan Desert",
           "disambiguation_note": null,
-          "localisation_stem": "Kashgar",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Principal river watering the Kashgar oasis.",
+          "localisation_stem": "Taklamakan",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Shifting sand desert encroaching on the Yopurga oasis east of Kashgar.",
           "language_variants": [
             {
-              "form": "Qeshqer Deryasi",
-              "native_script": "قەشقەر دەرياسى",
+              "form": "Teklimakan Qumluqi",
+              "native_script": "تەكلىماكان قۇملۇقى",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Uyghur name"
+              "notes": "Modern Uyghur name"
             },
             {
-              "form": "Kāshígá'ěr Hé",
-              "native_script": "喀什噶尔河",
+              "form": "Tǎkèlāmǎgān Shāmò",
+              "native_script": "塔克拉玛干沙漠",
               "language": "Chinese",
               "language_code": "zho",
               "notes": "Chinese name"
             },
             {
-              "form": "Rūd-e Kāshghar",
-              "native_script": "رود کاشغر",
+              "form": "Takleh-Makān",
+              "native_script": "تکله‌مکان",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian rendering"
+              "notes": "Persian geographical rendering"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "c. 100 BCE (Han annals of Shule/Kashgar oasis)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1072,
+          "earliest_attestation_note": "1072 CE (Mahmud al-Kashgari's Dīwān Lughāt al-Turk and medieval Silk Road accounts)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River system (Kyzylsu) rising in the Alay/Pamir mountains and flowing eastward into the Tarim Basin.",
-          "source_url": "https://en.wikipedia.org/wiki/Kashgar_River"
+          "etymology_notes": "Vast sand desert occupying the central Tarim Basin; popular etymology linked to Turkic/Arabic elements.",
+          "source_url": "https://en.wikipedia.org/wiki/Taklamakan_Desert"
         },
         {
           "name": "Pamir Mountains",
@@ -4110,45 +4104,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Saka"
         },
         {
-          "name": "Kashgar River",
+          "name": "Gez River",
           "disambiguation_note": null,
-          "localisation_stem": "Kashgar",
+          "localisation_stem": "Gez",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Principal river watering the Kashgar oasis.",
+          "relationship": "Glacial river descending from the eastern Pamirs past Yengi Xahar.",
           "language_variants": [
             {
-              "form": "Qeshqer Deryasi",
-              "native_script": "قەشقەر دەرياسى",
+              "form": "Gez Deryasi",
+              "native_script": "گەز دەرياسى",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Uyghur name"
+              "notes": "Uyghur name of the Pamir river"
             },
             {
-              "form": "Kāshígá'ěr Hé",
-              "native_script": "喀什噶尔河",
+              "form": "Gàizī Hé",
+              "native_script": "盖孜河",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name"
-            },
-            {
-              "form": "Rūd-e Kāshghar",
-              "native_script": "رود کاشغر",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian rendering"
+              "notes": "Chinese transcription"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "c. 100 BCE (Han annals of Shule/Kashgar oasis)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Permanent glacial river descending from the eastern Pamirs past Yengi Xahar into the Kashgar oasis.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River system (Kyzylsu) rising in the Alay/Pamir mountains and flowing eastward into the Tarim Basin.",
-          "source_url": "https://en.wikipedia.org/wiki/Kashgar_River"
+          "etymology_notes": "Uyghur and Tajik-Pamir hydronym Gez ('tamarisk/gorge').",
+          "source_url": "https://en.wikipedia.org/wiki/Gez_River"
         },
         {
           "name": "Pamir Mountains",
@@ -4273,45 +4260,52 @@
           "source_url": "https://en.wikipedia.org/wiki/Saka"
         },
         {
-          "name": "Kashgar River",
+          "name": "Tian Shan",
           "disambiguation_note": null,
-          "localisation_stem": "Kashgar",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Principal river watering the Kashgar oasis.",
+          "localisation_stem": "Tian Shan",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain system rising along the northern margin of Kona Xahar and Kashgar.",
           "language_variants": [
             {
-              "form": "Qeshqer Deryasi",
-              "native_script": "قەشقەر دەرياسى",
+              "form": "Tengritagh",
+              "native_script": "تەڭرىتاغ",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Uyghur name"
+              "notes": "Uyghur name (Tengritagh)"
             },
             {
-              "form": "Kāshígá'ěr Hé",
-              "native_script": "喀什噶尔河",
+              "form": "Tyan-Shan",
+              "native_script": "Тян-Шан",
+              "language": "Kazakh",
+              "language_code": "kaz",
+              "notes": "Kazakh name (Täñir tauy); also 'Tängir taūy' — Kazakh name (Täñir tauy)."
+            },
+            {
+              "form": "Tiān Shān",
+              "native_script": "天山",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name"
+              "notes": "Classical Chinese name (Tiānshān, 'Celestial Mountains')"
             },
             {
-              "form": "Rūd-e Kāshghar",
-              "native_script": "رود کاشغر",
+              "form": "Tiyān-Shān",
+              "native_script": "تیان‌شان",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian rendering"
+              "notes": "Persian geographical rendering"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "c. 100 BCE (Han annals of Shule/Kashgar oasis)",
+          "earliest_attestation_year": -120,
+          "earliest_attestation_note": "Attested in Han Chinese chronicles (Shiji, 2nd century BCE) as Tian Shan.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River system (Kyzylsu) rising in the Alay/Pamir mountains and flowing eastward into the Tarim Basin.",
-          "source_url": "https://en.wikipedia.org/wiki/Kashgar_River"
+          "etymology_notes": "Great mountain system forming the northern rim of the Tarim Basin; Turkic Tengri Tağ / Chinese Tian Shan ('Heavenly Mountains').",
+          "source_url": "https://en.wikipedia.org/wiki/Tian_Shan"
         },
         {
           "name": "Pamir Mountains",
@@ -5372,45 +5366,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Saka"
         },
         {
-          "name": "Yarkand River",
+          "name": "Tashkurgan River",
           "disambiguation_note": null,
-          "localisation_stem": "Yarkand",
+          "localisation_stem": "Tashkurgan",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major headwater river watering the Yarkand oasis.",
+          "relationship": "Mountain river flowing northeast from the Pamirs into the Yarkand basin south of Yengisar.",
           "language_variants": [
             {
-              "form": "Yeken Deryasi",
-              "native_script": "يەكەن دەرياسى",
+              "form": "Tashqorghan Deryasi",
+              "native_script": "تاشقورغان دەرياسى",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Uyghur name"
+              "notes": "Uyghur name of the Yarkand tributary"
             },
             {
-              "form": "Yè'ěrqiāng Hé",
-              "native_script": "叶尔羌河",
+              "form": "Tǎshíkù'ěrgān Hé",
+              "native_script": "塔什库尔干河",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name"
-            },
-            {
-              "form": "Rūd-e Yārkand",
-              "native_script": "رود یارکند",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian rendering"
+              "notes": "Chinese transcription"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Known in Han-era Chinese and Central Asian sources from the 1st century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Permanent Pamir mountain river flowing northward past Tashkurgan to join the Yarkand River.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major headwater tributary of the Tarim River rising in the Karakoram.",
-          "source_url": "https://en.wikipedia.org/wiki/Yarkand_River"
+          "etymology_notes": "Turkic tash qorghan ('stone fortress'), named for the ancient stone citadel along its course.",
+          "source_url": "https://en.wikipedia.org/wiki/Tashkurgan_River"
         },
         {
           "name": "Karakoram",
@@ -5528,45 +5515,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Saka"
         },
         {
-          "name": "Yarkand River",
+          "name": "Taklamakan Desert",
           "disambiguation_note": null,
-          "localisation_stem": "Yarkand",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major headwater river watering the Yarkand oasis.",
+          "localisation_stem": "Taklamakan",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Great sand desert bordering the Makit oasis immediately to the east.",
           "language_variants": [
             {
-              "form": "Yeken Deryasi",
-              "native_script": "يەكەن دەرياسى",
+              "form": "Teklimakan Qumluqi",
+              "native_script": "تەكلىماكان قۇملۇقى",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Uyghur name"
+              "notes": "Modern Uyghur name"
             },
             {
-              "form": "Yè'ěrqiāng Hé",
-              "native_script": "叶尔羌河",
+              "form": "Tǎkèlāmǎgān Shāmò",
+              "native_script": "塔克拉玛干沙漠",
               "language": "Chinese",
               "language_code": "zho",
               "notes": "Chinese name"
             },
             {
-              "form": "Rūd-e Yārkand",
-              "native_script": "رود یارکند",
+              "form": "Takleh-Makān",
+              "native_script": "تکله‌مکان",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian rendering"
+              "notes": "Persian geographical rendering"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Known in Han-era Chinese and Central Asian sources from the 1st century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1072,
+          "earliest_attestation_note": "1072 CE (Mahmud al-Kashgari's Dīwān Lughāt al-Turk and medieval Silk Road accounts)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major headwater tributary of the Tarim River rising in the Karakoram.",
-          "source_url": "https://en.wikipedia.org/wiki/Yarkand_River"
+          "etymology_notes": "Vast sand desert occupying the central Tarim Basin; popular etymology linked to Turkic/Arabic elements.",
+          "source_url": "https://en.wikipedia.org/wiki/Taklamakan_Desert"
         },
         {
           "name": "Karakoram",
@@ -7088,45 +7075,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Saka"
         },
         {
-          "name": "Keriya River",
+          "name": "Qiemo River",
           "disambiguation_note": null,
-          "localisation_stem": "Keriya",
+          "localisation_stem": "Qiemo",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Principal river watering the Keriya oasis.",
+          "relationship": "Major southern Tarim watercourse flowing east of the Andir oasis.",
           "language_variants": [
             {
-              "form": "Këriye Deryasi",
-              "native_script": "كېرىيە دەرياسى",
+              "form": "Cherchen Deryasi",
+              "native_script": "چەرچەن دەرياسى",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Uyghur name"
+              "notes": "Uyghur name (Cherchen Deryasi)"
             },
             {
-              "form": "Kèlǐyǎ Hé",
-              "native_script": "克里雅河",
+              "form": "Chē'ěrchén Hé",
+              "native_script": "车尔臣河",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese rendering"
+              "notes": "Chinese name (Chē'ěrchén Hé / Qiěmò Hé)"
             },
             {
-              "form": "Rūd-e Keriyā",
-              "native_script": "رود کریا",
+              "form": "Chamchan",
+              "native_script": "چمچن",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian rendering"
+              "notes": "Persian rendering; also 'Charchan' (چرچن) — Persian rendering."
             }
           ],
-          "earliest_attestation_year": 645,
-          "earliest_attestation_note": "7th century CE (Tang accounts of Keriya/Pimo oasis)",
+          "earliest_attestation_year": -100,
+          "earliest_attestation_note": "c. 100 BCE (Han dynasty Book of Han on the Qiemo oasis)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Inland river flowing north from the Kunlun Mountains into the Taklamakan near Dandan Oilik.",
-          "source_url": "https://en.wikipedia.org/wiki/Keriya_River"
+          "etymology_notes": "Major river flowing northeast from the Kunlun/Altyn-Tagh toward Lop Nur.",
+          "source_url": "https://en.wikipedia.org/wiki/Qiemo_River"
         },
         {
           "name": "Kunlun Mountains",
@@ -7244,45 +7231,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Saka"
         },
         {
-          "name": "Keriya River",
+          "name": "Taklamakan Desert",
           "disambiguation_note": null,
-          "localisation_stem": "Keriya",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Principal river watering the Keriya oasis.",
+          "localisation_stem": "Taklamakan",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Great sand desert enveloping the ancient river terminus of Niya.",
           "language_variants": [
             {
-              "form": "Këriye Deryasi",
-              "native_script": "كېرىيە دەرياسى",
+              "form": "Teklimakan Qumluqi",
+              "native_script": "تەكلىماكان قۇملۇقى",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Uyghur name"
+              "notes": "Modern Uyghur name"
             },
             {
-              "form": "Kèlǐyǎ Hé",
-              "native_script": "克里雅河",
+              "form": "Tǎkèlāmǎgān Shāmò",
+              "native_script": "塔克拉玛干沙漠",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese rendering"
+              "notes": "Chinese name"
             },
             {
-              "form": "Rūd-e Keriyā",
-              "native_script": "رود کریا",
+              "form": "Takleh-Makān",
+              "native_script": "تکله‌مکان",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian rendering"
+              "notes": "Persian geographical rendering"
             }
           ],
-          "earliest_attestation_year": 645,
-          "earliest_attestation_note": "7th century CE (Tang accounts of Keriya/Pimo oasis)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1072,
+          "earliest_attestation_note": "1072 CE (Mahmud al-Kashgari's Dīwān Lughāt al-Turk and medieval Silk Road accounts)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Inland river flowing north from the Kunlun Mountains into the Taklamakan near Dandan Oilik.",
-          "source_url": "https://en.wikipedia.org/wiki/Keriya_River"
+          "etymology_notes": "Vast sand desert occupying the central Tarim Basin; popular etymology linked to Turkic/Arabic elements.",
+          "source_url": "https://en.wikipedia.org/wiki/Taklamakan_Desert"
         },
         {
           "name": "Kunlun Mountains",
@@ -8017,45 +8004,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Yuezhi"
         },
         {
-          "name": "Shule River",
+          "name": "Kumtag Desert",
           "disambiguation_note": null,
-          "localisation_stem": "Shule",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Inland river watering the western Hexi-Dunhuang frontier.",
+          "localisation_stem": "Kumtag",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Hyper-arid sand desert bordering Dafang and Dunhuang on the west.",
           "language_variants": [
             {
-              "form": "Shūlēi Hé",
-              "native_script": "疏勒河",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese name (Shūlè Hé)"
-            },
-            {
-              "form": "Sole Deryasi",
-              "native_script": "سولە دەرياسى",
+              "form": "Qumtagh Qumluqi",
+              "native_script": "قۇمتاغ قۇملۇقى",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Uyghur rendering"
+              "notes": "Uyghur name ('Sand Mountain')"
             },
             {
-              "form": "Rūd-e Shūleh",
-              "native_script": "رود شوله",
+              "form": "Kùmǔtǎgé Shāmò",
+              "native_script": "庫姆塔格沙漠",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Chinese name"
+            },
+            {
+              "form": "Qūm-Tāgh",
+              "native_script": "قوم‌تاغ",
               "language": "Persian",
               "language_code": "fas",
               "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": -110,
-          "earliest_attestation_note": "c. 110 BCE (Han dynasty records of the Dunhuang/Hexi river)",
+          "earliest_attestation_year": -100,
+          "earliest_attestation_note": "1st century BCE (eastern edge attested as Bailongdui in Han records west of Yumen)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Inland river of the western Hexi Corridor flowing toward the Kumtag and Lop deserts.",
-          "source_url": "https://en.wikipedia.org/wiki/Shule_River"
+          "etymology_notes": "From Turkic qum ('sand') and tağ ('mountain'); desert east of Lop Nur.",
+          "source_url": "https://en.wikipedia.org/wiki/Kumtag_Desert"
         },
         {
           "name": "Hexi Corridor",
@@ -8478,45 +8465,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Xiongnu"
         },
         {
-          "name": "Kumtag Desert",
+          "name": "Altyn-Tagh",
           "disambiguation_note": null,
-          "localisation_stem": "Kumtag",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Sand desert east of Lop Nur.",
+          "localisation_stem": "Altyn-Tagh",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range framing the southern border of the Lop and Kumtag basin.",
           "language_variants": [
             {
-              "form": "Qumtagh Qumluqi",
-              "native_script": "قۇمتاغ قۇملۇقى",
+              "form": "Altuntagh",
+              "native_script": "ئالتۇنتاغ",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Uyghur name ('Sand Mountain')"
+              "notes": "Uyghur name ('Golden Mountain')"
             },
             {
-              "form": "Kùmǔtǎgé Shāmò",
-              "native_script": "庫姆塔格沙漠",
+              "form": "Ā'ěrjīn Shānmài",
+              "native_script": "阿尔金山脉",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name"
+              "notes": "Chinese name (Ā'ěrjīn Shānmài)"
             },
             {
-              "form": "Qūm-Tāgh",
-              "native_script": "قوم‌تاغ",
+              "form": "Āltīn-Tāgh",
+              "native_script": "آلتین‌تاغ",
               "language": "Persian",
               "language_code": "fas",
               "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "1st century BCE (eastern edge attested as Bailongdui in Han records west of Yumen)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Attested in medieval Turkic and Song-era frontier itineraries (c. 11th century CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Turkic qum ('sand') and tağ ('mountain'); desert east of Lop Nur.",
-          "source_url": "https://en.wikipedia.org/wiki/Kumtag_Desert"
+          "etymology_notes": "Turkic Altun Tağ ('Golden Mountain'), northeastern range of the Kunlun system bordering Charkliq and Lop Nur.",
+          "source_url": "https://en.wikipedia.org/wiki/Altyn-Tagh"
         },
         {
           "name": "Lop Nur",
@@ -9244,45 +9231,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Wusun"
         },
         {
-          "name": "Aksu River",
+          "name": "Yarkand River",
           "disambiguation_note": null,
-          "localisation_stem": "Aksu",
+          "localisation_stem": "Yarkand",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Largest tributary of the Tarim River watering the Aksu oasis.",
+          "relationship": "Major Tarim headwater river flowing directly past the Barchuk oasis.",
           "language_variants": [
             {
-              "form": "Aqsu Deryasi",
-              "native_script": "ئاقسۇ دەرياسى",
+              "form": "Yeken Deryasi",
+              "native_script": "يەكەن دەرياسى",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Uyghur name ('White Water')"
+              "notes": "Uyghur name"
             },
             {
-              "form": "Aqsū",
-              "native_script": "Ақсұ",
-              "language": "Kazakh",
-              "language_code": "kaz",
-              "notes": "Kazakh name"
+              "form": "Yè'ěrqiāng Hé",
+              "native_script": "叶尔羌河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Chinese name"
             },
             {
-              "form": "Āq-Sū",
-              "native_script": "آق‌سو",
+              "form": "Rūd-e Yārkand",
+              "native_script": "رود یارکند",
               "language": "Persian",
               "language_code": "fas",
               "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": 1072,
-          "earliest_attestation_note": "11th century CE (Turkic Aq Su, 'White Water')",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -100,
+          "earliest_attestation_note": "Known in Han-era Chinese and Central Asian sources from the 1st century BCE.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Turkic aq su ('white water'); largest tributary of the Tarim River.",
-          "source_url": "https://en.wikipedia.org/wiki/Aksu_River_(Xinjiang)"
+          "etymology_notes": "Major headwater tributary of the Tarim River rising in the Karakoram.",
+          "source_url": "https://en.wikipedia.org/wiki/Yarkand_River"
         },
         {
           "name": "Jengish Chokusu",
@@ -9393,45 +9380,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Wusun"
         },
         {
-          "name": "Aksu River",
+          "name": "Kashgar River",
           "disambiguation_note": null,
-          "localisation_stem": "Aksu",
+          "localisation_stem": "Kashgar",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Largest tributary of the Tarim River watering the Aksu oasis.",
+          "relationship": "River flowing eastward past Tumshuk toward its confluence with the Yarkand.",
           "language_variants": [
             {
-              "form": "Aqsu Deryasi",
-              "native_script": "ئاقسۇ دەرياسى",
+              "form": "Qeshqer Deryasi",
+              "native_script": "قەشقەر دەرياسى",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Uyghur name ('White Water')"
+              "notes": "Uyghur name"
             },
             {
-              "form": "Aqsū",
-              "native_script": "Ақсұ",
-              "language": "Kazakh",
-              "language_code": "kaz",
-              "notes": "Kazakh name"
+              "form": "Kāshígá'ěr Hé",
+              "native_script": "喀什噶尔河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Chinese name"
             },
             {
-              "form": "Āq-Sū",
-              "native_script": "آق‌سو",
+              "form": "Rūd-e Kāshghar",
+              "native_script": "رود کاشغر",
               "language": "Persian",
               "language_code": "fas",
               "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": 1072,
-          "earliest_attestation_note": "11th century CE (Turkic Aq Su, 'White Water')",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -100,
+          "earliest_attestation_note": "c. 100 BCE (Han annals of Shule/Kashgar oasis)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Turkic aq su ('white water'); largest tributary of the Tarim River.",
-          "source_url": "https://en.wikipedia.org/wiki/Aksu_River_(Xinjiang)"
+          "etymology_notes": "River system (Kyzylsu) rising in the Alay/Pamir mountains and flowing eastward into the Tarim Basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Kashgar_River"
         },
         {
           "name": "Jengish Chokusu",
@@ -9542,45 +9529,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Wusun"
         },
         {
-          "name": "Aksu River",
+          "name": "Toshkan River",
           "disambiguation_note": null,
-          "localisation_stem": "Aksu",
+          "localisation_stem": "Toshkan",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Largest tributary of the Tarim River watering the Aksu oasis.",
+          "relationship": "Principal Tian Shan tributary flowing through Uch Turfan into the Aksu River.",
           "language_variants": [
             {
-              "form": "Aqsu Deryasi",
-              "native_script": "ئاقسۇ دەرياسى",
+              "form": "Toshqan Deryasi",
+              "native_script": "توشقان دەرياسى",
               "language": "Uyghur",
               "language_code": "uig",
-              "notes": "Uyghur name ('White Water')"
+              "notes": "Uyghur name of the Aksu tributary"
             },
             {
-              "form": "Aqsū",
-              "native_script": "Ақсұ",
-              "language": "Kazakh",
-              "language_code": "kaz",
-              "notes": "Kazakh name"
+              "form": "Kakshaal",
+              "native_script": "Какшаал",
+              "language": "Kyrgyz",
+              "language_code": "kir",
+              "notes": "Kyrgyz name of the upper river"
             },
             {
-              "form": "Āq-Sū",
-              "native_script": "آق‌سو",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian rendering"
+              "form": "Tuōshígān Hé",
+              "native_script": "托什干河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Chinese transcription"
             }
           ],
-          "earliest_attestation_year": 1072,
-          "earliest_attestation_note": "11th century CE (Turkic Aq Su, 'White Water')",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Permanent major Tian Shan tributary flowing eastward past Uch Turfan into the Aksu River.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Turkic aq su ('white water'); largest tributary of the Tarim River.",
-          "source_url": "https://en.wikipedia.org/wiki/Aksu_River_(Xinjiang)"
+          "etymology_notes": "Turkic toshqan ('hare') combined with derya ('river').",
+          "source_url": "https://en.wikipedia.org/wiki/Toshkan_River"
         },
         {
           "name": "Jengish Chokusu",
@@ -9691,45 +9678,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Wusun"
         },
         {
-          "name": "Aksu River",
+          "name": "Khan Tengri",
           "disambiguation_note": null,
-          "localisation_stem": "Aksu",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Largest tributary of the Tarim River watering the Aksu oasis.",
+          "localisation_stem": "Khan Tengri",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Towering sacred peak of the central Tian Shan north of the Aksu basin.",
           "language_variants": [
             {
-              "form": "Aqsu Deryasi",
-              "native_script": "ئاقسۇ دەرياسى",
-              "language": "Uyghur",
-              "language_code": "uig",
-              "notes": "Uyghur name ('White Water')"
-            },
-            {
-              "form": "Aqsū",
-              "native_script": "Ақсұ",
+              "form": "Han Təñiri",
+              "native_script": "Хан Тәңірі",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name"
+              "notes": "Kazakh name meaning 'Lord of the Sky'"
             },
             {
-              "form": "Āq-Sū",
-              "native_script": "آق‌سو",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian rendering"
+              "form": "Kan-Tengir",
+              "native_script": "Кан-Теңир",
+              "language": "Kyrgyz",
+              "language_code": "kir",
+              "notes": "Kyrgyz name of the peak"
+            },
+            {
+              "form": "Xantengri",
+              "native_script": "خانتەڭرى",
+              "language": "Uyghur",
+              "language_code": "uig",
+              "notes": "Uyghur name of the peak"
             }
           ],
-          "earliest_attestation_year": 1072,
-          "earliest_attestation_note": "11th century CE (Turkic Aq Su, 'White Water')",
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "Traditional Turkic-Mongol sacred mountain name attested in pre-1700 CE Tian Shan traditions.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Turkic aq su ('white water'); largest tributary of the Tarim River.",
-          "source_url": "https://en.wikipedia.org/wiki/Aksu_River_(Xinjiang)"
+          "etymology_notes": "From Turkic Khan Tengri ('Lord of the Spirits / Lord of Heaven'), reflecting ancient Tengrist reverence for the peak.",
+          "source_url": "https://en.wikipedia.org/wiki/Khan_Tengri"
         },
         {
           "name": "Jengish Chokusu",
@@ -11749,52 +11736,52 @@
           "source_url": "https://en.wikipedia.org/wiki/Massagetae"
         },
         {
-          "name": "Aral Sea",
+          "name": "Ustyurt Plateau",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland salt sea of the Turan Depression.",
+          "localisation_stem": "Ustyurt",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Limestone plateau whose eastern escarpment rises immediately above Kassarma.",
           "language_variants": [
             {
-              "form": "Aral tengizi",
-              "native_script": "Арал теңізі",
+              "form": "Üstirt",
+              "native_script": "Үстірт",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Aral teñizi, 'Sea of Islands')"
+              "notes": "Kazakh name (Üstirt, 'Upper Plain')"
             },
             {
-              "form": "Orol dengizi",
+              "form": "Üstyurt",
+              "native_script": null,
+              "language": "Turkmen",
+              "language_code": "tuk",
+              "notes": "Turkmen name"
+            },
+            {
+              "form": "Ustyurt",
               "native_script": null,
               "language": "Uzbek",
               "language_code": "uzb",
               "notes": "Uzbek name"
             },
             {
-              "form": "Buḥayrat Khwārazm",
-              "native_script": "بحيرة خوارزم",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Buhayrat Khwārazm)"
-            },
-            {
-              "form": "Daryācheh-ye Khwārazm",
-              "native_script": "دریاچه خوارزم",
+              "form": "Ustyurt",
+              "native_script": "اوست‌یورت",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name; also 'Ārāl' (آرال) — Persian name."
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (early modern Turkic geographical name Üst-yurt)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic aral ('island'); endorheic salt sea fed by the Syr Darya and Amu Darya.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "Elevated clay-desert plateau between the Caspian Sea and the Aral Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Ustyurt_Plateau"
         },
         {
           "name": "Barsa-Kelmes",
@@ -11905,52 +11892,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Massagetae"
         },
         {
-          "name": "Aral Sea",
+          "name": "Aral Karakum Desert",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland salt sea of the Turan Depression.",
+          "localisation_stem": "Aral Karakum",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Sandy desert steppe extending northeast of the Kulandy peninsula.",
           "language_variants": [
             {
-              "form": "Aral tengizi",
-              "native_script": "Арал теңізі",
+              "form": "Aral qaraqumy",
+              "native_script": "Арал қарақумы",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Aral teñizi, 'Sea of Islands')"
+              "notes": "Kazakh name (Aral Qaraqumy)"
             },
             {
-              "form": "Orol dengizi",
-              "native_script": null,
-              "language": "Uzbek",
-              "language_code": "uzb",
-              "notes": "Uzbek name"
-            },
-            {
-              "form": "Buḥayrat Khwārazm",
-              "native_script": "بحيرة خوارزم",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Buhayrat Khwārazm)"
-            },
-            {
-              "form": "Daryācheh-ye Khwārazm",
-              "native_script": "دریاچه خوارزم",
+              "form": "Qareh-Qūm-e Ārāl",
+              "native_script": "قره‌قوم آرال",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name; also 'Ārāl' (آرال) — Persian name."
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (early modern Kazakh toponym Qaraqum)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic aral ('island'); endorheic salt sea fed by the Syr Darya and Amu Darya.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "Sandy desert northeast of the Aral Sea and north of the Syr Darya.",
+          "source_url": "https://en.wikipedia.org/wiki/Aral_Karakum_Desert"
         },
         {
           "name": "Barsa-Kelmes",
@@ -12061,52 +12034,66 @@
           "source_url": "https://en.wikipedia.org/wiki/Massagetae"
         },
         {
-          "name": "Aral Sea",
+          "name": "Syr Darya",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
+          "localisation_stem": "Syr Darya",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland salt sea of the Turan Depression.",
+          "feature_subtype": "river",
+          "relationship": "Major Central Asian river emptying into the northern Aral basin east of Kokaral.",
           "language_variants": [
             {
-              "form": "Aral tengizi",
-              "native_script": "Арал теңізі",
-              "language": "Kazakh",
-              "language_code": "kaz",
-              "notes": "Kazakh name (Aral teñizi, 'Sea of Islands')"
+              "form": "Iaxártēs",
+              "native_script": "Ἰαξάρτης",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Iaxartes)"
             },
             {
-              "form": "Orol dengizi",
+              "form": "Jaxartes",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            },
+            {
+              "form": "Sayḥūn",
+              "native_script": "سيحون",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Early Islamic geographical name (Sayḥūn)"
+            },
+            {
+              "form": "Sīr-Daryā",
+              "native_script": "سیردریا",
+              "language": "Persian",
+              "language_code": "fas",
+              "notes": "Persian name (Sīr-Daryā)"
+            },
+            {
+              "form": "Syrdarīya",
+              "native_script": "Сырдарīя",
+              "language": "Kazakh",
+              "language_code": "kaz",
+              "notes": "Kazakh name"
+            },
+            {
+              "form": "Sirdaryo",
               "native_script": null,
               "language": "Uzbek",
               "language_code": "uzb",
               "notes": "Uzbek name"
-            },
-            {
-              "form": "Buḥayrat Khwārazm",
-              "native_script": "بحيرة خوارزم",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Buhayrat Khwārazm)"
-            },
-            {
-              "form": "Daryācheh-ye Khwārazm",
-              "native_script": "دریاچه خوارزم",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian name; also 'Ārāl' (آرال) — Persian name."
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -329,
+          "earliest_attestation_note": "c. 329 BCE (historians of Alexander the Great, as Jaxartes)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic aral ('island'); endorheic salt sea fed by the Syr Darya and Amu Darya.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "Great river of Central Asia flowing northwest from the Tian Shan to the Aral Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Syr_Darya"
         },
         {
           "name": "Barsa-Kelmes",
@@ -12279,52 +12266,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Amu_Darya"
         },
         {
-          "name": "Aral Sea",
+          "name": "Kyzylkum Desert",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland salt sea of Khwarazm.",
+          "localisation_stem": "Kyzylkum",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Red-sand desert bordering the southern Amu Darya delta near Davlet-Girei.",
           "language_variants": [
             {
-              "form": "Aral tengizi",
-              "native_script": "Арал теңізі",
+              "form": "Qyzylqum",
+              "native_script": "Қйзйлқум",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Aral teñizi, 'Sea of Islands')"
+              "notes": "Kazakh name ('Red Sand')"
             },
             {
-              "form": "Orol dengizi",
+              "form": "Qizilqum",
               "native_script": null,
               "language": "Uzbek",
               "language_code": "uzb",
               "notes": "Uzbek name"
             },
             {
-              "form": "Buḥayrat Khwārazm",
-              "native_script": "بحيرة خوارزم",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Buhayrat Khwārazm)"
-            },
-            {
-              "form": "Daryācheh-ye Khwārazm",
-              "native_script": "دریاچه خوارزم",
+              "form": "Qīzīl-Qūm",
+              "native_script": "قیزیل‌قوم",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name; also 'Ārāl' (آرال) — Persian name."
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
+          "earliest_attestation_year": 982,
+          "earliest_attestation_note": "982 CE (Hudud al-'Alam, describing the desert sands between the Oxus and Jaxartes)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic aral ('island'); endorheic salt sea fed by the Syr Darya and Amu Darya.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "From Turkic qïzïl ('red') + qum ('sand'); desert between the Amu Darya and Syr Darya.",
+          "source_url": "https://en.wikipedia.org/wiki/Kyzylkum_Desert"
         }
       ]
     },
@@ -13143,52 +13123,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Syr_Darya"
         },
         {
-          "name": "Aral Sea",
+          "name": "Kyzylkum Desert",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea receiving the Syr Darya west of Yangikent.",
+          "localisation_stem": "Kyzylkum",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Sand desert lying immediately south of Yangikent across the Syr Darya.",
           "language_variants": [
             {
-              "form": "Aral tengizi",
-              "native_script": "Арал теңізі",
+              "form": "Qyzylqum",
+              "native_script": "Қйзйлқум",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Aral teñizi, 'Sea of Islands')"
+              "notes": "Kazakh name ('Red Sand')"
             },
             {
-              "form": "Orol dengizi",
+              "form": "Qizilqum",
               "native_script": null,
               "language": "Uzbek",
               "language_code": "uzb",
               "notes": "Uzbek name"
             },
             {
-              "form": "Buḥayrat Khwārazm",
-              "native_script": "بحيرة خوارزم",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Buhayrat Khwārazm)"
-            },
-            {
-              "form": "Daryācheh-ye Khwārazm",
-              "native_script": "دریاچه خوارزم",
+              "form": "Qīzīl-Qūm",
+              "native_script": "قیزیل‌قوم",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name; also 'Ārāl' (آرال) — Persian name."
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
+          "earliest_attestation_year": 982,
+          "earliest_attestation_note": "982 CE (Hudud al-'Alam, describing the desert sands between the Oxus and Jaxartes)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic aral ('island'); endorheic salt sea fed by the Syr Darya and Amu Darya.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "From Turkic qïzïl ('red') + qum ('sand'); desert between the Amu Darya and Syr Darya.",
+          "source_url": "https://en.wikipedia.org/wiki/Kyzylkum_Desert"
         }
       ]
     },
@@ -13327,52 +13300,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Syr_Darya"
         },
         {
-          "name": "Aral Sea",
+          "name": "Lake Kamyslybas",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
+          "localisation_stem": "Kamyslybas",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea receiving the Syr Darya west of Yangikent.",
+          "feature_subtype": "lake",
+          "relationship": "Large brackish delta lake situated near Kazalinsk on the lower Syr Darya.",
           "language_variants": [
             {
-              "form": "Aral tengizi",
-              "native_script": "Арал теңізі",
+              "form": "Qamystybas",
+              "native_script": "Қамыстыбас",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Aral teñizi, 'Sea of Islands')"
-            },
-            {
-              "form": "Orol dengizi",
-              "native_script": null,
-              "language": "Uzbek",
-              "language_code": "uzb",
-              "notes": "Uzbek name"
-            },
-            {
-              "form": "Buḥayrat Khwārazm",
-              "native_script": "بحيرة خوارزم",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Buhayrat Khwārazm)"
-            },
-            {
-              "form": "Daryācheh-ye Khwārazm",
-              "native_script": "دریاچه خوارزم",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian name; also 'Ārāl' (آرال) — Persian name."
+              "notes": "Kazakh name meaning 'Reedy Head'"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Permanent brackish lake in the northern Syr Darya delta near Kazalinsk.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic aral ('island'); endorheic salt sea fed by the Syr Darya and Amu Darya.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "From Kazakh qamystı bas ('reed-covered head'), referring to its dense deltaic reedbeds.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Kamyslybas"
         }
       ]
     },
@@ -13511,52 +13463,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Syr_Darya"
         },
         {
-          "name": "Aral Sea",
+          "name": "Aral Karakum Desert",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea receiving the Syr Darya west of Yangikent.",
+          "localisation_stem": "Aral Karakum",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Sandy desert steppe stretching northeast of the Syr Darya delta.",
           "language_variants": [
             {
-              "form": "Aral tengizi",
-              "native_script": "Арал теңізі",
+              "form": "Aral qaraqumy",
+              "native_script": "Арал қарақумы",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Aral teñizi, 'Sea of Islands')"
+              "notes": "Kazakh name (Aral Qaraqumy)"
             },
             {
-              "form": "Orol dengizi",
-              "native_script": null,
-              "language": "Uzbek",
-              "language_code": "uzb",
-              "notes": "Uzbek name"
-            },
-            {
-              "form": "Buḥayrat Khwārazm",
-              "native_script": "بحيرة خوارزم",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Buhayrat Khwārazm)"
-            },
-            {
-              "form": "Daryācheh-ye Khwārazm",
-              "native_script": "دریاچه خوارزم",
+              "form": "Qareh-Qūm-e Ārāl",
+              "native_script": "قره‌قوم آرال",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name; also 'Ārāl' (آرال) — Persian name."
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (early modern Kazakh toponym Qaraqum)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic aral ('island'); endorheic salt sea fed by the Syr Darya and Amu Darya.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "Sandy desert northeast of the Aral Sea and north of the Syr Darya.",
+          "source_url": "https://en.wikipedia.org/wiki/Aral_Karakum_Desert"
         }
       ]
     },
@@ -13695,52 +13633,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Syr_Darya"
         },
         {
-          "name": "Aral Sea",
+          "name": "Kangju",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea receiving the Syr Darya west of Yangikent.",
+          "localisation_stem": "Kangju",
+          "category": "tribe",
+          "feature_subtype": "iranian_tribe",
+          "relationship": "Ancient Central Asian state and confederation centered on the Syr Darya valley.",
           "language_variants": [
             {
-              "form": "Aral tengizi",
-              "native_script": "Арал теңізі",
+              "form": "Kāngjū",
+              "native_script": "康居",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Han dynasty Chinese ethnonym (Kāngjū)"
+            },
+            {
+              "form": "Qangly",
+              "native_script": "Қаңлы",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Aral teñizi, 'Sea of Islands')"
+              "notes": "Kazakh historical ethnonym"
             },
             {
-              "form": "Orol dengizi",
-              "native_script": null,
-              "language": "Uzbek",
-              "language_code": "uzb",
-              "notes": "Uzbek name"
-            },
-            {
-              "form": "Buḥayrat Khwārazm",
-              "native_script": "بحيرة خوارزم",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Buhayrat Khwārazm)"
-            },
-            {
-              "form": "Daryācheh-ye Khwārazm",
-              "native_script": "دریاچه خوارزم",
+              "form": "Kangjū",
+              "native_script": "کنگجو",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name; also 'Ārāl' (آرال) — Persian name."
+              "notes": "Persian historical rendering"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -128,
+          "earliest_attestation_note": "c. 128 BCE (Zhang Qian's report preserved in Sima Qian's Shiji, ch. 123)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic aral ('island'); endorheic salt sea fed by the Syr Darya and Amu Darya.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "Ancient confederation centered on the middle Syr Darya and Aral steppe.",
+          "source_url": "https://en.wikipedia.org/wiki/Kangju"
         }
       ]
     },
@@ -14333,38 +14264,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Ural_(river)"
         },
         {
-          "name": "Caspian Depression",
+          "name": "Emba River",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Lowland plain surrounding the northern Caspian shore.",
+          "localisation_stem": "Emba",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Steppe river flowing across the eastern Atyrau plains toward the Caspian.",
           "language_variants": [
             {
-              "form": "Kaspīy mangy oypaty",
-              "native_script": "Каспīй маңй ойпаты",
+              "form": "Zhem",
+              "native_script": "Жем",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh geographical name"
+              "notes": "Kazakh name (Zhem)"
             },
             {
-              "form": "Pastī-ye Khazar",
-              "native_script": "پستی خزر",
+              "form": "Jīm",
+              "native_script": "جيم",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Islamic geographical rendering (Jim); also 'Imbā' (امبا) — Islamic geographical rendering (Jim)."
+            },
+            {
+              "form": "Embā",
+              "native_script": "امبا",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian geographical name"
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": -440,
-          "earliest_attestation_note": "c. 440 BCE (Herodotus on the lowland steppe around the northern Caspian Sea)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 922,
+          "earliest_attestation_note": "922 CE (Ibn Fadlan's Risala as Jim/Jem)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Low-lying plain below sea level surrounding the northern Caspian Sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Depression"
+          "etymology_notes": "Steppe river rising in the Mugalzhar Hills and flowing southwest toward the Caspian Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Emba_(river)"
         }
       ]
     },
@@ -14801,38 +14739,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ural_(river)"
         },
         {
-          "name": "Ryn Desert",
+          "name": "Caspian Depression",
           "disambiguation_note": null,
-          "localisation_stem": "Ryn",
+          "localisation_stem": "Caspian",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Sandy steppe-desert between the Lower Volga and Ural rivers.",
+          "relationship": "Low-lying salt-pan steppe north of the Caspian enclosing Baisary and Tulugai Sor.",
           "language_variants": [
             {
-              "form": "Naryn qumy",
-              "native_script": "Нарын қумы",
+              "form": "Kaspīy mangy oypaty",
+              "native_script": "Каспīй маңй ойпаты",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Naryn Qumy)"
+              "notes": "Kazakh geographical name"
             },
             {
-              "form": "Ṣaḥrā-ye Rīn",
-              "native_script": "صحرای رین",
+              "form": "Pastī-ye Khazar",
+              "native_script": "پستی خزر",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian rendering"
+              "notes": "Persian geographical name"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE (early modern Kazakh/Nogai toponym Naryn Qum)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -440,
+          "earliest_attestation_note": "c. 440 BCE (Herodotus on the lowland steppe around the northern Caspian Sea)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Sandy steppe-desert between the Lower Volga and Lower Ural rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Ryn_Desert"
+          "etymology_notes": "Low-lying plain below sea level surrounding the northern Caspian Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Caspian_Depression"
         }
       ]
     },
@@ -15716,66 +15654,52 @@
           "source_url": "https://en.wikipedia.org/wiki/Garabogazk%C3%B6l"
         },
         {
-          "name": "Caspian Sea",
+          "name": "Ustyurt Plateau",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea bordering the Garabogazköl spit.",
+          "localisation_stem": "Ustyurt",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Arid clay plateau rising east of Bekdas and the Garabogazköl lagoon.",
           "language_variants": [
             {
-              "form": "Kaspía Thálassa",
-              "native_script": "Κασπία Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name (Kaspia thalassa)"
-            },
-            {
-              "form": "Mare Caspium",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
-            },
-            {
-              "form": "Baḥr al-Khazar",
-              "native_script": "بحر الخزر",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Bahr al-Khazar)"
-            },
-            {
-              "form": "Daryā-ye Khazar",
-              "native_script": "دریای خزر",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian name; also 'Māzandarān' (مازندران) — Persian name."
-            },
-            {
-              "form": "Kaspīy tengizi",
-              "native_script": "Каспīй теңізі",
+              "form": "Üstirt",
+              "native_script": "Үстірт",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name"
+              "notes": "Kazakh name (Üstirt, 'Upper Plain')"
             },
             {
-              "form": "Hazar deňzi",
+              "form": "Üstyurt",
               "native_script": null,
               "language": "Turkmen",
               "language_code": "tuk",
               "notes": "Turkmen name"
+            },
+            {
+              "form": "Ustyurt",
+              "native_script": null,
+              "language": "Uzbek",
+              "language_code": "uzb",
+              "notes": "Uzbek name"
+            },
+            {
+              "form": "Ustyurt",
+              "native_script": "اوست‌یورت",
+              "language": "Persian",
+              "language_code": "fas",
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "c. 450 BCE (Hecataeus of Miletus and Herodotus, Histories 1.202)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (early modern Turkic geographical name Üst-yurt)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "World's largest inland body of water; named after the ancient Caspii.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+          "etymology_notes": "Elevated clay-desert plateau between the Caspian Sea and the Aral Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Ustyurt_Plateau"
         }
       ]
     },
@@ -15886,66 +15810,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Garabogazk%C3%B6l"
         },
         {
-          "name": "Caspian Sea",
+          "name": "Mangyshlak Peninsula",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea bordering the Garabogazköl spit.",
+          "localisation_stem": "Mangyshlak",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Coastal peninsula extending northwest of Sumbe along the eastern Caspian.",
           "language_variants": [
             {
-              "form": "Kaspía Thálassa",
-              "native_script": "Κασπία Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name (Kaspia thalassa)"
-            },
-            {
-              "form": "Mare Caspium",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
-            },
-            {
-              "form": "Baḥr al-Khazar",
-              "native_script": "بحر الخزر",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Bahr al-Khazar)"
-            },
-            {
-              "form": "Daryā-ye Khazar",
-              "native_script": "دریای خزر",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian name; also 'Māzandarān' (مازندران) — Persian name."
-            },
-            {
-              "form": "Kaspīy tengizi",
-              "native_script": "Каспīй теңізі",
+              "form": "Mangghystaū",
+              "native_script": "Маңғйстаұ",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name"
+              "notes": "Kazakh name (Mañğystau)"
             },
             {
-              "form": "Hazar deňzi",
-              "native_script": null,
-              "language": "Turkmen",
-              "language_code": "tuk",
-              "notes": "Turkmen name"
+              "form": "Manqishlāgh",
+              "native_script": "منقشلاغ",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Medieval Islamic geographical name (Manqishlāgh)"
+            },
+            {
+              "form": "Mangīshlāgh",
+              "native_script": "منگیشلاق",
+              "language": "Persian",
+              "language_code": "fas",
+              "notes": "Persian historical name"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "c. 450 BCE (Hecataeus of Miletus and Herodotus, Histories 1.202)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1072,
+          "earliest_attestation_note": "1072 CE (Mahmud al-Kashgari, Diwan Lughat al-Turk, as Manqishlağ)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "World's largest inland body of water; named after the ancient Caspii.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+          "etymology_notes": "Large peninsula on the eastern Caspian shore; Turkic man qïšlağ ('great winter camp').",
+          "source_url": "https://en.wikipedia.org/wiki/Mangyshlak_Peninsula"
         }
       ]
     },
@@ -17120,38 +17023,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Akhtuba"
         },
         {
-          "name": "Ryn Desert",
+          "name": "Volga Delta",
           "disambiguation_note": null,
-          "localisation_stem": "Ryn",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Sandy steppe-desert east of the Lower Volga.",
+          "localisation_stem": "Volga",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Extensive distributary delta of the lower Volga around Saqsin.",
           "language_variants": [
             {
-              "form": "Naryn qumy",
-              "native_script": "Нарын қумы",
-              "language": "Kazakh",
-              "language_code": "kaz",
-              "notes": "Kazakh name (Naryn Qumy)"
+              "form": "Maṣabb Itil",
+              "native_script": "مصب إتل",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Early Islamic geographical reference to the Itil mouths"
             },
             {
-              "form": "Ṣaḥrā-ye Rīn",
-              "native_script": "صحرای رین",
+              "form": "Edil atyraūy",
+              "native_script": "Эділ атыраұй",
+              "language": "Kazakh",
+              "language_code": "kaz",
+              "notes": "Kazakh geographical name"
+            },
+            {
+              "form": "Deltā-ye Volgā",
+              "native_script": "دلتای ولگا",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian rendering"
+              "notes": "Persian geographical name"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE (early modern Kazakh/Nogai toponym Naryn Qum)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 150,
+          "earliest_attestation_note": "c. 150 CE (Ptolemy's mouths of the Rha; 10th-century Islamic geographers on Itil)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Sandy steppe-desert between the Lower Volga and Lower Ural rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Ryn_Desert"
+          "etymology_notes": "Vast river delta where the Volga/Itil enters the Caspian Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Volga_Delta"
         }
       ]
     },
@@ -17269,38 +17179,52 @@
           "source_url": "https://en.wikipedia.org/wiki/Akhtuba"
         },
         {
-          "name": "Ryn Desert",
+          "name": "Ural River",
           "disambiguation_note": null,
-          "localisation_stem": "Ryn",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Sandy steppe-desert east of the Lower Volga.",
+          "localisation_stem": "Ural",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major steppe river on whose lower banks Saraychiq was established.",
           "language_variants": [
             {
-              "form": "Naryn qumy",
-              "native_script": "Нарын қумы",
-              "language": "Kazakh",
-              "language_code": "kaz",
-              "notes": "Kazakh name (Naryn Qumy)"
+              "form": "Dáïx",
+              "native_script": "Δάϊξ",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Ptolemaic Greek name (Daix)"
             },
             {
-              "form": "Ṣaḥrā-ye Rīn",
-              "native_script": "صحرای رین",
+              "form": "Zhayyq",
+              "native_script": "Жайық",
+              "language": "Kazakh",
+              "language_code": "kaz",
+              "notes": "Kazakh name (Zhayyq)"
+            },
+            {
+              "form": "Yāyiq",
+              "native_script": "يايق",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Early Islamic geographical name (Yāyiq)"
+            },
+            {
+              "form": "Yāʾīk",
+              "native_script": "یائیک",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian rendering"
+              "notes": "Persian historical name; also 'Ūrāl' (اورال) — Persian historical name."
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE (early modern Kazakh/Nogai toponym Naryn Qum)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 150,
+          "earliest_attestation_note": "150 CE (Ptolemy's Geography as Daix; 10th-century CE Ibn Fadlan as Jayikh/Yaik).",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Sandy steppe-desert between the Lower Volga and Lower Ural rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Ryn_Desert"
+          "etymology_notes": "Historically known as Yaik/Zhayyq (Ptolemaic Daix), flowing from the Urals to the Caspian at Atyrau.",
+          "source_url": "https://en.wikipedia.org/wiki/Ural_(river)"
         }
       ]
     },
@@ -17759,8 +17683,8 @@
               "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE (early modern steppe hydronym Irgiz)",
+          "earliest_attestation_year": 922,
+          "earliest_attestation_note": "922 CE — Mentioned as Irghiz in Ahmad ibn Fadlan's travelogue across the Volga-Ural steppe.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -20014,38 +19938,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Uil"
         },
         {
-          "name": "Caspian Depression",
+          "name": "Mugalzhar",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Lowland plain north of the Caspian Sea.",
+          "localisation_stem": "Mugalzhar",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Low southern Ural hills where the Uil and Emba rivers rise east of Qoshagyl.",
           "language_variants": [
             {
-              "form": "Kaspīy mangy oypaty",
-              "native_script": "Каспīй маңй ойпаты",
+              "form": "Mughalzhar",
+              "native_script": "Муғалжар",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh geographical name"
+              "notes": "Kazakh name (Muğalzhar)"
             },
             {
-              "form": "Pastī-ye Khazar",
-              "native_script": "پستی خزر",
+              "form": "Mūghāljār",
+              "native_script": "موغالجار",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian geographical name"
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": -440,
-          "earliest_attestation_note": "c. 440 BCE (Herodotus on the lowland steppe around the northern Caspian Sea)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (early modern Kazakh/Mongolic oronym Muğalzhar)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Low-lying plain below sea level surrounding the northern Caspian Sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Depression"
+          "etymology_notes": "Southernmost hills of the Ural system, source of the Emba and Or rivers.",
+          "source_url": "https://en.wikipedia.org/wiki/Mugalzhar"
         }
       ]
     },
@@ -20732,66 +20656,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Massagetae"
         },
         {
-          "name": "Caspian Sea",
+          "name": "Karagiye",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea bordering the Mangyshlak shoreline.",
+          "localisation_stem": "Karagiye",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "Deep karst depression situated immediately southeast of Aktau on the Mangyshlak Peninsula.",
           "language_variants": [
             {
-              "form": "Kaspīy tengizi",
-              "native_script": "Каспīй теңізі",
+              "form": "Qaraqiya",
+              "native_script": "Қарақия",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Kaspïy teñizi)"
-            },
-            {
-              "form": "Hazar deňzi",
-              "native_script": null,
-              "language": "Turkmen",
-              "language_code": "tuk",
-              "notes": "Turkmen name (Khazar Sea)"
-            },
-            {
-              "form": "Baḥr al-Khazar",
-              "native_script": "بحر الخزر",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic geographical name (Baḥr al-Khazar)"
-            },
-            {
-              "form": "Daryā-ye Khazar",
-              "native_script": "دریای خزر",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian name (Daryā-ye Khazar)"
-            },
-            {
-              "form": "Kaspía Thálassa",
-              "native_script": "Κασπία Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name (Kaspía thálassa)"
-            },
-            {
-              "form": "Mare Caspium",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Kazakh name meaning 'Black Jaw/Slope'"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "c. 450 BCE (Hecataeus of Miletus and Herodotus, Histories 1.202)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Permanent deep endorheic karst trench on the Mangyshlak Peninsula adjacent to Aktau.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after the ancient Caspii people of its southwestern shore; in Islamic geography known as the Khazar Sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+          "etymology_notes": "Turkic/Kazakh Qaraqiya ('black slope/chasm'), referring to the dark cliffs of the depression. Onomastic note: Kazakh name meaning 'Black Jaw/Slope' ('Qaraqiya').",
+          "source_url": "https://en.wikipedia.org/wiki/Karagiye"
         },
         {
           "name": "Mangyshlak Peninsula",
@@ -20909,66 +20798,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Oghuz_Turks"
         },
         {
-          "name": "Caspian Sea",
+          "name": "Buzachi Peninsula",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea along the western edge of Mangyshlak.",
+          "localisation_stem": "Buzachi",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Low desert peninsula bordering the northern coast of Mangyshlak.",
           "language_variants": [
             {
-              "form": "Kaspīy tengizi",
-              "native_script": "Каспīй теңізі",
+              "form": "Bozashy",
+              "native_script": "Бозашы",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Kaspïy teñizi)"
+              "notes": "Kazakh name (Bozashy)"
             },
             {
-              "form": "Hazar deňzi",
-              "native_script": null,
-              "language": "Turkmen",
-              "language_code": "tuk",
-              "notes": "Turkmen name (Khazar Sea)"
-            },
-            {
-              "form": "Baḥr al-Khazar",
-              "native_script": "بحر الخزر",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic geographical name (Baḥr al-Khazar)"
-            },
-            {
-              "form": "Daryā-ye Khazar",
-              "native_script": "دریای خزر",
+              "form": "Būzāchī",
+              "native_script": "بوزاچی",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name (Daryā-ye Khazar)"
-            },
-            {
-              "form": "Kaspía Thálassa",
-              "native_script": "Κασπία Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name (Kaspía thálassa)"
-            },
-            {
-              "form": "Mare Caspium",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "c. 450 BCE (Hecataeus of Miletus and Herodotus, Histories 1.202)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (early modern Kazakh/Turkmen coastal toponym)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after the ancient Caspii people of its southwestern shore; in Islamic geography known as the Khazar Sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+          "etymology_notes": "Low-lying peninsula on the northeastern Caspian coast.",
+          "source_url": "https://en.wikipedia.org/wiki/Buzachi_Peninsula"
         },
         {
           "name": "Mangyshlak Peninsula",
@@ -21079,66 +20940,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Dahae"
         },
         {
-          "name": "Caspian Sea",
+          "name": "Dead Kultuk",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian Sea",
+          "localisation_stem": "Dead Kultuk",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea bordering the Tupkaragan coast.",
+          "feature_subtype": "bay",
+          "relationship": "Shallow northeastern Caspian bay bordering the Mangyshlak and Buzachi coasts.",
           "language_variants": [
             {
-              "form": "Kaspīy tengizi",
-              "native_script": "Каспīй теңізі",
+              "form": "Öli Qoltyq",
+              "native_script": "Өлі Қолтық",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Kaspïy teñizi)"
+              "notes": "Kazakh name (Öli Qoltyq)"
             },
             {
-              "form": "Hazar deňzi",
-              "native_script": null,
-              "language": "Turkmen",
-              "language_code": "tuk",
-              "notes": "Turkmen name (Khazar Sea)"
-            },
-            {
-              "form": "Baḥr al-Khazar",
-              "native_script": "بحر الخزر",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic geographical name (Baḥr al-Khazar)"
-            },
-            {
-              "form": "Daryā-ye Khazar",
-              "native_script": "دریای خزر",
+              "form": "Kūltūq-e Mordeh",
+              "native_script": "کولتوق مرده",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name (Daryā-ye Khazar)"
-            },
-            {
-              "form": "Kaspía Thálassa",
-              "native_script": "Κασπία Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name (Kaspía thálassa)"
-            },
-            {
-              "form": "Mare Caspium",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "c. 450 BCE (Hecataeus of Miletus and Herodotus, Histories 1.202)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (early modern Kazakh/Turkic hydronym Qoltyq)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after the ancient Caspii people of its southwestern shore; in Islamic geography known as the Khazar Sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+          "etymology_notes": "Shallow northeastern Caspian bay and salt-marsh inlet bordering Buzachi and Ustyurt.",
+          "source_url": "https://en.wikipedia.org/wiki/Dead_Kultuk"
         },
         {
           "name": "Mangyshlak Peninsula",
@@ -21453,66 +21286,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ustyurt_Plateau"
         },
         {
-          "name": "Caspian Sea",
+          "name": "Dead Kultuk",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian Sea",
+          "localisation_stem": "Dead Kultuk",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea bordering the western scarp of the Ustyurt Plateau.",
+          "feature_subtype": "bay",
+          "relationship": "Shallow Caspian inlet bordering the northern Ustyurt coast.",
           "language_variants": [
             {
-              "form": "Kaspīy tengizi",
-              "native_script": "Каспīй теңізі",
+              "form": "Öli Qoltyq",
+              "native_script": "Өлі Қолтық",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Kaspïy teñizi)"
+              "notes": "Kazakh name (Öli Qoltyq)"
             },
             {
-              "form": "Hazar deňzi",
-              "native_script": null,
-              "language": "Turkmen",
-              "language_code": "tuk",
-              "notes": "Turkmen name (Khazar Sea)"
-            },
-            {
-              "form": "Baḥr al-Khazar",
-              "native_script": "بحر الخزر",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic geographical name (Baḥr al-Khazar)"
-            },
-            {
-              "form": "Daryā-ye Khazar",
-              "native_script": "دریای خزر",
+              "form": "Kūltūq-e Mordeh",
+              "native_script": "کولتوق مرده",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name (Daryā-ye Khazar)"
-            },
-            {
-              "form": "Kaspía Thálassa",
-              "native_script": "Κασπία Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name (Kaspía thálassa)"
-            },
-            {
-              "form": "Mare Caspium",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "c. 450 BCE (Hecataeus of Miletus and Herodotus, Histories 1.202)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (early modern Kazakh/Turkic hydronym Qoltyq)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after the ancient Caspii people of its southwestern shore; in Islamic geography known as the Khazar Sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+          "etymology_notes": "Shallow northeastern Caspian bay and salt-marsh inlet bordering Buzachi and Ustyurt.",
+          "source_url": "https://en.wikipedia.org/wiki/Dead_Kultuk"
         }
       ]
     },
@@ -21630,66 +21435,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ustyurt_Plateau"
         },
         {
-          "name": "Caspian Sea",
+          "name": "Buzachi Peninsula",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Eastern Caspian littoral adjacent to the Ustyurt escarpments.",
+          "localisation_stem": "Buzachi",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Marshy coastal peninsula projecting west of the northern Ustyurt escarpment.",
           "language_variants": [
             {
-              "form": "Kaspīy tengizi",
-              "native_script": "Каспīй теңізі",
+              "form": "Bozashy",
+              "native_script": "Бозашы",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Kaspïy teñizi)"
+              "notes": "Kazakh name (Bozashy)"
             },
             {
-              "form": "Hazar deňzi",
-              "native_script": null,
-              "language": "Turkmen",
-              "language_code": "tuk",
-              "notes": "Turkmen name (Khazar Sea)"
-            },
-            {
-              "form": "Baḥr al-Khazar",
-              "native_script": "بحر الخزر",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic geographical name (Baḥr al-Khazar)"
-            },
-            {
-              "form": "Daryā-ye Khazar",
-              "native_script": "دریای خزر",
+              "form": "Būzāchī",
+              "native_script": "بوزاچی",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name (Daryā-ye Khazar)"
-            },
-            {
-              "form": "Kaspía Thálassa",
-              "native_script": "Κασπία Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name (Kaspía thálassa)"
-            },
-            {
-              "form": "Mare Caspium",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "c. 450 BCE (Hecataeus of Miletus and Herodotus, Histories 1.202)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (early modern Kazakh/Turkmen coastal toponym)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after the ancient Caspii people of its southwestern shore; in Islamic geography known as the Khazar Sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+          "etymology_notes": "Low-lying peninsula on the northeastern Caspian coast.",
+          "source_url": "https://en.wikipedia.org/wiki/Buzachi_Peninsula"
         }
       ]
     },
@@ -21814,52 +21591,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ustyurt_Plateau"
         },
         {
-          "name": "Aral Sea",
+          "name": "Barsa-Kelmes",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Endorheic sea bordering the eastern scarp of the Ustyurt Plateau.",
+          "localisation_stem": "Barsa-Kelmes",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Former Aral island and salt-flat tract facing the eastern Ustyurt escarpment.",
           "language_variants": [
             {
-              "form": "Aral tengizi",
-              "native_script": "Арал теңізі",
+              "form": "Barsakelmes",
+              "native_script": "Барсакелмес",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Aral teñizi)"
+              "notes": "Kazakh name ('If one goes, one will not return')"
             },
             {
-              "form": "Orol dengizi",
-              "native_script": null,
-              "language": "Uzbek",
-              "language_code": "uzb",
-              "notes": "Uzbek name"
-            },
-            {
-              "form": "Buḥayrat Khwārazm",
-              "native_script": "بحيرة خوارزم",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Buḥayrat Khwārazm, 'Sea of Khwarazm')"
-            },
-            {
-              "form": "Daryācheh-ye Khwārazm",
-              "native_script": "دریاچه خوارزم",
+              "form": "Barsā-Kelmes",
+              "native_script": "برساکلمس",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian historical name (Daryāche-ye Khwārazm)"
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (early modern Kazakh/Karakalpak toponym)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic aral ('island') referring to its many delta islands; earlier known in Islamic geography as the Sea of Khwarazm.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "Historic island in the Aral Sea; Turkic barsa kelmes ('go and not return').",
+          "source_url": "https://en.wikipedia.org/wiki/Barsa-Kelmes"
         }
       ]
     },
@@ -21984,52 +21747,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Ustyurt_Plateau"
         },
         {
-          "name": "Aral Sea",
+          "name": "Sarygamysh Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
+          "localisation_stem": "Sarygamysh",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea lying immediately east of the Ustyurt escarpment.",
+          "feature_subtype": "lake",
+          "relationship": "Lake depression bordering the southern escarpment of the Ustyurt Plateau.",
           "language_variants": [
             {
-              "form": "Aral tengizi",
-              "native_script": "Арал теңізі",
-              "language": "Kazakh",
-              "language_code": "kaz",
-              "notes": "Kazakh name (Aral teñizi)"
+              "form": "Sarygamyş köli",
+              "native_script": null,
+              "language": "Turkmen",
+              "language_code": "tuk",
+              "notes": "Turkmen name"
             },
             {
-              "form": "Orol dengizi",
+              "form": "Sariqamish koʻli",
               "native_script": null,
               "language": "Uzbek",
               "language_code": "uzb",
               "notes": "Uzbek name"
             },
             {
-              "form": "Buḥayrat Khwārazm",
-              "native_script": "بحيرة خوارزم",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Buḥayrat Khwārazm, 'Sea of Khwarazm')"
-            },
-            {
-              "form": "Daryācheh-ye Khwārazm",
-              "native_script": "دریاچه خوارزم",
+              "form": "Sārī-Qāmīsh",
+              "native_script": "ساری‌قامیش",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian historical name (Daryāche-ye Khwārazm)"
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
+          "earliest_attestation_year": 1663,
+          "earliest_attestation_note": "1663 CE (Abu al-Ghazi Bahadur, Shajara-i Turk)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic aral ('island') referring to its many delta islands; earlier known in Islamic geography as the Sea of Khwarazm.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "Turkic *sarï-qamïš ('yellow reeds'), endorheic depression between Khwarazm and the Uzboy.",
+          "source_url": "https://en.wikipedia.org/wiki/Sarygamysh_Lake"
         }
       ]
     },
@@ -25088,52 +24844,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Syr_Darya"
         },
         {
-          "name": "Aral Sea",
+          "name": "Kyzylkum Desert",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea receiving the lower Syr Darya.",
+          "localisation_stem": "Kyzylkum",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Sand desert stretching immediately south of Jend along the lower Syr Darya.",
           "language_variants": [
             {
-              "form": "Aral tengizi",
-              "native_script": "Арал теңізі",
+              "form": "Qyzylqum",
+              "native_script": "Қйзйлқум",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Aral teñizi)"
+              "notes": "Kazakh name ('Red Sand')"
             },
             {
-              "form": "Orol dengizi",
+              "form": "Qizilqum",
               "native_script": null,
               "language": "Uzbek",
               "language_code": "uzb",
               "notes": "Uzbek name"
             },
             {
-              "form": "Buḥayrat Khwārazm",
-              "native_script": "بحيرة خوارزم",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Buḥayrat Khwārazm, 'Sea of Khwarazm')"
-            },
-            {
-              "form": "Daryācheh-ye Khwārazm",
-              "native_script": "دریاچه خوارزم",
+              "form": "Qīzīl-Qūm",
+              "native_script": "قیزیل‌قوم",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian historical name (Daryāche-ye Khwārazm)"
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
+          "earliest_attestation_year": 982,
+          "earliest_attestation_note": "982 CE (Hudud al-'Alam, describing the desert sands between the Oxus and Jaxartes)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic aral ('island') referring to its many delta islands; earlier known in Islamic geography as the Sea of Khwarazm.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "From Turkic qïzïl ('red') + qum ('sand'); desert between the Amu Darya and Syr Darya.",
+          "source_url": "https://en.wikipedia.org/wiki/Kyzylkum_Desert"
         }
       ]
     },
@@ -25279,52 +25028,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Syr_Darya"
         },
         {
-          "name": "Aral Sea",
+          "name": "Kangju",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering the Syr Darya delta.",
+          "localisation_stem": "Kangju",
+          "category": "tribe",
+          "feature_subtype": "iranian_tribe",
+          "relationship": "Ancient Central Asian confederation centered along the Syr Darya basin.",
           "language_variants": [
             {
-              "form": "Aral tengizi",
-              "native_script": "Арал теңізі",
+              "form": "Kāngjū",
+              "native_script": "康居",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Han dynasty Chinese ethnonym (Kāngjū)"
+            },
+            {
+              "form": "Qangly",
+              "native_script": "Қаңлы",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Aral teñizi)"
+              "notes": "Kazakh historical ethnonym"
             },
             {
-              "form": "Orol dengizi",
-              "native_script": null,
-              "language": "Uzbek",
-              "language_code": "uzb",
-              "notes": "Uzbek name"
-            },
-            {
-              "form": "Buḥayrat Khwārazm",
-              "native_script": "بحيرة خوارزم",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Buḥayrat Khwārazm, 'Sea of Khwarazm')"
-            },
-            {
-              "form": "Daryācheh-ye Khwārazm",
-              "native_script": "دریاچه خوارزم",
+              "form": "Kangjū",
+              "native_script": "کنگجو",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian historical name (Daryāche-ye Khwārazm)"
+              "notes": "Persian historical rendering"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -128,
+          "earliest_attestation_note": "c. 128 BCE (Zhang Qian's report preserved in Sima Qian's Shiji, ch. 123)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic aral ('island') referring to its many delta islands; earlier known in Islamic geography as the Sea of Khwarazm.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "Ancient confederation centered on the middle Syr Darya and Aral steppe.",
+          "source_url": "https://en.wikipedia.org/wiki/Kangju"
         }
       ]
     },
@@ -25654,52 +25396,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Syr_Darya"
         },
         {
-          "name": "Aral Sea",
+          "name": "Aral Karakum Desert",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea at the terminus of the Syr Darya.",
+          "localisation_stem": "Aral Karakum",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Sandy steppe bordering the lower Syr Darya north of Azez-Kul.",
           "language_variants": [
             {
-              "form": "Aral tengizi",
-              "native_script": "Арал теңізі",
+              "form": "Aral qaraqumy",
+              "native_script": "Арал қарақумы",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Aral teñizi)"
+              "notes": "Kazakh name (Aral Qaraqumy)"
             },
             {
-              "form": "Orol dengizi",
-              "native_script": null,
-              "language": "Uzbek",
-              "language_code": "uzb",
-              "notes": "Uzbek name"
-            },
-            {
-              "form": "Buḥayrat Khwārazm",
-              "native_script": "بحيرة خوارزم",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Buḥayrat Khwārazm, 'Sea of Khwarazm')"
-            },
-            {
-              "form": "Daryācheh-ye Khwārazm",
-              "native_script": "دریاچه خوارزم",
+              "form": "Qareh-Qūm-e Ārāl",
+              "native_script": "قره‌قوم آرال",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian historical name (Daryāche-ye Khwārazm)"
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (early modern Kazakh toponym Qaraqum)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic aral ('island') referring to its many delta islands; earlier known in Islamic geography as the Sea of Khwarazm.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "Sandy desert northeast of the Aral Sea and north of the Syr Darya.",
+          "source_url": "https://en.wikipedia.org/wiki/Aral_Karakum_Desert"
         }
       ]
     },
@@ -26730,52 +26458,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Syr_Darya"
         },
         {
-          "name": "Aral Sea",
+          "name": "Sarysu River",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
+          "localisation_stem": "Sarysu",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea west of the lower Syr Darya.",
+          "feature_subtype": "river",
+          "relationship": "Steppe river terminating in the Telikol lakes near Uzgend Kara.",
           "language_variants": [
             {
-              "form": "Aral tengizi",
-              "native_script": "Арал теңізі",
+              "form": "Sarysu",
+              "native_script": "Сарысу",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Aral teñizi)"
-            },
-            {
-              "form": "Orol dengizi",
-              "native_script": null,
-              "language": "Uzbek",
-              "language_code": "uzb",
-              "notes": "Uzbek name"
-            },
-            {
-              "form": "Buḥayrat Khwārazm",
-              "native_script": "بحيرة خوارزم",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Buḥayrat Khwārazm, 'Sea of Khwarazm')"
-            },
-            {
-              "form": "Daryācheh-ye Khwārazm",
-              "native_script": "دریاچه خوارزم",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian historical name (Daryāche-ye Khwārazm)"
+              "notes": "Kazakh name meaning 'Yellow Water'"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
+          "earliest_attestation_year": 1697,
+          "earliest_attestation_note": "Attested in late 17th-century CE Russian steppe cartography.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic aral ('island') referring to its many delta islands; earlier known in Islamic geography as the Sea of Khwarazm.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "Turkic Sary-su ('yellow water'), named for the silty color of its seasonal waters.",
+          "source_url": "https://en.wikipedia.org/wiki/Sarysu_(river)"
         }
       ]
     },
@@ -26921,52 +26628,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Syr_Darya"
         },
         {
-          "name": "Aral Sea",
+          "name": "Karatau Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea at the mouth of the Syr Darya.",
+          "localisation_stem": "Karatau",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Northwestern Tian Shan spur rising east of the middle Syr Darya.",
           "language_variants": [
             {
-              "form": "Aral tengizi",
-              "native_script": "Арал теңізі",
+              "form": "Qarataū",
+              "native_script": "Қаратаұ",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Aral teñizi)"
+              "notes": "Kazakh name (Qarataw)"
             },
             {
-              "form": "Orol dengizi",
+              "form": "Qoratov",
               "native_script": null,
               "language": "Uzbek",
               "language_code": "uzb",
               "notes": "Uzbek name"
             },
             {
-              "form": "Buḥayrat Khwārazm",
-              "native_script": "بحيرة خوارزم",
+              "form": "Qara Ṭāgh",
+              "native_script": "قره طاغ",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Early Islamic geographical name (Buḥayrat Khwārazm, 'Sea of Khwarazm')"
-            },
-            {
-              "form": "Daryācheh-ye Khwārazm",
-              "native_script": "دریاچه خوارزم",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian historical name (Daryāche-ye Khwārazm)"
+              "notes": "Medieval Turkic-Arabic rendering (Qara-ṭāgh)"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
+          "earliest_attestation_year": 1072,
+          "earliest_attestation_note": "1072 CE (Mahmud al-Kashgari, Diwan Lughat al-Turk, as Qara-tağ)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic aral ('island') referring to its many delta islands; earlier known in Islamic geography as the Sea of Khwarazm.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "Turkic Qara-tağ ('Black Mountain'), the northwesternmost spur of the Tian Shan along the Syr Darya.",
+          "source_url": "https://en.wikipedia.org/wiki/Karatau_Mountains"
         }
       ]
     },
@@ -27084,45 +26784,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Kokcha_River"
         },
         {
-          "name": "Badakhshan",
+          "name": "Panj",
           "disambiguation_note": null,
-          "localisation_stem": "Badakhshan",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Historic highland region of the upper Oxus.",
+          "localisation_stem": "Panj",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Primary upper headstream of the Amu Darya bordering northern Badakhshan near Rustaq.",
           "language_variants": [
             {
-              "form": "Badakhshon",
-              "native_script": "Бадахшон",
+              "form": "Panj",
+              "native_script": "Панҷ",
               "language": "Tajik",
               "language_code": "tgk",
-              "notes": "Tajik name (Badakhshon)"
+              "notes": "Tajik name (Panj)"
             },
             {
-              "form": "Badakhshān",
-              "native_script": "بدخشان",
+              "form": "Panj",
+              "native_script": "پنج",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name (Badakhshān)"
+              "notes": "Persian name (Panj, 'Five')"
             },
             {
-              "form": "Badakhshān",
-              "native_script": "بدخشان",
+              "form": "Jaryāb",
+              "native_script": "جرياب",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Early Islamic geographical name (Badhakhshān)"
+              "notes": "Early Islamic geographical name (Jaryāb)"
             }
           ],
-          "earliest_attestation_year": 644,
-          "earliest_attestation_note": "644 CE (Xuanzang as Baduochan; 982 CE Hudud al-'Alam as Badhakhshan)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 982,
+          "earliest_attestation_note": "982 CE (Hudud al-'Alam, as Jaryab / upper Oxus)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Iranian Badakhshān (possibly from Sasanian title *bēdaxš), historic highland region of the upper Oxus.",
-          "source_url": "https://en.wikipedia.org/wiki/Badakhshan"
+          "etymology_notes": "Persian Panj ('five'), referring to the five Pamir tributaries forming the upper Amu Darya.",
+          "source_url": "https://en.wikipedia.org/wiki/Panj_(river)"
         }
       ]
     },
@@ -28623,45 +28323,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Panj_(river)"
         },
         {
-          "name": "Wakhan Corridor",
+          "name": "Hindu Kush",
           "disambiguation_note": null,
-          "localisation_stem": "Wakhan",
-          "category": "topographic_feature",
-          "feature_subtype": "valley",
-          "relationship": "High alpine corridor linking Badakhshan to the Pamirs.",
+          "localisation_stem": "Hindu Kush",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "High mountain barrier framing the southern approach to Ishkamish and Wakhan.",
           "language_variants": [
             {
-              "form": "Vakhon",
-              "native_script": "Вахон",
-              "language": "Tajik",
-              "language_code": "tgk",
-              "notes": "Tajik name (Vakhon)"
-            },
-            {
-              "form": "Wākhān",
-              "native_script": "واخان",
+              "form": "Hendūkūsh",
+              "native_script": "هندوکش",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name (Wākhān)"
+              "notes": "Persian name"
             },
             {
-              "form": "Wakhān",
-              "native_script": "وخان",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Wakhān)"
+              "form": "Paropamisos",
+              "native_script": "Παροπαμισος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name"
+            },
+            {
+              "form": "Caucasus Indicus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
             }
           ],
-          "earliest_attestation_year": 644,
-          "earliest_attestation_note": "644 CE (Xuanzang as Humi; 982 CE Hudud al-'Alam as Wakhan)",
+          "earliest_attestation_year": -330,
+          "earliest_attestation_note": "Attested as Paropamisos / Caucasus Indicus in Alexander historians (4th century BCE) and Hindu Kush in Ibn Battuta (1333 CE).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Iranian/Pamiri Wakhān, the high alpine valley connecting Badakhshan across the Pamirs.",
-          "source_url": "https://en.wikipedia.org/wiki/Wakhan_Corridor"
+          "etymology_notes": "Great mountain system dividing Bactria from Kabulistan.",
+          "source_url": "https://en.wikipedia.org/wiki/Hindu_Kush"
         }
       ]
     },
@@ -28772,45 +28472,52 @@
           "source_url": "https://en.wikipedia.org/wiki/Zorkul"
         },
         {
-          "name": "Wakhan Corridor",
+          "name": "Pamir Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Wakhan",
-          "category": "topographic_feature",
-          "feature_subtype": "valley",
-          "relationship": "Strategic mountain corridor leading toward Tibet and the Tarim.",
+          "localisation_stem": "Pamir",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "High mountain knot enclosing the eastern Wakhan highlands around Dar-i-Tubbat.",
           "language_variants": [
             {
-              "form": "Vakhon",
-              "native_script": "Вахон",
-              "language": "Tajik",
-              "language_code": "tgk",
-              "notes": "Tajik name (Vakhon)"
-            },
-            {
-              "form": "Wākhān",
-              "native_script": "واخان",
+              "form": "Pāmīr",
+              "native_script": "پامیر",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name (Wākhān)"
+              "notes": "Persian name (Pāmīr)"
             },
             {
-              "form": "Wakhān",
-              "native_script": "وخان",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Wakhān)"
+              "form": "Pomir",
+              "native_script": "Помир",
+              "language": "Tajik",
+              "language_code": "tgk",
+              "notes": "Tajik name"
+            },
+            {
+              "form": "Pamir Taghliri",
+              "native_script": "پامىر تاغلىرى",
+              "language": "Uyghur",
+              "language_code": "uig",
+              "notes": "Uyghur name"
+            },
+            {
+              "form": "Pomir togʻlari",
+              "native_script": null,
+              "language": "Uzbek",
+              "language_code": "uzb",
+              "notes": "Uzbek name"
             }
           ],
-          "earliest_attestation_year": 644,
-          "earliest_attestation_note": "644 CE (Xuanzang as Humi; 982 CE Hudud al-'Alam as Wakhan)",
+          "earliest_attestation_year": 640,
+          "earliest_attestation_note": "7th century CE (Xuanzang as Po-mi-lo; medieval Persian Pāmīr)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Iranian/Pamiri Wakhān, the high alpine valley connecting Badakhshan across the Pamirs.",
-          "source_url": "https://en.wikipedia.org/wiki/Wakhan_Corridor"
+          "etymology_notes": "High mountain knot at the junction of the Tian Shan, Karakoram, Kunlun, and Hindu Kush.",
+          "source_url": "https://en.wikipedia.org/wiki/Pamir_Mountains"
         }
       ]
     },
@@ -29404,45 +29111,52 @@
           "source_url": "https://en.wikipedia.org/wiki/Sogdia"
         },
         {
-          "name": "Isfara",
+          "name": "Fergana Valley",
           "disambiguation_note": null,
-          "localisation_stem": "Isfara",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Mountain river watering the Varukh-Isfara oasis.",
+          "localisation_stem": "Fergana",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "Fertile intermontane valley opening northward from the Isfara and Varukh gorges.",
           "language_variants": [
             {
-              "form": "Isfara",
-              "native_script": "Исфара",
-              "language": "Tajik",
-              "language_code": "tgk",
-              "notes": "Tajik name (Isfara)"
-            },
-            {
-              "form": "Isfara",
+              "form": "Fargʻona vodiysi",
               "native_script": null,
               "language": "Uzbek",
               "language_code": "uzb",
               "notes": "Uzbek name"
             },
             {
-              "form": "Isfara",
-              "native_script": "اسفره",
+              "form": "Vodii Farghona",
+              "native_script": "Водии Фарғона",
+              "language": "Tajik",
+              "language_code": "tgk",
+              "notes": "Tajik name"
+            },
+            {
+              "form": "Farghāneh",
+              "native_script": "فرغانه",
+              "language": "Persian",
+              "language_code": "fas",
+              "notes": "Persian name (Farghāna)"
+            },
+            {
+              "form": "Farghāna",
+              "native_script": "فرغانة",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Early Islamic geographical name (Asfara)"
+              "notes": "Early Islamic geographical name (Farghāna)"
             }
           ],
-          "earliest_attestation_year": 982,
-          "earliest_attestation_note": "982 CE (Hudud al-'Alam, as Asfara)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -128,
+          "earliest_attestation_note": "c. 128 BCE (Zhang Qian in Shiji as Dayuan; Farghana attested 715 CE in Sogdian Mount Mugh documents)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Iranian/Sogdian hydronym Asfara, flowing from the Turkestan Range into the Ferghana Valley.",
-          "source_url": "https://en.wikipedia.org/wiki/Isfara_(river)"
+          "etymology_notes": "Sogdian prγ'n (Farghana), the fertile intermontane basin of the upper Syr Darya.",
+          "source_url": "https://en.wikipedia.org/wiki/Fergana_Valley"
         },
         {
           "name": "Turkestan Range",
@@ -35668,52 +35382,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Amu_Darya"
         },
         {
-          "name": "Karakum Desert",
+          "name": "Kyzylkum Desert",
           "disambiguation_note": null,
-          "localisation_stem": "Karakum",
+          "localisation_stem": "Kyzylkum",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Sand desert flanking southern Khwarazm.",
+          "relationship": "Red-sand desert lying across the Amu Darya northeast of Khiva.",
           "language_variants": [
             {
-              "form": "Garagum",
-              "native_script": null,
-              "language": "Turkmen",
-              "language_code": "tuk",
-              "notes": "Turkmen name ('Black Sand')"
+              "form": "Qyzylqum",
+              "native_script": "Қйзйлқум",
+              "language": "Kazakh",
+              "language_code": "kaz",
+              "notes": "Kazakh name ('Red Sand')"
             },
             {
-              "form": "Qoraqum",
+              "form": "Qizilqum",
               "native_script": null,
               "language": "Uzbek",
               "language_code": "uzb",
               "notes": "Uzbek name"
             },
             {
-              "form": "Qarāqūm",
-              "native_script": "قره‌قوم",
+              "form": "Qīzīl-Qūm",
+              "native_script": "قیزیل‌قوم",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name (Qara-qūm)"
-            },
-            {
-              "form": "Mafāzat Khwārazm",
-              "native_script": "مفازة خوارزم",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Mafāzat Khwārazm)"
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": 1072,
-          "earliest_attestation_note": "c. 1072 CE (medieval Turkic toponym Qara Qum)",
+          "earliest_attestation_year": 982,
+          "earliest_attestation_note": "982 CE (Hudud al-'Alam, describing the desert sands between the Oxus and Jaxartes)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic Qara-qum ('Black Sand'), the vast desert south and west of the Amu Darya.",
-          "source_url": "https://en.wikipedia.org/wiki/Karakum_Desert"
+          "etymology_notes": "From Turkic qïzïl ('red') + qum ('sand'); desert between the Amu Darya and Syr Darya.",
+          "source_url": "https://en.wikipedia.org/wiki/Kyzylkum_Desert"
         }
       ]
     },
@@ -35859,52 +35566,52 @@
           "source_url": "https://en.wikipedia.org/wiki/Amu_Darya"
         },
         {
-          "name": "Aral Sea",
+          "name": "Ustyurt Plateau",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea bordering northern Khwarazm.",
+          "localisation_stem": "Ustyurt",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Plateau escarpment bordering western Khwarazm near Baratigin.",
           "language_variants": [
             {
-              "form": "Aral tengizi",
-              "native_script": "Арал теңізі",
+              "form": "Üstirt",
+              "native_script": "Үстірт",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Aral teñizi)"
+              "notes": "Kazakh name (Üstirt, 'Upper Plain')"
             },
             {
-              "form": "Orol dengizi",
+              "form": "Üstyurt",
+              "native_script": null,
+              "language": "Turkmen",
+              "language_code": "tuk",
+              "notes": "Turkmen name"
+            },
+            {
+              "form": "Ustyurt",
               "native_script": null,
               "language": "Uzbek",
               "language_code": "uzb",
               "notes": "Uzbek name"
             },
             {
-              "form": "Buḥayrat Khwārazm",
-              "native_script": "بحيرة خوارزم",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Buḥayrat Khwārazm, 'Sea of Khwarazm')"
-            },
-            {
-              "form": "Daryācheh-ye Khwārazm",
-              "native_script": "دریاچه خوارزم",
+              "form": "Ustyurt",
+              "native_script": "اوست‌یورت",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian historical name (Daryāche-ye Khwārazm)"
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (early modern Turkic geographical name Üst-yurt)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic aral ('island') referring to its many delta islands; earlier known in Islamic geography as the Sea of Khwarazm.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "Elevated clay-desert plateau between the Caspian Sea and the Aral Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Ustyurt_Plateau"
         }
       ]
     },
@@ -36050,52 +35757,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Amu_Darya"
         },
         {
-          "name": "Aral Sea",
+          "name": "Sarygamysh Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
+          "localisation_stem": "Sarygamysh",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea immediately north of the Mizdahqan delta.",
+          "feature_subtype": "lake",
+          "relationship": "Terminal lake depression southwest of the Mizdahqan delta.",
           "language_variants": [
             {
-              "form": "Aral tengizi",
-              "native_script": "Арал теңізі",
-              "language": "Kazakh",
-              "language_code": "kaz",
-              "notes": "Kazakh name (Aral teñizi)"
+              "form": "Sarygamyş köli",
+              "native_script": null,
+              "language": "Turkmen",
+              "language_code": "tuk",
+              "notes": "Turkmen name"
             },
             {
-              "form": "Orol dengizi",
+              "form": "Sariqamish koʻli",
               "native_script": null,
               "language": "Uzbek",
               "language_code": "uzb",
               "notes": "Uzbek name"
             },
             {
-              "form": "Buḥayrat Khwārazm",
-              "native_script": "بحيرة خوارزم",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Buḥayrat Khwārazm, 'Sea of Khwarazm')"
-            },
-            {
-              "form": "Daryācheh-ye Khwārazm",
-              "native_script": "دریاچه خوارزم",
+              "form": "Sārī-Qāmīsh",
+              "native_script": "ساری‌قامیش",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian historical name (Daryāche-ye Khwārazm)"
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
+          "earliest_attestation_year": 1663,
+          "earliest_attestation_note": "1663 CE (Abu al-Ghazi Bahadur, Shajara-i Turk)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic aral ('island') referring to its many delta islands; earlier known in Islamic geography as the Sea of Khwarazm.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "Turkic *sarï-qamïš ('yellow reeds'), endorheic depression between Khwarazm and the Uzboy.",
+          "source_url": "https://en.wikipedia.org/wiki/Sarygamysh_Lake"
         }
       ]
     },
@@ -36241,52 +35941,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Amu_Darya"
         },
         {
-          "name": "Aral Sea",
+          "name": "Kyzylkum Desert",
           "disambiguation_note": null,
-          "localisation_stem": "Aral Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea receiving the Amu Darya.",
+          "localisation_stem": "Kyzylkum",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Sand desert extending east of the Amu Darya delta past North Kurdar.",
           "language_variants": [
             {
-              "form": "Aral tengizi",
-              "native_script": "Арал теңізі",
+              "form": "Qyzylqum",
+              "native_script": "Қйзйлқум",
               "language": "Kazakh",
               "language_code": "kaz",
-              "notes": "Kazakh name (Aral teñizi)"
+              "notes": "Kazakh name ('Red Sand')"
             },
             {
-              "form": "Orol dengizi",
+              "form": "Qizilqum",
               "native_script": null,
               "language": "Uzbek",
               "language_code": "uzb",
               "notes": "Uzbek name"
             },
             {
-              "form": "Buḥayrat Khwārazm",
-              "native_script": "بحيرة خوارزم",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Early Islamic geographical name (Buḥayrat Khwārazm, 'Sea of Khwarazm')"
-            },
-            {
-              "form": "Daryācheh-ye Khwārazm",
-              "native_script": "دریاچه خوارزم",
+              "form": "Qīzīl-Qūm",
+              "native_script": "قیزیل‌قوم",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian historical name (Daryāche-ye Khwārazm)"
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": 943,
-          "earliest_attestation_note": "943 CE (al-Mas'udi, Muruj al-Dhahab, as Lake of Khwarazm)",
+          "earliest_attestation_year": 982,
+          "earliest_attestation_note": "982 CE (Hudud al-'Alam, describing the desert sands between the Oxus and Jaxartes)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Turkic aral ('island') referring to its many delta islands; earlier known in Islamic geography as the Sea of Khwarazm.",
-          "source_url": "https://en.wikipedia.org/wiki/Aral_Sea"
+          "etymology_notes": "From Turkic qïzïl ('red') + qum ('sand'); desert between the Amu Darya and Syr Darya.",
+          "source_url": "https://en.wikipedia.org/wiki/Kyzylkum_Desert"
         }
       ]
     },
@@ -41942,66 +41635,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Uly_Balkan"
         },
         {
-          "name": "Caspian Sea",
+          "name": "Uzboy",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian Sea",
+          "localisation_stem": "Uzboy",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea bordering western Turkmenistan.",
+          "feature_subtype": "river",
+          "relationship": "Ancient dry river channel passing south of Nebit Dag and Uly Balkan.",
           "language_variants": [
             {
-              "form": "Kaspīy tengizi",
-              "native_script": "Каспīй теңізі",
-              "language": "Kazakh",
-              "language_code": "kaz",
-              "notes": "Kazakh name (Kaspïy teñizi)"
-            },
-            {
-              "form": "Hazar deňzi",
+              "form": "Uzboý",
               "native_script": null,
               "language": "Turkmen",
               "language_code": "tuk",
-              "notes": "Turkmen name (Khazar Sea)"
+              "notes": "Turkmen name"
             },
             {
-              "form": "Baḥr al-Khazar",
-              "native_script": "بحر الخزر",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic geographical name (Baḥr al-Khazar)"
-            },
-            {
-              "form": "Daryā-ye Khazar",
-              "native_script": "دریای خزر",
+              "form": "Uzboy",
+              "native_script": "اوزبوی",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name (Daryā-ye Khazar)"
-            },
-            {
-              "form": "Kaspía Thálassa",
-              "native_script": "Κασπία Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name (Kaspía thálassa)"
-            },
-            {
-              "form": "Mare Caspium",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "c. 450 BCE (Hecataeus of Miletus and Herodotus, Histories 1.202)",
+          "earliest_attestation_year": -300,
+          "earliest_attestation_note": "c. 300 BCE (classical accounts of the western Oxus channel toward the Caspian)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after the ancient Caspii people of its southwestern shore; in Islamic geography known as the Khazar Sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+          "etymology_notes": "Palaeo-channel connecting the Sarygamysh basin and Khwarazm to the Caspian Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Uzboy"
         }
       ]
     },
@@ -42071,66 +41736,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Dahae"
         },
         {
-          "name": "Caspian Sea",
+          "name": "Ogurja Ada",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Inland sea surrounding the Cheleken headland.",
+          "localisation_stem": "Ogurja Ada",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Long barrier island lying immediately south of the Cheleken Peninsula.",
           "language_variants": [
             {
-              "form": "Kaspīy tengizi",
-              "native_script": "Каспīй теңізі",
-              "language": "Kazakh",
-              "language_code": "kaz",
-              "notes": "Kazakh name (Kaspïy teñizi)"
-            },
-            {
-              "form": "Hazar deňzi",
+              "form": "Ogurjaly adasy",
               "native_script": null,
               "language": "Turkmen",
               "language_code": "tuk",
-              "notes": "Turkmen name (Khazar Sea)"
+              "notes": "Turkmen name"
             },
             {
-              "form": "Baḥr al-Khazar",
-              "native_script": "بحر الخزر",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic geographical name (Baḥr al-Khazar)"
-            },
-            {
-              "form": "Daryā-ye Khazar",
-              "native_script": "دریای خزر",
+              "form": "Ogūrjā Ādā",
+              "native_script": "اوگورجا آدا",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name (Daryā-ye Khazar)"
-            },
-            {
-              "form": "Kaspía Thálassa",
-              "native_script": "Κασπία Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name (Kaspía thálassa)"
-            },
-            {
-              "form": "Mare Caspium",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "c. 450 BCE (Hecataeus of Miletus and Herodotus, Histories 1.202)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1400,
+          "earliest_attestation_note": "c. 1400 CE (medieval Turkmen coastal island name)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after the ancient Caspii people of its southwestern shore; in Islamic geography known as the Khazar Sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+          "etymology_notes": "Largest island of the eastern Caspian Sea, off the Cheleken Peninsula.",
+          "source_url": "https://en.wikipedia.org/wiki/Ogurja_Ada"
         },
         {
           "name": "Uly Balkan",

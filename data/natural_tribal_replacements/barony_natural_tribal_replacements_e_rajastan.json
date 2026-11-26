@@ -137,22 +137,22 @@
       "target_baronies_audited": 330,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 990,
-      "unique_replacement_names": 215,
-      "candidates_with_multilingual_variants": 815,
+      "unique_replacement_names": 226,
+      "candidates_with_multilingual_variants": 817,
       "wikipedia_source_attached": 990,
-      "unique_source_urls": 215,
+      "unique_source_urls": 226,
       "candidates_by_category": {
-        "choronym": 81,
-        "hydronym": 435,
-        "oronym": 122,
-        "topographic_feature": 22,
+        "choronym": 77,
+        "hydronym": 443,
+        "oronym": 117,
+        "topographic_feature": 23,
         "tribe": 330
       },
       "baronies_with_category": {
-        "has_choronym_candidate": 77,
-        "has_hydronym_candidate": 303,
-        "has_oronym_candidate": 116,
-        "has_topographic_feature_candidate": 20,
+        "has_choronym_candidate": 73,
+        "has_hydronym_candidate": 304,
+        "has_oronym_candidate": 112,
+        "has_topographic_feature_candidate": 21,
         "has_tribe_candidate": 330
       },
       "unique_language_codes": [
@@ -161,14 +161,19 @@
         "grc",
         "guj",
         "hin",
+        "kas",
+        "khw",
         "nep",
         "otk",
+        "pal",
         "pan",
         "pra",
         "raj",
         "san",
+        "scl",
         "snd",
-        "uig"
+        "uig",
+        "urd"
       ],
       "anachronism_type_counts": {
         "early_modern_foundation": 36,
@@ -179,18 +184,18 @@
         "unattested_indigenous_or_minor": 99
       },
       "candidates_by_attestation_basis": {
-        "attested_1066_to_1178": 9,
-        "attested_867_to_1066": 31,
-        "attested_pre_867": 676,
-        "indigenous_pre_literate": 274
+        "attested_1066_to_1178": 8,
+        "attested_867_to_1066": 24,
+        "attested_pre_867": 677,
+        "indigenous_pre_literate": 281
       },
       "bookmark_valid_candidates": {
-        "867": 950,
-        "1066": 981,
+        "867": 958,
+        "1066": 982,
         "1178": 990
       },
       "baronies_with_867_valid_candidate": 330,
-      "unique_localisation_stems": 214
+      "unique_localisation_stems": 225
     }
   },
   "baronies": {
@@ -3697,38 +3702,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ganges"
         },
         {
-          "name": "Ramganga River",
+          "name": "Sot River",
           "disambiguation_note": null,
-          "localisation_stem": "Ramganga",
+          "localisation_stem": "Sot",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river associated with Sambhal in Sambhal.",
+          "relationship": "Seasonal Ganges tributary flowing directly through the Sambhal district.",
           "language_variants": [
             {
-              "form": "Rāmgaṅgā",
-              "native_script": "राम्गंगा",
+              "form": "Sōta",
+              "native_script": "सोत",
               "language": "Hindi",
               "language_code": "hin",
-              "notes": "Modern Indo-Aryan form"
+              "notes": "Hindi river name Sot (from Sanskrit Srotas, 'stream')"
             },
             {
-              "form": "Rathavāhanī",
-              "native_script": "रथवाहनी",
+              "form": "Srōtas",
+              "native_script": "स्रोतस्",
               "language": "Sanskrit",
               "language_code": "san",
-              "notes": "Epic Sanskrit name"
+              "notes": "Sanskrit etymon meaning 'stream'"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 1st millennium BCE (Sanskrit epics as Rathavāhanī)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Indigenous pre-literate hydronym of Rohilkhand",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major left-bank tributary of the Ganges descending from Kumaon through Bijnor and Bareilly.",
-          "source_url": "https://en.wikipedia.org/wiki/Ramganga"
+          "etymology_notes": "From Sanskrit srotas ('stream'); rises near Amroha and flows through Sambhal and Budaun to the Ganges.",
+          "source_url": "https://en.wikipedia.org/wiki/Sot_River"
         }
       ]
     },
@@ -7290,38 +7295,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Chudasamas",
+          "name": "Saindhavas",
           "disambiguation_note": null,
-          "localisation_stem": "Chudasamas",
+          "localisation_stem": "Saindhavas",
           "category": "tribe",
-          "feature_subtype": "medieval_people",
-          "relationship": "Historical regional people of Bhumilka around Vamanasthali.",
+          "feature_subtype": "indo_aryan_people",
+          "relationship": "Pre-867 ruling people of western Saurashtra centered at Bhumilka near Vamanasthali.",
           "language_variants": [
             {
-              "form": "Cūḍāsamā",
-              "native_script": "चूडासमा",
+              "form": "Saindhava",
+              "native_script": "सैन्धव",
               "language": "Sanskrit",
               "language_code": "san",
-              "notes": "Inscriptional Sanskrit form"
+              "notes": "Sanskrit ethnonym meaning 'of Sindh'"
             },
             {
-              "form": "Cūḍāsamā",
-              "native_script": "ચૂડાસમા",
+              "form": "Saindhava",
+              "native_script": "સૈંધવ",
               "language": "Gujarati",
               "language_code": "guj",
-              "notes": "Gujarati form"
+              "notes": "Gujarati historical form"
             }
           ],
-          "earliest_attestation_year": 875,
-          "earliest_attestation_note": "Late 9th century CE (early medieval inscriptions of Junagadh/Vamanasthali)",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 735,
+          "earliest_attestation_note": "735 CE (establishment of the Saindhava dynasty at Bhutambilika in western Saurashtra)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Medieval ruling clan of southern Saurashtra claiming Yadava-Abhira descent.",
-          "source_url": "https://en.wikipedia.org/wiki/Chudasama"
+          "etymology_notes": "Derived from Sanskrit Sindhu; coastal clan migrating from Sindh to rule western Saurashtra from 735 to 920 CE.",
+          "source_url": "https://en.wikipedia.org/wiki/Saindhava"
         },
         {
           "name": "Girnar",
@@ -7459,38 +7464,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Chudasama"
         },
         {
-          "name": "Girnar",
+          "name": "Ozat River",
           "disambiguation_note": null,
-          "localisation_stem": "Girnar",
-          "category": "oronym",
-          "feature_subtype": "mountain",
-          "relationship": "Local mountain associated with Shrinagar in Bhumilka.",
+          "localisation_stem": "Ozat",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river of southern Saurashtra flowing through the Junagadh plain near Shrinagar.",
           "language_variants": [
             {
-              "form": "Girinagara",
-              "native_script": "गिरिनगर",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Ashokan and Rudradaman inscriptions"
-            },
-            {
-              "form": "Girnār",
-              "native_script": "ગિર્નાર્",
+              "form": "Ōjhaṭa",
+              "native_script": "ઓઝટ",
               "language": "Gujarati",
               "language_code": "guj",
-              "notes": "Gujarati form"
+              "notes": "Gujarati river name Ojhat/Ozat"
+            },
+            {
+              "form": "Ujjayantī",
+              "native_script": "उज्जयन्ती",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Sanskritized regional river name"
             }
           ],
-          "earliest_attestation_year": -250,
-          "earliest_attestation_note": "3rd century BCE (Ashoka's Major Rock Edicts at Girnar/Junagadh)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Indigenous pre-literate hydronym of the Junagadh-Porbandar basin",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Sanskrit Girinagara ('hill-city'), sacred granite massif in southern Saurashtra.",
-          "source_url": "https://en.wikipedia.org/wiki/Girnar"
+          "etymology_notes": "Originates near Visavadar in Junagadh and flows westward across the Saurashtra coastal plain.",
+          "source_url": "https://en.wikipedia.org/wiki/Ozat_River"
         },
         {
           "name": "Bhadar River",
@@ -7830,38 +7835,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Chudasamas",
+          "name": "Maitrakas",
           "disambiguation_note": null,
-          "localisation_stem": "Chudasamas",
+          "localisation_stem": "Maitrakas",
           "category": "tribe",
           "feature_subtype": "medieval_people",
-          "relationship": "Historical regional people of Somnath around Somnath.",
+          "relationship": "Early medieval dynasty and ruling people of Saurashtra predating 867 around Somnath.",
           "language_variants": [
             {
-              "form": "Cūḍāsamā",
-              "native_script": "चूडासमा",
+              "form": "Maitraka",
+              "native_script": "मैत्रक",
               "language": "Sanskrit",
               "language_code": "san",
-              "notes": "Inscriptional Sanskrit form"
+              "notes": "Copper-plate grant inscriptions"
             },
             {
-              "form": "Cūḍāsamā",
-              "native_script": "ચૂડાસમા",
+              "form": "Maitraka",
+              "native_script": "મૈત્રક",
               "language": "Gujarati",
               "language_code": "guj",
-              "notes": "Gujarati form"
+              "notes": "Gujarati historical form"
             }
           ],
-          "earliest_attestation_year": 875,
-          "earliest_attestation_note": "Late 9th century CE (early medieval inscriptions of Junagadh/Vamanasthali)",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 475,
+          "earliest_attestation_note": "Late 5th century CE (Valabhi copper-plate inscriptions)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Medieval ruling clan of southern Saurashtra claiming Yadava-Abhira descent.",
-          "source_url": "https://en.wikipedia.org/wiki/Chudasama"
+          "etymology_notes": "Derived from Sanskrit Mitra (Sun deity), ruling dynasty and clan centered at Valabhi in eastern Saurashtra.",
+          "source_url": "https://en.wikipedia.org/wiki/Maitraka"
         },
         {
           "name": "Girnar",
@@ -7992,38 +7997,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Chudasama"
         },
         {
-          "name": "Girnar",
+          "name": "Hiran River",
           "disambiguation_note": null,
-          "localisation_stem": "Girnar",
-          "category": "oronym",
-          "feature_subtype": "mountain",
-          "relationship": "Local mountain associated with Delvāda in Somnath.",
+          "localisation_stem": "Hiran",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Gir Forest river reaching the coast near Somnath west of Delvada.",
           "language_variants": [
             {
-              "form": "Girinagara",
-              "native_script": "गिरिनगर",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Ashokan and Rudradaman inscriptions"
-            },
-            {
-              "form": "Girnār",
-              "native_script": "ગિર્નાર્",
+              "form": "Hiraṇa",
+              "native_script": "હિરણ",
               "language": "Gujarati",
               "language_code": "guj",
-              "notes": "Gujarati form"
+              "notes": "Gujarati river name Hiran"
+            },
+            {
+              "form": "Hiraṇyā",
+              "native_script": "हिरण्या",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Classical Sanskrit name Hiranya ('golden')"
             }
           ],
-          "earliest_attestation_year": -250,
-          "earliest_attestation_note": "3rd century BCE (Ashoka's Major Rock Edicts at Girnar/Junagadh)",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "Ancient Puranic Prabhāsa-kṣetra texts naming the Hiranya stream",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Sanskrit Girinagara ('hill-city'), sacred granite massif in southern Saurashtra.",
-          "source_url": "https://en.wikipedia.org/wiki/Girnar"
+          "etymology_notes": "From Sanskrit hiranya ('golden'); flows from the Sasa Hills of Gir to the coastal Triveni Sangam.",
+          "source_url": "https://en.wikipedia.org/wiki/Hiran_River"
         },
         {
           "name": "Shetrunji River",
@@ -8376,38 +8381,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Maitraka"
         },
         {
-          "name": "Shatrunjaya",
+          "name": "Bhogavo River",
           "disambiguation_note": null,
-          "localisation_stem": "Shatrunjaya",
-          "category": "oronym",
-          "feature_subtype": "hill",
-          "relationship": "Local hill associated with Dhandhuka in Valabhi.",
+          "localisation_stem": "Bhogavo",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Right-bank Sabarmati tributary flowing south of Dhandhuka toward the coastal plain.",
           "language_variants": [
             {
-              "form": "Śatruñjaya",
-              "native_script": "शत्रुञ्जय",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Literally 'conqueror of enemies'"
-            },
-            {
-              "form": "Śetruñjay",
-              "native_script": "શેત્રુઞ્જય્",
+              "form": "Bhōgāvō",
+              "native_script": "ભોગાવો",
               "language": "Gujarati",
               "language_code": "guj",
-              "notes": "Gujarati form"
+              "notes": "Gujarati river name Bhogavo"
+            },
+            {
+              "form": "Bhōgavatī",
+              "native_script": "भोगवती",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Sanskritized river name"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "5th century CE (Jain canonical and Valabhi-era traditions)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Indigenous pre-literate hydronym of eastern Saurashtra",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Sacred hill massif in eastern Saurashtra overlooking the Shetrunji valley. Onomastic note: Sanskrit 'Śatruñjaya' (Literally 'conqueror of enemies').",
-          "source_url": "https://en.wikipedia.org/wiki/Shatrunjaya"
+          "etymology_notes": "Flows past Surendranagar and Limbdi across the Bhal plain near Dhandhuka and ancient Lothal.",
+          "source_url": "https://en.wikipedia.org/wiki/Bhogavo_River"
         },
         {
           "name": "Shetrunji River",
@@ -8504,38 +8509,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Maitraka"
         },
         {
-          "name": "Shatrunjaya",
+          "name": "Ghela River",
           "disambiguation_note": null,
-          "localisation_stem": "Shatrunjaya",
-          "category": "oronym",
-          "feature_subtype": "hill",
-          "relationship": "Local hill associated with Sihor in Valabhi.",
+          "localisation_stem": "Ghela",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Saurashtra river rising in the Jasdan hills north of Sihor.",
           "language_variants": [
             {
-              "form": "Śatruñjaya",
-              "native_script": "शत्रुञ्जय",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Literally 'conqueror of enemies'"
-            },
-            {
-              "form": "Śetruñjay",
-              "native_script": "શેત્રુઞ્જય્",
+              "form": "Ghēlō",
+              "native_script": "ઘેલો",
               "language": "Gujarati",
               "language_code": "guj",
-              "notes": "Gujarati form"
+              "notes": "Gujarati river name Ghelo/Ghela"
+            },
+            {
+              "form": "Ghēla",
+              "native_script": "घेल",
+              "language": "Hindi",
+              "language_code": "hin",
+              "notes": "Hindi transliteration"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "5th century CE (Jain canonical and Valabhi-era traditions)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Indigenous pre-literate hydronym of Bhavnagar-Gadhada",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Sacred hill massif in eastern Saurashtra overlooking the Shetrunji valley. Onomastic note: Sanskrit 'Śatruñjaya' (Literally 'conqueror of enemies').",
-          "source_url": "https://en.wikipedia.org/wiki/Shatrunjaya"
+          "etymology_notes": "Rises in the central Saurashtra highlands and flows eastward past Gadhada north of Sihor toward the coast.",
+          "source_url": "https://en.wikipedia.org/wiki/Ghela"
         },
         {
           "name": "Shetrunji River",
@@ -13566,31 +13571,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Bagmati_River"
         },
         {
-          "name": "Kathmandu Valley",
-          "disambiguation_note": null,
-          "localisation_stem": "Kathmandu",
-          "category": "topographic_feature",
-          "feature_subtype": "valley",
-          "relationship": "Local valley associated with Kirtipur in Kathmandu.",
+          "name": "Chandragiri Hill",
+          "disambiguation_note": "Nepal",
+          "localisation_stem": "Chandragiri",
+          "category": "oronym",
+          "feature_subtype": "hill",
+          "relationship": "Prominent ridge on the southwestern rim of the valley overlooking Kirtipur.",
           "language_variants": [
             {
-              "form": "Nepāla Maṇḍala",
-              "native_script": "नॆपाल मंडल",
+              "form": "Candrāgiri",
+              "native_script": "चन्द्रागिरि",
+              "language": "Nepali",
+              "language_code": "nep",
+              "notes": "Nepali hill name Chandragiri"
+            },
+            {
+              "form": "Candrāgiri",
+              "native_script": "चन्द्रागिरि",
               "language": "Sanskrit",
               "language_code": "san",
-              "notes": "Classical Licchavi/Malla name"
+              "notes": "Sanskrit name meaning 'moon mountain'"
             }
           ],
-          "earliest_attestation_year": 350,
-          "earliest_attestation_note": "4th century CE (Samudragupta's Allahabad Pillar inscription as Nepāla)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Medieval Newar and Nepali valley chronicles of the western rim",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Bowl-shaped Himalayan valley drained by the Bagmati River.",
-          "source_url": "https://en.wikipedia.org/wiki/Kathmandu_Valley"
+          "etymology_notes": "From Sanskrit chandra ('moon') and giri ('mountain'); forms the southwestern mountain pass above Kirtipur.",
+          "source_url": "https://en.wikipedia.org/wiki/Chandragiri_Hill_(Nepal)"
         }
       ]
     },
@@ -14144,45 +14156,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Dards"
         },
         {
-          "name": "Indus River",
+          "name": "Babusar Pass",
           "disambiguation_note": null,
-          "localisation_stem": "Indus",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Local river associated with Kaghan in Allai.",
+          "localisation_stem": "Babusar",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "High Himalayan pass linking the upper Kaghan Valley with Chilas.",
           "language_variants": [
             {
-              "form": "Sindhu",
-              "native_script": "सिंधु",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Rigvedic hydronym"
+              "form": "Bābūsar",
+              "native_script": "بابوسر",
+              "language": "Urdu",
+              "language_code": "urd",
+              "notes": "Urdu and Hindko mountain pass name"
             },
             {
-              "form": "Indós",
-              "native_script": "Ἰνδός",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Herodotus and Alexander's historians"
-            },
-            {
-              "form": "Sindh",
-              "native_script": "سند",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian form"
+              "form": "Bābūsar",
+              "native_script": "بابوسر",
+              "language": "Shina",
+              "language_code": "scl",
+              "notes": "Shina frontier pass name"
             }
           ],
-          "earliest_attestation_year": -1500,
-          "earliest_attestation_note": "Attested as Sindhu in the Rigveda (c. 1500 BCE) and Indós in Herodotus.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Pre-modern caravan route connecting Hazara and the upper Indus valley",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Sanskrit Sindhu ('river/stream'), great river cutting through Gilgit and Kohistan.",
-          "source_url": "https://en.wikipedia.org/wiki/Indus_River"
+          "etymology_notes": "High alpine corridor at the head of the Kaghan Valley crossing into the Diamer basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Babusar_Pass"
         },
         {
           "name": "Kunhar River",
@@ -14500,31 +14505,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shina_people"
         },
         {
-          "name": "Astore River",
+          "name": "Burzil Pass",
           "disambiguation_note": null,
-          "localisation_stem": "Astore",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Local river associated with Minimarg in Astore.",
+          "localisation_stem": "Burzil",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "Ancient Himalayan caravan pass situated immediately south of Minimarg.",
           "language_variants": [
             {
-              "form": "Daryā-ye Astōr",
-              "native_script": "دریای استور",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Regional form"
+              "form": "Burzil",
+              "native_script": "برزِل",
+              "language": "Shina",
+              "language_code": "scl",
+              "notes": "Local Shina pass name"
+            },
+            {
+              "form": "Burzil",
+              "native_script": "बुर्ज़िल",
+              "language": "Kashmiri",
+              "language_code": "kas",
+              "notes": "Kashmiri caravan-route name"
             }
           ],
-          "earliest_attestation_year": 1100,
-          "earliest_attestation_note": "Medieval period CE (tributary of the Indus east of Nanga Parbat)",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Early medieval Kashmir-Gilgit mountain transit corridor",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River draining the eastern flank of Nanga Parbat and Deosai into the Indus.",
-          "source_url": "https://en.wikipedia.org/wiki/Astore_River"
+          "etymology_notes": "Historic high pass linking the Kishanganga valley of Kashmir with Astore and the Deosai plateau.",
+          "source_url": "https://en.wikipedia.org/wiki/Burzil_Pass"
         },
         {
           "name": "Nanga Parbat",
@@ -15111,31 +15123,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Hindu_Kush"
         },
         {
-          "name": "Shandur Pass",
+          "name": "Phander Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Shandur",
-          "category": "oronym",
-          "feature_subtype": "plateau",
-          "relationship": "Local plateau associated with Golaghmuli in Golaghmuli.",
+          "localisation_stem": "Phander",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Natural alpine lake in the Ghizer valley east of Golaghmuli.",
           "language_variants": [
             {
-              "form": "Shandūr",
-              "native_script": "شندور",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Regional spelling"
+              "form": "Phandar",
+              "native_script": "پھنڈر",
+              "language": "Shina",
+              "language_code": "scl",
+              "notes": "Local Shina lake name"
+            },
+            {
+              "form": "Phandar",
+              "native_script": "پھنڈر",
+              "language": "Khowar",
+              "language_code": "khw",
+              "notes": "Khowar valley form"
             }
           ],
-          "earliest_attestation_year": 1400,
-          "earliest_attestation_note": "Late medieval period CE (high mountain pass linking Chitral and Gilgit)",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Indigenous pre-literate alpine lake of the upper Ghizer river basin",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "High-altitude pass and plateau at 3,700 m between Chitral and Ghizer.",
-          "source_url": "https://en.wikipedia.org/wiki/Shandur_Pass"
+          "etymology_notes": "Glacial-fed freshwater lake lying along the course of the Ghizer River below the Shandur plateau.",
+          "source_url": "https://en.wikipedia.org/wiki/Phander_Lake"
         }
       ]
     },
@@ -16807,38 +16826,45 @@
       },
       "replacement_candidates": [
         {
-          "name": "Gahadavalas",
+          "name": "Vatsas",
           "disambiguation_note": null,
-          "localisation_stem": "Gahadavalas",
+          "localisation_stem": "Vatsas",
           "category": "tribe",
-          "feature_subtype": "medieval_people",
-          "relationship": "Historical regional people of Asni around Asni.",
+          "feature_subtype": "indo_aryan_people",
+          "relationship": "Ancient Indo-Aryan people of the lower Ganga-Yamuna Doab around Asni.",
           "language_variants": [
             {
-              "form": "Gahaḍavāla",
-              "native_script": "गहडवाल",
+              "form": "Vatsa",
+              "native_script": "वत्स",
               "language": "Sanskrit",
               "language_code": "san",
-              "notes": "Copper-plate inscriptions"
+              "notes": "Vedic and Mahajanapada ethnonym Vatsa"
             },
             {
-              "form": "Gaharvār",
-              "native_script": "गहर्वार्",
+              "form": "Vaccha",
+              "native_script": "वच्छ",
+              "language": "Prakrit",
+              "language_code": "pra",
+              "notes": "Pali and Prakrit form Vaccha"
+            },
+            {
+              "form": "Vatsa",
+              "native_script": "वत्स",
               "language": "Hindi",
               "language_code": "hin",
-              "notes": "Vernacular North Indian form"
+              "notes": "Modern Hindi historical form"
             }
           ],
-          "earliest_attestation_year": 1089,
-          "earliest_attestation_note": "Late 11th century CE (Chandradeva's Kanyakubja and Varanasi grants)",
-          "attestation_basis": "attested_1066_to_1178",
+          "earliest_attestation_year": -600,
+          "earliest_attestation_note": "c. 600 BCE (attested in Buddhist, Jain, and Puranic sources as one of the sixteen Mahajanapadas)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
-            "1066": false,
+            "867": true,
+            "1066": true,
             "1178": true
           },
-          "etymology_notes": "Medieval Rajput clan ruling Kanyakubja and Varanasi in the middle Ganga plain.",
-          "source_url": "https://en.wikipedia.org/wiki/Gahadavala_dynasty"
+          "etymology_notes": "From Sanskrit Vatsa ('calf'), an ancient Kuru offshoot centered at Kaushambi along the lower Doab.",
+          "source_url": "https://en.wikipedia.org/wiki/Vatsa"
         },
         {
           "name": "Ganges River",
@@ -24193,31 +24219,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tapti_River"
         },
         {
-          "name": "Panzara River",
+          "name": "Girna River",
           "disambiguation_note": null,
-          "localisation_stem": "Panzara",
+          "localisation_stem": "Girna",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major local river draining or bordering the Amalner area.",
+          "relationship": "Major Tapti tributary flowing across Khandesh near Amalner.",
           "language_variants": [
             {
-              "form": "Pān̄jharā",
-              "native_script": "पांझरा",
+              "form": "Giraṇā",
+              "native_script": "गिरणा",
               "language": "Hindi",
               "language_code": "hin",
-              "notes": "Deccan/Hindi name (Pāñjharā)"
+              "notes": "Hindi/Marathi name (Girṇā)"
+            },
+            {
+              "form": "Girijā",
+              "native_script": "गिरिजा",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Sanskritized form (Girijā)"
             }
           ],
-          "earliest_attestation_year": 1300,
-          "earliest_attestation_note": "Attested in medieval Khandesh and Faruqi-era chronicles (c. 1300 CE) as a tributary of the Tapti.",
+          "earliest_attestation_year": 1200,
+          "earliest_attestation_note": "Attested in medieval Khandesh and Yadava-era records (c. 1200 CE) as a major southern tributary of the Tapti.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tributary of the Tapti River draining western Khandesh past Bhamer and Thalner.",
-          "source_url": "https://en.wikipedia.org/wiki/Panzara_River"
+          "etymology_notes": "From Sanskrit giri ('mountain'); major tributary of the Tapti flowing through Khandesh past Erandol.",
+          "source_url": "https://en.wikipedia.org/wiki/Girna_River"
         }
       ]
     },
@@ -25085,7 +25118,7 @@
           "localisation_stem": "Malwa",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Historical geographical region encompassing Agar (Ujjayini, x_script_3406).",
+          "relationship": "Historical geographical region encompassing Agar (Ujjayini).",
           "language_variants": [
             {
               "form": "Mālava",
@@ -25227,7 +25260,7 @@
           "localisation_stem": "Malwa",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Historical geographical region encompassing Mehidpur (Ujjayini, x_script_3406).",
+          "relationship": "Historical geographical region encompassing Mehidpur (Ujjayini).",
           "language_variants": [
             {
               "form": "Mālava",
@@ -25369,7 +25402,7 @@
           "localisation_stem": "Malwa",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Historical geographical region encompassing Maksi (Ujjayini, x_script_3406).",
+          "relationship": "Historical geographical region encompassing Maksi (Ujjayini).",
           "language_variants": [
             {
               "form": "Mālava",
@@ -25506,45 +25539,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Shipra_River"
         },
         {
-          "name": "Malwa",
+          "name": "Kali Sindh River",
           "disambiguation_note": null,
-          "localisation_stem": "Malwa",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Historical geographical region encompassing Dewas (Ujjayini, x_script_3406).",
+          "localisation_stem": "Kali Sindh",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Malwa river rising in the Vindhya hills of Dewas.",
           "language_variants": [
             {
-              "form": "Mālava",
-              "native_script": "मालव",
+              "form": "Kālī Sindhu",
+              "native_script": "काली सिंधु",
               "language": "Sanskrit",
               "language_code": "san",
-              "notes": "Sanskrit regional name (Mālava)"
+              "notes": "Sanskrit name (Kālī Sindhu)"
             },
             {
-              "form": "Mālvā",
-              "native_script": "माल्वा",
+              "form": "Kālī Sindha",
+              "native_script": "काली सिंध",
               "language": "Hindi",
               "language_code": "hin",
-              "notes": "Hindi name (Mālvā)"
+              "notes": "Hindi name (Kālī Sindh)"
             },
             {
-              "form": "Mālwah",
-              "native_script": "مالوه",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian chronicle name (Mālwa)"
+              "form": "Kālī Sindha",
+              "native_script": "काली सिंध",
+              "language": "Rajasthani",
+              "language_code": "raj",
+              "notes": "Rajasthani name (Kālī Sindh)"
             }
           ],
-          "earliest_attestation_year": 100,
-          "earliest_attestation_note": "1st-2nd century CE (named after the Malava tribe)",
+          "earliest_attestation_year": -300,
+          "earliest_attestation_note": "Attested as Sindhu/Kālī Sindhu in Sanskrit Puranic geography.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Volcanic plateau region north of the Vindhyas named after the ancient Mālava people.",
-          "source_url": "https://en.wikipedia.org/wiki/Malwa"
+          "etymology_notes": "From Sanskrit kālī ('dark') + sindhu ('river'); major tributary of the Chambal flowing north through Malwa and Hadoti.",
+          "source_url": "https://en.wikipedia.org/wiki/Kali_Sindh_River"
         }
       ]
     },
@@ -27526,38 +27559,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Gakhars",
+          "name": "Kekayas",
           "disambiguation_note": null,
-          "localisation_stem": "Gakhars",
+          "localisation_stem": "Kekayas",
           "category": "tribe",
           "feature_subtype": "indo_aryan_people",
-          "relationship": "Historically prominent indo aryan people associated with the Bhera area.",
+          "relationship": "Ancient Indo-Aryan people of the Jhelum and Salt Range tracts around Bhera.",
           "language_variants": [
             {
-              "form": "Gakkhaṛ",
-              "native_script": "گکھڑ",
-              "language": "Punjabi",
-              "language_code": "pan",
-              "notes": "Punjabi/Potohari form (Gakkhaṛ)"
+              "form": "Kekaya",
+              "native_script": "केकय",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Vedic and epic Sanskrit ethnonym Kekaya"
             },
             {
-              "form": "Gakkhaṛ",
-              "native_script": "گکھڑ",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian chronicle form (Gakhar)"
+              "form": "Kaikaya",
+              "native_script": "कैकय",
+              "language": "Hindi",
+              "language_code": "hin",
+              "notes": "Modern Hindi historical form"
             }
           ],
-          "earliest_attestation_year": 1008,
-          "earliest_attestation_note": "Attested in Persian histories of Mahmud of Ghazni's 1008 CE campaign in the Salt Range and Potohar.",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": -600,
+          "earliest_attestation_note": "c. 600 BCE (attested in the Shatapatha Brahmana, Ramayana, and Mahabharata)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Warrior clan of the Potohar Plateau and Salt Range between the Indus and Jhelum rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Gakhars"
+          "etymology_notes": "Ancient northwestern Indo-Aryan tribe inhabiting the Jhelum-Chenab doab and Salt Range foothills.",
+          "source_url": "https://en.wikipedia.org/wiki/Kekeya_kingdom"
         },
         {
           "name": "Jhelum River",
@@ -30713,45 +30746,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Balochs",
+          "name": "Paratarajas",
           "disambiguation_note": null,
-          "localisation_stem": "Balochs",
+          "localisation_stem": "Paratarajas",
           "category": "tribe",
           "feature_subtype": "iranian_tribe",
-          "relationship": "Historically prominent iranian tribe associated with the Loralai area.",
+          "relationship": "Ancient Indo-Iranian people and dynasty centered in Loralai.",
           "language_variants": [
             {
-              "form": "Balūč",
-              "native_script": "بلوچ",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian form (Balūch)"
+              "form": "Pārada",
+              "native_script": "पारद",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Sanskrit ethnonym Parada in epic and Puranic texts"
             },
             {
-              "form": "Al-Balūṣ",
-              "native_script": "البلوص",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic form (al-Balūṣ)"
-            },
-            {
-              "form": "Balōc",
-              "native_script": "بلوچ",
-              "language": "Sindhi",
-              "language_code": "snd",
-              "notes": "Sindhi form (Baloch)"
+              "form": "Pārādān",
+              "native_script": "𐭯𐭠𐭫𐭣𐭠𐭭",
+              "language": "Middle Persian",
+              "language_code": "pal",
+              "notes": "Sasanian Naqsh-e Rustam form Paradan (262 CE)"
             }
           ],
-          "earliest_attestation_year": 950,
-          "earliest_attestation_note": "Attested in 10th-century CE Arabic and Persian geographies (al-Istakhri, Ferdowsi's Shahnameh).",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 125,
+          "earliest_attestation_note": "c. 125 CE (coinage of the Paratarajas in Loralai and 262 CE Sasanian inscription of Shapur I)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Northwestern Iranian pastoral people who settled in Balochistan, Kachhi, and the Derajat frontier.",
-          "source_url": "https://en.wikipedia.org/wiki/Baloch_people"
+          "etymology_notes": "Linked to the Sanskrit Paradas and Sasanian Paradan, an Iranian-speaking polity of northeastern Balochistan.",
+          "source_url": "https://en.wikipedia.org/wiki/Paratarajas"
         },
         {
           "name": "Sulaiman Mountains",
@@ -32872,7 +32898,7 @@
           "localisation_stem": "Bari Doab",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Historical geographical region encompassing Pancapura (Dipalpur, x_script_1315).",
+          "relationship": "Historical geographical region encompassing Pancapura (Dipalpur).",
           "language_variants": [
             {
               "form": "Bārī Dō'āba",
@@ -33016,38 +33042,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Sutlej"
         },
         {
-          "name": "Bari Doab",
+          "name": "Beas River",
           "disambiguation_note": null,
-          "localisation_stem": "Bari Doab",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Historical geographical region encompassing Dipalpur (Dipalpur, x_script_1315).",
+          "localisation_stem": "Beas",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Punjab river whose historical channel passed beside Dipalpur.",
           "language_variants": [
             {
-              "form": "Bārī Dō'āba",
-              "native_script": "ਬਾਰੀ ਦੋਆਬ",
-              "language": "Punjabi",
-              "language_code": "pan",
-              "notes": "Punjabi name (Bārī Doāb)"
+              "form": "Vipāśā",
+              "native_script": "विपाशा",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Rigvedic Sanskrit name (Vipāśā)"
             },
             {
-              "form": "Bārī Doāb",
-              "native_script": "باری دوآب",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Mughal Persian name (Bārī Doāb)"
+              "form": "Hýphasis",
+              "native_script": "Ὕφασις",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name (Hýphasis)"
+            },
+            {
+              "form": "Bi'āsa",
+              "native_script": "ਬਿਆਸ",
+              "language": "Punjabi",
+              "language_code": "pan",
+              "notes": "Punjabi name (Biās)"
             }
           ],
-          "earliest_attestation_year": 1595,
-          "earliest_attestation_note": "Attested in the Ain-i-Akbari (1595 CE) as the interfluve between the Beas and Ravi rivers.",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -1500,
+          "earliest_attestation_note": "Attested as Vipāśā in the Rigveda (c. 1500 BCE) and Hyphasis in 326 BCE Greek accounts.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Portmanteau of B(eas) + R(avi) + Persian do-āb ('two waters'), covering Lahore, Kasur, and Dipalpur.",
-          "source_url": "https://en.wikipedia.org/wiki/Bari_Doab"
+          "etymology_notes": "From Sanskrit Vipāśā ('unfettered'); eastern Punjab river rising in the Himalayas.",
+          "source_url": "https://en.wikipedia.org/wiki/Beas_River"
         }
       ]
     },
@@ -33170,7 +33203,7 @@
           "localisation_stem": "Bari Doab",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Historical geographical region encompassing Ajodhan (Dipalpur, x_script_1315).",
+          "relationship": "Historical geographical region encompassing Ajodhan (Dipalpur).",
           "language_variants": [
             {
               "form": "Bārī Dō'āba",
@@ -33475,7 +33508,7 @@
           "localisation_stem": "Bari Doab",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Historical geographical region encompassing Satghara (Dipalpur, x_script_1315).",
+          "relationship": "Historical geographical region encompassing Satghara (Dipalpur).",
           "language_variants": [
             {
               "form": "Bārī Dō'āba",
@@ -38664,45 +38697,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Aravalli_Range"
         },
         {
-          "name": "Mewar",
+          "name": "Berach River",
           "disambiguation_note": null,
-          "localisation_stem": "Mewar",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Historical geographical region encompassing Aghata (Medapata, Medapata).",
+          "localisation_stem": "Berach",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Banas tributary draining the Udaipur basin past Aghata.",
           "language_variants": [
             {
-              "form": "Mēdapāṭa",
-              "native_script": "मेदपाट",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Classical Sanskrit name (Medapāṭa)"
-            },
-            {
-              "form": "Mēvāṛa",
-              "native_script": "मेवाड़",
+              "form": "Bēṛaca",
+              "native_script": "बेड़च",
               "language": "Rajasthani",
               "language_code": "raj",
-              "notes": "Rajasthani name (Mevāṛ)"
+              "notes": "Rajasthani name (Beṛach)"
             },
             {
-              "form": "Mēvāṛa",
-              "native_script": "मेवाड़",
+              "form": "Bēṛaca",
+              "native_script": "बेड़च",
               "language": "Hindi",
               "language_code": "hin",
-              "notes": "Hindi name (Mevāṛ)"
+              "notes": "Hindi name (Beṛach)"
             }
           ],
-          "earliest_attestation_year": 646,
-          "earliest_attestation_note": "Attested as Medapāṭa in 7th–10th century CE Guhila inscriptions.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Flows past ancient Āghāṭa (Ahar) and Chittorgarh, attested in medieval Mewar inscriptions (c. 1000 CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Sanskrit Medapāṭa ('country of the Medas'); upland region of south-central Rajasthan.",
-          "source_url": "https://en.wikipedia.org/wiki/Mewar"
+          "etymology_notes": "Principal tributary of the Banas in Mewar, known as the Ahar River near Udaipur.",
+          "source_url": "https://en.wikipedia.org/wiki/Berach_River"
         }
       ]
     },
@@ -39252,7 +39278,7 @@
           "localisation_stem": "Thar",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Historical geographical region encompassing Nagauda (Nagauda, x_script_8766).",
+          "relationship": "Historical geographical region encompassing Nagauda.",
           "language_variants": [
             {
               "form": "Marusthalī",
@@ -39288,45 +39314,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Thar_Desert"
         },
         {
-          "name": "Sambhar Salt Lake",
+          "name": "Luni River",
           "disambiguation_note": null,
-          "localisation_stem": "Sambhar Salt Lake",
+          "localisation_stem": "Luni",
           "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Major local lake draining or bordering the Nagauda area.",
+          "feature_subtype": "river",
+          "relationship": "Principal river of the Thar borderlands draining the southern reaches near Nagauda.",
           "language_variants": [
             {
-              "form": "Śākambharī",
-              "native_script": "शाकंभरी",
+              "form": "Lavaṇavatī",
+              "native_script": "लवणवती",
               "language": "Sanskrit",
               "language_code": "san",
-              "notes": "Sanskrit name (Śākambharī)"
+              "notes": "Sanskrit name (Lavaṇavatī, 'saline')"
             },
             {
-              "form": "Sāmbhara",
-              "native_script": "सांभर",
+              "form": "Lūṇī",
+              "native_script": "लूणी",
               "language": "Rajasthani",
               "language_code": "raj",
-              "notes": "Rajasthani name (Sāmbhar)"
+              "notes": "Rajasthani name (Lūṇī)"
             },
             {
-              "form": "Sāmbhara",
-              "native_script": "सांभर",
+              "form": "Lūnī",
+              "native_script": "लूनी",
               "language": "Hindi",
               "language_code": "hin",
-              "notes": "Hindi name (Sāmbhar)"
+              "notes": "Hindi name (Lūnī)"
             }
           ],
-          "earliest_attestation_year": 973,
-          "earliest_attestation_note": "Attested as Śākambharī in 10th century CE Chahamana inscriptions (Harshnath inscription, 973 CE).",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 400,
+          "earliest_attestation_note": "Attested as Lavaṇavatī in Purāṇic and medieval Marwar records (c. 400 CE).",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Largest inland salt lake in India, located in central Rajasthan near Ajmer and Nagaur.",
-          "source_url": "https://en.wikipedia.org/wiki/Sambhar_Salt_Lake"
+          "etymology_notes": "From Sanskrit lavaṇa ('salt'); principal endorheic river of Marwar flowing from Ajmer to the Rann of Kutch.",
+          "source_url": "https://en.wikipedia.org/wiki/Luni_River"
         }
       ]
     },
@@ -39408,7 +39434,7 @@
           "localisation_stem": "Thar",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Historical geographical region encompassing Ladnu (Nagauda, x_script_8766).",
+          "relationship": "Historical geographical region encompassing Ladnu (Nagauda).",
           "language_variants": [
             {
               "form": "Marusthalī",
@@ -39564,7 +39590,7 @@
           "localisation_stem": "Thar",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Historical geographical region encompassing Makrana (Nagauda, x_script_8766).",
+          "relationship": "Historical geographical region encompassing Makrana (Nagauda).",
           "language_variants": [
             {
               "form": "Marusthalī",
@@ -39720,7 +39746,7 @@
           "localisation_stem": "Thar",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Historical geographical region encompassing Kuchaman (Nagauda, x_script_8766).",
+          "relationship": "Historical geographical region encompassing Kuchaman (Nagauda).",
           "language_variants": [
             {
               "form": "Marusthalī",
@@ -40408,38 +40434,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Indus_River"
         },
         {
-          "name": "Kirthar Mountains",
+          "name": "Lake Manchar",
           "disambiguation_note": null,
-          "localisation_stem": "Kirthar",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Prominent mountain range in the vicinity of Larkana.",
+          "localisation_stem": "Manchar",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Large natural freshwater lake of the western Indus plain south of Larkana.",
           "language_variants": [
             {
-              "form": "Kīrthar",
-              "native_script": "کیرٿر",
+              "form": "Manchar Ḍhanḍh",
+              "native_script": "منڇر ڍنڍ",
               "language": "Sindhi",
               "language_code": "snd",
-              "notes": "Sindhi name (Kīrthar)"
-            },
-            {
-              "form": "Kīrthar",
-              "native_script": "کیرتھر",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian chronicle form (Kīrthar)"
+              "notes": "Sindhi name (Manchhar Ḍhanḍ)"
             }
           ],
-          "earliest_attestation_year": 1300,
-          "earliest_attestation_note": "Attested in medieval Sindhi and Persian geographical accounts (c. 1300 CE) as the western mountain wall of Sindh.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Attested in medieval Sindhi chronicles (c. 1000 CE) near Siwistan (Sehwan).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "North-south limestone mountain range marking the boundary between Sindh and Balochistan.",
-          "source_url": "https://en.wikipedia.org/wiki/Kirthar_Mountains"
+          "etymology_notes": "Largest natural freshwater lake in Sindh, fed by hill torrents from the Kirthar Mountains and Indus canals.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Manchar"
         }
       ]
     },
@@ -40631,45 +40650,45 @@
       },
       "replacement_candidates": [
         {
-          "name": "Balochs",
+          "name": "Jats",
           "disambiguation_note": null,
-          "localisation_stem": "Balochs",
+          "localisation_stem": "Jats",
           "category": "tribe",
-          "feature_subtype": "iranian_tribe",
-          "relationship": "Historically prominent iranian tribe associated with the Rajanpur area.",
+          "feature_subtype": "indo_aryan_people",
+          "relationship": "Historical pastoral and agrarian people inhabiting the lower Indus plains of Rajanpur.",
           "language_variants": [
             {
-              "form": "Balūč",
-              "native_script": "بلوچ",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian form (Balūch)"
+              "form": "Jāṭ",
+              "native_script": "जाट्",
+              "language": "Hindi",
+              "language_code": "hin",
+              "notes": "Modern Indo-Aryan ethnonym"
             },
             {
-              "form": "Al-Balūṣ",
-              "native_script": "البلوص",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic form (al-Balūṣ)"
+              "form": "Jaṭṭ",
+              "native_script": "ਜਟ੍ਟ੍",
+              "language": "Punjabi",
+              "language_code": "pan",
+              "notes": "Punjabi form"
             },
             {
-              "form": "Balōc",
-              "native_script": "بلوچ",
-              "language": "Sindhi",
-              "language_code": "snd",
-              "notes": "Sindhi form (Baloch)"
+              "form": "Jaṭṭa",
+              "native_script": "जट्ट",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Sanskritized medieval form"
             }
           ],
-          "earliest_attestation_year": 950,
-          "earliest_attestation_note": "Attested in 10th-century CE Arabic and Persian geographies (al-Istakhri, Ferdowsi's Shahnameh).",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 640,
+          "earliest_attestation_note": "7th century CE (Chinese traveler Xuanzang and early Arab accounts of Sindh/Punjab)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Northwestern Iranian pastoral people who settled in Balochistan, Kachhi, and the Derajat frontier.",
-          "source_url": "https://en.wikipedia.org/wiki/Baloch_people"
+          "etymology_notes": "Derived from Prakrit/Apabhramsha jatta/jattha, referring to pastoral and agrarian communities of the Indus-Ganga plains.",
+          "source_url": "https://en.wikipedia.org/wiki/Jats"
         },
         {
           "name": "Indus River",
@@ -40883,38 +40902,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Indus_River"
         },
         {
-          "name": "Derajat",
+          "name": "Panjnad River",
           "disambiguation_note": null,
-          "localisation_stem": "Derajat",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Historical geographical region encompassing Rojhan (Rajanpur, Bhakkar).",
+          "localisation_stem": "Panjnad",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Confluence stream of the five Punjab rivers meeting the Indus north of Rojhan.",
           "language_variants": [
             {
-              "form": "Ḍērājāt",
-              "native_script": "ڈیراجات",
-              "language": "Punjabi",
-              "language_code": "pan",
-              "notes": "Punjabi/Saraiki name (Ḍerājāt)"
+              "form": "Pañcanada",
+              "native_script": "पञ्चनद",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Sanskrit name (Pañcanada)"
             },
             {
-              "form": "Dērājāt",
-              "native_script": "دیراجات",
+              "form": "Panjnad",
+              "native_script": "پنجند",
+              "language": "Punjabi",
+              "language_code": "pan",
+              "notes": "Punjabi name (Panjnad)"
+            },
+            {
+              "form": "Panjnad",
+              "native_script": "پنجند",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian plural form (Derājāt)"
+              "notes": "Persian name (Panjnad)"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "Attested from c. 1500 CE for the trans-Indus plain below the Sulaiman Mountains.",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -300,
+          "earliest_attestation_note": "Attested as Pañcanada in the Mahābhārata (c. 300 BCE) and Purāṇas.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Alluvial plain between the Indus River and the Sulaiman Mountains.",
-          "source_url": "https://en.wikipedia.org/wiki/Derajat"
+          "etymology_notes": "From Sanskrit pañca-nada ('five rivers'); confluence channel of the five Punjab rivers joining the Indus near Uch.",
+          "source_url": "https://en.wikipedia.org/wiki/Panjnad_River"
         }
       ]
     },
@@ -41255,45 +41281,45 @@
       },
       "replacement_candidates": [
         {
-          "name": "Balochs",
+          "name": "Jats",
           "disambiguation_note": null,
-          "localisation_stem": "Balochs",
+          "localisation_stem": "Jats",
           "category": "tribe",
-          "feature_subtype": "iranian_tribe",
-          "relationship": "Historically prominent iranian tribe associated with the Sibi area.",
+          "feature_subtype": "indo_aryan_people",
+          "relationship": "Pastoral people attested as the Zutt in early Islamic chronicles of Sibi and the Kacchi plain.",
           "language_variants": [
             {
-              "form": "Balūč",
-              "native_script": "بلوچ",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian form (Balūch)"
+              "form": "Jāṭ",
+              "native_script": "जाट्",
+              "language": "Hindi",
+              "language_code": "hin",
+              "notes": "Modern Indo-Aryan ethnonym"
             },
             {
-              "form": "Al-Balūṣ",
-              "native_script": "البلوص",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic form (al-Balūṣ)"
+              "form": "Jaṭṭ",
+              "native_script": "ਜਟ੍ਟ੍",
+              "language": "Punjabi",
+              "language_code": "pan",
+              "notes": "Punjabi form"
             },
             {
-              "form": "Balōc",
-              "native_script": "بلوچ",
-              "language": "Sindhi",
-              "language_code": "snd",
-              "notes": "Sindhi form (Baloch)"
+              "form": "Jaṭṭa",
+              "native_script": "जट्ट",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Sanskritized medieval form"
             }
           ],
-          "earliest_attestation_year": 950,
-          "earliest_attestation_note": "Attested in 10th-century CE Arabic and Persian geographies (al-Istakhri, Ferdowsi's Shahnameh).",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 640,
+          "earliest_attestation_note": "7th century CE (Chinese traveler Xuanzang and early Arab accounts of Sindh/Punjab)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Northwestern Iranian pastoral people who settled in Balochistan, Kachhi, and the Derajat frontier.",
-          "source_url": "https://en.wikipedia.org/wiki/Baloch_people"
+          "etymology_notes": "Derived from Prakrit/Apabhramsha jatta/jattha, referring to pastoral and agrarian communities of the Indus-Ganga plains.",
+          "source_url": "https://en.wikipedia.org/wiki/Jats"
         },
         {
           "name": "Bolan Pass",
@@ -41991,45 +42017,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Indus_River_Delta"
         },
         {
-          "name": "Arabian Sea",
+          "name": "Keenjhar Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Arabian Sea",
+          "localisation_stem": "Keenjhar",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major local sea draining or bordering the Thatta area.",
+          "feature_subtype": "lake",
+          "relationship": "Large freshwater lake of lower Sindh situated immediately north of Thatta.",
           "language_variants": [
             {
-              "form": "Sindhu Sāgara",
-              "native_script": "सिंधु सागर",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskrit name (Sindhu Sāgara)"
-            },
-            {
-              "form": "Erythrá Thálassa",
-              "native_script": "Ἐρυθρά Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name (Erythra Thalassa)"
-            },
-            {
-              "form": "Baḥr al-ʿArab",
-              "native_script": "بحر العرب",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic name (Baḥr al-ʿArab)"
+              "form": "Kīnjhar Ḍhanḍh",
+              "native_script": "ڪينجهر ڍنڍ",
+              "language": "Sindhi",
+              "language_code": "snd",
+              "notes": "Sindhi name (Kīnjhar Ḍhanḍ)"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested as Sindhu Sāgara in Sanskrit texts and Erythra Thalassa in Herodotus (c. 500 BCE) and the Periplus.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1350,
+          "earliest_attestation_note": "Attested in Samma-era Sindhi folklore and chronicles (c. 1350 CE) near Thatta and Sonda.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Northwestern arm of the Indian Ocean bordering the Sindh and Makran coasts.",
-          "source_url": "https://en.wikipedia.org/wiki/Arabian_Sea"
+          "etymology_notes": "Large freshwater lake in Lower Sindh near Thatta and Sonda.",
+          "source_url": "https://en.wikipedia.org/wiki/Keenjhar_Lake"
         }
       ]
     },
@@ -42133,45 +42145,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Indus_River_Delta"
         },
         {
-          "name": "Arabian Sea",
+          "name": "Haleji Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Arabian Sea",
+          "localisation_stem": "Haleji",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major local sea draining or bordering the Shahbandar area.",
+          "feature_subtype": "lake",
+          "relationship": "Coastal wetland lagoon of the Thatta delta west of Shahbandar.",
           "language_variants": [
             {
-              "form": "Sindhu Sāgara",
-              "native_script": "सिंधु सागर",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskrit name (Sindhu Sāgara)"
+              "form": "Hālējī Ḍhanḍh",
+              "native_script": "هاليجي ڍنڍ",
+              "language": "Sindhi",
+              "language_code": "snd",
+              "notes": "Sindhi lake name Haleji Dhandh"
             },
             {
-              "form": "Erythrá Thálassa",
-              "native_script": "Ἐρυθρά Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name (Erythra Thalassa)"
-            },
-            {
-              "form": "Baḥr al-ʿArab",
-              "native_script": "بحر العرب",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic name (Baḥr al-ʿArab)"
+              "form": "Hālējī",
+              "native_script": "हालेजी",
+              "language": "Hindi",
+              "language_code": "hin",
+              "notes": "Hindi transliteration"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested as Sindhu Sāgara in Sanskrit texts and Erythra Thalassa in Herodotus (c. 500 BCE) and the Periplus.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Indigenous pre-literate saline lagoon of the lower Indus delta",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Northwestern arm of the Indian Ocean bordering the Sindh and Makran coasts.",
-          "source_url": "https://en.wikipedia.org/wiki/Arabian_Sea"
+          "etymology_notes": "Natural brackish-water depression in the Thatta delta region of lower Sindh.",
+          "source_url": "https://en.wikipedia.org/wiki/Haleji_Lake"
         }
       ]
     },
@@ -42282,45 +42287,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Hub_River"
         },
         {
-          "name": "Arabian Sea",
+          "name": "Malir River",
           "disambiguation_note": null,
-          "localisation_stem": "Arabian Sea",
+          "localisation_stem": "Malir",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major local sea draining or bordering the Kolachi area.",
+          "feature_subtype": "river",
+          "relationship": "Seasonal river draining the Kohistan hills through Kolachi to the coast.",
           "language_variants": [
             {
-              "form": "Sindhu Sāgara",
-              "native_script": "सिंधु सागर",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskrit name (Sindhu Sāgara)"
+              "form": "Malīr",
+              "native_script": "ملير",
+              "language": "Sindhi",
+              "language_code": "snd",
+              "notes": "Sindhi river name Malir"
             },
             {
-              "form": "Erythrá Thálassa",
-              "native_script": "Ἐρυθρά Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name (Erythra Thalassa)"
-            },
-            {
-              "form": "Baḥr al-ʿArab",
-              "native_script": "بحر العرب",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic name (Baḥr al-ʿArab)"
+              "form": "Malīr",
+              "native_script": "ملیر",
+              "language": "Urdu",
+              "language_code": "urd",
+              "notes": "Urdu river name"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested as Sindhu Sāgara in Sanskrit texts and Erythra Thalassa in Herodotus (c. 500 BCE) and the Periplus.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Indigenous pre-literate hydronym of the Karachi coastal plain",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Northwestern arm of the Indian Ocean bordering the Sindh and Makran coasts.",
-          "source_url": "https://en.wikipedia.org/wiki/Arabian_Sea"
+          "etymology_notes": "Ephemeral river crossing the coastal basin of Kolachi alongside the Lyari stream.",
+          "source_url": "https://en.wikipedia.org/wiki/Malir_River"
         }
       ]
     },
@@ -42349,38 +42347,45 @@
       },
       "replacement_candidates": [
         {
-          "name": "Soomra",
+          "name": "Meds",
           "disambiguation_note": null,
-          "localisation_stem": "Soomra",
+          "localisation_stem": "Meds",
           "category": "tribe",
           "feature_subtype": "indo_aryan_people",
-          "relationship": "Historically prominent indo aryan people associated with the Mirpur Khas area.",
+          "relationship": "Indigenous Sindhi pastoral and maritime people attested in early chronicles of Mansura.",
           "language_variants": [
             {
-              "form": "Sūmrō",
-              "native_script": "سومرو",
-              "language": "Sindhi",
-              "language_code": "snd",
-              "notes": "Sindhi endonym (Sūmro)"
+              "form": "Mēda",
+              "native_script": "मेद",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Sanskritized ethnonym Meda"
             },
             {
-              "form": "Sūmrah",
-              "native_script": "سومره",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian chronicle form (Sūmra)"
+              "form": "Mīd",
+              "native_script": "ميد",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Early Abbasid Arabic chronicle form Mid/Med"
+            },
+            {
+              "form": "Mēḍa",
+              "native_script": "ميڊ",
+              "language": "Sindhi",
+              "language_code": "snd",
+              "notes": "Sindhi coastal community name"
             }
           ],
-          "earliest_attestation_year": 1026,
-          "earliest_attestation_note": "Attested in Sindhi and Persian chronicles from 1026 CE as rulers of Mansura and Lower Sindh.",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 712,
+          "earliest_attestation_note": "8th century CE (early Arab chronicles and the Chach Nama describing the Meds of Sindh)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Indigenous Sindhi Rajput dynasty and tribe centered in central and lower Sindh. Onomastic note: Sindhi endonym (Sūmro) ('Sūmrō').",
-          "source_url": "https://en.wikipedia.org/wiki/Soomra"
+          "etymology_notes": "Pre-Islamic inhabitants of Sindh and coastal Makran noted alongside the Jats in early Arabic and Sindhi historiography.",
+          "source_url": "https://en.wikipedia.org/wiki/Med_people"
         },
         {
           "name": "Indus River",
@@ -44949,7 +44954,7 @@
           "localisation_stem": "Thar",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Historical geographical region encompassing Vijnot (Vijnot, x_script_6239).",
+          "relationship": "Historical geographical region encompassing Vijnot.",
           "language_variants": [
             {
               "form": "Marusthalī",
@@ -45160,7 +45165,7 @@
           "localisation_stem": "Thar",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Historical geographical region encompassing Ghotki (Vijnot, x_script_6239).",
+          "relationship": "Historical geographical region encompassing Ghotki (Vijnot).",
           "language_variants": [
             {
               "form": "Marusthalī",
@@ -45275,7 +45280,7 @@
           "localisation_stem": "Thar",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Historical geographical region encompassing Bhatiya (Vijnot, x_script_6239).",
+          "relationship": "Historical geographical region encompassing Bhatiya (Vijnot).",
           "language_variants": [
             {
               "form": "Marusthalī",

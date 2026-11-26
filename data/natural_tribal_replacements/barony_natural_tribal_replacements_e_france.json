@@ -139,18 +139,18 @@
       "unique_replacement_names": 320,
       "candidates_with_multilingual_variants": 461,
       "wikipedia_source_attached": 468,
-      "unique_source_urls": 321,
+      "unique_source_urls": 322,
       "candidates_by_category": {
-        "choronym": 90,
-        "hydronym": 177,
-        "oronym": 24,
+        "choronym": 84,
+        "hydronym": 182,
+        "oronym": 25,
         "topographic_feature": 17,
         "tribe": 160
       },
       "baronies_with_category": {
-        "has_choronym_candidate": 90,
+        "has_choronym_candidate": 84,
         "has_hydronym_candidate": 151,
-        "has_oronym_candidate": 23,
+        "has_oronym_candidate": 24,
         "has_topographic_feature_candidate": 17,
         "has_tribe_candidate": 156
       },
@@ -185,8 +185,8 @@
       "geographic_corrections_applied": 2,
       "candidates_per_barony": 3,
       "candidates_by_attestation_basis": {
-        "attested_pre_867": 306,
-        "indigenous_pre_literate": 162
+        "attested_pre_867": 301,
+        "indigenous_pre_literate": 167
       },
       "bookmark_valid_candidates": {
         "867": 468,
@@ -264,45 +264,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Odet"
         },
         {
-          "name": "Cornouaille",
+          "name": "Montagnes Noires",
           "disambiguation_note": null,
-          "localisation_stem": "Cornouaille",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Historical southwestern Breton province and bishopric whose traditional capital is Quimper.",
+          "localisation_stem": "Montagnes Noires",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Low slate ridge stretching across northern Cornouaille directly above the Odet basin north of Quimper.",
           "language_variants": [
             {
-              "form": "Cornouaille",
-              "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Standard French choronym"
-            },
-            {
-              "form": "Kernev",
+              "form": "Menez Du",
               "native_script": null,
               "language": "Breton",
               "language_code": "bre",
-              "notes": "Also Bro-Gernev or Kerne"
+              "notes": "Breton vernacular name meaning 'Black Mountains'"
             },
             {
-              "form": "Cornugallia",
+              "form": "Montagnes Noires",
               "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Early medieval Latin form (also Cornubia)"
+              "language": "French",
+              "language_code": "fra",
+              "notes": "French calque of Breton Menez Du"
             }
           ],
-          "earliest_attestation_year": 852,
-          "earliest_attestation_note": "First attested between 852 and 857 CE in records mentioning Anaweten, bishop of Cornouaille.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Armorican upland ridge forming the northern watershed of the Odet and Steir.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Cognate with British Cornwall (from the Brittonic tribe Cornovii, 'people of the horn/peninsula'), brought by early medieval Brittonic migrants.",
-          "source_url": "https://en.wikipedia.org/wiki/Cornouaille"
+          "etymology_notes": "Breton menez ('mountain, hill') + du ('black'), referring to the dark slate and moorland ridges. Onomastic note: Breton vernacular name meaning 'Black Mountains' ('Menez Du'); French calque of Breton Menez Du ('Montagnes Noires').",
+          "source_url": "https://en.wikipedia.org/wiki/Montagnes_Noires"
         },
         {
           "name": "Osismii",
@@ -1512,52 +1505,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Oust"
         },
         {
-          "name": "Porhoët",
+          "name": "Blavet",
           "disambiguation_note": null,
-          "localisation_stem": "Porhoët",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Historical central Breton pagus along the Oust valley from which the Viscounts of Rohan branched off.",
+          "localisation_stem": "Blavet",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major central Breton river flowing southward just west of Rohan toward the Vannetais coast.",
           "language_variants": [
             {
-              "form": "Porhoët",
-              "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Modern standard form"
-            },
-            {
-              "form": "Pourc'hoed",
+              "form": "Blavezh",
               "native_script": null,
               "language": "Breton",
               "language_code": "bre",
-              "notes": "Modern Breton form"
+              "notes": "Breton hydronym"
             },
             {
-              "form": "Poutrecoet",
+              "form": "Blavet",
               "native_script": null,
-              "language": "Old Breton",
-              "language_code": "obt",
-              "notes": "Attested as Poutrecoet in 833 CE and Poutrocoet in 859 CE"
-            },
-            {
-              "form": "Pagus trans sylvam",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Latin calque attested in 868 CE"
+              "language": "French",
+              "language_code": "fra",
+              "notes": "French hydronym"
             }
           ],
-          "earliest_attestation_year": 833,
-          "earliest_attestation_note": "Attested as Poutrecoet in 833 CE, pagus Trocoet circa 854 CE, and pagus trans sylvam in 868 CE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Breton-Gallo river attested in early medieval Breton cartularies (Redon).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Old Breton pou ('country', from Latin pagus) + tre ('through/beyond') + coet ('forest'), meaning 'land beyond the forest'.",
-          "source_url": "https://en.wikipedia.org/wiki/Porho%C3%ABt"
+          "etymology_notes": "Derived from Old Breton Blavet / Blavetum, of uncertain Celtic or pre-Celtic hydronymic origin.",
+          "source_url": "https://en.wikipedia.org/wiki/Blavet_(river)"
         },
         {
           "name": "Veneti",
@@ -2039,38 +2018,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Sarthe",
+          "name": "Braye",
           "disambiguation_note": null,
-          "localisation_stem": "Sarthe",
+          "localisation_stem": "Braye",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Principal river of Maine and northern Anjou receiving the Loir.",
+          "relationship": "Right-bank tributary of the Loir draining southeastern Maine immediately upstream of Courcillon.",
           "language_variants": [
             {
-              "form": "Sarthe",
+              "form": "Braia",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Medieval Latin hydronym"
+            },
+            {
+              "form": "Braye",
               "native_script": null,
               "language": "French",
               "language_code": "fra",
               "notes": "French hydronym"
-            },
-            {
-              "form": "Sarta",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Early medieval Latin hydronym"
             }
           ],
-          "earliest_attestation_year": 800,
-          "earliest_attestation_note": "Early medieval Frankish charters attesting Sarta.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Gallo-Romance river draining southeastern Maine into the Loir.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Pre-Roman Gaulish/Old European hydronym *Sarta.",
-          "source_url": "https://en.wikipedia.org/wiki/Sarthe_(river)"
+          "etymology_notes": "Derived from Gaulish *braca / *bracu ('marsh, mud, wet valley'), cognate with Old French braye.",
+          "source_url": "https://en.wikipedia.org/wiki/Braye_(river)"
         },
         {
           "name": "Loir",
@@ -2309,45 +2288,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Mayenne",
+          "name": "Jouanne",
           "disambiguation_note": null,
-          "localisation_stem": "Mayenne",
+          "localisation_stem": "Jouanne",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major river flowing directly through Laval below its rocky castle promontory.",
+          "relationship": "Left-bank tributary of the Mayenne flowing past the eastern outskirts of Laval.",
           "language_variants": [
             {
-              "form": "Mayenne",
-              "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Modern standard form"
-            },
-            {
-              "form": "Meduana",
+              "form": "Jovanna",
               "native_script": null,
               "language": "Latin",
               "language_code": "lat",
-              "notes": "Classical/early medieval Latin form (also Maienna)"
+              "notes": "Medieval Latin hydronym"
             },
             {
-              "form": "*Maduanna",
+              "form": "Jouanne",
               "native_script": null,
-              "language": "Gaulish",
-              "language_code": "xtg",
-              "notes": "From Celtic *mad- ('overflow, spread') + *-uenna"
+              "language": "French",
+              "language_code": "fra",
+              "notes": "French hydronym"
             }
           ],
-          "earliest_attestation_year": 65,
-          "earliest_attestation_note": "Attested as Meduana by Lucan (Pharsalia, 1st century CE, circa 65 CE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Gallo-Roman stream of central Maine joining the Mayenne south of Laval.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Celtic *mad- ('to overflow, burst forth') or Latin madere ('to be wet') with the Gaulish suffix *-uenna, meaning 'overflowing water'.",
-          "source_url": "https://en.wikipedia.org/wiki/Mayenne_(river)"
+          "etymology_notes": "Likely from a Gaulish or Gallo-Roman hydronym *Jovanna (possibly connected to *devonna 'sacred spring' or personal name).",
+          "source_url": "https://en.wikipedia.org/wiki/Jouanne"
         },
         {
           "name": "Bas-Maine",
@@ -2764,8 +2736,8 @@
               "notes": "Reconstructed Gaulish/pre-Celtic hydronym"
             }
           ],
-          "earliest_attestation_year": 371,
-          "earliest_attestation_note": "Attested as Carantonus by Ausonius in the late 4th century CE (c. 371 CE) and earlier as Kanentelos in Ptolemy's Geography (2nd century CE).",
+          "earliest_attestation_year": 150,
+          "earliest_attestation_note": "2nd–4th century CE — Attested in Ptolemy and in Ausonius's Mosella as Carantonus.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -3055,8 +3027,8 @@
               "notes": "Late Antique Latin form (Ausonius)"
             }
           ],
-          "earliest_attestation_year": 371,
-          "earliest_attestation_note": "Attested as Carantonus by Ausonius in the late 4th century CE (c. 371 CE) and earlier as Kanentelos in Ptolemy's Geography (2nd century CE).",
+          "earliest_attestation_year": 150,
+          "earliest_attestation_note": "2nd–4th century CE — Attested in Ptolemy and in Ausonius's Mosella as Carantonus.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -3670,45 +3642,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Seugne"
         },
         {
-          "name": "Saintonge",
+          "name": "Charente",
           "disambiguation_note": null,
-          "localisation_stem": "Saintonge",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Historical province of western France whose southern sub-region (Haute-Saintonge) is centered on Jonzac.",
+          "localisation_stem": "Charente",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Principal river of Saintonge receiving the Seugne downstream of Jonzac.",
           "language_variants": [
             {
-              "form": "Saintonge",
-              "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Modern standard form"
-            },
-            {
-              "form": "Santonga",
-              "native_script": null,
-              "language": "Occitan",
-              "language_code": "oci",
-              "notes": "Occitan form"
-            },
-            {
-              "form": "Pagus Santonicus",
+              "form": "Carantonus",
               "native_script": null,
               "language": "Latin",
               "language_code": "lat",
-              "notes": "Early medieval Latin pagus name"
+              "notes": "Classical Latin name attested in Ausonius"
+            },
+            {
+              "form": "Karanóntas",
+              "native_script": "Καρανόντας",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Greek form attested in Ptolemy (Canentelos)"
+            },
+            {
+              "form": "Charente",
+              "native_script": null,
+              "language": "French",
+              "language_code": "fra",
+              "notes": "Modern French hydronym"
             }
           ],
-          "earliest_attestation_year": 500,
-          "earliest_attestation_note": "Directly continues the tribal territory of the Santones (1st century BCE); Santonica / pagus Santonicus attested from Late Antiquity and the 6th century CE.",
+          "earliest_attestation_year": 150,
+          "earliest_attestation_note": "2nd–4th century CE — Attested in Ptolemy and in Ausonius's Mosella as Carantonus.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Derived from Latin Santonica [terra] ('land of the Santones').",
-          "source_url": "https://en.wikipedia.org/wiki/Saintonge"
+          "etymology_notes": "From Gaulish *Carantonos ('the beloved/friendly one' or 'stony river', from *kar- 'stone/love').",
+          "source_url": "https://en.wikipedia.org/wiki/Charente_(river)"
         },
         {
           "name": "Santones",
@@ -5885,45 +5857,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Velay",
+          "name": "Mont Mézenc",
           "disambiguation_note": null,
-          "localisation_stem": "Velay",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Historical province and volcanic upland region of the Massif Central whose capital is Le Puy-en-Velay.",
+          "localisation_stem": "Mont Mézenc",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Highest volcanic peak of the southeastern Massif Central overlooking the upper Loire basin near Le Puy-en-Velay.",
           "language_variants": [
             {
-              "form": "Velay",
-              "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Modern standard form"
-            },
-            {
-              "form": "Velai",
+              "form": "Mont Mesenc",
               "native_script": null,
               "language": "Occitan",
               "language_code": "oci",
-              "notes": "Auvergnat/Vivaro-Alpine Occitan form"
+              "notes": "Occitan vernacular name of the massif"
             },
             {
-              "form": "Pagus Vellavensis",
+              "form": "Mont Mézenc",
               "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Early medieval Latin pagus name; also 'Vellaicum' — Medieval Latin variant."
+              "language": "French",
+              "language_code": "fra",
+              "notes": "French name of the mountain"
             }
           ],
-          "earliest_attestation_year": 590,
-          "earliest_attestation_note": "Derived from the Vellavii (1st century BCE); attested as pagus Vellavus / Vellavensis in Merovingian sources (6th century CE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-medieval volcanic landmark marking the ancient frontier between the Vellavi and Helvii.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Directly continues the ethnonym of the Gaulish tribe Vellavii.",
-          "source_url": "https://en.wikipedia.org/wiki/Velay"
+          "etymology_notes": "From a pre-Latin Occitan-Gaulish oronymic root (medieval Latin Mesencus / Mezens).",
+          "source_url": "https://en.wikipedia.org/wiki/Mont_M%C3%A9zenc"
         },
         {
           "name": "Borne",
@@ -10180,45 +10145,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Cure_(river)"
         },
         {
-          "name": "Morvan",
+          "name": "Yonne",
           "disambiguation_note": null,
-          "localisation_stem": "Morvan",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Crystalline highland massif whose northwestern foothills directly encompass Vézelay.",
+          "localisation_stem": "Yonne",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river of northern Burgundy receiving the Cure just downstream of Vézelay.",
           "language_variants": [
             {
-              "form": "Morvan",
-              "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Modern standard form; also 'Morvand' — Archaic French and regional Burgundian-Morvandiau spelling."
-            },
-            {
-              "form": "Morvinnum",
+              "form": "Icauna",
               "native_script": null,
               "language": "Latin",
               "language_code": "lat",
-              "notes": "Medieval Latin form (also Morvinnus)"
+              "notes": "Gallo-Roman Latin river name attested in Ammianus Marcellinus and early medieval charters"
             },
             {
-              "form": "*Maro-vandos",
+              "form": "Yonne",
               "native_script": null,
-              "language": "Gaulish",
-              "language_code": "xtg",
-              "notes": "Reconstructed Celtic compound"
+              "language": "French",
+              "language_code": "fra",
+              "notes": "Modern French hydronym"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in early medieval Latin sources (around the 6th–7th century CE) as Morvinnus / pagus Morvinni.",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "Attested as Icauna in Gallo-Roman votive inscriptions (1st–2nd century CE)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Derived from Gaulish *maro- ('great') or *moro- ('black/dark') + *vando- ('mountain/upland'), meaning 'great mountain' or 'dark highland'.",
-          "source_url": "https://en.wikipedia.org/wiki/Morvan"
+          "etymology_notes": "From Gaulish *Icauna (connected to the river goddess Icaunis and pre-Celtic water root *ik-/*akw-).",
+          "source_url": "https://en.wikipedia.org/wiki/Yonne_(river)"
         },
         {
           "name": "Aedui",
@@ -18338,45 +18296,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Huisne"
         },
         {
-          "name": "Perche",
+          "name": "Eure",
           "disambiguation_note": null,
-          "localisation_stem": "Perche",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Natural forested hill region (historically Sylva Pertica) of which Nogent-le-Rotrou is the historical capital.",
+          "localisation_stem": "Eure",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Principal river of the Chartrain region rising in the Perche hills east of Nogent-le-Rotrou.",
           "language_variants": [
             {
-              "form": "Perche",
-              "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Modern regional name"
-            },
-            {
-              "form": "Silva Pertica",
+              "form": "Autura",
               "native_script": null,
               "language": "Latin",
               "language_code": "lat",
-              "notes": "Early medieval Latin form referring to the great forest; also 'Perticus' — Medieval Latin pagus name."
+              "notes": "Gallo-Roman and early medieval Latin name"
             },
             {
-              "form": "*Pertika",
+              "form": "Eure",
               "native_script": null,
-              "language": "Gaulish",
-              "language_code": "xtg",
-              "notes": "Probable Celtic/Gaulish forest or boundary name"
+              "language": "French",
+              "language_code": "fra",
+              "notes": "Modern French hydronym"
             }
           ],
           "earliest_attestation_year": 500,
-          "earliest_attestation_note": "Attested in 6th-century CE early medieval sources as Silva Pertica / Pagus Perticus.",
+          "earliest_attestation_note": "Early medieval Latin sources record the river as Autura (later Ebura/Eura).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Latin/Gaulish Pertica, likely denoting a dense forest tract or wooded ridge serving as a territorial boundary",
-          "source_url": "https://en.wikipedia.org/wiki/Perche"
+          "etymology_notes": "From pre-Celtic or Gaulish *Autura, evolving in Old French through Eure/Oure.",
+          "source_url": "https://en.wikipedia.org/wiki/Eure_(river)"
         },
         {
           "name": "Carnutes",
@@ -20099,8 +20050,8 @@
               "notes": "Gaulish river name"
             }
           ],
-          "earliest_attestation_year": 371,
-          "earliest_attestation_note": "Attested as Carantonus by Ausonius in the late 4th century CE (c. 371 CE) and earlier as Kanentelos in Ptolemy's Geography (2nd century CE).",
+          "earliest_attestation_year": 150,
+          "earliest_attestation_note": "2nd–4th century CE — Attested in Ptolemy and in Ausonius's Mosella as Carantonus.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -21404,45 +21355,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Tarn_(river)"
         },
         {
-          "name": "Quercy",
+          "name": "Aveyron",
           "disambiguation_note": null,
-          "localisation_stem": "Quercy",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Historic natural and cultural region encompassing Montauban (Bas-Quercy).",
+          "localisation_stem": "Aveyron",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major tributary of the Tarn flowing across southern Quercy to its confluence just northwest of Montauban.",
           "language_variants": [
             {
-              "form": "Quercy",
-              "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": null
-            },
-            {
-              "form": "Carcin",
+              "form": "Avairon",
               "native_script": null,
               "language": "Occitan",
               "language_code": "oci",
-              "notes": "Languedocien form"
+              "notes": "Occitan vernacular hydronym"
             },
             {
-              "form": "Pagus Cadurcinus",
+              "form": "Avario",
               "native_script": null,
               "language": "Latin",
               "language_code": "lat",
-              "notes": "early medieval Latin form"
+              "notes": "Medieval Latin hydronym"
+            },
+            {
+              "form": "Aveyron",
+              "native_script": null,
+              "language": "French",
+              "language_code": "fra",
+              "notes": "French hydronym"
             }
           ],
-          "earliest_attestation_year": 580,
-          "earliest_attestation_note": "Attested as Cadurcinum / Pagus Cadurcinus in late antique and Merovingian sources (6th century CE).",
+          "earliest_attestation_year": 767,
+          "earliest_attestation_note": "Early medieval Carolingian chronicles and charters record the Avario / Veronus valley in Rouergue and Quercy.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Derived directly from Latin Cadurcinum, the territory of the Gaulish Cadurci tribe.",
-          "source_url": "https://en.wikipedia.org/wiki/Quercy"
+          "etymology_notes": "From Gaulish or pre-Celtic *Avario (root *av-/*ab- 'water, river'), parallel to the Avaris/Yèvre hydronyms.",
+          "source_url": "https://en.wikipedia.org/wiki/Aveyron_(river)"
         },
         {
           "name": "Cadurci",

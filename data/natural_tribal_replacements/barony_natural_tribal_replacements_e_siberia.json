@@ -137,19 +137,19 @@
       "target_baronies_audited": 139,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 417,
-      "unique_replacement_names": 76,
-      "candidates_with_multilingual_variants": 381,
+      "unique_replacement_names": 87,
+      "candidates_with_multilingual_variants": 367,
       "wikipedia_source_attached": 417,
-      "unique_source_urls": 77,
+      "unique_source_urls": 88,
       "candidates_by_category": {
-        "choronym": 5,
-        "hydronym": 245,
+        "choronym": 7,
+        "hydronym": 243,
         "oronym": 16,
         "topographic_feature": 12,
         "tribe": 139
       },
       "baronies_with_category": {
-        "has_choronym_candidate": 5,
+        "has_choronym_candidate": 7,
         "has_hydronym_candidate": 139,
         "has_oronym_candidate": 16,
         "has_topographic_feature_candidate": 12,
@@ -158,8 +158,10 @@
       "unique_language_codes": [
         "ara",
         "grc",
+        "kaz",
         "kca",
         "ket",
+        "kjh",
         "mns",
         "otk",
         "rus",
@@ -177,8 +179,8 @@
         "unattested_indigenous_or_minor": 78
       },
       "candidates_by_attestation_basis": {
-        "attested_pre_867": 118,
-        "indigenous_pre_literate": 299
+        "attested_pre_867": 113,
+        "indigenous_pre_literate": 304
       },
       "bookmark_valid_candidates": {
         "867": 417,
@@ -186,7 +188,7 @@
         "1178": 417
       },
       "baronies_with_867_valid_candidate": 139,
-      "unique_localisation_stems": 75
+      "unique_localisation_stems": 86
     }
   },
   "baronies": {
@@ -363,38 +365,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Samoyedic_peoples"
         },
         {
-          "name": "Chulym",
+          "name": "Kemchug",
           "disambiguation_note": null,
-          "localisation_stem": "Chulym",
+          "localisation_stem": "Kemchug",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Chulym River receiving the Chet tributary in the barony.",
+          "relationship": "Major right tributary joining the Chulym in the eastern Ob basin.",
           "language_variants": [
             {
-              "form": "Chulym",
-              "native_script": "Чулым",
+              "form": "Kemchug",
+              "native_script": "Кемчуг",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
-            },
-            {
-              "form": "Chulym",
-              "native_script": "Чулым",
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Chulym Turkic hydronym."
+              "notes": "Russian geographical name of Yeniseian-Turkic origin"
             }
           ],
-          "earliest_attestation_year": 1604,
-          "earliest_attestation_note": "Early 17th century CE (1604 CE) in Russian Tomsk ostrog records.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; indigenous Yeniseian-Turkic substrate hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major right tributary of the Ob; name of Turkic/Selkup substrate origin.",
-          "source_url": "https://en.wikipedia.org/wiki/Chulym_(Ob)"
+          "etymology_notes": "Major right tributary of the Chulym River; contains the Yeniseian/Siberian Turkic root kem ('river, water').",
+          "source_url": "https://en.wikipedia.org/wiki/Kemchug"
         },
         {
           "name": "Kiya",
@@ -484,38 +479,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Samoyedic_peoples"
         },
         {
-          "name": "Chulym",
-          "disambiguation_note": null,
-          "localisation_stem": "Chulym",
+          "name": "Ket",
+          "disambiguation_note": "River",
+          "localisation_stem": "Ket",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Chulym River flowing through the barony.",
+          "relationship": "Parallel right tributary of the Ob flowing north of the Chulym.",
           "language_variants": [
             {
-              "form": "Chulym",
-              "native_script": "Чулым",
+              "form": "Ket",
+              "native_script": "Кет",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian hydronym."
             },
             {
-              "form": "Chulym",
-              "native_script": "Чулым",
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Chulym Turkic hydronym."
+              "form": "Ket",
+              "native_script": "Кет",
+              "language": "Selkup",
+              "language_code": "sel",
+              "notes": "Selkup-area hydronym."
             }
           ],
-          "earliest_attestation_year": 1604,
-          "earliest_attestation_note": "Early 17th century CE (1604 CE) in Russian Tomsk ostrog records.",
+          "earliest_attestation_year": 1596,
+          "earliest_attestation_note": "1596 CE in Russian Ketsk ostrog foundation records.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major right tributary of the Ob; name of Turkic/Selkup substrate origin.",
-          "source_url": "https://en.wikipedia.org/wiki/Chulym_(Ob)"
+          "etymology_notes": "Major right tributary of the Ob; name of Samoyedic or Yeniseian substrate origin.",
+          "source_url": "https://en.wikipedia.org/wiki/Ket_(river)"
         },
         {
           "name": "Yaya",
@@ -726,38 +721,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Samoyedic_peoples"
         },
         {
-          "name": "Kiya",
+          "name": "Chulym",
           "disambiguation_note": null,
-          "localisation_stem": "Kiya",
+          "localisation_stem": "Chulym",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Kiya River draining the eastern part of the barony.",
+          "relationship": "Main trunk river of the central Ob basin into which the Kiya flows.",
           "language_variants": [
             {
-              "form": "Kiya",
-              "native_script": "Кия",
+              "form": "Chulym",
+              "native_script": "Чулым",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
+              "notes": "Russian geographical name"
             },
             {
-              "form": "Kiya",
-              "native_script": "Кия",
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Chulym Turkic hydronym."
+              "form": "Cholym",
+              "native_script": "Чӧлым",
+              "language": "Khakas",
+              "language_code": "kjh",
+              "notes": "Khakas name"
             }
           ],
-          "earliest_attestation_year": 1621,
-          "earliest_attestation_note": "Early 17th century CE in Russian Meletsky and Tomsk records.",
+          "earliest_attestation_year": 1604,
+          "earliest_attestation_note": "Early 17th century CE (1604 CE) in Russian Tomsk ostrog records.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Left tributary of the Chulym; possibly from Turkic qïya ('steep bank/cliff').",
-          "source_url": "https://en.wikipedia.org/wiki/Kiya_(river)"
+          "etymology_notes": "Major river rising in the Kuznetsk Alatau and flowing north of the Khakass Hollow.",
+          "source_url": "https://en.wikipedia.org/wiki/Chulym_(Ob)"
         },
         {
           "name": "Yaya",
@@ -881,38 +876,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yaya_(river)"
         },
         {
-          "name": "Kiya",
+          "name": "Tom",
           "disambiguation_note": null,
-          "localisation_stem": "Kiya",
+          "localisation_stem": "Tom",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Kiya River bordering the Kitat-Yaya watershed.",
+          "relationship": "Major right tributary of the Ob running parallel to the Yaya and Kiya.",
           "language_variants": [
             {
-              "form": "Kiya",
-              "native_script": "Кия",
+              "form": "Tom",
+              "native_script": "Том",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
+              "notes": "Russian geographical name"
             },
             {
-              "form": "Kiya",
-              "native_script": "Кия",
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Chulym Turkic hydronym."
+              "form": "Tom",
+              "native_script": "Том",
+              "language": "Khakas",
+              "language_code": "kjh",
+              "notes": "Khakas/Shor name"
             }
           ],
-          "earliest_attestation_year": 1621,
-          "earliest_attestation_note": "Early 17th century CE in Russian Meletsky and Tomsk records.",
+          "earliest_attestation_year": 1604,
+          "earliest_attestation_note": "Attested in 1604 CE Russian Siberian chronicles at the founding of Tomsk.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Left tributary of the Chulym; possibly from Turkic qïya ('steep bank/cliff').",
-          "source_url": "https://en.wikipedia.org/wiki/Kiya_(river)"
+          "etymology_notes": "Major right tributary of the Ob rising in the Abakan Range and flowing through Shoria.",
+          "source_url": "https://en.wikipedia.org/wiki/Tom_(river)"
         }
       ]
     },
@@ -1480,38 +1475,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Selkup_people"
         },
         {
-          "name": "Tym",
+          "name": "Vasyugan",
           "disambiguation_note": null,
-          "localisation_stem": "Tym",
+          "localisation_stem": "Vasyugan",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Tym River draining the northern part of the Narym-Tym territory.",
+          "relationship": "Major left tributary joining the Ob near Narym.",
           "language_variants": [
             {
-              "form": "Tym",
-              "native_script": "Тым",
+              "form": "Vasyugan",
+              "native_script": "Васюган",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian hydronym."
             },
             {
-              "form": "Tym",
-              "native_script": "Тым",
-              "language": "Selkup",
-              "language_code": "sel",
-              "notes": "Selkup hydronym."
+              "form": "Vasyëgan",
+              "native_script": "Васёган",
+              "language": "Khanty",
+              "language_code": "kca",
+              "notes": "Khanty hydronym."
             }
           ],
           "earliest_attestation_year": 1598,
-          "earliest_attestation_note": "Late 16th century CE in Russian Narym ostrog records.",
+          "earliest_attestation_note": "Late 16th century CE (c. 1598 CE) in Russian Narym ostrog records.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Indigenous Selkup-area right tributary of the Ob.",
-          "source_url": "https://en.wikipedia.org/wiki/Tym_(Ob)"
+          "etymology_notes": "From Khanty Vas-yohan ('narrow/marshy river').",
+          "source_url": "https://en.wikipedia.org/wiki/Vasyugan"
         },
         {
           "name": "Ket",
@@ -1608,26 +1603,26 @@
           "source_url": "https://en.wikipedia.org/wiki/Selkup_people"
         },
         {
-          "name": "Tym",
+          "name": "Parabel",
           "disambiguation_note": null,
-          "localisation_stem": "Tym",
+          "localisation_stem": "Parabel",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Tym River flowing through the barony's taiga.",
+          "relationship": "Left tributary of the Ob joining the main stem at Narym.",
           "language_variants": [
             {
-              "form": "Tym",
-              "native_script": "Тым",
+              "form": "Parabel",
+              "native_script": "Парабел",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian hydronym."
             },
             {
-              "form": "Tym",
-              "native_script": "Тым",
+              "form": "Parabel",
+              "native_script": "Парабел",
               "language": "Selkup",
               "language_code": "sel",
-              "notes": "Selkup hydronym."
+              "notes": "Selkup-area hydronym."
             }
           ],
           "earliest_attestation_year": 1598,
@@ -1638,8 +1633,8 @@
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Indigenous Selkup-area right tributary of the Ob.",
-          "source_url": "https://en.wikipedia.org/wiki/Tym_(Ob)"
+          "etymology_notes": "Indigenous left tributary of the Ob formed by the Kenga and Chuzik.",
+          "source_url": "https://en.wikipedia.org/wiki/Parabel_(river)"
         },
         {
           "name": "Ob",
@@ -3030,45 +3025,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Ket_people"
         },
         {
-          "name": "Yenisei",
+          "name": "Sym",
           "disambiguation_note": null,
-          "localisation_stem": "Yenisei",
+          "localisation_stem": "Sym",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Yenisei River flowing through the barony.",
+          "relationship": "Left tributary of the Yenisei draining the taiga north of the Kas.",
           "language_variants": [
             {
-              "form": "Yenisey",
-              "native_script": "Енисей",
+              "form": "Sym",
+              "native_script": "Сым",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
-            },
-            {
-              "form": "Khuk",
-              "native_script": "Хук",
-              "language": "Ket",
-              "language_code": "ket",
-              "notes": "Ket name for the Yenisei."
-            },
-            {
-              "form": "Nyand·es",
-              "native_script": "Няндэс",
-              "language": "Selkup",
-              "language_code": "sel",
-              "notes": "Selkup name for the Yenisei."
+              "notes": "Russian geographical name of Ket-Selkup origin"
             }
           ],
-          "earliest_attestation_year": 700,
-          "earliest_attestation_note": "Attested as Kem in 8th-century CE Old Turkic Yenisei inscriptions and Jianhe in Tang Chinese sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1605,
+          "earliest_attestation_note": "Recorded in early 17th-century Russian Yenisei Cossack accounts; indigenous Ket-Selkup river name.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Evenki Ioanesi ('great river'), attested in Old Turkic inscriptions as Kem.",
-          "source_url": "https://en.wikipedia.org/wiki/Yenisei"
+          "etymology_notes": "Left tributary of the middle Yenisei flowing through historic Ket and Selkup lands.",
+          "source_url": "https://en.wikipedia.org/wiki/Sym_(river)"
         },
         {
           "name": "Kem",
@@ -3165,45 +3146,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Ket_people"
         },
         {
-          "name": "Yenisei",
+          "name": "Bolshoy Pit",
           "disambiguation_note": null,
-          "localisation_stem": "Yenisei",
+          "localisation_stem": "Bolshoy Pit",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Yenisei River flowing past the barony.",
+          "relationship": "Right tributary of the Yenisei descending from the Yenisei Ridge.",
           "language_variants": [
             {
-              "form": "Yenisey",
-              "native_script": "Енисей",
+              "form": "Bolshoy Pit",
+              "native_script": "Большой Пит",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
-            },
-            {
-              "form": "Khuk",
-              "native_script": "Хук",
-              "language": "Ket",
-              "language_code": "ket",
-              "notes": "Ket name for the Yenisei."
-            },
-            {
-              "form": "Nyand·es",
-              "native_script": "Няндэс",
-              "language": "Selkup",
-              "language_code": "sel",
-              "notes": "Selkup name for the Yenisei."
+              "notes": "Russian geographical name from Yeniseian-Evenki Pit"
             }
           ],
-          "earliest_attestation_year": 700,
-          "earliest_attestation_note": "Attested as Kem in 8th-century CE Old Turkic Yenisei inscriptions and Jianhe in Tang Chinese sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; indigenous Yeniseian-Evenki substrate hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Evenki Ioanesi ('great river'), attested in Old Turkic inscriptions as Kem.",
-          "source_url": "https://en.wikipedia.org/wiki/Yenisei"
+          "etymology_notes": "Right tributary of the middle Yenisei in the Yenisei Ridge north of the Angara confluence. Onomastic note: Russian geographical name from Yeniseian-Evenki Pit ('Bolshoy Pit').",
+          "source_url": "https://en.wikipedia.org/wiki/Bolshoy_Pit"
         },
         {
           "name": "Angara",
@@ -3300,38 +3267,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Selkup_people"
         },
         {
-          "name": "Shegarka",
-          "disambiguation_note": null,
-          "localisation_stem": "Shegarka",
+          "name": "Iksa",
+          "disambiguation_note": "Chaya",
+          "localisation_stem": "Iksa",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Shegarka River flowing northeast through the barony.",
+          "relationship": "Longest tributary of the Chaya flowing parallel to the Shegarka.",
           "language_variants": [
             {
-              "form": "Shegarka",
-              "native_script": "Шегарка",
+              "form": "Iksa",
+              "native_script": "Икса",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
-            },
-            {
-              "form": "Shegarka",
-              "native_script": "Шегарка",
-              "language": "Selkup",
-              "language_code": "sel",
-              "notes": "Selkup-area hydronym."
+              "notes": "Russian geographical name of Uralic-Selkup origin"
             }
           ],
-          "earliest_attestation_year": 1604,
-          "earliest_attestation_note": "Early 17th century CE in Russian Tomsk ostrog records.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; indigenous Selkup/Uralic hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Indigenous left tributary of the Ob between Novosibirsk and Tomsk.",
-          "source_url": "https://en.wikipedia.org/wiki/Shegarka"
+          "etymology_notes": "Longest right tributary of the Chaya in the Vasyugan-Ob wetlands; linked to Uralic water-branch terms.",
+          "source_url": "https://en.wikipedia.org/wiki/Iksa_(river)"
         },
         {
           "name": "Ob",
@@ -3435,38 +3395,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Selkup_people"
         },
         {
-          "name": "Shegarka",
+          "name": "Parbig",
           "disambiguation_note": null,
-          "localisation_stem": "Shegarka",
+          "localisation_stem": "Parbig",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Shegarka River draining the barony.",
+          "relationship": "Headwater river of the Chaya rising in the Vasyugan wetlands.",
           "language_variants": [
             {
-              "form": "Shegarka",
-              "native_script": "Шегарка",
+              "form": "Parbig",
+              "native_script": "Парбиг",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
-            },
-            {
-              "form": "Shegarka",
-              "native_script": "Шегарка",
-              "language": "Selkup",
-              "language_code": "sel",
-              "notes": "Selkup-area hydronym."
+              "notes": "Russian adaptation of Southern Selkup"
             }
           ],
-          "earliest_attestation_year": 1604,
-          "earliest_attestation_note": "Early 17th century CE in Russian Tomsk ostrog records.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; indigenous Southern Selkup hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Indigenous left tributary of the Ob between Novosibirsk and Tomsk.",
-          "source_url": "https://en.wikipedia.org/wiki/Shegarka"
+          "etymology_notes": "Left headstream of the Chaya flowing out of the Vasyugan Swamp; from Southern Selkup hydronymic roots.",
+          "source_url": "https://en.wikipedia.org/wiki/Parbig"
         },
         {
           "name": "Chaya",
@@ -5022,38 +4975,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Kimak%E2%80%93Kipchak_confederation"
         },
         {
-          "name": "Kargat",
-          "disambiguation_note": null,
-          "localisation_stem": "Kargat",
+          "name": "Iksa",
+          "disambiguation_note": "Chaya",
+          "localisation_stem": "Iksa",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Kargat River rising near the Baksa watershed.",
+          "relationship": "Wetland river flowing north of the Baksa headwaters in the Ob-Baraba divide.",
           "language_variants": [
             {
-              "form": "Kargat",
-              "native_script": "Каргат",
+              "form": "Iksa",
+              "native_script": "Икса",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
-            },
-            {
-              "form": "Kargat",
-              "native_script": "Каргат",
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Baraba Tatar hydronym ('black currant')."
+              "notes": "Russian geographical name of Uralic-Selkup origin"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Indigenous Turkic hydronym recorded in 17th–18th century Russian Baraba surveys.",
+          "earliest_attestation_note": "No pre-1700 CE written attestation; indigenous Selkup/Uralic hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Turkic qargat ('black currant').",
-          "source_url": "https://en.wikipedia.org/wiki/Kargat_(river)"
+          "etymology_notes": "Longest right tributary of the Chaya in the Vasyugan-Ob wetlands; linked to Uralic water-branch terms.",
+          "source_url": "https://en.wikipedia.org/wiki/Iksa_(river)"
         },
         {
           "name": "Shegarka",
@@ -5184,38 +5130,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ob"
         },
         {
-          "name": "Om",
+          "name": "Kargat",
           "disambiguation_note": null,
-          "localisation_stem": "Om",
+          "localisation_stem": "Kargat",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Om River receiving the Tartas.",
+          "relationship": "Steppe river crossing the Baraba lowland southeast of the Tartas.",
           "language_variants": [
             {
-              "form": "Om",
-              "native_script": "Ом",
+              "form": "Kargat",
+              "native_script": "Каргат",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian hydronym."
             },
             {
-              "form": "Om",
-              "native_script": "Ом",
+              "form": "Kargat",
+              "native_script": "Каргат",
               "language": "Tatar",
               "language_code": "tat",
-              "notes": "Baraba Tatar hydronym ('quiet')."
+              "notes": "Baraba Tatar hydronym ('black currant')."
             }
           ],
-          "earliest_attestation_year": 1594,
-          "earliest_attestation_note": "Late 16th century CE in Russian Tara and Baraba records.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Turkic hydronym recorded in 17th–18th century Russian Baraba surveys.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Baraba Tatar om ('quiet, peaceful').",
-          "source_url": "https://en.wikipedia.org/wiki/Om_(river)"
+          "etymology_notes": "From Turkic qargat ('black currant').",
+          "source_url": "https://en.wikipedia.org/wiki/Kargat_(river)"
         }
       ]
     },
@@ -5278,38 +5224,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Kimak%E2%80%93Kipchak_confederation"
         },
         {
-          "name": "Om",
+          "name": "Tara",
           "disambiguation_note": null,
-          "localisation_stem": "Om",
+          "localisation_stem": "Tara",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Om River rising in the Vasyugan-Baraba borderlands.",
+          "relationship": "Taiga-steppe tributary of the Irtysh rising near the Vasyugan Swamp.",
           "language_variants": [
             {
-              "form": "Om",
-              "native_script": "Ом",
+              "form": "Tara",
+              "native_script": "Тара",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian hydronym."
             },
             {
-              "form": "Om",
-              "native_script": "Ом",
+              "form": "Tara",
+              "native_script": "Тара",
               "language": "Tatar",
               "language_code": "tat",
-              "notes": "Baraba Tatar hydronym ('quiet')."
+              "notes": "Siberian Tatar hydronym."
             }
           ],
           "earliest_attestation_year": 1594,
-          "earliest_attestation_note": "Late 16th century CE in Russian Tara and Baraba records.",
+          "earliest_attestation_note": "1594 CE in Russian foundation records of Tara ostrog.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Baraba Tatar om ('quiet, peaceful').",
-          "source_url": "https://en.wikipedia.org/wiki/Om_(river)"
+          "etymology_notes": "Pre-Russian hydronym of Turkic or Samoyedic origin (cf. Turkic tar 'narrow').",
+          "source_url": "https://en.wikipedia.org/wiki/Tara_(Irtysh)"
         },
         {
           "name": "Vasyugan Swamp",
@@ -5406,38 +5352,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Kimak%E2%80%93Kipchak_confederation"
         },
         {
-          "name": "Tartas",
-          "disambiguation_note": null,
-          "localisation_stem": "Tartas",
+          "name": "Uy",
+          "disambiguation_note": "Irtysh",
+          "localisation_stem": "Uy",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Tartas River draining the southern Vasyugan margin.",
+          "relationship": "Right tributary of the Irtysh flowing parallel to the Tara.",
           "language_variants": [
             {
-              "form": "Tartas",
-              "native_script": "Тартас",
+              "form": "Uy",
+              "native_script": "Уй",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
+              "notes": "Russian hydronym"
             },
             {
-              "form": "Tartas",
-              "native_script": "Тартас",
+              "form": "Uy",
+              "native_script": "Уй",
               "language": "Tatar",
               "language_code": "tat",
-              "notes": "Baraba Tatar hydronym."
+              "notes": "Siberian Tatar hydronym"
             }
           ],
-          "earliest_attestation_year": 1595,
-          "earliest_attestation_note": "Late 16th century CE in Russian Baraba tribute records.",
+          "earliest_attestation_year": 1594,
+          "earliest_attestation_note": "Late 16th century CE (c. 1594 CE) in Russian Tara ostrog records.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Indigenous Baraba hydronym of Turkic or Ugric origin.",
-          "source_url": "https://en.wikipedia.org/wiki/Tartas_(river)"
+          "etymology_notes": "From Turkic uy ('lowland, valley').",
+          "source_url": "https://en.wikipedia.org/wiki/Uy_(Irtysh)"
         },
         {
           "name": "Vasyugan Swamp",
@@ -6295,38 +6241,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Selkup_people"
         },
         {
-          "name": "Parabel",
+          "name": "Nyurolka",
           "disambiguation_note": null,
-          "localisation_stem": "Parabel",
+          "localisation_stem": "Nyurolka",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Parabel River draining the western part of the barony.",
+          "relationship": "Major right tributary of the Vasyugan flowing parallel to the Parabel.",
           "language_variants": [
             {
-              "form": "Parabel",
-              "native_script": "Парабел",
+              "form": "Nyurolka",
+              "native_script": "Нюролка",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian hydronym."
             },
             {
-              "form": "Parabel",
-              "native_script": "Парабел",
-              "language": "Selkup",
-              "language_code": "sel",
-              "notes": "Selkup-area hydronym."
+              "form": "Nyurolka",
+              "native_script": "Нюролка",
+              "language": "Khanty",
+              "language_code": "kca",
+              "notes": "Khanty-area hydronym."
             }
           ],
-          "earliest_attestation_year": 1598,
-          "earliest_attestation_note": "Late 16th century CE in Russian Narym ostrog records.",
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "Early 17th century CE in Russian Narym and Vasyugan records.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Indigenous left tributary of the Ob formed by the Kenga and Chuzik.",
-          "source_url": "https://en.wikipedia.org/wiki/Parabel_(river)"
+          "etymology_notes": "Indigenous right tributary of the Vasyugan River.",
+          "source_url": "https://en.wikipedia.org/wiki/Nyurolka"
         },
         {
           "name": "Chaya",
@@ -7070,38 +7016,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Sabir_people"
         },
         {
-          "name": "Ishim River",
+          "name": "Vagay",
           "disambiguation_note": null,
-          "localisation_stem": "Ishim",
+          "localisation_stem": "Vagay",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Ishim River joining the Irtysh at the barony.",
+          "relationship": "Left tributary of the Irtysh flowing west of the lower Ishim.",
           "language_variants": [
             {
-              "form": "Ishim",
-              "native_script": "Ишим",
+              "form": "Vagay",
+              "native_script": "Вагай",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
-            },
-            {
-              "form": "Ishem",
-              "native_script": "Ишем",
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Siberian Tatar hydronym."
+              "notes": "Russian geographical name of Siberian Turkic origin"
             }
           ],
-          "earliest_attestation_year": 1580,
-          "earliest_attestation_note": "16th century CE (Siberian chronicles, 1580s CE)",
+          "earliest_attestation_year": 1584,
+          "earliest_attestation_note": "Recorded in late 16th-century Siberian chronicles (site of Yermak's 1585 battle at the Vagay mouth).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Pre-Russian hydronym of disputed Turkic or Ugric origin.",
-          "source_url": "https://en.wikipedia.org/wiki/Ishim_(river)"
+          "etymology_notes": "Left tributary of the Irtysh flowing parallel to the lower Ishim across the Ishim Steppe.",
+          "source_url": "https://en.wikipedia.org/wiki/Vagay_(river)"
         },
         {
           "name": "Irtysh",
@@ -7205,38 +7144,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Sabir_people"
         },
         {
-          "name": "Ishim River",
+          "name": "Shish",
           "disambiguation_note": null,
-          "localisation_stem": "Ishim",
+          "localisation_stem": "Shish",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Ishim River flowing west of the barony.",
+          "relationship": "Right tributary entering the Irtysh opposite the Ishim confluence.",
           "language_variants": [
             {
-              "form": "Ishim",
-              "native_script": "Ишим",
+              "form": "Shish",
+              "native_script": "Шиш",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian hydronym."
             },
             {
-              "form": "Ishem",
-              "native_script": "Ишем",
+              "form": "Shish",
+              "native_script": "Шиш",
               "language": "Tatar",
               "language_code": "tat",
               "notes": "Siberian Tatar hydronym."
             }
           ],
-          "earliest_attestation_year": 1580,
-          "earliest_attestation_note": "16th century CE (Siberian chronicles, 1580s CE)",
+          "earliest_attestation_year": 1594,
+          "earliest_attestation_note": "Late 16th century CE in Russian Tara ostrog records.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Pre-Russian hydronym of disputed Turkic or Ugric origin.",
-          "source_url": "https://en.wikipedia.org/wiki/Ishim_(river)"
+          "etymology_notes": "Indigenous right tributary of the Irtysh.",
+          "source_url": "https://en.wikipedia.org/wiki/Shish_(river)"
         },
         {
           "name": "Osha",
@@ -7333,38 +7272,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Sabir_people"
         },
         {
-          "name": "Ishim River",
+          "name": "Tuy",
           "disambiguation_note": null,
-          "localisation_stem": "Ishim",
+          "localisation_stem": "Tuy",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Ishim River winding north through the barony.",
+          "relationship": "Taiga tributary of the Irtysh entering opposite the Ishim steppe.",
           "language_variants": [
             {
-              "form": "Ishim",
-              "native_script": "Ишим",
+              "form": "Tuy",
+              "native_script": "Туй",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
-            },
-            {
-              "form": "Ishem",
-              "native_script": "Ишем",
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Siberian Tatar hydronym."
+              "notes": "Russian geographical name of indigenous Siberian origin"
             }
           ],
-          "earliest_attestation_year": 1580,
-          "earliest_attestation_note": "16th century CE (Siberian chronicles, 1580s CE)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; indigenous West Siberian hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Pre-Russian hydronym of disputed Turkic or Ugric origin.",
-          "source_url": "https://en.wikipedia.org/wiki/Ishim_(river)"
+          "etymology_notes": "Right tributary of the Irtysh rising in the Vasyugan Swamp and entering the Irtysh opposite Ust-Ishim.",
+          "source_url": "https://en.wikipedia.org/wiki/Tuy_(river)"
         },
         {
           "name": "Irtysh",
@@ -8270,38 +8202,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Irtysh"
         },
         {
-          "name": "Siletiteniz",
+          "name": "Shagalaly",
           "disambiguation_note": null,
-          "localisation_stem": "Siletiteniz",
+          "localisation_stem": "Shagalaly",
           "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Siletiteniz salt lake lying nearby in the same steppe basin.",
+          "feature_subtype": "river",
+          "relationship": "River rising in the Kokshetau Hills and draining north across the steppe.",
           "language_variants": [
             {
-              "form": "Seletyteniz",
-              "native_script": "Селетытениз",
-              "language": "Russian",
-              "language_code": "rus",
-              "notes": "Russian hydronym."
+              "form": "Shagalaly",
+              "native_script": "Шағалалы",
+              "language": "Kazakh",
+              "language_code": "kaz",
+              "notes": "Kazakh name ('Full of Gulls')"
             },
             {
-              "form": "Seletyteniz",
-              "native_script": "Селетытениз",
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Steppe Turkic hydronym."
+              "form": "Shagalaly",
+              "native_script": "Шагалалы",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Indigenous Turkic hydronym recorded in 18th-century steppe surveys.",
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Kazakh-Kipchak hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Compound of Sileti (river) + Turkic tengiz ('sea, lake').",
-          "source_url": "https://en.wikipedia.org/wiki/Siletiteniz"
+          "etymology_notes": "Steppe river rising in the Kokshetau Hills and flowing north into Lake Shaglyteniz; from Kazakh shagala ('seagull').",
+          "source_url": "https://en.wikipedia.org/wiki/Shagalaly"
         }
       ]
     },
@@ -8910,31 +8842,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Om_(river)"
         },
         {
-          "name": "Lake Chany",
+          "name": "Baraba Steppe",
           "disambiguation_note": null,
-          "localisation_stem": "Chany",
-          "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Largest endorheic lake of the Ob–Irtysh interfluve in West Siberia.",
+          "localisation_stem": "Baraba",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Lake-dotted forest-steppe lowland surrounding the Om and Chany basin.",
           "language_variants": [
             {
-              "form": "Chany",
-              "native_script": "Чаны",
+              "form": "Barabinskaya step",
+              "native_script": "Барабинская степь",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian adaptation of Turkic/Ugric hydronym"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "Indigenous Ob–Irtysh lake name first recorded in early Russian Siberian surveys.",
+          "earliest_attestation_year": 1598,
+          "earliest_attestation_note": "Attested in late 16th-century Siberian chronicles after the indigenous Baraba Turkic inhabitants.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Siberian Turkic/Ugric *chan ('large vessel/basin').",
-          "source_url": "https://en.wikipedia.org/wiki/Lake_Chany"
+          "etymology_notes": "Forest-steppe lowland between the Irtysh and Ob rivers, named after the indigenous Baraba Turkic people.",
+          "source_url": "https://en.wikipedia.org/wiki/Baraba_Steppe"
         }
       ]
     },
@@ -9024,31 +8956,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Om_(river)"
         },
         {
-          "name": "Lake Chany",
+          "name": "Sartlan",
           "disambiguation_note": null,
-          "localisation_stem": "Chany",
+          "localisation_stem": "Sartlan",
           "category": "hydronym",
           "feature_subtype": "lake",
-          "relationship": "Largest endorheic lake of the Ob–Irtysh interfluve in West Siberia.",
+          "relationship": "Large shallow lake in the Baraba Steppe east of Lake Chany.",
           "language_variants": [
             {
-              "form": "Chany",
-              "native_script": "Чаны",
+              "form": "Sartlan",
+              "native_script": "Сартлан",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian adaptation of Turkic/Ugric hydronym"
+              "notes": "Russian adaptation of Turkic surtan ('pike')"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "Indigenous Ob–Irtysh lake name first recorded in early Russian Siberian surveys.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; indigenous Turkic hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Siberian Turkic/Ugric *chan ('large vessel/basin').",
-          "source_url": "https://en.wikipedia.org/wiki/Lake_Chany"
+          "etymology_notes": "Large shallow lake in the Baraba Steppe east of Lake Chany; from Turkic surtan/sartlan ('pike').",
+          "source_url": "https://en.wikipedia.org/wiki/Sartlan"
         }
       ]
     },
@@ -9111,38 +9043,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Kimak%E2%80%93Kipchak_confederation"
         },
         {
-          "name": "Lake Chany",
+          "name": "Tandovo",
           "disambiguation_note": null,
-          "localisation_stem": "Chany",
+          "localisation_stem": "Tandovo",
           "category": "hydronym",
           "feature_subtype": "lake",
-          "relationship": "Lake Chany lying immediately south of the barony.",
+          "relationship": "Closed steppe lake in the Baraba lowland north of Lake Chany.",
           "language_variants": [
             {
-              "form": "Chany",
-              "native_script": "Чаны",
+              "form": "Tandovo",
+              "native_script": "Тандово",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
-            },
-            {
-              "form": "Chana",
-              "native_script": "Чана",
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Baraba Tatar hydronym ('large vessel / tub')."
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "Indigenous Ob–Irtysh lake name first recorded in early Russian Siberian surveys.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Baraba Steppe lake name.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Turkic čana ('wooden tub/vessel'), referring to the vast shallow lake basin.",
-          "source_url": "https://en.wikipedia.org/wiki/Lake_Chany"
+          "etymology_notes": "Closed steppe lake in the Baraba lowland northeast of Lake Chany, adapted into Russian from local Turkic usage.",
+          "source_url": "https://en.wikipedia.org/wiki/Tandovo"
         },
         {
           "name": "Tartas",
@@ -9360,38 +9285,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Kimak%E2%80%93Kipchak_confederation"
         },
         {
-          "name": "Om",
+          "name": "Baraba Steppe",
           "disambiguation_note": null,
-          "localisation_stem": "Om",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Om River joining the Irtysh at the barony.",
+          "localisation_stem": "Baraba",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Forest-steppe plain extending eastward from the Irtysh along the Om basin.",
           "language_variants": [
             {
-              "form": "Om",
-              "native_script": "Ом",
+              "form": "Barabinskaya step",
+              "native_script": "Барабинская степь",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
-            },
-            {
-              "form": "Om",
-              "native_script": "Ом",
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Baraba Tatar hydronym ('quiet')."
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1594,
-          "earliest_attestation_note": "Late 16th century CE in Russian Tara and Baraba records.",
+          "earliest_attestation_year": 1598,
+          "earliest_attestation_note": "Attested in late 16th-century Siberian chronicles after the indigenous Baraba Turkic inhabitants.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Baraba Tatar om ('quiet, peaceful').",
-          "source_url": "https://en.wikipedia.org/wiki/Om_(river)"
+          "etymology_notes": "Forest-steppe lowland between the Irtysh and Ob rivers, named after the indigenous Baraba Turkic people.",
+          "source_url": "https://en.wikipedia.org/wiki/Baraba_Steppe"
         },
         {
           "name": "Irtysh",
@@ -9536,38 +9454,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Irtysh"
         },
         {
-          "name": "Om",
+          "name": "Tara",
           "disambiguation_note": null,
-          "localisation_stem": "Om",
+          "localisation_stem": "Tara",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Om River joining the Irtysh nearby.",
+          "relationship": "Right tributary of the Irtysh flowing north of the Om.",
           "language_variants": [
             {
-              "form": "Om",
-              "native_script": "Ом",
+              "form": "Tara",
+              "native_script": "Тара",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian hydronym."
             },
             {
-              "form": "Om",
-              "native_script": "Ом",
+              "form": "Tara",
+              "native_script": "Тара",
               "language": "Tatar",
               "language_code": "tat",
-              "notes": "Baraba Tatar hydronym ('quiet')."
+              "notes": "Siberian Tatar hydronym."
             }
           ],
           "earliest_attestation_year": 1594,
-          "earliest_attestation_note": "Late 16th century CE in Russian Tara and Baraba records.",
+          "earliest_attestation_note": "1594 CE in Russian foundation records of Tara ostrog.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Baraba Tatar om ('quiet, peaceful').",
-          "source_url": "https://en.wikipedia.org/wiki/Om_(river)"
+          "etymology_notes": "Pre-Russian hydronym of Turkic or Samoyedic origin (cf. Turkic tar 'narrow').",
+          "source_url": "https://en.wikipedia.org/wiki/Tara_(Irtysh)"
         }
       ]
     },
@@ -9664,38 +9582,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Lake_Chany"
         },
         {
-          "name": "Om",
+          "name": "Tartas",
           "disambiguation_note": null,
-          "localisation_stem": "Om",
+          "localisation_stem": "Tartas",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Om River flowing north of the Tebis valley.",
+          "relationship": "Main northern tributary of the Om crossing the Baraba Steppe.",
           "language_variants": [
             {
-              "form": "Om",
-              "native_script": "Ом",
+              "form": "Tartas",
+              "native_script": "Тартас",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian hydronym."
             },
             {
-              "form": "Om",
-              "native_script": "Ом",
+              "form": "Tartas",
+              "native_script": "Тартас",
               "language": "Tatar",
               "language_code": "tat",
-              "notes": "Baraba Tatar hydronym ('quiet')."
+              "notes": "Baraba Tatar hydronym."
             }
           ],
-          "earliest_attestation_year": 1594,
-          "earliest_attestation_note": "Late 16th century CE in Russian Tara and Baraba records.",
+          "earliest_attestation_year": 1595,
+          "earliest_attestation_note": "Late 16th century CE in Russian Baraba tribute records.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Baraba Tatar om ('quiet, peaceful').",
-          "source_url": "https://en.wikipedia.org/wiki/Om_(river)"
+          "etymology_notes": "Indigenous Baraba hydronym of Turkic or Ugric origin.",
+          "source_url": "https://en.wikipedia.org/wiki/Tartas_(river)"
         }
       ]
     },
@@ -9758,38 +9676,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Sabir_people"
         },
         {
-          "name": "Om",
+          "name": "Kargat",
           "disambiguation_note": null,
-          "localisation_stem": "Om",
+          "localisation_stem": "Kargat",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Om River flowing west toward the Irtysh.",
+          "relationship": "Steppe river flowing southwest from the Baraba marshes into Lake Chany.",
           "language_variants": [
             {
-              "form": "Om",
-              "native_script": "Ом",
+              "form": "Kargat",
+              "native_script": "Каргат",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian hydronym."
             },
             {
-              "form": "Om",
-              "native_script": "Ом",
+              "form": "Kargat",
+              "native_script": "Каргат",
               "language": "Tatar",
               "language_code": "tat",
-              "notes": "Baraba Tatar hydronym ('quiet')."
+              "notes": "Baraba Tatar hydronym ('black currant')."
             }
           ],
-          "earliest_attestation_year": 1594,
-          "earliest_attestation_note": "Late 16th century CE in Russian Tara and Baraba records.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Turkic hydronym recorded in 17th–18th century Russian Baraba surveys.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Baraba Tatar om ('quiet, peaceful').",
-          "source_url": "https://en.wikipedia.org/wiki/Om_(river)"
+          "etymology_notes": "From Turkic qargat ('black currant').",
+          "source_url": "https://en.wikipedia.org/wiki/Kargat_(river)"
         },
         {
           "name": "Lake Chany",
@@ -10952,38 +10870,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Khanty"
         },
         {
-          "name": "Demyanka",
+          "name": "Turtas",
           "disambiguation_note": null,
-          "localisation_stem": "Demyanka",
+          "localisation_stem": "Turtas",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Demyanka River draining the barony.",
+          "relationship": "Right tributary of the Irtysh flowing through the taiga south of the Demyanka.",
           "language_variants": [
             {
-              "form": "Demyanka",
-              "native_script": "Демянка",
+              "form": "Turtas",
+              "native_script": "Туртас",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
-            },
-            {
-              "form": "Nimnyan",
-              "native_script": "Нимнян",
-              "language": "Khanty",
-              "language_code": "kca",
-              "notes": "Khanty hydronym (Nimnyan)."
+              "notes": "Russian geographical name of Siberian Turkic origin"
             }
           ],
-          "earliest_attestation_year": 1587,
-          "earliest_attestation_note": "Late 16th century CE (c. 1587 CE) in Russian Tobolsk records (after Khanty chief Demyan).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; indigenous Siberian Turkic-Ugric hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Russian name reflects Khanty chief Nimnyan/Demyan of the lower Irtysh.",
-          "source_url": "https://en.wikipedia.org/wiki/Demyanka"
+          "etymology_notes": "Right tributary of the Irtysh in the southern West Siberian taiga, immediately south of the Demyanka.",
+          "source_url": "https://en.wikipedia.org/wiki/Turtas"
         },
         {
           "name": "Vasyugan Swamp",
@@ -11755,38 +11666,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Sabir_people"
         },
         {
-          "name": "Tobol River",
+          "name": "Turtas",
           "disambiguation_note": null,
-          "localisation_stem": "Tobol",
+          "localisation_stem": "Turtas",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Tobol River flowing northeast through the barony.",
+          "relationship": "Right tributary of the Irtysh flowing northeast of the Tobol mouth.",
           "language_variants": [
             {
-              "form": "Tobol",
-              "native_script": "Тобол",
+              "form": "Turtas",
+              "native_script": "Туртас",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
-            },
-            {
-              "form": "Tubyl",
-              "native_script": "Тубыл",
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Siberian Tatar hydronym."
+              "notes": "Russian geographical name of Siberian Turkic origin"
             }
           ],
-          "earliest_attestation_year": 1580,
-          "earliest_attestation_note": "16th century CE (Siberian chronicles, 1580s CE)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; indigenous Siberian Turkic-Ugric hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Turkic tubyl / tobyl ('meadowsweet / spirea'), a common riverbank shrub.",
-          "source_url": "https://en.wikipedia.org/wiki/Tobol"
+          "etymology_notes": "Right tributary of the Irtysh in the southern West Siberian taiga, immediately south of the Demyanka.",
+          "source_url": "https://en.wikipedia.org/wiki/Turtas"
         },
         {
           "name": "Tavda",
@@ -11883,38 +11787,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Sabir_people"
         },
         {
-          "name": "Tobol River",
+          "name": "Vagay",
           "disambiguation_note": null,
-          "localisation_stem": "Tobol",
+          "localisation_stem": "Vagay",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Tobol River flowing through the barony.",
+          "relationship": "Left tributary entering the Irtysh downstream of the Tobol confluence.",
           "language_variants": [
             {
-              "form": "Tobol",
-              "native_script": "Тобол",
+              "form": "Vagay",
+              "native_script": "Вагай",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
-            },
-            {
-              "form": "Tubyl",
-              "native_script": "Тубыл",
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Siberian Tatar hydronym."
+              "notes": "Russian geographical name of Siberian Turkic origin"
             }
           ],
-          "earliest_attestation_year": 1580,
-          "earliest_attestation_note": "16th century CE (Siberian chronicles, 1580s CE)",
+          "earliest_attestation_year": 1584,
+          "earliest_attestation_note": "Recorded in late 16th-century Siberian chronicles (site of Yermak's 1585 battle at the Vagay mouth).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Turkic tubyl / tobyl ('meadowsweet / spirea'), a common riverbank shrub.",
-          "source_url": "https://en.wikipedia.org/wiki/Tobol"
+          "etymology_notes": "Left tributary of the Irtysh flowing parallel to the lower Ishim across the Ishim Steppe.",
+          "source_url": "https://en.wikipedia.org/wiki/Vagay_(river)"
         },
         {
           "name": "Tura",
@@ -12692,38 +12589,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Osha_(river)"
         },
         {
-          "name": "Tenis",
+          "name": "Ebeyty",
           "disambiguation_note": null,
-          "localisation_stem": "Tenis",
+          "localisation_stem": "Ebeyty",
           "category": "hydronym",
           "feature_subtype": "lake",
-          "relationship": "Lake Tenis lying in the Osha basin.",
+          "relationship": "Large endorheic salt lake on the steppe south of the Osha-Ishim divide.",
           "language_variants": [
             {
-              "form": "Tenis",
-              "native_script": "Тенис",
+              "form": "Ebeyty",
+              "native_script": "Эбейты",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
+              "notes": "Russian geographical name"
             },
             {
-              "form": "Tenis",
-              "native_script": "Тенис",
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Siberian Tatar hydronym ('sea')."
+              "form": "Ebeiti",
+              "native_script": "Ебейті",
+              "language": "Kazakh",
+              "language_code": "kaz",
+              "notes": "Kazakh steppe name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Indigenous Turkic hydronym recorded in 18th-century Russian Tara surveys.",
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional steppe Turkic hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Turkic tengiz / tenis ('sea, large lake').",
-          "source_url": "https://en.wikipedia.org/wiki/Tenis"
+          "etymology_notes": "Largest salt lake of the Omsk-Ishim forest-steppe on the northern Kazakh steppe margin.",
+          "source_url": "https://en.wikipedia.org/wiki/Ebeyty"
         }
       ]
     },
@@ -12820,45 +12717,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ishim_(river)"
         },
         {
-          "name": "Irtysh",
+          "name": "Shagalaly",
           "disambiguation_note": null,
-          "localisation_stem": "Irtysh",
+          "localisation_stem": "Shagalaly",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Irtysh River bordering the eastern steppe.",
+          "relationship": "Steppe river flowing northward toward Lake Shaglyteniz near Petropavl.",
           "language_variants": [
             {
-              "form": "Irtysh",
-              "native_script": "Иртыш",
+              "form": "Shagalaly",
+              "native_script": "Шағалалы",
+              "language": "Kazakh",
+              "language_code": "kaz",
+              "notes": "Kazakh name ('Full of Gulls')"
+            },
+            {
+              "form": "Shagalaly",
+              "native_script": "Шагалалы",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
-            },
-            {
-              "form": "Irtesh",
-              "native_script": "Иртеш",
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Siberian Tatar hydronym."
-            },
-            {
-              "form": "Tangat",
-              "native_script": "Тангат",
-              "language": "Khanty",
-              "language_code": "kca",
-              "notes": "Khanty name for the Irtysh."
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 720,
-          "earliest_attestation_note": "Attested as Ertiš in the 8th-century CE Old Turkic Tonyukuk inscription.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Kazakh-Kipchak hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Old Turkic Ertiš, traditionally linked to *er- ('to cross') or Kimek/Ket substrate roots.",
-          "source_url": "https://en.wikipedia.org/wiki/Irtysh"
+          "etymology_notes": "Steppe river rising in the Kokshetau Hills and flowing north into Lake Shaglyteniz; from Kazakh shagala ('seagull').",
+          "source_url": "https://en.wikipedia.org/wiki/Shagalaly"
         }
       ]
     },
@@ -12921,45 +12811,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Sabir_people"
         },
         {
-          "name": "Irtysh",
+          "name": "Tara",
           "disambiguation_note": null,
-          "localisation_stem": "Irtysh",
+          "localisation_stem": "Tara",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Irtysh River flowing north through the barony.",
+          "relationship": "Right tributary of the Irtysh entering opposite the Sargatskoye steppe.",
           "language_variants": [
             {
-              "form": "Irtysh",
-              "native_script": "Иртыш",
+              "form": "Tara",
+              "native_script": "Тара",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian hydronym."
             },
             {
-              "form": "Irtesh",
-              "native_script": "Иртеш",
+              "form": "Tara",
+              "native_script": "Тара",
               "language": "Tatar",
               "language_code": "tat",
               "notes": "Siberian Tatar hydronym."
-            },
-            {
-              "form": "Tangat",
-              "native_script": "Тангат",
-              "language": "Khanty",
-              "language_code": "kca",
-              "notes": "Khanty name for the Irtysh."
             }
           ],
-          "earliest_attestation_year": 720,
-          "earliest_attestation_note": "Attested as Ertiš in the 8th-century CE Old Turkic Tonyukuk inscription.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1594,
+          "earliest_attestation_note": "1594 CE in Russian foundation records of Tara ostrog.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Old Turkic Ertiš, traditionally linked to *er- ('to cross') or Kimek/Ket substrate roots.",
-          "source_url": "https://en.wikipedia.org/wiki/Irtysh"
+          "etymology_notes": "Pre-Russian hydronym of Turkic or Samoyedic origin (cf. Turkic tar 'narrow').",
+          "source_url": "https://en.wikipedia.org/wiki/Tara_(Irtysh)"
         },
         {
           "name": "Osha",
@@ -13056,45 +12939,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Sabir_people"
         },
         {
-          "name": "Irtysh",
+          "name": "Shaglyteniz",
           "disambiguation_note": null,
-          "localisation_stem": "Irtysh",
+          "localisation_stem": "Shaglyteniz",
           "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Irtysh River flowing west of the barony.",
+          "feature_subtype": "lake",
+          "relationship": "Large brackish steppe lake on the northern Kazakh plain near Ebeyty.",
           "language_variants": [
             {
-              "form": "Irtysh",
-              "native_script": "Иртыш",
+              "form": "Shaglyteniz",
+              "native_script": "Шағлытеңіз",
+              "language": "Kazakh",
+              "language_code": "kaz",
+              "notes": "Kazakh name ('Gull Sea')"
+            },
+            {
+              "form": "Shaglyteniz",
+              "native_script": "Шаглытениз",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
-            },
-            {
-              "form": "Irtesh",
-              "native_script": "Иртеш",
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Siberian Tatar hydronym."
-            },
-            {
-              "form": "Tangat",
-              "native_script": "Тангат",
-              "language": "Khanty",
-              "language_code": "kca",
-              "notes": "Khanty name for the Irtysh."
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 720,
-          "earliest_attestation_note": "Attested as Ertiš in the 8th-century CE Old Turkic Tonyukuk inscription.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Kazakh-Kipchak hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Old Turkic Ertiš, traditionally linked to *er- ('to cross') or Kimek/Ket substrate roots.",
-          "source_url": "https://en.wikipedia.org/wiki/Irtysh"
+          "etymology_notes": "Endorheic brackish lake on the northern Kazakh steppe fed by the Shagalaly River; from Kazakh shagala ('gull') and teniz ('sea, large lake').",
+          "source_url": "https://en.wikipedia.org/wiki/Shaglyteniz"
         },
         {
           "name": "Om",
@@ -13454,38 +13330,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Sabir_people"
         },
         {
-          "name": "Tara",
+          "name": "Shish",
           "disambiguation_note": null,
-          "localisation_stem": "Tara",
+          "localisation_stem": "Shish",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Tara River flowing west through the barony.",
+          "relationship": "Right tributary of the Irtysh flowing north of the Uy and Tara.",
           "language_variants": [
             {
-              "form": "Tara",
-              "native_script": "Тара",
+              "form": "Shish",
+              "native_script": "Шиш",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian hydronym."
             },
             {
-              "form": "Tara",
-              "native_script": "Тара",
+              "form": "Shish",
+              "native_script": "Шиш",
               "language": "Tatar",
               "language_code": "tat",
               "notes": "Siberian Tatar hydronym."
             }
           ],
           "earliest_attestation_year": 1594,
-          "earliest_attestation_note": "1594 CE in Russian foundation records of Tara ostrog.",
+          "earliest_attestation_note": "Late 16th century CE in Russian Tara ostrog records.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Pre-Russian hydronym of Turkic or Samoyedic origin (cf. Turkic tar 'narrow').",
-          "source_url": "https://en.wikipedia.org/wiki/Tara_(Irtysh)"
+          "etymology_notes": "Indigenous right tributary of the Irtysh.",
+          "source_url": "https://en.wikipedia.org/wiki/Shish_(river)"
         },
         {
           "name": "Uy",
@@ -13582,38 +13458,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Sabir_people"
         },
         {
-          "name": "Tara",
+          "name": "Tuy",
           "disambiguation_note": null,
-          "localisation_stem": "Tara",
+          "localisation_stem": "Tuy",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Tara River flowing west through the barony.",
+          "relationship": "Taiga river joining the Irtysh downstream of the Tara confluence.",
           "language_variants": [
             {
-              "form": "Tara",
-              "native_script": "Тара",
+              "form": "Tuy",
+              "native_script": "Туй",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym."
-            },
-            {
-              "form": "Tara",
-              "native_script": "Тара",
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Siberian Tatar hydronym."
+              "notes": "Russian geographical name of indigenous Siberian origin"
             }
           ],
-          "earliest_attestation_year": 1594,
-          "earliest_attestation_note": "1594 CE in Russian foundation records of Tara ostrog.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; indigenous West Siberian hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Pre-Russian hydronym of Turkic or Samoyedic origin (cf. Turkic tar 'narrow').",
-          "source_url": "https://en.wikipedia.org/wiki/Tara_(Irtysh)"
+          "etymology_notes": "Right tributary of the Irtysh rising in the Vasyugan Swamp and entering the Irtysh opposite Ust-Ishim.",
+          "source_url": "https://en.wikipedia.org/wiki/Tuy_(river)"
         },
         {
           "name": "Tartas",
@@ -15863,38 +15732,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Mansi_people"
         },
         {
-          "name": "Tagil",
+          "name": "Salda",
           "disambiguation_note": null,
-          "localisation_stem": "Tagil",
+          "localisation_stem": "Salda",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Tagil River receiving the Laya tributary.",
+          "relationship": "Right tributary joining the Tagil River east of the Ural foothills.",
           "language_variants": [
             {
-              "form": "Tagil",
-              "native_script": "Тагил",
+              "form": "Salda",
+              "native_script": "Салда",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian hydronym."
             },
             {
-              "form": "Tagil",
-              "native_script": "Тагил",
+              "form": "Salda",
+              "native_script": "Салда",
               "language": "Mansi",
               "language_code": "mns",
               "notes": "Mansi hydronym."
             }
           ],
-          "earliest_attestation_year": 1581,
-          "earliest_attestation_note": "Late 16th century CE (1581 CE) in Russian Siberian Chronicles.",
+          "earliest_attestation_year": 1627,
+          "earliest_attestation_note": "17th century CE in Russian Verkhoturye records.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mansi or Turkic substrate (cf. Mansi tagyl 'many', or Turkic tag 'mountain').",
-          "source_url": "https://en.wikipedia.org/wiki/Tagil"
+          "etymology_notes": "From Ob-Ugric / Mansi substrate (*sal-ta 'rocky/forest river').",
+          "source_url": "https://en.wikipedia.org/wiki/Salda_(Tagil)"
         },
         {
           "name": "Ural Mountains",
@@ -16153,38 +16022,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tura_(river)"
         },
         {
-          "name": "Tagil",
+          "name": "Nitsa",
           "disambiguation_note": null,
-          "localisation_stem": "Tagil",
+          "localisation_stem": "Nitsa",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Tagil River joining the Tura nearby.",
+          "relationship": "Right tributary of the Tura formed by the Neyva and Rezh.",
           "language_variants": [
             {
-              "form": "Tagil",
-              "native_script": "Тагил",
+              "form": "Nitsa",
+              "native_script": "Ница",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian hydronym."
             },
             {
-              "form": "Tagil",
-              "native_script": "Тагил",
-              "language": "Mansi",
-              "language_code": "mns",
-              "notes": "Mansi hydronym."
+              "form": "Nitsa",
+              "native_script": "Ница",
+              "language": "Tatar",
+              "language_code": "tat",
+              "notes": "Siberian Tatar hydronym."
             }
           ],
-          "earliest_attestation_year": 1581,
-          "earliest_attestation_note": "Late 16th century CE (1581 CE) in Russian Siberian Chronicles.",
+          "earliest_attestation_year": 1582,
+          "earliest_attestation_note": "Late 16th century CE in Russian Siberian Chronicles.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mansi or Turkic substrate (cf. Mansi tagyl 'many', or Turkic tag 'mountain').",
-          "source_url": "https://en.wikipedia.org/wiki/Tagil"
+          "etymology_notes": "Pre-Russian hydronym of the Tura basin, likely of Ugric or Turkic origin.",
+          "source_url": "https://en.wikipedia.org/wiki/Nitsa"
         }
       ]
     },

@@ -137,21 +137,21 @@
       "target_baronies_audited": 241,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 723,
-      "unique_replacement_names": 83,
-      "candidates_with_multilingual_variants": 655,
+      "unique_replacement_names": 87,
+      "candidates_with_multilingual_variants": 647,
       "wikipedia_source_attached": 723,
-      "unique_source_urls": 85,
+      "unique_source_urls": 89,
       "candidates_by_category": {
         "choronym": 22,
-        "hydronym": 334,
-        "oronym": 122,
+        "hydronym": 323,
+        "oronym": 124,
         "topographic_feature": 4,
-        "tribe": 241
+        "tribe": 250
       },
       "baronies_with_category": {
         "has_choronym_candidate": 22,
         "has_hydronym_candidate": 237,
-        "has_oronym_candidate": 122,
+        "has_oronym_candidate": 124,
         "has_topographic_feature_candidate": 4,
         "has_tribe_candidate": 241
       },
@@ -161,6 +161,7 @@
         "lzh",
         "mnc",
         "mon",
+        "rus",
         "zho"
       ],
       "anachronism_type_counts": {
@@ -172,17 +173,17 @@
         "unattested_indigenous_or_minor": 25
       },
       "candidates_by_attestation_basis": {
-        "attested_867_to_1066": 22,
-        "attested_pre_867": 514,
-        "indigenous_pre_literate": 187
+        "attested_867_to_1066": 9,
+        "attested_pre_867": 538,
+        "indigenous_pre_literate": 176
       },
       "bookmark_valid_candidates": {
-        "867": 701,
+        "867": 714,
         "1066": 723,
         "1178": 723
       },
       "baronies_with_867_valid_candidate": 241,
-      "unique_localisation_stems": 82
+      "unique_localisation_stems": 85
     }
   },
   "baronies": {
@@ -570,45 +571,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yalu_River"
         },
         {
-          "name": "Heaven Lake",
+          "name": "Kaema Plateau",
           "disambiguation_note": null,
-          "localisation_stem": "Heaven Lake",
-          "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Crater lake on the summit of the massif.",
+          "localisation_stem": "Kaema",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Highland plateau immediately south of the upper Yalu River and the Changbai massif.",
           "language_variants": [
             {
-              "form": "Tiānchí",
-              "native_script": "天池",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Tiān Chí"
-            },
-            {
-              "form": "Cheonji",
-              "native_script": "천지",
+              "form": "Gaemagowon",
+              "native_script": "개마고원",
               "language": "Korean",
               "language_code": "kor",
-              "notes": "Cheonji"
+              "notes": "Modern Korean Gaema Gowon"
             },
             {
-              "form": "Tamun",
-              "native_script": "ᡨᠠᠮᡠᠨ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Tamun"
+              "form": "Gàimǎ Gāoyuán",
+              "native_script": "蓋馬高原",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese form Gaema; earlier Gaemadaesan (蓋馬大山)"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE (Attested in Ming-Qing Changbai Mountain gazetteers)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 280,
+          "earliest_attestation_note": "c. 280 CE (Gaemadaesan attested in the Records of the Three Kingdoms)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Volcanic crater lake atop Mount Paektu, source of the Songhua, Yalu, and Tumen rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Heaven_Lake"
+          "etymology_notes": "Highland plateau in northern Korea ('Roof of Korea'), bounded by the Rangrim and Hamgyong ranges.",
+          "source_url": "https://en.wikipedia.org/wiki/Kaema_Plateau"
         }
       ]
     },
@@ -1720,31 +1714,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yitong_River"
         },
         {
-          "name": "Yinma River",
+          "name": "Second Songhua River",
           "disambiguation_note": null,
-          "localisation_stem": "Yinma",
+          "localisation_stem": "Second Songhua",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Tributary joining the Second Songhua east of Changchun.",
+          "relationship": "Major river system of central Jilin receiving the Yitong and Yinma rivers north of Changchunzhou.",
           "language_variants": [
             {
-              "form": "Yǐnmǎ Hé",
-              "native_script": "飲馬河",
+              "form": "Dìèrsōnghuā Jiāng",
+              "native_script": "第二松花江",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Yǐnmǎ Hé, literally 'Horse-Watering River'"
+              "notes": "Dì'èr Sōnghuā Jiāng, upper southern stem of the Songhua"
+            },
+            {
+              "form": "Sùmò Shuǐ",
+              "native_script": "粟末水",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Sùmò Shuǐ, Sui-Tang name of the upper Songhua"
             }
           ],
-          "earliest_attestation_year": 1115,
-          "earliest_attestation_note": "c. 1115 CE (Attested in Jin dynasty annals of the Changchun-Jilin corridor)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 581,
+          "earliest_attestation_note": "c. 581 CE (Attested as Sumo Shui in the Book of Sui)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tributary of the Second Songhua River flowing between Changchun and Jilin. Onomastic note: Chinese 'Yǐnmǎ Hé' (Yǐnmǎ Hé, literally 'Horse-Watering River').",
-          "source_url": "https://en.wikipedia.org/wiki/Yinma_River"
+          "etymology_notes": "Upper southern stem of the Songhua River rising in the Changbai Mountains and flowing past Jilin City.",
+          "source_url": "https://en.wikipedia.org/wiki/Second_Songhua_River"
         }
       ]
     },
@@ -2759,9 +2760,9 @@
               "notes": "Sōngnèn Píngyuán, plain of the Songhua and Nen rivers"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE (Alluvial plain of the Songhua and Nen rivers)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 2nd century BCE (Ancient alluvial lowland inhabited by the Buyeo, Sushen, and Shiwei)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -2880,9 +2881,9 @@
               "notes": "Sōngnèn Píngyuán, plain of the Songhua and Nen rivers"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE (Alluvial plain of the Songhua and Nen rivers)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 2nd century BCE (Ancient alluvial lowland inhabited by the Buyeo, Sushen, and Shiwei)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -3001,9 +3002,9 @@
               "notes": "Sōngnèn Píngyuán, plain of the Songhua and Nen rivers"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE (Alluvial plain of the Songhua and Nen rivers)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 2nd century BCE (Ancient alluvial lowland inhabited by the Buyeo, Sushen, and Shiwei)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -3122,9 +3123,9 @@
               "notes": "Sōngnèn Píngyuán, plain of the Songhua and Nen rivers"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE (Alluvial plain of the Songhua and Nen rivers)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 2nd century BCE (Ancient alluvial lowland inhabited by the Buyeo, Sushen, and Shiwei)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -4658,45 +4659,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yilou"
         },
         {
-          "name": "Mudan River",
+          "name": "Zhangguangcai Range",
           "disambiguation_note": null,
-          "localisation_stem": "Mudan",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Main river flowing past Sanggyeong Yongcheonbu.",
+          "localisation_stem": "Zhangguangcai",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range framing the western flank of the upper Mudan valley around Yongcheon.",
           "language_variants": [
             {
-              "form": "Mǔdān Jiāng",
-              "native_script": "牡丹江",
+              "form": "Zhāngguǎngcái Lǐng",
+              "native_script": "張廣才嶺",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Mǔdān Jiāng"
+              "notes": "Chinese transcription of Manchu"
             },
             {
-              "form": "Mudan Ula",
-              "native_script": "ᠮᡠᡩᠠᠨ ᡠᠯᠠ",
+              "form": "Jengguce",
+              "native_script": "ᠵᡝᠩᡤᡠᠴᡝ",
               "language": "Manchu",
               "language_code": "mnc",
-              "notes": "Mudan Ula, meaning 'winding river'"
-            },
-            {
-              "form": "Hūhàn Hé",
-              "native_script": "忽汗河",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Hūhàn Hé, Tang-Balhae name of the river"
+              "notes": "Manchu mountain name"
             }
           ],
-          "earliest_attestation_year": 700,
-          "earliest_attestation_note": "c. 700 CE (Attested as Huhan River in Tang and Balhae records)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1680,
+          "earliest_attestation_note": "1680s CE (Early Qing gazetteers record the Zhangguangcai ridge between the Songhua and Mudan rivers)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major right tributary of the Songhua flowing past Shangjing Longquanfu. Onomastic note: Manchu 'Mudan Ula' (Mudan Ula, meaning 'winding river').",
-          "source_url": "https://en.wikipedia.org/wiki/Mudan_River"
+          "etymology_notes": "Major forested range in eastern Heilongjiang and Jilin separating Harbin/Songhua from the Mudan River valley.",
+          "source_url": "https://en.wikipedia.org/wiki/Zhangguangcai_Range"
         },
         {
           "name": "Jingpo Lake",
@@ -4914,45 +4908,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yilou"
         },
         {
-          "name": "Mudan River",
+          "name": "Laoyeling",
           "disambiguation_note": null,
-          "localisation_stem": "Mudan",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Main river flowing past Sanggyeong Yongcheonbu.",
+          "localisation_stem": "Laoyeling",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Forested mountain ridge flanking the eastern Mudanjiang and Ning'an basin in southeastern Manchuria.",
           "language_variants": [
             {
-              "form": "Mǔdān Jiāng",
-              "native_script": "牡丹江",
+              "form": "Lǎoyé Lǐng",
+              "native_script": "老爺嶺",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Mǔdān Jiāng"
+              "notes": "Standard Chinese oronym"
             },
             {
-              "form": "Mudan Ula",
-              "native_script": "ᠮᡠᡩᠠᠨ ᡠᠯᠠ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Mudan Ula, meaning 'winding river'"
-            },
-            {
-              "form": "Hūhàn Hé",
-              "native_script": "忽汗河",
+              "form": "Lǎoyé Lǐng",
+              "native_script": "老爷岭",
               "language": "Literary Chinese",
               "language_code": "lzh",
-              "notes": "Hūhàn Hé, Tang-Balhae name of the river"
+              "notes": "Regional northeastern Chinese ridge name"
             }
           ],
           "earliest_attestation_year": 700,
-          "earliest_attestation_note": "c. 700 CE (Attested as Huhan River in Tang and Balhae records)",
+          "earliest_attestation_note": "c. 8th century CE (Forested highlands east of the Balhae Upper Capital Shangjing)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major right tributary of the Songhua flowing past Shangjing Longquanfu. Onomastic note: Manchu 'Mudan Ula' (Mudan Ula, meaning 'winding river').",
-          "source_url": "https://en.wikipedia.org/wiki/Mudan_River"
+          "etymology_notes": "Eastern branch of the Changbai mountain system separating the Mudan and Suifen-Tumen watersheds.",
+          "source_url": "https://en.wikipedia.org/wiki/Laoyeling"
         },
         {
           "name": "Jingpo Lake",
@@ -5420,52 +5407,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Jurchens",
+          "name": "Goguryeo",
           "disambiguation_note": null,
-          "localisation_stem": "Jurchens",
+          "localisation_stem": "Goguryeo",
           "category": "tribe",
-          "feature_subtype": "tungusic_tribe",
-          "relationship": "Tungusic people inhabiting the Changbai highlands.",
+          "feature_subtype": "koreanic_people",
+          "relationship": "Ancient Koreanic kingdom that controlled the Hun River valley and Liaodong strongholds including Fushun.",
           "language_variants": [
             {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Nüzhen, historical Chinese exonym for the Tungusic Jurchens"
-            },
-            {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Classical orthography in Liao and Song records"
-            },
-            {
-              "form": "Jušen",
-              "native_script": "ᡪᡠᡧᡝᠨ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Jušen, cognate Manchu/Jurchen ethnonym"
-            },
-            {
-              "form": "Yeojin",
-              "native_script": "여진",
+              "form": "Goguryeo",
+              "native_script": "고구려",
               "language": "Korean",
               "language_code": "kor",
-              "notes": "Yeojin, Korean reading of the ethnonym"
+              "notes": "Goguryeo, Korean endonym"
+            },
+            {
+              "form": "Gāogōulí",
+              "native_script": "高句麗",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Gāogōulì, attested in the Book of Han"
             }
           ],
-          "earliest_attestation_year": 900,
-          "earliest_attestation_note": "c. 900 CE (Attested in early 10th-century Liao and Five Dynasties records as Nüzhi / Nüzhen)",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": -37,
+          "earliest_attestation_note": "37 BCE (Traditional founding date recorded in the Samguk Sagi; attested in the Book of Han)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tungusic people of Manchuria who succeeded the Mohe and founded the Jin dynasty. Onomastic note: Chinese 'Nǚzhēn' (Nüzhen, historical Chinese exonym for the Tungusic Jurchens); Manchu 'Jušen' (Jušen, cognate Manchu/Jurchen ethnonym).",
-          "source_url": "https://en.wikipedia.org/wiki/Jurchen_people"
+          "etymology_notes": "Koreanic people of the Yalu and Hunjiang valleys who built a major kingdom across Manchuria and Liaodong. Onomastic note: Korean 'Goguryeo' (Goguryeo, Korean endonym).",
+          "source_url": "https://en.wikipedia.org/wiki/Goguryeo"
         },
         {
           "name": "Hun River",
@@ -5555,52 +5528,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Jurchens",
+          "name": "Mohe people",
           "disambiguation_note": null,
-          "localisation_stem": "Jurchens",
+          "localisation_stem": "Mohe",
           "category": "tribe",
           "feature_subtype": "tungusic_tribe",
-          "relationship": "Tungusic people inhabiting the Changbai highlands.",
+          "relationship": "Tungusic people of eastern Liaodong and the Changbai foothills during the Balhae period.",
           "language_variants": [
             {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
+              "form": "Mòhé",
+              "native_script": "靺鞨",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Nüzhen, historical Chinese exonym for the Tungusic Jurchens"
-            },
-            {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Classical orthography in Liao and Song records"
-            },
-            {
-              "form": "Jušen",
-              "native_script": "ᡪᡠᡧᡝᠨ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Jušen, cognate Manchu/Jurchen ethnonym"
-            },
-            {
-              "form": "Yeojin",
-              "native_script": "여진",
-              "language": "Korean",
-              "language_code": "kor",
-              "notes": "Yeojin, Korean reading of the ethnonym"
+              "notes": "Chinese dynastic ethnonym (Northern Wei to Tang)"
             }
           ],
-          "earliest_attestation_year": 900,
-          "earliest_attestation_note": "c. 900 CE (Attested in early 10th-century Liao and Five Dynasties records as Nüzhi / Nüzhen)",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 500 CE (Attested in the Book of Northern Qi and Book of Sui)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tungusic people of Manchuria who succeeded the Mohe and founded the Jin dynasty. Onomastic note: Chinese 'Nǚzhēn' (Nüzhen, historical Chinese exonym for the Tungusic Jurchens); Manchu 'Jušen' (Jušen, cognate Manchu/Jurchen ethnonym).",
-          "source_url": "https://en.wikipedia.org/wiki/Jurchen_people"
+          "etymology_notes": "Early medieval Tungusic-associated peoples of the Songhua, Ussuri, and Amur basins prior to Balhae and Jurchen rule.",
+          "source_url": "https://en.wikipedia.org/wiki/Mohe_people"
         },
         {
           "name": "Hun River",
@@ -5690,52 +5642,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Jurchens",
+          "name": "Yemaek",
           "disambiguation_note": null,
-          "localisation_stem": "Jurchens",
+          "localisation_stem": "Yemaek",
           "category": "tribe",
-          "feature_subtype": "tungusic_tribe",
-          "relationship": "Tungusic people inhabiting the Changbai highlands.",
+          "feature_subtype": "koreanic_people",
+          "relationship": "Ancient Koreanic people inhabiting eastern Liaodong and the northern Korean peninsula.",
           "language_variants": [
             {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Nüzhen, historical Chinese exonym for the Tungusic Jurchens"
-            },
-            {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
+              "form": "Huìmò",
+              "native_script": "濊貊",
               "language": "Literary Chinese",
               "language_code": "lzh",
-              "notes": "Classical orthography in Liao and Song records"
+              "notes": "Huìmò, classical compound ethnonym in Han histories"
             },
             {
-              "form": "Jušen",
-              "native_script": "ᡪᡠᡧᡝᠨ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Jušen, cognate Manchu/Jurchen ethnonym"
-            },
-            {
-              "form": "Yeojin",
-              "native_script": "여진",
+              "form": "Yemaek",
+              "native_script": "예맥",
               "language": "Korean",
               "language_code": "kor",
-              "notes": "Yeojin, Korean reading of the ethnonym"
+              "notes": "Yemaek, Korean ethnonym"
             }
           ],
-          "earliest_attestation_year": 900,
-          "earliest_attestation_note": "c. 900 CE (Attested in early 10th-century Liao and Five Dynasties records as Nüzhi / Nüzhen)",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 200 BCE (Attested in the Shiji and Book of Han)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tungusic people of Manchuria who succeeded the Mohe and founded the Jin dynasty. Onomastic note: Chinese 'Nǚzhēn' (Nüzhen, historical Chinese exonym for the Tungusic Jurchens); Manchu 'Jušen' (Jušen, cognate Manchu/Jurchen ethnonym).",
-          "source_url": "https://en.wikipedia.org/wiki/Jurchen_people"
+          "etymology_notes": "Ancient Koreanic people inhabiting southern Manchuria, the Yalu basin, and northern Korea. Onomastic note: Literary Chinese 'Huìmò' (Huìmò, classical compound ethnonym in Han histories).",
+          "source_url": "https://en.wikipedia.org/wiki/Yemaek"
         },
         {
           "name": "Hun River",
@@ -5825,52 +5763,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Jurchens",
+          "name": "Buyeo",
           "disambiguation_note": null,
-          "localisation_stem": "Jurchens",
+          "localisation_stem": "Buyeo",
           "category": "tribe",
-          "feature_subtype": "tungusic_tribe",
-          "relationship": "Tungusic people inhabiting the Changbai highlands.",
+          "feature_subtype": "koreanic_people",
+          "relationship": "Ancient Tungusic-Koreanic confederation whose cultural sphere bordered the upper Hun and Liaodong uplands.",
           "language_variants": [
             {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Nüzhen, historical Chinese exonym for the Tungusic Jurchens"
-            },
-            {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Classical orthography in Liao and Song records"
-            },
-            {
-              "form": "Jušen",
-              "native_script": "ᡪᡠᡧᡝᠨ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Jušen, cognate Manchu/Jurchen ethnonym"
-            },
-            {
-              "form": "Yeojin",
-              "native_script": "여진",
+              "form": "Buyeo",
+              "native_script": "부여",
               "language": "Korean",
               "language_code": "kor",
-              "notes": "Yeojin, Korean reading of the ethnonym"
+              "notes": "Buyeo, Korean name of the ancient Songhua-basin people"
+            },
+            {
+              "form": "Fūyú",
+              "native_script": "夫餘",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Fúyú, attested in the Shiji and Sanguozhi"
             }
           ],
-          "earliest_attestation_year": 900,
-          "earliest_attestation_note": "c. 900 CE (Attested in early 10th-century Liao and Five Dynasties records as Nüzhi / Nüzhen)",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 200 BCE (Attested in the Shiji and Book of the Later Han)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tungusic people of Manchuria who succeeded the Mohe and founded the Jin dynasty. Onomastic note: Chinese 'Nǚzhēn' (Nüzhen, historical Chinese exonym for the Tungusic Jurchens); Manchu 'Jušen' (Jušen, cognate Manchu/Jurchen ethnonym).",
-          "source_url": "https://en.wikipedia.org/wiki/Jurchen_people"
+          "etymology_notes": "Ancient people of the central Songhua and Nong'an plain who gave rise to Goguryeo.",
+          "source_url": "https://en.wikipedia.org/wiki/Buyeo"
         },
         {
           "name": "Hun River",
@@ -6284,38 +6208,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Hun_River_(Liao_River_tributary)"
         },
         {
-          "name": "Taizi River",
+          "name": "Qian Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Taizi",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river flowing past Liaoyang and Haicheng.",
+          "localisation_stem": "Qian",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range rising directly southeast of Liaoyang along the eastern flank of the Liaohe Plain.",
           "language_variants": [
             {
-              "form": "Tàizǐ Hé",
-              "native_script": "太子河",
+              "form": "Qiān Shān",
+              "native_script": "千山",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Tàizǐ Hé"
-            },
-            {
-              "form": "Yǎn Shuǐ",
-              "native_script": "衍水",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Yǎn Shuǐ, classical name in Han records"
+              "notes": "Qiān Shān, branch of the Changbai range in Liaodong"
             }
           ],
-          "earliest_attestation_year": -226,
-          "earliest_attestation_note": "226 BCE (Associated with Crown Prince Dan of Yan in the Shiji)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1100,
+          "earliest_attestation_note": "c. 1100 CE (Attested in Liao and Jin Liaodong records)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Eastern tributary of the Liao River flowing past Liaoyang.",
-          "source_url": "https://en.wikipedia.org/wiki/Taizi_River"
+          "etymology_notes": "Mountain range extending southwest through Liaoyang, Anshan, and the Liaodong Peninsula.",
+          "source_url": "https://en.wikipedia.org/wiki/Qian_Mountains"
         }
       ]
     },
@@ -6378,38 +6295,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Han_Chinese"
         },
         {
-          "name": "Hun River",
-          "disambiguation_note": "Liao",
-          "localisation_stem": "Hun",
+          "name": "Liaodong Bay",
+          "disambiguation_note": null,
+          "localisation_stem": "Liaodong",
           "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Main river flowing through Shenyang.",
+          "feature_subtype": "bay",
+          "relationship": "Northern gulf of the Bohai Sea lying immediately west of Haicheng and the lower Hun-Taizi delta.",
           "language_variants": [
             {
-              "form": "Hún Hé",
-              "native_script": "渾河",
+              "form": "Liáodōng Wān",
+              "native_script": "遼東灣",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Hún Hé, flowing past Fushun and Shenyang"
+              "notes": "Standard Chinese name"
             },
             {
-              "form": "Xiǎoliáo Shuǐ",
-              "native_script": "小遼水",
+              "form": "Liáo Hǎi",
+              "native_script": "遼海",
               "language": "Literary Chinese",
               "language_code": "lzh",
-              "notes": "Xiǎoliáo Shuǐ, 'Lesser Liao River' in Han-Tang records"
+              "notes": "Classical Liao Sea designation"
             }
           ],
-          "earliest_attestation_year": 100,
-          "earliest_attestation_note": "c. 100 CE (Attested as Xiaoliao Shui in the Book of Han)",
+          "earliest_attestation_year": -100,
+          "earliest_attestation_note": "100 BCE (Han-era coastal chronicles record the northern gulf of the Bohai Sea)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major eastern tributary of the Liao River flowing through Fushun and Shenyang.",
-          "source_url": "https://en.wikipedia.org/wiki/Hun_River_(Liao_River_tributary)"
+          "etymology_notes": "Northernmost bay of the Bohai Sea, receiving the Daling and Liao rivers along the Jinzhou-Liaoxi coast.",
+          "source_url": "https://en.wikipedia.org/wiki/Liaodong_Bay"
         },
         {
           "name": "Taizi River",
@@ -6817,31 +6734,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Liao_River"
         },
         {
-          "name": "Liaohe Plain",
+          "name": "Goguryeo",
           "disambiguation_note": null,
-          "localisation_stem": "Liaohe",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Alluvial plain of the central Liao River basin.",
+          "localisation_stem": "Goguryeo",
+          "category": "tribe",
+          "feature_subtype": "koreanic_people",
+          "relationship": "Ancient Koreanic kingdom whose northern frontier fortresses guarded the middle Liao valley around Yinzhou.",
           "language_variants": [
             {
-              "form": "Liáohé Píngyuán",
-              "native_script": "遼河平原",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Liáohé Píngyuán"
+              "form": "Goguryeo",
+              "native_script": "고구려",
+              "language": "Korean",
+              "language_code": "kor",
+              "notes": "Goguryeo, Korean endonym"
+            },
+            {
+              "form": "Gāogōulí",
+              "native_script": "高句麗",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Gāogōulì, attested in the Book of Han"
             }
           ],
-          "earliest_attestation_year": -200,
-          "earliest_attestation_note": "c. 200 BCE (Alluvial lowland of the Liao River basin)",
+          "earliest_attestation_year": -37,
+          "earliest_attestation_note": "37 BCE (Traditional founding date recorded in the Samguk Sagi; attested in the Book of Han)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Southern Manchurian alluvial plain drained by the Liao, Hun, and Taizi rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Liaohe_Plain"
+          "etymology_notes": "Koreanic people of the Yalu and Hunjiang valleys who built a major kingdom across Manchuria and Liaodong. Onomastic note: Korean 'Goguryeo' (Goguryeo, Korean endonym).",
+          "source_url": "https://en.wikipedia.org/wiki/Goguryeo"
         }
       ]
     },
@@ -7302,38 +7226,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yemaek"
         },
         {
-          "name": "Dahei Mountain",
+          "name": "Korea Bay",
           "disambiguation_note": null,
-          "localisation_stem": "Dahei",
-          "category": "oronym",
-          "feature_subtype": "mountain",
-          "relationship": "Coastal peak on the southern Liaodong Peninsula.",
+          "localisation_stem": "Korea",
+          "category": "hydronym",
+          "feature_subtype": "bay",
+          "relationship": "Northern inlet of the Yellow Sea washing the southeastern coast of the Liaodong Peninsula.",
           "language_variants": [
             {
-              "form": "Dàhēi Shān",
-              "native_script": "大黑山",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Dàhēi Shān, 'Great Black Mountain'"
-            },
-            {
-              "form": "Bisaseong",
-              "native_script": "비사성",
+              "form": "Seojoseonman",
+              "native_script": "서조선만",
               "language": "Korean",
               "language_code": "kor",
-              "notes": "Bisaseong, Goguryeo fortress on the mountain"
+              "notes": "Korean Seojoseonman ('West Korea Bay')"
+            },
+            {
+              "form": "Xī Cháoxiān Wān",
+              "native_script": "西朝鮮灣",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Chinese form West Korea Bay"
             }
           ],
-          "earliest_attestation_year": 645,
-          "earliest_attestation_note": "645 CE (Site of Goguryeo's Bisa Fortress during the Tang campaign)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE (Northern Yellow Sea embayment documented in Ming/Joseon coastal charts)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Coastal mountain on the southern Liaodong Peninsula.",
-          "source_url": "https://en.wikipedia.org/wiki/Dahei_Mountain"
+          "etymology_notes": "Northern arm of the Yellow Sea between Liaodong and northwestern Korea receiving the Yalu, Chongchon, and Taedong rivers.",
+          "source_url": "https://en.wikipedia.org/wiki/Korea_Bay"
         },
         {
           "name": "Liaodong Peninsula",
@@ -7728,9 +7652,9 @@
               "notes": "Sōngnèn Píngyuán, plain of the Songhua and Nen rivers"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE (Alluvial plain of the Songhua and Nen rivers)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 2nd century BCE (Ancient alluvial lowland inhabited by the Buyeo, Sushen, and Shiwei)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -7842,9 +7766,9 @@
               "notes": "Sōngnèn Píngyuán, plain of the Songhua and Nen rivers"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE (Alluvial plain of the Songhua and Nen rivers)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 2nd century BCE (Ancient alluvial lowland inhabited by the Buyeo, Sushen, and Shiwei)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -7956,9 +7880,9 @@
               "notes": "Sōngnèn Píngyuán, plain of the Songhua and Nen rivers"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE (Alluvial plain of the Songhua and Nen rivers)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 2nd century BCE (Ancient alluvial lowland inhabited by the Buyeo, Sushen, and Shiwei)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -8890,52 +8814,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Jurchens",
+          "name": "Sushen",
           "disambiguation_note": null,
-          "localisation_stem": "Jurchens",
+          "localisation_stem": "Sushen",
           "category": "tribe",
           "feature_subtype": "tungusic_tribe",
-          "relationship": "Wild Jurchens of the Hulan, Ashi, and Mayi river valleys.",
+          "relationship": "Ancient Tungusic forest people associated with the Ashi and Mayi valleys of northern Manchuria.",
           "language_variants": [
             {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Nüzhen, historical Chinese exonym for the Tungusic Jurchens"
-            },
-            {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
+              "form": "Sùshèn",
+              "native_script": "肅慎",
               "language": "Literary Chinese",
               "language_code": "lzh",
-              "notes": "Classical orthography in Liao and Song records"
+              "notes": "Sùshèn, classical Chinese ethnonym in pre-Qin and Han annals"
             },
             {
-              "form": "Jušen",
-              "native_script": "ᡪᡠᡧᡝᠨ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Jušen, cognate Manchu/Jurchen ethnonym"
-            },
-            {
-              "form": "Yeojin",
-              "native_script": "여진",
+              "form": "Suksin",
+              "native_script": "숙신",
               "language": "Korean",
               "language_code": "kor",
-              "notes": "Yeojin, Korean reading of the ethnonym"
+              "notes": "Suksin, Korean reading of the classical ethnonym"
             }
           ],
-          "earliest_attestation_year": 900,
-          "earliest_attestation_note": "c. 900 CE (Attested in early 10th-century Liao and Five Dynasties records as Nüzhi / Nüzhen)",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": -500,
+          "earliest_attestation_note": "c. 500 BCE (Attested in the Zuo Zhuan and Bamboo Annals)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tungusic people of Manchuria who succeeded the Mohe and founded the Jin dynasty. Onomastic note: Chinese 'Nǚzhēn' (Nüzhen, historical Chinese exonym for the Tungusic Jurchens); Manchu 'Jušen' (Jušen, cognate Manchu/Jurchen ethnonym).",
-          "source_url": "https://en.wikipedia.org/wiki/Jurchen_people"
+          "etymology_notes": "Earliest recorded northeastern forest people of Manchuria in Chinese classical historiography.",
+          "source_url": "https://en.wikipedia.org/wiki/Sushen"
         },
         {
           "name": "Ashi River",
@@ -9032,52 +8942,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Jurchens",
+          "name": "Mohe people",
           "disambiguation_note": null,
-          "localisation_stem": "Jurchens",
+          "localisation_stem": "Mohe",
           "category": "tribe",
           "feature_subtype": "tungusic_tribe",
-          "relationship": "Wild Jurchens of the Hulan, Ashi, and Mayi river valleys.",
+          "relationship": "Early medieval Tungusic confederation inhabiting the Ashi and middle Songhua basin.",
           "language_variants": [
             {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
+              "form": "Mòhé",
+              "native_script": "靺鞨",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Nüzhen, historical Chinese exonym for the Tungusic Jurchens"
-            },
-            {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Classical orthography in Liao and Song records"
-            },
-            {
-              "form": "Jušen",
-              "native_script": "ᡪᡠᡧᡝᠨ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Jušen, cognate Manchu/Jurchen ethnonym"
-            },
-            {
-              "form": "Yeojin",
-              "native_script": "여진",
-              "language": "Korean",
-              "language_code": "kor",
-              "notes": "Yeojin, Korean reading of the ethnonym"
+              "notes": "Chinese dynastic ethnonym (Northern Wei to Tang)"
             }
           ],
-          "earliest_attestation_year": 900,
-          "earliest_attestation_note": "c. 900 CE (Attested in early 10th-century Liao and Five Dynasties records as Nüzhi / Nüzhen)",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 500 CE (Attested in the Book of Northern Qi and Book of Sui)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tungusic people of Manchuria who succeeded the Mohe and founded the Jin dynasty. Onomastic note: Chinese 'Nǚzhēn' (Nüzhen, historical Chinese exonym for the Tungusic Jurchens); Manchu 'Jušen' (Jušen, cognate Manchu/Jurchen ethnonym).",
-          "source_url": "https://en.wikipedia.org/wiki/Jurchen_people"
+          "etymology_notes": "Early medieval Tungusic-associated peoples of the Songhua, Ussuri, and Amur basins prior to Balhae and Jurchen rule.",
+          "source_url": "https://en.wikipedia.org/wiki/Mohe_people"
         },
         {
           "name": "Ashi River",
@@ -9174,52 +9063,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Jurchens",
+          "name": "Yilou",
           "disambiguation_note": null,
-          "localisation_stem": "Jurchens",
+          "localisation_stem": "Yilou",
           "category": "tribe",
           "feature_subtype": "tungusic_tribe",
-          "relationship": "Wild Jurchens of the Hulan, Ashi, and Mayi river valleys.",
+          "relationship": "Ancient Tungusic people recorded across the forested hills south of the middle Songhua.",
           "language_variants": [
             {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Nüzhen, historical Chinese exonym for the Tungusic Jurchens"
-            },
-            {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
+              "form": "Yìlóu",
+              "native_script": "挹婁",
               "language": "Literary Chinese",
               "language_code": "lzh",
-              "notes": "Classical orthography in Liao and Song records"
+              "notes": "Yìlóu, recorded in the Records of the Three Kingdoms"
             },
             {
-              "form": "Jušen",
-              "native_script": "ᡪᡠᡧᡝᠨ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Jušen, cognate Manchu/Jurchen ethnonym"
-            },
-            {
-              "form": "Yeojin",
-              "native_script": "여진",
+              "form": "Eumnu",
+              "native_script": "읍루",
               "language": "Korean",
               "language_code": "kor",
-              "notes": "Yeojin, Korean reading of the ethnonym"
+              "notes": "Eumnu, Korean reading"
             }
           ],
-          "earliest_attestation_year": 900,
-          "earliest_attestation_note": "c. 900 CE (Attested in early 10th-century Liao and Five Dynasties records as Nüzhi / Nüzhen)",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 220,
+          "earliest_attestation_note": "c. 220 CE (Recorded in the Wei Shu section of the Sanguozhi)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tungusic people of Manchuria who succeeded the Mohe and founded the Jin dynasty. Onomastic note: Chinese 'Nǚzhēn' (Nüzhen, historical Chinese exonym for the Tungusic Jurchens); Manchu 'Jušen' (Jušen, cognate Manchu/Jurchen ethnonym).",
-          "source_url": "https://en.wikipedia.org/wiki/Jurchen_people"
+          "etymology_notes": "Tungusic-associated people of eastern Manchuria inhabiting the Songhua and Mudan river basins.",
+          "source_url": "https://en.wikipedia.org/wiki/Yilou"
         },
         {
           "name": "Ashi River",
@@ -9828,52 +9703,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Jurchens",
+          "name": "Sushen",
           "disambiguation_note": null,
-          "localisation_stem": "Jurchens",
+          "localisation_stem": "Sushen",
           "category": "tribe",
           "feature_subtype": "tungusic_tribe",
-          "relationship": "Wild Jurchens of the Hulan, Ashi, and Mayi river valleys.",
+          "relationship": "Ancient Tungusic people inhabiting the forested uplands between the Ashi and Mayi rivers.",
           "language_variants": [
             {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Nüzhen, historical Chinese exonym for the Tungusic Jurchens"
-            },
-            {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
+              "form": "Sùshèn",
+              "native_script": "肅慎",
               "language": "Literary Chinese",
               "language_code": "lzh",
-              "notes": "Classical orthography in Liao and Song records"
+              "notes": "Sùshèn, classical Chinese ethnonym in pre-Qin and Han annals"
             },
             {
-              "form": "Jušen",
-              "native_script": "ᡪᡠᡧᡝᠨ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Jušen, cognate Manchu/Jurchen ethnonym"
-            },
-            {
-              "form": "Yeojin",
-              "native_script": "여진",
+              "form": "Suksin",
+              "native_script": "숙신",
               "language": "Korean",
               "language_code": "kor",
-              "notes": "Yeojin, Korean reading of the ethnonym"
+              "notes": "Suksin, Korean reading of the classical ethnonym"
             }
           ],
-          "earliest_attestation_year": 900,
-          "earliest_attestation_note": "c. 900 CE (Attested in early 10th-century Liao and Five Dynasties records as Nüzhi / Nüzhen)",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": -500,
+          "earliest_attestation_note": "c. 500 BCE (Attested in the Zuo Zhuan and Bamboo Annals)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tungusic people of Manchuria who succeeded the Mohe and founded the Jin dynasty. Onomastic note: Chinese 'Nǚzhēn' (Nüzhen, historical Chinese exonym for the Tungusic Jurchens); Manchu 'Jušen' (Jušen, cognate Manchu/Jurchen ethnonym).",
-          "source_url": "https://en.wikipedia.org/wiki/Jurchen_people"
+          "etymology_notes": "Earliest recorded northeastern forest people of Manchuria in Chinese classical historiography.",
+          "source_url": "https://en.wikipedia.org/wiki/Sushen"
         },
         {
           "name": "Ashi River",
@@ -9970,52 +9831,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Jurchens",
+          "name": "Mohe people",
           "disambiguation_note": null,
-          "localisation_stem": "Jurchens",
+          "localisation_stem": "Mohe",
           "category": "tribe",
           "feature_subtype": "tungusic_tribe",
-          "relationship": "Wild Jurchens of the Hulan, Ashi, and Mayi river valleys.",
+          "relationship": "Early medieval Tungusic people settled along the right tributaries of the middle Songhua.",
           "language_variants": [
             {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
+              "form": "Mòhé",
+              "native_script": "靺鞨",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Nüzhen, historical Chinese exonym for the Tungusic Jurchens"
-            },
-            {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Classical orthography in Liao and Song records"
-            },
-            {
-              "form": "Jušen",
-              "native_script": "ᡪᡠᡧᡝᠨ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Jušen, cognate Manchu/Jurchen ethnonym"
-            },
-            {
-              "form": "Yeojin",
-              "native_script": "여진",
-              "language": "Korean",
-              "language_code": "kor",
-              "notes": "Yeojin, Korean reading of the ethnonym"
+              "notes": "Chinese dynastic ethnonym (Northern Wei to Tang)"
             }
           ],
-          "earliest_attestation_year": 900,
-          "earliest_attestation_note": "c. 900 CE (Attested in early 10th-century Liao and Five Dynasties records as Nüzhi / Nüzhen)",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 500 CE (Attested in the Book of Northern Qi and Book of Sui)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tungusic people of Manchuria who succeeded the Mohe and founded the Jin dynasty. Onomastic note: Chinese 'Nǚzhēn' (Nüzhen, historical Chinese exonym for the Tungusic Jurchens); Manchu 'Jušen' (Jušen, cognate Manchu/Jurchen ethnonym).",
-          "source_url": "https://en.wikipedia.org/wiki/Jurchen_people"
+          "etymology_notes": "Early medieval Tungusic-associated peoples of the Songhua, Ussuri, and Amur basins prior to Balhae and Jurchen rule.",
+          "source_url": "https://en.wikipedia.org/wiki/Mohe_people"
         },
         {
           "name": "Ashi River",
@@ -10112,52 +9952,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Jurchens",
+          "name": "Yilou",
           "disambiguation_note": null,
-          "localisation_stem": "Jurchens",
+          "localisation_stem": "Yilou",
           "category": "tribe",
           "feature_subtype": "tungusic_tribe",
-          "relationship": "Wild Jurchens of the Hulan, Ashi, and Mayi river valleys.",
+          "relationship": "Ancient Tungusic forest dwellers of the Ashi-Mayi watershed in northern Manchuria.",
           "language_variants": [
             {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Nüzhen, historical Chinese exonym for the Tungusic Jurchens"
-            },
-            {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
+              "form": "Yìlóu",
+              "native_script": "挹婁",
               "language": "Literary Chinese",
               "language_code": "lzh",
-              "notes": "Classical orthography in Liao and Song records"
+              "notes": "Yìlóu, recorded in the Records of the Three Kingdoms"
             },
             {
-              "form": "Jušen",
-              "native_script": "ᡪᡠᡧᡝᠨ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Jušen, cognate Manchu/Jurchen ethnonym"
-            },
-            {
-              "form": "Yeojin",
-              "native_script": "여진",
+              "form": "Eumnu",
+              "native_script": "읍루",
               "language": "Korean",
               "language_code": "kor",
-              "notes": "Yeojin, Korean reading of the ethnonym"
+              "notes": "Eumnu, Korean reading"
             }
           ],
-          "earliest_attestation_year": 900,
-          "earliest_attestation_note": "c. 900 CE (Attested in early 10th-century Liao and Five Dynasties records as Nüzhi / Nüzhen)",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 220,
+          "earliest_attestation_note": "c. 220 CE (Recorded in the Wei Shu section of the Sanguozhi)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tungusic people of Manchuria who succeeded the Mohe and founded the Jin dynasty. Onomastic note: Chinese 'Nǚzhēn' (Nüzhen, historical Chinese exonym for the Tungusic Jurchens); Manchu 'Jušen' (Jušen, cognate Manchu/Jurchen ethnonym).",
-          "source_url": "https://en.wikipedia.org/wiki/Jurchen_people"
+          "etymology_notes": "Tungusic-associated people of eastern Manchuria inhabiting the Songhua and Mudan river basins.",
+          "source_url": "https://en.wikipedia.org/wiki/Yilou"
         },
         {
           "name": "Ashi River",
@@ -10450,38 +10276,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Hulan_River"
         },
         {
-          "name": "Lesser Khingan",
+          "name": "Songnen Plain",
           "disambiguation_note": null,
-          "localisation_stem": "Lesser Khingan",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Forested range rising north of Suihua.",
+          "localisation_stem": "Songnen",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Broad alluvial plain drained by the Songhua and Nen rivers across central Heilongjiang and northern Jilin.",
           "language_variants": [
             {
-              "form": "Xiǎoxīng'ānlǐng",
-              "native_script": "小興安嶺",
+              "form": "Sōngnèn Píngyuán",
+              "native_script": "松嫩平原",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Xiǎo Xīng'ān Lǐng"
-            },
-            {
-              "form": "Ilhuri Alin",
-              "native_script": "ᡳᠯᡥᡠᡵᡳ ᠠᠯᡳᠨ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Ilhuri Alin"
+              "notes": "Chinese compound of Songhua and Nen"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE (Attested as Ilhuri Alin in early Qing Manchu cartography)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 2nd century BCE (Ancient alluvial lowland inhabited by the Buyeo, Sushen, and Shiwei)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Mountain range separating the Songhua and Nen basins from the middle Amur.",
-          "source_url": "https://en.wikipedia.org/wiki/Lesser_Khingan"
+          "etymology_notes": "Alluvial basin formed by the Songhua and Nen rivers in western and central Manchuria. Onomastic note: Chinese compound of Songhua and Nen ('Sōngnèn Píngyuán').",
+          "source_url": "https://en.wikipedia.org/wiki/Songnen_Plain"
         }
       ]
     },
@@ -11714,38 +11533,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Xar_Moron_River"
         },
         {
-          "name": "Xiliao River",
+          "name": "Greater Khingan",
           "disambiguation_note": null,
-          "localisation_stem": "Xiliao",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "West Liao River draining eastern Inner Mongolia.",
+          "localisation_stem": "Greater Khingan",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Southern foothills of the Greater Khingan range rising directly behind Huaizhou and Linhuang.",
           "language_variants": [
             {
-              "form": "Xīliáo Hé",
-              "native_script": "西遼河",
+              "form": "Dà Xīng'ān Lǐng",
+              "native_script": "大興安嶺",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Xīliáo Hé, West Liao River"
+              "notes": "Dà Xīng'ān Lǐng"
             },
             {
-              "form": "Huáng Shuǐ",
-              "native_script": "潢水",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Huáng Shuǐ, Tang and Liao-era name"
+              "form": "Khyangan nuruu",
+              "native_script": "Хянган нуруу",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Khyangan Nuruu"
+            },
+            {
+              "form": "Hinggan Alin",
+              "native_script": "ᡥᡳᠩᡤᠠᠨ ᠠᠯᡳᠨ",
+              "language": "Manchu",
+              "language_code": "mnc",
+              "notes": "Hinggan Alin"
             }
           ],
-          "earliest_attestation_year": -200,
-          "earliest_attestation_note": "200 BCE (Han-era Shuijing Zhu and Shiji describe the upper Liao / West Liao system)",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "100 CE (Hou Hanshu records the Xianbei Mountains; Manchu-Mongolic Khingan attested by Qing)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Western main stem of the Liao River formed by the Xar Moron and Laoha rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Xiliao_River"
+          "etymology_notes": "Major volcanic mountain range dividing the Mongolian steppe from the Manchurian plain.",
+          "source_url": "https://en.wikipedia.org/wiki/Greater_Khingan"
         }
       ]
     },
@@ -11998,38 +11824,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Xar_Moron_River"
         },
         {
-          "name": "Xiliao River",
+          "name": "Wuhuan",
           "disambiguation_note": null,
-          "localisation_stem": "Xiliao",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "West Liao River draining eastern Inner Mongolia.",
+          "localisation_stem": "Wuhuan",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Ancient Proto-Mongolic steppe people inhabiting the Liaoxi and upper Xar Moron frontier.",
           "language_variants": [
             {
-              "form": "Xīliáo Hé",
-              "native_script": "西遼河",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Xīliáo Hé, West Liao River"
-            },
-            {
-              "form": "Huáng Shuǐ",
-              "native_script": "潢水",
+              "form": "Wūhuán",
+              "native_script": "烏桓",
               "language": "Literary Chinese",
               "language_code": "lzh",
-              "notes": "Huáng Shuǐ, Tang and Liao-era name"
+              "notes": "Classical Han-dynasty ethnonym"
+            },
+            {
+              "form": "Ohwan",
+              "native_script": "오환",
+              "language": "Korean",
+              "language_code": "kor",
+              "notes": "Korean historical reading"
             }
           ],
-          "earliest_attestation_year": -200,
-          "earliest_attestation_note": "200 BCE (Han-era Shuijing Zhu and Shiji describe the upper Liao / West Liao system)",
+          "earliest_attestation_year": -150,
+          "earliest_attestation_note": "c. 150 BCE (Attested in the Shiji and Book of the Later Han after the Donghu breakup)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Western main stem of the Liao River formed by the Xar Moron and Laoha rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Xiliao_River"
+          "etymology_notes": "Northern branch of the Donghu confederation centered around Mount Wuhuan in western Manchuria and Liaoxi.",
+          "source_url": "https://en.wikipedia.org/wiki/Wuhuan"
         }
       ]
     },
@@ -13590,31 +13416,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Xiliao_River"
         },
         {
-          "name": "Liaohe Plain",
+          "name": "Xianbei",
           "disambiguation_note": null,
-          "localisation_stem": "Liaohe",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Southern plain stretching toward the Liao confluence.",
+          "localisation_stem": "Xianbei",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Proto-Mongolic steppe confederation active across the western Manchurian plains before the Tang era.",
           "language_variants": [
             {
-              "form": "Liáohé Píngyuán",
-              "native_script": "遼河平原",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Liáohé Píngyuán"
+              "form": "Xiānbēi",
+              "native_script": "鮮卑",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Xiānbēi, attested in the Book of the Later Han"
+            },
+            {
+              "form": "Seonbi",
+              "native_script": "선비",
+              "language": "Korean",
+              "language_code": "kor",
+              "notes": "Seonbi, Korean reading"
             }
           ],
           "earliest_attestation_year": -200,
-          "earliest_attestation_note": "c. 200 BCE (Alluvial lowland of the Liao River basin)",
+          "earliest_attestation_note": "c. 200 BCE (Early Han-era records of the Donghu/Xianbei confederation)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Southern Manchurian alluvial plain drained by the Liao, Hun, and Taizi rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Liaohe_Plain"
+          "etymology_notes": "Proto-Mongolic confederation originating in the Greater Khingan and Xar Moron steppe.",
+          "source_url": "https://en.wikipedia.org/wiki/Xianbei"
         }
       ]
     },
@@ -13947,9 +13780,9 @@
               "notes": "Sōngnèn Píngyuán, plain of the Songhua and Nen rivers"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE (Alluvial plain of the Songhua and Nen rivers)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 2nd century BCE (Ancient alluvial lowland inhabited by the Buyeo, Sushen, and Shiwei)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -14061,9 +13894,9 @@
               "notes": "Sōngnèn Píngyuán, plain of the Songhua and Nen rivers"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE (Alluvial plain of the Songhua and Nen rivers)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 2nd century BCE (Ancient alluvial lowland inhabited by the Buyeo, Sushen, and Shiwei)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -14175,9 +14008,9 @@
               "notes": "Sōngnèn Píngyuán, plain of the Songhua and Nen rivers"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE (Alluvial plain of the Songhua and Nen rivers)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 2nd century BCE (Ancient alluvial lowland inhabited by the Buyeo, Sushen, and Shiwei)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -14572,45 +14405,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Taoer_River"
         },
         {
-          "name": "Nen River",
+          "name": "Greater Khingan",
           "disambiguation_note": null,
-          "localisation_stem": "Nen",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river receiving the Tao'er east of Baicheng.",
+          "localisation_stem": "Greater Khingan",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range rising immediately west of Taonan where the Taoer River originates.",
           "language_variants": [
             {
-              "form": "Nèn Jiāng",
-              "native_script": "嫩江",
+              "form": "Dà Xīng'ān Lǐng",
+              "native_script": "大興安嶺",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Nèn Jiāng"
+              "notes": "Dà Xīng'ān Lǐng"
             },
             {
-              "form": "Non Ula",
-              "native_script": "ᠨᠣᠨ ᡠᠯᠠ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Non Ula"
-            },
-            {
-              "form": "Non mörön",
-              "native_script": "Нон мөрөн",
+              "form": "Khyangan nuruu",
+              "native_script": "Хянган нуруу",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Non Mörön"
+              "notes": "Khyangan Nuruu"
+            },
+            {
+              "form": "Hinggan Alin",
+              "native_script": "ᡥᡳᠩᡤᠠᠨ ᠠᠯᡳᠨ",
+              "language": "Manchu",
+              "language_code": "mnc",
+              "notes": "Hinggan Alin"
             }
           ],
-          "earliest_attestation_year": 500,
-          "earliest_attestation_note": "c. 500 CE (Attested as Nan Shui in Northern Wei records)",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "100 CE (Hou Hanshu records the Xianbei Mountains; Manchu-Mongolic Khingan attested by Qing)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Longest tributary of the Songhua River, flowing south past Qiqihar.",
-          "source_url": "https://en.wikipedia.org/wiki/Nen_River"
+          "etymology_notes": "Major volcanic mountain range dividing the Mongolian steppe from the Manchurian plain.",
+          "source_url": "https://en.wikipedia.org/wiki/Greater_Khingan"
         }
       ]
     },
@@ -14984,45 +14817,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Chagan_Lake_(China)"
         },
         {
-          "name": "Songhua River",
+          "name": "Nen River",
           "disambiguation_note": null,
-          "localisation_stem": "Songhua",
+          "localisation_stem": "Nen",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Main river flowing past the Songyuan plain.",
+          "relationship": "Major river meeting the Songhua River near Chagan Lake in the Taizhou basin.",
           "language_variants": [
             {
-              "form": "Sōnghuā Jiāng",
-              "native_script": "松花江",
+              "form": "Nèn Jiāng",
+              "native_script": "嫩江",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Sōnghuā Jiāng"
+              "notes": "Nèn Jiāng"
             },
             {
-              "form": "Sunggari Ula",
-              "native_script": "ᠰᡠᠩᡤᠠᡵᡳ ᡠᠯᠠ",
+              "form": "Non Ula",
+              "native_script": "ᠨᠣᠨ ᡠᠯᠠ",
               "language": "Manchu",
               "language_code": "mnc",
-              "notes": "Sunggari Ula, meaning 'Milky River'"
+              "notes": "Non Ula"
             },
             {
-              "form": "Songhwagang",
-              "native_script": "송화강",
-              "language": "Korean",
-              "language_code": "kor",
-              "notes": "Songhwagang"
+              "form": "Non mörön",
+              "native_script": "Нон мөрөн",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Non Mörön"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "400 CE (Wei Shu attests the Sumo/Songhua River)",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 500 CE (Attested as Nan Shui in Northern Wei records)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Principal river of central and northern Manchuria, largest tributary of the Amur. Onomastic note: Manchu 'Sunggari Ula' (Sunggari Ula, meaning 'Milky River').",
-          "source_url": "https://en.wikipedia.org/wiki/Songhua_River"
+          "etymology_notes": "Longest tributary of the Songhua River, flowing south past Qiqihar.",
+          "source_url": "https://en.wikipedia.org/wiki/Nen_River"
         }
       ]
     },
@@ -15524,31 +15357,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Liao_River"
         },
         {
-          "name": "Yiwulü Mountain",
+          "name": "Wuhuan",
           "disambiguation_note": null,
-          "localisation_stem": "Yiwulü",
-          "category": "oronym",
-          "feature_subtype": "mountain",
-          "relationship": "Sacred mountain range bordering the western Liaohe plain.",
+          "localisation_stem": "Wuhuan",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Ancient Proto-Mongolic steppe people inhabiting the Liaoxi and upper Xar Moron frontier.",
           "language_variants": [
             {
-              "form": "Yīwūlǘ Shān",
-              "native_script": "醫巫閭山",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Yīwūlǘ Shān, sacred northern mountain of ancient Youzhou"
+              "form": "Wūhuán",
+              "native_script": "烏桓",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Classical Han-dynasty ethnonym"
+            },
+            {
+              "form": "Ohwan",
+              "native_script": "오환",
+              "language": "Korean",
+              "language_code": "kor",
+              "notes": "Korean historical reading"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "300 BCE (Zhouli and Shanhaijing list Yiwulü as the sacred northern mountain of Youzhou)",
+          "earliest_attestation_year": -150,
+          "earliest_attestation_note": "c. 150 BCE (Attested in the Shiji and Book of the Later Han after the Donghu breakup)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Sacred mountain range overlooking the western Liaohe plain.",
-          "source_url": "https://en.wikipedia.org/wiki/Yiwul%C3%BC_Mountain"
+          "etymology_notes": "Northern branch of the Donghu confederation centered around Mount Wuhuan in western Manchuria and Liaoxi.",
+          "source_url": "https://en.wikipedia.org/wiki/Wuhuan"
         }
       ]
     },
@@ -15611,45 +15451,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Han_Chinese"
         },
         {
-          "name": "Liao River",
+          "name": "Kumo Xi",
           "disambiguation_note": null,
-          "localisation_stem": "Liao",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Main river flowing past Kangping and Faku.",
+          "localisation_stem": "Kumo Xi",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Para-Mongolic steppe people inhabiting the Liaoxi and upper Liao corridor bordering Wuzhou.",
           "language_variants": [
             {
-              "form": "Liáo Hé",
-              "native_script": "遼河",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Liáo Hé"
-            },
-            {
-              "form": "Liáo Shuǐ",
-              "native_script": "遼水",
+              "form": "Kùmòxī",
+              "native_script": "庫莫奚",
               "language": "Literary Chinese",
               "language_code": "lzh",
-              "notes": "Liáo Shuǐ, classical name in Han annals"
+              "notes": "Kùmò Xī, attested in the Book of Wei"
             },
             {
-              "form": "Yoha",
-              "native_script": "요하",
+              "form": "Hae",
+              "native_script": "해",
               "language": "Korean",
               "language_code": "kor",
-              "notes": "Yoha"
+              "notes": "Hae (Xi), Korean reading"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "300 BCE (Attested in Warring States and Han texts such as Huainanzi and Han Shu)",
+          "earliest_attestation_year": 388,
+          "earliest_attestation_note": "388 CE (Wei Shu records the Kumo Xi alongside the Khitan after the Yuwen Xianbei breakup)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Principal river of southern Manchuria flowing into Liaodong Bay.",
-          "source_url": "https://en.wikipedia.org/wiki/Liao_River"
+          "etymology_notes": "Para-Mongolic steppe people of the Laoha and Luan river basins bordering Liaoxi.",
+          "source_url": "https://en.wikipedia.org/wiki/Kumo_Xi"
         },
         {
           "name": "Yiwulü Mountain",
@@ -17342,38 +17175,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Luan_River"
         },
         {
-          "name": "Mount Wuling",
+          "name": "Yan Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Wuling",
+          "localisation_stem": "Yan",
           "category": "oronym",
-          "feature_subtype": "mountain",
-          "relationship": "Highest peak of the Yan Mountains on the southern edge of Chengde.",
+          "feature_subtype": "mountain_range",
+          "relationship": "Rugged mountain chain crossing the Chengde basin along the upper Luan River.",
           "language_variants": [
             {
-              "form": "Wùlíng Shān",
-              "native_script": "霧靈山",
+              "form": "Yānshān",
+              "native_script": "燕山",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Standard Chinese name"
-            },
-            {
-              "form": "Fúlíng Shān",
-              "native_script": "伏凌山",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Northern Wei name Fulingshan"
+              "notes": "Yān Shān"
             }
           ],
-          "earliest_attestation_year": 500,
-          "earliest_attestation_note": "500 CE (Shuijing Zhu records Mount Fuling/Wuling in the Yan Mountains near Chengde)",
+          "earliest_attestation_year": -300,
+          "earliest_attestation_note": "c. 300 BCE (Named in Warring States and Han geographic texts for the range north of Yan)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Highest peak of the Yan Mountains (2,118 m), located on the southern border of Chengde.",
-          "source_url": "https://en.wikipedia.org/wiki/Mount_Wuling"
+          "etymology_notes": "Mountain range stretching across northern Hebei into western Liaoning and southern Chifeng.",
+          "source_url": "https://en.wikipedia.org/wiki/Yan_Mountains"
         }
       ]
     },
@@ -17882,38 +17708,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Chaobai_River"
         },
         {
-          "name": "Jundu Mountains",
+          "name": "Mount Wuling",
           "disambiguation_note": null,
-          "localisation_stem": "Jundu",
+          "localisation_stem": "Wuling",
           "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Western Yan range bordering western Chengde.",
+          "feature_subtype": "mountain",
+          "relationship": "Highest summit of the Yan Mountains overlooking the Chaobai and Luan river divide.",
           "language_variants": [
             {
-              "form": "Jūndūshān",
-              "native_script": "軍都山",
+              "form": "Wùlíng Shān",
+              "native_script": "霧靈山",
               "language": "Chinese",
               "language_code": "zho",
               "notes": "Standard Chinese name"
             },
             {
-              "form": "Jūndū Shān",
-              "native_script": "軍都山",
+              "form": "Fúlíng Shān",
+              "native_script": "伏凌山",
               "language": "Literary Chinese",
               "language_code": "lzh",
-              "notes": "Attested in Han Shu and Shuijing Zhu"
+              "notes": "Northern Wei name Fulingshan"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "c. 100 BCE (Attested in Han-era administrative and geographic records of Jundu County)",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "500 CE (Shuijing Zhu records Mount Fuling/Wuling in the Yan Mountains near Chengde)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Western section of the Yan Mountains linking the Chengde highlands with the Zhangjiakou-Yanqing passes.",
-          "source_url": "https://en.wikipedia.org/wiki/Jundu_Mountains"
+          "etymology_notes": "Highest peak of the Yan Mountains (2,118 m), located on the southern border of Chengde.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Wuling"
         }
       ]
     },
@@ -18820,38 +18646,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Nen_River"
         },
         {
-          "name": "Lesser Khingan",
+          "name": "Greater Khingan",
           "disambiguation_note": null,
-          "localisation_stem": "Lesser Khingan",
+          "localisation_stem": "Greater Khingan",
           "category": "oronym",
           "feature_subtype": "mountain_range",
-          "relationship": "Eastern mountain range bordering the upper Nen River valley.",
+          "relationship": "Mountain range bounding the western side of the upper Nen valley opposite Mergen.",
           "language_variants": [
             {
-              "form": "Xiǎoxīng'ānlǐng",
-              "native_script": "小興安嶺",
+              "form": "Dà Xīng'ān Lǐng",
+              "native_script": "大興安嶺",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Standard Chinese name"
+              "notes": "Dà Xīng'ān Lǐng"
             },
             {
-              "form": "Ilhuri Alin",
-              "native_script": "ᡳᠯᡥᡠᡵᡳ ᠠᠯᡳᠨ",
+              "form": "Khyangan nuruu",
+              "native_script": "Хянган нуруу",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Khyangan Nuruu"
+            },
+            {
+              "form": "Hinggan Alin",
+              "native_script": "ᡥᡳᠩᡤᠠᠨ ᠠᠯᡳᠨ",
               "language": "Manchu",
               "language_code": "mnc",
-              "notes": "Manchu name"
+              "notes": "Hinggan Alin"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE (Attested as Ilhuri Alin in early Qing Manchu cartography)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "100 CE (Hou Hanshu records the Xianbei Mountains; Manchu-Mongolic Khingan attested by Qing)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Mountain range in northern Heilongjiang separating the Amur valley from the Nen and Songhua basins.",
-          "source_url": "https://en.wikipedia.org/wiki/Lesser_Khingan"
+          "etymology_notes": "Major volcanic mountain range dividing the Mongolian steppe from the Manchurian plain.",
+          "source_url": "https://en.wikipedia.org/wiki/Greater_Khingan"
         }
       ]
     },
@@ -19821,38 +19654,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Nemor_River"
         },
         {
-          "name": "Lesser Khingan",
+          "name": "Songnen Plain",
           "disambiguation_note": null,
-          "localisation_stem": "Lesser Khingan",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Southern foothills of the Lesser Khingan overlooking Kedong.",
+          "localisation_stem": "Songnen",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Broad alluvial plain drained by the Songhua and Nen rivers across central Heilongjiang and northern Jilin.",
           "language_variants": [
             {
-              "form": "Xiǎoxīng'ānlǐng",
-              "native_script": "小興安嶺",
+              "form": "Sōngnèn Píngyuán",
+              "native_script": "松嫩平原",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Standard Chinese name"
-            },
-            {
-              "form": "Ilhuri Alin",
-              "native_script": "ᡳᠯᡥᡠᡵᡳ ᠠᠯᡳᠨ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Manchu name"
+              "notes": "Chinese compound of Songhua and Nen"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE (Attested as Ilhuri Alin in early Qing Manchu cartography)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 2nd century BCE (Ancient alluvial lowland inhabited by the Buyeo, Sushen, and Shiwei)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Mountain range in northern Heilongjiang separating the Amur valley from the Nen and Songhua basins.",
-          "source_url": "https://en.wikipedia.org/wiki/Lesser_Khingan"
+          "etymology_notes": "Alluvial basin formed by the Songhua and Nen rivers in western and central Manchuria. Onomastic note: Chinese compound of Songhua and Nen ('Sōngnèn Píngyuán').",
+          "source_url": "https://en.wikipedia.org/wiki/Songnen_Plain"
         }
       ]
     },
@@ -20192,38 +20018,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shiwei"
         },
         {
-          "name": "Nemor River",
+          "name": "Hulan River",
           "disambiguation_note": null,
-          "localisation_stem": "Nemor",
+          "localisation_stem": "Hulan",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Primary local river crossing the Shanbei/Nemor sector.",
+          "relationship": "Major left tributary of the Songhua draining the northern plains adjacent to the Nemor basin.",
           "language_variants": [
             {
-              "form": "Nèmó'ěr Hé",
-              "native_script": "訥謨爾河",
+              "form": "Hūlán Hé",
+              "native_script": "呼蘭河",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription of Tungusic/Mongolic name"
+              "notes": "Hūlán Hé"
             },
             {
-              "form": "Nemer",
-              "native_script": "ᠨᡝᠮᡝᡵ",
+              "form": "Hūlan Ula",
+              "native_script": "ᡥᡡᠯᠠᠨ ᡠᠯᠠ",
               "language": "Manchu",
               "language_code": "mnc",
-              "notes": "Manchu form"
+              "notes": "Hūlan Ula"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE (Attested in early Qing Heilongjiang river records)",
+          "earliest_attestation_year": 1115,
+          "earliest_attestation_note": "c. 1115 CE (Attested in Jin dynasty records as Hula'an)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Left tributary of the Nen River rising at Fulun Mountain in the Lesser Khingan foothills near Kedong/Puyu.",
-          "source_url": "https://en.wikipedia.org/wiki/Nemor_River"
+          "etymology_notes": "Major left tributary of the Songhua River draining the Suihua basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Hulan_River"
         },
         {
           "name": "Nen River",
@@ -20334,38 +20160,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shiwei"
         },
         {
-          "name": "Nemor River",
+          "name": "Yilou",
           "disambiguation_note": null,
-          "localisation_stem": "Nemor",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Primary local river crossing the Shanbei/Nemor sector.",
+          "localisation_stem": "Yilou",
+          "category": "tribe",
+          "feature_subtype": "tungusic_tribe",
+          "relationship": "Ancient Tungusic forest people of the northern Manchurian plains and Lesser Khingan foothills.",
           "language_variants": [
             {
-              "form": "Nèmó'ěr Hé",
-              "native_script": "訥謨爾河",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription of Tungusic/Mongolic name"
+              "form": "Yìlóu",
+              "native_script": "挹婁",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Yìlóu, recorded in the Records of the Three Kingdoms"
             },
             {
-              "form": "Nemer",
-              "native_script": "ᠨᡝᠮᡝᡵ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Manchu form"
+              "form": "Eumnu",
+              "native_script": "읍루",
+              "language": "Korean",
+              "language_code": "kor",
+              "notes": "Eumnu, Korean reading"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE (Attested in early Qing Heilongjiang river records)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 220,
+          "earliest_attestation_note": "c. 220 CE (Recorded in the Wei Shu section of the Sanguozhi)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Left tributary of the Nen River rising at Fulun Mountain in the Lesser Khingan foothills near Kedong/Puyu.",
-          "source_url": "https://en.wikipedia.org/wiki/Nemor_River"
+          "etymology_notes": "Tungusic-associated people of eastern Manchuria inhabiting the Songhua and Mudan river basins.",
+          "source_url": "https://en.wikipedia.org/wiki/Yilou"
         },
         {
           "name": "Nen River",
@@ -20611,38 +20437,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shiwei"
         },
         {
-          "name": "Nemor River",
+          "name": "Sushen",
           "disambiguation_note": null,
-          "localisation_stem": "Nemor",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Primary local river crossing the Shanbei/Nemor sector.",
+          "localisation_stem": "Sushen",
+          "category": "tribe",
+          "feature_subtype": "tungusic_tribe",
+          "relationship": "Ancient Tungusic forest people of the northern Songnen lowlands and Lesser Khingan foothills.",
           "language_variants": [
             {
-              "form": "Nèmó'ěr Hé",
-              "native_script": "訥謨爾河",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription of Tungusic/Mongolic name"
+              "form": "Sùshèn",
+              "native_script": "肅慎",
+              "language": "Literary Chinese",
+              "language_code": "lzh",
+              "notes": "Sùshèn, classical Chinese ethnonym in pre-Qin and Han annals"
             },
             {
-              "form": "Nemer",
-              "native_script": "ᠨᡝᠮᡝᡵ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Manchu form"
+              "form": "Suksin",
+              "native_script": "숙신",
+              "language": "Korean",
+              "language_code": "kor",
+              "notes": "Suksin, Korean reading of the classical ethnonym"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE (Attested in early Qing Heilongjiang river records)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -500,
+          "earliest_attestation_note": "c. 500 BCE (Attested in the Zuo Zhuan and Bamboo Annals)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Left tributary of the Nen River rising at Fulun Mountain in the Lesser Khingan foothills near Kedong/Puyu.",
-          "source_url": "https://en.wikipedia.org/wiki/Nemor_River"
+          "etymology_notes": "Earliest recorded northeastern forest people of Manchuria in Chinese classical historiography.",
+          "source_url": "https://en.wikipedia.org/wiki/Sushen"
         },
         {
           "name": "Nen River",
@@ -21213,45 +21039,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Taoer_River"
         },
         {
-          "name": "Greater Khingan",
+          "name": "Xianbei",
           "disambiguation_note": null,
-          "localisation_stem": "Greater Khingan",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Mountainous Greater Khingan watershed feeding the Taoer and Nen tributaries.",
+          "localisation_stem": "Xianbei",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Early Proto-Mongolic people whose ancestral caves lay in the eastern Greater Khingan foothills.",
           "language_variants": [
             {
-              "form": "Dàxīng'ānlǐng",
-              "native_script": "大興安嶺",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Standard Chinese name"
-            },
-            {
-              "form": "Xiānbēi Shān",
-              "native_script": "鮮卑山",
+              "form": "Xiānbēi",
+              "native_script": "鮮卑",
               "language": "Literary Chinese",
               "language_code": "lzh",
-              "notes": "Han-Wei name Xianbei Mountain"
+              "notes": "Xiānbēi, attested in the Book of the Later Han"
             },
             {
-              "form": "Khyangan",
-              "native_script": "Хянган",
-              "language": "Mongolian",
-              "language_code": "mon",
-              "notes": "Mongolian name"
+              "form": "Seonbi",
+              "native_script": "선비",
+              "language": "Korean",
+              "language_code": "kor",
+              "notes": "Seonbi, Korean reading"
             }
           ],
-          "earliest_attestation_year": 100,
-          "earliest_attestation_note": "100 CE (Hou Hanshu records the Xianbei Mountains; Manchu-Mongolic Khingan attested by Qing)",
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 200 BCE (Early Han-era records of the Donghu/Xianbei confederation)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Volcanic mountain range dividing the Mongolian Plateau from the Nen River basin in Northeast China.",
-          "source_url": "https://en.wikipedia.org/wiki/Greater_Khingan"
+          "etymology_notes": "Proto-Mongolic confederation originating in the Greater Khingan and Xar Moron steppe.",
+          "source_url": "https://en.wikipedia.org/wiki/Xianbei"
         }
       ]
     },
@@ -21930,38 +21749,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Nen_River"
         },
         {
-          "name": "Taoer River",
+          "name": "Xianbei",
           "disambiguation_note": null,
-          "localisation_stem": "Taoer",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Joins the middle Nen River from the western Greater Khingan.",
+          "localisation_stem": "Xianbei",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Proto-Mongolic steppe people inhabiting the middle Nen valley and eastern Greater Khingan foothills.",
           "language_variants": [
             {
-              "form": "Táo'ér Hé",
-              "native_script": "洮兒河",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Standard Chinese name"
-            },
-            {
-              "form": "Tàlǔ Hé",
-              "native_script": "撻魯河",
+              "form": "Xiānbēi",
+              "native_script": "鮮卑",
               "language": "Literary Chinese",
               "language_code": "lzh",
-              "notes": "Liao-Jin era transcription Talu River"
+              "notes": "Xiānbēi, attested in the Book of the Later Han"
+            },
+            {
+              "form": "Seonbi",
+              "native_script": "선비",
+              "language": "Korean",
+              "language_code": "kor",
+              "notes": "Seonbi, Korean reading"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "1000 CE (Liao Shi records the Talu/Taoer River rising in the Greater Khingan)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 200 BCE (Early Han-era records of the Donghu/Xianbei confederation)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major right tributary of the Nen River rising in the southern Greater Khingan.",
-          "source_url": "https://en.wikipedia.org/wiki/Taoer_River"
+          "etymology_notes": "Proto-Mongolic confederation originating in the Greater Khingan and Xar Moron steppe.",
+          "source_url": "https://en.wikipedia.org/wiki/Xianbei"
         }
       ]
     },
@@ -24144,45 +23963,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Razdolnaya"
         },
         {
-          "name": "Lake Khanka",
+          "name": "Muling River",
           "disambiguation_note": null,
-          "localisation_stem": "Khanka",
+          "localisation_stem": "Muling",
           "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Major lake bordering the eastern Supin plain.",
+          "feature_subtype": "river",
+          "relationship": "Major river rising near the Laoyeling divide and flowing past the western Khanka lowlands.",
           "language_variants": [
             {
-              "form": "Xīngkǎi Hú",
-              "native_script": "興凱湖",
+              "form": "Mùlíng Hé",
+              "native_script": "穆稜河",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Standard Chinese name"
+              "notes": "Mùlíng Hé"
             },
             {
-              "form": "Méituó Hú",
-              "native_script": "湄沱湖",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Tang/Balhae-era name Meituo Lake"
-            },
-            {
-              "form": "Hangka",
-              "native_script": "ᡥᠠᠩᡴᠠ",
+              "form": "Muren Ula",
+              "native_script": "ᠮᡠᡵᡝᠨ ᡠᠯᠠ",
               "language": "Manchu",
               "language_code": "mnc",
-              "notes": "Manchu name"
+              "notes": "Muren Ula"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "c. 7th century CE (Tang-era Beiqinhai; Jurchen/Qing Xingkai)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1115,
+          "earliest_attestation_note": "1115 CE (Jin-era records of the Muren/Muling valley in eastern Heilongjiang)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Largest freshwater lake in eastern Manchuria, straddling Heilongjiang and Primorye.",
-          "source_url": "https://en.wikipedia.org/wiki/Lake_Khanka"
+          "etymology_notes": "Left tributary of the Ussuri River in eastern Heilongjiang.",
+          "source_url": "https://en.wikipedia.org/wiki/Muling_River"
         }
       ]
     },
@@ -24807,59 +24619,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Jurchens",
+          "name": "Heishui Mohe",
           "disambiguation_note": null,
-          "localisation_stem": "Jurchens",
+          "localisation_stem": "Heishui Mohe",
           "category": "tribe",
           "feature_subtype": "tungusic_tribe",
-          "relationship": "Jurchen heartland at Huligai (Yilan) at the Mudan-Songhua confluence.",
+          "relationship": "Early medieval Tungusic confederation inhabiting the lower Songhua and Mudan confluence around Huligai.",
           "language_variants": [
             {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
+              "form": "Hēishuǐ Mòhé",
+              "native_script": "黑水靺鞨",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Standard Chinese ethnonym"
-            },
-            {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Attested in Liao Shi and Jin Shi"
-            },
-            {
-              "form": "jušen",
-              "native_script": null,
-              "language": "Jurchen",
-              "language_code": "juc",
-              "notes": "Native Jurchen endonym"
-            },
-            {
-              "form": "Jušen",
-              "native_script": "ᡪᡠᡧᡝᠨ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Manchu cognate"
-            },
-            {
-              "form": "Yeojin",
-              "native_script": "여진",
-              "language": "Korean",
-              "language_code": "kor",
-              "notes": "Korean historical reading"
+              "notes": "Tang-era Chinese name ('Black Water Mohe' of the Amur)"
             }
           ],
-          "earliest_attestation_year": 900,
-          "earliest_attestation_note": "c. 900 CE (Attested in early 10th-century Liao and Five Dynasties records as Nüzhi / Nüzhen)",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 581,
+          "earliest_attestation_note": "581 CE (Sui Shu lists the Heishui among the seven major Mohe tribes along the lower Songhua and Amur)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tungusic people descended from the Mohe who inhabited the Songhua, Mudan, and Ussuri basins and founded the Jin dynasty.",
-          "source_url": "https://en.wikipedia.org/wiki/Jurchen_people"
+          "etymology_notes": "Northernmost Mohe division along the Middle and Lower Amur ('Black Water'), ancestors of later Amur Jurchens.",
+          "source_url": "https://en.wikipedia.org/wiki/Heishui_Mohe"
         },
         {
           "name": "Mudan River",
@@ -24977,59 +24761,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Jurchens",
+          "name": "Mohe people",
           "disambiguation_note": null,
-          "localisation_stem": "Jurchens",
+          "localisation_stem": "Mohe",
           "category": "tribe",
           "feature_subtype": "tungusic_tribe",
-          "relationship": "Jurchen heartland at Huligai (Yilan) at the Mudan-Songhua confluence.",
+          "relationship": "Tungusic forest people of the Mudan and lower Songhua valleys prior to the Jin period.",
           "language_variants": [
             {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
+              "form": "Mòhé",
+              "native_script": "靺鞨",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Standard Chinese ethnonym"
-            },
-            {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Attested in Liao Shi and Jin Shi"
-            },
-            {
-              "form": "jušen",
-              "native_script": null,
-              "language": "Jurchen",
-              "language_code": "juc",
-              "notes": "Native Jurchen endonym"
-            },
-            {
-              "form": "Jušen",
-              "native_script": "ᡪᡠᡧᡝᠨ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Manchu cognate"
-            },
-            {
-              "form": "Yeojin",
-              "native_script": "여진",
-              "language": "Korean",
-              "language_code": "kor",
-              "notes": "Korean historical reading"
+              "notes": "Chinese dynastic ethnonym (Northern Wei to Tang)"
             }
           ],
-          "earliest_attestation_year": 900,
-          "earliest_attestation_note": "c. 900 CE (Attested in early 10th-century Liao and Five Dynasties records as Nüzhi / Nüzhen)",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 500 CE (Attested in the Book of Northern Qi and Book of Sui)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tungusic people descended from the Mohe who inhabited the Songhua, Mudan, and Ussuri basins and founded the Jin dynasty.",
-          "source_url": "https://en.wikipedia.org/wiki/Jurchen_people"
+          "etymology_notes": "Early medieval Tungusic-associated peoples of the Songhua, Ussuri, and Amur basins prior to Balhae and Jurchen rule.",
+          "source_url": "https://en.wikipedia.org/wiki/Mohe_people"
         },
         {
           "name": "Mudan River",
@@ -25147,59 +24903,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Jurchens",
+          "name": "Yilou",
           "disambiguation_note": null,
-          "localisation_stem": "Jurchens",
+          "localisation_stem": "Yilou",
           "category": "tribe",
           "feature_subtype": "tungusic_tribe",
-          "relationship": "Jurchen heartland at Huligai (Yilan) at the Mudan-Songhua confluence.",
+          "relationship": "Ancient Tungusic people recorded in Chinese histories along the Mudan and Songhua river valleys.",
           "language_variants": [
             {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Standard Chinese ethnonym"
-            },
-            {
-              "form": "Nǚzhēn",
-              "native_script": "女真",
+              "form": "Yìlóu",
+              "native_script": "挹婁",
               "language": "Literary Chinese",
               "language_code": "lzh",
-              "notes": "Attested in Liao Shi and Jin Shi"
+              "notes": "Yìlóu, recorded in the Records of the Three Kingdoms"
             },
             {
-              "form": "jušen",
-              "native_script": null,
-              "language": "Jurchen",
-              "language_code": "juc",
-              "notes": "Native Jurchen endonym"
-            },
-            {
-              "form": "Jušen",
-              "native_script": "ᡪᡠᡧᡝᠨ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Manchu cognate"
-            },
-            {
-              "form": "Yeojin",
-              "native_script": "여진",
+              "form": "Eumnu",
+              "native_script": "읍루",
               "language": "Korean",
               "language_code": "kor",
-              "notes": "Korean historical reading"
+              "notes": "Eumnu, Korean reading"
             }
           ],
-          "earliest_attestation_year": 900,
-          "earliest_attestation_note": "c. 900 CE (Attested in early 10th-century Liao and Five Dynasties records as Nüzhi / Nüzhen)",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 220,
+          "earliest_attestation_note": "c. 220 CE (Recorded in the Wei Shu section of the Sanguozhi)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tungusic people descended from the Mohe who inhabited the Songhua, Mudan, and Ussuri basins and founded the Jin dynasty.",
-          "source_url": "https://en.wikipedia.org/wiki/Jurchen_people"
+          "etymology_notes": "Tungusic-associated people of eastern Manchuria inhabiting the Songhua and Mudan river basins.",
+          "source_url": "https://en.wikipedia.org/wiki/Yilou"
         },
         {
           "name": "Mudan River",
@@ -27090,38 +26825,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Heishui_Mohe"
         },
         {
-          "name": "Naoli River",
+          "name": "Ussuri River",
           "disambiguation_note": null,
-          "localisation_stem": "Naoli",
+          "localisation_stem": "Ussuri",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Flows northeastward through eastern Hoewon.",
+          "relationship": "Major Amur tributary receiving the Naoli River along the eastern edge of the Wanda highlands.",
           "language_variants": [
             {
-              "form": "Náolì Hé",
-              "native_script": "撓力河",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
-            },
-            {
-              "form": "Noro",
-              "native_script": "ᠨᠣᡵᠣ",
+              "form": "Usuri Ula",
+              "native_script": "ᡠᠰᡠᡵᡳ ᡠᠯᠠ",
               "language": "Manchu",
               "language_code": "mnc",
-              "notes": "Manchu name Noro Bira"
+              "notes": "Manchu name"
+            },
+            {
+              "form": "Wūsūlǐjiāng",
+              "native_script": "烏蘇里江",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Chinese name"
+            },
+            {
+              "form": "Ussuri",
+              "native_script": "Уссури",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian adaptation"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "1600s CE (Ming-Qing records of the Noro/Naoli River on the Sanjiang Plain)",
+          "earliest_attestation_year": 1115,
+          "earliest_attestation_note": "c. 12th century CE (Jin-dynasty records of the Wusuli/Usuri)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Longest tributary of the Ussuri River, draining the central Sanjiang Plain.",
-          "source_url": "https://en.wikipedia.org/wiki/Naoli_River"
+          "etymology_notes": "Major southern tributary of the Amur joining at Boli (Khabarovsk), from Manchu-Tungusic Usuri.",
+          "source_url": "https://en.wikipedia.org/wiki/Ussuri"
         },
         {
           "name": "Wanda Mountains",
@@ -27835,52 +27577,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mohe_people"
         },
         {
-          "name": "Songhua River",
+          "name": "Mayi River",
           "disambiguation_note": null,
-          "localisation_stem": "Songhua",
+          "localisation_stem": "Mayi",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Flows past southern Hoewon.",
+          "relationship": "Right-bank tributary of the Songhua flowing north from the Zhangguangcai Range across the Hoewon basin.",
           "language_variants": [
             {
-              "form": "Sōnghuā Jiāng",
-              "native_script": "松花江",
+              "form": "Mǎyǐ Hé",
+              "native_script": "螞蟻河",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Ming-Qing Chinese name"
-            },
-            {
-              "form": "Sùmò Shuǐ",
-              "native_script": "粟末水",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Wei-Tang name Sumo River"
-            },
-            {
-              "form": "Sunggari Ula",
-              "native_script": "ᠰᡠᠩᡤᠠᡵᡳ ᡠᠯᠠ",
-              "language": "Manchu",
-              "language_code": "mnc",
-              "notes": "Manchu name meaning Milky Way River"
-            },
-            {
-              "form": "Songhwagang",
-              "native_script": "송화강",
-              "language": "Korean",
-              "language_code": "kor",
-              "notes": "Korean reading"
+              "notes": "Mǎyǐ Hé"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "400 CE (Wei Shu attests the Sumo/Songhua River)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE (Attested in early Qing Songhua-basin records)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Largest tributary of the Amur, flowing through Jilin and Heilongjiang; Manchu Sunggari ('Milky Way'). Onomastic note: Manchu name meaning Milky Way River ('Sunggari Ula').",
-          "source_url": "https://en.wikipedia.org/wiki/Songhua_River"
+          "etymology_notes": "Right tributary of the Songhua River in southern Heilongjiang.",
+          "source_url": "https://en.wikipedia.org/wiki/Mayi_River"
         },
         {
           "name": "Zhangguangcai Range",
@@ -28486,45 +28207,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Razdolnaya"
         },
         {
-          "name": "Sea of Japan",
+          "name": "Ussuri Bay",
           "disambiguation_note": null,
-          "localisation_stem": "Sea of Japan",
+          "localisation_stem": "Ussuri",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Eastern sea bordering Balhae's Primorye coast.",
+          "feature_subtype": "bay",
+          "relationship": "Sheltered eastern bay flanking the peninsula of Yongmingcheng on the southern Primorye coast.",
           "language_variants": [
             {
-              "form": "Rìběnhǎi",
-              "native_script": "日本海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese name"
+              "form": "Usuri",
+              "native_script": null,
+              "language": "Manchu",
+              "language_code": "mnc",
+              "notes": "From Tungusic/Jurchen-Manchu usuri ('water / bright water'), shared with the Ussuri River."
             },
             {
-              "form": "Donghae",
-              "native_script": "동해",
-              "language": "Korean",
-              "language_code": "kor",
-              "notes": "Korean name East Sea"
-            },
-            {
-              "form": "Jīng Hǎi",
-              "native_script": "鯨海",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Medieval Chinese name Whale Sea"
+              "form": "Ussuriysky zaliv",
+              "native_script": null,
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian adaptation from Tungusic/Manchu Usuri."
             }
           ],
-          "earliest_attestation_year": -37,
-          "earliest_attestation_note": "Recorded as Donghae ('East Sea') in Samguk Sagi traditions (1st century BCE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Natural embayment along southern Primorye named after the indigenous Tungusic-Manchu hydronym Usuri.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea bordering eastern Balhae/Primorye and the Korean Peninsula.",
-          "source_url": "https://en.wikipedia.org/wiki/Sea_of_Japan"
+          "etymology_notes": "Named from the indigenous Tungusic/Manchu hydronym Usuri.",
+          "source_url": "https://en.wikipedia.org/wiki/Ussuri_Bay"
         }
       ]
     },
@@ -28635,45 +28349,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Razdolnaya"
         },
         {
-          "name": "Sea of Japan",
+          "name": "Lake Khanka",
           "disambiguation_note": null,
-          "localisation_stem": "Sea of Japan",
+          "localisation_stem": "Khanka",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Eastern sea bordering Balhae's Primorye coast.",
+          "feature_subtype": "lake",
+          "relationship": "Largest freshwater lake of the Ussuri-Suifen watershed inland north of the Jeongni basin.",
           "language_variants": [
             {
-              "form": "Rìběnhǎi",
-              "native_script": "日本海",
+              "form": "Xingkai Hu",
+              "native_script": null,
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name"
+              "notes": "Mandarin adaptation of the Manchu hydronym Xinka; attested in Tang/Bohai records as Mielihe and Beiqinghai."
             },
             {
-              "form": "Donghae",
-              "native_script": "동해",
-              "language": "Korean",
-              "language_code": "kor",
-              "notes": "Korean name East Sea"
-            },
-            {
-              "form": "Jīng Hǎi",
-              "native_script": "鯨海",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Medieval Chinese name Whale Sea"
+              "form": "Xinka",
+              "native_script": null,
+              "language": "Manchu",
+              "language_code": "mnc",
+              "notes": "Manchu/Jurchen name for the lake."
             }
           ],
-          "earliest_attestation_year": -37,
-          "earliest_attestation_note": "Recorded as Donghae ('East Sea') in Samguk Sagi traditions (1st century BCE).",
+          "earliest_attestation_year": 600,
+          "earliest_attestation_note": "c. 7th century CE (Tang-era Beiqinhai; Jurchen/Qing Xingkai)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea bordering eastern Balhae/Primorye and the Korean Peninsula.",
-          "source_url": "https://en.wikipedia.org/wiki/Sea_of_Japan"
+          "etymology_notes": "From Manchu Xinka / Jurchen-Tungusic roots; Tang records note older Mohe-Bohai names Beiqinghai and Mielihe.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Khanka"
         }
       ]
     },
@@ -28784,45 +28491,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Razdolnaya"
         },
         {
-          "name": "Sea of Japan",
+          "name": "Sikhote-Alin",
           "disambiguation_note": null,
-          "localisation_stem": "Sea of Japan",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Eastern sea bordering Balhae's Primorye coast.",
+          "localisation_stem": "Sikhote-Alin",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Temperate coastal mountain range stretching northeastward behind the southern Primorye littoral.",
           "language_variants": [
             {
-              "form": "Rìběnhǎi",
-              "native_script": "日本海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese name"
-            },
-            {
-              "form": "Donghae",
-              "native_script": "동해",
-              "language": "Korean",
-              "language_code": "kor",
-              "notes": "Korean name East Sea"
-            },
-            {
-              "form": "Jīng Hǎi",
-              "native_script": "鯨海",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Medieval Chinese name Whale Sea"
+              "form": "Sihote-Alin",
+              "native_script": null,
+              "language": "Manchu",
+              "language_code": "mnc",
+              "notes": "From Manchu/Tungusic Sihote Alin ('mountain range of the great western river / forest ridge')."
             }
           ],
-          "earliest_attestation_year": -37,
-          "earliest_attestation_note": "Recorded as Donghae ('East Sea') in Samguk Sagi traditions (1st century BCE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 17th century CE (Manchu-Qing geographical records; alin = 'mountain')",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea bordering eastern Balhae/Primorye and the Korean Peninsula.",
-          "source_url": "https://en.wikipedia.org/wiki/Sea_of_Japan"
+          "etymology_notes": "From indigenous Manchu-Tungusic Sihote-Alin, where alin means 'mountain range'.",
+          "source_url": "https://en.wikipedia.org/wiki/Sikhote-Alin"
         }
       ]
     },
@@ -30135,38 +29828,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Khitan_people"
         },
         {
-          "name": "Daling River",
+          "name": "Xiaoling River",
           "disambiguation_note": null,
-          "localisation_stem": "Daling",
+          "localisation_stem": "Xiaoling",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Flows directly through Chaoyang.",
+          "relationship": "Coastal river flowing southeastward from the Chaoyang uplands past Jinzhou into Liaodong Bay.",
           "language_variants": [
             {
-              "form": "Dàlíng Hé",
-              "native_script": "大凌河",
+              "form": "Xiǎolíng Hé",
+              "native_script": "小凌河",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Standard Chinese name"
+              "notes": "Standard Chinese hydronym"
             },
             {
-              "form": "Báiláng Shuǐ",
-              "native_script": "白狼水",
+              "form": "Líng Shuǐ",
+              "native_script": "凌水",
               "language": "Literary Chinese",
               "language_code": "lzh",
-              "notes": "Han-Wei era name Bailangshui"
+              "notes": "Classical Chinese river name"
             }
           ],
-          "earliest_attestation_year": 207,
-          "earliest_attestation_note": "207 CE (Records of the Three Kingdoms mention Bailangshui / Daling River during Cao Cao's campaign)",
+          "earliest_attestation_year": 300,
+          "earliest_attestation_note": "c. 4th century CE (Recorded in Liaoxi frontier geography during the Yan and Wei periods)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Main river of western Liaoning flowing past Chaoyang and Jinzhou into Liaodong Bay.",
-          "source_url": "https://en.wikipedia.org/wiki/Daling_River"
+          "etymology_notes": "Lesser Ling River running parallel to the Daling River through the Liaoxi corridor to the Bohai Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Xiaoling_River"
         },
         {
           "name": "Yiwulü Mountain",
@@ -32271,38 +31964,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Luan_River"
         },
         {
-          "name": "Mount Pan",
+          "name": "Yan Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Pan",
+          "localisation_stem": "Yan",
           "category": "oronym",
-          "feature_subtype": "mountain",
-          "relationship": "Eastern Yan foothill peak overlooking the Liaoxi approach.",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range traversing northern Hebei and the Luan River passes above Mount Pan.",
           "language_variants": [
             {
-              "form": "Pán Shān",
-              "native_script": "盤山",
+              "form": "Yānshān",
+              "native_script": "燕山",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Standard Chinese name"
-            },
-            {
-              "form": "Pánlóng Shān",
-              "native_script": "盤龍山",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Han-Wei era name Panlongshan"
+              "notes": "Yān Shān"
             }
           ],
-          "earliest_attestation_year": 207,
-          "earliest_attestation_note": "207 CE (Wei-era records mention Mount Pan / Panlongshan in the eastern Yan foothills)",
+          "earliest_attestation_year": -300,
+          "earliest_attestation_note": "c. 300 BCE (Named in Warring States and Han geographic texts for the range north of Yan)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Prominent peak of the southern Yan Mountains between Beijing and Qinhuangdao.",
-          "source_url": "https://en.wikipedia.org/wiki/Mount_Pan"
+          "etymology_notes": "Mountain range stretching across northern Hebei into western Liaoning and southern Chifeng.",
+          "source_url": "https://en.wikipedia.org/wiki/Yan_Mountains"
         }
       ]
     },

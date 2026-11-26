@@ -62,6 +62,15 @@ def normalize_variant_code_and_label(lv: dict, stats: Counter) -> None:
     elif lc == "cel-gau":
         lv["language_code"] = "xtg"
         stats["code_cel_gau_to_xtg"] += 1
+    elif lc == "tmh" and lang != "Tamashek":
+        lv["language"] = "Tamashek"
+        stats["label_tmh_unified"] += 1
+    elif lc == "syc" and lang != "Syriac":
+        lv["language"] = "Syriac"
+        stats["label_syc_unified"] += 1
+    elif lc == "mak" and lang != "Makasar":
+        lv["language"] = "Makasar"
+        stats["label_mak_unified"] += 1
 
     # Strip stray leading '*' on attested non-proto languages
     if lv["language_code"] not in PROTO_STAR_CODES and lv["form"].startswith("*"):

@@ -137,33 +137,38 @@
       "target_baronies_audited": 155,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 465,
-      "unique_replacement_names": 87,
-      "candidates_with_multilingual_variants": 365,
+      "unique_replacement_names": 102,
+      "candidates_with_multilingual_variants": 358,
       "wikipedia_source_attached": 465,
-      "unique_source_urls": 87,
+      "unique_source_urls": 102,
       "candidates_by_category": {
-        "choronym": 39,
-        "hydronym": 168,
-        "oronym": 100,
-        "topographic_feature": 3,
-        "tribe": 155
+        "choronym": 42,
+        "hydronym": 157,
+        "oronym": 101,
+        "topographic_feature": 5,
+        "tribe": 160
       },
       "baronies_with_category": {
-        "has_choronym_candidate": 38,
-        "has_hydronym_candidate": 138,
-        "has_oronym_candidate": 93,
-        "has_topographic_feature_candidate": 3,
+        "has_choronym_candidate": 41,
+        "has_hydronym_candidate": 134,
+        "has_oronym_candidate": 94,
+        "has_topographic_feature_candidate": 5,
         "has_tribe_candidate": 155
       },
       "unique_language_codes": [
         "ara",
+        "aze",
         "bal",
         "fas",
         "grc",
         "kur",
         "lat",
         "pal",
-        "peo"
+        "peo",
+        "pus",
+        "snd",
+        "tgk",
+        "tuk"
       ],
       "anachronism_type_counts": {
         "early_modern_foundation": 4,
@@ -175,8 +180,8 @@
       },
       "candidates_by_attestation_basis": {
         "attested_867_to_1066": 37,
-        "attested_pre_867": 282,
-        "indigenous_pre_literate": 146
+        "attested_pre_867": 272,
+        "indigenous_pre_literate": 156
       },
       "bookmark_valid_candidates": {
         "867": 428,
@@ -184,7 +189,7 @@
         "1178": 465
       },
       "baronies_with_867_valid_candidate": 155,
-      "unique_localisation_stems": 87
+      "unique_localisation_stems": 102
     }
   },
   "baronies": {
@@ -1969,52 +1974,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Sefid-Rud"
         },
         {
-          "name": "Caspian Sea",
+          "name": "Anzali Lagoon",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian Sea",
+          "localisation_stem": "Anzali",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major sea associated with the Gilan (Daylam) landscape around Lahij.",
+          "feature_subtype": "lake",
+          "relationship": "Major coastal wetland and lagoon on the Gilan littoral west of Lahijan.",
           "language_variants": [
             {
-              "form": "Daryā-ye Khazar",
-              "native_script": "دریای خزر",
+              "form": "Tālāb-e Anzalī",
+              "native_script": "تالاب انزلی",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name"
-            },
-            {
-              "form": "Baḥr al-Khazar",
-              "native_script": "بحر الخزر",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic name"
-            },
-            {
-              "form": "Kaspía Thálassa",
-              "native_script": "Κασπία Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name"
-            },
-            {
-              "form": "Mare Caspium",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Persian name of the Caspian coastal lagoon"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "c. 450 BCE (Hecataeus of Miletus and Herodotus, Histories 1.202)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Permanent coastal wetland and lagoon system on the southwestern Caspian shore of Gilan.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "World's largest inland body of water, named after the ancient Caspii people.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+          "etymology_notes": "Named after the historical Gilan coastal locality of Anzali.",
+          "source_url": "https://en.wikipedia.org/wiki/Anzali_Lagoon"
         }
       ]
     },
@@ -2665,52 +2649,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Atrek_River"
         },
         {
-          "name": "Caspian Sea",
+          "name": "Uzboy",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian Sea",
+          "localisation_stem": "Uzboy",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major sea associated with the Dihistan (Gurgan) landscape around Oboy.",
+          "feature_subtype": "river",
+          "relationship": "Ancient desiccated river channel crossing western Turkmenistan north of Oboy.",
           "language_variants": [
             {
-              "form": "Daryā-ye Khazar",
-              "native_script": "دریای خزر",
+              "form": "Uzboý",
+              "native_script": null,
+              "language": "Turkmen",
+              "language_code": "tuk",
+              "notes": "Turkmen name"
+            },
+            {
+              "form": "Uzboy",
+              "native_script": "اوزبوی",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name"
-            },
-            {
-              "form": "Baḥr al-Khazar",
-              "native_script": "بحر الخزر",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic name"
-            },
-            {
-              "form": "Kaspía Thálassa",
-              "native_script": "Κασπία Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name"
-            },
-            {
-              "form": "Mare Caspium",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Persian rendering"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "c. 450 BCE (Hecataeus of Miletus and Herodotus, Histories 1.202)",
+          "earliest_attestation_year": -300,
+          "earliest_attestation_note": "c. 300 BCE (classical accounts of the western Oxus channel toward the Caspian)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "World's largest inland body of water, named after the ancient Caspii people.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+          "etymology_notes": "Palaeo-channel connecting the Sarygamysh basin and Khwarazm to the Caspian Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Uzboy"
         }
       ]
     },
@@ -3071,52 +3041,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mazanderani_people"
         },
         {
-          "name": "Caspian Sea",
+          "name": "Miankaleh Peninsula",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major sea associated with the Gurgan landscape around Abaskun.",
+          "localisation_stem": "Miankaleh",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Long sandspit peninsula shielding the southeastern Caspian port of Abaskun.",
           "language_variants": [
             {
-              "form": "Daryā-ye Khazar",
-              "native_script": "دریای خزر",
+              "form": "Mīānkāleh",
+              "native_script": "میانکاله",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name"
-            },
-            {
-              "form": "Baḥr al-Khazar",
-              "native_script": "بحر الخزر",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic name"
-            },
-            {
-              "form": "Kaspía Thálassa",
-              "native_script": "Κασπία Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name"
-            },
-            {
-              "form": "Mare Caspium",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Persian name of the Caspian sandspit peninsula"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "c. 450 BCE (Hecataeus of Miletus and Herodotus, Histories 1.202)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Permanent barrier peninsula enclosing the Gulf of Gorgan at the southeastern corner of the Caspian Sea.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "World's largest inland body of water, named after the ancient Caspii people.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+          "etymology_notes": "Persian regional coastal name separating the Gorgan Bay wetlands from the open Caspian.",
+          "source_url": "https://en.wikipedia.org/wiki/Miankaleh_peninsula"
         },
         {
           "name": "Gorgan River",
@@ -3389,52 +3338,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Talysh_Mountains"
         },
         {
-          "name": "Caspian Sea",
+          "name": "Caspians",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major sea associated with the Mugan (Shirvan) landscape around Langarkanan.",
+          "localisation_stem": "Caspians",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Ancient pre-Iranian people inhabiting the southwestern Caspian shore and Mugan.",
           "language_variants": [
             {
-              "form": "Daryā-ye Khazar",
-              "native_script": "دریای خزر",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian name"
-            },
-            {
-              "form": "Baḥr al-Khazar",
-              "native_script": "بحر الخزر",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic name"
-            },
-            {
-              "form": "Kaspía Thálassa",
-              "native_script": "Κασπία Θάλασσα",
+              "form": "Káspioi",
+              "native_script": "Κάσπιοι",
               "language": "Ancient Greek",
               "language_code": "grc",
-              "notes": "Classical Greek name"
+              "notes": "Classical Greek ethnonym in Herodotus and Strabo"
             },
             {
-              "form": "Mare Caspium",
+              "form": "Caspii",
               "native_script": null,
               "language": "Latin",
               "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Classical Latin ethnonym"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "c. 450 BCE (Hecataeus of Miletus and Herodotus, Histories 1.202)",
+          "earliest_attestation_year": -440,
+          "earliest_attestation_note": "Attested in Herodotus (Histories, 5th century BCE) and Strabo as inhabitants of Caspiane south of the Cyrus (Kura) River.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "World's largest inland body of water, named after the ancient Caspii people.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+          "etymology_notes": "Ancient pre-Iranian people of the Mugan and southwestern Caspian littoral who gave their name to the Caspian Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Caspians"
         }
       ]
     },
@@ -3815,52 +3750,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Absheron_Peninsula"
         },
         {
-          "name": "Caspian Sea",
+          "name": "Legae",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major sea associated with the Shirvan landscape around Baku.",
+          "localisation_stem": "Legae",
+          "category": "tribe",
+          "feature_subtype": "anatolian_tribe",
+          "relationship": "Ancient Northeast Caucasian people recorded along the eastern Caspian littoral.",
           "language_variants": [
             {
-              "form": "Daryā-ye Khazar",
-              "native_script": "دریای خزر",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian name"
-            },
-            {
-              "form": "Baḥr al-Khazar",
-              "native_script": "بحر الخزر",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic name"
-            },
-            {
-              "form": "Kaspía Thálassa",
-              "native_script": "Κασπία Θάλασσα",
+              "form": "Lēgai",
+              "native_script": "Λῆγαι",
               "language": "Ancient Greek",
               "language_code": "grc",
-              "notes": "Classical Greek name"
+              "notes": "Classical Greek ethnonym in Strabo and Plutarch"
             },
             {
-              "form": "Mare Caspium",
+              "form": "Legae",
               "native_script": null,
               "language": "Latin",
               "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Classical Latin ethnonym"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "c. 450 BCE (Hecataeus of Miletus and Herodotus, Histories 1.202)",
+          "earliest_attestation_year": 20,
+          "earliest_attestation_note": "Attested in Strabo's Geography (early 1st century CE) and Plutarch as a people of eastern Caucasian Albania.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "World's largest inland body of water, named after the ancient Caspii people.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+          "etymology_notes": "Ancient Northeast Caucasian people of the eastern Caucasus and Shirvan littoral, linked to medieval Lakz and the Lezgins.",
+          "source_url": "https://en.wikipedia.org/wiki/Legae"
         }
       ]
     },
@@ -4120,52 +4041,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Kura_(river)"
         },
         {
-          "name": "Caspian Sea",
+          "name": "Pirsaat",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian Sea",
+          "localisation_stem": "Pirsaat",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major sea associated with the Shirvan landscape around Salyan.",
+          "feature_subtype": "river",
+          "relationship": "River descending from the Greater Caucasus across Shirvan north of Salyan.",
           "language_variants": [
             {
-              "form": "Daryā-ye Khazar",
-              "native_script": "دریای خزر",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian name"
-            },
-            {
-              "form": "Baḥr al-Khazar",
-              "native_script": "بحر الخزر",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic name"
-            },
-            {
-              "form": "Kaspía Thálassa",
-              "native_script": "Κασπία Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name"
-            },
-            {
-              "form": "Mare Caspium",
+              "form": "Pirsaatçay",
               "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "language": "Azerbaijani",
+              "language_code": "aze",
+              "notes": "Azerbaijani name of the Shirvan river"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "c. 450 BCE (Hecataeus of Miletus and Herodotus, Histories 1.202)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Permanent river descending from the Greater Caucasus across the Shirvan steppe to the Caspian Sea.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "World's largest inland body of water, named after the ancient Caspii people.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+          "etymology_notes": "Regional Shirvan hydronym incorporating Azerbaijani çay ('river').",
+          "source_url": "https://en.wikipedia.org/wiki/Pirsaat"
         }
       ]
     },
@@ -7232,38 +7132,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Amu_Darya"
         },
         {
-          "name": "Balkh River",
+          "name": "Tokharistan",
           "disambiguation_note": null,
-          "localisation_stem": "Balkh",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river associated with the Balkh landscape around Ribat-i-el-Kif.",
+          "localisation_stem": "Tokharistan",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Early medieval historical region of northern Afghanistan centered on Balkh.",
           "language_variants": [
             {
-              "form": "Balkh-Āb",
-              "native_script": "بلخ‌آب",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian hydronym"
+              "form": "Takhoriston",
+              "native_script": "Тахористон",
+              "language": "Tajik",
+              "language_code": "tgk",
+              "notes": "Tajik name (Takhoriston)"
             },
             {
-              "form": "Baktros",
-              "native_script": "Βακτρος",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name"
+              "form": "Tokhārestān",
+              "native_script": "تخارستان",
+              "language": "Persian",
+              "language_code": "fas",
+              "notes": "Persian name (Tukhāristān)"
+            },
+            {
+              "form": "Ṭukhāristān",
+              "native_script": "طخارستان",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Early Islamic geographical name (Ṭukhāristān)"
             }
           ],
-          "earliest_attestation_year": 150,
-          "earliest_attestation_note": "Attested as Bactrus/Baktros in classical Greek geography (Ptolemy, 2nd century CE).",
+          "earliest_attestation_year": 383,
+          "earliest_attestation_note": "383 CE (Vibhasha Buddhist text; 644 CE Xuanzang as Tuhuoluo)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River rising in the Koh-i-Baba and watering the Balkh oasis.",
-          "source_url": "https://en.wikipedia.org/wiki/Balkh_River"
+          "etymology_notes": "Named after the Tokhari / Tocharians who settled Bactria; early Islamic Ṭukhāristān.",
+          "source_url": "https://en.wikipedia.org/wiki/Tokharistan"
         }
       ]
     },
@@ -7340,38 +7247,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Bactria"
         },
         {
-          "name": "Balkh River",
+          "name": "Karakum Desert",
           "disambiguation_note": null,
-          "localisation_stem": "Balkh",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river associated with the Balkh landscape around Shapurqan.",
+          "localisation_stem": "Karakum",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Sand desert stretching north of Shapurqan beyond the Amu Darya.",
           "language_variants": [
             {
-              "form": "Balkh-Āb",
-              "native_script": "بلخ‌آب",
+              "form": "Qarāqūm",
+              "native_script": "قره‌قوم",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian hydronym"
-            },
-            {
-              "form": "Baktros",
-              "native_script": "Βακτρος",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name"
+              "notes": "Persian rendering; also 'Biyābān-e Khwārazm' (بیابان خوارزم) — Medieval Persian name."
             }
           ],
-          "earliest_attestation_year": 150,
-          "earliest_attestation_note": "Attested as Bactrus/Baktros in classical Greek geography (Ptolemy, 2nd century CE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1072,
+          "earliest_attestation_note": "c. 1072 CE (medieval Turkic toponym Qara Qum)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River rising in the Koh-i-Baba and watering the Balkh oasis.",
-          "source_url": "https://en.wikipedia.org/wiki/Balkh_River"
+          "etymology_notes": "Vast desert of Central Asia north of Khorasan and Merv.",
+          "source_url": "https://en.wikipedia.org/wiki/Karakum_Desert"
         },
         {
           "name": "Amu Darya",
@@ -7544,38 +7444,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Amu_Darya"
         },
         {
-          "name": "Balkh River",
+          "name": "Hindu Kush",
           "disambiguation_note": null,
-          "localisation_stem": "Balkh",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river associated with the Balkh landscape around Navida.",
+          "localisation_stem": "Hindu Kush",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "High mountain range rising south of the Bactrian plain around Navida.",
           "language_variants": [
             {
-              "form": "Balkh-Āb",
-              "native_script": "بلخ‌آب",
+              "form": "Hendūkūsh",
+              "native_script": "هندوکش",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian hydronym"
+              "notes": "Persian name"
             },
             {
-              "form": "Baktros",
-              "native_script": "Βακτρος",
+              "form": "Paropamisos",
+              "native_script": "Παροπαμισος",
               "language": "Ancient Greek",
               "language_code": "grc",
               "notes": "Classical Greek name"
+            },
+            {
+              "form": "Caucasus Indicus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
             }
           ],
-          "earliest_attestation_year": 150,
-          "earliest_attestation_note": "Attested as Bactrus/Baktros in classical Greek geography (Ptolemy, 2nd century CE).",
+          "earliest_attestation_year": -330,
+          "earliest_attestation_note": "Attested as Paropamisos / Caucasus Indicus in Alexander historians (4th century BCE) and Hindu Kush in Ibn Battuta (1333 CE).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River rising in the Koh-i-Baba and watering the Balkh oasis.",
-          "source_url": "https://en.wikipedia.org/wiki/Balkh_River"
+          "etymology_notes": "Great mountain system dividing Bactria from Kabulistan.",
+          "source_url": "https://en.wikipedia.org/wiki/Hindu_Kush"
         }
       ]
     },
@@ -7700,38 +7607,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Amu_Darya"
         },
         {
-          "name": "Balkh River",
+          "name": "Hephthalites",
           "disambiguation_note": null,
-          "localisation_stem": "Balkh",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river associated with the Balkh landscape around Siyahjird.",
+          "localisation_stem": "Hephthalites",
+          "category": "tribe",
+          "feature_subtype": "iranian_tribe",
+          "relationship": "Late antique Central Asian confederation established across Balkh and Bactria.",
           "language_variants": [
             {
-              "form": "Balkh-Āb",
-              "native_script": "بلخ‌آب",
+              "form": "Ēbōdāl",
+              "native_script": "ایبودال",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian hydronym"
+              "notes": "Bactrian/Persian historical form"
             },
             {
-              "form": "Baktros",
-              "native_script": "Βακτρος",
+              "form": "Hephthalitai",
+              "native_script": "Ἑφθαλιται",
               "language": "Ancient Greek",
               "language_code": "grc",
-              "notes": "Classical Greek name"
+              "notes": "Byzantine Greek form (Procopius)"
+            },
+            {
+              "form": "Hayāṭila",
+              "native_script": "هیاطله",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Classical Arabic ethnonym"
             }
           ],
-          "earliest_attestation_year": 150,
-          "earliest_attestation_note": "Attested as Bactrus/Baktros in classical Greek geography (Ptolemy, 2nd century CE).",
+          "earliest_attestation_year": 450,
+          "earliest_attestation_note": "Attested in 5th–6th century CE Sasanian, Bactrian, and Byzantine sources (Procopius).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River rising in the Koh-i-Baba and watering the Balkh oasis.",
-          "source_url": "https://en.wikipedia.org/wiki/Balkh_River"
+          "etymology_notes": "Confederation of Central Asian nomads in Bactria and Zabulistan during late antiquity.",
+          "source_url": "https://en.wikipedia.org/wiki/Hephthalites"
         }
       ]
     },
@@ -9290,45 +9204,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Hari_River,_Afghanistan"
         },
         {
-          "name": "Paropamisus Mountains",
+          "name": "Koh-i-Baba",
           "disambiguation_note": null,
-          "localisation_stem": "Paropamisus",
+          "localisation_stem": "Koh-i-Baba",
           "category": "oronym",
           "feature_subtype": "mountain_range",
-          "relationship": "Major mountain range associated with the Upper Ghur landscape around Till.",
+          "relationship": "Western Hindu Kush mountain massif forming the eastern boundary of Upper Ghur.",
           "language_variants": [
             {
-              "form": "Paropamisos",
-              "native_script": "Παροπαμισος",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name"
-            },
-            {
-              "form": "Paropamisus",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
-            },
-            {
-              "form": "Sefīd-Kūh",
-              "native_script": "سفیدکوه",
+              "form": "Kūh-e Bābā",
+              "native_script": "کوه بابا",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name ('White Mountains')"
+              "notes": "Persian name"
             }
           ],
-          "earliest_attestation_year": -520,
-          "earliest_attestation_note": "Attested as Paruparaesanna in the Behistun Inscription (520 BCE) and Paropamisos in Greek.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1504,
+          "earliest_attestation_note": "Recorded in early modern Persian and Mughal geographies of central Afghanistan.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Mountain range of northwestern Afghanistan separating Herat and Badghis from Ghur.",
-          "source_url": "https://en.wikipedia.org/wiki/Paropamisus_Mountains"
+          "etymology_notes": "Western extension of the Hindu Kush forming the watershed of the Hari, Helmand, and Balkh rivers.",
+          "source_url": "https://en.wikipedia.org/wiki/Koh-i-Baba"
         }
       ]
     },
@@ -10226,45 +10126,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Hari_River,_Afghanistan"
         },
         {
-          "name": "Paropamisus Mountains",
+          "name": "Kashafrud",
           "disambiguation_note": null,
-          "localisation_stem": "Paropamisus",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Major mountain range associated with the Bakharz (Herat) landscape around Zurabad.",
+          "localisation_stem": "Kashafrud",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Khorasan river joining the Hari Rud near Zurabad.",
           "language_variants": [
             {
-              "form": "Paropamisos",
-              "native_script": "Παροπαμισος",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name"
-            },
-            {
-              "form": "Paropamisus",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
-            },
-            {
-              "form": "Sefīd-Kūh",
-              "native_script": "سفیدکوه",
+              "form": "Kashaf-Rūd",
+              "native_script": "کشف‌رود",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name ('White Mountains')"
+              "notes": "Persian hydronym"
             }
           ],
-          "earliest_attestation_year": -520,
-          "earliest_attestation_note": "Attested as Paruparaesanna in the Behistun Inscription (520 BCE) and Paropamisos in Greek.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Attested in medieval Persian chronicles of Tus and Khorasan (10th–11th century CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Mountain range of northwestern Afghanistan separating Herat and Badghis from Ghur.",
-          "source_url": "https://en.wikipedia.org/wiki/Paropamisus_Mountains"
+          "etymology_notes": "River draining the Tus-Mashhad plain eastward into the Hari River.",
+          "source_url": "https://en.wikipedia.org/wiki/Kashafrud"
         }
       ]
     },
@@ -12824,31 +12710,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Murghab_River"
         },
         {
-          "name": "Karakum Desert",
+          "name": "Margiana",
           "disambiguation_note": null,
-          "localisation_stem": "Karakum",
+          "localisation_stem": "Margiana",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Major region associated with the Merv landscape around Shawashkan.",
+          "relationship": "Ancient Iranian oasis province centered on Merv and the Murghab delta.",
           "language_variants": [
             {
-              "form": "Qarāqūm",
-              "native_script": "قره‌قوم",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian rendering; also 'Biyābān-e Khwārazm' (بیابان خوارزم) — Medieval Persian name."
+              "form": "Marguš",
+              "native_script": null,
+              "language": "Old Persian",
+              "language_code": "peo",
+              "notes": "Achaemenid Old Persian form in the Behistun Inscription"
+            },
+            {
+              "form": "Margianḗ",
+              "native_script": "Μαργιανή",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name in Strabo and Ptolemy"
+            },
+            {
+              "form": "Margiana",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin choronym (Pliny)"
             }
           ],
-          "earliest_attestation_year": 1072,
-          "earliest_attestation_note": "c. 1072 CE (medieval Turkic toponym Qara Qum)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -520,
+          "earliest_attestation_note": "Attested as Marguš in the 520 BCE Behistun Inscription of Darius I and Margu in the Avesta.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Vast desert of Central Asia north of Khorasan and Merv.",
-          "source_url": "https://en.wikipedia.org/wiki/Karakum_Desert"
+          "etymology_notes": "From Old Persian Marguš (later Marv/Merv), the oasis region watered by the Murghab River.",
+          "source_url": "https://en.wikipedia.org/wiki/Margiana"
         }
       ]
     },
@@ -15568,7 +15468,7 @@
           "localisation_stem": "Parthians",
           "category": "tribe",
           "feature_subtype": "iranian_tribe",
-          "relationship": "Historical people inhabiting the x_script_4403 / Juwain region encompassing Jajarm.",
+          "relationship": "Historical people inhabiting the Juwain region encompassing Jajarm.",
           "language_variants": [
             {
               "form": "Parthava",
@@ -15616,7 +15516,7 @@
           "localisation_stem": "Dasht-e Kavir",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Major region associated with the x_script_4403 / Juwain landscape around Jajarm.",
+          "relationship": "Major region associated with the Juwain landscape around Jajarm.",
           "language_variants": [
             {
               "form": "Dasht-e Kavīr",
@@ -15650,7 +15550,7 @@
           "localisation_stem": "Kopet Dag",
           "category": "oronym",
           "feature_subtype": "mountain_range",
-          "relationship": "Major mountain range associated with the x_script_4403 / Juwain landscape around Jajarm.",
+          "relationship": "Major mountain range associated with the Juwain landscape around Jajarm.",
           "language_variants": [
             {
               "form": "Kopet-Dāgh",
@@ -15766,38 +15666,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Bashagard_Mountains"
         },
         {
-          "name": "Gulf of Oman",
+          "name": "Gabrik River",
           "disambiguation_note": null,
-          "localisation_stem": "Gulf of Oman",
+          "localisation_stem": "Gabrik",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major sea associated with the Bampur (Jabal Kufs) landscape around Bint.",
+          "feature_subtype": "river",
+          "relationship": "Seasonal river flowing south from the Bashagard mountains near Bint.",
           "language_variants": [
             {
-              "form": "Daryā-ye Omān",
-              "native_script": "دریای عمان",
+              "form": "Rūdkhāneh-ye Gabrīk",
+              "native_script": "رودخانه گبریک",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name"
+              "notes": "Persian name of the coastal Makran river"
             },
             {
-              "form": "Baḥr ʿUmān",
-              "native_script": "بحر عمان",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic name"
+              "form": "Gabrīk",
+              "native_script": "گبریک",
+              "language": "Balochi",
+              "language_code": "bal",
+              "notes": "Balochi hydronym"
             }
           ],
-          "earliest_attestation_year": 100,
-          "earliest_attestation_note": "Described in the 1st century CE Periplus of the Erythraean Sea and Pliny's Natural History.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Permanent seasonal river flowing south from the Bashagard range to the Gulf of Oman.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Gulf connecting the Arabian Sea with the Strait of Hormuz along the Makran coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Gulf_of_Oman"
+          "etymology_notes": "Regional Makran hydronym of the coastal Iranian-Balochi littoral.",
+          "source_url": "https://en.wikipedia.org/wiki/Gabrik_River"
         }
       ]
     },
@@ -15988,31 +15888,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Baloch_people"
         },
         {
-          "name": "Hamun-e Jaz Murian",
+          "name": "Gedrosia",
           "disambiguation_note": null,
-          "localisation_stem": "Hamun-e Jaz Murian",
-          "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Major lake associated with the Bampur (Jabal Kufs) landscape around Bih.",
+          "localisation_stem": "Gedrosia",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Classical geographical region encompassing the arid plains of Bampur and Makran.",
           "language_variants": [
             {
-              "form": "Hāmūn-e Jāz Mūriyān",
-              "native_script": "هامون جازموریان",
+              "form": "Gedrōsía",
+              "native_script": "Γεδρωσία",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek name"
+            },
+            {
+              "form": "Gedrosia",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin name"
+            },
+            {
+              "form": "Makrān",
+              "native_script": "مکران",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name"
+              "notes": "Later Persian regional name"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "Seasonal endorheic basin between Kerman and Baluchistan noted in early modern Persian accounts.",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -325,
+          "earliest_attestation_note": "Attested in Alexander historians (Arrian, Strabo) for Alexander's 325 BCE march.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Endorheic basin and seasonal lake fed by the Halil and Bampur rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Hamun-e_Jaz_Murian"
+          "etymology_notes": "Classical Greco-Roman name for the coastal region of Makran.",
+          "source_url": "https://en.wikipedia.org/wiki/Gedrosia"
         },
         {
           "name": "Bashagard Mountains",
@@ -16230,38 +16144,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Baloch_people"
         },
         {
-          "name": "Bampur River",
+          "name": "Taftan",
           "disambiguation_note": null,
-          "localisation_stem": "Bampur",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river associated with the Bampur (Jabal Kufs) landscape around Fahraj.",
+          "localisation_stem": "Taftan",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Active stratovolcano towering northeast of Fahraj in eastern Iran.",
           "language_variants": [
             {
-              "form": "Rūd-e Bampūr",
-              "native_script": "رود بمپور",
+              "form": "Taftān",
+              "native_script": "تفتان",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian hydronym"
+              "notes": "Persian name ('the heating/smoking one')"
             },
             {
-              "form": "Rūd-e Bampūr",
-              "native_script": "رود بمپور",
+              "form": "Taftān",
+              "native_script": "تفتان",
               "language": "Balochi",
               "language_code": "bal",
-              "notes": "Balochi hydronym"
+              "notes": "Balochi name"
             }
           ],
-          "earliest_attestation_year": 1300,
-          "earliest_attestation_note": "River of western Balochistan flowing into the Jaz Murian basin.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Volcanic peak of Sarhad/Sanij attested in medieval Persian geographical traditions.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Seasonal river draining Saravan and Iranshahr westward into Jaz Murian.",
-          "source_url": "https://en.wikipedia.org/wiki/Bampur_River"
+          "etymology_notes": "Active stratovolcano in southeastern Iran near Khash.",
+          "source_url": "https://en.wikipedia.org/wiki/Taftan_(volcano)"
         },
         {
           "name": "Hamun-e Jaz Murian",
@@ -16358,38 +16272,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Baloch_people"
         },
         {
-          "name": "Gulf of Oman",
+          "name": "Jagin River",
           "disambiguation_note": null,
-          "localisation_stem": "Gulf of Oman",
+          "localisation_stem": "Jagin",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major sea associated with the Jabal Kufs landscape around Jask.",
+          "feature_subtype": "river",
+          "relationship": "Coastal river traversing the Jask plain into the Gulf of Oman.",
           "language_variants": [
             {
-              "form": "Daryā-ye Omān",
-              "native_script": "دریای عمان",
+              "form": "Rūdkhāneh-ye Jāgīn",
+              "native_script": "رودخانه جاگین",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name"
-            },
-            {
-              "form": "Baḥr ʿUmān",
-              "native_script": "بحر عمان",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic name"
+              "notes": "Persian name of the coastal Hormozgan river"
             }
           ],
-          "earliest_attestation_year": 100,
-          "earliest_attestation_note": "Described in the 1st century CE Periplus of the Erythraean Sea and Pliny's Natural History.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Permanent seasonal river crossing the Jask coastal plain into the Gulf of Oman.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Gulf connecting the Arabian Sea with the Strait of Hormuz along the Makran coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Gulf_of_Oman"
+          "etymology_notes": "Regional Hormozgan coastal hydronym.",
+          "source_url": "https://en.wikipedia.org/wiki/Jagin_River"
         },
         {
           "name": "Strait of Hormuz",
@@ -16804,38 +16711,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Bashagard_Mountains"
         },
         {
-          "name": "Gulf of Oman",
+          "name": "Minab River",
           "disambiguation_note": null,
-          "localisation_stem": "Gulf of Oman",
+          "localisation_stem": "Minab",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major sea associated with the Jabal Kufs landscape around Houn.",
+          "feature_subtype": "river",
+          "relationship": "Anciently attested river draining western Makran and Houn to the Strait of Hormuz.",
           "language_variants": [
             {
-              "form": "Daryā-ye Omān",
-              "native_script": "دریای عمان",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian name"
+              "form": "Anamis",
+              "native_script": null,
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Arrian Indica"
             },
             {
-              "form": "Baḥr ʿUmān",
-              "native_script": "بحر عمان",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic name"
+              "form": "Rūd-e Mīnāb",
+              "native_script": null,
+              "language": "Persian",
+              "language_code": "fas",
+              "notes": "Persian geographical tradition"
             }
           ],
-          "earliest_attestation_year": 100,
-          "earliest_attestation_note": "Described in the 1st century CE Periplus of the Erythraean Sea and Pliny's Natural History.",
+          "earliest_attestation_year": -325,
+          "earliest_attestation_note": "325 BCE (Arrian Indica as the Anamis river near Harmozeia)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Gulf connecting the Arabian Sea with the Strait of Hormuz along the Makran coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Gulf_of_Oman"
+          "etymology_notes": "Coastal river of Hormuzgan flowing past ancient Harmozeia into the Strait of Hormuz.",
+          "source_url": "https://en.wikipedia.org/wiki/Minab_River"
         }
       ]
     },
@@ -17431,45 +17338,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Baloch_people"
         },
         {
-          "name": "Arabian Sea",
+          "name": "Sonmiani Bay",
           "disambiguation_note": null,
-          "localisation_stem": "Arabian Sea",
+          "localisation_stem": "Sonmiani",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major sea associated with the Khawr (Makran) landscape around Khawr.",
+          "feature_subtype": "bay",
+          "relationship": "Shallow coastal bay and lagoon near Khawr on the eastern Makran shore.",
           "language_variants": [
             {
-              "form": "Daryā-ye Arab",
-              "native_script": "دریای عرب",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian name"
+              "form": "Sōnmiyānī",
+              "native_script": "سونمیانی",
+              "language": "Balochi",
+              "language_code": "bal",
+              "notes": "Balochi name of the bay and lagoon"
             },
             {
-              "form": "Baḥr al-Hind",
-              "native_script": "بحر الهند",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic name"
-            },
-            {
-              "form": "Erythrá Thálassa",
-              "native_script": "Ἐρυθρά Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name"
+              "form": "Sōnmiyānī",
+              "native_script": "سونمياڻي",
+              "language": "Sindhi",
+              "language_code": "snd",
+              "notes": "Sindhi coastal form"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested as Sindhu Sāgara in Sanskrit texts and Erythra Thalassa in Herodotus (c. 500 BCE) and the Periplus.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Permanent shallow coastal bay and lagoon at the mouth of the Porali River in eastern Makran.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Northern Indian Ocean washing the Makran coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Arabian_Sea"
+          "etymology_notes": "Named after the historic fishing port and lagoon of Sonmiani (Miani Hor).",
+          "source_url": "https://en.wikipedia.org/wiki/Sonmiani_Bay"
         },
         {
           "name": "Hingol River",
@@ -17607,45 +17507,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Hingol_River"
         },
         {
-          "name": "Arabian Sea",
+          "name": "Astola Island",
           "disambiguation_note": null,
-          "localisation_stem": "Arabian Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major sea associated with the Khawr (Makran) landscape around Rodkhan.",
+          "localisation_stem": "Astola",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Offshore Arabian Sea island lying south of the Makran littoral.",
           "language_variants": [
             {
-              "form": "Daryā-ye Arab",
-              "native_script": "دریای عرب",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian name"
+              "form": "Haft Talār",
+              "native_script": "هفت تلار",
+              "language": "Balochi",
+              "language_code": "bal",
+              "notes": "Balochi name meaning 'Seven Hills'"
             },
             {
-              "form": "Baḥr al-Hind",
-              "native_script": "بحر الهند",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic name"
-            },
-            {
-              "form": "Erythrá Thálassa",
-              "native_script": "Ἐρυθρά Θάλασσα",
+              "form": "Nósala",
+              "native_script": "Νόσαλα",
               "language": "Ancient Greek",
               "language_code": "grc",
-              "notes": "Classical Greek name"
+              "notes": "Classical Greek name in Arrian's Indica"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested as Sindhu Sāgara in Sanskrit texts and Erythra Thalassa in Herodotus (c. 500 BCE) and the Periplus.",
+          "earliest_attestation_year": -325,
+          "earliest_attestation_note": "Attested as the uninhabited island of Nosala in Nearchus's 325 BCE coastal voyage recorded by Arrian.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Northern Indian Ocean washing the Makran coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Arabian_Sea"
+          "etymology_notes": "Known locally in Balochi as Haft Talār ('Seven Hills') and in Sanskrit/Sindhi tradition as Satadip. Onomastic note: Balochi name meaning 'Seven Hills' ('Haft Talār').",
+          "source_url": "https://en.wikipedia.org/wiki/Astola_Island"
         }
       ]
     },
@@ -17850,45 +17743,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Baloch_people"
         },
         {
-          "name": "Arabian Sea",
+          "name": "Oritae",
           "disambiguation_note": null,
-          "localisation_stem": "Arabian Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major sea associated with the Khawr (Makran) landscape around Qanbali.",
+          "localisation_stem": "Oritae",
+          "category": "tribe",
+          "feature_subtype": "iranian_tribe",
+          "relationship": "Ancient coastal people of eastern Gedrosia inhabiting the Lasbela plain around Qanbali.",
           "language_variants": [
             {
-              "form": "Daryā-ye Arab",
-              "native_script": "دریای عرب",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian name"
-            },
-            {
-              "form": "Baḥr al-Hind",
-              "native_script": "بحر الهند",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic name"
-            },
-            {
-              "form": "Erythrá Thálassa",
-              "native_script": "Ἐρυθρά Θάλασσα",
+              "form": "Ōreîtai",
+              "native_script": "Ὠρεῖται",
               "language": "Ancient Greek",
               "language_code": "grc",
-              "notes": "Classical Greek name"
+              "notes": "Classical Greek ethnonym in Arrian and Strabo"
+            },
+            {
+              "form": "Oritae",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym (Curtius Rufus, Pliny)"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested as Sindhu Sāgara in Sanskrit texts and Erythra Thalassa in Herodotus (c. 500 BCE) and the Periplus.",
+          "earliest_attestation_year": -325,
+          "earliest_attestation_note": "Attested in Arrian's Anabasis and Indica during Alexander the Great's 325 BCE march through Gedrosia.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Northern Indian Ocean washing the Makran coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Arabian_Sea"
+          "etymology_notes": "Ancient people of eastern Gedrosia (Lasbela) west of the Arabis (Porali) River.",
+          "source_url": "https://en.wikipedia.org/wiki/Oritae"
         },
         {
           "name": "Kirthar Mountains",
@@ -18161,38 +18047,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Bampur_River"
         },
         {
-          "name": "Gulf of Oman",
+          "name": "Ichthyophagi",
           "disambiguation_note": null,
-          "localisation_stem": "Gulf of Oman",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major sea associated with the Kiz (Makran) landscape around Rasak.",
+          "localisation_stem": "Ichthyophagi",
+          "category": "tribe",
+          "feature_subtype": "medieval_people",
+          "relationship": "Ancient coastal fishing populations recorded by classical geographers along the Makran shore.",
           "language_variants": [
             {
-              "form": "Daryā-ye Omān",
-              "native_script": "دریای عمان",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian name"
+              "form": "Ichthyophágoi",
+              "native_script": "Ἰχθυοφάγοι",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Classical Greek descriptive ethnonym ('Fish-eaters')"
             },
             {
-              "form": "Baḥr ʿUmān",
-              "native_script": "بحر عمان",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic name"
+              "form": "Ichthyophagi",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin ethnonym (Pliny, Solinus)"
             }
           ],
-          "earliest_attestation_year": 100,
-          "earliest_attestation_note": "Described in the 1st century CE Periplus of the Erythraean Sea and Pliny's Natural History.",
+          "earliest_attestation_year": -440,
+          "earliest_attestation_note": "Attested in Herodotus (5th century BCE) and Nearchus's 325 BCE account of the Makran coast preserved in Arrian.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Gulf connecting the Arabian Sea with the Strait of Hormuz along the Makran coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Gulf_of_Oman"
+          "etymology_notes": "Greek ἰχθυοφάγοι ('fish-eaters'), the classical designation for the coastal fishing populations of Makran.",
+          "source_url": "https://en.wikipedia.org/wiki/Ichthyophagi"
         }
       ]
     },
@@ -18262,38 +18148,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Baloch_people"
         },
         {
-          "name": "Gulf of Oman",
+          "name": "Gwatar Bay",
           "disambiguation_note": null,
-          "localisation_stem": "Gulf of Oman",
+          "localisation_stem": "Gwatar",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major sea associated with the Kiz (Makran) landscape around Jiwani.",
+          "feature_subtype": "bay",
+          "relationship": "Coastal inlet at the mouth of the Dasht River directly adjacent to Jiwani.",
           "language_variants": [
             {
-              "form": "Daryā-ye Omān",
-              "native_script": "دریای عمان",
+              "form": "Khalīj-e Gavāter",
+              "native_script": "خلیج گواتر",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian name"
+              "notes": "Persian name of the Makran inlet"
             },
             {
-              "form": "Baḥr ʿUmān",
-              "native_script": "بحر عمان",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic name"
+              "form": "Gwātar",
+              "native_script": "گواتر",
+              "language": "Balochi",
+              "language_code": "bal",
+              "notes": "Balochi coastal name"
             }
           ],
-          "earliest_attestation_year": 100,
-          "earliest_attestation_note": "Described in the 1st century CE Periplus of the Erythraean Sea and Pliny's Natural History.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Permanent coastal bay at the mouths of the Dasht and Bahu Kalat rivers along the central Makran shore.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Gulf connecting the Arabian Sea with the Strait of Hormuz along the Makran coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Gulf_of_Oman"
+          "etymology_notes": "Balochi coastal toponym Gwātar ('windy place'), shared by the bay and nearby headland.",
+          "source_url": "https://en.wikipedia.org/wiki/Gwatar_Bay"
         },
         {
           "name": "Dasht River",
@@ -18532,38 +18418,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Baloch_people"
         },
         {
-          "name": "Chagai Hills",
+          "name": "Ras Koh Range",
           "disambiguation_note": null,
-          "localisation_stem": "Chagai",
+          "localisation_stem": "Ras Koh",
           "category": "oronym",
-          "feature_subtype": "hill",
-          "relationship": "Major hill associated with the Panjgur (Makran) landscape around Saindak.",
+          "feature_subtype": "mountain_range",
+          "relationship": "Granite mountain ridge flanking the southern edge of the Saindak and Chagai basin.",
           "language_variants": [
             {
-              "form": "Kūhhā-ye Chāghāy",
-              "native_script": "کوه‌های چاغای",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian rendering"
-            },
-            {
-              "form": "Chāgāī",
-              "native_script": "چاغائی",
+              "form": "Rās Kōh",
+              "native_script": "راس کوہ",
               "language": "Balochi",
               "language_code": "bal",
-              "notes": "Balochi name"
+              "notes": "Balochi and Persian name meaning 'Headland Mountain'"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-modern written attestation date established; desert hill range of northwestern Balochistan.",
+          "earliest_attestation_note": "Permanent granite and sedimentary mountain range separating the Chagai desert from Kharan in northern Balochistan.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Arid hill range on the southern rim of the Sistan-Helmand desert.",
-          "source_url": "https://en.wikipedia.org/wiki/Chagai_Hills"
+          "etymology_notes": "From Arabic/Persian rās ('head/promontory') and Persian/Balochi kōh ('mountain').",
+          "source_url": "https://en.wikipedia.org/wiki/Ras_Koh_Range"
         },
         {
           "name": "Gedrosia",
@@ -19753,45 +19632,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Kirthar_Mountains"
         },
         {
-          "name": "Arabian Sea",
+          "name": "Lake Manchar",
           "disambiguation_note": null,
-          "localisation_stem": "Arabian Sea",
+          "localisation_stem": "Manchar",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major sea associated with the Turan (Makran) landscape around Budin.",
+          "feature_subtype": "lake",
+          "relationship": "Large freshwater lake at the eastern foot of the Kirthar range near Budin.",
           "language_variants": [
             {
-              "form": "Daryā-ye Arab",
-              "native_script": "دریای عرب",
-              "language": "Persian",
-              "language_code": "fas",
-              "notes": "Persian name"
-            },
-            {
-              "form": "Baḥr al-Hind",
-              "native_script": "بحر الهند",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic name"
-            },
-            {
-              "form": "Erythrá Thálassa",
-              "native_script": "Ἐρυθρά Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name"
+              "form": "Manchar Dhandh",
+              "native_script": "منڇر ڍنڍ",
+              "language": "Sindhi",
+              "language_code": "snd",
+              "notes": "Sindhi name of the freshwater lake"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested as Sindhu Sāgara in Sanskrit texts and Erythra Thalassa in Herodotus (c. 500 BCE) and the Periplus.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Attested in medieval Sindhi chronicles (c. 1000 CE) near Siwistan (Sehwan).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Northern Indian Ocean washing the Makran coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Arabian_Sea"
+          "etymology_notes": "Sindhi toponym pairing Manchar with dhandh ('shallow lake/lagoon').",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Manchar"
         }
       ]
     },
@@ -20564,38 +20429,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Persians"
         },
         {
-          "name": "Farah River",
+          "name": "Harut River",
           "disambiguation_note": null,
-          "localisation_stem": "Farah",
+          "localisation_stem": "Harut",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major river associated with the Farah (Sistan) landscape around Masau.",
+          "relationship": "Endorheic river draining western Afghanistan into Lake Hamun west of Masau.",
           "language_variants": [
             {
-              "form": "Farāh-Rūd",
-              "native_script": "فراه‌رود",
+              "form": "Hārūt Rūd",
+              "native_script": "هاروت‌رود",
               "language": "Persian",
               "language_code": "fas",
-              "notes": "Persian hydronym"
+              "notes": "Persian name of the Sistan Basin river"
             },
             {
-              "form": "Phrada",
-              "native_script": "Φραδα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name"
+              "form": "Hārūt",
+              "native_script": "هاروت",
+              "language": "Pashto",
+              "language_code": "pus",
+              "notes": "Pashto hydronym"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested as Fradatha in the Avesta (1st millennium BCE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Permanent endorheic river draining western Afghanistan into the Hamun-e Sabari lake of the Sistan Basin.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River rising in Ghur and flowing southwest into the Sistan basin.",
-          "source_url": "https://en.wikipedia.org/wiki/Farah_River"
+          "etymology_notes": "Iranian hydronym related to the historical Adraskan/Harut drainage of western Sistan.",
+          "source_url": "https://en.wikipedia.org/wiki/Harut_River"
         },
         {
           "name": "Lake Hamun",

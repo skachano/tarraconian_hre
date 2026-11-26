@@ -175,6 +175,11 @@ def clean_relationship(rel: str, b_label: str, stats: Counter) -> str:
         lambda m: m.group(1).capitalize() if m.group(1).islower() else m.group(1), s
     )
 
+    # Strip leftover CK3 anonymous modded county keys (x_script_NNNN / x script NNNN)
+    s = re.sub(r"\bx[\s_]script[\s_]\d+\s*/\s*", "", s, flags=re.I)
+    s = re.sub(r",\s*x[\s_]script[\s_]\d+\b", "", s, flags=re.I)
+    s = re.sub(r"\bx[\s_]script[\s_]\d+\s+", "", s, flags=re.I)
+
     if s != orig:
         stats["ck3_keys_cleaned"] += 1
 

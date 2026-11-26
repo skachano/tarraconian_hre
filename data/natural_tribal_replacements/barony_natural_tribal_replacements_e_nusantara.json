@@ -137,31 +137,49 @@
       "target_baronies_audited": 202,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 606,
-      "unique_replacement_names": 183,
-      "candidates_with_multilingual_variants": 184,
+      "unique_replacement_names": 210,
+      "candidates_with_multilingual_variants": 198,
       "wikipedia_source_attached": 606,
-      "unique_source_urls": 183,
+      "unique_source_urls": 210,
       "candidates_by_category": {
         "choronym": 0,
-        "hydronym": 312,
-        "oronym": 83,
-        "topographic_feature": 9,
+        "hydronym": 296,
+        "oronym": 91,
+        "topographic_feature": 17,
         "tribe": 202
       },
       "baronies_with_category": {
         "has_choronym_candidate": 0,
-        "has_hydronym_candidate": 195,
-        "has_oronym_candidate": 80,
-        "has_topographic_feature_candidate": 9,
+        "has_hydronym_candidate": 191,
+        "has_oronym_candidate": 86,
+        "has_topographic_feature_candidate": 17,
         "has_tribe_candidate": 202
       },
       "unique_language_codes": [
+        "aoz",
         "bug",
         "ceb",
+        "cyo",
+        "hil",
         "ind",
         "jav",
+        "jpn",
         "kaw",
+        "kzf",
+        "loe",
+        "mak",
+        "mdh",
+        "mdr",
+        "mog",
+        "mqn",
         "msa",
+        "pmf",
+        "pwm",
+        "ryu",
+        "slp",
+        "sxn",
+        "tbl",
+        "tet",
         "tgl",
         "zho"
       ],
@@ -174,8 +192,8 @@
         "unattested_indigenous_or_minor": 87
       },
       "candidates_by_attestation_basis": {
-        "attested_pre_867": 7,
-        "indigenous_pre_literate": 599
+        "attested_pre_867": 4,
+        "indigenous_pre_literate": 602
       },
       "bookmark_valid_candidates": {
         "867": 606,
@@ -183,7 +201,7 @@
         "1178": 606
       },
       "baronies_with_867_valid_candidate": 202,
-      "unique_localisation_stems": 183
+      "unique_localisation_stems": 209
     }
   },
   "baronies": {
@@ -239,38 +257,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Manobo"
         },
         {
-          "name": "Agusan River",
+          "name": "Mount Hilong-Hilong",
           "disambiguation_note": null,
-          "localisation_stem": "Agusan",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Local river associated with the Butuan region.",
+          "localisation_stem": "Hilong-Hilong",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Highest peak of the Diwata Range overlooking the Butuan basin from the east.",
           "language_variants": [
             {
-              "form": "Ilog Agusan",
-              "native_script": null,
-              "language": "Tagalog",
-              "language_code": "tgl",
-              "notes": "Tagalog form"
-            },
-            {
-              "form": "Suba sa Agusan",
+              "form": "Bukid Hilong-Hilong",
               "native_script": null,
               "language": "Cebuano",
               "language_code": "ceb",
-              "notes": "Cebuano form"
+              "notes": "Visayan mountain name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in northeastern Mindanao oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate upland landmark of northeastern Mindanao.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From agus ('flow of water'), major river draining northeastern Mindanao into Butuan Bay.",
-          "source_url": "https://en.wikipedia.org/wiki/Agusan_River"
+          "etymology_notes": "Highest summit of the Diwata Mountains in Agusan del Norte, forming a major eastern watershed.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Hilong-Hilong"
         },
         {
           "name": "Lake Mainit",
@@ -353,38 +364,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Manobo"
         },
         {
-          "name": "Agusan River",
+          "name": "Mount Diwata",
           "disambiguation_note": null,
-          "localisation_stem": "Agusan",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Local river associated with the Cabadbaran region.",
+          "localisation_stem": "Diwata",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Eastern cordillera flanking the Agusan valley and Cabadbaran plain.",
           "language_variants": [
             {
-              "form": "Ilog Agusan",
+              "form": "Kabundukan ng Diwata",
               "native_script": null,
               "language": "Tagalog",
               "language_code": "tgl",
-              "notes": "Tagalog form"
+              "notes": "Tagalog rendering"
             },
             {
-              "form": "Suba sa Agusan",
+              "form": "Bukid Diwata",
               "native_script": null,
               "language": "Cebuano",
               "language_code": "ceb",
-              "notes": "Cebuano form"
+              "notes": "Visayan mountain name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in northeastern Mindanao oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate cordillera of northeastern Mindanao.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From agus ('flow of water'), major river draining northeastern Mindanao into Butuan Bay.",
-          "source_url": "https://en.wikipedia.org/wiki/Agusan_River"
+          "etymology_notes": "Eastern mountain range of Caraga named after the indigenous diwata nature spirits.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Diwata"
         },
         {
           "name": "Lake Mainit",
@@ -467,38 +478,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Manobo"
         },
         {
-          "name": "Agusan River",
+          "name": "Davao Gulf",
           "disambiguation_note": null,
-          "localisation_stem": "Agusan",
+          "localisation_stem": "Davao",
           "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Local river associated with the Baganga region.",
+          "feature_subtype": "bay",
+          "relationship": "Major southern gulf lying just southwest of the Baganga coastal highlands.",
           "language_variants": [
             {
-              "form": "Ilog Agusan",
+              "form": "Golpo ng Dabaw",
               "native_script": null,
               "language": "Tagalog",
               "language_code": "tgl",
-              "notes": "Tagalog form"
+              "notes": "Tagalog rendering"
             },
             {
-              "form": "Suba sa Agusan",
+              "form": "Gulpo sa Dabaw",
               "native_script": null,
               "language": "Cebuano",
               "language_code": "ceb",
-              "notes": "Cebuano form"
+              "notes": "Cebuano rendering"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in northeastern Mindanao oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Attested in southeastern Mindanao oral tradition (no pre-1700 CE written record).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From agus ('flow of water'), major river draining northeastern Mindanao into Butuan Bay.",
-          "source_url": "https://en.wikipedia.org/wiki/Agusan_River"
+          "etymology_notes": "Deep marine gulf indenting southeastern Mindanao between Davao Oriental and Sarangani.",
+          "source_url": "https://en.wikipedia.org/wiki/Davao_Gulf"
         },
         {
           "name": "Lake Mainit",
@@ -816,31 +827,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Visayans"
         },
         {
-          "name": "Surigao Strait",
+          "name": "Bucas Grande",
           "disambiguation_note": null,
-          "localisation_stem": "Surigao",
-          "category": "hydronym",
-          "feature_subtype": "strait",
-          "relationship": "Local strait associated with the Dinagat region.",
+          "localisation_stem": "Bucas Grande",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Karst island situated between Dinagat and the northeastern Mindanao coast.",
           "language_variants": [
             {
-              "form": "Kipot ng Surigao",
+              "form": "Pulo ng Bucas Grande",
               "native_script": null,
               "language": "Tagalog",
               "language_code": "tgl",
-              "notes": "Tagalog form"
+              "notes": "Tagalog rendering"
             }
           ],
-          "earliest_attestation_year": 1521,
-          "earliest_attestation_note": "Traversed by the Magellan expedition in 1521 CE.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate island of the Surigao archipelago.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Deep strait connecting the Bohol Sea to the Philippine Sea between Mindanao and Leyte.",
-          "source_url": "https://en.wikipedia.org/wiki/Surigao_Strait"
+          "etymology_notes": "Limestone island in Surigao del Norte noted for sheltered coves and lagoons.",
+          "source_url": "https://en.wikipedia.org/wiki/Bucas_Grande"
         },
         {
           "name": "Lake Mainit",
@@ -930,31 +941,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Visayans"
         },
         {
-          "name": "Surigao Strait",
+          "name": "Panaon Island",
           "disambiguation_note": null,
-          "localisation_stem": "Surigao",
-          "category": "hydronym",
-          "feature_subtype": "strait",
-          "relationship": "Local strait associated with the Siargao region.",
+          "localisation_stem": "Panaon",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Neighboring island lying across the strait northwest of Siargao.",
           "language_variants": [
             {
-              "form": "Kipot ng Surigao",
+              "form": "Pulo ng Panaon",
               "native_script": null,
               "language": "Tagalog",
               "language_code": "tgl",
-              "notes": "Tagalog form"
+              "notes": "Tagalog rendering"
+            },
+            {
+              "form": "Isla sa Panaon",
+              "native_script": null,
+              "language": "Cebuano",
+              "language_code": "ceb",
+              "notes": "Visayan island name"
             }
           ],
-          "earliest_attestation_year": 1521,
-          "earliest_attestation_note": "Traversed by the Magellan expedition in 1521 CE.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate island flanking the northern approach to the Surigao Strait.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Deep strait connecting the Bohol Sea to the Philippine Sea between Mindanao and Leyte.",
-          "source_url": "https://en.wikipedia.org/wiki/Surigao_Strait"
+          "etymology_notes": "Elongated volcanic island at the southern tip of Leyte facing northeastern Mindanao.",
+          "source_url": "https://en.wikipedia.org/wiki/Panaon_Island"
         },
         {
           "name": "Lake Mainit",
@@ -1044,31 +1062,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Visayans"
         },
         {
-          "name": "Surigao Strait",
+          "name": "Tago River",
           "disambiguation_note": null,
-          "localisation_stem": "Surigao",
+          "localisation_stem": "Tago",
           "category": "hydronym",
-          "feature_subtype": "strait",
-          "relationship": "Local strait associated with the Tandag region.",
+          "feature_subtype": "river",
+          "relationship": "Principal river flowing through northern Surigao del Sur near Tandag.",
           "language_variants": [
             {
-              "form": "Kipot ng Surigao",
+              "form": "Suba sa Tago",
+              "native_script": null,
+              "language": "Cebuano",
+              "language_code": "ceb",
+              "notes": "Visayan hydronym"
+            },
+            {
+              "form": "Ilog Tago",
               "native_script": null,
               "language": "Tagalog",
               "language_code": "tgl",
-              "notes": "Tagalog form"
+              "notes": "Tagalog hydronym"
             }
           ],
-          "earliest_attestation_year": 1521,
-          "earliest_attestation_note": "Traversed by the Magellan expedition in 1521 CE.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate coastal river basin of eastern Mindanao.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Deep strait connecting the Bohol Sea to the Philippine Sea between Mindanao and Leyte.",
-          "source_url": "https://en.wikipedia.org/wiki/Surigao_Strait"
+          "etymology_notes": "River draining from the Diwata uplands eastward through Tago into the Philippine Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Tago_River"
         },
         {
           "name": "Lake Mainit",
@@ -1472,31 +1497,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Blaan_people"
         },
         {
-          "name": "Sarangani Bay",
+          "name": "Buayan River",
           "disambiguation_note": null,
-          "localisation_stem": "Sarangani",
+          "localisation_stem": "Buayan",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Local bay associated with the Malita region.",
+          "feature_subtype": "river",
+          "relationship": "Major river descending from Mount Matutum toward the southern coast west of Malita.",
           "language_variants": [
             {
-              "form": "Look ng Sarangani",
+              "form": "Ilog Buayan",
               "native_script": null,
               "language": "Tagalog",
               "language_code": "tgl",
-              "notes": "Tagalog form"
+              "notes": "Tagalog hydronym"
             }
           ],
-          "earliest_attestation_year": 1521,
-          "earliest_attestation_note": "Sarangani islands noted in 1521 CE and 1543 CE expeditions.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate river valley of southern Mindanao.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Large bay on the southernmost coast of Mindanao.",
-          "source_url": "https://en.wikipedia.org/wiki/Sarangani_Bay"
+          "etymology_notes": "River draining the Matutum massif southward into the coast of South Cotabato and Sarangani.",
+          "source_url": "https://en.wikipedia.org/wiki/Buayan_River"
         },
         {
           "name": "Mount Matutum",
@@ -1579,31 +1604,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Blaan_people"
         },
         {
-          "name": "Sarangani Bay",
+          "name": "Mount Melibengoy",
           "disambiguation_note": null,
-          "localisation_stem": "Sarangani",
-          "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Local bay associated with the Glan region.",
+          "localisation_stem": "Melibengoy",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Prominent stratovolcano of southern Mindanao northwest of Glan.",
           "language_variants": [
             {
-              "form": "Look ng Sarangani",
+              "form": "Bundok Melibengoy",
               "native_script": null,
               "language": "Tagalog",
               "language_code": "tgl",
-              "notes": "Tagalog form"
+              "notes": "Tagalog rendering"
+            },
+            {
+              "form": "Melibengoy",
+              "native_script": null,
+              "language": "Tboli",
+              "language_code": "tbl",
+              "notes": "Indigenous Tboli mountain name"
             }
           ],
-          "earliest_attestation_year": 1521,
-          "earliest_attestation_note": "Sarangani islands noted in 1521 CE and 1543 CE expeditions.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate sacred volcano and crater lake massif of southern Mindanao.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Large bay on the southernmost coast of Mindanao.",
-          "source_url": "https://en.wikipedia.org/wiki/Sarangani_Bay"
+          "etymology_notes": "Active stratovolcano known locally as Melibengoy by the Tboli and Blaan peoples.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Melibengoy"
         },
         {
           "name": "Mount Matutum",
@@ -2490,31 +2522,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Lake_Lanao"
         },
         {
-          "name": "Agus River",
+          "name": "Iligan Bay",
           "disambiguation_note": null,
-          "localisation_stem": "Agus",
+          "localisation_stem": "Iligan",
           "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Local river associated with the Tagoloan region.",
+          "feature_subtype": "bay",
+          "relationship": "Northern Mindanao bay receiving the outflow of Lake Lanao via the Agus River.",
           "language_variants": [
             {
-              "form": "Ilog Agus",
+              "form": "Look ng Iligan",
               "native_script": null,
               "language": "Tagalog",
               "language_code": "tgl",
-              "notes": "From agus ('current')"
+              "notes": "Tagalog rendering"
+            },
+            {
+              "form": "Luok sa Iligan",
+              "native_script": null,
+              "language": "Cebuano",
+              "language_code": "ceb",
+              "notes": "Cebuano rendering"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in Maranao oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate marine bay on the northern coast of Mindanao.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Short, swift river draining Lake Lanao northward into Iligan Bay. Onomastic note: Tagalog 'Ilog Agus' (From agus ('current')).",
-          "source_url": "https://en.wikipedia.org/wiki/Agus_River"
+          "etymology_notes": "Deep arm of the Bohol Sea bordering Lanao and Misamis along northern Mindanao.",
+          "source_url": "https://en.wikipedia.org/wiki/Iligan_Bay"
         }
       ]
     },
@@ -2919,31 +2958,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Maguindanao_people"
         },
         {
-          "name": "Illana Bay",
+          "name": "Lake Buluan",
           "disambiguation_note": null,
-          "localisation_stem": "Illana",
+          "localisation_stem": "Buluan",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Local bay associated with the Makar region.",
+          "feature_subtype": "lake",
+          "relationship": "Inland tectonic lake of the Cotabato basin northwest of Makar.",
           "language_variants": [
             {
-              "form": "Look ng Illana",
+              "form": "Lawa ng Buluan",
               "native_script": null,
               "language": "Tagalog",
               "language_code": "tgl",
-              "notes": "Tagalog form"
+              "notes": "Tagalog rendering"
+            },
+            {
+              "form": "Ranaw a Buluan",
+              "native_script": null,
+              "language": "Maguindanaon",
+              "language_code": "mdh",
+              "notes": "Local Maguindanaon lake name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in Maguindanao and Iranun oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Attested in Maguindanao oral tradition (no pre-1700 CE written record).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Iranun, large bay on the southwestern coast of Mindanao.",
-          "source_url": "https://en.wikipedia.org/wiki/Illana_Bay"
+          "etymology_notes": "Shallow tectonic lake in the upper Mindanao River basin feeding downstream marshlands.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Buluan"
         },
         {
           "name": "Pulangi River",
@@ -3430,31 +3476,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Sulu_Sea"
         },
         {
-          "name": "Basilan Strait",
+          "name": "Sibutu Passage",
           "disambiguation_note": null,
-          "localisation_stem": "Basilan",
+          "localisation_stem": "Sibutu Passage",
           "category": "hydronym",
           "feature_subtype": "strait",
-          "relationship": "Local strait associated with the Tawi Tawi region.",
+          "relationship": "Deep marine strait flanking western Tawi-Tawi and linking the Sulu and Celebes seas.",
           "language_variants": [
             {
-              "form": "Kipot ng Basilan",
+              "form": "Kipot ng Sibutu",
               "native_script": null,
               "language": "Tagalog",
               "language_code": "tgl",
-              "notes": "Tagalog form"
+              "notes": "Tagalog rendering"
             }
           ],
-          "earliest_attestation_year": 1521,
-          "earliest_attestation_note": "Navigated by early 16th-century CE maritime expeditions.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate deep-water channel of the western Sulu Archipelago.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Strait separating Basilan Island from the Zamboanga Peninsula.",
-          "source_url": "https://en.wikipedia.org/wiki/Basilan_Strait"
+          "etymology_notes": "Major maritime passage separating the Sibutu group from northern Borneo and Tawi-Tawi.",
+          "source_url": "https://en.wikipedia.org/wiki/Sibutu_Passage"
         }
       ]
     },
@@ -4135,31 +4181,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Mount_Kanlaon"
         },
         {
-          "name": "Bago River",
-          "disambiguation_note": "Philippines",
-          "localisation_stem": "Bago",
+          "name": "Panay Gulf",
+          "disambiguation_note": null,
+          "localisation_stem": "Panay",
           "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Local river associated with the Ilog region.",
+          "feature_subtype": "bay",
+          "relationship": "Coastal gulf bordering southwestern Negros near the mouth of the Ilog estuary.",
           "language_variants": [
             {
-              "form": "Suba sang Bago",
+              "form": "Golpo ng Panay",
               "native_script": null,
-              "language": "Cebuano",
-              "language_code": "ceb",
-              "notes": "Visayan form"
+              "language": "Tagalog",
+              "language_code": "tgl",
+              "notes": "Tagalog rendering"
+            },
+            {
+              "form": "Golpo sang Panay",
+              "native_script": null,
+              "language": "Hiligaynon",
+              "language_code": "hil",
+              "notes": "Hiligaynon rendering"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in Negros oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate maritime gulf between Panay and Negros.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river draining from Mount Kanlaon westward to the Guimaras Strait.",
-          "source_url": "https://en.wikipedia.org/wiki/Bago,_Negros_Occidental"
+          "etymology_notes": "Extension of the Sulu Sea bounded by Panay, Guimaras, and western Negros.",
+          "source_url": "https://en.wikipedia.org/wiki/Panay_Gulf"
         }
       ]
     },
@@ -7081,31 +7134,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Ibanag_people"
         },
         {
-          "name": "Cagayan River",
+          "name": "Sierra Madre",
           "disambiguation_note": null,
-          "localisation_stem": "Cagayan",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Local river associated with the Engano region.",
+          "localisation_stem": "Sierra Madre",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Longest cordillera of Luzon, terminating at the northeastern cape near Engano.",
           "language_variants": [
             {
-              "form": "Ilog Cagayan",
+              "form": "Sierra Madre",
               "native_script": null,
               "language": "Tagalog",
               "language_code": "tgl",
-              "notes": "Tagalog form; also 'Karayan Cagayan' — Northern Luzon rendering."
+              "notes": "Standard Philippine geographic name"
             }
           ],
-          "earliest_attestation_year": 1581,
-          "earliest_attestation_note": "Recorded in 1581 CE accounts of northern Luzon.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate eastern cordillera of northern Luzon.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Longest and largest river in the Philippines, draining the Cagayan Valley.",
-          "source_url": "https://en.wikipedia.org/wiki/Cagayan_River"
+          "etymology_notes": "Extensive north-south mountain range bordering the eastern flank of the Cagayan Valley.",
+          "source_url": "https://en.wikipedia.org/wiki/Sierra_Madre_(Philippines)"
         },
         {
           "name": "Magat River",
@@ -7188,31 +7241,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Ibanag_people"
         },
         {
-          "name": "Cagayan River",
+          "name": "Caraballo Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Cagayan",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Local river associated with the Ilongot region.",
+          "localisation_stem": "Caraballo",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Southern mountain range of the Cagayan Valley traditionally inhabited by the Ilongot.",
           "language_variants": [
             {
-              "form": "Ilog Cagayan",
+              "form": "Kabundukan ng Caraballo",
               "native_script": null,
               "language": "Tagalog",
               "language_code": "tgl",
-              "notes": "Tagalog form; also 'Karayan Cagayan' — Northern Luzon rendering."
+              "notes": "Tagalog rendering"
             }
           ],
-          "earliest_attestation_year": 1581,
-          "earliest_attestation_note": "Recorded in 1581 CE accounts of northern Luzon.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate upland range connecting the Cordillera Central and Sierra Madre.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Longest and largest river in the Philippines, draining the Cagayan Valley.",
-          "source_url": "https://en.wikipedia.org/wiki/Cagayan_River"
+          "etymology_notes": "Mountain node in central-northern Luzon forming the headwaters of the Cagayan River basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Caraballo_Mountains"
         },
         {
           "name": "Magat River",
@@ -9094,31 +9147,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Tagbanwa",
+          "name": "Molbog",
           "disambiguation_note": null,
-          "localisation_stem": "Tagbanwa",
+          "localisation_stem": "Molbog",
           "category": "tribe",
           "feature_subtype": "austronesian_people",
-          "relationship": "Regional people inhabiting the Pala'wan area.",
+          "relationship": "Indigenous Austronesian coastal and island people inhabiting southernmost Palawan.",
           "language_variants": [
             {
-              "form": "Tagbanua",
+              "form": "Molbog",
               "native_script": null,
-              "language": "Tagalog",
-              "language_code": "tgl",
-              "notes": "Tagalog spelling"
+              "language": "Molbog",
+              "language_code": "pwm",
+              "notes": "Indigenous ethnonym"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in Palawan oral tradition (no pre-1700 CE external written record).",
+          "earliest_attestation_note": "Pre-literate indigenous community of southern Palawan and Balabac.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From taga-banwa ('people of the land/world'), indigenous Austronesian people of Palawan.",
-          "source_url": "https://en.wikipedia.org/wiki/Tagbanwa"
+          "etymology_notes": "Austronesian maritime people native to southern Palawan and the Balabac archipelago.",
+          "source_url": "https://en.wikipedia.org/wiki/Molbog_language"
         },
         {
           "name": "Mount Mantalingajan",
@@ -9148,38 +9201,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mount_Mantalingajan"
         },
         {
-          "name": "Balabac Strait",
+          "name": "Honda Bay",
           "disambiguation_note": null,
-          "localisation_stem": "Balabac",
+          "localisation_stem": "Honda",
           "category": "hydronym",
-          "feature_subtype": "strait",
-          "relationship": "Local strait associated with the Pala'wan region.",
+          "feature_subtype": "bay",
+          "relationship": "Sheltered eastern bay of central Palawan opening into the Sulu Sea.",
           "language_variants": [
             {
-              "form": "Kipot ng Balabak",
+              "form": "Look ng Honda",
               "native_script": null,
               "language": "Tagalog",
               "language_code": "tgl",
-              "notes": "Tagalog form"
-            },
-            {
-              "form": "Selat Balabac",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay form"
+              "notes": "Tagalog rendering"
             }
           ],
-          "earliest_attestation_year": 1521,
-          "earliest_attestation_note": "Maritime passage between Palawan and Borneo navigated in 1521 CE.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate coastal embayment of eastern Palawan.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Strait connecting the South China Sea and the Sulu Sea between Palawan and Borneo.",
-          "source_url": "https://en.wikipedia.org/wiki/Balabac_Strait"
+          "etymology_notes": "Island-dotted marine bay on the Sulu Sea coast of central Palawan.",
+          "source_url": "https://en.wikipedia.org/wiki/Honda_Bay"
         }
       ]
     },
@@ -9208,31 +9254,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Palawan people",
-          "disambiguation_note": null,
-          "localisation_stem": "Palawan",
+          "name": "Batak",
+          "disambiguation_note": "Philippines",
+          "localisation_stem": "Batak",
           "category": "tribe",
           "feature_subtype": "austronesian_people",
-          "relationship": "Regional people inhabiting the Balabac area.",
+          "relationship": "Ancient indigenous upland hunter-gatherer people of Palawan.",
           "language_variants": [
             {
-              "form": "Palawano",
+              "form": "Batak",
               "native_script": null,
-              "language": "Tagalog",
-              "language_code": "tgl",
-              "notes": "Tagalog ethnonym"
+              "language": "Cuyonon",
+              "language_code": "cyo",
+              "notes": "Cuyonon exonym meaning mountain people"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in southern Palawan oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate indigenous Negrito population of Palawan.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Indigenous Austronesian people of southern Palawan.",
-          "source_url": "https://en.wikipedia.org/wiki/Palawan_people"
+          "etymology_notes": "Indigenous foraging people of Palawan speaking an Austronesian language, distinct from Sumatran Batak.",
+          "source_url": "https://en.wikipedia.org/wiki/Batak_(Philippines)"
         },
         {
           "name": "Mount Mantalingajan",
@@ -10761,31 +10807,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mangyan"
         },
         {
-          "name": "Naujan Lake",
+          "name": "Mount Halcon",
           "disambiguation_note": null,
-          "localisation_stem": "Naujan",
-          "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Local lake associated with the Mamburao region.",
+          "localisation_stem": "Halcon",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Highest peak of Mindoro rising inland east of Mamburao.",
           "language_variants": [
             {
-              "form": "Lawa ng Naujan",
+              "form": "Bundok Halcon",
               "native_script": null,
               "language": "Tagalog",
               "language_code": "tgl",
-              "notes": "Tagalog form"
+              "notes": "Tagalog mountain name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in Mangyan and Tagalog oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate central massif of Mindoro Island.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Largest lake on Mindoro Island.",
-          "source_url": "https://en.wikipedia.org/wiki/Naujan_Lake"
+          "etymology_notes": "Steep forested peak forming the rugged spine of northern Mindoro.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Halcon"
         },
         {
           "name": "Tablas Strait",
@@ -11973,31 +12019,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Lamaholot_people"
         },
         {
-          "name": "Alor Strait",
+          "name": "Solor",
           "disambiguation_note": null,
-          "localisation_stem": "Alor",
-          "category": "hydronym",
-          "feature_subtype": "strait",
-          "relationship": "Local strait associated with the Galiyao region.",
+          "localisation_stem": "Solor",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Neighboring volcanic island in the Solor-Alor archipelago west of Galiyao.",
           "language_variants": [
             {
-              "form": "Selat Alor",
+              "form": "Pulau Solor",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian name"
+              "notes": "Indonesian island name"
+            },
+            {
+              "form": "Solor",
+              "native_script": null,
+              "language": "Lamaholot",
+              "language_code": "slp",
+              "notes": "Local Lamaholot island name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in Solor-Alor maritime tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate Austronesian island of the eastern Lesser Sunda chain.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Strait separating Pantar and Lembata in the Alor Archipelago.",
-          "source_url": "https://en.wikipedia.org/wiki/Alor_Strait"
+          "etymology_notes": "Volcanic island between Flores and Lembata inhabited by Lamaholot-speaking communities.",
+          "source_url": "https://en.wikipedia.org/wiki/Solor"
         },
         {
           "name": "Ombai Strait",
@@ -12107,31 +12160,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mount_Ile_Lewotolok"
         },
         {
-          "name": "Alor Strait",
+          "name": "Pantar",
           "disambiguation_note": null,
-          "localisation_stem": "Alor",
-          "category": "hydronym",
-          "feature_subtype": "strait",
-          "relationship": "Local strait associated with the Lembata region.",
+          "localisation_stem": "Pantar",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Major island lying immediately east of Lembata across the Alor Strait.",
           "language_variants": [
             {
-              "form": "Selat Alor",
+              "form": "Pulau Pantar",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian name"
+              "notes": "Indonesian island name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in Solor-Alor maritime tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate island of the Alor archipelago.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Strait separating Pantar and Lembata in the Alor Archipelago.",
-          "source_url": "https://en.wikipedia.org/wiki/Alor_Strait"
+          "etymology_notes": "Second-largest island of the Alor archipelago, situated between Lembata and Alor.",
+          "source_url": "https://en.wikipedia.org/wiki/Pantar"
         }
       ]
     },
@@ -13113,31 +13166,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Moluccans"
         },
         {
-          "name": "Wetar Strait",
+          "name": "Babar Islands",
           "disambiguation_note": null,
-          "localisation_stem": "Wetar",
-          "category": "hydronym",
-          "feature_subtype": "strait",
-          "relationship": "Local strait associated with the Barat Daya region.",
+          "localisation_stem": "Babar",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Eastern island subgroup within the Barat Daya archipelago.",
           "language_variants": [
             {
-              "form": "Selat Wetar",
+              "form": "Kepulauan Babar",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian name"
+              "notes": "Indonesian archipelago name"
             }
           ],
-          "earliest_attestation_year": 1522,
-          "earliest_attestation_note": "Strait separating Wetar and Timor navigated in the 16th century CE.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Austronesian island group of southwestern Maluku.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Strait between eastern Timor and Wetar Island.",
-          "source_url": "https://en.wikipedia.org/wiki/Wetar_Strait"
+          "etymology_notes": "Cluster of volcanic and coral islands in southwestern Maluku between Wetar and Tanimbar.",
+          "source_url": "https://en.wikipedia.org/wiki/Babar_Islands"
         },
         {
           "name": "Banda Sea",
@@ -13234,31 +13287,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Moluccans"
         },
         {
-          "name": "Wetar Strait",
+          "name": "Damar Island",
           "disambiguation_note": null,
-          "localisation_stem": "Wetar",
-          "category": "hydronym",
-          "feature_subtype": "strait",
-          "relationship": "Local strait associated with the Tanimbar region.",
+          "localisation_stem": "Damar",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Volcanic island of the Barat Daya chain lying northwest of Tanimbar.",
           "language_variants": [
             {
-              "form": "Selat Wetar",
+              "form": "Pulau Damar",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian name"
+              "notes": "Indonesian island name"
             }
           ],
-          "earliest_attestation_year": 1522,
-          "earliest_attestation_note": "Strait separating Wetar and Timor navigated in the 16th century CE.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Austronesian volcanic island in the Banda Sea arc.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Strait between eastern Timor and Wetar Island.",
-          "source_url": "https://en.wikipedia.org/wiki/Wetar_Strait"
+          "etymology_notes": "Small volcanic island in southwestern Maluku formed along the inner Banda volcanic arc.",
+          "source_url": "https://en.wikipedia.org/wiki/Damar_Island"
         },
         {
           "name": "Banda Sea",
@@ -13589,31 +13642,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Mount_Mutis"
         },
         {
-          "name": "Savu Sea",
+          "name": "Mina River",
           "disambiguation_note": null,
-          "localisation_stem": "Savu Sea",
+          "localisation_stem": "Mina",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Local sea associated with the Roti region.",
+          "feature_subtype": "river",
+          "relationship": "Major river draining the southern highlands of West Timor toward the coast opposite Roti.",
           "language_variants": [
             {
-              "form": "Laut Sawu",
+              "form": "Noel Mina",
+              "native_script": null,
+              "language": "Uab Meto",
+              "language_code": "aoz",
+              "notes": "Atoni hydronym meaning Mina River"
+            },
+            {
+              "form": "Sungai Noelmina",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian name"
+              "notes": "Indonesian hydronym"
             }
           ],
-          "earliest_attestation_year": 1522,
-          "earliest_attestation_note": "Navigated by the Magellan expedition in 1522 CE.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate riverine watershed of southern West Timor.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Sea bounded by Sumba, Flores, Timor, and the Savu Islands.",
-          "source_url": "https://en.wikipedia.org/wiki/Savu_Sea"
+          "etymology_notes": "Major southern West Timor river known in Uab Meto as Noel Mina. Onomastic note: Uab Meto 'Noel Mina' (Atoni hydronym meaning Mina River).",
+          "source_url": "https://en.wikipedia.org/wiki/Mina_River_(Indonesia)"
         }
       ]
     },
@@ -14038,31 +14098,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Mount_Ramelau"
         },
         {
-          "name": "Laclo River",
+          "name": "Loes River",
           "disambiguation_note": null,
-          "localisation_stem": "Laclo",
+          "localisation_stem": "Loes",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river associated with the Noimuti region.",
+          "relationship": "Longest river system of Timor, draining the central borderlands near Wehale.",
           "language_variants": [
             {
-              "form": "Mota Laklo",
+              "form": "Mota Loes",
+              "native_script": null,
+              "language": "Tetum",
+              "language_code": "tet",
+              "notes": "Tetum hydronym"
+            },
+            {
+              "form": "Sungai Loes",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Tetum/regional river name"
+              "notes": "Indonesian hydronym"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in eastern Timor oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate river system of central Timor.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Longest river in eastern Timor, flowing northward into the Wetar Strait.",
-          "source_url": "https://en.wikipedia.org/wiki/Laclo_River"
+          "etymology_notes": "Longest river on the island of Timor, formed by mountain tributaries flowing west to the Savu Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Loes_River"
         }
       ]
     },
@@ -15408,31 +15475,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Buru people",
+          "name": "Moluccans",
           "disambiguation_note": null,
-          "localisation_stem": "Buru",
+          "localisation_stem": "Moluccans",
           "category": "tribe",
           "feature_subtype": "austronesian_people",
-          "relationship": "Regional people inhabiting the Sula area.",
+          "relationship": "Austronesian and mixed Maluku islanders inhabiting the Sula archipelago.",
           "language_variants": [
             {
-              "form": "Gebfuka",
+              "form": "Orang Maluku",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indigenous Buru rendering"
+              "notes": "Indonesian regional ethnonym"
+            },
+            {
+              "form": "Orang Maluku",
+              "native_script": null,
+              "language": "Malay",
+              "language_code": "msa",
+              "notes": "Malay regional ethnonym"
             }
           ],
           "earliest_attestation_year": 1365,
-          "earliest_attestation_note": "Hutan Kadali / Buru attested in 14th-century CE Javanese records.",
+          "earliest_attestation_note": "Maloko attested in the Nagarakretagama (1365 CE).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Indigenous Austronesian people of Buru Island in central Maluku.",
-          "source_url": "https://en.wikipedia.org/wiki/Buru_people"
+          "etymology_notes": "Broad indigenous ethnonym encompassing the maritime communities of the Maluku Islands.",
+          "source_url": "https://en.wikipedia.org/wiki/Moluccans"
         },
         {
           "name": "Mount Kapalatmada",
@@ -16745,31 +16819,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Papuans"
         },
         {
-          "name": "Bomberai Peninsula",
+          "name": "Mimika River",
           "disambiguation_note": null,
-          "localisation_stem": "Bomberai",
-          "category": "topographic_feature",
-          "feature_subtype": "coastal_feature",
-          "relationship": "Notable coastal feature in the Timika region.",
+          "localisation_stem": "Mimika",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Lowland river flowing southward through the Timika coastal plain toward the Arafura Sea.",
           "language_variants": [
             {
-              "form": "Semenanjung Bomberai",
+              "form": "Sungai Mimika",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian name"
+              "notes": "Indonesian hydronym"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in western New Guinea oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate riverine corridor of southern Central Papua.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Large peninsula south of Bintuni Bay in western New Guinea.",
-          "source_url": "https://en.wikipedia.org/wiki/Bomberai_Peninsula"
+          "etymology_notes": "Coastal Papuan river draining from the central cordillera across the Mimika alluvial plain.",
+          "source_url": "https://en.wikipedia.org/wiki/Mimika_River"
         },
         {
           "name": "Puncak Jaya",
@@ -17187,31 +17261,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Papuans"
         },
         {
-          "name": "Bintuni Bay",
+          "name": "Tamrau Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Bintuni",
-          "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Local bay associated with the Soren region.",
+          "localisation_stem": "Tamrau",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Rugged northern mountain range of the Bird's Head Peninsula inland from Soren.",
           "language_variants": [
             {
-              "form": "Teluk Bintuni",
+              "form": "Pegunungan Tamrau",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian name"
+              "notes": "Indonesian mountain range name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in western New Guinea oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate Papuan mountain massif of northwestern New Guinea.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Deep tidal bay indenting western New Guinea between the Doberai and Bomberai peninsulas.",
-          "source_url": "https://en.wikipedia.org/wiki/Bintuni_Bay"
+          "etymology_notes": "North-central cordillera of the Doberai Peninsula dividing coastal and interior watersheds.",
+          "source_url": "https://en.wikipedia.org/wiki/Tamrau_Mountains"
         },
         {
           "name": "Arfak Mountains",
@@ -17301,31 +17375,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Papuans"
         },
         {
-          "name": "Bintuni Bay",
+          "name": "Ayamaru Lakes",
           "disambiguation_note": null,
-          "localisation_stem": "Bintuni",
+          "localisation_stem": "Ayamaru",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Local bay associated with the Maybrat region.",
+          "feature_subtype": "lake",
+          "relationship": "Highland karst lakes situated directly in the Maybrat territory.",
           "language_variants": [
             {
-              "form": "Teluk Bintuni",
+              "form": "Danau Ayamaru",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian name"
+              "notes": "Indonesian lake name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in western New Guinea oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate freshwater karst lakes of the central Bird's Head Peninsula.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Deep tidal bay indenting western New Guinea between the Doberai and Bomberai peninsulas.",
-          "source_url": "https://en.wikipedia.org/wiki/Bintuni_Bay"
+          "etymology_notes": "Chain of clear limestone lakes central to the Maybrat people of West Papua.",
+          "source_url": "https://en.wikipedia.org/wiki/Ayamaru_Lakes"
         },
         {
           "name": "Arfak Mountains",
@@ -17522,31 +17596,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ryukyuans"
         },
         {
-          "name": "East China Sea",
+          "name": "Nakagusuku Bay",
           "disambiguation_note": null,
-          "localisation_stem": "East China Sea",
+          "localisation_stem": "Nakagusuku",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Local sea associated with the Simajiri region.",
+          "feature_subtype": "bay",
+          "relationship": "Broad sheltered bay on the eastern coast of southern-central Okinawa bordering Shimajiri.",
           "language_variants": [
             {
-              "form": "Dōnghǎi",
-              "native_script": "東海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese name meaning 'Eastern Sea'"
+              "form": "Nakagusuku-wan",
+              "native_script": null,
+              "language": "Okinawan",
+              "language_code": "ryu",
+              "notes": "Okinawan gusuku means 'stone enclosure/fortress'."
+            },
+            {
+              "form": "Nakagusuku-wan",
+              "native_script": null,
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "Standard Japanese reading of the Okinawan bay name."
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 300 BCE (Attested in Warring States and Han texts as Donghai)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Coral-rimmed coastal bay of southeastern Okinawa Island.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea of the western Pacific bordering the Ryukyu Islands. Onomastic note: Chinese name meaning 'Eastern Sea' ('Dōnghǎi').",
-          "source_url": "https://en.wikipedia.org/wiki/East_China_Sea"
+          "etymology_notes": "Named after Okinawan Nakagusuku ('central fortress'), the prominent bay of southern-central Okinawa.",
+          "source_url": "https://en.wikipedia.org/wiki/Nakagusuku_Bay"
         },
         {
           "name": "Mount Yonaha",
@@ -17629,31 +17710,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Ryukyuans"
         },
         {
-          "name": "East China Sea",
+          "name": "Cape Zanpa",
           "disambiguation_note": null,
-          "localisation_stem": "East China Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Local sea associated with the Nakajan region.",
+          "localisation_stem": "Cape Zanpa",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Prominent 30-meter limestone promontory jutting westward from central Okinawa near Nakagami.",
           "language_variants": [
             {
-              "form": "Dōnghǎi",
-              "native_script": "東海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese name meaning 'Eastern Sea'"
+              "form": "Zanpa Misaki",
+              "native_script": null,
+              "language": "Okinawan",
+              "language_code": "ryu",
+              "notes": "Promontory on the western coast of central Okinawa."
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 300 BCE (Attested in Warring States and Han texts as Donghai)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Raised coral-limestone headland of central Okinawa.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea of the western Pacific bordering the Ryukyu Islands. Onomastic note: Chinese name meaning 'Eastern Sea' ('Dōnghǎi').",
-          "source_url": "https://en.wikipedia.org/wiki/East_China_Sea"
+          "etymology_notes": "Okinawan coastal promontory name Zanpa Misaki, marking the western headland of central Okinawa.",
+          "source_url": "https://en.wikipedia.org/wiki/Cape_Zanpa"
         },
         {
           "name": "Mount Yonaha",
@@ -17736,31 +17817,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Ryukyuans"
         },
         {
-          "name": "East China Sea",
+          "name": "Cape Hedo",
           "disambiguation_note": null,
-          "localisation_stem": "East China Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Local sea associated with the Kunjan region.",
+          "localisation_stem": "Cape Hedo",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Northernmost uplifted coral headland of Okinawa Island in the Kunigami (Kunjan) region.",
           "language_variants": [
             {
-              "form": "Dōnghǎi",
-              "native_script": "東海",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese name meaning 'Eastern Sea'"
+              "form": "Hedo Misaki",
+              "native_script": null,
+              "language": "Okinawan",
+              "language_code": "ryu",
+              "notes": "Northernmost cape of Okinawa Island in Kunigami."
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 300 BCE (Attested in Warring States and Han texts as Donghai)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Geological headland at the northern extremity of Okinawa Island.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea of the western Pacific bordering the Ryukyu Islands. Onomastic note: Chinese name meaning 'Eastern Sea' ('Dōnghǎi').",
-          "source_url": "https://en.wikipedia.org/wiki/East_China_Sea"
+          "etymology_notes": "Okinawan headland name Hedo Misaki, traditional northern landmark of Kunigami (Kunjan).",
+          "source_url": "https://en.wikipedia.org/wiki/Cape_Hedo"
         },
         {
           "name": "Mount Yonaha",
@@ -18126,31 +18207,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Banda_Sea"
         },
         {
-          "name": "Tolo Gulf",
+          "name": "Kabaena",
           "disambiguation_note": null,
-          "localisation_stem": "Tolo",
-          "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Local bay associated with the Muna region.",
+          "localisation_stem": "Kabaena",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Mountainous island located just southwest of Muna off Southeast Sulawesi.",
           "language_variants": [
             {
-              "form": "Teluk Tolo",
+              "form": "Pulau Kabaena",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian name"
+              "notes": "Indonesian island name"
+            },
+            {
+              "form": "Tokotu'a",
+              "native_script": null,
+              "language": "Moronene",
+              "language_code": "mqn",
+              "notes": "Traditional local name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in eastern Sulawesi oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate island of the southeastern Sulawesi archipelago.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Large gulf between the eastern and southeastern peninsulas of Sulawesi.",
-          "source_url": "https://en.wikipedia.org/wiki/Tolo_Gulf"
+          "etymology_notes": "Rugged island off southeastern Sulawesi inhabited by Moronene-speaking communities.",
+          "source_url": "https://en.wikipedia.org/wiki/Kabaena"
         }
       ]
     },
@@ -18489,31 +18577,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mount_Mekongga"
         },
         {
-          "name": "Tolo Gulf",
+          "name": "Lasolo River",
           "disambiguation_note": null,
-          "localisation_stem": "Tolo",
+          "localisation_stem": "Lasolo",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Local bay associated with the Kendari region.",
+          "feature_subtype": "river",
+          "relationship": "Major river of Southeast Sulawesi draining northeast of the Kendari plain.",
           "language_variants": [
             {
-              "form": "Teluk Tolo",
+              "form": "Sungai Lasolo",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian name"
+              "notes": "Indonesian hydronym"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in eastern Sulawesi oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate river basin of mainland Southeast Sulawesi.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Large gulf between the eastern and southeastern peninsulas of Sulawesi.",
-          "source_url": "https://en.wikipedia.org/wiki/Tolo_Gulf"
+          "etymology_notes": "Two-hundred-seventy-seven-kilometer river draining the interior highlands of Konawe to the Banda coast.",
+          "source_url": "https://en.wikipedia.org/wiki/Lasolo_River"
         }
       ]
     },
@@ -19081,31 +19169,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Bugis"
         },
         {
-          "name": "Lake Towuti",
+          "name": "Larona River",
           "disambiguation_note": null,
-          "localisation_stem": "Towuti",
+          "localisation_stem": "Larona",
           "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Local lake associated with the Tamboa region.",
+          "feature_subtype": "river",
+          "relationship": "Outflow river draining the Malili lakes basin southeast toward the Gulf of Boni.",
           "language_variants": [
             {
-              "form": "Danau Towuti",
+              "form": "Sungai Larona",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian name"
+              "notes": "Indonesian hydronym"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in Luwu and Mori oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate river outlet of the Malili tectonic lake system.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Largest lake on Sulawesi, part of the Malili lake system.",
-          "source_url": "https://en.wikipedia.org/wiki/Lake_Towuti"
+          "etymology_notes": "Major river discharging from Lake Towuti through the East Luwu hills.",
+          "source_url": "https://en.wikipedia.org/wiki/Larona_River"
         },
         {
           "name": "Lake Matano",
@@ -19202,31 +19290,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Bugis"
         },
         {
-          "name": "Lake Towuti",
+          "name": "Gulf of Boni",
           "disambiguation_note": null,
-          "localisation_stem": "Towuti",
+          "localisation_stem": "Gulf of Boni",
           "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Local lake associated with the Pano region.",
+          "feature_subtype": "bay",
+          "relationship": "Deep marine gulf west of the Malili lakes and Tamboeko coast.",
           "language_variants": [
             {
-              "form": "Danau Towuti",
+              "form": "Teluk Bone",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian name"
+              "notes": "Indonesian hydronym"
+            },
+            {
+              "form": "Ugi",
+              "native_script": null,
+              "language": "Buginese",
+              "language_code": "bug",
+              "notes": "Bugis coastal designation"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in Luwu and Mori oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate marine gulf separating southern and southeastern Sulawesi.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Largest lake on Sulawesi, part of the Malili lake system.",
-          "source_url": "https://en.wikipedia.org/wiki/Lake_Towuti"
+          "etymology_notes": "Large northward-opening gulf of the Banda Sea flanked by Bugis and Luwu polities.",
+          "source_url": "https://en.wikipedia.org/wiki/Gulf_of_Boni"
         },
         {
           "name": "Lake Matano",
@@ -19864,7 +19959,7 @@
         {
           "name": "Makassar Strait",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar Strait",
+          "localisation_stem": "Makassar",
           "category": "hydronym",
           "feature_subtype": "strait",
           "relationship": "Local strait associated with the Tamala region.",
@@ -19978,7 +20073,7 @@
         {
           "name": "Makassar Strait",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar Strait",
+          "localisation_stem": "Makassar",
           "category": "hydronym",
           "feature_subtype": "strait",
           "relationship": "Local strait associated with the Tipor region.",
@@ -20164,38 +20259,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Makassar people",
+          "name": "Mandar people",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar",
+          "localisation_stem": "Mandar",
           "category": "tribe",
           "feature_subtype": "austronesian_people",
-          "relationship": "Regional people inhabiting the Bungoro area.",
+          "relationship": "Seafaring Austronesian people of western Sulawesi north of Bungoro.",
           "language_variants": [
             {
-              "form": "Mangkasara'",
-              "native_script": null,
-              "language": "Buginese",
-              "language_code": "bug",
-              "notes": "Regional Bugis/Makassar rendering"
-            },
-            {
-              "form": "Makassar",
+              "form": "Suku Mandar",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian ethnonym"
+            },
+            {
+              "form": "To Mandar",
+              "native_script": null,
+              "language": "Mandar",
+              "language_code": "mdr",
+              "notes": "Endonym"
             }
           ],
-          "earliest_attestation_year": 1365,
-          "earliest_attestation_note": "Makassar attested in the Nagarakretagama (1365 CE).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate maritime Austronesian people of the Makassar Strait coast.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Austronesian people inhabiting the southwestern peninsula of Sulawesi.",
-          "source_url": "https://en.wikipedia.org/wiki/Makassar_people"
+          "etymology_notes": "Traditional seafaring Austronesian group of the western South Sulawesi peninsula. Onomastic note: Mandar 'To Mandar' (Endonym).",
+          "source_url": "https://en.wikipedia.org/wiki/Mandar_people"
         },
         {
           "name": "Flores Sea",
@@ -20232,38 +20327,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Flores_Sea"
         },
         {
-          "name": "Makassar Strait",
+          "name": "Walanae River",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar Strait",
+          "localisation_stem": "Walanae",
           "category": "hydronym",
-          "feature_subtype": "strait",
-          "relationship": "Local strait associated with the Bungoro region.",
+          "feature_subtype": "river",
+          "relationship": "Major river of southern Sulawesi rising north of the Maros-Bungoro highlands and flowing northward toward Lake Tempe.",
           "language_variants": [
             {
-              "form": "Selat Makassar",
+              "form": "Walanae",
               "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian name"
+              "language": "Buginese",
+              "language_code": "bug",
+              "notes": "Indigenous Bugis-Makassar hydronym for the central river of the South Sulawesi peninsula."
             },
             {
-              "form": "Selat Makasar",
+              "form": "Walanae",
               "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay form"
+              "language": "Makasar",
+              "language_code": "mak",
+              "notes": "Indigenous Makassarese form."
             }
           ],
-          "earliest_attestation_year": 1365,
-          "earliest_attestation_note": "Maritime corridor between Sulawesi and Borneo attested in 14th-century CE Javanese sources.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Attested in Bugis oral tradition (no pre-1700 CE written record).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Deep strait separating Borneo from Sulawesi.",
-          "source_url": "https://en.wikipedia.org/wiki/Makassar_Strait"
+          "etymology_notes": "Indigenous South Sulawesi hydronym naming the major northward-flowing river of the southern peninsula.",
+          "source_url": "https://en.wikipedia.org/wiki/Walanae_River"
         }
       ]
     },
@@ -20292,38 +20387,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Makassar people",
+          "name": "Konjo people",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar",
+          "localisation_stem": "Konjo",
           "category": "tribe",
           "feature_subtype": "austronesian_people",
-          "relationship": "Regional people inhabiting the Bantaeg area.",
+          "relationship": "Indigenous Austronesian people inhabiting the coastal and upland southeastern tip around Bantaeng.",
           "language_variants": [
             {
-              "form": "Mangkasara'",
-              "native_script": null,
-              "language": "Buginese",
-              "language_code": "bug",
-              "notes": "Regional Bugis/Makassar rendering"
-            },
-            {
-              "form": "Makassar",
+              "form": "Suku Konjo",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian ethnonym"
+            },
+            {
+              "form": "To Konjo",
+              "native_script": null,
+              "language": "Makasar",
+              "language_code": "mak",
+              "notes": "Local Konjo designation"
             }
           ],
-          "earliest_attestation_year": 1365,
-          "earliest_attestation_note": "Makassar attested in the Nagarakretagama (1365 CE).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Austronesian community of southern South Sulawesi.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Austronesian people inhabiting the southwestern peninsula of Sulawesi.",
-          "source_url": "https://en.wikipedia.org/wiki/Makassar_people"
+          "etymology_notes": "Makassar-related Austronesian people divided into coastal and highland Konjo groups.",
+          "source_url": "https://en.wikipedia.org/wiki/Konjo_people"
         },
         {
           "name": "Flores Sea",
@@ -20360,38 +20455,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Flores_Sea"
         },
         {
-          "name": "Makassar Strait",
+          "name": "Moncong Lompobattang",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar Strait",
-          "category": "hydronym",
-          "feature_subtype": "strait",
-          "relationship": "Local strait associated with the Bantaeg region.",
+          "localisation_stem": "Moncong Lompobattang",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Dominant 2,874-meter volcanic massif rising directly behind the Bantaeng coast at the southern tip of Sulawesi.",
           "language_variants": [
             {
-              "form": "Selat Makassar",
+              "form": "Lompobattang",
               "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian name"
-            },
-            {
-              "form": "Selat Makasar",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay form"
+              "language": "Makasar",
+              "language_code": "mak",
+              "notes": "Makassarese name traditionally glossed as 'great belly' (big peak); moncong denotes a mountain summit."
             }
           ],
-          "earliest_attestation_year": 1365,
-          "earliest_attestation_note": "Maritime corridor between Sulawesi and Borneo attested in 14th-century CE Javanese sources.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pleistocene stratovolcano forming the southern highland spine of Sulawesi.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Deep strait separating Borneo from Sulawesi.",
-          "source_url": "https://en.wikipedia.org/wiki/Makassar_Strait"
+          "etymology_notes": "From Makassarese Moncong Lompobattang, meaning 'great-bellied peak', towering directly above Bantaeng.",
+          "source_url": "https://en.wikipedia.org/wiki/Moncong_Lompobattang"
         }
       ]
     },
@@ -20420,38 +20508,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Makassar people",
+          "name": "Toraja",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar",
+          "localisation_stem": "Toraja",
           "category": "tribe",
           "feature_subtype": "austronesian_people",
-          "relationship": "Regional people inhabiting the Boni area.",
+          "relationship": "Highland Austronesian people inhabiting the interior mountains north of Bone.",
           "language_variants": [
             {
-              "form": "Mangkasara'",
-              "native_script": null,
-              "language": "Buginese",
-              "language_code": "bug",
-              "notes": "Regional Bugis/Makassar rendering"
-            },
-            {
-              "form": "Makassar",
+              "form": "Toraja",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian ethnonym"
+            },
+            {
+              "form": "To Riaja",
+              "native_script": null,
+              "language": "Buginese",
+              "language_code": "bug",
+              "notes": "Bugis exonym meaning people of the uplands"
             }
           ],
-          "earliest_attestation_year": 1365,
-          "earliest_attestation_note": "Makassar attested in the Nagarakretagama (1365 CE).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Attested in South Sulawesi oral tradition (no pre-1700 CE written record).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Austronesian people inhabiting the southwestern peninsula of Sulawesi.",
-          "source_url": "https://en.wikipedia.org/wiki/Makassar_people"
+          "etymology_notes": "South Sulawesi mountain people whose Bugis exonym To Riaja means upland dwellers.",
+          "source_url": "https://en.wikipedia.org/wiki/Torajan_people"
         },
         {
           "name": "Flores Sea",
@@ -20488,38 +20576,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Flores_Sea"
         },
         {
-          "name": "Makassar Strait",
+          "name": "Lake Tempe",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar Strait",
+          "localisation_stem": "Tempe",
           "category": "hydronym",
-          "feature_subtype": "strait",
-          "relationship": "Local strait associated with the Boni region.",
+          "feature_subtype": "lake",
+          "relationship": "Major tectonic floodplain lake fed by the Walanae Basin in interior South Sulawesi northwest of Bone.",
           "language_variants": [
             {
-              "form": "Selat Makassar",
+              "form": "Tappareng Tempe",
               "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian name"
-            },
-            {
-              "form": "Selat Makasar",
-              "native_script": null,
-              "language": "Malay",
-              "language_code": "msa",
-              "notes": "Malay form"
+              "language": "Buginese",
+              "language_code": "bug",
+              "notes": "Bugis name where tappareng means lake."
             }
           ],
-          "earliest_attestation_year": 1365,
-          "earliest_attestation_note": "Maritime corridor between Sulawesi and Borneo attested in 14th-century CE Javanese sources.",
+          "earliest_attestation_year": 1400,
+          "earliest_attestation_note": "Heartland lake of the Wajo and Sidenreng Bugis polities (c. 1400 CE).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Deep strait separating Borneo from Sulawesi.",
-          "source_url": "https://en.wikipedia.org/wiki/Makassar_Strait"
+          "etymology_notes": "Indigenous Bugis hydronym Tappareng Tempe, naming the largest inland lake of the South Sulawesi lowlands.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Tempe"
         }
       ]
     },
@@ -20604,7 +20685,7 @@
         {
           "name": "Makassar Strait",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar Strait",
+          "localisation_stem": "Makassar",
           "category": "hydronym",
           "feature_subtype": "strait",
           "relationship": "Local strait associated with the Donggala region.",
@@ -20718,7 +20799,7 @@
         {
           "name": "Makassar Strait",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar Strait",
+          "localisation_stem": "Makassar",
           "category": "hydronym",
           "feature_subtype": "strait",
           "relationship": "Local strait associated with the Parigi region.",
@@ -20832,7 +20913,7 @@
         {
           "name": "Makassar Strait",
           "disambiguation_note": null,
-          "localisation_stem": "Makassar Strait",
+          "localisation_stem": "Makassar",
           "category": "hydronym",
           "feature_subtype": "strait",
           "relationship": "Local strait associated with the Donda region.",
@@ -21004,31 +21085,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Gorontalo people",
+          "name": "Mongondow people",
           "disambiguation_note": null,
-          "localisation_stem": "Gorontalo",
+          "localisation_stem": "Mongondow",
           "category": "tribe",
           "feature_subtype": "austronesian_people",
-          "relationship": "Regional people inhabiting the Suwawa area.",
+          "relationship": "Neighboring Austronesian people inhabiting the northern peninsula east of Suwawa.",
           "language_variants": [
             {
-              "form": "Hulontalo",
+              "form": "Suku Mongondow",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indigenous Gorontalo rendering"
+              "notes": "Indonesian ethnonym"
+            },
+            {
+              "form": "Bolaang Mongondow",
+              "native_script": null,
+              "language": "Mongondow",
+              "language_code": "mog",
+              "notes": "Traditional polity and ethnonym"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in northern Sulawesi oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate Austronesian people of northern Sulawesi.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Austronesian people of the Gorontalo Peninsula in northern Sulawesi.",
-          "source_url": "https://en.wikipedia.org/wiki/Gorontalo_people"
+          "etymology_notes": "Gorontalo-Mongondow speaking people of the northern Sulawesi highlands and coasts.",
+          "source_url": "https://en.wikipedia.org/wiki/Mongondow_people"
         },
         {
           "name": "Bone River",
@@ -21111,31 +21199,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Gorontalo people",
+          "name": "Sangir people",
           "disambiguation_note": null,
-          "localisation_stem": "Gorontalo",
+          "localisation_stem": "Sangir",
           "category": "tribe",
           "feature_subtype": "austronesian_people",
-          "relationship": "Regional people inhabiting the Kali area.",
+          "relationship": "Maritime Austronesian people active along the northern Sulawesi coasts near Kali.",
           "language_variants": [
             {
-              "form": "Hulontalo",
+              "form": "Suku Sangir",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indigenous Gorontalo rendering"
+              "notes": "Indonesian ethnonym"
+            },
+            {
+              "form": "Sangir",
+              "native_script": null,
+              "language": "Sangir",
+              "language_code": "sxn",
+              "notes": "Endonym"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in northern Sulawesi oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Attested in northern Sulawesi-Mindanao oral tradition (no pre-1700 CE written record).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Austronesian people of the Gorontalo Peninsula in northern Sulawesi.",
-          "source_url": "https://en.wikipedia.org/wiki/Gorontalo_people"
+          "etymology_notes": "Seafaring Austronesian people of the Sangir archipelago and northern Sulawesi littoral. Onomastic note: Sangir 'Sangir' (Endonym).",
+          "source_url": "https://en.wikipedia.org/wiki/Sangir_people"
         },
         {
           "name": "Bone River",
@@ -21218,31 +21313,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Gorontalo people",
+          "name": "Kaili people",
           "disambiguation_note": null,
-          "localisation_stem": "Gorontalo",
+          "localisation_stem": "Kaili",
           "category": "tribe",
           "feature_subtype": "austronesian_people",
-          "relationship": "Regional people inhabiting the Bolango area.",
+          "relationship": "Austronesian people inhabiting the central Tomini neck west of Bolango.",
           "language_variants": [
             {
-              "form": "Hulontalo",
+              "form": "Suku Kaili",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indigenous Gorontalo rendering"
+              "notes": "Indonesian ethnonym"
+            },
+            {
+              "form": "To Kaili",
+              "native_script": null,
+              "language": "Kaili",
+              "language_code": "kzf",
+              "notes": "Endonym meaning Kaili people"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in northern Sulawesi oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Attested in central Sulawesi oral tradition (no pre-1700 CE written record).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Austronesian people of the Gorontalo Peninsula in northern Sulawesi.",
-          "source_url": "https://en.wikipedia.org/wiki/Gorontalo_people"
+          "etymology_notes": "Major Austronesian group of the Palu valley and western Gulf of Tomini littoral. Onomastic note: Kaili 'To Kaili' (Endonym meaning Kaili people).",
+          "source_url": "https://en.wikipedia.org/wiki/Kaili_people"
         },
         {
           "name": "Bone River",
@@ -21802,31 +21904,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Banggai people",
+          "name": "Saluan people",
           "disambiguation_note": null,
-          "localisation_stem": "Banggai",
+          "localisation_stem": "Saluan",
           "category": "tribe",
           "feature_subtype": "austronesian_people",
-          "relationship": "Regional people inhabiting the Balantak area.",
+          "relationship": "Indigenous Austronesian people inhabiting the eastern peninsula of Sulawesi west of Balantak.",
           "language_variants": [
             {
-              "form": "Banggai",
+              "form": "Suku Saluan",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian ethnonym"
+            },
+            {
+              "form": "Loinang",
+              "native_script": null,
+              "language": "Saluan",
+              "language_code": "loe",
+              "notes": "Traditional upland designation"
             }
           ],
-          "earliest_attestation_year": 1365,
-          "earliest_attestation_note": "Banggawi attested in the Nagarakretagama (1365 CE).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Austronesian population of Central Sulawesi's eastern arm.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Austronesian people of the Banggai Archipelago and eastern Sulawesi.",
-          "source_url": "https://en.wikipedia.org/wiki/Banggai_people"
+          "etymology_notes": "Austronesian people of the Saluan-Banggai subgroup inhabiting the Luwuk-Pagimana peninsula.",
+          "source_url": "https://en.wikipedia.org/wiki/Saluan_people"
         },
         {
           "name": "Molucca Sea",
@@ -21916,31 +22025,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Banggai people",
+          "name": "Pamona people",
           "disambiguation_note": null,
-          "localisation_stem": "Banggai",
+          "localisation_stem": "Pamona",
           "category": "tribe",
           "feature_subtype": "austronesian_people",
-          "relationship": "Regional people inhabiting the Luwuk area.",
+          "relationship": "Indigenous Austronesian people of central-eastern Sulawesi inland from Luwuk.",
           "language_variants": [
             {
-              "form": "Banggai",
+              "form": "Suku Pamona",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
               "notes": "Indonesian ethnonym"
+            },
+            {
+              "form": "To Pamona",
+              "native_script": null,
+              "language": "Pamona",
+              "language_code": "pmf",
+              "notes": "Endonym meaning Pamona people"
             }
           ],
-          "earliest_attestation_year": 1365,
-          "earliest_attestation_note": "Banggawi attested in the Nagarakretagama (1365 CE).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Austronesian ethnic group of Central Sulawesi.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Austronesian people of the Banggai Archipelago and eastern Sulawesi.",
-          "source_url": "https://en.wikipedia.org/wiki/Banggai_people"
+          "etymology_notes": "Highland and lakeside Austronesian people speaking Kaili-Pamona languages of central Sulawesi. Onomastic note: Pamona 'To Pamona' (Endonym meaning Pamona people).",
+          "source_url": "https://en.wikipedia.org/wiki/Pamona_people"
         },
         {
           "name": "Molucca Sea",
@@ -22520,58 +22636,58 @@
           "source_url": "https://en.wikipedia.org/wiki/Torajan_people"
         },
         {
-          "name": "Lake Poso",
+          "name": "Laa River",
           "disambiguation_note": null,
-          "localisation_stem": "Poso",
-          "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Local lake associated with the Panga region.",
-          "language_variants": [
-            {
-              "form": "Danau Poso",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian name"
-            }
-          ],
-          "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in Pamona and Mori oral tradition (no pre-1700 CE written record).",
-          "attestation_basis": "indigenous_pre_literate",
-          "valid_for_bookmarks": {
-            "867": true,
-            "1066": true,
-            "1178": true
-          },
-          "etymology_notes": "Deep tectonic lake in central Sulawesi.",
-          "source_url": "https://en.wikipedia.org/wiki/Lake_Poso"
-        },
-        {
-          "name": "Poso River",
-          "disambiguation_note": null,
-          "localisation_stem": "Poso River",
+          "localisation_stem": "Laa",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river associated with the Panga region.",
+          "relationship": "Principal river flowing through the Mori heartland into the Gulf of Mori.",
           "language_variants": [
             {
-              "form": "Sungai Poso",
+              "form": "Sungai Laa",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian name"
+              "notes": "Indonesian hydronym"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in central Sulawesi oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate riverine artery of the Mori territory.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River draining Lake Poso northward into the Gulf of Tomini.",
-          "source_url": "https://en.wikipedia.org/wiki/Poso_River"
+          "etymology_notes": "Major river of eastern Central Sulawesi draining the Mori interior to the eastern coast.",
+          "source_url": "https://en.wikipedia.org/wiki/Laa_River"
+        },
+        {
+          "name": "Lake Matano",
+          "disambiguation_note": null,
+          "localisation_stem": "Matano",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Deep tectonic headwater lake of the Malili system situated along the interior highland frontier of the Mori-Luwu corridor.",
+          "language_variants": [
+            {
+              "form": "Matano",
+              "native_script": null,
+              "language": "Makasar",
+              "language_code": "mak",
+              "notes": "Indigenous South/Central Sulawesi lake name meaning 'spring of water' (mata ano)."
+            }
+          ],
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Attested in Luwu oral tradition (no pre-1700 CE written record).",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Indigenous Sulawesi hydronym meaning 'water spring', naming the deepest tectonic lake in Indonesia.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Matano"
         }
       ]
     },
@@ -22634,58 +22750,58 @@
           "source_url": "https://en.wikipedia.org/wiki/Torajan_people"
         },
         {
-          "name": "Lake Poso",
+          "name": "Bongka River",
           "disambiguation_note": null,
-          "localisation_stem": "Poso",
-          "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Local lake associated with the Waya region.",
-          "language_variants": [
-            {
-              "form": "Danau Poso",
-              "native_script": null,
-              "language": "Indonesian",
-              "language_code": "ind",
-              "notes": "Indonesian name"
-            }
-          ],
-          "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in Pamona and Mori oral tradition (no pre-1700 CE written record).",
-          "attestation_basis": "indigenous_pre_literate",
-          "valid_for_bookmarks": {
-            "867": true,
-            "1066": true,
-            "1178": true
-          },
-          "etymology_notes": "Deep tectonic lake in central Sulawesi.",
-          "source_url": "https://en.wikipedia.org/wiki/Lake_Poso"
-        },
-        {
-          "name": "Poso River",
-          "disambiguation_note": null,
-          "localisation_stem": "Poso River",
+          "localisation_stem": "Bongka",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river associated with the Waya region.",
+          "relationship": "Mountain river north of the Mori uplands flowing into the Gulf of Tomini.",
           "language_variants": [
             {
-              "form": "Sungai Poso",
+              "form": "Sungai Bongka",
               "native_script": null,
               "language": "Indonesian",
               "language_code": "ind",
-              "notes": "Indonesian name"
+              "notes": "Indonesian hydronym"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in central Sulawesi oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Pre-literate river basin of eastern Central Sulawesi.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River draining Lake Poso northward into the Gulf of Tomini.",
-          "source_url": "https://en.wikipedia.org/wiki/Poso_River"
+          "etymology_notes": "River draining the forested interior of Tojo Una-Una and Morowali north into Tomini Bay.",
+          "source_url": "https://en.wikipedia.org/wiki/Bongka_River"
+        },
+        {
+          "name": "Gulf of Tolo",
+          "disambiguation_note": null,
+          "localisation_stem": "Gulf of Tolo",
+          "category": "hydronym",
+          "feature_subtype": "bay",
+          "relationship": "Broad eastern maritime gulf between the eastern and southeastern peninsulas of Sulawesi bordering the Mori coast.",
+          "language_variants": [
+            {
+              "form": "Teluk Tolo",
+              "native_script": null,
+              "language": "Indonesian",
+              "language_code": "ind",
+              "notes": "Eastern Sulawesi coastal bay name."
+            }
+          ],
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Major marginal gulf of eastern Sulawesi facing the Banda Sea.",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "From local eastern Sulawesi coastal naming (Tolo), designating the large gulf between Central and Southeast Sulawesi.",
+          "source_url": "https://en.wikipedia.org/wiki/Gulf_of_Tolo"
         }
       ]
     },

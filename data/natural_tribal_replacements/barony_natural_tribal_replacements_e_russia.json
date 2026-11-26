@@ -137,22 +137,22 @@
       "target_baronies_audited": 261,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 783,
-      "unique_replacement_names": 206,
-      "candidates_with_multilingual_variants": 666,
+      "unique_replacement_names": 210,
+      "candidates_with_multilingual_variants": 660,
       "wikipedia_source_attached": 783,
-      "unique_source_urls": 209,
+      "unique_source_urls": 213,
       "candidates_by_category": {
         "choronym": 7,
-        "hydronym": 510,
+        "hydronym": 509,
         "oronym": 5,
-        "topographic_feature": 0,
+        "topographic_feature": 1,
         "tribe": 261
       },
       "baronies_with_category": {
         "has_choronym_candidate": 7,
         "has_hydronym_candidate": 261,
         "has_oronym_candidate": 5,
-        "has_topographic_feature_candidate": 0,
+        "has_topographic_feature_candidate": 1,
         "has_tribe_candidate": 261
       },
       "unique_language_codes": [
@@ -195,7 +195,7 @@
         "1178": 783
       },
       "baronies_with_867_valid_candidate": 261,
-      "unique_localisation_stems": 205
+      "unique_localisation_stems": 208
     }
   },
   "baronies": {
@@ -827,7 +827,7 @@
         {
           "name": "Onega Bay",
           "disambiguation_note": null,
-          "localisation_stem": "Onega Bay",
+          "localisation_stem": "Onega",
           "category": "hydronym",
           "feature_subtype": "bay",
           "relationship": "Southern bay of the White Sea bordering the western coast near Lopshenga.",
@@ -1040,45 +1040,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Bjarmaland"
         },
         {
-          "name": "Onega",
+          "name": "Lake Kozhozero",
           "disambiguation_note": null,
-          "localisation_stem": "Onega",
+          "localisation_stem": "Kozhozero",
           "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Principal river flowing northward past Pole to the White Sea.",
+          "feature_subtype": "lake",
+          "relationship": "Large boreal lake in the Onezhsky wilderness draining via the Kozha into the Onega River near Pole.",
           "language_variants": [
             {
-              "form": "Onega",
-              "native_script": "Онега",
+              "form": "Kozhozero",
+              "native_script": "Кожозеро",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Modern Russian hydronym."
-            },
-            {
-              "form": "Onega",
-              "native_script": "Онега",
-              "language": "Old East Slavic",
-              "language_code": "orv",
-              "notes": "Attested in the 1137 CE Novgorod charter."
-            },
-            {
-              "form": "Ääninen",
-              "native_script": null,
-              "language": "Finnish",
-              "language_code": "fin",
-              "notes": "Finnic name."
+              "notes": "Russian name of the lake"
             }
           ],
-          "earliest_attestation_year": 1137,
-          "earliest_attestation_note": "1137 CE in the Statute of Prince Svyatoslav Olgovich of Novgorod.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-Slavic Finno-Ugric lake name of the northern taiga west of the Onega River.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Finnic *enä-joki ('great river') or *ääni ('voice, sound').",
-          "source_url": "https://en.wikipedia.org/wiki/Onega_(river)"
+          "etymology_notes": "Finno-Ugric substrate element kozh- (possibly Karelian/Vepsian *kož- 'waterfall/rapids' or 'spruce') + Russian ozero ('lake').",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Kozhozero"
         },
         {
           "name": "Kena",
@@ -1168,72 +1154,58 @@
           "source_url": "https://en.wikipedia.org/wiki/Bjarmaland"
         },
         {
-          "name": "Onega",
+          "name": "Kiy Island",
           "disambiguation_note": null,
-          "localisation_stem": "Onega",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Main river flowing past Korelskoye toward Onega Bay.",
+          "localisation_stem": "Kiy",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Granite island standing in Onega Bay immediately off the coast of Korelskoye.",
           "language_variants": [
             {
-              "form": "Onega",
-              "native_script": "Онега",
+              "form": "Kiy-ostrov",
+              "native_script": "Кий-остров",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Modern Russian hydronym."
-            },
-            {
-              "form": "Onega",
-              "native_script": "Онега",
-              "language": "Old East Slavic",
-              "language_code": "orv",
-              "notes": "Attested in the 1137 CE Novgorod charter."
-            },
-            {
-              "form": "Ääninen",
-              "native_script": null,
-              "language": "Finnish",
-              "language_code": "fin",
-              "notes": "Finnic name."
+              "notes": "Russian name of the island"
             }
           ],
-          "earliest_attestation_year": 1137,
-          "earliest_attestation_note": "1137 CE in the Statute of Prince Svyatoslav Olgovich of Novgorod.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-Slavic Finnic-Bjarmian coastal landmark in Onega Bay.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Finnic *enä-joki ('great river') or *ääni ('voice, sound').",
-          "source_url": "https://en.wikipedia.org/wiki/Onega_(river)"
+          "etymology_notes": "From Finnic/Karelian kivi ('stone, rock') or Old Russian kiy ('wooden staff/club'), combined with ostrov ('island').",
+          "source_url": "https://en.wikipedia.org/wiki/Kiy_Island"
         },
         {
-          "name": "Onega Bay",
+          "name": "Lake Kozhozero",
           "disambiguation_note": null,
-          "localisation_stem": "Onega Bay",
+          "localisation_stem": "Kozhozero",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "White Sea inlet at the mouth of the Onega River.",
+          "feature_subtype": "lake",
+          "relationship": "Large freshwater lake in the lower Onega drainage southwest of Korelskoye.",
           "language_variants": [
             {
-              "form": "Onezhskaya guba",
-              "native_script": "Онежская губа",
+              "form": "Kozhozero",
+              "native_script": null,
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Modern Russian name."
+              "notes": "Substrate Finnic hydronym adapted into Northern Russian with -ozero ('lake')."
             }
           ],
-          "earliest_attestation_year": 1137,
-          "earliest_attestation_note": "12th century CE in Novgorod northern trade records (mouth of the Onega River).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-Slavic Finno-Ugric lake name of the northern taiga west of the Onega River.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after the Onega River, which discharges into the bay.",
-          "source_url": "https://en.wikipedia.org/wiki/Onega_Bay"
+          "etymology_notes": "Northern Finnic-substrate hydronym combined with Slavic ozero ('lake').",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Kozhozero"
         }
       ]
     },
@@ -1303,31 +1275,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Karelians"
         },
         {
-          "name": "Onega Bay",
+          "name": "Lake Kenozero",
           "disambiguation_note": null,
-          "localisation_stem": "Onega Bay",
+          "localisation_stem": "Kenozero",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "White Sea bay along whose southern coast Malashuyka lies.",
+          "feature_subtype": "lake",
+          "relationship": "Major glacial lake in the middle Onega basin inland south of Malashuyka.",
           "language_variants": [
             {
-              "form": "Onezhskaya guba",
-              "native_script": "Онежская губа",
+              "form": "Kenozero",
+              "native_script": null,
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Modern Russian name."
+              "notes": "Finnic-substrate hydronym combined with Slavic -ozero ('lake')."
             }
           ],
-          "earliest_attestation_year": 1137,
-          "earliest_attestation_note": "12th century CE in Novgorod northern trade records (mouth of the Onega River).",
+          "earliest_attestation_year": 1391,
+          "earliest_attestation_note": "14th century CE in Novgorod northern charters.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after the Onega River, which discharges into the bay.",
-          "source_url": "https://en.wikipedia.org/wiki/Onega_Bay"
+          "etymology_notes": "Finnic-substrate root paired with Northern Russian ozero ('lake').",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Kenozero"
         },
         {
           "name": "White Sea",
@@ -1582,7 +1554,7 @@
         {
           "name": "Onega Bay",
           "disambiguation_note": null,
-          "localisation_stem": "Onega Bay",
+          "localisation_stem": "Onega",
           "category": "hydronym",
           "feature_subtype": "bay",
           "relationship": "White Sea bay bordering the Malenga coastal tract.",
@@ -1859,7 +1831,7 @@
         {
           "name": "Onega Bay",
           "disambiguation_note": null,
-          "localisation_stem": "Onega Bay",
+          "localisation_stem": "Onega",
           "category": "hydronym",
           "feature_subtype": "bay",
           "relationship": "White Sea inlet along the coastal stretch of Kustranda.",
@@ -6286,31 +6258,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Meryans"
         },
         {
-          "name": "Unzha",
+          "name": "Neya",
           "disambiguation_note": null,
-          "localisation_stem": "Unzha",
+          "localisation_stem": "Neya",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Principal river of the Onsthia district.",
+          "relationship": "Major right tributary of the Unzha draining the central forests of the Onsthia basin.",
           "language_variants": [
             {
-              "form": "Unzha",
-              "native_script": "Унжа",
+              "form": "Neya",
+              "native_script": "Нея",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Modern Russian hydronym."
+              "notes": "Russian hydronym"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "1200 CE (Medieval Upper Volga chronicles).",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "16th century CE in Kostroma and Unzha land records.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Of Volga-Finnic (Meryan/Mari) substrate origin, possibly meaning 'quiet/calm river'.",
-          "source_url": "https://en.wikipedia.org/wiki/Unzha"
+          "etymology_notes": "Likely from Meryan / Finno-Ugric *nej- / *nja- ('marshy meadow, boggy stream').",
+          "source_url": "https://en.wikipedia.org/wiki/Neya_(river)"
         },
         {
           "name": "Viga",
@@ -6912,38 +6884,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Meryans"
         },
         {
-          "name": "Vologda",
+          "name": "Lezha",
           "disambiguation_note": null,
-          "localisation_stem": "Vologda",
+          "localisation_stem": "Lezha",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Principal river of the Vologda–Gryazovets plain.",
+          "relationship": "Right tributary of the Sukhona flowing directly through the Gryazovets lowland.",
           "language_variants": [
             {
-              "form": "Vologda",
-              "native_script": "Вологда",
+              "form": "Lezha",
+              "native_script": "Лежа",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Modern Russian hydronym."
-            },
-            {
-              "form": "Vologda",
-              "native_script": "Вологда",
-              "language": "Old East Slavic",
-              "language_code": "orv",
-              "notes": "Attested in 12th–13th century records."
+              "notes": "Russian hydronym"
             }
           ],
-          "earliest_attestation_year": 1147,
-          "earliest_attestation_note": "12th century CE (1147 CE in local hagiographical tradition).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Finno-Ugric substrate river of southern Vologda.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Finnic *valgeda ('white, bright, clear water', cf. Veps vauged).",
-          "source_url": "https://en.wikipedia.org/wiki/Vologda_(river)"
+          "etymology_notes": "Pre-Slavic Finno-Ugric hydronym (perhaps related to Meryan/Vepsian *leš- or *leža, 'slow/wooded stream').",
+          "source_url": "https://en.wikipedia.org/wiki/Lezha_(river)"
         },
         {
           "name": "Obnora",
@@ -12559,38 +12524,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Meryans"
         },
         {
-          "name": "Kostroma",
+          "name": "Vyoksa",
           "disambiguation_note": null,
-          "localisation_stem": "Kostroma",
+          "localisation_stem": "Vyoksa",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Main river draining the Galich–Chukhloma basin.",
+          "relationship": "Outlet river draining Lake Galichskoye directly past Galich Mersky toward the Kostroma.",
           "language_variants": [
             {
-              "form": "Kostroma",
-              "native_script": "Кострома",
+              "form": "Vyoksa",
+              "native_script": "Вёкса",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Modern Russian hydronym."
-            },
-            {
-              "form": "Kostroma",
-              "native_script": "Кострома",
-              "language": "Old East Slavic",
-              "language_code": "orv",
-              "notes": "Attested in 13th-century chronicles."
+              "notes": "Russian hydronym for the lake outlet"
             }
           ],
-          "earliest_attestation_year": 1213,
-          "earliest_attestation_note": "1213 CE in the Resurrection Chronicle.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-Slavic Finno-Ugric Meryan hydronym of the Lake Galichskoye basin.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Of Finno-Ugric (Meryan) origin, or linked to Slavic *kostromъ ('bonfire/straw').",
-          "source_url": "https://en.wikipedia.org/wiki/Kostroma_(river)"
+          "etymology_notes": "From Meryan / Finno-Ugric *vöksä / *veksä (meaning 'river/stream flowing out of a lake', cf. Finnish vuoksi).",
+          "source_url": "https://en.wikipedia.org/wiki/Vyoksa"
         },
         {
           "name": "Unzha",
@@ -12687,38 +12645,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Meryans"
         },
         {
-          "name": "Kostroma",
+          "name": "Viga",
           "disambiguation_note": null,
-          "localisation_stem": "Kostroma",
+          "localisation_stem": "Viga",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Principal river receiving the Vyoksa from Lake Chukhloma.",
+          "relationship": "Right tributary of the Unzha draining the forestlands immediately east of Chukhloma.",
           "language_variants": [
             {
-              "form": "Kostroma",
-              "native_script": "Кострома",
+              "form": "Viga",
+              "native_script": "Вига",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Modern Russian hydronym."
-            },
-            {
-              "form": "Kostroma",
-              "native_script": "Кострома",
-              "language": "Old East Slavic",
-              "language_code": "orv",
-              "notes": "Attested in 13th-century chronicles."
+              "notes": "Russian hydronym"
             }
           ],
-          "earliest_attestation_year": 1213,
-          "earliest_attestation_note": "1213 CE in the Resurrection Chronicle.",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "16th century CE in Chukhloma and Unzha charters.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Of Finno-Ugric (Meryan) origin, or linked to Slavic *kostromъ ('bonfire/straw').",
-          "source_url": "https://en.wikipedia.org/wiki/Kostroma_(river)"
+          "etymology_notes": "Substrate Finno-Ugric (Meryan) hydronym with the characteristic Volga-Oka suffix -ga ('river, water').",
+          "source_url": "https://en.wikipedia.org/wiki/Viga_(river)"
         },
         {
           "name": "Lake Galichskoye",
@@ -13957,38 +13908,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Oka_(river)"
         },
         {
-          "name": "Moskva",
+          "name": "Osyotr",
           "disambiguation_note": null,
-          "localisation_stem": "Moskva",
+          "localisation_stem": "Osyotr",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "River joining the Oka at Kolomna.",
+          "relationship": "Right tributary of the Oka entering just upstream of Kolomna.",
           "language_variants": [
             {
-              "form": "Moskva",
-              "native_script": "Москва",
+              "form": "Osyotr",
+              "native_script": "Осётр",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Modern Russian hydronym."
-            },
-            {
-              "form": "Moskŭvĭ",
-              "native_script": "Москъвь",
-              "language": "Old East Slavic",
-              "language_code": "orv",
-              "notes": "Attested in 12th-century chronicles (Moskŭvĭ)."
+              "notes": "Russian hydronym"
             }
           ],
-          "earliest_attestation_year": 1147,
-          "earliest_attestation_note": "Attested in the Hypatian Codex under 1147 CE.",
+          "earliest_attestation_year": 1146,
+          "earliest_attestation_note": "12th century CE in Ryazan chronicles.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Proto-Balto-Slavic *mazg- ('wet, marshy') or Finno-Ugric *mosk- ('dark, turbid').",
-          "source_url": "https://en.wikipedia.org/wiki/Moskva_(river)"
+          "etymology_notes": "From East Slavic osyotr ('sturgeon'), or a folk-etymological Slavicization of a Baltic *Asetra hydronym.",
+          "source_url": "https://en.wikipedia.org/wiki/Osyotr"
         }
       ]
     },

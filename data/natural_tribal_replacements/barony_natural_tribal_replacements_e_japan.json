@@ -138,21 +138,21 @@
       "candidates_per_barony": 3,
       "total_replacement_candidates": 102,
       "unique_replacement_names": 72,
-      "candidates_with_multilingual_variants": 55,
+      "candidates_with_multilingual_variants": 54,
       "wikipedia_source_attached": 102,
       "unique_source_urls": 72,
       "candidates_by_category": {
         "choronym": 0,
-        "hydronym": 42,
+        "hydronym": 41,
         "oronym": 21,
-        "topographic_feature": 5,
+        "topographic_feature": 6,
         "tribe": 34
       },
       "baronies_with_category": {
         "has_choronym_candidate": 0,
-        "has_hydronym_candidate": 32,
-        "has_oronym_candidate": 20,
-        "has_topographic_feature_candidate": 5,
+        "has_hydronym_candidate": 31,
+        "has_oronym_candidate": 19,
+        "has_topographic_feature_candidate": 6,
         "has_tribe_candidate": 34
       },
       "unique_language_codes": [
@@ -168,8 +168,8 @@
         "unattested_indigenous_or_minor": 2
       },
       "candidates_by_attestation_basis": {
-        "attested_pre_867": 72,
-        "indigenous_pre_literate": 30
+        "attested_pre_867": 74,
+        "indigenous_pre_literate": 28
       },
       "bookmark_valid_candidates": {
         "867": 102,
@@ -516,31 +516,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mount_Takahara"
         },
         {
-          "name": "Mount Nasu",
+          "name": "Hōki River",
           "disambiguation_note": null,
-          "localisation_stem": "Nasu",
-          "category": "oronym",
-          "feature_subtype": "mountain",
-          "relationship": "Active volcanic group bordering northern Shioya in Shimotsuke.",
+          "localisation_stem": "Hōki",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major tributary of the Naka River flowing southeastward through the Shiobara valley of Shioya District.",
           "language_variants": [
             {
-              "form": "Nasu-dake",
-              "native_script": "那須岳",
+              "form": "Hōki-gawa",
+              "native_script": "箒川",
               "language": "Japanese",
               "language_code": "jpn",
-              "notes": "Nasu-dake"
+              "notes": "Standard Japanese river name"
             }
           ],
-          "earliest_attestation_year": 700,
-          "earliest_attestation_note": "c. 700 CE (Nasu district and hot springs attested in Nara-period records)",
+          "earliest_attestation_year": 806,
+          "earliest_attestation_note": "c. 9th century CE (Draining the Shiobara hot-spring valley of ancient Shimotsuke)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after the ancient Nasu (那須) district of northern Shimotsuke.",
-          "source_url": "https://en.wikipedia.org/wiki/Mount_Nasu"
+          "etymology_notes": "River rising on Mount Takahara in northern Tochigi and cutting through the Shiobara gorge.",
+          "source_url": "https://en.wikipedia.org/wiki/H%C5%8Dki_River"
         }
       ]
     },
@@ -1727,38 +1727,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
         },
         {
-          "name": "Tone River",
+          "name": "Mount Asama",
           "disambiguation_note": null,
-          "localisation_stem": "Tone",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Primary river of Kōzuke receiving the drainage of the Agatsuma valley.",
+          "localisation_stem": "Asama",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Prominent active volcano rising immediately along the southern rim of the Agatsuma highland in western Kozuke.",
           "language_variants": [
             {
-              "form": "Tone-gawa",
-              "native_script": "利根川",
+              "form": "Asama-yama",
+              "native_script": "浅間山",
               "language": "Japanese",
               "language_code": "jpn",
-              "notes": "Tone-gawa"
+              "notes": "Standard Japanese oronym"
             },
             {
-              "form": "Tone",
-              "native_script": "利根",
+              "form": "Asama no Take",
+              "native_script": "浅間嶽",
               "language": "Old Japanese",
               "language_code": "ojp",
-              "notes": "Tone, attested in the Man'yōshū"
+              "notes": "Classical poetic and chronicle name"
             }
           ],
-          "earliest_attestation_year": 759,
-          "earliest_attestation_note": "759 CE (Attested in the Man'yōshū)",
+          "earliest_attestation_year": 685,
+          "earliest_attestation_note": "685 CE (Eruption of Mount Asama recorded in the Nihon Shoki)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Old Japanese toponym recorded in eastern Azuma-uta poems of the Man'yōshū.",
-          "source_url": "https://en.wikipedia.org/wiki/Tone_River"
+          "etymology_notes": "Active stratovolcano on the Kozuke-Shinano border above the upper Agatsuma valley.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Asama"
         },
         {
           "name": "Mount Kusatsu-Shirane",
@@ -2325,38 +2325,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Emishi"
         },
         {
-          "name": "Tsugaru Strait",
+          "name": "Shimokita Peninsula",
           "disambiguation_note": null,
-          "localisation_stem": "Tsugaru",
-          "category": "hydronym",
-          "feature_subtype": "strait",
-          "relationship": "Major strait separating northern Honshu from Hokkaido north of Usori.",
+          "localisation_stem": "Shimokita",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Axe-shaped northern peninsula of Mutsu enclosing Mutsu Bay where the Usori highland lies.",
           "language_variants": [
             {
-              "form": "Tsugaru-kaikyō",
-              "native_script": "津軽海峡",
+              "form": "Shimokita-hantō",
+              "native_script": "下北半島",
               "language": "Japanese",
               "language_code": "jpn",
-              "notes": "Tsugaru-kaikyō"
-            },
-            {
-              "form": "Tsugaru",
-              "native_script": "都加留",
-              "language": "Old Japanese",
-              "language_code": "ojp",
-              "notes": "Tsugaru, attested in the Nihon Shoki (655 CE)"
+              "notes": "Japanese peninsula name"
             }
           ],
-          "earliest_attestation_year": 655,
-          "earliest_attestation_note": "655 CE (Tsugaru recorded in the Nihon Shoki)",
+          "earliest_attestation_year": 720,
+          "earliest_attestation_note": "c. 8th century CE (Northernmost peninsula of Honshu in Emishi territory)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after the ancient Tsugaru region of northernmost Honshu.",
-          "source_url": "https://en.wikipedia.org/wiki/Tsugaru_Strait"
+          "etymology_notes": "Northernmost peninsula of Honshu enclosing Mutsu Bay, historically the homeland of the northern Emishi.",
+          "source_url": "https://en.wikipedia.org/wiki/Shimokita_Peninsula"
         },
         {
           "name": "Mutsu Bay",
@@ -2688,31 +2681,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
         },
         {
-          "name": "Hakata Bay",
+          "name": "Onga River",
           "disambiguation_note": null,
-          "localisation_stem": "Hakata",
+          "localisation_stem": "Onga",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Major natural harbor of Chikuzen just west of Kurate.",
+          "feature_subtype": "river",
+          "relationship": "Principal river of northern Chikuzen flowing directly through Kurate District into the Hibiki Sea.",
           "language_variants": [
             {
-              "form": "Hakata-wan",
-              "native_script": "博多湾",
+              "form": "Onga-gawa",
+              "native_script": "遠賀川",
               "language": "Japanese",
               "language_code": "jpn",
-              "notes": "Hakata-wan"
+              "notes": "Standard Japanese hydronym"
+            },
+            {
+              "form": "Oka",
+              "native_script": "岡",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Ancient Oka district name attested in the Nihon Shoki"
             }
           ],
-          "earliest_attestation_year": 759,
-          "earliest_attestation_note": "759 CE (Hakata port attested in the Shoku Nihongi)",
+          "earliest_attestation_year": 720,
+          "earliest_attestation_note": "720 CE (Oka harbor and river valley recorded in the Nihon Shoki)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after the ancient international port of Hakata in Chikuzen.",
-          "source_url": "https://en.wikipedia.org/wiki/Hakata_Bay"
+          "etymology_notes": "Class A river draining the Chikuho basin of northern Kyushu into the Genkai and Hibiki seas.",
+          "source_url": "https://en.wikipedia.org/wiki/Onga_River"
         },
         {
           "name": "Genkai Sea",
@@ -2964,31 +2964,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mount_Kirishima"
         },
         {
-          "name": "Kagoshima Bay",
-          "disambiguation_note": null,
-          "localisation_stem": "Kagoshima",
+          "name": "Sendai River",
+          "disambiguation_note": "Kyushu",
+          "localisation_stem": "Sendai",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Deep volcanic bay south of Isa in Satsuma.",
+          "feature_subtype": "river",
+          "relationship": "Longest river of Satsuma flowing westward directly through the Isa basin toward the western coast.",
           "language_variants": [
             {
-              "form": "Kagoshima-wan",
-              "native_script": "鹿児島湾",
+              "form": "Sendai-gawa",
+              "native_script": "川内川",
               "language": "Japanese",
               "language_code": "jpn",
-              "notes": "Kagoshima-wan"
+              "notes": "Standard Japanese river name"
             }
           ],
-          "earliest_attestation_year": 1340,
-          "earliest_attestation_note": "c. 1340 CE (Kagoshima attested as a Nanboku-chō Shimazu stronghold)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 713,
+          "earliest_attestation_note": "713 CE (Named after the ancient provincial capital Sendai of Satsuma Province)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after Kagoshima on its western shore.",
-          "source_url": "https://en.wikipedia.org/wiki/Kagoshima_Bay"
+          "etymology_notes": "Major Class A river rising near Mount Kirishima and traversing northern Satsuma through Isa.",
+          "source_url": "https://en.wikipedia.org/wiki/Sendai_River_(Kyushu)"
         }
       ]
     },
@@ -3314,72 +3314,58 @@
           "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
         },
         {
-          "name": "Yoshino River",
+          "name": "Mount Ōdaigahara",
           "disambiguation_note": null,
-          "localisation_stem": "Yoshino",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river flowing west through southern Yamato north of the Ōmine range.",
-          "language_variants": [
-            {
-              "form": "Yoshino-gawa",
-              "native_script": "吉野川",
-              "language": "Japanese",
-              "language_code": "jpn",
-              "notes": "Yoshino-gawa"
-            },
-            {
-              "form": "Yoshino",
-              "native_script": "吉野",
-              "language": "Old Japanese",
-              "language_code": "ojp",
-              "notes": "Yoshino, attested in the Kojiki and Nihon Shoki"
-            }
-          ],
-          "earliest_attestation_year": 712,
-          "earliest_attestation_note": "712 CE (Yoshino attested in the Kojiki and Man'yōshū)",
-          "attestation_basis": "attested_pre_867",
-          "valid_for_bookmarks": {
-            "867": true,
-            "1066": true,
-            "1178": true
-          },
-          "etymology_notes": "Named after the ancient Yoshino region of southern Yamato.",
-          "source_url": "https://en.wikipedia.org/wiki/Yoshino_River"
-        },
-        {
-          "name": "Mount Yoshino",
-          "disambiguation_note": null,
-          "localisation_stem": "Mount Yoshino",
+          "localisation_stem": "Ōdaigahara",
           "category": "oronym",
           "feature_subtype": "mountain",
-          "relationship": "Sacred mountain ridge at the northern gateway to the Ōmine range.",
+          "relationship": "High mountain plateau in the Daiko Range bordering the Omine massif of southern Yamato.",
           "language_variants": [
             {
-              "form": "Yoshino-yama",
-              "native_script": "吉野山",
+              "form": "Ōdaigahara-san",
+              "native_script": "大台ヶ原山",
               "language": "Japanese",
               "language_code": "jpn",
-              "notes": "Yoshino-yama"
-            },
-            {
-              "form": "Yoshino",
-              "native_script": "吉野",
-              "language": "Old Japanese",
-              "language_code": "ojp",
-              "notes": "Yoshino, imperial retreat and Shugendō center"
+              "notes": "Standard Japanese oronym"
             }
           ],
-          "earliest_attestation_year": 712,
-          "earliest_attestation_note": "712 CE (Attested in the Kojiki and Man'yōshū)",
+          "earliest_attestation_year": 700,
+          "earliest_attestation_note": "c. 8th century CE (Sacred mountain massif linked with early Yamato mountain asceticism)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Northernmost ridge of the Ōmine-Yoshino mountain system.",
-          "source_url": "https://en.wikipedia.org/wiki/Mount_Yoshino"
+          "etymology_notes": "Broad upland massif in the eastern Kii Mountains forming the headwaters of the Miyagawa and Kitayama rivers.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_%C5%8Cdaigahara"
+        },
+        {
+          "name": "Mount Kongō",
+          "disambiguation_note": null,
+          "localisation_stem": "Kongō",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Highest summit of the Kongō Range separating Yamato (Nara) from Kawachi (Osaka), flanking the Omine-Katsuragi mountain corridor.",
+          "language_variants": [
+            {
+              "form": "Kongō-san",
+              "native_script": null,
+              "language": "Japanese",
+              "language_code": "jpn",
+              "notes": "From Buddhist Sanskrit vajra-mountain (金剛山), associated with ancient Katsuragi asceticism."
+            }
+          ],
+          "earliest_attestation_year": 720,
+          "earliest_attestation_note": "Mountain peaks of the Katsuragi-Kongō range are attested in classical Yamato sacred mountain traditions by the Nara period (Nihon Shoki, 720 CE).",
+          "attestation_basis": "attested_pre_867",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Japanese Kongō-san derives from Buddhist vajra (diamond/thunderbolt mountain), crowning the Katsuragi-Kongō massif on Yamato's western border.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Kong%C5%8D"
         }
       ]
     },
@@ -3705,31 +3691,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
         },
         {
-          "name": "Naka River",
+          "name": "Yoshino River",
           "disambiguation_note": null,
-          "localisation_stem": "Naka",
+          "localisation_stem": "Yoshino",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major river of southern Awa just north of Kaifu District.",
+          "relationship": "Principal river of Awa Province flowing eastward across Tokushima into the Kii Channel.",
           "language_variants": [
             {
-              "form": "Naka-gawa",
-              "native_script": "那賀川",
+              "form": "Yoshino-gawa",
+              "native_script": "吉野川",
               "language": "Japanese",
               "language_code": "jpn",
-              "notes": "Naka-gawa"
+              "notes": "Yoshino-gawa"
+            },
+            {
+              "form": "Yoshino",
+              "native_script": "吉野",
+              "language": "Old Japanese",
+              "language_code": "ojp",
+              "notes": "Yoshino, attested in the Kojiki and Nihon Shoki"
             }
           ],
-          "earliest_attestation_year": 927,
-          "earliest_attestation_note": "927 CE (Naka district of Awa attested in the Engishiki)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 712,
+          "earliest_attestation_note": "712 CE (Yoshino attested in the Kojiki and Man'yōshū)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after the ancient Naka (那賀) district of Awa Province.",
-          "source_url": "https://en.wikipedia.org/wiki/Naka_River_(Tokushima)"
+          "etymology_notes": "Named after the ancient Yoshino region of southern Yamato.",
+          "source_url": "https://en.wikipedia.org/wiki/Yoshino_River"
         },
         {
           "name": "Kii Channel",
@@ -3954,38 +3947,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yamato_people"
         },
         {
-          "name": "Mount Daisen",
+          "name": "Miho Bay",
           "disambiguation_note": null,
-          "localisation_stem": "Daisen",
-          "category": "oronym",
-          "feature_subtype": "mountain",
-          "relationship": "Volcanic massif dominating Hōki Province northeast of Hino.",
+          "localisation_stem": "Miho",
+          "category": "hydronym",
+          "feature_subtype": "bay",
+          "relationship": "Coastal embayment of the Sea of Japan receiving the Hino River and Nakaumi lagoon on the Hoki-Izumo border.",
           "language_variants": [
             {
-              "form": "Daisen",
-              "native_script": "大山",
+              "form": "Miho-wan",
+              "native_script": "美保湾",
               "language": "Japanese",
               "language_code": "jpn",
-              "notes": "Daisen"
+              "notes": "Standard Japanese bay name"
             },
             {
-              "form": "Ōmiwa-dake",
-              "native_script": "大神岳",
+              "form": "Miho",
+              "native_script": "三穂",
               "language": "Old Japanese",
               "language_code": "ojp",
-              "notes": "Ōkami-no-take, attested in the Izumo Fudoki (733 CE)"
+              "notes": "Attested as Miho headland in the Izumo no Kuni Fudoki (733 CE)"
             }
           ],
           "earliest_attestation_year": 733,
-          "earliest_attestation_note": "733 CE (Attested as Ōkami-no-take in the Izumo no Kuni Fudoki)",
+          "earliest_attestation_note": "733 CE (Miho promontory and inlet recorded in the Izumo Fudoki)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Literally 'Great Mountain', revered in San'in mountain worship since the Nara period.",
-          "source_url": "https://en.wikipedia.org/wiki/Mount_Daisen"
+          "etymology_notes": "Sheltered bay bounded by the Shimane Peninsula and Yumigahama sandspit on the San'in coast.",
+          "source_url": "https://en.wikipedia.org/wiki/Miho_Bay"
         },
         {
           "name": "Nakaumi",

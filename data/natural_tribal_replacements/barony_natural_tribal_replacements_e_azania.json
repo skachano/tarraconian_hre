@@ -137,25 +137,26 @@
       "target_baronies_audited": 106,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 318,
-      "unique_replacement_names": 71,
-      "candidates_with_multilingual_variants": 137,
+      "unique_replacement_names": 74,
+      "candidates_with_multilingual_variants": 135,
       "wikipedia_source_attached": 318,
-      "unique_source_urls": 71,
+      "unique_source_urls": 74,
       "candidates_by_category": {
-        "choronym": 11,
-        "hydronym": 144,
-        "oronym": 28,
-        "topographic_feature": 28,
+        "choronym": 20,
+        "hydronym": 133,
+        "oronym": 27,
+        "topographic_feature": 31,
         "tribe": 107
       },
       "baronies_with_category": {
-        "has_choronym_candidate": 11,
-        "has_hydronym_candidate": 89,
+        "has_choronym_candidate": 19,
+        "has_hydronym_candidate": 87,
         "has_oronym_candidate": 24,
-        "has_topographic_feature_candidate": 22,
+        "has_topographic_feature_candidate": 26,
         "has_tribe_candidate": 106
       },
       "unique_language_codes": [
+        "amh",
         "ara",
         "grc",
         "lat",
@@ -172,17 +173,17 @@
         "unattested_indigenous_or_minor": 55
       },
       "candidates_by_attestation_basis": {
-        "attested_1066_to_1178": 18,
-        "attested_pre_867": 74,
-        "indigenous_pre_literate": 226
+        "attested_1066_to_1178": 17,
+        "attested_pre_867": 62,
+        "indigenous_pre_literate": 239
       },
       "bookmark_valid_candidates": {
-        "867": 300,
-        "1066": 300,
+        "867": 301,
+        "1066": 301,
         "1178": 318
       },
       "baronies_with_867_valid_candidate": 106,
-      "unique_localisation_stems": 71
+      "unique_localisation_stems": 74
     }
   },
   "baronies": {
@@ -607,52 +608,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Haud"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Shebelle River",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
+          "localisation_stem": "Shebelle",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Adjacent maritime waters bordering the Mudug littoral near Nudug-south.",
+          "feature_subtype": "river",
+          "relationship": "Major perennial river flowing south of the Mudug plateau.",
           "language_variants": [
             {
-              "form": "Badweynta Hindiya",
+              "form": "Webi Shabeelle",
               "native_script": null,
               "language": "Somali",
               "language_code": "som",
-              "notes": "Somali name"
+              "notes": "Somali name ('Leopard River')"
             },
             {
-              "form": "Bahari ya Hindi",
-              "native_script": null,
-              "language": "Swahili",
-              "language_code": "swa",
-              "notes": "Swahili name"
+              "form": "Wābi Šabalé",
+              "native_script": "ዋቢ ሸበሌ",
+              "language": "Amharic",
+              "language_code": "amh",
+              "notes": "Amharic form (Wabi Šäbäle)"
             },
             {
-              "form": "al-Muḥīṭ al-Hindī",
-              "native_script": "المحيط الهندي",
+              "form": "Nahr Shabīlī",
+              "native_script": "نهر شبيلي",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic name"
-            },
-            {
-              "form": "Mare Indicum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Arabic form (Nahr Shabīlī)"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1332,
+          "earliest_attestation_note": "Attested in 14th century CE Ethiopian and Arabic chronicles of Dawaro, Bali, and Adal.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major oceanic basin bordering the entire eastern coast of the Horn of Africa and Swahili Coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "From Somali webi shabeel ('river of leopards'); longest river of the Horn of Africa rising in the Bale Mountains.",
+          "source_url": "https://en.wikipedia.org/wiki/Shebelle_River"
         }
       ]
     },
@@ -742,52 +736,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Haud"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Nugaal",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Adjacent maritime waters bordering the Mudug littoral near Mudug-north.",
+          "localisation_stem": "Nugaal",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "Broad seasonal valley system bounding northern Mudug.",
           "language_variants": [
             {
-              "form": "Badweynta Hindiya",
+              "form": "Nugaal",
               "native_script": null,
               "language": "Somali",
               "language_code": "som",
               "notes": "Somali name"
             },
             {
-              "form": "Bahari ya Hindi",
-              "native_script": null,
-              "language": "Swahili",
-              "language_code": "swa",
-              "notes": "Swahili name"
-            },
-            {
-              "form": "al-Muḥīṭ al-Hindī",
-              "native_script": "المحيط الهندي",
+              "form": "Nūghāl",
+              "native_script": "نوغال",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic name"
-            },
-            {
-              "form": "Mare Indicum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Arabic form (Nūghāl)"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Attested in Somali pastoralist traditions as the broad seasonal valley system of northern Somalia.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major oceanic basin bordering the entire eastern coast of the Horn of Africa and Swahili Coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Broad seasonal valley system draining from the Sanaag and Sool plateaus toward the Indian Ocean.",
+          "source_url": "https://en.wikipedia.org/wiki/Nugaal_(geography)"
         }
       ]
     },
@@ -1185,45 +1165,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Barbaria_(region)"
         },
         {
-          "name": "Ras Hafun",
+          "name": "Guardafui Channel",
           "disambiguation_note": null,
-          "localisation_stem": "Ras Hafun",
-          "category": "topographic_feature",
-          "feature_subtype": "coastal_feature",
-          "relationship": "Prominent coastal landform along the Ras Hafun littoral near Gardafuul.",
+          "localisation_stem": "Guardafui Channel",
+          "category": "hydronym",
+          "feature_subtype": "strait",
+          "relationship": "Maritime strait separating the Gardafuul cape from the island of Socotra.",
           "language_variants": [
             {
-              "form": "Ras Xaafuun",
+              "form": "Marinka Gardafuul",
               "native_script": null,
               "language": "Somali",
               "language_code": "som",
-              "notes": "Somali name"
+              "notes": "Somali strait name"
             },
             {
-              "form": "Raʾs Ḥāfūn",
-              "native_script": "رأس حافون",
+              "form": "Maḍīq Jirdāfūn",
+              "native_script": "مضيق جردافون",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic name"
-            },
-            {
-              "form": "Opṓnē",
-              "native_script": "Ὀπώνη",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical name Opone"
+              "notes": "Arabic maritime form"
             }
           ],
-          "earliest_attestation_year": 50,
-          "earliest_attestation_note": "c. 50 CE (attested as the emporium of Opone in the Periplus of the Erythraean Sea).",
+          "earliest_attestation_year": 60,
+          "earliest_attestation_note": "Maritime passage around Aromata Promontorium documented in the 1st-century CE Periplus of the Erythraean Sea.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Arabic ras ('cape/headland') and Hafun, a prominent peninsula on the northeastern Somali coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Ras_Hafun"
+          "etymology_notes": "Oceanic strait off the apex of the Horn of Africa linking the Gulf of Aden and the Somali Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Guardafui_Channel"
         },
         {
           "name": "Erythraean Sea",
@@ -1535,38 +1508,45 @@
       },
       "replacement_candidates": [
         {
-          "name": "Hawiye",
+          "name": "Somali",
           "disambiguation_note": null,
-          "localisation_stem": "Hawiye",
+          "localisation_stem": "Somali",
           "category": "tribe",
           "feature_subtype": "cushitic_tribe",
-          "relationship": "Historical regional people inhabiting the Hiraab area around Beletweyne.",
+          "relationship": "East Cushitic pastoralist people inhabiting the middle Shebelle valley around Beletweyne.",
           "language_variants": [
             {
-              "form": "Hawiye",
+              "form": "Soomaali",
               "native_script": null,
               "language": "Somali",
               "language_code": "som",
-              "notes": "Major Somali clan confederation"
+              "notes": "Somali endonym"
             },
             {
-              "form": "Hawiyya",
-              "native_script": "هوية",
+              "form": "Ṣūmāliyyūn",
+              "native_script": "صوماليون",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Medieval Arabic geographic and genealogical form"
+              "notes": "Arabic form (Ṣūmāliyyūn)"
+            },
+            {
+              "form": "Sumālé",
+              "native_script": "ሱማሌ",
+              "language": "Amharic",
+              "language_code": "amh",
+              "notes": "Amharic form (Sumale)"
             }
           ],
-          "earliest_attestation_year": 1154,
-          "earliest_attestation_note": "1154 CE (mentioned by Arab geographer al-Idrisi in Nuzhat al-Mushtaq).",
-          "attestation_basis": "attested_1066_to_1178",
+          "earliest_attestation_year": 1415,
+          "earliest_attestation_note": "Attested in the 15th century CE Ge'ez victory song of Emperor Yeshaq I (r. 1414–1429 CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
-            "867": false,
-            "1066": false,
+            "867": true,
+            "1066": true,
             "1178": true
           },
-          "etymology_notes": "Somali clan confederation centered in central and southern Somalia, noted by medieval Arab geographers along the Benadir coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Hawiye"
+          "etymology_notes": "East Cushitic people of the Somali Peninsula, Harar plateau, and eastern Adal. Onomastic note: Somali endonym ('Soomaali').",
+          "source_url": "https://en.wikipedia.org/wiki/Somalis"
         },
         {
           "name": "Shebelle River",
@@ -1717,38 +1697,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Haud"
         },
         {
-          "name": "Sea of Zanj",
+          "name": "Dawa River",
           "disambiguation_note": null,
-          "localisation_stem": "Sea of Zanj",
+          "localisation_stem": "Dawa",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Adjacent maritime waters bordering the Hiraab littoral near Shabelle-Hiran.",
+          "feature_subtype": "river",
+          "relationship": "Major perennial river joining the Jubba west of the Hiran plains.",
           "language_variants": [
             {
-              "form": "Baḥr Zanj",
-              "native_script": "بحر زنج",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic Bahr Zanj"
+              "form": "Dāwā",
+              "native_script": "ዳዋ",
+              "language": "Amharic",
+              "language_code": "amh",
+              "notes": "Ethiopian name"
             },
             {
-              "form": "Bahari ya Zanj",
+              "form": "Daawaa",
               "native_script": null,
-              "language": "Swahili",
-              "language_code": "swa",
-              "notes": "Swahili name"
+              "language": "Oromo",
+              "language_code": "orm",
+              "notes": "Oromo form"
             }
           ],
-          "earliest_attestation_year": 947,
-          "earliest_attestation_note": "c. 947 CE (described by al-Mas'udi in Muruj al-Dhahab).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Attested in Ethiopian and Somali oral traditions (no pre-1700 CE written record).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Medieval Arab geographers' designation for the western Indian Ocean off the East African coast of Zanj.",
-          "source_url": "https://en.wikipedia.org/wiki/Sea_of_Zanj"
+          "etymology_notes": "Major perennial river rising in the Sidama/Guji highlands and flowing southeast through Borana.",
+          "source_url": "https://en.wikipedia.org/wiki/Dawa_River"
         }
       ]
     },
@@ -1811,38 +1791,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Hawiye"
         },
         {
-          "name": "Shebelle River",
+          "name": "Jubba River",
           "disambiguation_note": null,
-          "localisation_stem": "Shebelle",
+          "localisation_stem": "Jubba",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major regional river draining the Hiraab basin near Hudur.",
+          "relationship": "Major perennial river flowing south through the plains west of Hudur.",
           "language_variants": [
             {
-              "form": "Webi Shabeelle",
+              "form": "Webi Jubba",
               "native_script": null,
               "language": "Somali",
               "language_code": "som",
-              "notes": "Literally 'Leopard River' in Somali"
+              "notes": "Somali name"
             },
             {
-              "form": "Nahr Shabīlī",
-              "native_script": "نهر شبيلي",
+              "form": "Nahr Jūbā",
+              "native_script": "نهر جوبا",
               "language": "Arabic",
               "language_code": "ara",
               "notes": "Arabic form"
             }
           ],
-          "earliest_attestation_year": 1332,
-          "earliest_attestation_note": "Attested in 14th century CE Ethiopian and Arabic chronicles of Dawaro, Bali, and Adal.",
+          "earliest_attestation_year": 1499,
+          "earliest_attestation_note": "c. 1499 CE (recorded by early Portuguese navigators along the southern Somali coast).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Somali webi ('river') and shabeel ('leopard'), rising in the Ethiopian highlands and flowing across southern Somalia.",
-          "source_url": "https://en.wikipedia.org/wiki/Shebelle_River"
+          "etymology_notes": "Major perennial river of southern Somalia formed at Doolow by the confluence of the Dawa and Ganale rivers.",
+          "source_url": "https://en.wikipedia.org/wiki/Jubba_River"
         },
         {
           "name": "Haud",
@@ -1932,52 +1912,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Hawiye"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Nugaal",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Adjacent maritime waters bordering the Hobyo littoral near Hobyo.",
+          "localisation_stem": "Nugaal",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "Broad seasonal valley system stretching north of the Mudug and Hobyo plains.",
           "language_variants": [
             {
-              "form": "Badweynta Hindiya",
+              "form": "Nugaal",
               "native_script": null,
               "language": "Somali",
               "language_code": "som",
               "notes": "Somali name"
             },
             {
-              "form": "Bahari ya Hindi",
-              "native_script": null,
-              "language": "Swahili",
-              "language_code": "swa",
-              "notes": "Swahili name"
-            },
-            {
-              "form": "al-Muḥīṭ al-Hindī",
-              "native_script": "المحيط الهندي",
+              "form": "Nūghāl",
+              "native_script": "نوغال",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic name"
-            },
-            {
-              "form": "Mare Indicum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Arabic form (Nūghāl)"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Attested in Somali pastoralist traditions as the broad seasonal valley system of northern Somalia.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major oceanic basin bordering the entire eastern coast of the Horn of Africa and Swahili Coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Broad seasonal valley system draining from the Sanaag and Sool plateaus toward the Indian Ocean.",
+          "source_url": "https://en.wikipedia.org/wiki/Nugaal_(geography)"
         },
         {
           "name": "Haud",
@@ -2067,52 +2033,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Hawiye"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Banaadir",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Adjacent maritime waters bordering the Hobyo littoral near Galkayo.",
+          "localisation_stem": "Banaadir",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Historic Somali littoral extending southward from the Hobyo coast.",
           "language_variants": [
             {
-              "form": "Badweynta Hindiya",
+              "form": "Banaadir",
               "native_script": null,
               "language": "Somali",
               "language_code": "som",
-              "notes": "Somali name"
+              "notes": "Somali coastal region name"
             },
             {
-              "form": "Bahari ya Hindi",
-              "native_script": null,
-              "language": "Swahili",
-              "language_code": "swa",
-              "notes": "Swahili name"
-            },
-            {
-              "form": "al-Muḥīṭ al-Hindī",
-              "native_script": "المحيط الهندي",
+              "form": "Banādir",
+              "native_script": "بنادر",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic name"
-            },
-            {
-              "form": "Mare Indicum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Arabic plural of Persian bandar ('ports')"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1200,
+          "earliest_attestation_note": "Pre-modern Somali coastal littoral attested in medieval Indian Ocean maritime geography.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major oceanic basin bordering the entire eastern coast of the Horn of Africa and Swahili Coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Historic south-central Somali coastal belt stretching from Hobyo past Mogadishu to Baraawe.",
+          "source_url": "https://en.wikipedia.org/wiki/Banaadir"
         },
         {
           "name": "Haud",
@@ -2202,52 +2154,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Hawiye"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Karkaar Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Adjacent maritime waters bordering the Hobyo littoral near Hobyo-north.",
+          "localisation_stem": "Karkaar",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Arid plateau escarpment rising across northeastern Somalia north of Hobyo.",
           "language_variants": [
             {
-              "form": "Badweynta Hindiya",
+              "form": "Buuraha Karkaar",
               "native_script": null,
               "language": "Somali",
               "language_code": "som",
               "notes": "Somali name"
             },
             {
-              "form": "Bahari ya Hindi",
-              "native_script": null,
-              "language": "Swahili",
-              "language_code": "swa",
-              "notes": "Swahili name"
-            },
-            {
-              "form": "al-Muḥīṭ al-Hindī",
-              "native_script": "المحيط الهندي",
+              "form": "Jibāl Karkār",
+              "native_script": "جبال كركار",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic name"
-            },
-            {
-              "form": "Mare Indicum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Arabic form (Jibāl Karkār)"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Attested in Somali traditions of Bari and Sanaag south of the Gulf of Aden.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major oceanic basin bordering the entire eastern coast of the Horn of Africa and Swahili Coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Limestone mountain range stretching across northeastern Somalia south of Bosaso.",
+          "source_url": "https://en.wikipedia.org/wiki/Karkaar"
         },
         {
           "name": "Haud",
@@ -2337,52 +2275,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Hawiye"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Banaadir",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Adjacent maritime waters bordering the Mareeg littoral near Mareeg.",
+          "localisation_stem": "Banaadir",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Historic Somali coastal belt extending along the littoral around Mareeg.",
           "language_variants": [
             {
-              "form": "Badweynta Hindiya",
+              "form": "Banaadir",
               "native_script": null,
               "language": "Somali",
               "language_code": "som",
-              "notes": "Somali name"
+              "notes": "Somali coastal region name"
             },
             {
-              "form": "Bahari ya Hindi",
-              "native_script": null,
-              "language": "Swahili",
-              "language_code": "swa",
-              "notes": "Swahili name"
-            },
-            {
-              "form": "al-Muḥīṭ al-Hindī",
-              "native_script": "المحيط الهندي",
+              "form": "Banādir",
+              "native_script": "بنادر",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic name"
-            },
-            {
-              "form": "Mare Indicum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Arabic plural of Persian bandar ('ports')"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1200,
+          "earliest_attestation_note": "Pre-modern Somali coastal littoral attested in medieval Indian Ocean maritime geography.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major oceanic basin bordering the entire eastern coast of the Horn of Africa and Swahili Coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Historic south-central Somali coastal belt stretching from Hobyo past Mogadishu to Baraawe.",
+          "source_url": "https://en.wikipedia.org/wiki/Banaadir"
         },
         {
           "name": "Shebelle River",
@@ -2479,52 +2403,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Hawiye"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Hobyo Grasslands and Shrublands",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Adjacent maritime waters bordering the Mareeg littoral near El Dere.",
+          "localisation_stem": "Hobyo Grasslands and Shrublands",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Coastal sand-dune scrubland belt stretching along the littoral past El Dere.",
           "language_variants": [
             {
-              "form": "Badweynta Hindiya",
+              "form": "Banaanka Hobyo",
               "native_script": null,
               "language": "Somali",
               "language_code": "som",
-              "notes": "Somali name"
-            },
-            {
-              "form": "Bahari ya Hindi",
-              "native_script": null,
-              "language": "Swahili",
-              "language_code": "swa",
-              "notes": "Swahili name"
-            },
-            {
-              "form": "al-Muḥīṭ al-Hindī",
-              "native_script": "المحيط الهندي",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic name"
-            },
-            {
-              "form": "Mare Indicum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Somali coastal dune belt designation"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Natural coastal dune and shrubland belt along central Somalia.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major oceanic basin bordering the entire eastern coast of the Horn of Africa and Swahili Coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Coastal sand-dune scrubland belt extending along central Somalia past Mareeg and Warsheikh.",
+          "source_url": "https://en.wikipedia.org/wiki/Hobyo_grasslands_and_shrublands"
         },
         {
           "name": "Shebelle River",
@@ -2621,52 +2524,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Hawiye"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Haud",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Adjacent maritime waters bordering the Mareeg littoral near El Buur.",
+          "localisation_stem": "Haud",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Semi-arid bushland plateau bordering the interior plains north of El Buur.",
           "language_variants": [
             {
-              "form": "Badweynta Hindiya",
+              "form": "Hawd",
               "native_script": null,
               "language": "Somali",
               "language_code": "som",
-              "notes": "Somali name"
+              "notes": "Somali name ('Thornbush Plateau')"
             },
             {
-              "form": "Bahari ya Hindi",
-              "native_script": null,
-              "language": "Swahili",
-              "language_code": "swa",
-              "notes": "Swahili name"
-            },
-            {
-              "form": "al-Muḥīṭ al-Hindī",
-              "native_script": "المحيط الهندي",
+              "form": "Ḥawḍ",
+              "native_script": "حوض",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic name"
-            },
-            {
-              "form": "Mare Indicum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Arabic form (Ḥawḍ)"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Attested in Somali pastoralist and Adalite traditions as the grazing plateau south of Harar and Hargeisa.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major oceanic basin bordering the entire eastern coast of the Horn of Africa and Swahili Coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "From Somali hawd ('dense thornbush'); elevated semi-arid grazing plateau spanning northern Ogaden and Somaliland.",
+          "source_url": "https://en.wikipedia.org/wiki/Haud"
         },
         {
           "name": "Shebelle River",
@@ -2763,52 +2652,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Hawiye"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Nugaal",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Adjacent maritime waters bordering the Mareeg littoral near Dhusamareb.",
+          "localisation_stem": "Nugaal",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "Major seasonal valley system lying north of Dhusamareb and Galguduud.",
           "language_variants": [
             {
-              "form": "Badweynta Hindiya",
+              "form": "Nugaal",
               "native_script": null,
               "language": "Somali",
               "language_code": "som",
               "notes": "Somali name"
             },
             {
-              "form": "Bahari ya Hindi",
-              "native_script": null,
-              "language": "Swahili",
-              "language_code": "swa",
-              "notes": "Swahili name"
-            },
-            {
-              "form": "al-Muḥīṭ al-Hindī",
-              "native_script": "المحيط الهندي",
+              "form": "Nūghāl",
+              "native_script": "نوغال",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic name"
-            },
-            {
-              "form": "Mare Indicum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Arabic form (Nūghāl)"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Attested in Somali pastoralist traditions as the broad seasonal valley system of northern Somalia.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major oceanic basin bordering the entire eastern coast of the Horn of Africa and Swahili Coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Broad seasonal valley system draining from the Sanaag and Sool plateaus toward the Indian Ocean.",
+          "source_url": "https://en.wikipedia.org/wiki/Nugaal_(geography)"
         },
         {
           "name": "Shebelle River",
@@ -2939,38 +2814,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shebelle_River"
         },
         {
-          "name": "Sea of Zanj",
+          "name": "Banaadir",
           "disambiguation_note": null,
-          "localisation_stem": "Sea of Zanj",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Adjacent maritime waters bordering the Mogadishu littoral near Mogadishu.",
+          "localisation_stem": "Banaadir",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Historic Somali coastal region centered on the port of Mogadishu.",
           "language_variants": [
             {
-              "form": "Baḥr Zanj",
-              "native_script": "بحر زنج",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic Bahr Zanj"
+              "form": "Banaadir",
+              "native_script": null,
+              "language": "Somali",
+              "language_code": "som",
+              "notes": "Somali coastal region name"
             },
             {
-              "form": "Bahari ya Zanj",
-              "native_script": null,
-              "language": "Swahili",
-              "language_code": "swa",
-              "notes": "Swahili name"
+              "form": "Banādir",
+              "native_script": "بنادر",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic plural of Persian bandar ('ports')"
             }
           ],
-          "earliest_attestation_year": 947,
-          "earliest_attestation_note": "c. 947 CE (described by al-Mas'udi in Muruj al-Dhahab).",
+          "earliest_attestation_year": 1200,
+          "earliest_attestation_note": "Pre-modern Somali coastal littoral attested in medieval Indian Ocean maritime geography.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Medieval Arab geographers' designation for the western Indian Ocean off the East African coast of Zanj.",
-          "source_url": "https://en.wikipedia.org/wiki/Sea_of_Zanj"
+          "etymology_notes": "Historic south-central Somali coastal belt stretching from Hobyo past Mogadishu to Baraawe.",
+          "source_url": "https://en.wikipedia.org/wiki/Banaadir"
         }
       ]
     },
@@ -3067,38 +2942,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shebelle_River"
         },
         {
-          "name": "Sea of Zanj",
+          "name": "Jubba River",
           "disambiguation_note": null,
-          "localisation_stem": "Sea of Zanj",
+          "localisation_stem": "Jubba",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Adjacent maritime waters bordering the Mogadishu littoral near Afgooye.",
+          "feature_subtype": "river",
+          "relationship": "Major perennial river system lying southwest of Afgooye.",
           "language_variants": [
             {
-              "form": "Baḥr Zanj",
-              "native_script": "بحر زنج",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic Bahr Zanj"
+              "form": "Webi Jubba",
+              "native_script": null,
+              "language": "Somali",
+              "language_code": "som",
+              "notes": "Somali name"
             },
             {
-              "form": "Bahari ya Zanj",
-              "native_script": null,
-              "language": "Swahili",
-              "language_code": "swa",
-              "notes": "Swahili name"
+              "form": "Nahr Jūbā",
+              "native_script": "نهر جوبا",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic form"
             }
           ],
-          "earliest_attestation_year": 947,
-          "earliest_attestation_note": "c. 947 CE (described by al-Mas'udi in Muruj al-Dhahab).",
+          "earliest_attestation_year": 1499,
+          "earliest_attestation_note": "c. 1499 CE (recorded by early Portuguese navigators along the southern Somali coast).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Medieval Arab geographers' designation for the western Indian Ocean off the East African coast of Zanj.",
-          "source_url": "https://en.wikipedia.org/wiki/Sea_of_Zanj"
+          "etymology_notes": "Major perennial river of southern Somalia formed at Doolow by the confluence of the Dawa and Ganale rivers.",
+          "source_url": "https://en.wikipedia.org/wiki/Jubba_River"
         }
       ]
     },
@@ -3195,38 +3070,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Shebelle_River"
         },
         {
-          "name": "Sea of Zanj",
+          "name": "Hobyo Grasslands and Shrublands",
           "disambiguation_note": null,
-          "localisation_stem": "Sea of Zanj",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Adjacent maritime waters bordering the Mogadishu littoral near Warsheikh.",
+          "localisation_stem": "Hobyo Grasslands and Shrublands",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Coastal dune scrubland belt extending along the shore past Warsheikh.",
           "language_variants": [
             {
-              "form": "Baḥr Zanj",
-              "native_script": "بحر زنج",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic Bahr Zanj"
-            },
-            {
-              "form": "Bahari ya Zanj",
+              "form": "Banaanka Hobyo",
               "native_script": null,
-              "language": "Swahili",
-              "language_code": "swa",
-              "notes": "Swahili name"
+              "language": "Somali",
+              "language_code": "som",
+              "notes": "Somali coastal dune belt designation"
             }
           ],
-          "earliest_attestation_year": 947,
-          "earliest_attestation_note": "c. 947 CE (described by al-Mas'udi in Muruj al-Dhahab).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Natural coastal dune and shrubland belt along central Somalia.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Medieval Arab geographers' designation for the western Indian Ocean off the East African coast of Zanj.",
-          "source_url": "https://en.wikipedia.org/wiki/Sea_of_Zanj"
+          "etymology_notes": "Coastal sand-dune scrubland belt extending along central Somalia past Mareeg and Warsheikh.",
+          "source_url": "https://en.wikipedia.org/wiki/Hobyo_grasslands_and_shrublands"
         }
       ]
     },
@@ -3323,38 +3191,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shebelle_River"
         },
         {
-          "name": "Sea of Zanj",
+          "name": "Haud",
           "disambiguation_note": null,
-          "localisation_stem": "Sea of Zanj",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Adjacent maritime waters bordering the Mogadishu littoral near Jowhaar.",
+          "localisation_stem": "Haud",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Interior bushland plateau bordering the upper Middle Shabelle north of Jowhaar.",
           "language_variants": [
             {
-              "form": "Baḥr Zanj",
-              "native_script": "بحر زنج",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic Bahr Zanj"
+              "form": "Hawd",
+              "native_script": null,
+              "language": "Somali",
+              "language_code": "som",
+              "notes": "Somali name ('Thornbush Plateau')"
             },
             {
-              "form": "Bahari ya Zanj",
-              "native_script": null,
-              "language": "Swahili",
-              "language_code": "swa",
-              "notes": "Swahili name"
+              "form": "Ḥawḍ",
+              "native_script": "حوض",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic form (Ḥawḍ)"
             }
           ],
-          "earliest_attestation_year": 947,
-          "earliest_attestation_note": "c. 947 CE (described by al-Mas'udi in Muruj al-Dhahab).",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Attested in Somali pastoralist and Adalite traditions as the grazing plateau south of Harar and Hargeisa.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Medieval Arab geographers' designation for the western Indian Ocean off the East African coast of Zanj.",
-          "source_url": "https://en.wikipedia.org/wiki/Sea_of_Zanj"
+          "etymology_notes": "From Somali hawd ('dense thornbush'); elevated semi-arid grazing plateau spanning northern Ogaden and Somaliland.",
+          "source_url": "https://en.wikipedia.org/wiki/Haud"
         }
       ]
     },
@@ -3517,31 +3385,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Barbaria_(region)"
         },
         {
-          "name": "Bale Mountains",
+          "name": "Harenna Forest",
           "disambiguation_note": null,
-          "localisation_stem": "Bale",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Prominent highland feature overlooking the Bali region near Bali-west.",
+          "localisation_stem": "Harenna",
+          "category": "topographic_feature",
+          "feature_subtype": "forest",
+          "relationship": "Montane cloud forest covering the southern escarpment of the Bale massif.",
           "language_variants": [
             {
-              "form": "Gaarreen Baalee",
+              "form": "Harannaa",
               "native_script": null,
               "language": "Oromo",
               "language_code": "orm",
               "notes": "Oromo name"
+            },
+            {
+              "form": "Haranā Č̣ākā",
+              "native_script": "ሀረና ጫካ",
+              "language": "Amharic",
+              "language_code": "amh",
+              "notes": "Amharic name (Häräna Č̣aka)"
             }
           ],
-          "earliest_attestation_year": 1332,
-          "earliest_attestation_note": "1332 CE (region of Bali attested in the chronicles of Ethiopian Emperor Amda Seyon I).",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Attested in Bale highland traditions on the southern slopes of the Bale Mountains (c. 16th century CE).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Highland massif in southeastern Ethiopia, source of the Weyib, Shebelle, and Ganale rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Bale_Mountains"
+          "etymology_notes": "Montane cloud forest on the southern escarpment of the Bale Mountains.",
+          "source_url": "https://en.wikipedia.org/wiki/Harenna_Forest"
         },
         {
           "name": "Weyib River",
@@ -3731,31 +3606,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Barbaria_(region)"
         },
         {
-          "name": "Bale Mountains",
+          "name": "Ganale Doria River",
           "disambiguation_note": null,
-          "localisation_stem": "Bale",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Prominent highland feature overlooking the Bali region near Bali.",
+          "localisation_stem": "Ganale Doria",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Perennial river rising in the southern Bale highlands and flowing southeast.",
           "language_variants": [
             {
-              "form": "Gaarreen Baalee",
+              "form": "Ganālé",
+              "native_script": "ገናሌ",
+              "language": "Amharic",
+              "language_code": "amh",
+              "notes": "Amharic form (Gänale)"
+            },
+            {
+              "form": "Ganaalee",
               "native_script": null,
               "language": "Oromo",
               "language_code": "orm",
-              "notes": "Oromo name"
+              "notes": "Oromo form"
+            },
+            {
+              "form": "Webi Ganaane",
+              "native_script": null,
+              "language": "Somali",
+              "language_code": "som",
+              "notes": "Somali form"
             }
           ],
-          "earliest_attestation_year": 1332,
-          "earliest_attestation_note": "1332 CE (region of Bali attested in the chronicles of Ethiopian Emperor Amda Seyon I).",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Attested in 16th century CE regional chronicles of Bale and Borana as the upper Jubba headstream.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Highland massif in southeastern Ethiopia, source of the Weyib, Shebelle, and Ganale rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Bale_Mountains"
+          "etymology_notes": "Perennial river rising in the Bale Mountains and uniting with the Dawa to form the Jubba River.",
+          "source_url": "https://en.wikipedia.org/wiki/Ganale_Doria_River"
         },
         {
           "name": "Weyib River",
@@ -5168,52 +5057,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ewaso_Ng'iro"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Bajuni Islands",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Adjacent maritime waters bordering the Lag Dera littoral near Lower Jubba.",
+          "localisation_stem": "Bajuni Islands",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Coastal coral archipelago situated immediately off the Lower Jubba shore.",
           "language_variants": [
             {
-              "form": "Badweynta Hindiya",
+              "form": "Jasiiradaha Jubbada Hoose",
               "native_script": null,
               "language": "Somali",
               "language_code": "som",
               "notes": "Somali name"
             },
             {
-              "form": "Bahari ya Hindi",
-              "native_script": null,
-              "language": "Swahili",
-              "language_code": "swa",
-              "notes": "Swahili name"
-            },
-            {
-              "form": "al-Muḥīṭ al-Hindī",
-              "native_script": "المحيط الهندي",
+              "form": "Juzur Bājūnī",
+              "native_script": "جزر باجوني",
               "language": "Arabic",
               "language_code": "ara",
               "notes": "Arabic name"
-            },
-            {
-              "form": "Mare Indicum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Attested in Swahili and Somali coastal oral tradition (no pre-1700 CE written record).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major oceanic basin bordering the entire eastern coast of the Horn of Africa and Swahili Coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Chain of coral islands along the southern Somali coast between Kismayo and Ras Kamboni.",
+          "source_url": "https://en.wikipedia.org/wiki/Bajuni_Islands"
         }
       ]
     },
@@ -5497,31 +5372,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Rendille_people"
         },
         {
-          "name": "Mount Marsabit",
+          "name": "Ndoto Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Marsabit",
+          "localisation_stem": "Ndoto",
           "category": "oronym",
-          "feature_subtype": "mountain",
-          "relationship": "Prominent highland feature overlooking the Marsabit region near Lagh Bogal.",
+          "feature_subtype": "mountain_range",
+          "relationship": "Forested highland range rising south of Marsabit above the northern Kenyan plains.",
           "language_variants": [
             {
-              "form": "Marsabit",
+              "form": "Milima ya Ndoto",
               "native_script": null,
-              "language": "Oromo",
-              "language_code": "orm",
-              "notes": "Borana Oromo regional name"
+              "language": "Swahili",
+              "language_code": "swa",
+              "notes": "Swahili geographic form"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in Borana and Rendille oral tradition (no pre-1700 CE written record).",
+          "earliest_attestation_note": "Attested in Samburu and Rendille oral tradition (no pre-1700 CE written record).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Forested basaltic shield volcano rising from the arid plains of northern Kenya.",
-          "source_url": "https://en.wikipedia.org/wiki/Mount_Marsabit"
+          "etymology_notes": "Mountain range in northern Kenya rising above the Ewaso Ng'iro plains.",
+          "source_url": "https://en.wikipedia.org/wiki/Ndoto_Mountains"
         },
         {
           "name": "Chalbi Desert",
@@ -5611,38 +5486,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Somalis"
         },
         {
-          "name": "Shebelle River",
+          "name": "Dawa River",
           "disambiguation_note": null,
-          "localisation_stem": "Shebelle",
+          "localisation_stem": "Dawa",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major regional river draining the Gidaya basin near Gidaya.",
+          "relationship": "Perennial river system draining the southern Ethiopian highlands toward the Jubba.",
           "language_variants": [
             {
-              "form": "Webi Shabeelle",
-              "native_script": null,
-              "language": "Somali",
-              "language_code": "som",
-              "notes": "Literally 'Leopard River' in Somali"
+              "form": "Dāwā",
+              "native_script": "ዳዋ",
+              "language": "Amharic",
+              "language_code": "amh",
+              "notes": "Ethiopian name"
             },
             {
-              "form": "Nahr Shabīlī",
-              "native_script": "نهر شبيلي",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic form"
+              "form": "Daawaa",
+              "native_script": null,
+              "language": "Oromo",
+              "language_code": "orm",
+              "notes": "Oromo form"
             }
           ],
-          "earliest_attestation_year": 1332,
-          "earliest_attestation_note": "Attested in 14th century CE Ethiopian and Arabic chronicles of Dawaro, Bali, and Adal.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Attested in Ethiopian and Somali oral traditions (no pre-1700 CE written record).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Somali webi ('river') and shabeel ('leopard'), rising in the Ethiopian highlands and flowing across southern Somalia.",
-          "source_url": "https://en.wikipedia.org/wiki/Shebelle_River"
+          "etymology_notes": "Major perennial river rising in the Sidama/Guji highlands and flowing southeast through Borana.",
+          "source_url": "https://en.wikipedia.org/wiki/Dawa_River"
         },
         {
           "name": "Fafen River",
@@ -5853,38 +5728,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Somalis"
         },
         {
-          "name": "Shebelle River",
+          "name": "Ahmar Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Shebelle",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major regional river draining the Gidaya basin near Gidaya-north.",
+          "localisation_stem": "Ahmar",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Rugged highland chain forming the northern watershed of the Shebelle basin.",
           "language_variants": [
             {
-              "form": "Webi Shabeelle",
-              "native_script": null,
-              "language": "Somali",
-              "language_code": "som",
-              "notes": "Literally 'Leopard River' in Somali"
+              "form": "Aḥmar Terāroč",
+              "native_script": "አሕመር ተራሮች",
+              "language": "Amharic",
+              "language_code": "amh",
+              "notes": "Amharic mountain range name"
             },
             {
-              "form": "Nahr Shabīlī",
-              "native_script": "نهر شبيلي",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic form"
+              "form": "Gaarreen Ahmar",
+              "native_script": null,
+              "language": "Oromo",
+              "language_code": "orm",
+              "notes": "Oromo highland name"
             }
           ],
-          "earliest_attestation_year": 1332,
-          "earliest_attestation_note": "Attested in 14th century CE Ethiopian and Arabic chronicles of Dawaro, Bali, and Adal.",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Attested in 16th century CE Adalite and Harari traditions of the Chercher-Harar ridge.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Somali webi ('river') and shabeel ('leopard'), rising in the Ethiopian highlands and flowing across southern Somalia.",
-          "source_url": "https://en.wikipedia.org/wiki/Shebelle_River"
+          "etymology_notes": "Eastern Ethiopian highland chain rising between Harar and the Shebelle watershed.",
+          "source_url": "https://en.wikipedia.org/wiki/Ahmar_Mountains"
         },
         {
           "name": "Fafen River",
@@ -5974,38 +5849,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Somalis"
         },
         {
-          "name": "Shebelle River",
+          "name": "Haud",
           "disambiguation_note": null,
-          "localisation_stem": "Shebelle",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major regional river draining the Gidaya basin near Gidaya-east.",
+          "localisation_stem": "Haud",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Semi-arid pastoral plateau extending across the eastern Somali borderlands.",
           "language_variants": [
             {
-              "form": "Webi Shabeelle",
+              "form": "Hawd",
               "native_script": null,
               "language": "Somali",
               "language_code": "som",
-              "notes": "Literally 'Leopard River' in Somali"
+              "notes": "Somali name ('Thornbush Plateau')"
             },
             {
-              "form": "Nahr Shabīlī",
-              "native_script": "نهر شبيلي",
+              "form": "Ḥawḍ",
+              "native_script": "حوض",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic form"
+              "notes": "Arabic form (Ḥawḍ)"
             }
           ],
-          "earliest_attestation_year": 1332,
-          "earliest_attestation_note": "Attested in 14th century CE Ethiopian and Arabic chronicles of Dawaro, Bali, and Adal.",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Attested in Somali pastoralist and Adalite traditions as the grazing plateau south of Harar and Hargeisa.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Somali webi ('river') and shabeel ('leopard'), rising in the Ethiopian highlands and flowing across southern Somalia.",
-          "source_url": "https://en.wikipedia.org/wiki/Shebelle_River"
+          "etymology_notes": "From Somali hawd ('dense thornbush'); elevated semi-arid grazing plateau spanning northern Ogaden and Somaliland.",
+          "source_url": "https://en.wikipedia.org/wiki/Haud"
         },
         {
           "name": "Fafen River",
@@ -7020,52 +6895,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Ewaso_Ng'iro"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Ungwana Bay",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
+          "localisation_stem": "Ungwana",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Adjacent maritime waters bordering the Mto Tana littoral near Mto Tana.",
+          "feature_subtype": "bay",
+          "relationship": "Broad coastal bay receiving the waters of the Tana River delta.",
           "language_variants": [
             {
-              "form": "Badweynta Hindiya",
-              "native_script": null,
-              "language": "Somali",
-              "language_code": "som",
-              "notes": "Somali name"
-            },
-            {
-              "form": "Bahari ya Hindi",
+              "form": "Ghuba ya Ungwana",
               "native_script": null,
               "language": "Swahili",
               "language_code": "swa",
-              "notes": "Swahili name"
-            },
-            {
-              "form": "al-Muḥīṭ al-Hindī",
-              "native_script": "المحيط الهندي",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic name"
-            },
-            {
-              "form": "Mare Indicum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Swahili coastal bay name"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 900,
+          "earliest_attestation_note": "Swahili coastal bay documented archaeologically at Ungwana and Shaka from the late first millennium CE.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major oceanic basin bordering the entire eastern coast of the Horn of Africa and Swahili Coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Broad Indian Ocean bay on the Kenyan coast receiving the Tana River delta.",
+          "source_url": "https://en.wikipedia.org/wiki/Ungwana_Bay"
         }
       ]
     },
@@ -7549,38 +7403,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mijikenda_peoples"
         },
         {
-          "name": "Mombasa Island",
+          "name": "Kilifi Creek",
           "disambiguation_note": null,
-          "localisation_stem": "Mombasa",
-          "category": "topographic_feature",
-          "feature_subtype": "coastal_feature",
-          "relationship": "Prominent coastal landform along the Mombasa littoral near Mtwapa.",
+          "localisation_stem": "Kilifi Creek",
+          "category": "hydronym",
+          "feature_subtype": "estuary",
+          "relationship": "Tidal coastal estuary opening onto the ocean just north of Mtwapa.",
           "language_variants": [
             {
-              "form": "Kisiwa cha Mombasa",
+              "form": "Mkondo wa Kilifi",
               "native_script": null,
               "language": "Swahili",
               "language_code": "swa",
-              "notes": "Swahili name"
-            },
-            {
-              "form": "Manbasa",
-              "native_script": "منبسة",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic form"
+              "notes": "Swahili tidal creek name"
             }
           ],
-          "earliest_attestation_year": 1154,
-          "earliest_attestation_note": "1154 CE (attested as Manfasa by al-Idrisi in Nuzhat al-Mushtaq).",
+          "earliest_attestation_year": 1300,
+          "earliest_attestation_note": "Coastal tidal inlet flanked by medieval Mnarani settlements from the 14th century CE.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Coralline island on the Kenyan coast housing the medieval Swahili port of Mombasa.",
-          "source_url": "https://en.wikipedia.org/wiki/Mombasa_Island"
+          "etymology_notes": "Narrow tidal estuary along the Kenyan coast north of Mtwapa and Mombasa.",
+          "source_url": "https://en.wikipedia.org/wiki/Kilifi_Creek"
         },
         {
           "name": "Chale Island",
@@ -8005,31 +7852,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Zanj"
         },
         {
-          "name": "Lamu Archipelago",
+          "name": "Boni Forest",
           "disambiguation_note": null,
-          "localisation_stem": "Lamu",
+          "localisation_stem": "Boni",
           "category": "topographic_feature",
-          "feature_subtype": "coastal_feature",
-          "relationship": "Prominent coastal landform along the Lamu littoral near Kiangwe.",
+          "feature_subtype": "forest",
+          "relationship": "Open-canopy coastal forest covering the Lamu mainland around Kiangwe.",
           "language_variants": [
             {
-              "form": "Visiwa vya Lamu",
+              "form": "Msitu wa Boni",
               "native_script": null,
               "language": "Swahili",
               "language_code": "swa",
-              "notes": "Swahili name"
+              "notes": "Swahili coastal forest name"
             }
           ],
-          "earliest_attestation_year": 1441,
-          "earliest_attestation_note": "1441 CE (Lamu attested in the Arabic chronicle of al-Maqrizi and Swahili Pate Chronicle traditions).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous coastal forest on the Lamu mainland inhabited by pre-literate hunter-gatherer Boni communities.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Indian Ocean archipelago off northern Kenya comprising Lamu, Manda, Pate, and Kiwayu islands.",
-          "source_url": "https://en.wikipedia.org/wiki/Lamu_Archipelago"
+          "etymology_notes": "Open-canopy coastal mosaic forest stretching along the Lamu mainland toward the Somali border.",
+          "source_url": "https://en.wikipedia.org/wiki/Boni_National_Reserve"
         },
         {
           "name": "Bajuni Islands",
@@ -8253,31 +8100,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Tana_River_(Kenya)"
         },
         {
-          "name": "Lamu Archipelago",
+          "name": "Ungwana Bay",
           "disambiguation_note": null,
-          "localisation_stem": "Lamu",
-          "category": "topographic_feature",
-          "feature_subtype": "coastal_feature",
-          "relationship": "Prominent coastal landform along the Lamu littoral near Witu.",
+          "localisation_stem": "Ungwana",
+          "category": "hydronym",
+          "feature_subtype": "bay",
+          "relationship": "Broad Indian Ocean bay situated directly south of Witu at the Tana delta.",
           "language_variants": [
             {
-              "form": "Visiwa vya Lamu",
+              "form": "Ghuba ya Ungwana",
               "native_script": null,
               "language": "Swahili",
               "language_code": "swa",
-              "notes": "Swahili name"
+              "notes": "Swahili coastal bay name"
             }
           ],
-          "earliest_attestation_year": 1441,
-          "earliest_attestation_note": "1441 CE (Lamu attested in the Arabic chronicle of al-Maqrizi and Swahili Pate Chronicle traditions).",
+          "earliest_attestation_year": 900,
+          "earliest_attestation_note": "Swahili coastal bay documented archaeologically at Ungwana and Shaka from the late first millennium CE.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Indian Ocean archipelago off northern Kenya comprising Lamu, Manda, Pate, and Kiwayu islands.",
-          "source_url": "https://en.wikipedia.org/wiki/Lamu_Archipelago"
+          "etymology_notes": "Broad Indian Ocean bay on the Kenyan coast receiving the Tana River delta.",
+          "source_url": "https://en.wikipedia.org/wiki/Ungwana_Bay"
         }
       ]
     },
@@ -9408,38 +9255,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Azania"
         },
         {
-          "name": "Shebelle River",
+          "name": "Dawa River",
           "disambiguation_note": null,
-          "localisation_stem": "Shebelle",
+          "localisation_stem": "Dawa",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major regional river draining the Baydhabo basin near Wajid.",
+          "relationship": "Major East African river flowing southeast toward the Jubba northwest of Wajid.",
           "language_variants": [
             {
-              "form": "Webi Shabeelle",
-              "native_script": null,
-              "language": "Somali",
-              "language_code": "som",
-              "notes": "Literally 'Leopard River' in Somali"
+              "form": "Dāwā",
+              "native_script": "ዳዋ",
+              "language": "Amharic",
+              "language_code": "amh",
+              "notes": "Ethiopian name"
             },
             {
-              "form": "Nahr Shabīlī",
-              "native_script": "نهر شبيلي",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic form"
+              "form": "Daawaa",
+              "native_script": null,
+              "language": "Oromo",
+              "language_code": "orm",
+              "notes": "Oromo form"
             }
           ],
-          "earliest_attestation_year": 1332,
-          "earliest_attestation_note": "Attested in 14th century CE Ethiopian and Arabic chronicles of Dawaro, Bali, and Adal.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Attested in Ethiopian and Somali oral traditions (no pre-1700 CE written record).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Somali webi ('river') and shabeel ('leopard'), rising in the Ethiopian highlands and flowing across southern Somalia.",
-          "source_url": "https://en.wikipedia.org/wiki/Shebelle_River"
+          "etymology_notes": "Major perennial river rising in the Sidama/Guji highlands and flowing southeast through Borana.",
+          "source_url": "https://en.wikipedia.org/wiki/Dawa_River"
         },
         {
           "name": "Jubba River",
@@ -9570,52 +9417,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shebelle_River"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Banaadir",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Adjacent maritime waters bordering the Jilib littoral near Qoryoley.",
+          "localisation_stem": "Banaadir",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Historic south-central Somali coastal region encompassing Marka and Qoryoley.",
           "language_variants": [
             {
-              "form": "Badweynta Hindiya",
+              "form": "Banaadir",
               "native_script": null,
               "language": "Somali",
               "language_code": "som",
-              "notes": "Somali name"
+              "notes": "Somali coastal region name"
             },
             {
-              "form": "Bahari ya Hindi",
-              "native_script": null,
-              "language": "Swahili",
-              "language_code": "swa",
-              "notes": "Swahili name"
-            },
-            {
-              "form": "al-Muḥīṭ al-Hindī",
-              "native_script": "المحيط الهندي",
+              "form": "Banādir",
+              "native_script": "بنادر",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic name"
-            },
-            {
-              "form": "Mare Indicum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
+              "notes": "Arabic plural of Persian bandar ('ports')"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1200,
+          "earliest_attestation_note": "Pre-modern Somali coastal littoral attested in medieval Indian Ocean maritime geography.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major oceanic basin bordering the entire eastern coast of the Horn of Africa and Swahili Coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Historic south-central Somali coastal belt stretching from Hobyo past Mogadishu to Baraawe.",
+          "source_url": "https://en.wikipedia.org/wiki/Banaadir"
         }
       ]
     },
@@ -9705,38 +9538,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shebelle_River"
         },
         {
-          "name": "Sea of Zanj",
+          "name": "Bajuni Islands",
           "disambiguation_note": null,
-          "localisation_stem": "Sea of Zanj",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Adjacent maritime waters bordering the Jilib littoral near Baraawe.",
+          "localisation_stem": "Bajuni Islands",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Coral island chain extending along the southern Somali coast south of Baraawe.",
           "language_variants": [
             {
-              "form": "Baḥr Zanj",
-              "native_script": "بحر زنج",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic Bahr Zanj"
+              "form": "Jasiiradaha Jubbada Hoose",
+              "native_script": null,
+              "language": "Somali",
+              "language_code": "som",
+              "notes": "Somali name"
             },
             {
-              "form": "Bahari ya Zanj",
-              "native_script": null,
-              "language": "Swahili",
-              "language_code": "swa",
-              "notes": "Swahili name"
+              "form": "Juzur Bājūnī",
+              "native_script": "جزر باجوني",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name"
             }
           ],
-          "earliest_attestation_year": 947,
-          "earliest_attestation_note": "c. 947 CE (described by al-Mas'udi in Muruj al-Dhahab).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Attested in Swahili and Somali coastal oral tradition (no pre-1700 CE written record).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Medieval Arab geographers' designation for the western Indian Ocean off the East African coast of Zanj.",
-          "source_url": "https://en.wikipedia.org/wiki/Sea_of_Zanj"
+          "etymology_notes": "Chain of coral islands along the southern Somali coast between Kismayo and Ras Kamboni.",
+          "source_url": "https://en.wikipedia.org/wiki/Bajuni_Islands"
         }
       ]
     },
@@ -11530,31 +11363,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Chagga_people"
         },
         {
-          "name": "Mount Kilimanjaro",
+          "name": "Pangani River",
           "disambiguation_note": null,
-          "localisation_stem": "Kilimanjaro",
-          "category": "oronym",
-          "feature_subtype": "mountain",
-          "relationship": "Prominent highland feature overlooking the Kilimanjaro region near Kwa Mgogo.",
+          "localisation_stem": "Pangani",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river fed by highland streams from Kilimanjaro and Mount Meru.",
           "language_variants": [
             {
-              "form": "Mlima Kilimanjaro",
+              "form": "Mto Pangani",
               "native_script": null,
               "language": "Swahili",
               "language_code": "swa",
-              "notes": "Swahili name"
+              "notes": "Swahili river name (also Ruvu)"
             }
           ],
-          "earliest_attestation_year": 1519,
-          "earliest_attestation_note": "1519 CE (possibly referenced as 'Mount Olympus of Ethiopia' by Martín Fernández de Enciso).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate East African river draining the Kilimanjaro and Pare highlands.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Highest mountain in Africa, a dormant volcano in northeastern Tanzania; etymology debated between Swahili kilima ('hill') and Chaga njaro.",
-          "source_url": "https://en.wikipedia.org/wiki/Mount_Kilimanjaro"
+          "etymology_notes": "Major river of northeastern Tanzania fed by meltwater and springs from Kilimanjaro and Mount Meru.",
+          "source_url": "https://en.wikipedia.org/wiki/Pangani_River"
         },
         {
           "name": "Pare Mountains",

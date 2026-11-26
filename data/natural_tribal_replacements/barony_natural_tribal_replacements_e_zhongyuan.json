@@ -169,8 +169,8 @@
         "unattested_indigenous_or_minor": 3
       },
       "candidates_by_attestation_basis": {
-        "attested_pre_867": 74,
-        "indigenous_pre_literate": 7
+        "attested_pre_867": 76,
+        "indigenous_pre_literate": 5
       },
       "bookmark_valid_candidates": {
         "867": 81,
@@ -1974,9 +1974,9 @@
               "notes": "Classical Chinese designation for the Ordos Yellow River bend"
             }
           ],
-          "earliest_attestation_year": 1400,
-          "earliest_attestation_note": "15th century CE (Ming-era term for the fertile Yellow River bend)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -127,
+          "earliest_attestation_note": "Attested in Han-dynasty historical records (Henan/Shuofang) from the 2nd century BCE.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -2143,9 +2143,9 @@
               "notes": "Classical Chinese designation for the Ordos Yellow River bend"
             }
           ],
-          "earliest_attestation_year": 1400,
-          "earliest_attestation_note": "15th century CE (Ming-era term for the fertile Yellow River bend)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -127,
+          "earliest_attestation_note": "Attested in Han-dynasty historical records (Henan/Shuofang) from the 2nd century BCE.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,

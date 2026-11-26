@@ -137,22 +137,22 @@
       "target_baronies_audited": 116,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 348,
-      "unique_replacement_names": 96,
+      "unique_replacement_names": 100,
       "candidates_with_multilingual_variants": 264,
       "wikipedia_source_attached": 348,
-      "unique_source_urls": 96,
+      "unique_source_urls": 100,
       "candidates_by_category": {
-        "choronym": 39,
-        "hydronym": 80,
-        "oronym": 100,
-        "topographic_feature": 13,
+        "choronym": 34,
+        "hydronym": 82,
+        "oronym": 104,
+        "topographic_feature": 12,
         "tribe": 116
       },
       "baronies_with_category": {
-        "has_choronym_candidate": 34,
+        "has_choronym_candidate": 29,
         "has_hydronym_candidate": 77,
-        "has_oronym_candidate": 80,
-        "has_topographic_feature_candidate": 13,
+        "has_oronym_candidate": 83,
+        "has_topographic_feature_candidate": 12,
         "has_tribe_candidate": 116
       },
       "unique_language_codes": [
@@ -161,7 +161,9 @@
         "grc",
         "kab",
         "lat",
+        "shi",
         "tmh",
+        "tzm",
         "zgh"
       ],
       "anachronism_type_counts": {
@@ -173,17 +175,17 @@
         "unattested_indigenous_or_minor": 24
       },
       "candidates_by_attestation_basis": {
-        "attested_867_to_1066": 5,
-        "attested_pre_867": 187,
-        "indigenous_pre_literate": 156
+        "attested_867_to_1066": 4,
+        "attested_pre_867": 190,
+        "indigenous_pre_literate": 154
       },
       "bookmark_valid_candidates": {
-        "867": 343,
+        "867": 344,
         "1066": 348,
         "1178": 348
       },
       "baronies_with_867_valid_candidate": 116,
-      "unique_localisation_stems": 94
+      "unique_localisation_stems": 98
     }
   },
   "baronies": {
@@ -594,45 +596,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Famara"
         },
         {
-          "name": "Atlantic Ocean",
+          "name": "Los Ajaches",
           "disambiguation_note": null,
-          "localisation_stem": "Atlantic Ocean",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Prominent local natural feature in the canarias / fuerteventura region near Lanzarote.",
+          "localisation_stem": "Los Ajaches",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Ancient eroded volcanic massif dominating the southern tip of Lanzarote.",
           "language_variants": [
             {
-              "form": "Oceanus Atlanticus",
+              "form": "Ajaches",
               "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Classical Latin name"
-            },
-            {
-              "form": "Atlantikòn pélagos",
-              "native_script": "Ἀτλαντικὸν πέλαγος",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek in Herodotus"
-            },
-            {
-              "form": "Baḥr al-Ẓulumāt",
-              "native_script": "بحر الظلمات",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic Baḥr al-Ẓulumāt"
+              "language": "Berber",
+              "language_code": "ber",
+              "notes": "Pre-colonial Majos/Guanche-associated Lanzarote toponym"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "Attested in 5th century BCE Herodotus as Atlantis thalassa.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Oldest volcanic massif on Lanzarote, inhabited by indigenous Majos prior to 1402 CE.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after Atlas in Greek antiquity; called Baḥr al-Ẓulumāt ('Sea of Darkness') in medieval Arabic.",
-          "source_url": "https://en.wikipedia.org/wiki/Atlantic_Ocean"
+          "etymology_notes": "Ancient eroded volcanic massif dominating southern Lanzarote.",
+          "source_url": "https://en.wikipedia.org/wiki/Monumento_Natural_de_Los_Ajaches"
         }
       ]
     },
@@ -3161,38 +3149,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tensift"
         },
         {
-          "name": "Ourika Valley",
+          "name": "Toubkal",
           "disambiguation_note": null,
-          "localisation_stem": "Ourika",
-          "category": "topographic_feature",
-          "feature_subtype": "valley",
-          "relationship": "Prominent local natural feature in the Marrakesh region near Aitiyat.",
+          "localisation_stem": "Toubkal",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Highest High Atlas massif rising directly south of Marrakesh and Aitiyat.",
           "language_variants": [
             {
-              "form": "Ūrīkā",
-              "native_script": "أوريكا",
+              "form": "Tūbqāl",
+              "native_script": "توبقال",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic Wādī Ūrīka"
+              "notes": "Arabic Jabal Tūbqāl"
             },
             {
-              "form": "Urika",
+              "form": "Tugg kal",
               "native_script": null,
               "language": "Berber",
               "language_code": "ber",
-              "notes": "Berber valley name"
+              "notes": "Berber peak name"
             }
           ],
           "earliest_attestation_year": 1150,
-          "earliest_attestation_note": "Attested in 12th century CE Almohad-era chronicles of the High Atlas foothills south of Marrakesh.",
+          "earliest_attestation_note": "Highest massif of the High Atlas above Tinmallal, attested in medieval Moroccan geography (attested by 1150 CE).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after the Masmuda Ourika tribe of the High Atlas valley.",
-          "source_url": "https://en.wikipedia.org/wiki/Ourika_Valley"
+          "etymology_notes": "Highest peak in North Africa (4,167 m) in the central High Atlas.",
+          "source_url": "https://en.wikipedia.org/wiki/Toubkal"
         }
       ]
     },
@@ -3545,38 +3533,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Oum_Er-Rbia_River"
         },
         {
-          "name": "Tadla",
+          "name": "Middle Atlas",
           "disambiguation_note": null,
-          "localisation_stem": "Tadla",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Prominent local natural feature in the marrakesh / tadla region near Wazeqqur.",
+          "localisation_stem": "Middle Atlas",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range bordering the Tadla plain to the north and east of Wazeqqur.",
           "language_variants": [
             {
-              "form": "Tādla",
-              "native_script": "تادلة",
+              "form": "al-Aṭlas al-Mutawassiṭ",
+              "native_script": "الأطلس المتوسط",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic Tādlā"
+              "notes": "Arabic name"
             },
             {
-              "form": "Tadla",
+              "form": "Aṭlas Anammas",
               "native_script": null,
-              "language": "Berber",
-              "language_code": "ber",
-              "notes": "Berber region name"
+              "language": "Central Atlas Tamazight",
+              "language_code": "tzm",
+              "notes": "Tamazight mountain name"
             }
           ],
-          "earliest_attestation_year": 1068,
-          "earliest_attestation_note": "Attested in 11th century CE Arabic sources (al-Bakri) as the central Moroccan plain along the Oum Er-Rbia.",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -450,
+          "earliest_attestation_note": "Part of the Atlas system attested since 5th century BCE Herodotus.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Berber choronym for the fertile plain between the Middle and High Atlas.",
-          "source_url": "https://en.wikipedia.org/wiki/Tadla"
+          "etymology_notes": "Central Moroccan mountain range separating the Tadla plain from the Moulouya and Fez basins.",
+          "source_url": "https://en.wikipedia.org/wiki/Middle_Atlas"
         }
       ]
     },
@@ -3673,38 +3661,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Oum_Er-Rbia_River"
         },
         {
-          "name": "Tadla",
+          "name": "El-Abid River",
           "disambiguation_note": null,
-          "localisation_stem": "Tadla",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Prominent local natural feature in the marrakesh / tadla region near Wawmana.",
+          "localisation_stem": "El-Abid",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Principal mountain tributary of the Oum Er-Rbia flowing near Wawmana.",
           "language_variants": [
             {
-              "form": "Tādla",
-              "native_script": "تادلة",
+              "form": "Wādī al-ʿAbīd",
+              "native_script": "وادي العبيد",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic Tādlā"
+              "notes": "Arabic Wādī al-ʿAbīd"
             },
             {
-              "form": "Tadla",
+              "form": "Asif n Ismghan",
               "native_script": null,
-              "language": "Berber",
-              "language_code": "ber",
-              "notes": "Berber region name"
+              "language": "Central Atlas Tamazight",
+              "language_code": "tzm",
+              "notes": "Tamazight name"
             }
           ],
-          "earliest_attestation_year": 1068,
-          "earliest_attestation_note": "Attested in 11th century CE Arabic sources (al-Bakri) as the central Moroccan plain along the Oum Er-Rbia.",
+          "earliest_attestation_year": 1154,
+          "earliest_attestation_note": "Major Atlas tributary of the Oum Er-Rbia documented in medieval Moroccan geography.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Berber choronym for the fertile plain between the Middle and High Atlas.",
-          "source_url": "https://en.wikipedia.org/wiki/Tadla"
+          "etymology_notes": "Principal mountain tributary of the Oum Er-Rbia draining the Tadla-Azilal highlands.",
+          "source_url": "https://en.wikipedia.org/wiki/El-Abid_River"
         }
       ]
     },
@@ -3801,38 +3789,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Oum_Er-Rbia_River"
         },
         {
-          "name": "Tadla",
+          "name": "Tessaout River",
           "disambiguation_note": null,
-          "localisation_stem": "Tadla",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Prominent local natural feature in the marrakesh / tadla region near Afza.",
+          "localisation_stem": "Tessaout",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "High Atlas river flowing northwest through the plains southwest of Afza.",
           "language_variants": [
             {
-              "form": "Tādla",
-              "native_script": "تادلة",
+              "form": "Wādī Tassāwat",
+              "native_script": "وادي تساوت",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic Tādlā"
+              "notes": "Arabic river name"
             },
             {
-              "form": "Tadla",
+              "form": "Asif n Tasawt",
               "native_script": null,
-              "language": "Berber",
-              "language_code": "ber",
-              "notes": "Berber region name"
+              "language": "Tachelhit",
+              "language_code": "shi",
+              "notes": "Berber hydronym"
             }
           ],
-          "earliest_attestation_year": 1068,
-          "earliest_attestation_note": "Attested in 11th century CE Arabic sources (al-Bakri) as the central Moroccan plain along the Oum Er-Rbia.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "High Atlas tributary of the Oum Er-Rbia attested in regional Amazigh toponymy.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Berber choronym for the fertile plain between the Middle and High Atlas.",
-          "source_url": "https://en.wikipedia.org/wiki/Tadla"
+          "etymology_notes": "Mountain river rising in the central High Atlas and flowing north into the Oum Er-Rbia.",
+          "source_url": "https://en.wikipedia.org/wiki/Tessaout"
         }
       ]
     },
@@ -3929,38 +3917,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Oum_Er-Rbia_River"
         },
         {
-          "name": "Tadla",
+          "name": "High Atlas",
           "disambiguation_note": null,
-          "localisation_stem": "Tadla",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Prominent local natural feature in the marrakesh / tadla region near Ait i Tab.",
+          "localisation_stem": "High Atlas",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "High mountain chain rising directly south of Ait i Tab.",
           "language_variants": [
             {
-              "form": "Tādla",
-              "native_script": "تادلة",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic Tādlā"
+              "form": "Adrar n Dern",
+              "native_script": null,
+              "language": "Tachelhit",
+              "language_code": "shi",
+              "notes": "Indigenous Berber name (Adrar n Dren)"
             },
             {
-              "form": "Tadla",
-              "native_script": null,
-              "language": "Berber",
-              "language_code": "ber",
-              "notes": "Berber region name"
+              "form": "Jabal Daran",
+              "native_script": "جبل درن",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Medieval Arabic name (Daran)"
             }
           ],
-          "earliest_attestation_year": 1068,
-          "earliest_attestation_note": "Attested in 11th century CE Arabic sources (al-Bakri) as the central Moroccan plain along the Oum Er-Rbia.",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -450,
+          "earliest_attestation_note": "Attested as Mount Atlas in 5th century BCE Greek sources (Herodotus) and Idraren Draren in medieval Berber.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Berber choronym for the fertile plain between the Middle and High Atlas.",
-          "source_url": "https://en.wikipedia.org/wiki/Tadla"
+          "etymology_notes": "Highest mountain chain of North Africa bordering southern Tadla and the Haouz.",
+          "source_url": "https://en.wikipedia.org/wiki/High_Atlas"
         }
       ]
     },
@@ -6119,38 +6107,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Anti-Atlas"
         },
         {
-          "name": "Massa River",
+          "name": "Jbel Bani",
           "disambiguation_note": null,
-          "localisation_stem": "Massa",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Prominent local natural feature in the sous / ifni region near Taghmut.",
+          "localisation_stem": "Jbel Bani",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Arid pre-Saharan sandstone ridge flanking the Anti-Atlas valleys near Taghmut.",
           "language_variants": [
             {
-              "form": "Wādī Māssa",
-              "native_script": "وادي ماسة",
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Arabic Wādī Māssa"
+              "form": "Adrar n Bani",
+              "native_script": null,
+              "language": "Tachelhit",
+              "language_code": "shi",
+              "notes": "Tachelhit Berber mountain name"
             },
             {
-              "form": "Asif n Massa",
-              "native_script": null,
-              "language": "Berber",
-              "language_code": "ber",
-              "notes": "Berber hydronym"
+              "form": "Jabal Bānī",
+              "native_script": "جبل باني",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic name"
             }
           ],
-          "earliest_attestation_year": 1068,
-          "earliest_attestation_note": "Attested in 11th century CE Arabic sources (al-Bakri) for the coastal river south of the Sous.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-Saharan sandstone ridge flanking the Anti-Atlas and Draa oases.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Berber hydronym for the river draining the western Anti-Atlas to the Atlantic.",
-          "source_url": "https://en.wikipedia.org/wiki/Massa_River"
+          "etymology_notes": "Arid folded mountain ridge extending along the southern flank of the Anti-Atlas toward Assa.",
+          "source_url": "https://en.wikipedia.org/wiki/Jbel_Bani"
         }
       ]
     },
@@ -6247,38 +6235,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Anti-Atlas"
         },
         {
-          "name": "Massa River",
+          "name": "Draa River",
           "disambiguation_note": null,
-          "localisation_stem": "Massa",
+          "localisation_stem": "Draa",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent local natural feature in the sous / ifni region near Assa.",
+          "relationship": "Major pre-Saharan river flowing past the oasis of Assa toward the Atlantic.",
           "language_variants": [
             {
-              "form": "Wādī Māssa",
-              "native_script": "وادي ماسة",
+              "form": "Wādī Darʿa",
+              "native_script": "وادي درعة",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic Wādī Māssa"
+              "notes": "Arabic Wādī Darʿa"
             },
             {
-              "form": "Asif n Massa",
+              "form": "Asif n Dra",
               "native_script": null,
-              "language": "Berber",
-              "language_code": "ber",
-              "notes": "Berber hydronym"
+              "language": "Tachelhit",
+              "language_code": "shi",
+              "notes": "Tachelhit Berber name"
+            },
+            {
+              "form": "Daras",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin/Ptolemaic hydronym"
             }
           ],
-          "earliest_attestation_year": 1068,
-          "earliest_attestation_note": "Attested in 11th century CE Arabic sources (al-Bakri) for the coastal river south of the Sous.",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 77,
+          "earliest_attestation_note": "Attested as Darat in Pliny the Elder (1st century CE) and Wadi Dar'a in medieval Arabic.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Berber hydronym for the river draining the western Anti-Atlas to the Atlantic.",
-          "source_url": "https://en.wikipedia.org/wiki/Massa_River"
+          "etymology_notes": "Longest river of Morocco, flowing from the High Atlas past the Anti-Atlas and Assa to the Atlantic.",
+          "source_url": "https://en.wikipedia.org/wiki/Draa_River"
         }
       ]
     },
@@ -8105,31 +8100,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Sanhaja"
         },
         {
-          "name": "Mitidja",
+          "name": "Mazafran River",
           "disambiguation_note": null,
-          "localisation_stem": "Mitidja",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Prominent local natural feature in the alger / algier region near Mattija.",
+          "localisation_stem": "Mazafran",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Coastal river draining the western Mitidja plain into the Mediterranean.",
           "language_variants": [
             {
-              "form": "Mutīja",
-              "native_script": "متيجة",
+              "form": "Wādī al-Mazāfrān",
+              "native_script": "وادي المزفران",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic Matīja"
+              "notes": "Arabic river name"
+            },
+            {
+              "form": "Asif n Mazafran",
+              "native_script": null,
+              "language": "Berber",
+              "language_code": "ber",
+              "notes": "Berber river form"
             }
           ],
-          "earliest_attestation_year": 1150,
-          "earliest_attestation_note": "Attested in medieval Arabic sources (12th century CE) as the fertile coastal plain south of Algiers.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Natural coastal river draining the Tell Atlas and western Mitidja plain since antiquity.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Fertile sub-coastal plain behind Algiers bounded by the Blidean Atlas.",
-          "source_url": "https://en.wikipedia.org/wiki/Mitidja"
+          "etymology_notes": "River formed by the Chiffa and Djer streams, crossing the western Mitidja into the Mediterranean.",
+          "source_url": "https://en.wikipedia.org/wiki/Mazafran_River"
         },
         {
           "name": "Chréa",
@@ -10363,38 +10365,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Tuareg",
+          "name": "Zenata",
           "disambiguation_note": null,
-          "localisation_stem": "Tuareg",
+          "localisation_stem": "Zenata",
           "category": "tribe",
           "feature_subtype": "berber_tribe",
-          "relationship": "Historical Berber confederation/people inhabiting the wargla (mzab) area around Taghyart.",
+          "relationship": "Pre-867 Berber tribal confederation active across the northern Saharan oases including Taghyart.",
           "language_variants": [
             {
-              "form": "Imuhagh",
-              "native_script": null,
-              "language": "Tamashek",
-              "language_code": "tmh",
-              "notes": "Indigenous Tamahaq endonym"
-            },
-            {
-              "form": "Ṭawāriq",
-              "native_script": "طوارق",
+              "form": "Zanāta",
+              "native_script": "زناتة",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic form Ṭawāriq"
+              "notes": "Medieval Arabic Zanāta"
             }
           ],
-          "earliest_attestation_year": 950,
-          "earliest_attestation_note": "Attested in 10th century CE medieval Arabic geographers (Ibn Hawqal) as Sanhaja veil-wearing Saharan nomads.",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 750,
+          "earliest_attestation_note": "Attested in 8th century CE early Islamic Arabic historiography and genealogies (e.g., Ibn Abd al-Hakam and al-Ya'qubi).",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Saharan Berber nomadic confederation speaking Tamahaq/Tamasheq. Onomastic note: Tamashek 'Imuhagh' (Indigenous Tamahaq endonym).",
-          "source_url": "https://en.wikipedia.org/wiki/Tuareg_people"
+          "etymology_notes": "One of the three major medieval Berber tribal confederations, spanning from the Maghreb to the Libyan desert.",
+          "source_url": "https://en.wikipedia.org/wiki/Zenata"
         },
         {
           "name": "Grand Erg Oriental",
@@ -13159,31 +13154,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Banu_Ifran"
         },
         {
-          "name": "Tessala",
+          "name": "Tafna River",
           "disambiguation_note": null,
-          "localisation_stem": "Tessala",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Prominent local natural feature in the Tlemcen region near Qasr-Ibn-Sinan.",
+          "localisation_stem": "Tafna",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major northwestern Algerian river draining the Tlemcen uplands near Qasr-Ibn-Sinan.",
           "language_variants": [
             {
-              "form": "Jibāl Tasāla",
-              "native_script": "جبال تسالة",
+              "form": "Wādī al-Tāfna",
+              "native_script": "وادي التافنة",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic Jibāl Tasāla"
+              "notes": "Arabic Wādī Tāfna"
+            },
+            {
+              "form": "Asif n Tafna",
+              "native_script": null,
+              "language": "Berber",
+              "language_code": "ber",
+              "notes": "Berber hydronym"
             }
           ],
-          "earliest_attestation_year": 1150,
-          "earliest_attestation_note": "Tell Atlas range south of Oran overlooking the Sig and Macta plains (attested by 1150 CE).",
+          "earliest_attestation_year": 1068,
+          "earliest_attestation_note": "Coastal river of the Tlemcen-Siga basin attested in antiquity near Siga and in 11th-century CE Arabic sources.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Inland Tell Atlas range of western Algeria.",
-          "source_url": "https://en.wikipedia.org/wiki/Tessala"
+          "etymology_notes": "Principal river of the Tlemcen region, rising near Sebdou and flowing north to the Mediterranean.",
+          "source_url": "https://en.wikipedia.org/wiki/Tafna_River"
         },
         {
           "name": "Hauts Plateaux",

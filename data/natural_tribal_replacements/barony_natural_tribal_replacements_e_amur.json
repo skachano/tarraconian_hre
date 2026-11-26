@@ -137,21 +137,21 @@
       "target_baronies_audited": 99,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 297,
-      "unique_replacement_names": 106,
-      "candidates_with_multilingual_variants": 247,
+      "unique_replacement_names": 104,
+      "candidates_with_multilingual_variants": 243,
       "wikipedia_source_attached": 297,
-      "unique_source_urls": 106,
+      "unique_source_urls": 104,
       "candidates_by_category": {
         "choronym": 3,
-        "hydronym": 124,
-        "oronym": 53,
+        "hydronym": 122,
+        "oronym": 55,
         "topographic_feature": 18,
         "tribe": 99
       },
       "baronies_with_category": {
         "has_choronym_candidate": 3,
         "has_hydronym_candidate": 87,
-        "has_oronym_candidate": 46,
+        "has_oronym_candidate": 48,
         "has_topographic_feature_candidate": 15,
         "has_tribe_candidate": 99
       },
@@ -183,7 +183,7 @@
         "1178": 297
       },
       "baronies_with_867_valid_candidate": 99,
-      "unique_localisation_stems": 100
+      "unique_localisation_stems": 99
     }
   },
   "baronies": {
@@ -1440,38 +1440,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Nivkh_people"
         },
         {
-          "name": "Lake Orel",
+          "name": "Lake Udyl",
           "disambiguation_note": null,
-          "localisation_stem": "Orel",
+          "localisation_stem": "Udyl",
           "category": "hydronym",
           "feature_subtype": "lake",
-          "relationship": "Natural feature adjacent to Chlya.",
+          "relationship": "Large freshwater lake on the left bank of the lower Amur near the Chlya and Amgun lowlands.",
           "language_variants": [
             {
-              "form": "Orel",
-              "native_script": "Орель",
-              "language": "Nivkh",
-              "language_code": "niv",
-              "notes": "Nivkh/Lower Amur hydronym"
+              "form": "Udyl",
+              "native_script": "Удыль",
+              "language": "Nanai",
+              "language_code": "gld",
+              "notes": "Ulch/Nanai lake name"
             },
             {
-              "form": "Orel",
-              "native_script": "Орел",
+              "form": "Udyl",
+              "native_script": "Удыл",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian adaptation"
             }
           ],
           "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "c. 17th century CE (Amur mouth records)",
+          "earliest_attestation_note": "c. 17th century CE (Lower Amur records)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Large lake adjacent to the Lower Amur near its estuary in Nivkh territory.",
-          "source_url": "https://en.wikipedia.org/wiki/Lake_Orel"
+          "etymology_notes": "Large floodplain lake on the left bank of the Lower Amur in Ulch territory.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Udyl"
         },
         {
           "name": "Amur Liman",
@@ -2371,38 +2371,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Evens"
         },
         {
-          "name": "Tugur River",
+          "name": "Yam-Alin",
           "disambiguation_note": null,
-          "localisation_stem": "Tugur",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Usalgin.",
+          "localisation_stem": "Yam-Alin",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range rising along the western watershed of the Tugur and Uda valleys.",
           "language_variants": [
             {
-              "form": "Tugur",
-              "native_script": "Тугур",
+              "form": "Yam-Alin",
+              "native_script": "Ям-Алинь",
               "language": "Evenki",
               "language_code": "evn",
-              "notes": "Evenki hydronym"
+              "notes": "Tungusic compound with alin ('mountain range')"
             },
             {
-              "form": "Tugur",
-              "native_script": "Тугур",
+              "form": "Yam-Alin",
+              "native_script": "Ям-Алин",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian adaptation"
             }
           ],
-          "earliest_attestation_year": 1640,
-          "earliest_attestation_note": "c. 1640s CE (Russian Okhotsk coast expeditions)",
+          "earliest_attestation_year": 1650,
+          "earliest_attestation_note": "c. 17th century CE (Tungusic Selemdzha-Nimelen divide toponymy)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River of the Tugur-Chumikan basin flowing north into Tugur Bay on the Sea of Okhotsk.",
-          "source_url": "https://en.wikipedia.org/wiki/Tugur_(river)"
+          "etymology_notes": "Mountain range separating the Selemdzha and Nimelen basins; alin means 'mountain' in Tungusic.",
+          "source_url": "https://en.wikipedia.org/wiki/Yam-Alin"
         },
         {
           "name": "Lama Sea",
@@ -3302,38 +3302,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Negidals"
         },
         {
-          "name": "Lake Evoron",
+          "name": "Nimelen River",
           "disambiguation_note": null,
-          "localisation_stem": "Evoron",
+          "localisation_stem": "Nimelen",
           "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Natural feature adjacent to Tudali.",
+          "feature_subtype": "river",
+          "relationship": "Longest left tributary of the Amgun River draining the highlands northwest of Tudali.",
           "language_variants": [
             {
-              "form": "Evoron",
-              "native_script": "Эворон",
+              "form": "Nimelen",
+              "native_script": "Нимэлэн",
               "language": "Evenki",
               "language_code": "evn",
-              "notes": "Evenki/Negidal lake name"
+              "notes": "Evenki/Negidal hydronym"
             },
             {
-              "form": "Evoron",
-              "native_script": "Эворон",
+              "form": "Nimelen",
+              "native_script": "Нимелен",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian adaptation"
             }
           ],
           "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "c. 17th century CE (Lower Amur-Gorin basin records)",
+          "earliest_attestation_note": "c. 17th century CE (Lower Amur-Amgun geographic records)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Large freshwater lake in the Gorin-Evoron depression northwest of the Lower Amur.",
-          "source_url": "https://en.wikipedia.org/wiki/Evoron"
+          "etymology_notes": "Left tributary of the Amgun River flowing from the Yam-Alin range through Negidal and Evenki lands.",
+          "source_url": "https://en.wikipedia.org/wiki/Nimelen"
         },
         {
           "name": "Amgun River",
@@ -4589,38 +4589,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Nanai_people"
         },
         {
-          "name": "Bira River",
-          "disambiguation_note": null,
-          "localisation_stem": "Bira",
+          "name": "Tunguska River",
+          "disambiguation_note": "Amur",
+          "localisation_stem": "Tunguska",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Pichan.",
+          "relationship": "Left tributary of the Amur formed by the confluence of the Kur and Urmi rivers near Khabarovsk.",
           "language_variants": [
             {
-              "form": "Bira",
-              "native_script": "Бира",
-              "language": "Evenki",
-              "language_code": "evn",
-              "notes": "Evenki/Nanai word meaning 'river'"
-            },
-            {
-              "form": "Bira",
-              "native_script": "Бира",
+              "form": "Tunguska",
+              "native_script": "Тунгуска",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian adaptation"
+              "notes": "Russian river name referencing the Tungusic peoples of its basin"
             }
           ],
           "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "c. 17th century CE (Middle Amur basin records)",
+          "earliest_attestation_note": "c. 17th century CE (Indigenous Tungusic-inhabited Amur tributary)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Tungusic bira ('river'), draining the Lesser Khingan into the Middle Amur.",
-          "source_url": "https://en.wikipedia.org/wiki/Bira_(river)"
+          "etymology_notes": "Lower Amur left tributary formed at the junction of the Kur and Urmi rivers, named after the Tungusic peoples.",
+          "source_url": "https://en.wikipedia.org/wiki/Tunguska_(Amur)"
         },
         {
           "name": "Amur River",
@@ -4866,38 +4859,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Nanai_people"
         },
         {
-          "name": "Bira River",
+          "name": "Bureya Range",
           "disambiguation_note": null,
-          "localisation_stem": "Bira",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Watercourse flowing directly through Chulabira.",
+          "localisation_stem": "Bureya Range",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range framing the northern Amur-Bira watershed above Chulabira.",
           "language_variants": [
             {
-              "form": "Bira",
-              "native_script": "Бира",
-              "language": "Evenki",
-              "language_code": "evn",
-              "notes": "Evenki/Nanai word meaning 'river'"
-            },
-            {
-              "form": "Bira",
-              "native_script": "Бира",
+              "form": "Bureinsky khrebet",
+              "native_script": "Буреинский хребет",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian adaptation"
+              "notes": "Russian name derived from Evenki Biraya"
             }
           ],
-          "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "c. 17th century CE (Middle Amur basin records)",
+          "earliest_attestation_year": 1644,
+          "earliest_attestation_note": "c. 17th century CE (named after the Bureya River)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Tungusic bira ('river'), draining the Lesser Khingan into the Middle Amur.",
-          "source_url": "https://en.wikipedia.org/wiki/Bira_(river)"
+          "etymology_notes": "Mountain massif dividing the Bureya basin from the Amgun and Urmi watersheds.",
+          "source_url": "https://en.wikipedia.org/wiki/Bureya_Range"
         },
         {
           "name": "Amur River",
@@ -5285,38 +5271,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Nanai_people"
         },
         {
-          "name": "Lake Bolon",
-          "disambiguation_note": null,
-          "localisation_stem": "Bolon",
+          "name": "Gur River",
+          "disambiguation_note": "river",
+          "localisation_stem": "Gur",
           "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Natural feature adjacent to Eman Molihewen.",
+          "feature_subtype": "river",
+          "relationship": "Major right tributary of the lower Amur flowing opposite Lake Bolon in Khabarovsk Krai.",
           "language_variants": [
             {
-              "form": "Bolon",
-              "native_script": "Болонь",
-              "language": "Nanai",
-              "language_code": "gld",
-              "notes": "Nanai lake name"
-            },
-            {
-              "form": "Bolon",
-              "native_script": "Болон",
+              "form": "Gur",
+              "native_script": "Гур",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian adaptation"
+              "notes": "Modern Russian name adopted in 1972; also 'Khungari' (Хунгари) — Historical Tungusic-derived name attested before 1972."
             }
           ],
           "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "c. 17th century CE (Lower Amur floodplain records)",
+          "earliest_attestation_note": "c. 17th century CE (Attested as Khungari in early Russian Amur surveys)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Large floodplain lake connected to the Lower Amur in Nanai territory.",
-          "source_url": "https://en.wikipedia.org/wiki/Lake_Bolon"
+          "etymology_notes": "Right tributary of the lower Amur River formerly known as Khungari, named from local Nanai and Evenki hydronymy.",
+          "source_url": "https://en.wikipedia.org/wiki/Gur_(river)"
         },
         {
           "name": "Amur River",
@@ -6002,38 +5981,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Evenki_people"
         },
         {
-          "name": "Urmi River",
-          "disambiguation_note": null,
-          "localisation_stem": "Urmi",
+          "name": "Tunguska River",
+          "disambiguation_note": "Amur",
+          "localisation_stem": "Tunguska",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Watercourse flowing directly through Kirga.",
+          "relationship": "Left tributary of the Amur formed by the confluence of the Kur and Urmi rivers near Khabarovsk.",
           "language_variants": [
             {
-              "form": "Urmi",
-              "native_script": "Урми",
-              "language": "Nanai",
-              "language_code": "gld",
-              "notes": "Nanai/Evenki hydronym"
-            },
-            {
-              "form": "Urmi",
-              "native_script": "Урми",
+              "form": "Tunguska",
+              "native_script": "Тунгуска",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian adaptation"
+              "notes": "Russian river name referencing the Tungusic peoples of its basin"
             }
           ],
           "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "c. 17th century CE (Middle-Lower Amur records)",
+          "earliest_attestation_note": "c. 17th century CE (Indigenous Tungusic-inhabited Amur tributary)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river draining the Bureya and Badzhal slopes to join the Kur near the Amur.",
-          "source_url": "https://en.wikipedia.org/wiki/Urmi_(river)"
+          "etymology_notes": "Lower Amur left tributary formed at the junction of the Kur and Urmi rivers, named after the Tungusic peoples.",
+          "source_url": "https://en.wikipedia.org/wiki/Tunguska_(Amur)"
         },
         {
           "name": "Bureya Range",
@@ -10861,38 +10833,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Amur_Liman"
         },
         {
-          "name": "Tym River",
+          "name": "Poronay River",
           "disambiguation_note": null,
-          "localisation_stem": "Tym",
+          "localisation_stem": "Poronay",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Idoi.",
+          "relationship": "Longest river on Sakhalin Island flowing south from the central divide past the Tym basin.",
           "language_variants": [
             {
-              "form": "Tym",
-              "native_script": "Тымь",
-              "language": "Nivkh",
-              "language_code": "niv",
-              "notes": "Nivkh hydronym ('spawning river')"
+              "form": "Poronai",
+              "native_script": "ポロナイ",
+              "language": "Ainu",
+              "language_code": "ain",
+              "notes": "Ainu name meaning 'great river'"
             },
             {
-              "form": "Tym",
-              "native_script": "Тым",
+              "form": "Poronay",
+              "native_script": "Поронай",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian adaptation"
             }
           ],
           "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "c. 17th century CE (Sakhalin Nivkh riverine toponymy)",
+          "earliest_attestation_note": "c. 17th century CE (Edo-period Sakhalin Ainu toponymy)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Second-longest river of Sakhalin, flowing north-northeast through Nivkh and Orok lands to the Sea of Okhotsk.",
-          "source_url": "https://en.wikipedia.org/wiki/Tym_(Sakhalin)"
+          "etymology_notes": "From Ainu poro-nai ('great river'), the longest river on Sakhalin, draining into Patience Bay.",
+          "source_url": "https://en.wikipedia.org/wiki/Poronay"
         }
       ]
     },

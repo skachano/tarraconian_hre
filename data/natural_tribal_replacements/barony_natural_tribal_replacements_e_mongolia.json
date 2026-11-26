@@ -137,27 +137,28 @@
       "target_baronies_audited": 307,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 921,
-      "unique_replacement_names": 106,
-      "candidates_with_multilingual_variants": 820,
+      "unique_replacement_names": 125,
+      "candidates_with_multilingual_variants": 827,
       "wikipedia_source_attached": 921,
-      "unique_source_urls": 106,
+      "unique_source_urls": 125,
       "candidates_by_category": {
-        "choronym": 57,
-        "hydronym": 393,
-        "oronym": 162,
-        "topographic_feature": 2,
-        "tribe": 307
+        "choronym": 20,
+        "hydronym": 422,
+        "oronym": 166,
+        "topographic_feature": 4,
+        "tribe": 309
       },
       "baronies_with_category": {
-        "has_choronym_candidate": 57,
-        "has_hydronym_candidate": 281,
-        "has_oronym_candidate": 156,
-        "has_topographic_feature_candidate": 2,
+        "has_choronym_candidate": 20,
+        "has_hydronym_candidate": 295,
+        "has_oronym_candidate": 161,
+        "has_topographic_feature_candidate": 4,
         "has_tribe_candidate": 307
       },
       "unique_language_codes": [
         "bua",
         "cmg",
+        "evn",
         "kjh",
         "mon",
         "otk",
@@ -177,8 +178,8 @@
       "candidates_by_attestation_basis": {
         "attested_1066_to_1178": 12,
         "attested_867_to_1066": 34,
-        "attested_pre_867": 469,
-        "indigenous_pre_literate": 406
+        "attested_pre_867": 437,
+        "indigenous_pre_literate": 438
       },
       "bookmark_valid_candidates": {
         "867": 875,
@@ -186,7 +187,7 @@
         "1178": 921
       },
       "baronies_with_867_valid_candidate": 307,
-      "unique_localisation_stems": 106
+      "unique_localisation_stems": 125
     }
   },
   "baronies": {
@@ -2853,38 +2854,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Angara"
         },
         {
-          "name": "Kitoy",
+          "name": "Irkut",
           "disambiguation_note": null,
-          "localisation_stem": "Kitoy",
+          "localisation_stem": "Irkut",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Angara landscape.",
+          "relationship": "Sayan tributary of the Angara flowing immediately south of the Kitoy.",
           "language_variants": [
             {
-              "form": "Kitoy",
-              "native_script": "Китой",
-              "language": "Russian",
-              "language_code": "rus",
-              "notes": "Russian geographical name"
-            },
-            {
-              "form": "Khütey",
-              "native_script": "Хүтей",
+              "form": "Erkhuu muren",
+              "native_script": "Эрхүү мүрэн",
               "language": "Buryat",
               "language_code": "bua",
               "notes": "Buryat name"
+            },
+            {
+              "form": "Irkut",
+              "native_script": "Иркут",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "c. 1650 CE (17th-century Russian Irkutsk/Angara records)",
+          "earliest_attestation_year": 1661,
+          "earliest_attestation_note": "Recorded in 17th-century Russian Siberian chronicles (Irkutsk ostrog).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Left tributary of the Angara rising in the Eastern Sayan.",
-          "source_url": "https://en.wikipedia.org/wiki/Kitoy"
+          "etymology_notes": "Left tributary of the Angara flowing through the Tunka Valley; linked to the historical Irkit tribal name of Sayan-Baikal.",
+          "source_url": "https://en.wikipedia.org/wiki/Irkut"
         }
       ]
     },
@@ -2954,38 +2955,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Evenki_people"
         },
         {
-          "name": "Kitoy",
+          "name": "Tunka Goltsy",
           "disambiguation_note": null,
-          "localisation_stem": "Kitoy",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Angara landscape.",
+          "localisation_stem": "Tunka Goltsy",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Alpine Sayan ridge feeding both the Kitoy and Irkut rivers.",
           "language_variants": [
             {
-              "form": "Kitoy",
-              "native_script": "Китой",
+              "form": "Tunkinskiye goltsy",
+              "native_script": "Тункинские гольцы",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             },
             {
-              "form": "Khütey",
-              "native_script": "Хүтей",
+              "form": "Tunkheney hardag",
+              "native_script": "Түнхэнэй һарьдаг",
               "language": "Buryat",
               "language_code": "bua",
               "notes": "Buryat name"
             }
           ],
-          "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "c. 1650 CE (17th-century Russian Irkutsk/Angara records)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Buryat-Siberian oronym",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Left tributary of the Angara rising in the Eastern Sayan.",
-          "source_url": "https://en.wikipedia.org/wiki/Kitoy"
+          "etymology_notes": "Easternmost alpine ridge of the Eastern Sayan overlooking the Tunka basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Tunka_Goltsy"
         },
         {
           "name": "Belaya",
@@ -6628,31 +6629,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Abakan_(river)"
         },
         {
-          "name": "Tuba",
-          "disambiguation_note": "river",
-          "localisation_stem": "Tuba",
+          "name": "Kan River",
+          "disambiguation_note": null,
+          "localisation_stem": "Kan",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Blue Khakassia landscape.",
+          "relationship": "Right tributary of the Yenisei rising in the Eastern Sayan north of the Kizir.",
           "language_variants": [
             {
-              "form": "Tuba",
-              "native_script": "Туба",
+              "form": "Kan",
+              "native_script": "Кан",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
+            },
+            {
+              "form": "Khan",
+              "native_script": "Хан",
+              "language": "Khakas",
+              "language_code": "kjh",
+              "notes": "Khakas regional form"
             }
           ],
           "earliest_attestation_year": 1628,
-          "earliest_attestation_note": "1628 CE (17th-century Russian Yenisei basin records)",
+          "earliest_attestation_note": "Attested in 17th-century CE Russian Siberian records (Kansk ostrog, 1628 CE).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Right tributary of the Yenisei formed by the Kazyr and Kizir.",
-          "source_url": "https://en.wikipedia.org/wiki/Tuba_(river)"
+          "etymology_notes": "Right tributary of the Yenisei rising in the Eastern Sayan.",
+          "source_url": "https://en.wikipedia.org/wiki/Kan_River"
         }
       ]
     },
@@ -6722,31 +6730,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Yenisei_Kyrgyz"
         },
         {
-          "name": "Kizir",
+          "name": "Mana River",
           "disambiguation_note": null,
-          "localisation_stem": "Kizir",
+          "localisation_stem": "Mana",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Blue Khakassia landscape.",
+          "relationship": "Right tributary of the Yenisei draining the Eastern Sayan north of Kizir.",
           "language_variants": [
             {
-              "form": "Kizir",
-              "native_script": "Кизир",
+              "form": "Mana",
+              "native_script": "Мана",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian geographical name"
+              "notes": "Russian hydronym"
             }
           ],
-          "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Sayan hydronym",
+          "earliest_attestation_year": 1630,
+          "earliest_attestation_note": "Recorded in 17th-century CE Russian records near Krasnoyarsk.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Eastern Sayan river joining the Kazyr to form the Tuba.",
-          "source_url": "https://en.wikipedia.org/wiki/Kizir"
+          "etymology_notes": "Right-bank tributary of the Yenisei draining the northwestern Eastern Sayan.",
+          "source_url": "https://en.wikipedia.org/wiki/Mana_(Russia)"
         },
         {
           "name": "Sayan Mountains",
@@ -6850,31 +6858,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Dingling"
         },
         {
-          "name": "Tuba",
-          "disambiguation_note": "river",
-          "localisation_stem": "Tuba",
+          "name": "Kazyr",
+          "disambiguation_note": null,
+          "localisation_stem": "Kazyr",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Blue Khakassia landscape.",
+          "relationship": "Main headwater river joining the Kizir to form the Tuba.",
           "language_variants": [
             {
-              "form": "Tuba",
-              "native_script": "Туба",
+              "form": "Kazyr",
+              "native_script": "Казыр",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
+            },
+            {
+              "form": "Khazyr",
+              "native_script": "Хазыр",
+              "language": "Khakas",
+              "language_code": "kjh",
+              "notes": "Khakas name ('Fierce/Rapid')"
             }
           ],
-          "earliest_attestation_year": 1628,
-          "earliest_attestation_note": "1628 CE (17th-century Russian Yenisei basin records)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Sayan hydronym",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Right tributary of the Yenisei formed by the Kazyr and Kizir.",
-          "source_url": "https://en.wikipedia.org/wiki/Tuba_(river)"
+          "etymology_notes": "Eastern Sayan river joining the Kizir to form the Tuba; from Turkic qazïr ('fierce/swift').",
+          "source_url": "https://en.wikipedia.org/wiki/Kazyr"
         },
         {
           "name": "Sayan Mountains",
@@ -8178,31 +8193,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Sayan_Mountains"
         },
         {
-          "name": "Biryusa",
+          "name": "Taseyeva River",
           "disambiguation_note": null,
-          "localisation_stem": "Biryusa",
+          "localisation_stem": "Taseyeva",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Chuna Valley landscape.",
+          "relationship": "Lower trunk river formed by the confluence of the Chuna and Biryusa.",
           "language_variants": [
             {
-              "form": "Biryusa",
-              "native_script": "Бирюса",
+              "form": "Taseyeva",
+              "native_script": "Тасеева",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian geographical name"
+              "notes": "Russian hydronym"
             }
           ],
           "earliest_attestation_year": 1630,
-          "earliest_attestation_note": "Recorded in 17th-century CE Russian Siberian frontier accounts.",
+          "earliest_attestation_note": "Recorded in 17th-century CE Russian exploration of the lower Angara basin.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River rising in the Eastern Sayan and joining the Chuna.",
-          "source_url": "https://en.wikipedia.org/wiki/Biryusa"
+          "etymology_notes": "Left-bank tributary of the Angara formed by the Biryusa and Chuna rivers.",
+          "source_url": "https://en.wikipedia.org/wiki/Taseyeva"
         }
       ]
     },
@@ -8258,65 +8273,72 @@
           "source_url": "https://en.wikipedia.org/wiki/Ket_people"
         },
         {
-          "name": "Chuna",
-          "disambiguation_note": "river",
-          "localisation_stem": "Chuna",
+          "name": "Oka",
+          "disambiguation_note": "Angara",
+          "localisation_stem": "Oka",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Chuna Valley landscape.",
+          "relationship": "Major Angara tributary draining the Eastern Sayan east of the Chuna.",
           "language_variants": [
             {
-              "form": "Chuna",
-              "native_script": "Чуна",
-              "language": "Russian",
-              "language_code": "rus",
-              "notes": "Russian geographical name (Chuna / Uda); also 'Uda' (Уда) — Russian geographical name (Chuna / Uda)."
-            },
-            {
-              "form": "Üde",
-              "native_script": "Үде",
+              "form": "Akha gol",
+              "native_script": "Аха гол",
               "language": "Buryat",
               "language_code": "bua",
-              "notes": "Buryat form (Uda)"
-            }
-          ],
-          "earliest_attestation_year": 1648,
-          "earliest_attestation_note": "1648 CE (17th-century Russian Uda ostrog records)",
-          "attestation_basis": "indigenous_pre_literate",
-          "valid_for_bookmarks": {
-            "867": true,
-            "1066": true,
-            "1178": true
-          },
-          "etymology_notes": "Major river of the Eastern Sayan joining the Biryusa to form the Taseyeva.",
-          "source_url": "https://en.wikipedia.org/wiki/Chuna_(river)"
-        },
-        {
-          "name": "Biryusa",
-          "disambiguation_note": null,
-          "localisation_stem": "Biryusa",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Chuna Valley landscape.",
-          "language_variants": [
+              "notes": "Buryat name ('Elder River')"
+            },
             {
-              "form": "Biryusa",
-              "native_script": "Бирюса",
+              "form": "Oka",
+              "native_script": "Ока",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1630,
-          "earliest_attestation_note": "Recorded in 17th-century CE Russian Siberian frontier accounts.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; indigenous Buryat and Soyot hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River rising in the Eastern Sayan and joining the Chuna.",
-          "source_url": "https://en.wikipedia.org/wiki/Biryusa"
+          "etymology_notes": "Major left tributary of the Angara rising in the Eastern Sayan; linked to Buryat akha ('elder') and Sayan-Turkic ok ('arrow').",
+          "source_url": "https://en.wikipedia.org/wiki/Oka_(Angara)"
+        },
+        {
+          "name": "Kan River",
+          "disambiguation_note": null,
+          "localisation_stem": "Kan",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Right tributary of the Yenisei flowing west of the Biryusa basin.",
+          "language_variants": [
+            {
+              "form": "Kan",
+              "native_script": "Кан",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
+            },
+            {
+              "form": "Khan",
+              "native_script": "Хан",
+              "language": "Khakas",
+              "language_code": "kjh",
+              "notes": "Khakas regional form"
+            }
+          ],
+          "earliest_attestation_year": 1628,
+          "earliest_attestation_note": "Attested in 17th-century CE Russian Siberian records (Kansk ostrog, 1628 CE).",
+          "attestation_basis": "indigenous_pre_literate",
+          "valid_for_bookmarks": {
+            "867": true,
+            "1066": true,
+            "1178": true
+          },
+          "etymology_notes": "Right tributary of the Yenisei rising in the Eastern Sayan.",
+          "source_url": "https://en.wikipedia.org/wiki/Kan_River"
         }
       ]
     },
@@ -8372,31 +8394,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yugh_people"
         },
         {
-          "name": "Biryusa",
-          "disambiguation_note": null,
-          "localisation_stem": "Biryusa",
+          "name": "Iya",
+          "disambiguation_note": "river",
+          "localisation_stem": "Iya",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Chuna Valley landscape.",
+          "relationship": "Sayan-Angara river flowing between the Chuna and Oka basins.",
           "language_variants": [
             {
-              "form": "Biryusa",
-              "native_script": "Бирюса",
+              "form": "Iya",
+              "native_script": "Ия",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
+            },
+            {
+              "form": "Iy",
+              "native_script": "Ий",
+              "language": "Tuvan",
+              "language_code": "tyv",
+              "notes": "Tuvan regional form"
             }
           ],
-          "earliest_attestation_year": 1630,
-          "earliest_attestation_note": "Recorded in 17th-century CE Russian Siberian frontier accounts.",
+          "earliest_attestation_year": 1650,
+          "earliest_attestation_note": "c. 1650 CE (17th-century Russian Bratsk/Angara records)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River rising in the Eastern Sayan and joining the Chuna.",
-          "source_url": "https://en.wikipedia.org/wiki/Biryusa"
+          "etymology_notes": "River rising in the Eastern Sayan and flowing into the Oka/Angara system.",
+          "source_url": "https://en.wikipedia.org/wiki/Iya_(river)"
         },
         {
           "name": "Angara",
@@ -10175,38 +10204,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Kotokel"
         },
         {
-          "name": "Muya",
+          "name": "Vitim",
           "disambiguation_note": "river",
-          "localisation_stem": "Muya",
+          "localisation_stem": "Vitim",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Dauria landscape.",
+          "relationship": "Major Lena tributary fed by the Vitimkan and Muya rivers.",
           "language_variants": [
             {
-              "form": "Muya",
-              "native_script": "Муя",
+              "form": "Vitim",
+              "native_script": "Витим",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             },
             {
-              "form": "Muya",
-              "native_script": "Муя",
+              "form": "Vitim",
+              "native_script": "Витим",
               "language": "Buryat",
               "language_code": "bua",
               "notes": "Buryat form"
             }
           ],
-          "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Siberian hydronym",
+          "earliest_attestation_year": 1639,
+          "earliest_attestation_note": "1639 CE (17th-century Russian Lena-Baikal records)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Left tributary of the Vitim River in northern Buryatia.",
-          "source_url": "https://en.wikipedia.org/wiki/Muya_(river)"
+          "etymology_notes": "Major right tributary of the Lena rising east of Lake Baikal.",
+          "source_url": "https://en.wikipedia.org/wiki/Vitim_(river)"
         }
       ]
     },
@@ -10971,38 +11000,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Sayan_Mountains"
         },
         {
-          "name": "Iya",
-          "disambiguation_note": "river",
-          "localisation_stem": "Iya",
+          "name": "Oka",
+          "disambiguation_note": "Angara",
+          "localisation_stem": "Oka",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Eastern Sayan landscape.",
+          "relationship": "Major Eastern Sayan tributary of the Angara adjacent to the Iya headwaters.",
           "language_variants": [
             {
-              "form": "Iya",
-              "native_script": "Ия",
+              "form": "Akha gol",
+              "native_script": "Аха гол",
+              "language": "Buryat",
+              "language_code": "bua",
+              "notes": "Buryat name ('Elder River')"
+            },
+            {
+              "form": "Oka",
+              "native_script": "Ока",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
-            },
-            {
-              "form": "Iy",
-              "native_script": "Ий",
-              "language": "Tuvan",
-              "language_code": "tyv",
-              "notes": "Tuvan regional form"
             }
           ],
-          "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "c. 1650 CE (17th-century Russian Bratsk/Angara records)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; indigenous Buryat and Soyot hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River rising in the Eastern Sayan and flowing into the Oka/Angara system.",
-          "source_url": "https://en.wikipedia.org/wiki/Iya_(river)"
+          "etymology_notes": "Major left tributary of the Angara rising in the Eastern Sayan; linked to Buryat akha ('elder') and Sayan-Turkic ok ('arrow').",
+          "source_url": "https://en.wikipedia.org/wiki/Oka_(Angara)"
         }
       ]
     },
@@ -11099,38 +11128,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Iya_(river)"
         },
         {
-          "name": "Urik",
-          "disambiguation_note": "river",
-          "localisation_stem": "Urik",
+          "name": "Oka",
+          "disambiguation_note": "Angara",
+          "localisation_stem": "Oka",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Eastern Sayan landscape.",
+          "relationship": "Eastern Sayan river flowing north to the Angara beside the Urik basin.",
           "language_variants": [
             {
-              "form": "Urik",
-              "native_script": "Урик",
+              "form": "Akha gol",
+              "native_script": "Аха гол",
+              "language": "Buryat",
+              "language_code": "bua",
+              "notes": "Buryat name ('Elder River')"
+            },
+            {
+              "form": "Oka",
+              "native_script": "Ока",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
-            },
-            {
-              "form": "Üüreg",
-              "native_script": "Үүрег",
-              "language": "Buryat",
-              "language_code": "bua",
-              "notes": "Buryat name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Sayan hydronym",
+          "earliest_attestation_note": "No pre-1700 CE written attestation; indigenous Buryat and Soyot hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Eastern Sayan river forming the Bolshaya Belaya tributary of the Angara.",
-          "source_url": "https://en.wikipedia.org/wiki/Urik_(river)"
+          "etymology_notes": "Major left tributary of the Angara rising in the Eastern Sayan; linked to Buryat akha ('elder') and Sayan-Turkic ok ('arrow').",
+          "source_url": "https://en.wikipedia.org/wiki/Oka_(Angara)"
         }
       ]
     },
@@ -11200,31 +11229,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yenisei_Kyrgyz"
         },
         {
-          "name": "Kropotkin Range",
-          "disambiguation_note": "Eastern Sayan",
-          "localisation_stem": "Kropotkin",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Prominent natural feature of the Eastern Sayan landscape.",
+          "name": "Kitoy",
+          "disambiguation_note": null,
+          "localisation_stem": "Kitoy",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Eastern Sayan river flowing parallel to the Urik toward the Angara.",
           "language_variants": [
             {
-              "form": "Khrebet Kropotkina",
-              "native_script": "Хребет Кропоткина",
+              "form": "Kitoy",
+              "native_script": "Китой",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
+            },
+            {
+              "form": "Khütey",
+              "native_script": "Хүтей",
+              "language": "Buryat",
+              "language_code": "bua",
+              "notes": "Buryat name"
             }
           ],
-          "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; Eastern Sayan mountain ridge",
+          "earliest_attestation_year": 1650,
+          "earliest_attestation_note": "c. 1650 CE (17th-century Russian Irkutsk/Angara records)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Mountain ridge in the Eastern Sayan between the Oka and Urik rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Kropotkin_Range_(Eastern_Sayan)"
+          "etymology_notes": "Left tributary of the Angara rising in the Eastern Sayan.",
+          "source_url": "https://en.wikipedia.org/wiki/Kitoy"
         },
         {
           "name": "Mönkh Saridag",
@@ -11321,31 +11357,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Dingling"
         },
         {
-          "name": "Kropotkin Range",
-          "disambiguation_note": "Eastern Sayan",
-          "localisation_stem": "Kropotkin",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Prominent natural feature of the Eastern Sayan landscape.",
+          "name": "Irkut",
+          "disambiguation_note": null,
+          "localisation_stem": "Irkut",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Sayan river skirting the Tunka Goltsy south of the Urik divide.",
           "language_variants": [
             {
-              "form": "Khrebet Kropotkina",
-              "native_script": "Хребет Кропоткина",
+              "form": "Erkhuu muren",
+              "native_script": "Эрхүү мүрэн",
+              "language": "Buryat",
+              "language_code": "bua",
+              "notes": "Buryat name"
+            },
+            {
+              "form": "Irkut",
+              "native_script": "Иркут",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; Eastern Sayan mountain ridge",
+          "earliest_attestation_year": 1661,
+          "earliest_attestation_note": "Recorded in 17th-century Russian Siberian chronicles (Irkutsk ostrog).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Mountain ridge in the Eastern Sayan between the Oka and Urik rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Kropotkin_Range_(Eastern_Sayan)"
+          "etymology_notes": "Left tributary of the Angara flowing through the Tunka Valley; linked to the historical Irkit tribal name of Sayan-Baikal.",
+          "source_url": "https://en.wikipedia.org/wiki/Irkut"
         },
         {
           "name": "Mönkh Saridag",
@@ -12117,45 +12160,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Khamag_Mongol"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Ulz River",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Prominent natural feature of the Tataria landscape.",
+          "localisation_stem": "Ulz",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Steppe river of northeastern Mongolia flowing parallel to the Onon.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Ulz gol",
+              "native_script": "Улз гол",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('gravelly semi-desert')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gobi",
-              "native_script": "Гоби",
+              "form": "Uldza",
+              "native_script": "Ульдза",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
-            },
-            {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical transcription (Gebi)"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolic steppe hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mongolian govi ('waterless gravel steppe/desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Steppe river of northeastern Mongolia flowing northeast into the Torey Lakes basin; traditional Mongolic hydronym Ulz.",
+          "source_url": "https://en.wikipedia.org/wiki/Ulz_River"
         },
         {
           "name": "Onon",
@@ -13038,45 +13074,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Argun_(Amur)"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Greater Khingan",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Prominent natural feature of the Tataria landscape.",
+          "localisation_stem": "Greater Khingan",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range rising east of the Argun and Khalkhin Gol plains.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Ikh Khyangan",
+              "native_script": "Их Хянган",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('gravelly semi-desert')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gobi",
-              "native_script": "Гоби",
-              "language": "Russian",
-              "language_code": "rus",
-              "notes": "Russian geographical name"
-            },
-            {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Dà Xīng'ān Lǐng",
+              "native_script": "大興安嶺",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese historical transcription (Gebi)"
+              "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "100 CE (Hou Hanshu records the Xianbei Mountains; Manchu-Mongolic Khingan attested by Qing)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mongolian govi ('waterless gravel steppe/desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Volcanic mountain range separating the Mongolian plateau from Manchuria.",
+          "source_url": "https://en.wikipedia.org/wiki/Greater_Khingan"
         }
       ]
     },
@@ -13153,45 +13182,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tatars"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Ulz River",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Prominent natural feature of the Tataria landscape.",
+          "localisation_stem": "Ulz",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Northeastern steppe river flowing between the Onon and Kherlen.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Ulz gol",
+              "native_script": "Улз гол",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('gravelly semi-desert')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gobi",
-              "native_script": "Гоби",
+              "form": "Uldza",
+              "native_script": "Ульдза",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
-            },
-            {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical transcription (Gebi)"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolic steppe hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mongolian govi ('waterless gravel steppe/desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Steppe river of northeastern Mongolia flowing northeast into the Torey Lakes basin; traditional Mongolic hydronym Ulz.",
+          "source_url": "https://en.wikipedia.org/wiki/Ulz_River"
         },
         {
           "name": "Onon",
@@ -14081,45 +14103,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Argun_(Amur)"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Greater Khingan",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Prominent natural feature of the Tataria landscape.",
+          "localisation_stem": "Greater Khingan",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Forested mountain range bordering the Hulun-Argun steppe on the east.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Ikh Khyangan",
+              "native_script": "Их Хянган",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('gravelly semi-desert')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gobi",
-              "native_script": "Гоби",
-              "language": "Russian",
-              "language_code": "rus",
-              "notes": "Russian geographical name"
-            },
-            {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Dà Xīng'ān Lǐng",
+              "native_script": "大興安嶺",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese historical transcription (Gebi)"
+              "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "100 CE (Hou Hanshu records the Xianbei Mountains; Manchu-Mongolic Khingan attested by Qing)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mongolian govi ('waterless gravel steppe/desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Volcanic mountain range separating the Mongolian plateau from Manchuria.",
+          "source_url": "https://en.wikipedia.org/wiki/Greater_Khingan"
         }
       ]
     },
@@ -14472,38 +14487,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Minusinsk_Hollow"
         },
         {
-          "name": "Abakan",
+          "name": "Bely Iyus",
           "disambiguation_note": null,
-          "localisation_stem": "Abakan",
+          "localisation_stem": "Bely Iyus",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Khakass Hollow landscape.",
+          "relationship": "Khakas headwater river of the Chulym rising in the Kuznetsk Alatau.",
           "language_variants": [
             {
-              "form": "Aghban",
-              "native_script": "Агhбан",
+              "form": "Akh-Üüs",
+              "native_script": "Ах-Ӱӱс",
               "language": "Khakas",
               "language_code": "kjh",
-              "notes": "Khakas name"
+              "notes": "Indigenous Khakas name ('White River')"
             },
             {
-              "form": "Abakan",
-              "native_script": "Абакан",
+              "form": "Bely Iyus",
+              "native_script": "Белый Июс",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1675,
-          "earliest_attestation_note": "1675 CE (17th-century Russian Siberian cartography)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Khakas hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major left tributary of the Yenisei flowing through the Khakass Hollow.",
-          "source_url": "https://en.wikipedia.org/wiki/Abakan_(river)"
+          "etymology_notes": "Right headstream of the Chulym rising in the Kuznetsk Alatau; from Khakas akh ('white') and üüs ('river').",
+          "source_url": "https://en.wikipedia.org/wiki/Bely_Iyus"
         }
       ]
     },
@@ -15673,31 +15688,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Lena_River"
         },
         {
-          "name": "Ilga",
-          "disambiguation_note": "river",
-          "localisation_stem": "Ilga",
+          "name": "Kuta",
+          "disambiguation_note": "Lena",
+          "localisation_stem": "Kuta",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Lena landscape.",
+          "relationship": "Left tributary of the upper Lena flowing parallel to the Ilim portage.",
           "language_variants": [
             {
-              "form": "Ilga",
-              "native_script": "Илга",
+              "form": "Kuta",
+              "native_script": "Кута",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
+            },
+            {
+              "form": "Kuta",
+              "native_script": "Кута",
+              "language": "Evenki",
+              "language_code": "evn",
+              "notes": "Evenki substrate hydronym ('peat bog, mire')"
             }
           ],
-          "earliest_attestation_year": 1630,
-          "earliest_attestation_note": "c. 1630 CE (17th-century Russian Lena portage records)",
+          "earliest_attestation_year": 1631,
+          "earliest_attestation_note": "Recorded in 17th-century Russian Siberian Cossack portage reports along the Ilim-Lena route.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Left tributary of the Upper Lena in the Lena-Angara plateau.",
-          "source_url": "https://en.wikipedia.org/wiki/Ilga_(river)"
+          "etymology_notes": "Left tributary of the upper Lena River; from Evenki kuta ('marshy low place, peat bog').",
+          "source_url": "https://en.wikipedia.org/wiki/Kuta_(river)"
         }
       ]
     },
@@ -16327,38 +16349,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Patom_Highlands"
         },
         {
-          "name": "Lena River",
-          "disambiguation_note": null,
-          "localisation_stem": "Lena",
+          "name": "Vitim",
+          "disambiguation_note": "river",
+          "localisation_stem": "Vitim",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Lena landscape.",
+          "relationship": "Major right tributary of the Lena draining the Patom and Baikal highlands.",
           "language_variants": [
             {
-              "form": "DZülge müren",
-              "native_script": "ДЗүлге мүрен",
-              "language": "Buryat",
-              "language_code": "bua",
-              "notes": "Buryat name (Zülge)"
-            },
-            {
-              "form": "Lena",
-              "native_script": "Лена",
+              "form": "Vitim",
+              "native_script": "Витим",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian name (from Evenki Elyu-Ene, 'great river')"
+              "notes": "Russian geographical name"
+            },
+            {
+              "form": "Vitim",
+              "native_script": "Витим",
+              "language": "Buryat",
+              "language_code": "bua",
+              "notes": "Buryat form"
             }
           ],
-          "earliest_attestation_year": 1620,
-          "earliest_attestation_note": "c. 1620 CE (early 17th-century Russian Siberian records)",
+          "earliest_attestation_year": 1639,
+          "earliest_attestation_note": "1639 CE (17th-century Russian Lena-Baikal records)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great Siberian river rising near Lake Baikal; from Evenki Elyu-Ene ('great river').",
-          "source_url": "https://en.wikipedia.org/wiki/Lena_River"
+          "etymology_notes": "Major right tributary of the Lena rising east of Lake Baikal.",
+          "source_url": "https://en.wikipedia.org/wiki/Vitim_(river)"
         }
       ]
     },
@@ -18770,45 +18792,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Merkits"
         },
         {
-          "name": "Dzhida",
-          "disambiguation_note": "river",
-          "localisation_stem": "Dzhida",
+          "name": "Temnik",
+          "disambiguation_note": null,
+          "localisation_stem": "Temnik",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Selenga Valley landscape.",
+          "relationship": "Left tributary of the Selenga descending from the Khamar-Daban range.",
           "language_variants": [
             {
-              "form": "Dzede",
-              "native_script": "Дзеде",
+              "form": "Khimni gol",
+              "native_script": "Химни гол",
               "language": "Buryat",
               "language_code": "bua",
               "notes": "Buryat name"
             },
             {
-              "form": "Dzed gol",
-              "native_script": "Дзед гол",
-              "language": "Mongolian",
-              "language_code": "mon",
-              "notes": "Mongolian name"
-            },
-            {
-              "form": "Dzhida",
-              "native_script": "Джида",
+              "form": "Temnik",
+              "native_script": "Темник",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Buryat-Mongolic hydronym",
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Buryat and Transbaikal hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Left tributary of the Selenga flowing south of the Khamar-Daban.",
-          "source_url": "https://en.wikipedia.org/wiki/Dzhida_(river)"
+          "etymology_notes": "Left tributary of the Selenga rising in the Khamar-Daban range; Russian adaptation of Buryat Khimni.",
+          "source_url": "https://en.wikipedia.org/wiki/Temnik"
         },
         {
           "name": "Khamar-Daban",
@@ -19798,52 +19813,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Lake_Kh%C3%B6vsg%C3%B6l"
         },
         {
-          "name": "Selenga",
+          "name": "Chikoy",
           "disambiguation_note": null,
-          "localisation_stem": "Selenga",
+          "localisation_stem": "Chikoy",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Selenga Valley landscape.",
+          "relationship": "Major right tributary of the Selenga flowing along the Transbaikal border.",
           "language_variants": [
             {
-              "form": "Selenge Mören",
-              "native_script": "Селенге Мөрен",
-              "language": "Mongolian",
-              "language_code": "mon",
-              "notes": "Mongolian name"
-            },
-            {
-              "form": "Selenge",
-              "native_script": "Селенге",
+              "form": "Sukhe muren",
+              "native_script": "Сүхэ мүрэн",
               "language": "Buryat",
               "language_code": "bua",
-              "notes": "Buryat name"
+              "notes": "Buryat name ('Axe River')"
             },
             {
-              "form": "Selenge",
-              "native_script": null,
-              "language": "Old Turkic",
-              "language_code": "otk",
-              "notes": "Orkhon/Uyghur inscription form"
-            },
-            {
-              "form": "Selenga",
-              "native_script": "Селенга",
+              "form": "Chikoy",
+              "native_script": "Чикой",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 732,
-          "earliest_attestation_note": "732 CE (Orkhon inscriptions, as Selenge)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolic-Buryat hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Principal river of northern Mongolia and Buryatia flowing into Lake Baikal.",
-          "source_url": "https://en.wikipedia.org/wiki/Selenga"
+          "etymology_notes": "Major right tributary of the Selenga flowing along the Transbaikal-Mongolia border; Buryat Sükhe, Mongolian Tsökh.",
+          "source_url": "https://en.wikipedia.org/wiki/Chikoy_(river)"
         }
       ]
     },
@@ -19913,52 +19914,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Merkits"
         },
         {
-          "name": "Selenga",
-          "disambiguation_note": null,
-          "localisation_stem": "Selenga",
+          "name": "Khilok",
+          "disambiguation_note": "river",
+          "localisation_stem": "Khilok",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Selenga Valley landscape.",
+          "relationship": "Right tributary of the Selenga draining the Transbaikal valleys.",
           "language_variants": [
             {
-              "form": "Selenge Mören",
-              "native_script": "Селенге Мөрен",
-              "language": "Mongolian",
-              "language_code": "mon",
-              "notes": "Mongolian name"
-            },
-            {
-              "form": "Selenge",
-              "native_script": "Селенге",
+              "form": "Khyoolgo",
+              "native_script": "Хёолго",
               "language": "Buryat",
               "language_code": "bua",
               "notes": "Buryat name"
             },
             {
-              "form": "Selenge",
-              "native_script": null,
-              "language": "Old Turkic",
-              "language_code": "otk",
-              "notes": "Orkhon/Uyghur inscription form"
-            },
-            {
-              "form": "Selenga",
-              "native_script": "Селенга",
+              "form": "Khilok",
+              "native_script": "Хилок",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 732,
-          "earliest_attestation_note": "732 CE (Orkhon inscriptions, as Selenge)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1240,
+          "earliest_attestation_note": "c. 1240 CE (Secret History of the Mongols, as Kilqo)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Principal river of northern Mongolia and Buryatia flowing into Lake Baikal.",
-          "source_url": "https://en.wikipedia.org/wiki/Selenga"
+          "etymology_notes": "Right tributary of the Selenga in Transbaikal.",
+          "source_url": "https://en.wikipedia.org/wiki/Khilok_(river)"
         },
         {
           "name": "Dzhida",
@@ -20609,31 +20596,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Yenisei_Kyrgyz"
         },
         {
-          "name": "Kuznetsk Basin",
+          "name": "Salair Ridge",
           "disambiguation_note": null,
-          "localisation_stem": "Kuznetsk",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Prominent natural feature of the Shoria landscape.",
+          "localisation_stem": "Salair",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Low forested mountain ridge bounding the Kuznetsk depression on the southwest.",
           "language_variants": [
             {
-              "form": "Kuznetskaya kotlovina",
-              "native_script": "Кузнецкая котловина",
+              "form": "Salairskiy kryazh",
+              "native_script": "Салаирский кряж",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1618,
-          "earliest_attestation_note": "1618 CE (Russian Kuznetsk ostrog records)",
+          "earliest_attestation_year": 1697,
+          "earliest_attestation_note": "Attested in pre-1700 CE Teleut and Russian Siberian geographical accounts.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Intermontane depression of the Tom River valley between the Kuznetsk Alatau and Salair Ridge.",
-          "source_url": "https://en.wikipedia.org/wiki/Kuznetsk_Basin"
+          "etymology_notes": "Low mountain ridge between the upper Ob plain and the Kuznetsk Basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Salair_Ridge"
         },
         {
           "name": "Kondoma",
@@ -20837,31 +20824,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tiele_people"
         },
         {
-          "name": "Mrassu",
+          "name": "Tom",
           "disambiguation_note": null,
-          "localisation_stem": "Mrassu",
+          "localisation_stem": "Tom",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent natural feature of the Shoria landscape.",
+          "relationship": "Main river of Shoria into which both the Kondoma and Mrassu flow.",
           "language_variants": [
             {
-              "form": "Mras-Su",
-              "native_script": "Мрас-Су",
+              "form": "Tom",
+              "native_script": "Том",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
+            },
+            {
+              "form": "Tom",
+              "native_script": "Том",
+              "language": "Khakas",
+              "language_code": "kjh",
+              "notes": "Khakas/Shor name"
             }
           ],
-          "earliest_attestation_year": 1618,
-          "earliest_attestation_note": "Early 17th century CE in Russian Kuznetsk ostrog records.",
+          "earliest_attestation_year": 1604,
+          "earliest_attestation_note": "Attested in 1604 CE Russian Siberian chronicles at the founding of Tomsk.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Left tributary of the Tom River flowing through the Shor highlands.",
-          "source_url": "https://en.wikipedia.org/wiki/Mrassu"
+          "etymology_notes": "Major right tributary of the Ob rising in the Abakan Range and flowing through Shoria.",
+          "source_url": "https://en.wikipedia.org/wiki/Tom_(river)"
         },
         {
           "name": "Kuznetsk Alatau",
@@ -22845,38 +22839,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Little_Yenisei"
         },
         {
-          "name": "Eastern Sayan",
+          "name": "Lake Todzha",
           "disambiguation_note": null,
-          "localisation_stem": "Eastern Sayan",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Major mountain range associated with the Tapsa (Togina) landscape around Bilin.",
+          "localisation_stem": "Todzha",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Glacial lake in the Todzha Basin of northeastern Tuva.",
           "language_variants": [
             {
-              "form": "Vostochny Sayan",
-              "native_script": "Восточны Саян",
-              "language": "Russian",
-              "language_code": "rus",
-              "notes": "Russian oronym"
+              "form": "Tody-Khol",
+              "native_script": "Тоды-Хол",
+              "language": "Tuvan",
+              "language_code": "tyv",
+              "notes": "Tuvan name"
             },
             {
-              "form": "Sayanyn nuruu",
-              "native_script": "Саянын нуруу",
-              "language": "Mongolian",
-              "language_code": "mon",
-              "notes": "Mongolian name"
+              "form": "Ozero Todzha",
+              "native_script": "Озеро Тоджа",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian name"
             }
           ],
-          "earliest_attestation_year": 732,
-          "earliest_attestation_note": "Sayan range attested as Kogmen in the Old Turkic Orkhon inscriptions (732 CE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "Todzha basin recorded in 17th-century CE Russian and Mongolian accounts of northeastern Tuva.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Mountain system stretching from the Yenisei to Lake Baikal.",
-          "source_url": "https://en.wikipedia.org/wiki/Eastern_Sayan"
+          "etymology_notes": "Glacial lake in the Todzha (Togina) basin of northeastern Tuva.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Todzha"
         }
       ]
     },
@@ -24833,38 +24827,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Selenga"
         },
         {
-          "name": "Uda River",
-          "disambiguation_note": null,
-          "localisation_stem": "Uda",
+          "name": "Khilok",
+          "disambiguation_note": "river",
+          "localisation_stem": "Khilok",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major river associated with the Ulan Ude (Uda Valley) landscape around Altaichei.",
+          "relationship": "Major Transbaikal tributary joining the Selenga upstream of Ulan-Ude.",
           "language_variants": [
             {
-              "form": "Üde Gol",
-              "native_script": "Үде Гол",
+              "form": "Khyoolgo",
+              "native_script": "Хёолго",
               "language": "Buryat",
               "language_code": "bua",
-              "notes": "Buryat hydronym"
+              "notes": "Buryat name"
             },
             {
-              "form": "Uda",
-              "native_script": "Уда",
+              "form": "Khilok",
+              "native_script": "Хилок",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1666,
-          "earliest_attestation_note": "Attested in 17th-century CE Russian Siberian records (Udinskoye, 1666 CE).",
+          "earliest_attestation_year": 1240,
+          "earliest_attestation_note": "c. 1240 CE (Secret History of the Mongols, as Kilqo)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Right-bank tributary of the Selenga in Buryatia.",
-          "source_url": "https://en.wikipedia.org/wiki/Uda_(Selenga)"
+          "etymology_notes": "Right tributary of the Selenga in Transbaikal.",
+          "source_url": "https://en.wikipedia.org/wiki/Khilok_(river)"
         }
       ]
     },
@@ -24927,38 +24921,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Kurykans"
         },
         {
-          "name": "Uda River",
+          "name": "Chikoy",
           "disambiguation_note": null,
-          "localisation_stem": "Uda",
+          "localisation_stem": "Chikoy",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major river associated with the Ulan Ude (Uda Valley) landscape around Khudan.",
+          "relationship": "Long Transbaikal river flowing westward into the Selenga.",
           "language_variants": [
             {
-              "form": "Üde Gol",
-              "native_script": "Үде Гол",
+              "form": "Sukhe muren",
+              "native_script": "Сүхэ мүрэн",
               "language": "Buryat",
               "language_code": "bua",
-              "notes": "Buryat hydronym"
+              "notes": "Buryat name ('Axe River')"
             },
             {
-              "form": "Uda",
-              "native_script": "Уда",
+              "form": "Chikoy",
+              "native_script": "Чикой",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym"
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1666,
-          "earliest_attestation_note": "Attested in 17th-century CE Russian Siberian records (Udinskoye, 1666 CE).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolic-Buryat hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Right-bank tributary of the Selenga in Buryatia.",
-          "source_url": "https://en.wikipedia.org/wiki/Uda_(Selenga)"
+          "etymology_notes": "Major right tributary of the Selenga flowing along the Transbaikal-Mongolia border; Buryat Sükhe, Mongolian Tsökh.",
+          "source_url": "https://en.wikipedia.org/wiki/Chikoy_(river)"
         },
         {
           "name": "Yablonoi Mountains",
@@ -25096,38 +25090,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Selenga"
         },
         {
-          "name": "Uda River",
+          "name": "Barguzin Range",
           "disambiguation_note": null,
-          "localisation_stem": "Uda",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river associated with the Ulan Ude (Uda Valley) landscape around Saranka.",
+          "localisation_stem": "Barguzin Range",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "High mountain range flanking eastern Lake Baikal north of the Uda.",
           "language_variants": [
             {
-              "form": "Üde Gol",
-              "native_script": "Үде Гол",
-              "language": "Buryat",
-              "language_code": "bua",
-              "notes": "Buryat hydronym"
-            },
-            {
-              "form": "Uda",
-              "native_script": "Уда",
+              "form": "Barguzinsky khrebet",
+              "native_script": "Баргузинский хребет",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym"
+              "notes": "Russian geographical name"
+            },
+            {
+              "form": "Bargazhanay shele",
+              "native_script": "Баргажанай шэлэ",
+              "language": "Buryat",
+              "language_code": "bua",
+              "notes": "Buryat name"
             }
           ],
-          "earliest_attestation_year": 1666,
-          "earliest_attestation_note": "Attested in 17th-century CE Russian Siberian records (Udinskoye, 1666 CE).",
+          "earliest_attestation_year": 1240,
+          "earliest_attestation_note": "Bargujin Töküm attested in the Secret History of the Mongols (c. 1240 CE).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Right-bank tributary of the Selenga in Buryatia.",
-          "source_url": "https://en.wikipedia.org/wiki/Uda_(Selenga)"
+          "etymology_notes": "Mountain range flanking northeastern Lake Baikal and the Barguzin Valley.",
+          "source_url": "https://en.wikipedia.org/wiki/Barguzin_Range"
         }
       ]
     },
@@ -26205,31 +26199,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Yenisei_Kyrgyz"
         },
         {
-          "name": "Mana River",
+          "name": "Bazaikha",
           "disambiguation_note": null,
-          "localisation_stem": "Mana",
+          "localisation_stem": "Bazaikha",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major river associated with the Mana (Yenisei Kan) landscape around Kyzyl-Kan.",
+          "relationship": "Right tributary of the Yenisei flowing from the Eastern Sayan next to the Mana.",
           "language_variants": [
             {
-              "form": "Mana",
-              "native_script": "Мана",
+              "form": "Bazaikha",
+              "native_script": "Базаиха",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian hydronym"
+              "notes": "Russian adaptation of Kamasin-Turkic Abazay"
             }
           ],
-          "earliest_attestation_year": 1630,
-          "earliest_attestation_note": "Recorded in 17th-century CE Russian records near Krasnoyarsk.",
+          "earliest_attestation_year": 1628,
+          "earliest_attestation_note": "Recorded in 17th-century Russian Krasnoyarsk ostrog records; indigenous Kamasin hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Right-bank tributary of the Yenisei draining the northwestern Eastern Sayan.",
-          "source_url": "https://en.wikipedia.org/wiki/Mana_(Russia)"
+          "etymology_notes": "Right tributary of the Yenisei rising in the Eastern Sayan foothills; traced to Kamasin-Samoyedic abazay ('iron') and aga ('river'). Onomastic note: Russian adaptation of Kamasin-Turkic Abazay ('Bazaikha').",
+          "source_url": "https://en.wikipedia.org/wiki/Bazaikha"
         },
         {
           "name": "Eastern Sayan",
@@ -27185,38 +27179,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Tatars"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Buir Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Em Akhulun (Em Wuguguo) landscape around Ulanhulud.",
+          "localisation_stem": "Buir",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Large freshwater steppe lake on the eastern Khalkha plain.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Buir Nuur",
+              "native_script": "Буир Нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Bèi'ěr Hú",
+              "native_script": "貝爾湖",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Chinese historical name (Beier Hu)"
+            },
+            {
+              "form": "Buir-Nur",
+              "native_script": "Буир-Нур",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1240,
+          "earliest_attestation_note": "Attested as Buyur Na'ur in the Secret History of the Mongols (c. 1240 CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Freshwater lake on the eastern Mongolian steppe, historic heartland of the Tatars.",
+          "source_url": "https://en.wikipedia.org/wiki/Buir_Lake"
         },
         {
           "name": "Kherlen River",
@@ -27320,38 +27321,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Tatars"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Hulun Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Em Akhulun (Em Wuguguo) landscape around Tsagaanuur.",
+          "localisation_stem": "Hulun",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Major steppe lake fed by the Kherlen River on the eastern plateau.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Khölön Nuur",
+              "native_script": "Хөлөн Нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Hūlún Hú",
+              "native_script": "呼倫湖",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Chinese historical name (Hulun Hu)"
+            },
+            {
+              "form": "Dalaynor",
+              "native_script": "Далайнор",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name (Dalainor)"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
+          "earliest_attestation_year": 600,
+          "earliest_attestation_note": "600 CE (Tang Shu records Julun Lake in the Shiwei steppe west of the Greater Khingan)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Large steppe lake fed by the Kherlen River in the Tatar-Mongol borderlands.",
+          "source_url": "https://en.wikipedia.org/wiki/Hulun_Lake"
         },
         {
           "name": "Kherlen River",
@@ -27455,38 +27463,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tatars"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Khalkhin Gol",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Em Akhulun (Em Wuguguo) landscape around Horobot.",
+          "localisation_stem": "Khalkhin Gol",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "River of the eastern steppe flowing westward into Buir Lake.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Khalkhyn Gol",
+              "native_script": "Халхын Гол",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "form": "Khalkhin-Gol",
+              "native_script": "Халхин-Гол",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1240,
+          "earliest_attestation_note": "Attested as Qalqa in the Secret History of the Mongols (c. 1240 CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "River of eastern Mongolia flowing into Buir Lake.",
+          "source_url": "https://en.wikipedia.org/wiki/Khalkhin_Gol"
         },
         {
           "name": "Kherlen River",
@@ -27590,38 +27598,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Tatars"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Hulun Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Em Hepung (Em Wuguguo) landscape around Hepung.",
+          "localisation_stem": "Hulun",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Large lake fed by the lower Kherlen River on the eastern steppe.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Khölön Nuur",
+              "native_script": "Хөлөн Нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Hūlún Hú",
+              "native_script": "呼倫湖",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Chinese historical name (Hulun Hu)"
+            },
+            {
+              "form": "Dalaynor",
+              "native_script": "Далайнор",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name (Dalainor)"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
+          "earliest_attestation_year": 600,
+          "earliest_attestation_note": "600 CE (Tang Shu records Julun Lake in the Shiwei steppe west of the Greater Khingan)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Large steppe lake fed by the Kherlen River in the Tatar-Mongol borderlands.",
+          "source_url": "https://en.wikipedia.org/wiki/Hulun_Lake"
         },
         {
           "name": "Kherlen River",
@@ -27718,38 +27733,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Khamag_Mongol"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Khalkhin Gol",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Em Hepung (Em Wuguguo) landscape around Zovkerulen.",
+          "localisation_stem": "Khalkhin Gol",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Eastern steppe river emptying into Buir Lake.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Khalkhyn Gol",
+              "native_script": "Халхын Гол",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "form": "Khalkhin-Gol",
+              "native_script": "Халхин-Гол",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1240,
+          "earliest_attestation_note": "Attested as Qalqa in the Secret History of the Mongols (c. 1240 CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "River of eastern Mongolia flowing into Buir Lake.",
+          "source_url": "https://en.wikipedia.org/wiki/Khalkhin_Gol"
         },
         {
           "name": "Buir Lake",
@@ -27853,38 +27868,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tatars"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Ulz River",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Em Hepung (Em Wuguguo) landscape around Kurnuur.",
+          "localisation_stem": "Ulz",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Steppe river of northeastern Mongolia north of the Kherlen.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Ulz gol",
+              "native_script": "Улз гол",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "form": "Uldza",
+              "native_script": "Ульдза",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolic steppe hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Steppe river of northeastern Mongolia flowing northeast into the Torey Lakes basin; traditional Mongolic hydronym Ulz.",
+          "source_url": "https://en.wikipedia.org/wiki/Ulz_River"
         },
         {
           "name": "Kherlen River",
@@ -27988,38 +28003,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tatars"
         },
         {
-          "name": "Gobi Desert",
-          "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Em Hepung (Em Wuguguo) landscape around Khosoonuud.",
+          "name": "Ganga Lake",
+          "disambiguation_note": "Mongolia",
+          "localisation_stem": "Ganga",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Saline steppe lake set amid dunes on the southeastern Mongolian plain.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Ganga nuur",
+              "native_script": "Ганга нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "form": "Ganga-Nur",
+              "native_script": "Ганга-Нур",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian steppe hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Saline steppe lake on the edge of the Moltsog Els dunes in Sukhbaatar Province; locally associated in legend with the sacred Ganges.",
+          "source_url": "https://en.wikipedia.org/wiki/Ganga_Lake_(Mongolia)"
         },
         {
           "name": "Kherlen River",
@@ -28123,38 +28138,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Tatars"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Buir Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Em Karakopi (Em Wuguguo) landscape around Kanchuku.",
+          "localisation_stem": "Buir",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Freshwater lake anchoring the eastern Mongolian steppe.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Buir Nuur",
+              "native_script": "Буир Нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Bèi'ěr Hú",
+              "native_script": "貝爾湖",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Chinese historical name (Beier Hu)"
+            },
+            {
+              "form": "Buir-Nur",
+              "native_script": "Буир-Нур",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1240,
+          "earliest_attestation_note": "Attested as Buyur Na'ur in the Secret History of the Mongols (c. 1240 CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Freshwater lake on the eastern Mongolian steppe, historic heartland of the Tatars.",
+          "source_url": "https://en.wikipedia.org/wiki/Buir_Lake"
         },
         {
           "name": "Kherlen River",
@@ -28258,38 +28280,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Tatars"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Hulun Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Em Karakopi (Em Wuguguo) landscape around Usguitalbai.",
+          "localisation_stem": "Hulun",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Large eastern steppe lake connected to the Kherlen watershed.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Khölön Nuur",
+              "native_script": "Хөлөн Нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Hūlún Hú",
+              "native_script": "呼倫湖",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Chinese historical name (Hulun Hu)"
+            },
+            {
+              "form": "Dalaynor",
+              "native_script": "Далайнор",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name (Dalainor)"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
+          "earliest_attestation_year": 600,
+          "earliest_attestation_note": "600 CE (Tang Shu records Julun Lake in the Shiwei steppe west of the Greater Khingan)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Large steppe lake fed by the Kherlen River in the Tatar-Mongol borderlands.",
+          "source_url": "https://en.wikipedia.org/wiki/Hulun_Lake"
         },
         {
           "name": "Kherlen River",
@@ -28393,38 +28422,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tatars"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Ulz River",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Em Karakopi (Em Wuguguo) landscape around Tapsunuur.",
+          "localisation_stem": "Ulz",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Steppe river crossing the northeastern plains toward the Torey basin.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Ulz gol",
+              "native_script": "Улз гол",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "form": "Uldza",
+              "native_script": "Ульдза",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolic steppe hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Steppe river of northeastern Mongolia flowing northeast into the Torey Lakes basin; traditional Mongolic hydronym Ulz.",
+          "source_url": "https://en.wikipedia.org/wiki/Ulz_River"
         },
         {
           "name": "Kherlen River",
@@ -28528,38 +28557,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Tatars"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Buir Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Em Khartereg (Em Wuguguo) landscape around Nuurkhoorond.",
+          "localisation_stem": "Buir",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Steppe lake on the eastern Mongolian borderlands.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Buir Nuur",
+              "native_script": "Буир Нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Bèi'ěr Hú",
+              "native_script": "貝爾湖",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Chinese historical name (Beier Hu)"
+            },
+            {
+              "form": "Buir-Nur",
+              "native_script": "Буир-Нур",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1240,
+          "earliest_attestation_note": "Attested as Buyur Na'ur in the Secret History of the Mongols (c. 1240 CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Freshwater lake on the eastern Mongolian steppe, historic heartland of the Tatars.",
+          "source_url": "https://en.wikipedia.org/wiki/Buir_Lake"
         },
         {
           "name": "Kherlen River",
@@ -28663,38 +28699,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Tatars"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Hulun Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Em Khartereg (Em Wuguguo) landscape around Tulanhara.",
+          "localisation_stem": "Hulun",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Major lake receiving the waters of the Kherlen River.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Khölön Nuur",
+              "native_script": "Хөлөн Нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Hūlún Hú",
+              "native_script": "呼倫湖",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Chinese historical name (Hulun Hu)"
+            },
+            {
+              "form": "Dalaynor",
+              "native_script": "Далайнор",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name (Dalainor)"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
+          "earliest_attestation_year": 600,
+          "earliest_attestation_note": "600 CE (Tang Shu records Julun Lake in the Shiwei steppe west of the Greater Khingan)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Large steppe lake fed by the Kherlen River in the Tatar-Mongol borderlands.",
+          "source_url": "https://en.wikipedia.org/wiki/Hulun_Lake"
         },
         {
           "name": "Kherlen River",
@@ -28926,38 +28969,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shatuo"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Xilin River",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Abakhai (Gobi Shatuoguo) landscape around Kur Chagan.",
+          "localisation_stem": "Xilin",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Endorheic steppe river winding across the Xilingol plateau.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Siilen gol",
+              "native_script": "Сийлэн гол",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian steppe river name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Xilin He",
+              "native_script": "锡林河",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Chinese geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian steppe hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Endorheic steppe river flowing northwest through the Xilingol grasslands of Inner Mongolia.",
+          "source_url": "https://en.wikipedia.org/wiki/Xilin_River"
         },
         {
           "name": "Yin Mountains",
@@ -29054,38 +29097,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shatuo"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Luan River",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Abakhai (Gobi Shatuoguo) landscape around Abakhanar.",
+          "localisation_stem": "Luan",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major river whose Shandian headwaters rise on the southeastern steppe.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Shand gol",
+              "native_script": "Шанд гол",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name for the upper Shandian headwaters"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Luan He",
+              "native_script": "滦河",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Chinese river name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
+          "earliest_attestation_year": 207,
+          "earliest_attestation_note": "207 CE (Attested as Rushui in Han-Wei chronicles and Shuijing Zhu)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Major river rising as the Shandian River on the Inner Mongolian plateau before cutting south through the Yan Mountains to the Bohai Sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Luan_River"
         },
         {
           "name": "Yin Mountains",
@@ -29182,38 +29225,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shatuo"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Xilin River",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Abga (Gobi Shatuoguo) landscape around Durma.",
+          "localisation_stem": "Xilin",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Grassland river flowing through the central Xilingol steppe.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Siilen gol",
+              "native_script": "Сийлэн гол",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian steppe river name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Xilin He",
+              "native_script": "锡林河",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Chinese geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian steppe hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Endorheic steppe river flowing northwest through the Xilingol grasslands of Inner Mongolia.",
+          "source_url": "https://en.wikipedia.org/wiki/Xilin_River"
         },
         {
           "name": "Yin Mountains",
@@ -29310,38 +29353,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shatuo"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Xianbei",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Abga (Gobi Shatuoguo) landscape around Elsuul.",
+          "localisation_stem": "Xianbei",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Ancient proto-Mongolic confederation native to the eastern steppe and Khingan borderlands.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
-              "language": "Mongolian",
-              "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
-            },
-            {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Xianbei",
+              "native_script": "鮮卑",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Han-Jin chronicle ethnonym"
+            },
+            {
+              "form": "Sumbe",
+              "native_script": "Сүмбэ",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Modern Mongolian historical ethnonym"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
+          "earliest_attestation_year": -200,
+          "earliest_attestation_note": "c. 200 BCE (Early Han-era records of the Donghu/Xianbei confederation)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Ancient proto-Mongolic nomadic confederation of the eastern Eurasian steppe and Greater Khingan, predecessors of the Rouran and Tuoba.",
+          "source_url": "https://en.wikipedia.org/wiki/Xianbei"
         },
         {
           "name": "Yin Mountains",
@@ -29438,38 +29481,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shatuo"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Tuoba",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Dorngovi (Gobi Shatuoguo) landscape around Miggan.",
+          "localisation_stem": "Tuoba",
+          "category": "tribe",
+          "feature_subtype": "mongolic_tribe",
+          "relationship": "Early Mongolic Xianbei clan attested along the northern frontier of the Yin Mountains.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
-              "language": "Mongolian",
-              "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
-            },
-            {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Tuoba",
+              "native_script": "拓跋",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Wei Shu dynastic clan form"
+            },
+            {
+              "form": "Tabgach",
+              "native_script": "𐱃𐰉𐰍𐰲",
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Orkhon inscription designation"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
+          "earliest_attestation_year": 258,
+          "earliest_attestation_note": "Attested in 3rd-century CE Chinese chronicles and later 8th-century Old Turkic inscriptions.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Major Xianbei clan that migrated from the Greater Khingan into the Yin Mountains and Dai region, founding Northern Wei.",
+          "source_url": "https://en.wikipedia.org/wiki/Tuoba"
         },
         {
           "name": "Yin Mountains",
@@ -29566,38 +29609,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shatuo"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Ulaan Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Dorngovi (Gobi Shatuoguo) landscape around Iren.",
+          "localisation_stem": "Ulaan",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Closed steppe-desert lake north of the Yin Mountains frontier.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Ulaan nuur",
+              "native_script": "Улаан нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name ('Red Lake')"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "form": "Ulan-Nur",
+              "native_script": "Улан-Нур",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Terminal desert lake of the Ongi River in Omnogovi; from Mongolian ulaan ('red') and nuur ('lake'), after its reddish clay basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Ulaan_Lake"
         },
         {
           "name": "Yin Mountains",
@@ -29694,38 +29737,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shatuo"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Lang Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Maominggan (Gobi Shatuoguo) landscape around Aibakha.",
+          "localisation_stem": "Lang",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Western spur of the Yin Mountains bordering the northern Yellow River bend.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Khara Narin Ula",
+              "native_script": "Хара Нарин Ула",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name ('Black Narrow Mountain')"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Lang Shan",
+              "native_script": "狼山",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Chinese name ('Wolf Mountains')"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation under this specific subrange name; traditional Mongolian and Chinese oronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Westernmost range of the Yin Mountains rising north of the Yellow River bend in Inner Mongolia.",
+          "source_url": "https://en.wikipedia.org/wiki/Lang_Mountains"
         },
         {
           "name": "Yin Mountains",
@@ -29822,38 +29865,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shatuo"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Ulansuhai Nur",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Maominggan (Gobi Shatuoguo) landscape around Altan Uul.",
+          "localisation_stem": "Ulansuhai Nur",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Large wetland lake lying below the southern slopes of the Yin Mountains.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Uliastai nuur",
+              "native_script": "Улиастай нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name ('Poplar Lake')"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Wuliangsu Hai",
+              "native_script": "乌梁素海",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Chinese transcription of Mongolian name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE (Mongolian hydronym for the oxbow lake of the Yellow River near Baotou)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Large freshwater oxbow lake at the northern apex of the Hetao bend south of the Yin Mountains; from Mongolian uliastai ('with poplars').",
+          "source_url": "https://en.wikipedia.org/wiki/Ulansuhai_Nur"
         },
         {
           "name": "Yin Mountains",
@@ -29950,38 +29993,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shatuo"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Lake Dai",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Sonkhot (Gobi Shatuoguo) landscape around Sishajiang.",
+          "localisation_stem": "Dai",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Closed tectonic lake in the Ulanqab plateau south of the steppe.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Daihai nuur",
+              "native_script": "Дайхай нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Dai Hai",
+              "native_script": "岱海",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Chinese geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 500 CE (Recorded in Northern Wei geographic accounts of Dai/Ulanqab)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Closed tectonic lake in the Ulanqab basin south of the Yin Mountains, tied to the ancient Dai steppe region.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Dai"
         },
         {
           "name": "Yin Mountains",
@@ -30078,38 +30121,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Shatuo"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Hetao",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
+          "localisation_stem": "Hetao",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Sonkhot (Gobi Shatuoguo) landscape around Liaoli.",
+          "relationship": "Fertile Yellow River bend plain flanking the southern Yin Mountains.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
-              "language": "Mongolian",
-              "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
-            },
-            {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Hetao",
+              "native_script": "河套",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Traditional Chinese geographical name ('River Loop')"
+            },
+            {
+              "form": "Khotao",
+              "native_script": "Хөтао",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian geographical form"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
+          "earliest_attestation_year": -127,
+          "earliest_attestation_note": "Attested in Han-dynasty historical records (Henan/Shuofang) from the 2nd century BCE.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Alluvial plain along the great northern bend of the Yellow River bounded on the north by the Yin Mountains.",
+          "source_url": "https://en.wikipedia.org/wiki/Hetao"
         },
         {
           "name": "Yin Mountains",
@@ -34667,38 +34710,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Hailar_River"
         },
         {
-          "name": "Greater Khingan",
+          "name": "Argun River",
           "disambiguation_note": null,
-          "localisation_stem": "Greater Khingan",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Major mountain range associated with the Sw Mengwuo (Sw Dashiweiguo) landscape around Xiailehuli.",
+          "localisation_stem": "Argun",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Borderland river fed by the Hailar River across the northern steppe.",
           "language_variants": [
             {
-              "form": "Ikh Khyangan",
-              "native_script": "Их Хянган",
+              "form": "Ergüne mörön",
+              "native_script": "Эргүне мөрөн",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name"
+              "notes": "Mongolian name (Ergüne)"
             },
             {
-              "form": "Dà Xīng'ān Lǐng",
-              "native_script": "大興安嶺",
+              "form": "Argun",
+              "native_script": "Аргун",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
+            },
+            {
+              "form": "É'ěrgǔnà Hé",
+              "native_script": "額爾古納河",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name"
+              "notes": "Chinese chronicle name (Eerguna He)"
             }
           ],
-          "earliest_attestation_year": 100,
-          "earliest_attestation_note": "100 CE (Hou Hanshu records the Xianbei Mountains; Manchu-Mongolic Khingan attested by Qing)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1240,
+          "earliest_attestation_note": "c. 1240 CE (Secret History of the Mongols / Jami' al-tawarikh, as Ergüne)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Volcanic mountain range separating the Mongolian plateau from Manchuria.",
-          "source_url": "https://en.wikipedia.org/wiki/Greater_Khingan"
+          "etymology_notes": "River forming the eastern Mongolian-Manchurian border; from Mongolic ergüne ('broad').",
+          "source_url": "https://en.wikipedia.org/wiki/Argun_(Amur)"
         }
       ]
     },
@@ -35591,38 +35641,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Buir_Lake"
         },
         {
-          "name": "Hulun Lake",
+          "name": "Khalkhin Gol",
           "disambiguation_note": null,
-          "localisation_stem": "Hulun",
+          "localisation_stem": "Khalkhin Gol",
           "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Major lake associated with the Sw Dongcheziguo (Sw Heicheziguo) landscape around Kharulagai.",
+          "feature_subtype": "river",
+          "relationship": "Steppe river flowing into Buir Lake on the eastern Mongolian frontier.",
           "language_variants": [
             {
-              "form": "Khölön Nuur",
-              "native_script": "Хөлөн Нуур",
+              "form": "Khalkhyn Gol",
+              "native_script": "Халхын Гол",
               "language": "Mongolian",
               "language_code": "mon",
               "notes": "Mongolian name"
             },
             {
-              "form": "Hūlún Hú",
-              "native_script": "呼倫湖",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "form": "Khalkhin-Gol",
+              "native_script": "Халхин-Гол",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "600 CE (Tang Shu records Julun Lake in the Shiwei steppe west of the Greater Khingan)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1240,
+          "earliest_attestation_note": "Attested as Qalqa in the Secret History of the Mongols (c. 1240 CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Large lake in Hulunbuir fed by the Kherlen and Orshun rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Hulun_Lake"
+          "etymology_notes": "River of eastern Mongolia flowing into Buir Lake.",
+          "source_url": "https://en.wikipedia.org/wiki/Khalkhin_Gol"
         }
       ]
     },
@@ -36131,38 +36181,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Buir_Lake"
         },
         {
-          "name": "Hulun Lake",
+          "name": "Greater Khingan",
           "disambiguation_note": null,
-          "localisation_stem": "Hulun",
-          "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Major lake associated with the Sw Hongxingan (Sw Heicheziguo) landscape around Shangwulu.",
+          "localisation_stem": "Greater Khingan",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Forested mountain range spanning the eastern Mongolian-Manchurian divide.",
           "language_variants": [
             {
-              "form": "Khölön Nuur",
-              "native_script": "Хөлөн Нуур",
+              "form": "Ikh Khyangan",
+              "native_script": "Их Хянган",
               "language": "Mongolian",
               "language_code": "mon",
               "notes": "Mongolian name"
             },
             {
-              "form": "Hūlún Hú",
-              "native_script": "呼倫湖",
+              "form": "Dà Xīng'ān Lǐng",
+              "native_script": "大興安嶺",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "600 CE (Tang Shu records Julun Lake in the Shiwei steppe west of the Greater Khingan)",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "100 CE (Hou Hanshu records the Xianbei Mountains; Manchu-Mongolic Khingan attested by Qing)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Large lake in Hulunbuir fed by the Kherlen and Orshun rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Hulun_Lake"
+          "etymology_notes": "Volcanic mountain range separating the Mongolian plateau from Manchuria.",
+          "source_url": "https://en.wikipedia.org/wiki/Greater_Khingan"
         }
       ]
     },
@@ -37305,38 +37355,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Keraites"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Khongoryn Els",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
+          "localisation_stem": "Khongoryn Els",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Major region associated with the Em Dadaels (Gobi Dadaels) landscape around Tarhanalin.",
+          "relationship": "Long desert dune ridge bordering the southern steppe ranges.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Khongoryn els",
+              "native_script": "Хонгорын элс",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name ('Pale-Yellow Sands')"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "form": "Khongoryn-Els",
+              "native_script": "Хонгорын-Элс",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian toponym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Dune field on the northern flank of the Gurvan Saikhan range; from Mongolian khongor ('pale yellow, tawny') and els ('sand').",
+          "source_url": "https://en.wikipedia.org/wiki/Khongoryn_Els"
         },
         {
           "name": "Gurvan Saikhan Mountains",
@@ -37426,38 +37476,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Keraites"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Yolyn Am",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Em Dadaels (Gobi Dadaels) landscape around Ichar Ekin.",
+          "localisation_stem": "Yolyn Am",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "Mountain canyon cutting through the eastern Gurvan Saikhan range.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Yolyn am",
+              "native_script": "Ёлын ам",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name ('Lammergeier Gorge')"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "form": "Yolyn-Am",
+              "native_script": "Ёлын-Ам",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian gorge name.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Deep ice-filled gorge in the Zuun Saikhan massif; from Mongolian yol ('bearded vulture, lammergeier') and am ('mouth, canyon').",
+          "source_url": "https://en.wikipedia.org/wiki/Yolyn_Am"
         },
         {
           "name": "Gurvan Saikhan Mountains",
@@ -37547,38 +37597,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Keraites"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Ulaan Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Em Dadaels (Gobi Dadaels) landscape around Tarkhaidam.",
+          "localisation_stem": "Ulaan",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Terminal desert basin lake fed by northern steppe runoff.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Ulaan nuur",
+              "native_script": "Улаан нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name ('Red Lake')"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "form": "Ulan-Nur",
+              "native_script": "Улан-Нур",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Terminal desert lake of the Ongi River in Omnogovi; from Mongolian ulaan ('red') and nuur ('lake'), after its reddish clay basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Ulaan_Lake"
         },
         {
           "name": "Gurvan Saikhan Mountains",
@@ -37668,38 +37718,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Keraites"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Ongi River",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Ulaantatar (Gobi Dadaels) landscape around Khulugur.",
+          "localisation_stem": "Ongi",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major desert-steppe river flowing southward from the Khangai toward Ulaan Lake.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Ongiin gol",
+              "native_script": "Онгийн гол",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "form": "Ongiin-Gol",
+              "native_script": "Онгиин-Гол",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
+          "earliest_attestation_year": 732,
+          "earliest_attestation_note": "c. 732 CE (Old Turkic Ongin inscription)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Endorheic river flowing from the Khangai Mountains southward into the Gobi.",
+          "source_url": "https://en.wikipedia.org/wiki/Ongi_River"
         },
         {
           "name": "Gurvan Saikhan Mountains",
@@ -37789,38 +37839,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Keraites"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Ulaan Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Ulaantatar (Gobi Dadaels) landscape around Ikh Nart.",
+          "localisation_stem": "Ulaan",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Endorheic lake on the steppe-desert margin southwest of the Dornogovi highlands.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Ulaan nuur",
+              "native_script": "Улаан нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name ('Red Lake')"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "form": "Ulan-Nur",
+              "native_script": "Улан-Нур",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Terminal desert lake of the Ongi River in Omnogovi; from Mongolian ulaan ('red') and nuur ('lake'), after its reddish clay basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Ulaan_Lake"
         },
         {
           "name": "Gurvan Saikhan Mountains",
@@ -37910,38 +37960,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Keraites"
         },
         {
-          "name": "Gobi Desert",
-          "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Ulaantatar (Gobi Dadaels) landscape around Burdene Bulag.",
+          "name": "Ganga Lake",
+          "disambiguation_note": "Mongolia",
+          "localisation_stem": "Ganga",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Steppe lake in the eastern Mongolian dune belt.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Ganga nuur",
+              "native_script": "Ганга нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "form": "Ganga-Nur",
+              "native_script": "Ганга-Нур",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian steppe hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Saline steppe lake on the edge of the Moltsog Els dunes in Sukhbaatar Province; locally associated in legend with the sacred Ganges.",
+          "source_url": "https://en.wikipedia.org/wiki/Ganga_Lake_(Mongolia)"
         },
         {
           "name": "Gurvan Saikhan Mountains",
@@ -38065,38 +38115,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Khangai_Mountains"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Taatsiin Tsagaan Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Ongi Gol (Gobi Ongi) landscape around Deed Ongi.",
+          "localisation_stem": "Taatsiin Tsagaan",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Saline lake in the Valley of the Lakes west of the Ongi basin.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Taatsyn Tsagaan nuur",
+              "native_script": "Таацын Цагаан нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "form": "Tatsyn-Tsagan-Nur",
+              "native_script": "Тацын-Цаган-Нур",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Saline lake in the Valley of the Lakes fed by the Taats River.",
+          "source_url": "https://en.wikipedia.org/wiki/Taatsiin_Tsagaan_Lake"
         }
       ]
     },
@@ -38159,38 +38209,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Keraites"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Ulaan Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Ongi Gol (Gobi Ongi) landscape around Dood Ongi.",
+          "localisation_stem": "Ulaan",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Terminal lake of the lower Ongi River course.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Ulaan nuur",
+              "native_script": "Улаан нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name ('Red Lake')"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "form": "Ulan-Nur",
+              "native_script": "Улан-Нур",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Terminal desert lake of the Ongi River in Omnogovi; from Mongolian ulaan ('red') and nuur ('lake'), after its reddish clay basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Ulaan_Lake"
         },
         {
           "name": "Gurvan Saikhan Mountains",
@@ -38307,38 +38357,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ongi_River"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Baga Bogd",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Ulaan Govi (Gobi Ongi) landscape around Ochikhi.",
+          "localisation_stem": "Baga Bogd",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Gobi-Altai massif rising west of the lower Ongi plains.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Baga Bogd",
+              "native_script": "Бага Богд",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name ('Lesser Saint')"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "form": "Baga-Bogd",
+              "native_script": "Бага-Богд",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian oronym",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Major massif of the Gobi-Altai range; from Mongolian baga ('lesser') and bogd ('holy').",
+          "source_url": "https://en.wikipedia.org/wiki/Baga_Bogd"
         }
       ]
     },
@@ -38428,38 +38478,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ongi_River"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Ulaan Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Ulaan Govi (Gobi Ongi) landscape around Burgasutai.",
+          "localisation_stem": "Ulaan",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Terminal lake fed by the Ongi River in the northern desert basin.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Ulaan nuur",
+              "native_script": "Улаан нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name ('Red Lake')"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "form": "Ulan-Nur",
+              "native_script": "Улан-Нур",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Terminal desert lake of the Ongi River in Omnogovi; from Mongolian ulaan ('red') and nuur ('lake'), after its reddish clay basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Ulaan_Lake"
         }
       ]
     },
@@ -38549,38 +38599,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Ongi_River"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Gurvan Saikhan Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Ulaan Nuur (Gobi Ongi) landscape around Ulaan Nuur.",
+          "localisation_stem": "Gurvan Saikhan",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Desert mountain range rising immediately south of the Ulaan Nuur basin.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Gurvan Saikhan Uul",
+              "native_script": "Гурван Сайхан Уул",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
-            },
-            {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Mongolian name ('Three Beauties')"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-modern written attestation date established; traditional Gobi Altai range name.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Easternmost spur of the Gobi Altai range in southern Mongolia.",
+          "source_url": "https://en.wikipedia.org/wiki/Gurvan_Saikhan_Mountains"
         }
       ]
     },
@@ -38670,38 +38713,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ongi_River"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Yolyn Am",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Major region associated with the Gobi Ulaan Nuur (Gobi Ongi) landscape around Bayanzag.",
+          "localisation_stem": "Yolyn Am",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "Deep mountain gorge cutting through the nearby Gurvan Saikhan range.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Yolyn am",
+              "native_script": "Ёлын ам",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('arid steppe')"
+              "notes": "Mongolian name ('Lammergeier Gorge')"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese transcription"
+              "form": "Yolyn-Am",
+              "native_script": "Ёлын-Ам",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian gorge name.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert and semi-arid steppe stretching across southern Mongolia and northern China.",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Deep ice-filled gorge in the Zuun Saikhan massif; from Mongolian yol ('bearded vulture, lammergeier') and am ('mouth, canyon').",
+          "source_url": "https://en.wikipedia.org/wiki/Yolyn_Am"
         }
       ]
     },
@@ -39729,38 +39772,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Orkhon_River"
         },
         {
-          "name": "Khangai Mountains",
+          "name": "Tamir River",
           "disambiguation_note": null,
-          "localisation_stem": "Khangai",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Major mountain range associated with the Karakorum (Orkhon) landscape around Shankh.",
+          "localisation_stem": "Tamir",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Orkhon tributary flowing across the Khangai foothills near Karakorum.",
           "language_variants": [
             {
-              "form": "Khangain nuruu",
-              "native_script": "Хангаин нуруу",
+              "form": "Tamir gol",
+              "native_script": "Тамир гол",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name"
+              "notes": "Mongolian name ('Vigor River')"
             },
             {
-              "form": "Ötükän Yïš",
-              "native_script": "𐰇𐱅𐰜𐰤:𐰖𐰃𐱁",
-              "language": "Old Turkic",
-              "language_code": "otk",
-              "notes": "Sacred Orkhon-era Turkic mountain name"
+              "form": "Tamir",
+              "native_script": "Тамир",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 732,
-          "earliest_attestation_note": "Identified with sacred Ötüken Yish in the Old Turkic Orkhon inscriptions (732 CE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1240,
+          "earliest_attestation_note": "Attested in c. 1240 CE Secret History of the Mongols as part of the Orkhon-Tamir heartland.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Central mountain range of Mongolia feeding the Orkhon, Selenga, and Ongi rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Khangai_Mountains"
+          "etymology_notes": "Major left tributary of the Orkhon River draining the northern Khangai Mountains; Mongolian tamir ('strength, vigor').",
+          "source_url": "https://en.wikipedia.org/wiki/Tamir_River"
         }
       ]
     },

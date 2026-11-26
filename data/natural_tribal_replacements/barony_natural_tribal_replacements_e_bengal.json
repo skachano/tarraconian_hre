@@ -137,21 +137,21 @@
       "target_baronies_audited": 172,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 516,
-      "unique_replacement_names": 164,
+      "unique_replacement_names": 170,
       "candidates_with_multilingual_variants": 420,
       "wikipedia_source_attached": 516,
-      "unique_source_urls": 164,
+      "unique_source_urls": 170,
       "candidates_by_category": {
-        "choronym": 46,
-        "hydronym": 229,
-        "oronym": 53,
+        "choronym": 45,
+        "hydronym": 232,
+        "oronym": 51,
         "topographic_feature": 13,
         "tribe": 175
       },
       "baronies_with_category": {
-        "has_choronym_candidate": 46,
+        "has_choronym_candidate": 45,
         "has_hydronym_candidate": 168,
-        "has_oronym_candidate": 52,
+        "has_oronym_candidate": 50,
         "has_topographic_feature_candidate": 12,
         "has_tribe_candidate": 172
       },
@@ -165,7 +165,8 @@
         "ori",
         "pra",
         "san",
-        "sat"
+        "sat",
+        "tel"
       ],
       "anachronism_type_counts": {
         "early_modern_foundation": 30,
@@ -176,8 +177,8 @@
         "unattested_indigenous_or_minor": 56
       },
       "candidates_by_attestation_basis": {
-        "attested_pre_867": 301,
-        "indigenous_pre_literate": 215
+        "attested_pre_867": 296,
+        "indigenous_pre_literate": 220
       },
       "bookmark_valid_candidates": {
         "867": 516,
@@ -185,7 +186,7 @@
         "1178": 516
       },
       "baronies_with_867_valid_candidate": 172,
-      "unique_localisation_stems": 162
+      "unique_localisation_stems": 168
     }
   },
   "baronies": {
@@ -2929,72 +2930,58 @@
           "source_url": "https://en.wikipedia.org/wiki/Bengalis"
         },
         {
-          "name": "Karnaphuli River",
+          "name": "Halda River",
           "disambiguation_note": null,
-          "localisation_stem": "Karnaphuli",
+          "localisation_stem": "Halda",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major river forming the port of Chittagong.",
+          "relationship": "Major northern tributary joining the Karnaphuli just upstream of Chatigama.",
           "language_variants": [
             {
-              "form": "Karṇaphulī",
-              "native_script": "কর্ণফুলী",
+              "form": "Hāldā",
+              "native_script": "হালদা",
               "language": "Bengali",
               "language_code": "ben",
-              "notes": "Bengali form Karnaphuli ('ear-flower')"
+              "notes": "Bengali river name Halda"
             }
           ],
           "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE (Medieval Chittagong port and Arakanese frontier records)",
+          "earliest_attestation_note": "Indigenous pre-literate hydronym of the Chittagong valley",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Largest river of southeastern Bengal, flowing from the Lushai Hills to the Bay of Bengal at Chittagong.",
-          "source_url": "https://en.wikipedia.org/wiki/Karnaphuli_River"
+          "etymology_notes": "Originates in the Badnatali hill ranges of the Chittagong Hill Tracts and empties into the Karnaphuli.",
+          "source_url": "https://en.wikipedia.org/wiki/Halda_River"
         },
         {
-          "name": "Bay of Bengal",
+          "name": "Matamuhuri River",
           "disambiguation_note": null,
-          "localisation_stem": "Bay of Bengal",
+          "localisation_stem": "Matamuhuri",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Sea coast of southeastern Bengal at Chittagong.",
+          "feature_subtype": "river",
+          "relationship": "Coastal hill-tract river south of Chatigama flowing through Bandarban.",
           "language_variants": [
             {
-              "form": "Mahōdadhi",
-              "native_script": "महोदधि",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Classical Sanskrit Mahodadhi / Purva-samudra ('Eastern Sea')"
-            },
-            {
-              "form": "Baṅgōpasāgara",
-              "native_script": "বংগোপসাগর",
+              "form": "Mātāmuhurī",
+              "native_script": "মাতামুহুরী",
               "language": "Bengali",
               "language_code": "ben",
-              "notes": "Bengali form Bangopasagar"
-            },
-            {
-              "form": "Baṅgōpasāgara",
-              "native_script": "ବଂଗୋପସାଗର",
-              "language": "Odia",
-              "language_code": "ori",
-              "notes": "Odia form Bangopasagara"
+              "notes": "Bengali river name Matamuhuri"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 300 BCE (Attested as Purva-samudra / Mahodadhi in Sanskrit and Gangeticus Sinus in Greek)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Indigenous pre-literate hydronym of southeastern Bengal",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Eastern sea of India, known in ancient Sanskrit as Purva-samudra and in Greek as Gangeticus Sinus.",
-          "source_url": "https://en.wikipedia.org/wiki/Bay_of_Bengal"
+          "etymology_notes": "Winding river rising in the eastern hill tracts and discharging into the coastal channels south of Chittagong.",
+          "source_url": "https://en.wikipedia.org/wiki/Matamuhuri_River"
         }
       ]
     },
@@ -7420,45 +7407,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Hooghly_River"
         },
         {
-          "name": "Bay of Bengal",
+          "name": "Muri Ganga River",
           "disambiguation_note": null,
-          "localisation_stem": "Bay of Bengal",
+          "localisation_stem": "Muri Ganga",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Sea bordering the southernmost deltaic island.",
+          "feature_subtype": "river",
+          "relationship": "Eastern distributary channel of the Hooghly bounding Sagardwip Island.",
           "language_variants": [
             {
-              "form": "Mahōdadhi",
-              "native_script": "महोदधि",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Classical Sanskrit Mahodadhi / Purva-samudra ('Eastern Sea')"
-            },
-            {
-              "form": "Baṅgōpasāgara",
-              "native_script": "বংগোপসাগর",
+              "form": "Muṛigaṅgā",
+              "native_script": "মুড়িগঙ্গা",
               "language": "Bengali",
               "language_code": "ben",
-              "notes": "Bengali form Bangopasagar"
+              "notes": "Bengali name Muriganga (also called Baratala)"
             },
             {
-              "form": "Baṅgōpasāgara",
-              "native_script": "ବଂଗୋପସାଗର",
-              "language": "Odia",
-              "language_code": "ori",
-              "notes": "Odia form Bangopasagara"
+              "form": "Mṛtagaṅgā",
+              "native_script": "मृतगङ्गा",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Sanskritized interpretation meaning 'dead Ganges'"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 300 BCE (Attested as Purva-samudra / Mahodadhi in Sanskrit and Gangeticus Sinus in Greek)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Indigenous pre-literate delta channel name of the lower Hooghly",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Eastern sea of India, known in ancient Sanskrit as Purva-samudra and in Greek as Gangeticus Sinus.",
-          "source_url": "https://en.wikipedia.org/wiki/Bay_of_Bengal"
+          "etymology_notes": "Easternmost estuary channel of the Hooghly separating Sagar Island from the Sundarbans mainland.",
+          "source_url": "https://en.wikipedia.org/wiki/Muri_Ganga_River"
         }
       ]
     },
@@ -7799,8 +7779,8 @@
               "notes": "Hindi form Kosi"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 300 BCE (Attested as Kaushiki in the Ramayana and Mahabharata)",
+          "earliest_attestation_year": -1000,
+          "earliest_attestation_note": "c. 1000 BCE (attested as Kaushiki in the Rigveda and Mahabharata)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -7968,8 +7948,8 @@
               "notes": "Hindi form Kosi"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 300 BCE (Attested as Kaushiki in the Ramayana and Mahabharata)",
+          "earliest_attestation_year": -1000,
+          "earliest_attestation_note": "c. 1000 BCE (attested as Kaushiki in the Rigveda and Mahabharata)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -8337,38 +8317,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Kamala_River"
         },
         {
-          "name": "Mithila",
-          "disambiguation_note": "region",
-          "localisation_stem": "Mithila",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Historical Mithila region of the Oiniwar dynasty.",
+          "name": "Kosi River",
+          "disambiguation_note": null,
+          "localisation_stem": "Kosi",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Himalayan river crossing the eastern Mithila plain near Sugauna.",
           "language_variants": [
             {
-              "form": "Mithilā",
-              "native_script": "मिथिला",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskrit Mithila"
-            },
-            {
-              "form": "Mithilā",
-              "native_script": "मिथिला",
+              "form": "Kōśī",
+              "native_script": "कोशी",
               "language": "Maithili",
               "language_code": "mai",
-              "notes": "Maithili form Mithila"
+              "notes": "Maithili and Nepali name Kosi"
+            },
+            {
+              "form": "Kauśikī",
+              "native_script": "कौशिकी",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Classical Vedic and epic Sanskrit name Kaushiki"
+            },
+            {
+              "form": "Kōsī",
+              "native_script": "कोसी",
+              "language": "Hindi",
+              "language_code": "hin",
+              "notes": "Hindi river name"
             }
           ],
-          "earliest_attestation_year": -600,
-          "earliest_attestation_note": "c. 600 BCE (Attested in the Shatapatha Brahmana and Buddhist texts)",
+          "earliest_attestation_year": -1000,
+          "earliest_attestation_note": "c. 1000 BCE (attested as Kaushiki in the Rigveda and Mahabharata)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Historical region of northern Bihar between the Gandak, Kosi, and Ganges.",
-          "source_url": "https://en.wikipedia.org/wiki/Mithila_(region)"
+          "etymology_notes": "From Sanskrit Kaushiki; a major transboundary tributary of the Ganges traversing northern Bihar.",
+          "source_url": "https://en.wikipedia.org/wiki/Kosi_River"
         }
       ]
     },
@@ -15563,31 +15550,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Dikhow_River"
         },
         {
-          "name": "Patkai",
+          "name": "Disang River",
           "disambiguation_note": null,
-          "localisation_stem": "Patkai",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Mountain range overlooking Upper Assam.",
+          "localisation_stem": "Disang",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "South-bank tributary of the Brahmaputra flowing through the Charaideo plain.",
           "language_variants": [
             {
-              "form": "Pāṭakā'i",
-              "native_script": "পাটকাই",
+              "form": "Disāṅg",
+              "native_script": "দিসাং",
               "language": "Assamese",
               "language_code": "asm",
-              "notes": "Assamese form Patkai"
+              "notes": "Assamese hydronym Disang (also known as Dilli in its middle course)"
+            },
+            {
+              "form": "Disāṅga",
+              "native_script": "दिसांग",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Sanskritized regional rendering"
             }
           ],
-          "earliest_attestation_year": 1228,
-          "earliest_attestation_note": "1228 CE (Crossed by Sukaphaa into Upper Assam in the Ahom Buranjis)",
+          "earliest_attestation_year": 1253,
+          "earliest_attestation_note": "13th century CE (Ahom Buranjis recording the Disang as a northern boundary under Sukaphaa)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Mountain range on the Assam-Myanmar border; name linked to Tai-Ahom 'Pat-kai-seng-kan'.",
-          "source_url": "https://en.wikipedia.org/wiki/Patkai"
+          "etymology_notes": "Named Disang in its lower course and Dilli in its middle reach; a major Upper Assam tributary of the Brahmaputra.",
+          "source_url": "https://en.wikipedia.org/wiki/Disang_River"
         }
       ]
     },
@@ -18964,45 +18958,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Telugu_people"
         },
         {
-          "name": "Bay of Bengal",
+          "name": "Sarada River",
           "disambiguation_note": null,
-          "localisation_stem": "Bay of Bengal",
+          "localisation_stem": "Sarada",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Sea fronting the port of Visakhapatnam.",
+          "feature_subtype": "river",
+          "relationship": "Eastern Ghats river draining the coastal plains immediately south of Visakhapatnam.",
           "language_variants": [
             {
-              "form": "Mahōdadhi",
-              "native_script": "महोदधि",
+              "form": "Śārada",
+              "native_script": "శారద",
+              "language": "Telugu",
+              "language_code": "tel",
+              "notes": "Telugu river name Sarada"
+            },
+            {
+              "form": "Śāradā",
+              "native_script": "शारदा",
               "language": "Sanskrit",
               "language_code": "san",
-              "notes": "Classical Sanskrit Mahodadhi / Purva-samudra ('Eastern Sea')"
-            },
-            {
-              "form": "Baṅgōpasāgara",
-              "native_script": "বংগোপসাগর",
-              "language": "Bengali",
-              "language_code": "ben",
-              "notes": "Bengali form Bangopasagar"
-            },
-            {
-              "form": "Baṅgōpasāgara",
-              "native_script": "ବଂଗୋପସାଗର",
-              "language": "Odia",
-              "language_code": "ori",
-              "notes": "Odia form Bangopasagara"
+              "notes": "Sanskritized hydronym"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 300 BCE (Attested as Purva-samudra / Mahodadhi in Sanskrit and Gangeticus Sinus in Greek)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Indigenous pre-literate hydronym of coastal Andhra",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Eastern sea of India, known in ancient Sanskrit as Purva-samudra and in Greek as Gangeticus Sinus.",
-          "source_url": "https://en.wikipedia.org/wiki/Bay_of_Bengal"
+          "etymology_notes": "Originates in the Eastern Ghats and flows southeast past Anakapalli into the sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Sarada_River"
         },
         {
           "name": "Gosthani River",
@@ -19469,45 +19456,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Odia_people"
         },
         {
-          "name": "Bay of Bengal",
+          "name": "Kushabhadra River",
           "disambiguation_note": null,
-          "localisation_stem": "Bay of Bengal",
+          "localisation_stem": "Kushabhadra",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Sea fronting the Sun Temple coast at Konark.",
+          "feature_subtype": "river",
+          "relationship": "Mahanadi delta distributary reaching the coast beside Konarak.",
           "language_variants": [
             {
-              "form": "Mahōdadhi",
-              "native_script": "महोदधि",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Classical Sanskrit Mahodadhi / Purva-samudra ('Eastern Sea')"
-            },
-            {
-              "form": "Baṅgōpasāgara",
-              "native_script": "বংগোপসাগর",
-              "language": "Bengali",
-              "language_code": "ben",
-              "notes": "Bengali form Bangopasagar"
-            },
-            {
-              "form": "Baṅgōpasāgara",
-              "native_script": "ବଂଗୋପସାଗର",
+              "form": "Kuśabhadrā",
+              "native_script": "କୁଶଭଦ୍ରା",
               "language": "Odia",
               "language_code": "ori",
-              "notes": "Odia form Bangopasagara"
+              "notes": "Modern Odia river name"
+            },
+            {
+              "form": "Kuśabhadrā",
+              "native_script": "कुशभद्रा",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Classical Sanskrit hydronym"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 300 BCE (Attested as Purva-samudra / Mahodadhi in Sanskrit and Gangeticus Sinus in Greek)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Medieval Odia and Sanskrit coastal temple inscriptions of the Mahanadi delta",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Eastern sea of India, known in ancient Sanskrit as Purva-samudra and in Greek as Gangeticus Sinus.",
-          "source_url": "https://en.wikipedia.org/wiki/Bay_of_Bengal"
+          "etymology_notes": "Distributary branching from the Kuakhai River and entering the sea near Ramachandi close to Konark.",
+          "source_url": "https://en.wikipedia.org/wiki/Kushabhadra_River"
         },
         {
           "name": "Kalinga",
@@ -20164,38 +20144,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Baitarani_River"
         },
         {
-          "name": "Malayagiri",
+          "name": "Salandi River",
           "disambiguation_note": null,
-          "localisation_stem": "Malayagiri",
-          "category": "oronym",
-          "feature_subtype": "mountain",
-          "relationship": "Prominent peak south of Keonjhar.",
+          "localisation_stem": "Salandi",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Baitarani tributary rising in the Simlipal hills near Asanapat.",
           "language_variants": [
             {
-              "form": "Malayagiri",
-              "native_script": "मलयगिरि",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskrit Malayagiri"
-            },
-            {
-              "form": "Maḷaẏagiri",
-              "native_script": "ମଳୟଗିରି",
+              "form": "Sāḷandī",
+              "native_script": "ସାଳନ୍ଦୀ",
               "language": "Odia",
               "language_code": "ori",
-              "notes": "Odia form Malayagiri"
+              "notes": "Odia river name Salandi"
+            },
+            {
+              "form": "Śālandī",
+              "native_script": "शालन्दी",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Sanskritized form"
             }
           ],
           "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 1000 CE (Medieval Odisha hill-chieftaincy traditions in Pallahara)",
+          "earliest_attestation_note": "Indigenous pre-literate hydronym of northern Odisha",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Prominent peak of the Garhjat hills in Angul district near the Brahmani basin.",
-          "source_url": "https://en.wikipedia.org/wiki/Malayagiri"
+          "etymology_notes": "Originates in the Meghasani massif of the Simlipal range and flows southeast past Keonjhar and Bhadrak to join the Baitarani.",
+          "source_url": "https://en.wikipedia.org/wiki/Salandi_River"
         }
       ]
     },
@@ -20420,38 +20400,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Baitarani_River"
         },
         {
-          "name": "Malayagiri",
+          "name": "Brahmani River",
           "disambiguation_note": null,
-          "localisation_stem": "Malayagiri",
-          "category": "oronym",
-          "feature_subtype": "mountain",
-          "relationship": "Prominent Garhjat peak southwest of Ghatagaon.",
+          "localisation_stem": "Brahmani",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Odisha river draining the southern borders near Ghatagaon.",
           "language_variants": [
             {
-              "form": "Malayagiri",
-              "native_script": "मलयगिरि",
+              "form": "Brāhmaṇī",
+              "native_script": "ब्राह्मणी",
               "language": "Sanskrit",
               "language_code": "san",
-              "notes": "Sanskrit Malayagiri"
+              "notes": "Sanskrit Brahmani"
             },
             {
-              "form": "Maḷaẏagiri",
-              "native_script": "ମଳୟଗିରି",
+              "form": "Brāhmaṇī",
+              "native_script": "ବ୍ରାହ୍ମଣୀ",
               "language": "Odia",
               "language_code": "ori",
-              "notes": "Odia form Malayagiri"
+              "notes": "Odia form Brahmani"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 1000 CE (Medieval Odisha hill-chieftaincy traditions in Pallahara)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 500 CE (Attested in Puranic and early medieval Odisha inscriptions)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Prominent peak of the Garhjat hills in Angul district near the Brahmani basin.",
-          "source_url": "https://en.wikipedia.org/wiki/Malayagiri"
+          "etymology_notes": "Second largest river of Odisha, formed by the Sankh and South Koel.",
+          "source_url": "https://en.wikipedia.org/wiki/Brahmani_River"
         }
       ]
     },
@@ -21053,45 +21033,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Budhabalanga_River"
         },
         {
-          "name": "Bay of Bengal",
+          "name": "Dhamra River",
           "disambiguation_note": null,
-          "localisation_stem": "Bay of Bengal",
+          "localisation_stem": "Dhamra",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Sea coast east of Balasore.",
+          "feature_subtype": "estuary",
+          "relationship": "Joint estuary of the Baitarani and Brahmani south of Baleshvara.",
           "language_variants": [
             {
-              "form": "Mahōdadhi",
-              "native_script": "महोदधि",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Classical Sanskrit Mahodadhi / Purva-samudra ('Eastern Sea')"
-            },
-            {
-              "form": "Baṅgōpasāgara",
-              "native_script": "বংগোপসাগর",
-              "language": "Bengali",
-              "language_code": "ben",
-              "notes": "Bengali form Bangopasagar"
-            },
-            {
-              "form": "Baṅgōpasāgara",
-              "native_script": "ବଂଗୋପସାଗର",
+              "form": "Dhāmarā",
+              "native_script": "ଧାମରା",
               "language": "Odia",
               "language_code": "ori",
-              "notes": "Odia form Bangopasagara"
+              "notes": "Odia estuary name Dhamra"
+            },
+            {
+              "form": "Dhāmarā",
+              "native_script": "धामरा",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Sanskritized coastal toponym"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 300 BCE (Attested as Purva-samudra / Mahodadhi in Sanskrit and Gangeticus Sinus in Greek)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Early modern maritime charts and indigenous coastal Odia toponymy",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Eastern sea of India, known in ancient Sanskrit as Purva-samudra and in Greek as Gangeticus Sinus.",
-          "source_url": "https://en.wikipedia.org/wiki/Bay_of_Bengal"
+          "etymology_notes": "Estuarine mouth formed by the confluence of the Brahmani and Baitarani rivers along the northern Odisha coast.",
+          "source_url": "https://en.wikipedia.org/wiki/Dhamra_River"
         }
       ]
     },
@@ -21552,45 +21525,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Odia_people"
         },
         {
-          "name": "Bay of Bengal",
+          "name": "Bhargavi River",
           "disambiguation_note": null,
-          "localisation_stem": "Bay of Bengal",
+          "localisation_stem": "Bhargavi",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Sea fronting the sacred coast of Puri.",
+          "feature_subtype": "river",
+          "relationship": "Mahanadi delta distributary flowing past Puri toward Chilika Lake.",
           "language_variants": [
             {
-              "form": "Mahōdadhi",
-              "native_script": "महोदधि",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Classical Sanskrit Mahodadhi / Purva-samudra ('Eastern Sea')"
-            },
-            {
-              "form": "Baṅgōpasāgara",
-              "native_script": "বংগোপসাগর",
-              "language": "Bengali",
-              "language_code": "ben",
-              "notes": "Bengali form Bangopasagar"
-            },
-            {
-              "form": "Baṅgōpasāgara",
-              "native_script": "ବଂଗୋପସାଗର",
+              "form": "Bhārgavī",
+              "native_script": "ଭାର୍ଗବୀ",
               "language": "Odia",
               "language_code": "ori",
-              "notes": "Odia form Bangopasagara"
+              "notes": "Odia river name Bhargavi"
+            },
+            {
+              "form": "Bhārgavī",
+              "native_script": "भार्गवी",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Classical Sanskrit hydronym"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 300 BCE (Attested as Purva-samudra / Mahodadhi in Sanskrit and Gangeticus Sinus in Greek)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Medieval Sanskrit and Odia Puranic traditions of coastal Puri",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Eastern sea of India, known in ancient Sanskrit as Purva-samudra and in Greek as Gangeticus Sinus.",
-          "source_url": "https://en.wikipedia.org/wiki/Bay_of_Bengal"
+          "etymology_notes": "Branch of the Kuakhai-Mahanadi delta system draining the Puri coastal plain into Chilika Lake.",
+          "source_url": "https://en.wikipedia.org/wiki/Bhargavi_River"
         },
         {
           "name": "Chilika Lake",
@@ -21815,45 +21781,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Odia_people"
         },
         {
-          "name": "Bay of Bengal",
+          "name": "Mahendragiri",
           "disambiguation_note": null,
-          "localisation_stem": "Bay of Bengal",
-          "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Sea fronting the ancient port coast of Gopalpur.",
+          "localisation_stem": "Mahendragiri",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Sacred Eastern Ghats peak rising inland from the Gopalpur coast.",
           "language_variants": [
             {
-              "form": "Mahōdadhi",
-              "native_script": "महोदधि",
+              "form": "Mahēndragiri",
+              "native_script": "महेंद्रगिरि",
               "language": "Sanskrit",
               "language_code": "san",
-              "notes": "Classical Sanskrit Mahodadhi / Purva-samudra ('Eastern Sea')"
+              "notes": "Sanskrit Mahendragiri"
             },
             {
-              "form": "Baṅgōpasāgara",
-              "native_script": "বংগোপসাগর",
-              "language": "Bengali",
-              "language_code": "ben",
-              "notes": "Bengali form Bangopasagar"
-            },
-            {
-              "form": "Baṅgōpasāgara",
-              "native_script": "ବଂଗୋପସାଗର",
+              "form": "Mahēndragiri",
+              "native_script": "ମହେଂଦ୍ରଗିରି",
               "language": "Odia",
               "language_code": "ori",
-              "notes": "Odia form Bangopasagara"
+              "notes": "Odia form Mahendragiri"
             }
           ],
           "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 300 BCE (Attested as Purva-samudra / Mahodadhi in Sanskrit and Gangeticus Sinus in Greek)",
+          "earliest_attestation_note": "c. 300 BCE (Attested in the Ramayana, Mahabharata, and Kalidasa's Raghuvamsha)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Eastern sea of India, known in ancient Sanskrit as Purva-samudra and in Greek as Gangeticus Sinus.",
-          "source_url": "https://en.wikipedia.org/wiki/Bay_of_Bengal"
+          "etymology_notes": "Sacred peak of southern Kalinga in Gajapati district, associated with Parashurama and the Eastern Gangas.",
+          "source_url": "https://en.wikipedia.org/wiki/Mahendragiri_(Odisha)"
         },
         {
           "name": "Rushikulya River",

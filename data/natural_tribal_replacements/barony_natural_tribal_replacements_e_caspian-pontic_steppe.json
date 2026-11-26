@@ -137,35 +137,38 @@
       "target_baronies_audited": 191,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 573,
-      "unique_replacement_names": 122,
+      "unique_replacement_names": 124,
       "candidates_with_multilingual_variants": 451,
       "wikipedia_source_attached": 573,
-      "unique_source_urls": 122,
+      "unique_source_urls": 124,
       "candidates_by_category": {
         "choronym": 25,
-        "hydronym": 283,
+        "hydronym": 282,
         "oronym": 47,
-        "topographic_feature": 27,
+        "topographic_feature": 28,
         "tribe": 191
       },
       "baronies_with_category": {
         "has_choronym_candidate": 21,
         "has_hydronym_candidate": 177,
         "has_oronym_candidate": 46,
-        "has_topographic_feature_candidate": 26,
+        "has_topographic_feature_candidate": 27,
         "has_tribe_candidate": 191
       },
       "unique_language_codes": [
         "ady",
         "ara",
+        "chv",
         "grc",
         "kaz",
         "kbd",
+        "kum",
         "lat",
         "oss",
         "otk",
         "rus",
         "tat",
+        "tur",
         "ukr"
       ],
       "anachronism_type_counts": {
@@ -179,8 +182,8 @@
       "candidates_by_attestation_basis": {
         "attested_1066_to_1178": 4,
         "attested_867_to_1066": 19,
-        "attested_pre_867": 241,
-        "indigenous_pre_literate": 309
+        "attested_pre_867": 239,
+        "indigenous_pre_literate": 311
       },
       "bookmark_valid_candidates": {
         "867": 550,
@@ -188,7 +191,7 @@
         "1178": 573
       },
       "baronies_with_867_valid_candidate": 191,
-      "unique_localisation_stems": 120
+      "unique_localisation_stems": 121
     }
   },
   "baronies": {
@@ -1274,8 +1277,8 @@
               "notes": "Tatar hydronym"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE (early modern steppe hydronym Irgiz)",
+          "earliest_attestation_year": 922,
+          "earliest_attestation_note": "922 CE — Mentioned as Irghiz in Ahmad ibn Fadlan's travelogue across the Volga-Ural steppe.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -1464,8 +1467,8 @@
               "notes": "Tatar hydronym"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE (early modern steppe hydronym Irgiz)",
+          "earliest_attestation_year": 922,
+          "earliest_attestation_note": "922 CE — Mentioned as Irghiz in Ahmad ibn Fadlan's travelogue across the Volga-Ural steppe.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -2579,8 +2582,8 @@
               "notes": "Tatar hydronym"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE (early modern steppe hydronym Irgiz)",
+          "earliest_attestation_year": 922,
+          "earliest_attestation_note": "922 CE — Mentioned as Irghiz in Ahmad ibn Fadlan's travelogue across the Volga-Ural steppe.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -2893,7 +2896,7 @@
           "source_url": "https://en.wikipedia.org/wiki/Khazars"
         },
         {
-          "name": "Sulak River",
+          "name": "Sulak",
           "disambiguation_note": null,
           "localisation_stem": "Sulak",
           "category": "hydronym",
@@ -3163,52 +3166,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Khazars"
         },
         {
-          "name": "Caspian Sea",
+          "name": "Sulak",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian Sea",
+          "localisation_stem": "Sulak",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major water body in or bordering Ciscaucasia.",
+          "feature_subtype": "river",
+          "relationship": "Major Dagestani river descending from the Greater Caucasus to enter the sea just south of Agrakhan Peninsula.",
           "language_variants": [
             {
-              "form": "Kaspiyskoye more",
-              "native_script": "Каспийское море",
+              "form": "Sulak",
+              "native_script": "Сулак",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "modern Russian hydronym"
+              "notes": "Russian hydronym"
             },
             {
-              "form": "Kaspīy tengizi",
-              "native_script": "Каспīй теңізі",
-              "language": "Kazakh",
-              "language_code": "kaz",
-              "notes": "Kazakh hydronym"
-            },
-            {
-              "form": "Kaspía Thálassa",
-              "native_script": "Κασπία Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "classical Greek name (Kaspia thalassa)"
-            },
-            {
-              "form": "Mare Caspium",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "classical Latin name"
+              "form": "Sulak",
+              "native_script": "Сулакъ",
+              "language": "Kumyk",
+              "language_code": "kum",
+              "notes": "Kumyk Turkic name of the river"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "c. 450 BCE (Hecataeus of Miletus and Herodotus, Histories 1.202)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1594,
+          "earliest_attestation_note": "16th century CE (Ottoman and Russian Caucasian campaigns, 1594 CE, as Koysu/Sulak)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after the ancient Caspi people of the southwestern Caspian shore; medieval Turkic/Arabic Khazar Sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+          "etymology_notes": "Likely from Turkic sulak ('watery, marshy') or a Kumyk adaptation of an indigenous Dagestani river name.",
+          "source_url": "https://en.wikipedia.org/wiki/Sulak_(river)"
         },
         {
           "name": "Agrakhan Peninsula",
@@ -5661,8 +5650,8 @@
               "notes": "Tatar hydronym"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE (early modern steppe hydronym Irgiz)",
+          "earliest_attestation_year": 922,
+          "earliest_attestation_note": "922 CE — Mentioned as Irghiz in Ahmad ibn Fadlan's travelogue across the Volga-Ural steppe.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -5897,8 +5886,8 @@
               "notes": "Tatar hydronym"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE (early modern steppe hydronym Irgiz)",
+          "earliest_attestation_year": 922,
+          "earliest_attestation_note": "922 CE — Mentioned as Irghiz in Ahmad ibn Fadlan's travelogue across the Volga-Ural steppe.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -6253,8 +6242,8 @@
               "notes": "Tatar hydronym"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE (early modern steppe hydronym Irgiz)",
+          "earliest_attestation_year": 922,
+          "earliest_attestation_note": "922 CE — Mentioned as Irghiz in Ahmad ibn Fadlan's travelogue across the Volga-Ural steppe.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -6402,8 +6391,8 @@
               "notes": "Tatar hydronym"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE (early modern steppe hydronym Irgiz)",
+          "earliest_attestation_year": 922,
+          "earliest_attestation_note": "922 CE — Mentioned as Irghiz in Ahmad ibn Fadlan's travelogue across the Volga-Ural steppe.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -7281,52 +7270,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Kipchaks"
         },
         {
-          "name": "Black Sea",
+          "name": "Karkinit Bay",
           "disambiguation_note": null,
-          "localisation_stem": "Black Sea",
+          "localisation_stem": "Karkinit",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major water body in or bordering Crimea.",
+          "feature_subtype": "bay",
+          "relationship": "Shallow gulf flanking the western shore of the Isthmus of Perekop between Crimea and the steppe mainland.",
           "language_variants": [
             {
-              "form": "Chërnoye more",
-              "native_script": "Чёрное море",
-              "language": "Russian",
-              "language_code": "rus",
-              "notes": "modern Russian hydronym"
-            },
-            {
-              "form": "Chorne more",
-              "native_script": "Чорне море",
-              "language": "Ukrainian",
-              "language_code": "ukr",
-              "notes": "modern Ukrainian hydronym"
-            },
-            {
-              "form": "Eúxeinos Póntos",
-              "native_script": "Εὔξεινος Πόντος",
+              "form": "Karkinîtis kólpos",
+              "native_script": "Καρκινῖτις κόλπος",
               "language": "Ancient Greek",
               "language_code": "grc",
-              "notes": "classical Greek name (Euxeinos Pontos)"
+              "notes": "Classical Greek name attested in Herodotus, Strabo, and Ptolemy"
             },
             {
-              "form": "Pontus Euxinus",
+              "form": "Carcinites sinus",
               "native_script": null,
               "language": "Latin",
               "language_code": "lat",
-              "notes": "classical Latin name"
+              "notes": "Classical Latin name in Pliny the Elder and Pomponius Mela"
+            },
+            {
+              "form": "Karkinitska zatoka",
+              "native_script": "Каркінітська затока",
+              "language": "Ukrainian",
+              "language_code": "ukr",
+              "notes": "Modern Ukrainian hydronym"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested from the 5th century BCE as Pontos Euxeinos in Classical Greek sources (Herodotus, Pindar).",
+          "earliest_attestation_year": -440,
+          "earliest_attestation_note": "5th century BCE — Recorded by Herodotus and later by Strabo and Pliny as Carcinites sinus.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Greek Pontos Axeinos ('inhospitable sea') from Iranian *axšaina ('dark-colored'), later euphemized to Euxeinos.",
-          "source_url": "https://en.wikipedia.org/wiki/Black_Sea"
+          "etymology_notes": "Named after the ancient Greek colony of Kerkinitis (Karkinitis), possibly derived from Greek karkinos ('crab') or a Scytho-Taurian substrate.",
+          "source_url": "https://en.wikipedia.org/wiki/Karkinit_Bay"
         },
         {
           "name": "Sea of Azov",
@@ -9773,31 +9755,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Medveditsa_(Don)"
         },
         {
-          "name": "Khopyor River",
-          "disambiguation_note": null,
-          "localisation_stem": "Khopyor",
+          "name": "Vorona",
+          "disambiguation_note": "Don basin",
+          "localisation_stem": "Vorona",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major water body in or bordering Khopyor.",
+          "relationship": "Major right tributary of the Khopyor flowing southward across the forest-steppe toward Bychok.",
           "language_variants": [
             {
-              "form": "Khopyor",
-              "native_script": "Хопыор",
+              "form": "Vorona",
+              "native_script": "Ворона",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "modern Russian hydronym"
+              "notes": "Russian hydronym"
             }
           ],
-          "earliest_attestation_year": 1150,
-          "earliest_attestation_note": "Attested in 12th-century CE Russian chronicles.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous forest-steppe river of the upper Don-Khopyor basin.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major left tributary of the Don; possibly from Iranian *xvapara ('good crossing') or Turkic *qopur.",
-          "source_url": "https://en.wikipedia.org/wiki/Khopyor"
+          "etymology_notes": "Either from East Slavic vorona ('crow', or voronoy 'black') or an adapted Finno-Ugric Mordvin hydronym.",
+          "source_url": "https://en.wikipedia.org/wiki/Vorona_(Don_basin)"
         }
       ]
     },
@@ -11068,52 +11050,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Pechenegs"
         },
         {
-          "name": "Black Sea",
+          "name": "Kinburn Peninsula",
           "disambiguation_note": null,
-          "localisation_stem": "Black Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major water body in or bordering Kizilyedisan.",
+          "localisation_stem": "Kinburn",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Sandy steppe peninsula separating the Dnieper-Bug estuary near Kherson from the open sea.",
           "language_variants": [
             {
-              "form": "Chërnoye more",
-              "native_script": "Чёрное море",
-              "language": "Russian",
-              "language_code": "rus",
-              "notes": "modern Russian hydronym"
-            },
-            {
-              "form": "Chorne more",
-              "native_script": "Чорне море",
+              "form": "Kinburnska kosa",
+              "native_script": "Кінбурнська коса",
               "language": "Ukrainian",
               "language_code": "ukr",
-              "notes": "modern Ukrainian hydronym"
+              "notes": "Ukrainian geographic name"
             },
             {
-              "form": "Eúxeinos Póntos",
-              "native_script": "Εὔξεινος Πόντος",
+              "form": "Kılburun",
+              "native_script": null,
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Ottoman/Crimean Tatar name meaning 'hair-thin cape'"
+            },
+            {
+              "form": "Hylaea",
+              "native_script": "Ὑλαία",
               "language": "Ancient Greek",
               "language_code": "grc",
-              "notes": "classical Greek name (Euxeinos Pontos)"
-            },
-            {
-              "form": "Pontus Euxinus",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "classical Latin name"
+              "notes": "Classical Greek name recorded by Herodotus for the wooded Dnieper mouth"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested from the 5th century BCE as Pontos Euxeinos in Classical Greek sources (Herodotus, Pindar).",
+          "earliest_attestation_year": -440,
+          "earliest_attestation_note": "5th century BCE — Recorded by Herodotus as Hylaea ('wooded land') at the mouth of the Borysthenes.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Greek Pontos Axeinos ('inhospitable sea') from Iranian *axšaina ('dark-colored'), later euphemized to Euxeinos.",
-          "source_url": "https://en.wikipedia.org/wiki/Black_Sea"
+          "etymology_notes": "Modern Kinburn derives from Turkic Kılburun ('hair-cape', from kıl 'hair' + burun 'cape/nose'), referring to the narrow spit.",
+          "source_url": "https://en.wikipedia.org/wiki/Kinburn_Peninsula"
         },
         {
           "name": "Southern Bug River",
@@ -11749,9 +11724,9 @@
               "notes": "modern Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1480,
-          "earliest_attestation_note": "15th century CE (Ottoman Kilburun, 'hair cape'; anciently Herodotus's Hylaea)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -440,
+          "earliest_attestation_note": "5th century BCE — Recorded by Herodotus as Hylaea ('wooded land') at the mouth of the Borysthenes.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -12201,52 +12176,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tendra_Spit"
         },
         {
-          "name": "Black Sea",
+          "name": "Tylihul Estuary",
           "disambiguation_note": null,
-          "localisation_stem": "Black Sea",
+          "localisation_stem": "Tylihul",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major water body in or bordering Kizilyedisan.",
+          "feature_subtype": "estuary",
+          "relationship": "Long brackish coastal liman situated immediately northeast of Odessa along the Pontic shore.",
           "language_variants": [
             {
-              "form": "Chërnoye more",
-              "native_script": "Чёрное море",
-              "language": "Russian",
-              "language_code": "rus",
-              "notes": "modern Russian hydronym"
-            },
-            {
-              "form": "Chorne more",
-              "native_script": "Чорне море",
+              "form": "Tylihulskyi lyman",
+              "native_script": "Тилігульський лиман",
               "language": "Ukrainian",
               "language_code": "ukr",
-              "notes": "modern Ukrainian hydronym"
+              "notes": "Ukrainian name of the coastal liman"
             },
             {
-              "form": "Eúxeinos Póntos",
-              "native_script": "Εὔξεινος Πόντος",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "classical Greek name (Euxeinos Pontos)"
-            },
-            {
-              "form": "Pontus Euxinus",
+              "form": "Deligöl",
               "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "classical Latin name"
+              "language": "Turkish",
+              "language_code": "tur",
+              "notes": "Ottoman/Nogai Turkic name meaning 'mad lake'"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested from the 5th century BCE as Pontos Euxeinos in Classical Greek sources (Herodotus, Pindar).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Natural coastal liman of the Tylihul River on the northwestern Pontic steppe.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Greek Pontos Axeinos ('inhospitable sea') from Iranian *axšaina ('dark-colored'), later euphemized to Euxeinos.",
-          "source_url": "https://en.wikipedia.org/wiki/Black_Sea"
+          "etymology_notes": "From Turkic Deli Göl ('mad/wild lake'), adapted into Ukrainian as Tylihul.",
+          "source_url": "https://en.wikipedia.org/wiki/Tylihul_Estuary"
         }
       ]
     },
@@ -13851,38 +13812,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Tsivil",
+          "name": "Anish",
           "disambiguation_note": null,
-          "localisation_stem": "Tsivil",
+          "localisation_stem": "Anish",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Right-bank tributary of the Volga flowing through Chuvashia (Tsivilsk, Urmary, Cheboksary).",
+          "relationship": "Right-bank tributary of the Volga flowing eastward through the Tsivilsk lowland.",
           "language_variants": [
             {
-              "form": "Tsivil",
-              "native_script": "Цивил",
+              "form": "Anish",
+              "native_script": "Аниш",
               "language": "Russian",
               "language_code": "rus",
-              "notes": null
+              "notes": "Russian hydronym"
             },
             {
-              "form": "Śaval",
-              "native_script": "Śавал",
-              "language": "Tatar",
-              "language_code": "tat",
-              "notes": "Chuvash/Volga-Kama form"
+              "form": "Enesh",
+              "native_script": "Енеш",
+              "language": "Chuvash",
+              "language_code": "chv",
+              "notes": "Chuvash vernacular hydronym"
             }
           ],
-          "earliest_attestation_year": 1550,
-          "earliest_attestation_note": "Regional Chuvashia river feeding the Volga.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Middle Volga river of the Chuvash forest-steppe.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Chuvash Śaval.",
-          "source_url": "https://en.wikipedia.org/wiki/Tsivil"
+          "etymology_notes": "From Chuvash Enesh, related to Finno-Ugric or Bulgar-Turkic hydronymic roots of the Volga-Kama region.",
+          "source_url": "https://en.wikipedia.org/wiki/Anish_(river)"
         },
         {
           "name": "Sura River",
@@ -26473,52 +26434,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Lake_Elton"
         },
         {
-          "name": "Caspian Sea",
+          "name": "Akhtuba",
           "disambiguation_note": null,
-          "localisation_stem": "Caspian Sea",
+          "localisation_stem": "Akhtuba",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Major water body in or bordering Khazaria.",
+          "feature_subtype": "river",
+          "relationship": "Major left distributary of the lower Volga traversing the semi-arid Caspian steppe of Beksima.",
           "language_variants": [
             {
-              "form": "Kaspiyskoye more",
-              "native_script": "Каспийское море",
+              "form": "Akhtuba",
+              "native_script": "Ахтуба",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "modern Russian hydronym"
+              "notes": "Russian name of the Volga distributary"
             },
             {
-              "form": "Kaspīy tengizi",
-              "native_script": "Каспīй теңізі",
-              "language": "Kazakh",
-              "language_code": "kaz",
-              "notes": "Kazakh hydronym"
-            },
-            {
-              "form": "Kaspía Thálassa",
-              "native_script": "Κασπία Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "classical Greek name (Kaspia thalassa)"
-            },
-            {
-              "form": "Mare Caspium",
+              "form": "Aqtobe",
               "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "classical Latin name"
+              "language": "Old Turkic",
+              "language_code": "otk",
+              "notes": "Turkic steppe hydronym ('white hill/mound' or 'white channel')"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "c. 450 BCE (Hecataeus of Miletus and Herodotus, Histories 1.202)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1240,
+          "earliest_attestation_note": "13th century CE (Golden Horde era; site of Saray on the Akhtuba)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after the ancient Caspi people of the southwestern Caspian shore; medieval Turkic/Arabic Khazar Sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Caspian_Sea"
+          "etymology_notes": "From Turkic ak ('white') + töbe ('hill, bank') or tuva, referring to the pale clay banks along the channel.",
+          "source_url": "https://en.wikipedia.org/wiki/Akhtuba"
         }
       ]
     },

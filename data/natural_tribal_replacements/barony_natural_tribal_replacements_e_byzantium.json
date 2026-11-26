@@ -137,21 +137,21 @@
       "target_baronies_audited": 147,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 441,
-      "unique_replacement_names": 188,
-      "candidates_with_multilingual_variants": 366,
+      "unique_replacement_names": 192,
+      "candidates_with_multilingual_variants": 365,
       "wikipedia_source_attached": 441,
-      "unique_source_urls": 188,
+      "unique_source_urls": 192,
       "candidates_by_category": {
         "choronym": 13,
-        "hydronym": 183,
-        "oronym": 93,
+        "hydronym": 182,
+        "oronym": 94,
         "topographic_feature": 5,
         "tribe": 147
       },
       "baronies_with_category": {
         "has_choronym_candidate": 13,
         "has_hydronym_candidate": 143,
-        "has_oronym_candidate": 93,
+        "has_oronym_candidate": 94,
         "has_topographic_feature_candidate": 5,
         "has_tribe_candidate": 147
       },
@@ -174,8 +174,8 @@
         "unattested_indigenous_or_minor": 7
       },
       "candidates_by_attestation_basis": {
-        "attested_pre_867": 355,
-        "indigenous_pre_literate": 86
+        "attested_pre_867": 353,
+        "indigenous_pre_literate": 88
       },
       "bookmark_valid_candidates": {
         "867": 441,
@@ -183,7 +183,7 @@
         "1178": 441
       },
       "baronies_with_867_valid_candidate": 147,
-      "unique_localisation_stems": 187
+      "unique_localisation_stems": 191
     }
   },
   "baronies": {
@@ -990,45 +990,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Osum"
         },
         {
-          "name": "Lake Ohrid",
+          "name": "Tomorr",
           "disambiguation_note": null,
-          "localisation_stem": "Ohrid",
-          "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Great tectonic lake lying immediately north of the Devoll valley.",
+          "localisation_stem": "Tomorr",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Towering limestone massif standing directly between the Osum and Devoll valleys near medieval Devol.",
           "language_variants": [
             {
-              "form": "Lychnîtis",
-              "native_script": "Λυχνῖτις",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Ancient Greek name (Lychnitis)"
-            },
-            {
-              "form": "Liqeni i Ohrit",
+              "form": "Tomorr",
               "native_script": null,
               "language": "Albanian",
               "language_code": "sqi",
-              "notes": "Albanian name"
+              "notes": "Albanian name of the sacred mountain massif"
             },
             {
-              "form": "Ohridsko Ezero",
-              "native_script": "Охридско Эзеро",
-              "language": "Macedonian",
-              "language_code": "mkd",
-              "notes": "Macedonian name"
+              "form": "Tomarus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin oronym"
+            },
+            {
+              "form": "Tómaros",
+              "native_script": "Τόμαρος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Ancient Greek oronym attested in Strabo"
             }
           ],
-          "earliest_attestation_year": -200,
-          "earliest_attestation_note": "2nd century BCE (Polybius and Livy, as Lacus Lychnidus)",
+          "earliest_attestation_year": -400,
+          "earliest_attestation_note": "1st century BCE / 1st century CE (attested in Strabo as Tomarus / Tmarus, 1st century BCE–CE)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Known in antiquity as Lake Lychnidus ('lake of light').",
-          "source_url": "https://en.wikipedia.org/wiki/Lake_Ohrid"
+          "etymology_notes": "From Proto-Indo-European *temH- ('dark'), via Illyrian/Albanian Tomar/Tomorr, cognate with Old Irish temen ('dark grey').",
+          "source_url": "https://en.wikipedia.org/wiki/Tomorr"
         }
       ]
     },
@@ -4052,52 +4052,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Odrysian_kingdom"
         },
         {
-          "name": "Black Sea",
+          "name": "Ropotamo",
           "disambiguation_note": null,
-          "localisation_stem": "Black Sea",
+          "localisation_stem": "Ropotamo",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering the Burgas lagoon and port.",
+          "feature_subtype": "river",
+          "relationship": "Coastal river descending from the Strandzha foothills just south of Burgas and Sozopol.",
           "language_variants": [
             {
-              "form": "Póntos Eúxeinos",
-              "native_script": "Πόντος Εὔξεινος",
+              "form": "Ropotamos",
+              "native_script": "Ροπόταμος",
               "language": "Ancient Greek",
               "language_code": "grc",
-              "notes": "Classical Greek name"
+              "notes": "Greek hydronym meaning 'border river'"
             },
             {
-              "form": "Pontus Euxinus",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Roman Latin name"
-            },
-            {
-              "form": "Cherno more",
-              "native_script": "Черно море",
+              "form": "Ropotamo",
+              "native_script": "Ропотамо",
               "language": "Bulgarian",
               "language_code": "bul",
-              "notes": "Bulgarian name"
-            },
-            {
-              "form": "Karadeniz",
-              "native_script": null,
-              "language": "Turkish",
-              "language_code": "tur",
-              "notes": "Turkish name"
+              "notes": "Modern Bulgarian hydronym"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested from the 5th century BCE as Pontos Euxeinos in Classical Greek sources (Herodotus, Pindar).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-medieval Greek coastal hydronym along the western Pontic shore south of Apollonia.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Ancient Greek Pontos Axeinos / Euxeinos ('Hospitable Sea').",
-          "source_url": "https://en.wikipedia.org/wiki/Black_Sea"
+          "etymology_notes": "From Greek Ropotamos ('border river' or 'streaming river'), borrowed into Bulgarian as Ropotamo.",
+          "source_url": "https://en.wikipedia.org/wiki/Ropotamo"
         },
         {
           "name": "Strandzha",
@@ -6635,52 +6621,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Kamchiya"
         },
         {
-          "name": "Black Sea",
+          "name": "Lake Beloslav",
           "disambiguation_note": null,
-          "localisation_stem": "Black Sea",
+          "localisation_stem": "Beloslav",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea lying east of the Provadiya–Devnya corridor.",
+          "feature_subtype": "lake",
+          "relationship": "Brackish coastal liman immediately downstream of Provadiya receiving the waters of the Provadiya River.",
           "language_variants": [
             {
-              "form": "Póntos Eúxeinos",
-              "native_script": "Πόντος Εὔξεινος",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name"
-            },
-            {
-              "form": "Pontus Euxinus",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Roman Latin name"
-            },
-            {
-              "form": "Cherno more",
-              "native_script": "Черно море",
+              "form": "Beloslavsko ezero",
+              "native_script": "Белославско езеро",
               "language": "Bulgarian",
               "language_code": "bul",
-              "notes": "Bulgarian name"
-            },
-            {
-              "form": "Karadeniz",
-              "native_script": null,
-              "language": "Turkish",
-              "language_code": "tur",
-              "notes": "Turkish name"
+              "notes": "Bulgarian name of the coastal liman"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested from the 5th century BCE as Pontos Euxeinos in Classical Greek sources (Herodotus, Pindar).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous coastal liman at the mouth of the Provadiya and Devnya rivers in northeastern Bulgaria.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Ancient Greek Pontos Axeinos / Euxeinos ('Hospitable Sea').",
-          "source_url": "https://en.wikipedia.org/wiki/Black_Sea"
+          "etymology_notes": "Named after the nearby settlement of Beloslav (Slavic bel 'white' + slava 'glory'); formerly known in Ottoman times as Gebedzhe Lake.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Beloslav"
         }
       ]
     },
@@ -6784,52 +6749,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Strandzha"
         },
         {
-          "name": "Black Sea",
+          "name": "Rusokastrenska",
           "disambiguation_note": null,
-          "localisation_stem": "Black Sea",
+          "localisation_stem": "Rusokastrenska",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea lying east of the Ktenia–Burgas plain.",
+          "feature_subtype": "river",
+          "relationship": "Lowland river draining the southeastern slopes near Ktenia and Aytos eastward toward the Burgas wetlands.",
           "language_variants": [
             {
-              "form": "Póntos Eúxeinos",
-              "native_script": "Πόντος Εὔξεινος",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name"
-            },
-            {
-              "form": "Pontus Euxinus",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Roman Latin name"
-            },
-            {
-              "form": "Cherno more",
-              "native_script": "Черно море",
+              "form": "Rusokastrenska reka",
+              "native_script": "Русокастренска река",
               "language": "Bulgarian",
               "language_code": "bul",
-              "notes": "Bulgarian name"
-            },
-            {
-              "form": "Karadeniz",
-              "native_script": null,
-              "language": "Turkish",
-              "language_code": "tur",
-              "notes": "Turkish name"
+              "notes": "Bulgarian hydronym named after the medieval fortress of Rusokastro"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested from the 5th century BCE as Pontos Euxeinos in Classical Greek sources (Herodotus, Pindar).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Thracian-Bulgarian lowland river passing the early medieval frontier fortress of Rusokastro.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Ancient Greek Pontos Axeinos / Euxeinos ('Hospitable Sea').",
-          "source_url": "https://en.wikipedia.org/wiki/Black_Sea"
+          "etymology_notes": "Bulgarian adjectival hydronym derived from Rusokastro (from Greek rhousion kastron, 'red fortress').",
+          "source_url": "https://en.wikipedia.org/wiki/Rusokastrenska_reka"
         }
       ]
     },
@@ -9936,52 +9880,45 @@
           "source_url": "https://en.wikipedia.org/wiki/K%C3%B6ro%C4%9Flu_Mountains"
         },
         {
-          "name": "Black Sea",
+          "name": "Filyos",
           "disambiguation_note": null,
-          "localisation_stem": "Black Sea",
+          "localisation_stem": "Filyos",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea lying north across the coastal Pontic ridges.",
+          "feature_subtype": "river",
+          "relationship": "Major river of ancient Honorias whose upper branches drain the Bolu basin northward to the Pontic coast.",
           "language_variants": [
             {
-              "form": "Póntos Eúxeinos",
-              "native_script": "Πόντος Εὔξεινος",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek name"
-            },
-            {
-              "form": "Pontus Euxinus",
+              "form": "Billaeus",
               "native_script": null,
               "language": "Latin",
               "language_code": "lat",
-              "notes": "Roman Latin name"
+              "notes": "Classical Latin name in Pliny the Elder"
             },
             {
-              "form": "Cherno more",
-              "native_script": "Черно море",
-              "language": "Bulgarian",
-              "language_code": "bul",
-              "notes": "Bulgarian name"
+              "form": "Billaîos",
+              "native_script": "Βιλλαῖος",
+              "language": "Ancient Greek",
+              "language_code": "grc",
+              "notes": "Greek hydronym attested in Apollonius of Rhodes, Strabo, and Arrian"
             },
             {
-              "form": "Karadeniz",
+              "form": "Filyos",
               "native_script": null,
               "language": "Turkish",
               "language_code": "tur",
-              "notes": "Turkish name"
+              "notes": "Modern Turkish name of the river"
             }
           ],
-          "earliest_attestation_year": -500,
-          "earliest_attestation_note": "Attested from the 5th century BCE as Pontos Euxeinos in Classical Greek sources (Herodotus, Pindar).",
+          "earliest_attestation_year": -250,
+          "earliest_attestation_note": "3rd century BCE — Attested as Billaîos in Apollonius of Rhodes' Argonautica and later in Strabo and Pliny.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Ancient Greek Pontos Axeinos / Euxeinos ('Hospitable Sea').",
-          "source_url": "https://en.wikipedia.org/wiki/Black_Sea"
+          "etymology_notes": "Turkish Filyos preserves Greek Billaîos (with dialectal B- to F- shift), an ancient Bithynian-Paphlagonian hydronym.",
+          "source_url": "https://en.wikipedia.org/wiki/Filyos_River"
         }
       ]
     },
@@ -10719,31 +10656,45 @@
           "source_url": "https://en.wikipedia.org/wiki/List_of_ancient_tribes_in_Illyria"
         },
         {
-          "name": "Morača",
+          "name": "Cijevna",
           "disambiguation_note": null,
-          "localisation_stem": "Morača",
+          "localisation_stem": "Cijevna",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Principal river flowing through Podgorica (Ribnica).",
+          "relationship": "Karstic canyon river descending from Prokletije to join the Morača immediately south of Podgorica.",
           "language_variants": [
             {
-              "form": "Morača",
-              "native_script": "Морача",
+              "form": "Cijevna",
+              "native_script": "Цијевна",
               "language": "Serbian",
               "language_code": "srp",
-              "notes": "Serbian/Montenegrin name"
+              "notes": "Montenegrin/Serbian hydronym"
+            },
+            {
+              "form": "Cem",
+              "native_script": null,
+              "language": "Albanian",
+              "language_code": "sqi",
+              "notes": "Albanian hydronym for the upper and middle course"
+            },
+            {
+              "form": "Cinna",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin river name recorded in the Tabula Peutingeriana"
             }
           ],
-          "earliest_attestation_year": 1252,
-          "earliest_attestation_note": "13th century CE (Morača Monastery foundation charter)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 300,
+          "earliest_attestation_note": "Attested as Cinna on the Roman Tabula Peutingeriana road map.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Principal river of central Montenegro flowing into Lake Scutari; possibly from a pre-Slavic or Slavic *mora ('water').",
-          "source_url": "https://en.wikipedia.org/wiki/Mora%C4%8Da"
+          "etymology_notes": "From Illyrian/Latin Cinna (or Cem), adapted into South Slavic as Cijevna (reinterpreted by folk etymology with Slavic cijev, 'pipe/tube').",
+          "source_url": "https://en.wikipedia.org/wiki/Cem_(river)"
         },
         {
           "name": "Zeta",
@@ -18445,45 +18396,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Lake_Vistonida"
         },
         {
-          "name": "Rhodope Mountains",
+          "name": "Ismaros",
           "disambiguation_note": null,
-          "localisation_stem": "Rhodope",
+          "localisation_stem": "Ismaros",
           "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Mountain range rising immediately north of Mosynopolis.",
+          "feature_subtype": "mountain",
+          "relationship": "Coastal Thracian mountain overlooking the plain of Mosynopolis and Lake Vistonida from the southeast.",
           "language_variants": [
             {
-              "form": "Rhodópē",
-              "native_script": "Ῥοδόπη",
+              "form": "Ísmaros",
+              "native_script": "Ἴσμαρος",
               "language": "Ancient Greek",
               "language_code": "grc",
-              "notes": "Classical Greek name"
+              "notes": "Homeric and Classical Greek name of the mountain and Ciconian stronghold"
             },
             {
-              "form": "Rodópē",
-              "native_script": "Ρ̓οδόπη",
-              "language": "Greek",
-              "language_code": "ell",
-              "notes": "Modern Greek name"
-            },
-            {
-              "form": "Rodopi",
-              "native_script": "Родопи",
-              "language": "Bulgarian",
-              "language_code": "bul",
-              "notes": "Bulgarian name"
+              "form": "Ismarus",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Classical Latin poetic and geographic form in Virgil and Pliny"
             }
           ],
-          "earliest_attestation_year": -480,
-          "earliest_attestation_note": "5th century BCE (Herodotus, Histories 4.49, as Rhodope)",
+          "earliest_attestation_year": -700,
+          "earliest_attestation_note": "8th–7th century BCE — Attested in Homer's Odyssey (Book 9) as the coastal stronghold and mountain of the Cicones.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Ancient Thracian Rhodope ('reddish/ruddy river' or mythical Queen Rhodope).",
-          "source_url": "https://en.wikipedia.org/wiki/Rhodope_Mountains"
+          "etymology_notes": "Pre-Greek Thracian oronym of uncertain substrate origin, famous in Greek and Latin literature for its wines.",
+          "source_url": "https://en.wikipedia.org/wiki/Ismaros"
         }
       ]
     },

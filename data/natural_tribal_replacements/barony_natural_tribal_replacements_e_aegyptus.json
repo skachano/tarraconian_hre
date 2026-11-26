@@ -137,22 +137,22 @@
       "target_baronies_audited": 78,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 234,
-      "unique_replacement_names": 75,
-      "candidates_with_multilingual_variants": 140,
+      "unique_replacement_names": 79,
+      "candidates_with_multilingual_variants": 135,
       "wikipedia_source_attached": 234,
-      "unique_source_urls": 75,
+      "unique_source_urls": 80,
       "candidates_by_category": {
-        "choronym": 48,
-        "hydronym": 53,
-        "oronym": 37,
-        "topographic_feature": 18,
+        "choronym": 49,
+        "hydronym": 45,
+        "oronym": 41,
+        "topographic_feature": 21,
         "tribe": 78
       },
       "baronies_with_category": {
         "has_choronym_candidate": 39,
-        "has_hydronym_candidate": 42,
-        "has_oronym_candidate": 35,
-        "has_topographic_feature_candidate": 18,
+        "has_hydronym_candidate": 36,
+        "has_oronym_candidate": 36,
+        "has_topographic_feature_candidate": 20,
         "has_tribe_candidate": 78
       },
       "unique_language_codes": [
@@ -161,7 +161,8 @@
         "cop",
         "egy",
         "grc",
-        "lat"
+        "lat",
+        "tir"
       ],
       "anachronism_type_counts": {
         "early_modern_foundation": 1,
@@ -173,8 +174,8 @@
       },
       "candidates_by_attestation_basis": {
         "attested_867_to_1066": 1,
-        "attested_pre_867": 195,
-        "indigenous_pre_literate": 38
+        "attested_pre_867": 188,
+        "indigenous_pre_literate": 45
       },
       "bookmark_valid_candidates": {
         "867": 233,
@@ -182,7 +183,7 @@
         "1178": 234
       },
       "baronies_with_867_valid_candidate": 78,
-      "unique_localisation_stems": 73
+      "unique_localisation_stems": 77
     }
   },
   "baronies": {
@@ -642,45 +643,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Itbay"
         },
         {
-          "name": "Red Sea",
+          "name": "Erkowit",
           "disambiguation_note": null,
-          "localisation_stem": "Red Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering the eastern coastal plain.",
+          "localisation_stem": "Erkowit",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Elevated mist-catching plateau in the Red Sea Hills overlooking eastern Baqlin.",
           "language_variants": [
             {
-              "form": "Erythrá Thálassa",
-              "native_script": "Ἐρυθρά Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek Erythra Thalassa"
-            },
-            {
-              "form": "Mare Rubrum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Roman Latin Mare Rubrum"
-            },
-            {
-              "form": "al-Baḥr al-Aḥmar",
-              "native_script": "البحر الأحمر",
+              "form": "Arkawīt",
+              "native_script": "أركويت",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic al-Baḥr al-Aḥmar"
+              "notes": "Sudanese Arabic form"
+            },
+            {
+              "form": "Erkowit",
+              "native_script": null,
+              "language": "Beja",
+              "language_code": "bej",
+              "notes": "Beja highland name"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "Attested as Erythra Thalassa in 5th century BCE Herodotus and as Yam Suph in earlier Hebrew texts.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Beja highland plateau associated with ancient Pan-Grave and Beja pastoral sites.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Seawater inlet of the Indian Ocean between Africa and Arabia.",
-          "source_url": "https://en.wikipedia.org/wiki/Red_Sea"
+          "etymology_notes": "Elevated mist-catching plateau (1,100 m) in the Red Sea Hills of eastern Sudan.",
+          "source_url": "https://en.wikipedia.org/wiki/Ar_Kaweit"
         }
       ]
     },
@@ -1005,45 +999,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Anseba_River"
         },
         {
-          "name": "Red Sea",
+          "name": "Mereb River",
           "disambiguation_note": null,
-          "localisation_stem": "Red Sea",
+          "localisation_stem": "Mereb",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea into which the seasonal delta drains.",
+          "feature_subtype": "river",
+          "relationship": "Highland river forming the Gash inland delta adjoining the Khawr Baraka basin.",
           "language_variants": [
             {
-              "form": "Erythrá Thálassa",
-              "native_script": "Ἐρυθρά Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek Erythra Thalassa"
+              "form": "Marab",
+              "native_script": "መረብ",
+              "language": "Tigrinya",
+              "language_code": "tir",
+              "notes": "Tigrinya name (Märäb)"
             },
             {
-              "form": "Mare Rubrum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Roman Latin Mare Rubrum"
-            },
-            {
-              "form": "al-Baḥr al-Aḥmar",
-              "native_script": "البحر الأحمر",
+              "form": "al-Qāsh",
+              "native_script": "القاش",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic al-Baḥr al-Aḥmar"
+              "notes": "Arabic lowland name (Gash)"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "Attested as Erythra Thalassa in 5th century BCE Herodotus and as Yam Suph in earlier Hebrew texts.",
+          "earliest_attestation_year": 350,
+          "earliest_attestation_note": "Highland-to-lowland river system documented in Aksumite-era geography of northern Eritrea and eastern Sudan.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Seawater inlet of the Indian Ocean between Africa and Arabia.",
-          "source_url": "https://en.wikipedia.org/wiki/Red_Sea"
+          "etymology_notes": "Seasonal river rising in the Eritrean highlands and forming the Gash inland delta in eastern Sudan.",
+          "source_url": "https://en.wikipedia.org/wiki/Mareb_River"
         }
       ]
     },
@@ -2657,45 +2644,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Gabal_Elba"
         },
         {
-          "name": "Red Sea",
+          "name": "Wadi Allaqi",
           "disambiguation_note": null,
-          "localisation_stem": "Red Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering the lower coastal plain.",
+          "localisation_stem": "Wadi Allaqi",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "Major gold-bearing desert valley draining the Red Sea Hills west of Lower Odib.",
           "language_variants": [
             {
-              "form": "Erythrá Thálassa",
-              "native_script": "Ἐρυθρά Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek Erythra Thalassa"
-            },
-            {
-              "form": "Mare Rubrum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Roman Latin Mare Rubrum"
-            },
-            {
-              "form": "al-Baḥr al-Aḥmar",
-              "native_script": "البحر الأحمر",
+              "form": "Wādī al-ʿAllāqī",
+              "native_script": "وادي العلاقي",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic al-Baḥr al-Aḥmar"
+              "notes": "Arabic name"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "Attested as Erythra Thalassa in 5th century BCE Herodotus and as Yam Suph in earlier Hebrew texts.",
+          "earliest_attestation_year": -1300,
+          "earliest_attestation_note": "Gold-bearing wadi attested as Akuyati in New Kingdom Egyptian inscriptions (c. 1300 BCE) and as Wadi al-Allaqi in 9th century CE Arabic.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Seawater inlet of the Indian Ocean between Africa and Arabia.",
-          "source_url": "https://en.wikipedia.org/wiki/Red_Sea"
+          "etymology_notes": "Major dry river valley draining the Red Sea Hills into Lower Nubia near Qurta and Korosko.",
+          "source_url": "https://en.wikipedia.org/wiki/Wadi_Allaqi"
         }
       ]
     },
@@ -4950,31 +4923,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Nobatia"
         },
         {
-          "name": "Kharga Oasis",
+          "name": "Dakhla Oasis",
           "disambiguation_note": null,
-          "localisation_stem": "Kharga",
+          "localisation_stem": "Dakhla",
           "category": "topographic_feature",
           "feature_subtype": "valley",
-          "relationship": "Southern Egyptian oasis depression containing Baris.",
+          "relationship": "Neighboring Western Desert oasis depression situated northwest of Baris.",
           "language_variants": [
             {
-              "form": "al-Wāḥāt al-Khārija",
-              "native_script": "الواحات الخارجة",
+              "form": "al-Dākhila",
+              "native_script": "الداخلة",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic al-Wāḥāt al-Khārija ('Outer Oasis')"
+              "notes": "Arabic al-Wāḥāt al-Dākhila ('Inner Oasis')"
+            },
+            {
+              "form": "Dsds",
+              "native_script": "𓂧𓋴𓂧𓋴",
+              "language": "Ancient Egyptian",
+              "language_code": "egy",
+              "notes": "Ancient Egyptian Desdes"
+            },
+            {
+              "form": "Oasis Magna",
+              "native_script": null,
+              "language": "Latin",
+              "language_code": "lat",
+              "notes": "Roman provincial designation"
             }
           ],
           "earliest_attestation_year": -2300,
-          "earliest_attestation_note": "Attested as the Southern Oasis (Hibis) in Old Kingdom Egyptian records (c. 2300 BCE).",
+          "earliest_attestation_note": "Attested as Kenemet in Old Kingdom Egyptian inscriptions (c. 2300 BCE).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Arabic al-Khārija ('the outer oasis'), the largest depression in the Egyptian Western Desert.",
-          "source_url": "https://en.wikipedia.org/wiki/Kharga_Oasis"
+          "etymology_notes": "Large fertile oasis depression in Egypt's Western Desert northwest of Kharga.",
+          "source_url": "https://en.wikipedia.org/wiki/Dakhla_Oasis"
         },
         {
           "name": "Gabal El Uweinat",
@@ -5427,38 +5414,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Zenata"
         },
         {
-          "name": "Siwa Oasis",
+          "name": "Jaghbub",
           "disambiguation_note": null,
-          "localisation_stem": "Siwa",
+          "localisation_stem": "Jaghbub",
           "category": "topographic_feature",
           "feature_subtype": "valley",
-          "relationship": "Major oasis depression east of Ain al-Gharbi.",
+          "relationship": "Desert oasis depression lying just west of Ain Al-Gharbi across the Cyrenaican border.",
           "language_variants": [
             {
-              "form": "Ammṓnion",
-              "native_script": "Ἀμμώνιον",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek Ammōnion"
-            },
-            {
-              "form": "Wāḥat Sīwa",
-              "native_script": "واحة سيوة",
+              "form": "al-Jaghbūb",
+              "native_script": "الجغبوب",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic Wāḥat Sīwa"
+              "notes": "Arabic oasis name"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "Attested as the Oasis of Ammon in 5th century BCE Herodotus (Histories, Book III).",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "Saharan oasis depression in eastern Cyrenaica along ancient caravan routes west of Siwa.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Isolated desert depression near the Libyan border, known in antiquity as Ammonium.",
-          "source_url": "https://en.wikipedia.org/wiki/Siwa_Oasis"
+          "etymology_notes": "Low-lying desert oasis depression near the Libyan-Egyptian frontier west of Siwa.",
+          "source_url": "https://en.wikipedia.org/wiki/Jaghbub"
         },
         {
           "name": "Great Sand Sea",
@@ -5548,38 +5528,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Laguatan"
         },
         {
-          "name": "Siwa Oasis",
+          "name": "Qattara Depression",
           "disambiguation_note": null,
-          "localisation_stem": "Siwa",
-          "category": "topographic_feature",
-          "feature_subtype": "valley",
-          "relationship": "Neighboring oasis depression southwest of Qara.",
+          "localisation_stem": "Qattara",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Vast salt-pan basin bordering the oasis of Qara to the east.",
           "language_variants": [
             {
-              "form": "Ammṓnion",
-              "native_script": "Ἀμμώνιον",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek Ammōnion"
-            },
-            {
-              "form": "Wāḥat Sīwa",
-              "native_script": "واحة سيوة",
+              "form": "Munkhafaḍ al-Qaṭṭāra",
+              "native_script": "منخفض القطارة",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic Wāḥat Sīwa"
+              "notes": "Arabic geographic name"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "Attested as the Oasis of Ammon in 5th century BCE Herodotus (Histories, Book III).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Natural endorheic salt-pan basin in Egypt's Western Desert documented in medieval Saharan itineraries.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Isolated desert depression near the Libyan border, known in antiquity as Ammonium.",
-          "source_url": "https://en.wikipedia.org/wiki/Siwa_Oasis"
+          "etymology_notes": "Vast sub-sea-level desert basin in northwestern Egypt bordering Qara and Siwa.",
+          "source_url": "https://en.wikipedia.org/wiki/Qattara_Depression"
         },
         {
           "name": "Western Desert",
@@ -6046,45 +6019,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Beja_people"
         },
         {
-          "name": "Red Sea",
+          "name": "Howakil Bay",
           "disambiguation_note": null,
-          "localisation_stem": "Red Sea",
+          "localisation_stem": "Howakil",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering the ancient Badi coastal region.",
+          "feature_subtype": "bay",
+          "relationship": "Red Sea bay immediately south of the historic littoral around Ka'abir.",
           "language_variants": [
             {
-              "form": "Erythrá Thálassa",
-              "native_script": "Ἐρυθρά Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek Erythra Thalassa"
-            },
-            {
-              "form": "Mare Rubrum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Roman Latin Mare Rubrum"
-            },
-            {
-              "form": "al-Baḥr al-Aḥmar",
-              "native_script": "البحر الأحمر",
+              "form": "Khalīj Ḥawākil",
+              "native_script": "خليج حواكل",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic al-Baḥr al-Aḥmar"
+              "notes": "Arabic coastal designation"
+            },
+            {
+              "form": "Ḥawākil",
+              "native_script": "ሓዋክል",
+              "language": "Tigrinya",
+              "language_code": "tir",
+              "notes": "Tigrinya coastal form"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "Attested as Erythra Thalassa in 5th century BCE Herodotus and as Yam Suph in earlier Hebrew texts.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Natural Red Sea bay and archipelago adjoining the ancient Adulis-Buri littoral.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Seawater inlet of the Indian Ocean between Africa and Arabia.",
-          "source_url": "https://en.wikipedia.org/wiki/Red_Sea"
+          "etymology_notes": "Island-studded Red Sea bay immediately east of the Buri Peninsula on the Eritrean coast.",
+          "source_url": "https://en.wikipedia.org/wiki/Bay_of_Hawakil"
         },
         {
           "name": "Dahlak Archipelago",
@@ -6201,45 +6167,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Barka_River"
         },
         {
-          "name": "Red Sea",
+          "name": "Erkowit",
           "disambiguation_note": null,
-          "localisation_stem": "Red Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering the Tokar coastal plain.",
+          "localisation_stem": "Erkowit",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Upland plateau in the Red Sea Hills rising northwest of the Tokar delta.",
           "language_variants": [
             {
-              "form": "Erythrá Thálassa",
-              "native_script": "Ἐρυθρά Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek Erythra Thalassa"
-            },
-            {
-              "form": "Mare Rubrum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Roman Latin Mare Rubrum"
-            },
-            {
-              "form": "al-Baḥr al-Aḥmar",
-              "native_script": "البحر الأحمر",
+              "form": "Arkawīt",
+              "native_script": "أركويت",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic al-Baḥr al-Aḥmar"
+              "notes": "Sudanese Arabic form"
+            },
+            {
+              "form": "Erkowit",
+              "native_script": null,
+              "language": "Beja",
+              "language_code": "bej",
+              "notes": "Beja highland name"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "Attested as Erythra Thalassa in 5th century BCE Herodotus and as Yam Suph in earlier Hebrew texts.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Beja highland plateau associated with ancient Pan-Grave and Beja pastoral sites.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Seawater inlet of the Indian Ocean between Africa and Arabia.",
-          "source_url": "https://en.wikipedia.org/wiki/Red_Sea"
+          "etymology_notes": "Elevated mist-catching plateau (1,100 m) in the Red Sea Hills of eastern Sudan.",
+          "source_url": "https://en.wikipedia.org/wiki/Ar_Kaweit"
         }
       ]
     },
@@ -6302,45 +6261,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Beja_people"
         },
         {
-          "name": "Red Sea",
+          "name": "Mukawwar Island",
           "disambiguation_note": null,
-          "localisation_stem": "Red Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea along which the port of Akik lies.",
+          "localisation_stem": "Mukawwar",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Coral island lying off the Sudanese Red Sea littoral north of Akik.",
           "language_variants": [
             {
-              "form": "Erythrá Thálassa",
-              "native_script": "Ἐρυθρά Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek Erythra Thalassa"
-            },
-            {
-              "form": "Mare Rubrum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Roman Latin Mare Rubrum"
-            },
-            {
-              "form": "al-Baḥr al-Aḥmar",
-              "native_script": "البحر الأحمر",
+              "form": "Jazīrat Mukawwar",
+              "native_script": "جزيرة مكور",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic al-Baḥr al-Aḥmar"
+              "notes": "Arabic island name"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "Attested as Erythra Thalassa in 5th century BCE Herodotus and as Yam Suph in earlier Hebrew texts.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Natural Red Sea coral island off the Sudanese littoral.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Seawater inlet of the Indian Ocean between Africa and Arabia.",
-          "source_url": "https://en.wikipedia.org/wiki/Red_Sea"
+          "etymology_notes": "Coral and sandstone island situated off the Sudanese Red Sea coast near Dungunab.",
+          "source_url": "https://en.wikipedia.org/wiki/Mukawwar_Island"
         },
         {
           "name": "Gulf of Zula",
@@ -6537,45 +6482,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Beja_people"
         },
         {
-          "name": "Red Sea",
+          "name": "Erkowit",
           "disambiguation_note": null,
-          "localisation_stem": "Red Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea on which the island port of Suakin stands.",
+          "localisation_stem": "Erkowit",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Highland plateau overlooking the coastal plain behind Suakin.",
           "language_variants": [
             {
-              "form": "Erythrá Thálassa",
-              "native_script": "Ἐρυθρά Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek Erythra Thalassa"
-            },
-            {
-              "form": "Mare Rubrum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Roman Latin Mare Rubrum"
-            },
-            {
-              "form": "al-Baḥr al-Aḥmar",
-              "native_script": "البحر الأحمر",
+              "form": "Arkawīt",
+              "native_script": "أركويت",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic al-Baḥr al-Aḥmar"
+              "notes": "Sudanese Arabic form"
+            },
+            {
+              "form": "Erkowit",
+              "native_script": null,
+              "language": "Beja",
+              "language_code": "bej",
+              "notes": "Beja highland name"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "Attested as Erythra Thalassa in 5th century BCE Herodotus and as Yam Suph in earlier Hebrew texts.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Beja highland plateau associated with ancient Pan-Grave and Beja pastoral sites.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Seawater inlet of the Indian Ocean between Africa and Arabia.",
-          "source_url": "https://en.wikipedia.org/wiki/Red_Sea"
+          "etymology_notes": "Elevated mist-catching plateau (1,100 m) in the Red Sea Hills of eastern Sudan.",
+          "source_url": "https://en.wikipedia.org/wiki/Ar_Kaweit"
         },
         {
           "name": "Red Sea Hills",
@@ -6672,45 +6610,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Blemmyes"
         },
         {
-          "name": "Red Sea",
+          "name": "Mukawwar Island",
           "disambiguation_note": null,
-          "localisation_stem": "Red Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering the Dungunab peninsula.",
+          "localisation_stem": "Mukawwar",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Coral and sandstone island situated directly off the Dungunab coast.",
           "language_variants": [
             {
-              "form": "Erythrá Thálassa",
-              "native_script": "Ἐρυθρά Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek Erythra Thalassa"
-            },
-            {
-              "form": "Mare Rubrum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Roman Latin Mare Rubrum"
-            },
-            {
-              "form": "al-Baḥr al-Aḥmar",
-              "native_script": "البحر الأحمر",
+              "form": "Jazīrat Mukawwar",
+              "native_script": "جزيرة مكور",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic al-Baḥr al-Aḥmar"
+              "notes": "Arabic island name"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "Attested as Erythra Thalassa in 5th century BCE Herodotus and as Yam Suph in earlier Hebrew texts.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Natural Red Sea coral island off the Sudanese littoral.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Seawater inlet of the Indian Ocean between Africa and Arabia.",
-          "source_url": "https://en.wikipedia.org/wiki/Red_Sea"
+          "etymology_notes": "Coral and sandstone island situated off the Sudanese Red Sea coast near Dungunab.",
+          "source_url": "https://en.wikipedia.org/wiki/Mukawwar_Island"
         },
         {
           "name": "Gabal Elba",
@@ -8656,45 +8580,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Wadi_Hammamat"
         },
         {
-          "name": "Red Sea",
+          "name": "Wadi El Gemal",
           "disambiguation_note": null,
-          "localisation_stem": "Red Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea on whose western shore Qusayr stands.",
+          "localisation_stem": "Wadi El Gemal",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "Major Eastern Desert valley opening onto the Red Sea coast south of Qusayr.",
           "language_variants": [
             {
-              "form": "Erythrá Thálassa",
-              "native_script": "Ἐρυθρά Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek Erythra Thalassa"
-            },
-            {
-              "form": "Mare Rubrum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Roman Latin Mare Rubrum"
-            },
-            {
-              "form": "al-Baḥr al-Aḥmar",
-              "native_script": "البحر الأحمر",
+              "form": "Wādī al-Jimāl",
+              "native_script": "وادي الجمال",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic al-Baḥr al-Aḥmar"
+              "notes": "Arabic name ('Valley of the Camels')"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "Attested as Erythra Thalassa in 5th century BCE Herodotus and as Yam Suph in earlier Hebrew texts.",
+          "earliest_attestation_year": -30,
+          "earliest_attestation_note": "Eastern Desert valley traversed by Ptolemaic and Roman emerald-mining routes (Mons Smaragdus).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Seawater inlet of the Indian Ocean between Africa and Arabia.",
-          "source_url": "https://en.wikipedia.org/wiki/Red_Sea"
+          "etymology_notes": "Major desert wadi system draining the southern Red Sea Hills to the Egyptian coast south of Qusayr.",
+          "source_url": "https://en.wikipedia.org/wiki/Wadi_El_Gemal_National_Park"
         }
       ]
     },
@@ -8784,45 +8694,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Gabal_Sha'ib_El_Banat"
         },
         {
-          "name": "Red Sea",
+          "name": "Mons Porphyrites",
           "disambiguation_note": null,
-          "localisation_stem": "Red Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Sea bordering the port of Safaga.",
+          "localisation_stem": "Mons Porphyrites",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Historic porphyry massif rising in the Red Sea Hills inland from Safaga.",
           "language_variants": [
             {
-              "form": "Erythrá Thálassa",
-              "native_script": "Ἐρυθρά Θάλασσα",
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Classical Greek Erythra Thalassa"
-            },
-            {
-              "form": "Mare Rubrum",
+              "form": "Mons Porphyrites",
               "native_script": null,
               "language": "Latin",
               "language_code": "lat",
-              "notes": "Roman Latin Mare Rubrum"
+              "notes": "Roman imperial quarry name ('Porphyry Mountain')"
             },
             {
-              "form": "al-Baḥr al-Aḥmar",
-              "native_script": "البحر الأحمر",
+              "form": "Jabal al-Dukhān",
+              "native_script": "جبل الدخان",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic al-Baḥr al-Aḥmar"
+              "notes": "Arabic name (Gebel Dokhan)"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "Attested as Erythra Thalassa in 5th century BCE Herodotus and as Yam Suph in earlier Hebrew texts.",
+          "earliest_attestation_year": 18,
+          "earliest_attestation_note": "Discovered and quarried by the Roman Empire from 18 CE (reign of Tiberius).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Seawater inlet of the Indian Ocean between Africa and Arabia.",
-          "source_url": "https://en.wikipedia.org/wiki/Red_Sea"
+          "etymology_notes": "Mountain massif in Egypt's Eastern Desert renowned in antiquity as the sole source of imperial purple porphyry.",
+          "source_url": "https://en.wikipedia.org/wiki/Mons_Porphyrites"
         }
       ]
     },

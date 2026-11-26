@@ -137,28 +137,35 @@
       "target_baronies_audited": 172,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 516,
-      "unique_replacement_names": 111,
-      "candidates_with_multilingual_variants": 323,
+      "unique_replacement_names": 120,
+      "candidates_with_multilingual_variants": 312,
       "wikipedia_source_attached": 516,
-      "unique_source_urls": 111,
+      "unique_source_urls": 120,
       "candidates_by_category": {
-        "choronym": 6,
-        "hydronym": 223,
-        "oronym": 99,
-        "topographic_feature": 16,
+        "choronym": 4,
+        "hydronym": 219,
+        "oronym": 102,
+        "topographic_feature": 19,
         "tribe": 172
       },
       "baronies_with_category": {
-        "has_choronym_candidate": 6,
-        "has_hydronym_candidate": 167,
-        "has_oronym_candidate": 96,
-        "has_topographic_feature_candidate": 16,
+        "has_choronym_candidate": 4,
+        "has_hydronym_candidate": 163,
+        "has_oronym_candidate": 95,
+        "has_topographic_feature_candidate": 19,
         "has_tribe_candidate": 172
       },
       "unique_language_codes": [
+        "ben",
+        "blr",
+        "khb",
+        "lao",
+        "lhu",
+        "mni",
         "mnw",
         "mya",
         "pli",
+        "raw",
         "san",
         "shn",
         "tha",
@@ -173,8 +180,8 @@
         "unattested_indigenous_or_minor": 34
       },
       "candidates_by_attestation_basis": {
-        "attested_pre_867": 162,
-        "indigenous_pre_literate": 354
+        "attested_pre_867": 206,
+        "indigenous_pre_literate": 310
       },
       "bookmark_valid_candidates": {
         "867": 516,
@@ -182,7 +189,7 @@
         "1178": 516
       },
       "baronies_with_867_valid_candidate": 172,
-      "unique_localisation_stems": 111
+      "unique_localisation_stems": 120
     }
   },
   "baronies": {
@@ -1227,31 +1234,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Lawa_people"
         },
         {
-          "name": "Pai River",
+          "name": "Salween River",
           "disambiguation_note": null,
-          "localisation_stem": "Pai",
+          "localisation_stem": "Salween",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Mae Hong Son.",
+          "relationship": "Great transboundary river draining the Mae Hong Son watershed along its western frontier.",
           "language_variants": [
             {
-              "form": "Mae Nam Pai",
+              "form": "Thanlwin",
+              "native_script": "သံလွင်",
+              "language": "Burmese",
+              "language_code": "mya",
+              "notes": "Burmese hydronym"
+            },
+            {
+              "form": "Nam Khong",
               "native_script": null,
+              "language": "Shan",
+              "language_code": "shn",
+              "notes": "Shan hydronym"
+            },
+            {
+              "form": "Mae Nam Salawin",
+              "native_script": "แม่น้ำสาละวิน",
               "language": "Thai",
               "language_code": "tha",
               "notes": "Thai hydronym"
             }
           ],
-          "earliest_attestation_year": 1300,
-          "earliest_attestation_note": "c. 14th century CE (Lanna western frontier chronicles)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tributary of the Salween flowing through the Mae Hong Son valley.",
-          "source_url": "https://en.wikipedia.org/wiki/Pai_River"
+          "etymology_notes": "Major Southeast Asian river forming the western drainage basin of Mae Hong Son.",
+          "source_url": "https://en.wikipedia.org/wiki/Salween_River"
         },
         {
           "name": "Thanon Thong Chai Range",
@@ -1441,31 +1462,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Lawa_people"
         },
         {
-          "name": "Pai River",
+          "name": "Daen Lao Range",
           "disambiguation_note": null,
-          "localisation_stem": "Pai",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Karen.",
+          "localisation_stem": "Daen Lao",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Northern Shan highland range cradling the headwaters of the Pai and Karen borderlands.",
           "language_variants": [
             {
-              "form": "Mae Nam Pai",
-              "native_script": null,
+              "form": "Thio Khao Daen Lao",
+              "native_script": "ทิวเขาแดนลาว",
               "language": "Thai",
               "language_code": "tha",
-              "notes": "Thai hydronym"
+              "notes": "Thai mountain range name"
             }
           ],
           "earliest_attestation_year": 1300,
-          "earliest_attestation_note": "c. 14th century CE (Lanna western frontier chronicles)",
+          "earliest_attestation_note": "c. 14th century CE (Lanna-Shan frontier chronicles)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tributary of the Salween flowing through the Mae Hong Son valley.",
-          "source_url": "https://en.wikipedia.org/wiki/Pai_River"
+          "etymology_notes": "Subrange of the Shan Hills dividing the Salween and Mekong watersheds.",
+          "source_url": "https://en.wikipedia.org/wiki/Daen_Lao_Range"
         },
         {
           "name": "Thanon Thong Chai Range",
@@ -3169,31 +3190,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Nam_Ou"
         },
         {
-          "name": "Luang Prabang Range",
+          "name": "Phou Louey",
           "disambiguation_note": null,
-          "localisation_stem": "Luang Prabang",
+          "localisation_stem": "Phou Louey",
           "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Elevated landform overlooking Muang Ngoi.",
+          "feature_subtype": "mountain",
+          "relationship": "High mountain massif rising east of Muang Ngoi in northern Laos.",
           "language_variants": [
             {
-              "form": "Thio Khao Luang Phrabang",
-              "native_script": null,
-              "language": "Thai",
-              "language_code": "tha",
-              "notes": "Thai/Lao name"
+              "form": "Phou Louey",
+              "native_script": "ພູເລີຍ",
+              "language": "Lao",
+              "language_code": "lao",
+              "notes": "Lao oronym meaning Forever Mountain"
             }
           ],
-          "earliest_attestation_year": 1350,
-          "earliest_attestation_note": "c. 14th century CE (Lan Xang-Lanna watershed)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate highland peak of northern Laos.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Mountain range dividing the Mekong basin (Luang Prabang, Sainyabuli) from the Nan/Chao Phraya basin.",
-          "source_url": "https://en.wikipedia.org/wiki/Luang_Prabang_Range"
+          "etymology_notes": "Prominent mountain of the northern Lao highlands lending its name to the Nam Et-Phou Louey range. Onomastic note: Lao oronym meaning Forever Mountain ('Phou Louey').",
+          "source_url": "https://en.wikipedia.org/wiki/Nam_Et-Phou_Louey_National_Park"
         }
       ]
     },
@@ -3370,31 +3391,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Lanna_people"
         },
         {
-          "name": "Nan River",
+          "name": "Phi Pan Nam Range",
           "disambiguation_note": null,
-          "localisation_stem": "Nan",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Nan.",
+          "localisation_stem": "Phi Pan Nam",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain system framing the western rim of the Nan valley.",
           "language_variants": [
             {
-              "form": "Mae Nam Nan",
-              "native_script": null,
+              "form": "Thio Khao Phi Pan Nam",
+              "native_script": "ทิวเขาผีปันน้ำ",
               "language": "Thai",
               "language_code": "tha",
-              "notes": "Thai hydronym"
+              "notes": "Thai mountain range name"
             }
           ],
-          "earliest_attestation_year": 1280,
-          "earliest_attestation_note": "c. 13th century CE (Sukhothai and Nan chronicles)",
+          "earliest_attestation_year": 1200,
+          "earliest_attestation_note": "c. 13th century CE (Lanna and Phayao chronicles)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Eastern headstream of the Chao Phraya rising in the Luang Prabang Range and flowing past Nan and Phitsanulok.",
-          "source_url": "https://en.wikipedia.org/wiki/Nan_River"
+          "etymology_notes": "Four-hundred-kilometer range whose name means mountains where spirits divide the waters.",
+          "source_url": "https://en.wikipedia.org/wiki/Phi_Pan_Nam_Range"
         },
         {
           "name": "Luang Prabang Range",
@@ -3484,31 +3505,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Lanna_people"
         },
         {
-          "name": "Nan River",
+          "name": "Lam Wa",
           "disambiguation_note": null,
-          "localisation_stem": "Nan",
+          "localisation_stem": "Lam Wa",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Muang Thong.",
+          "relationship": "Major eastern tributary of the Nan watershed flowing past Muang Thong.",
           "language_variants": [
             {
-              "form": "Mae Nam Nan",
-              "native_script": null,
+              "form": "Lam Nam Wa",
+              "native_script": "ลำน้ำว้า",
               "language": "Thai",
               "language_code": "tha",
               "notes": "Thai hydronym"
             }
           ],
-          "earliest_attestation_year": 1280,
-          "earliest_attestation_note": "c. 13th century CE (Sukhothai and Nan chronicles)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate highland river of Nan Province.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Eastern headstream of the Chao Phraya rising in the Luang Prabang Range and flowing past Nan and Phitsanulok.",
-          "source_url": "https://en.wikipedia.org/wiki/Nan_River"
+          "etymology_notes": "Mountainous whitewater river originating near the Luang Prabang Range in Nan.",
+          "source_url": "https://en.wikipedia.org/wiki/Lam_Wa"
         },
         {
           "name": "Luang Prabang Range",
@@ -3598,31 +3619,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Lanna_people"
         },
         {
-          "name": "Nan River",
+          "name": "Doi Phu Kha",
           "disambiguation_note": null,
-          "localisation_stem": "Nan",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Chiang Klang.",
+          "localisation_stem": "Doi Phu Kha",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Towering sacred peak overlooking Chiang Klang from the eastern Nan highlands.",
           "language_variants": [
             {
-              "form": "Mae Nam Nan",
-              "native_script": null,
+              "form": "Doi Phu Kha",
+              "native_script": "ดอยภูคา",
               "language": "Thai",
               "language_code": "tha",
-              "notes": "Thai hydronym"
+              "notes": "Thai mountain name"
             }
           ],
-          "earliest_attestation_year": 1280,
-          "earliest_attestation_note": "c. 13th century CE (Sukhothai and Nan chronicles)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate summit of the Luang Prabang Range in northern Nan.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Eastern headstream of the Chao Phraya rising in the Luang Prabang Range and flowing past Nan and Phitsanulok.",
-          "source_url": "https://en.wikipedia.org/wiki/Nan_River"
+          "etymology_notes": "Highest peak of Nan Province, standing at 1,980 meters above the upper Nan valley.",
+          "source_url": "https://en.wikipedia.org/wiki/Doi_Phu_Kha"
         },
         {
           "name": "Luang Prabang Range",
@@ -4244,38 +4265,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Mekong"
         },
         {
-          "name": "Sipsongpanna",
+          "name": "Luosuo River",
           "disambiguation_note": null,
-          "localisation_stem": "Sipsongpanna",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Located in or spanning the Mong La area.",
+          "localisation_stem": "Luosuo",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major tributary of the Mekong flowing directly through the Mong La basin.",
           "language_variants": [
             {
-              "form": "Sipsong Panna",
-              "native_script": null,
-              "language": "Thai",
-              "language_code": "tha",
-              "notes": "Tai Lue name ('Twelve Rice Districts')"
-            },
-            {
-              "form": "Xishuangbanna",
-              "native_script": null,
+              "form": "Luōsuō Jiāng",
+              "native_script": "罗梭江",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Chinese hydronym"
+            },
+            {
+              "form": "Nam La",
+              "native_script": null,
+              "language": "Tai Lue",
+              "language_code": "khb",
+              "notes": "Tai Lue river designation"
             }
           ],
-          "earliest_attestation_year": 1180,
-          "earliest_attestation_note": "1180 CE (Tai Lue principality of Chiang Hung)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Mekong tributary in southern Xishuangbanna.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Subtropical Mekong valley region of southern Yunnan.",
-          "source_url": "https://en.wikipedia.org/wiki/Xishuangbanna_Dai_Autonomous_Prefecture"
+          "etymology_notes": "Meandering river draining Mengla County before joining the Lancang-Mekong.",
+          "source_url": "https://en.wikipedia.org/wiki/Luosuo_River"
         }
       ]
     },
@@ -4379,38 +4400,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mekong"
         },
         {
-          "name": "Sipsongpanna",
+          "name": "Bulang Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Sipsongpanna",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Located in or spanning the Chiang Coeng area.",
+          "localisation_stem": "Bulang",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Forested upland massif of southern Xishuangbanna west of the Mekong.",
           "language_variants": [
             {
-              "form": "Sipsong Panna",
-              "native_script": null,
-              "language": "Thai",
-              "language_code": "tha",
-              "notes": "Tai Lue name ('Twelve Rice Districts')"
-            },
-            {
-              "form": "Xishuangbanna",
-              "native_script": null,
+              "form": "Bùlǎng Shān",
+              "native_script": "布朗山",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Chinese oronym"
             }
           ],
-          "earliest_attestation_year": 1180,
-          "earliest_attestation_note": "1180 CE (Tai Lue principality of Chiang Hung)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate tea-growing highland range of the Blang and Tai Lue peoples.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Subtropical Mekong valley region of southern Yunnan.",
-          "source_url": "https://en.wikipedia.org/wiki/Xishuangbanna_Dai_Autonomous_Prefecture"
+          "etymology_notes": "Mountainous highland in Menghai County renowned for ancient forest tea groves.",
+          "source_url": "https://en.wikipedia.org/wiki/Bulang_Mountains"
         }
       ]
     },
@@ -4871,38 +4885,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Dai_people"
         },
         {
-          "name": "Mekong",
+          "name": "Tha River",
           "disambiguation_note": null,
-          "localisation_stem": "Mekong",
+          "localisation_stem": "Tha",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Muang U.",
+          "relationship": "Major northern Lao tributary of the Mekong flowing through the Moeng Long borderlands.",
           "language_variants": [
             {
-              "form": "Mae Nam Khong",
-              "native_script": null,
-              "language": "Thai",
-              "language_code": "tha",
-              "notes": "Thai/Lao hydronym ('Mother River Khong')"
-            },
-            {
-              "form": "Lancang Jiang",
-              "native_script": null,
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese name for the upper course"
+              "form": "Nam Tha",
+              "native_script": "ນໍ້າທາ",
+              "language": "Lao",
+              "language_code": "lao",
+              "notes": "Lao hydronym meaning Green River"
             }
           ],
-          "earliest_attestation_year": 68,
-          "earliest_attestation_note": "1st century CE (upper reach attested as Lancang River in Eastern Han sources)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1400,
+          "earliest_attestation_note": "c. 15th century CE (Lanna-Lan Xang borderland chronicles)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great river of mainland Southeast Asia flowing through Sipsongpanna, Chiang Saen, and Muang Sua.",
-          "source_url": "https://en.wikipedia.org/wiki/Mekong"
+          "etymology_notes": "Major river draining Luang Namtha south into the Mekong. Onomastic note: Lao hydronym meaning Green River ('Nam Tha').",
+          "source_url": "https://en.wikipedia.org/wiki/Tha_River"
         },
         {
           "name": "Daen Lao Range",
@@ -6115,31 +6122,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Pa_Sak_River"
         },
         {
-          "name": "Phetchabun Mountains",
+          "name": "Nan River",
           "disambiguation_note": null,
-          "localisation_stem": "Phetchabun",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Elevated landform overlooking Phitsanulok.",
+          "localisation_stem": "Nan",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Chao Phraya headstream flowing directly through Phitsanulok.",
           "language_variants": [
             {
-              "form": "Thio Khao Phetchabun",
-              "native_script": null,
+              "form": "Mae Nam Nan",
+              "native_script": "น่าน",
               "language": "Thai",
               "language_code": "tha",
-              "notes": "Thai name"
+              "notes": "Thai hydronym"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Western mountain rim separating Dvaravati central Thailand from the Khorat Plateau (c. 7th century CE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1280,
+          "earliest_attestation_note": "c. 13th century CE (Sukhothai and Nan chronicles)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Mountain range separating the Chao Phraya/Nan basin from the Khorat Plateau.",
-          "source_url": "https://en.wikipedia.org/wiki/Phetchabun_Mountains"
+          "etymology_notes": "Longest eastern headstream of the Chao Phraya, watering Phitsanulok.",
+          "source_url": "https://en.wikipedia.org/wiki/Nan_River"
         }
       ]
     },
@@ -7063,38 +7070,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Tai_peoples"
         },
         {
-          "name": "Phetchaburi River",
+          "name": "Pran Buri River",
           "disambiguation_note": null,
-          "localisation_stem": "Phetchaburi",
+          "localisation_stem": "Pran Buri",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Singkhon.",
+          "relationship": "Major coastal river draining the Tenasserim foothills north of Singkhon.",
           "language_variants": [
             {
-              "form": "Mae Nam Phetchaburi",
-              "native_script": null,
+              "form": "Mae Nam Pran Buri",
+              "native_script": "แม่น้ำปราณบุรี",
               "language": "Thai",
               "language_code": "tha",
               "notes": "Thai hydronym"
-            },
-            {
-              "form": "Vajrapuri",
-              "native_script": null,
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskrit root ('Diamond City')"
             }
           ],
-          "earliest_attestation_year": 1100,
-          "earliest_attestation_note": "c. 12th century CE (Khmer-Dvaravati Jayavarman VII inscriptions)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate coastal river of upper Prachuap Khiri Khan.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River rising in the Tenasserim Hills and flowing past Phetchaburi into the Bay of Bangkok.",
-          "source_url": "https://en.wikipedia.org/wiki/Phetchaburi_River"
+          "etymology_notes": "One-hundred-thirty-kilometer river flowing south and east from the Tenasserim Range.",
+          "source_url": "https://en.wikipedia.org/wiki/Pran_Buri_River"
         },
         {
           "name": "Gulf of Thailand",
@@ -7191,38 +7191,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Tai_peoples"
         },
         {
-          "name": "Phetchaburi River",
+          "name": "Khao Sam Roi Yot",
           "disambiguation_note": null,
-          "localisation_stem": "Phetchaburi",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Na Rang.",
+          "localisation_stem": "Khao Sam Roi Yot",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Dramatic coastal limestone massif south of Phetchaburi along the western gulf shore.",
           "language_variants": [
             {
-              "form": "Mae Nam Phetchaburi",
-              "native_script": null,
+              "form": "Khao Sam Roi Yot",
+              "native_script": "เขาสามร้อยยอด",
               "language": "Thai",
               "language_code": "tha",
-              "notes": "Thai hydronym"
-            },
-            {
-              "form": "Vajrapuri",
-              "native_script": null,
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskrit root ('Diamond City')"
+              "notes": "Thai oronym meaning Mountain of Three Hundred Peaks"
             }
           ],
-          "earliest_attestation_year": 1100,
-          "earliest_attestation_note": "c. 12th century CE (Khmer-Dvaravati Jayavarman VII inscriptions)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate coastal karst massif of upper Peninsular Thailand.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River rising in the Tenasserim Hills and flowing past Phetchaburi into the Bay of Bangkok.",
-          "source_url": "https://en.wikipedia.org/wiki/Phetchaburi_River"
+          "etymology_notes": "Limestone range and coastal marshland famous for steep karst peaks rising above the gulf. Onomastic note: Thai oronym meaning Mountain of Three Hundred Peaks ('Khao Sam Roi Yot').",
+          "source_url": "https://en.wikipedia.org/wiki/Khao_Sam_Roi_Yot_National_Park"
         },
         {
           "name": "Gulf of Thailand",
@@ -7346,31 +7339,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Bilauktaung"
         },
         {
-          "name": "Mergui Archipelago",
+          "name": "Lenya River",
           "disambiguation_note": null,
-          "localisation_stem": "Mergui",
-          "category": "topographic_feature",
-          "feature_subtype": "coastal_feature",
-          "relationship": "Located in or spanning the Tenasserim area.",
+          "localisation_stem": "Lenya",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Southern Tenasserim river flowing parallel below the Tanintharyi valley.",
           "language_variants": [
             {
-              "form": "Myeik Kyunsu",
+              "form": "Lenya Myit",
               "native_script": null,
               "language": "Burmese",
               "language_code": "mya",
-              "notes": "Burmese name"
+              "notes": "Burmese hydronym"
             }
           ],
-          "earliest_attestation_year": 1400,
-          "earliest_attestation_note": "c. 15th century CE (maritime charts of the Tenasserim islands)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate river basin of southern Tanintharyi.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Chain of hundreds of islands off the Tenasserim coast in the Andaman Sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Mergui_Archipelago"
+          "etymology_notes": "Coastal river descending from the Tenasserim Hills south of Mergui.",
+          "source_url": "https://en.wikipedia.org/wiki/Lenya_River"
         }
       ]
     },
@@ -7474,38 +7467,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Great_Tenasserim_River"
         },
         {
-          "name": "Andaman Sea",
+          "name": "Heinze Islands",
           "disambiguation_note": null,
-          "localisation_stem": "Andaman Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Natural landmark bordering Mergui.",
+          "localisation_stem": "Heinze",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Coastal island cluster lying along the northern Tenasserim littoral above Mergui.",
           "language_variants": [
             {
-              "form": "Myanma Pinle",
+              "form": "Heinze Kyun",
               "native_script": null,
               "language": "Burmese",
               "language_code": "mya",
-              "notes": "Burmese maritime designation"
-            },
-            {
-              "form": "Thale Andaman",
-              "native_script": null,
-              "language": "Thai",
-              "language_code": "tha",
-              "notes": "Thai name"
+              "notes": "Burmese island name"
             }
           ],
-          "earliest_attestation_year": 150,
-          "earliest_attestation_note": "c. 2nd century CE (Ptolemy's 'Agathou Daimonos' / Bay of Bengal eastern sea)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate offshore archipelago of northern Tanintharyi.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea of the Indian Ocean bordering Lower Myanmar, Tenasserim, and the Kra Isthmus.",
-          "source_url": "https://en.wikipedia.org/wiki/Andaman_Sea"
+          "etymology_notes": "Small coastal island group off the mouth of the Heinze River.",
+          "source_url": "https://en.wikipedia.org/wiki/Heinze_Islands"
         }
       ]
     },
@@ -7703,38 +7689,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mon_people"
         },
         {
-          "name": "Ye River",
+          "name": "Bilauktaung",
           "disambiguation_note": null,
-          "localisation_stem": "Ye",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Thanbyuzayat.",
+          "localisation_stem": "Bilauktaung",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Rugged forested range rising inland east of Thanbyuzayat along the Tenasserim spine.",
           "language_variants": [
             {
-              "form": "Ye",
+              "form": "Bilauktaung",
               "native_script": null,
               "language": "Burmese",
               "language_code": "mya",
-              "notes": "Burmese hydronym"
-            },
-            {
-              "form": "Re",
-              "native_script": null,
-              "language": "Mon",
-              "language_code": "mnw",
-              "notes": "Mon hydronym"
+              "notes": "Burmese mountain range name"
             }
           ],
-          "earliest_attestation_year": 1400,
-          "earliest_attestation_note": "c. 15th century CE (Hanthawaddy Mon chronicles)",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 16th century CE (Burmese-Ayutthaya campaigns across the Tenasserim passes)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Short coastal river of southern Mon State flowing into the Andaman Sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Ye_River"
+          "etymology_notes": "Highest subrange of the Tenasserim Mountains bordering Mon State and Tanintharyi.",
+          "source_url": "https://en.wikipedia.org/wiki/Bilauktaung"
         },
         {
           "name": "Three Pagodas Pass",
@@ -7872,38 +7851,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Tenasserim_Hills"
         },
         {
-          "name": "Andaman Sea",
+          "name": "Myinmoletkat Taung",
           "disambiguation_note": null,
-          "localisation_stem": "Andaman Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Natural landmark bordering Dawei.",
+          "localisation_stem": "Myinmoletkat Taung",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Highest peak of the Tanintharyi region rising in the Bilauktaung southeast of Dawei.",
           "language_variants": [
             {
-              "form": "Myanma Pinle",
+              "form": "Myinmoletkat Taung",
               "native_script": null,
               "language": "Burmese",
               "language_code": "mya",
-              "notes": "Burmese maritime designation"
-            },
-            {
-              "form": "Thale Andaman",
-              "native_script": null,
-              "language": "Thai",
-              "language_code": "tha",
-              "notes": "Thai name"
+              "notes": "Burmese mountain name"
             }
           ],
-          "earliest_attestation_year": 150,
-          "earliest_attestation_note": "c. 2nd century CE (Ptolemy's 'Agathou Daimonos' / Bay of Bengal eastern sea)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate summit of the northern Bilauktaung range.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea of the Indian Ocean bordering Lower Myanmar, Tenasserim, and the Kra Isthmus.",
-          "source_url": "https://en.wikipedia.org/wiki/Andaman_Sea"
+          "etymology_notes": "Ultra-prominent 2,072-meter peak dominating the Tenasserim uplands.",
+          "source_url": "https://en.wikipedia.org/wiki/Myinmoletkat_Taung"
         }
       ]
     },
@@ -8007,38 +7979,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Ataran_River"
         },
         {
-          "name": "Andaman Sea",
+          "name": "Bilu Island",
           "disambiguation_note": null,
-          "localisation_stem": "Andaman Sea",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Natural landmark bordering Ye.",
+          "localisation_stem": "Bilu",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Large estuarine island at the mouth of the Salween directly north of Ye.",
           "language_variants": [
             {
-              "form": "Myanma Pinle",
+              "form": "Bilu Kyun",
               "native_script": null,
               "language": "Burmese",
               "language_code": "mya",
-              "notes": "Burmese maritime designation"
+              "notes": "Burmese island name"
             },
             {
-              "form": "Thale Andaman",
+              "form": "Tka' Kamaung",
               "native_script": null,
-              "language": "Thai",
-              "language_code": "tha",
-              "notes": "Thai name"
+              "language": "Mon",
+              "language_code": "mnw",
+              "notes": "Mon island name"
             }
           ],
-          "earliest_attestation_year": 150,
-          "earliest_attestation_note": "c. 2nd century CE (Ptolemy's 'Agathou Daimonos' / Bay of Bengal eastern sea)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1300,
+          "earliest_attestation_note": "c. 14th century CE (Martaban-Mawlamyine estuary records)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea of the Indian Ocean bordering Lower Myanmar, Tenasserim, and the Kra Isthmus.",
-          "source_url": "https://en.wikipedia.org/wiki/Andaman_Sea"
+          "etymology_notes": "Populous Mon-speaking island guarding the Salween estuary near Mawlamyine.",
+          "source_url": "https://en.wikipedia.org/wiki/Bilu_Island"
         }
       ]
     },
@@ -8128,38 +8100,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Naf_River"
         },
         {
-          "name": "Bay of Bengal",
+          "name": "Moheshkhali Island",
           "disambiguation_note": null,
-          "localisation_stem": "Bay of Bengal",
-          "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Natural landmark bordering Ramu.",
+          "localisation_stem": "Moheshkhali",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Hilly coastal island lying immediately off the coast northwest of Ramu.",
           "language_variants": [
             {
-              "form": "Banggala Pinle",
+              "form": "Maheshkhali",
               "native_script": null,
-              "language": "Burmese",
-              "language_code": "mya",
-              "notes": "Burmese name"
-            },
-            {
-              "form": "Mahodadhi",
-              "native_script": null,
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Classical Sanskrit name"
+              "language": "Bengali",
+              "language_code": "ben",
+              "notes": "Bengali island name"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 300 BCE (Attested as Purva-samudra / Mahodadhi in Sanskrit and Gangeticus Sinus in Greek)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate coastal island of southeastern Bengal-Arakan.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Northeastern arm of the Indian Ocean bordering the Arakan littoral.",
-          "source_url": "https://en.wikipedia.org/wiki/Bay_of_Bengal"
+          "etymology_notes": "Only hilly island along the Bangladesh coast, noted for the ancient Adinath site.",
+          "source_url": "https://en.wikipedia.org/wiki/Moheshkhali_Island"
         }
       ]
     },
@@ -8249,38 +8214,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Sangu_River"
         },
         {
-          "name": "Bay of Bengal",
+          "name": "Karnaphuli River",
           "disambiguation_note": null,
-          "localisation_stem": "Bay of Bengal",
+          "localisation_stem": "Karnaphuli",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Natural landmark bordering Dianga.",
+          "feature_subtype": "river",
+          "relationship": "Principal river emptying directly north of the historic Dianga harbor.",
           "language_variants": [
             {
-              "form": "Banggala Pinle",
-              "native_script": null,
-              "language": "Burmese",
-              "language_code": "mya",
-              "notes": "Burmese name"
-            },
-            {
-              "form": "Mahodadhi",
-              "native_script": null,
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Classical Sanskrit name"
+              "form": "Karnaphuli Nadi",
+              "native_script": "কর্ণফুলী নদী",
+              "language": "Bengali",
+              "language_code": "ben",
+              "notes": "Bengali hydronym"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 300 BCE (Attested as Purva-samudra / Mahodadhi in Sanskrit and Gangeticus Sinus in Greek)",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Bengal-Arakanese coastal trade)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Northeastern arm of the Indian Ocean bordering the Arakan littoral.",
-          "source_url": "https://en.wikipedia.org/wiki/Bay_of_Bengal"
+          "etymology_notes": "Largest river of the Chittagong Hill Tracts, flowing southwest past Dianga.",
+          "source_url": "https://en.wikipedia.org/wiki/Karnaphuli_River"
         }
       ]
     },
@@ -8498,38 +8456,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Cheduba_Island"
         },
         {
-          "name": "Bay of Bengal",
+          "name": "Kaladan River",
           "disambiguation_note": null,
-          "localisation_stem": "Bay of Bengal",
+          "localisation_stem": "Kaladan",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Natural landmark bordering Ramree.",
+          "feature_subtype": "river",
+          "relationship": "Major Arakanese river draining from the Chin Hills into the sea north of Ramree.",
           "language_variants": [
             {
-              "form": "Banggala Pinle",
-              "native_script": null,
+              "form": "Kaladan Myit",
+              "native_script": "ကုလားတန်မြစ်",
               "language": "Burmese",
               "language_code": "mya",
-              "notes": "Burmese name"
+              "notes": "Burmese hydronym"
             },
             {
-              "form": "Mahodadhi",
+              "form": "Kissapanadi",
               "native_script": null,
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Classical Sanskrit name"
+              "language": "Pali",
+              "language_code": "pli",
+              "notes": "Classical Arakanese Pali name"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 300 BCE (Attested as Purva-samudra / Mahodadhi in Sanskrit and Gangeticus Sinus in Greek)",
+          "earliest_attestation_year": 400,
+          "earliest_attestation_note": "c. 5th century CE (Dhanyawadi and Vesali records as Kacchapanadi)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Northeastern arm of the Indian Ocean bordering the Arakan littoral.",
-          "source_url": "https://en.wikipedia.org/wiki/Bay_of_Bengal"
+          "etymology_notes": "Principal river of northern Arakan, historically known in Pali as Kissapanadi.",
+          "source_url": "https://en.wikipedia.org/wiki/Kaladan_River"
         }
       ]
     },
@@ -8626,38 +8584,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Arakan_Mountains"
         },
         {
-          "name": "Bay of Bengal",
+          "name": "Lemro River",
           "disambiguation_note": null,
-          "localisation_stem": "Bay of Bengal",
+          "localisation_stem": "Lemro",
           "category": "hydronym",
-          "feature_subtype": "bay",
-          "relationship": "Natural landmark bordering An.",
+          "feature_subtype": "river",
+          "relationship": "Historic river of Rakhine State flowing parallel to the Kaladan north of An.",
           "language_variants": [
             {
-              "form": "Banggala Pinle",
-              "native_script": null,
+              "form": "Laymro Myit",
+              "native_script": "လေးမြို့မြစ်",
               "language": "Burmese",
               "language_code": "mya",
-              "notes": "Burmese name"
-            },
-            {
-              "form": "Mahodadhi",
-              "native_script": null,
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Classical Sanskrit name"
+              "notes": "Burmese hydronym meaning Four Cities River"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 300 BCE (Attested as Purva-samudra / Mahodadhi in Sanskrit and Gangeticus Sinus in Greek)",
+          "earliest_attestation_year": 800,
+          "earliest_attestation_note": "Late 1st millennium CE (associated with the early Arakanese Laymro riverine cities)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Northeastern arm of the Indian Ocean bordering the Arakan littoral.",
-          "source_url": "https://en.wikipedia.org/wiki/Bay_of_Bengal"
+          "etymology_notes": "Major Arakan river draining the Chin foothills through the historical Laymro valley. Onomastic note: Burmese hydronym meaning Four Cities River ('Laymro Myit').",
+          "source_url": "https://en.wikipedia.org/wiki/Lemro_River"
         }
       ]
     },
@@ -8970,8 +8921,8 @@
               "notes": "Rakhine/Burmese hydronym ('Four Cities River')"
             }
           ],
-          "earliest_attestation_year": 818,
-          "earliest_attestation_note": "818 CE (Lemro-period cities of Arakan)",
+          "earliest_attestation_year": 800,
+          "earliest_attestation_note": "Late 1st millennium CE (associated with the early Arakanese Laymro riverine cities)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -9125,8 +9076,8 @@
               "notes": "Rakhine/Burmese hydronym ('Four Cities River')"
             }
           ],
-          "earliest_attestation_year": 818,
-          "earliest_attestation_note": "818 CE (Lemro-period cities of Arakan)",
+          "earliest_attestation_year": 800,
+          "earliest_attestation_note": "Late 1st millennium CE (associated with the early Arakanese Laymro riverine cities)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -9253,8 +9204,8 @@
               "notes": "Rakhine/Burmese hydronym ('Four Cities River')"
             }
           ],
-          "earliest_attestation_year": 818,
-          "earliest_attestation_note": "818 CE (Lemro-period cities of Arakan)",
+          "earliest_attestation_year": 800,
+          "earliest_attestation_note": "Late 1st millennium CE (associated with the early Arakanese Laymro riverine cities)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -10035,8 +9986,8 @@
               "notes": "Chinese hydronym"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -10170,8 +10121,8 @@
               "notes": "Chinese hydronym"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -10305,8 +10256,8 @@
               "notes": "Chinese hydronym"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -10612,38 +10563,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Pa'O_people"
         },
         {
-          "name": "Inle Lake",
+          "name": "Nam Pang River",
           "disambiguation_note": null,
-          "localisation_stem": "Inle",
+          "localisation_stem": "Nam Pang",
           "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Situated on or along this feature near Laikha.",
+          "feature_subtype": "river",
+          "relationship": "Largest Shan tributary of the Salween, flowing east of Laikha across the plateau.",
           "language_variants": [
             {
-              "form": "Inle",
-              "native_script": null,
-              "language": "Burmese",
-              "language_code": "mya",
-              "notes": "Burmese name ('Four Villages Lake')"
-            },
-            {
-              "form": "Nong Hai",
+              "form": "Nam Pang",
               "native_script": null,
               "language": "Shan",
               "language_code": "shn",
               "notes": "Shan hydronym"
             }
           ],
-          "earliest_attestation_year": 1359,
-          "earliest_attestation_note": "1359 CE (foundation of Yawnghwe / Nyaungshwe)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate riverine artery of the central Shan Plateau.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Highland lake in the Shan Hills adjacent to Nyaungshwe (Yawnghwe).",
-          "source_url": "https://en.wikipedia.org/wiki/Inle_Lake"
+          "etymology_notes": "Major river of Shan State draining south through the plateau into the Salween.",
+          "source_url": "https://en.wikipedia.org/wiki/Nam_Pang_River"
         },
         {
           "name": "Shan Hills",
@@ -10890,9 +10834,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -11025,9 +10969,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -11160,9 +11104,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -11295,9 +11239,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -11423,9 +11367,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -11435,31 +11379,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Irrawaddy_River"
         },
         {
-          "name": "Arakan Mountains",
+          "name": "Yaw River",
           "disambiguation_note": null,
-          "localisation_stem": "Arakan",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Elevated landform overlooking Salin.",
+          "localisation_stem": "Yaw",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Western Dry Zone river flowing through the uplands immediately north of Salin.",
           "language_variants": [
             {
-              "form": "Rakhine Yoma",
+              "form": "Yaw Chaung",
               "native_script": null,
               "language": "Burmese",
               "language_code": "mya",
-              "notes": "Burmese/Rakhine name ('spine of Arakan')"
+              "notes": "Burmese hydronym"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan and Arakanese chronicles)",
+          "earliest_attestation_year": 1100,
+          "earliest_attestation_note": "c. 12th century CE (Pagan-era western Irrawaddy records)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "North-south mountain range separating the Arakan coast from the Irrawaddy basin.",
-          "source_url": "https://en.wikipedia.org/wiki/Arakan_Mountains"
+          "etymology_notes": "River descending from the Chin Hills across the Yaw valley into the Irrawaddy.",
+          "source_url": "https://en.wikipedia.org/wiki/Yaw_River"
         }
       ]
     },
@@ -11551,9 +11495,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -11679,9 +11623,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -11807,9 +11751,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -11819,38 +11763,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Irrawaddy_River"
         },
         {
-          "name": "Mount Popa",
+          "name": "Chindwin River",
           "disambiguation_note": null,
-          "localisation_stem": "Popa",
-          "category": "oronym",
-          "feature_subtype": "mountain",
-          "relationship": "Elevated landform overlooking Pagan.",
+          "localisation_stem": "Chindwin",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Largest tributary of the Irrawaddy, joining the main river just upstream of Pagan.",
           "language_variants": [
             {
-              "form": "Popa Taung",
+              "form": "Chindwin",
               "native_script": null,
               "language": "Burmese",
               "language_code": "mya",
-              "notes": "Burmese name"
+              "notes": "Burmese hydronym"
             },
             {
-              "form": "Puppha",
+              "form": "Nam Wan",
               "native_script": null,
-              "language": "Pali",
-              "language_code": "pli",
-              "notes": "Pali name meaning 'flower'"
+              "language": "Shan",
+              "language_code": "shn",
+              "notes": "Shan hydronym"
             }
           ],
-          "earliest_attestation_year": -442,
-          "earliest_attestation_note": "c. 442 BCE (traditional Burmese chronicle reference to the volcanic peak)",
+          "earliest_attestation_year": 700,
+          "earliest_attestation_note": "1st millennium CE (Pyu and early Upper Burma riverine corridors)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Extinct volcano in the Pegu Range southeast of Pagan, sacred in Burmese nat worship. Onomastic note: Pali name meaning 'flower' ('Puppha').",
-          "source_url": "https://en.wikipedia.org/wiki/Mount_Popa"
+          "etymology_notes": "Great western tributary of the Irrawaddy, whose Burmese name means hole of the Chin.",
+          "source_url": "https://en.wikipedia.org/wiki/Chindwin_River"
         }
       ]
     },
@@ -11942,9 +11886,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -12070,9 +12014,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -12198,9 +12142,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -12326,9 +12270,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -12338,31 +12282,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Irrawaddy_River"
         },
         {
-          "name": "Yaw River",
+          "name": "Mu River",
           "disambiguation_note": null,
-          "localisation_stem": "Yaw",
+          "localisation_stem": "Mu",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Nyaung U.",
+          "relationship": "Major Dry Zone tributary joining the Irrawaddy upstream of Nyaung U.",
           "language_variants": [
             {
-              "form": "Yaw",
-              "native_script": null,
+              "form": "Mu Myit",
+              "native_script": "မူးမြစ်",
               "language": "Burmese",
               "language_code": "mya",
               "notes": "Burmese hydronym"
             }
           ],
-          "earliest_attestation_year": 1100,
-          "earliest_attestation_note": "c. 12th century CE (Pagan-era western Irrawaddy records)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 700,
+          "earliest_attestation_note": "1st millennium CE (Pyu-era agricultural and irrigation works along the Mu valley)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Western tributary of the Irrawaddy flowing from the Chin Hills past Myitche.",
-          "source_url": "https://en.wikipedia.org/wiki/Yaw_River"
+          "etymology_notes": "Major Dry Zone river flowing south between the Chindwin and Irrawaddy.",
+          "source_url": "https://en.wikipedia.org/wiki/Mu_River_(Irrawaddy)"
         }
       ]
     },
@@ -12454,9 +12398,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -12582,9 +12526,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -12609,9 +12553,9 @@
               "notes": "Burmese hydronym"
             }
           ],
-          "earliest_attestation_year": 1050,
-          "earliest_attestation_note": "c. 11th century CE (Pagan-era Mu valley irrigation records)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 700,
+          "earliest_attestation_note": "1st millennium CE (Pyu-era agricultural and irrigation works along the Mu valley)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -12710,9 +12654,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -12737,9 +12681,9 @@
               "notes": "Burmese hydronym"
             }
           ],
-          "earliest_attestation_year": 1050,
-          "earliest_attestation_note": "c. 11th century CE (Pagan-era Mu valley irrigation records)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 700,
+          "earliest_attestation_note": "1st millennium CE (Pyu-era agricultural and irrigation works along the Mu valley)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -13605,38 +13549,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mon_people"
         },
         {
-          "name": "Yangon River",
+          "name": "Irrawaddy Delta",
           "disambiguation_note": null,
-          "localisation_stem": "Yangon",
-          "category": "hydronym",
-          "feature_subtype": "estuary",
-          "relationship": "Watercourse flowing near Bogale.",
+          "localisation_stem": "Irrawaddy Delta",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Vast alluvial deltaic plain centered around Bogale and Lower Myanmar.",
           "language_variants": [
             {
-              "form": "Yangon",
+              "form": "Ayeyarwady Myitwahkyunpaw",
               "native_script": null,
               "language": "Burmese",
               "language_code": "mya",
-              "notes": "Burmese hydronym"
-            },
-            {
-              "form": "Dagon",
-              "native_script": null,
-              "language": "Mon",
-              "language_code": "mnw",
-              "notes": "Pre-1755 Mon name for the estuary settlement"
+              "notes": "Burmese geographic designation"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Mon-era Dagon and Syriam records)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 1st millennium CE (Mon-Pyu delta settlements and coastal trade ports)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Estuary formed by the Bago and Myitmaka rivers flowing past Dagon and Syriam to the Gulf of Martaban.",
-          "source_url": "https://en.wikipedia.org/wiki/Yangon_River"
+          "etymology_notes": "Low-lying fan of tidal rivers and mangrove channels where the Irrawaddy meets the sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Irrawaddy_Delta"
         },
         {
           "name": "Gulf of Martaban",
@@ -13789,9 +13726,9 @@
               "notes": "Burmese name"
             }
           ],
-          "earliest_attestation_year": 1100,
-          "earliest_attestation_note": "c. 12th century CE (Mon Kusumi and Dagon delta ports)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 1st millennium CE (Mon-Pyu delta settlements and coastal trade ports)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -13917,9 +13854,9 @@
               "notes": "Burmese name"
             }
           ],
-          "earliest_attestation_year": 1100,
-          "earliest_attestation_note": "c. 12th century CE (Mon Kusumi and Dagon delta ports)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 1st millennium CE (Mon-Pyu delta settlements and coastal trade ports)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -14045,9 +13982,9 @@
               "notes": "Burmese name"
             }
           ],
-          "earliest_attestation_year": 1100,
-          "earliest_attestation_note": "c. 12th century CE (Mon Kusumi and Dagon delta ports)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 1st millennium CE (Mon-Pyu delta settlements and coastal trade ports)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -14259,38 +14196,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mon_people"
         },
         {
-          "name": "Sittaung River",
+          "name": "Bilin River",
           "disambiguation_note": null,
-          "localisation_stem": "Sittaung",
+          "localisation_stem": "Bilin",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Shwegyin.",
+          "relationship": "Coastal river draining the Thaton-Mon uplands immediately southeast of Shwegyin.",
           "language_variants": [
             {
-              "form": "Sittaung",
+              "form": "Bilin Myit",
               "native_script": null,
               "language": "Burmese",
               "language_code": "mya",
               "notes": "Burmese hydronym"
-            },
-            {
-              "form": "Sittang",
-              "native_script": null,
-              "language": "Mon",
-              "language_code": "mnw",
-              "notes": "Mon historical form"
             }
           ],
-          "earliest_attestation_year": 1300,
-          "earliest_attestation_note": "c. 14th century CE (Toungoo and Hanthawaddy chronicles)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate river of the Mon coastal plain.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River rising near Yamethin and flowing south past Toungoo and Shwegyin into the Gulf of Martaban.",
-          "source_url": "https://en.wikipedia.org/wiki/Sittaung_River"
+          "etymology_notes": "River running south between the Sittaung and Salween basins through historic Suvannabhumi.",
+          "source_url": "https://en.wikipedia.org/wiki/Bilin_River"
         },
         {
           "name": "Gulf of Martaban",
@@ -14907,9 +14837,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -14934,9 +14864,9 @@
               "notes": "Burmese name"
             }
           ],
-          "earliest_attestation_year": 1100,
-          "earliest_attestation_note": "c. 12th century CE (Mon Kusumi and Dagon delta ports)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 1st millennium CE (Mon-Pyu delta settlements and coastal trade ports)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -15035,9 +14965,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -15062,9 +14992,9 @@
               "notes": "Burmese name"
             }
           ],
-          "earliest_attestation_year": 1100,
-          "earliest_attestation_note": "c. 12th century CE (Mon Kusumi and Dagon delta ports)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "c. 1st millennium CE (Mon-Pyu delta settlements and coastal trade ports)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -15163,9 +15093,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -15291,9 +15221,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -15419,9 +15349,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -15547,9 +15477,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -15675,9 +15605,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -16187,9 +16117,9 @@
               "notes": "Shan hydronym"
             }
           ],
-          "earliest_attestation_year": 1100,
-          "earliest_attestation_note": "c. 12th century CE (Pagan-era Old Burmese references)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 700,
+          "earliest_attestation_note": "1st millennium CE (Pyu and early Upper Burma riverine corridors)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -16214,9 +16144,9 @@
               "notes": "Burmese hydronym"
             }
           ],
-          "earliest_attestation_year": 1050,
-          "earliest_attestation_note": "c. 11th century CE (Pagan-era Mu valley irrigation records)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 700,
+          "earliest_attestation_note": "1st millennium CE (Pyu-era agricultural and irrigation works along the Mu valley)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -16315,9 +16245,9 @@
               "notes": "Shan hydronym"
             }
           ],
-          "earliest_attestation_year": 1100,
-          "earliest_attestation_note": "c. 12th century CE (Pagan-era Old Burmese references)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 700,
+          "earliest_attestation_note": "1st millennium CE (Pyu and early Upper Burma riverine corridors)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -16342,9 +16272,9 @@
               "notes": "Burmese hydronym"
             }
           ],
-          "earliest_attestation_year": 1050,
-          "earliest_attestation_note": "c. 11th century CE (Pagan-era Mu valley irrigation records)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 700,
+          "earliest_attestation_note": "1st millennium CE (Pyu-era agricultural and irrigation works along the Mu valley)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -16380,31 +16310,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Chin people",
+          "name": "Meitei people",
           "disambiguation_note": null,
-          "localisation_stem": "Chin",
+          "localisation_stem": "Meitei",
           "category": "tribe",
           "feature_subtype": "tibeto_burman_people",
-          "relationship": "Historical group inhabiting the Kale area.",
+          "relationship": "Tibeto-Burman people of Manipur historically active across the Kale-Kabaw valley.",
           "language_variants": [
             {
-              "form": "Chin",
+              "form": "Meitei",
+              "native_script": "ꯃꯩꯇꯩ",
+              "language": "Meitei",
+              "language_code": "mni",
+              "notes": "Endonym in Meetei Mayek script"
+            },
+            {
+              "form": "Kathe",
               "native_script": null,
               "language": "Burmese",
               "language_code": "mya",
-              "notes": "Burmese ethnonym attested in Pagan-era inscriptions; also 'Zo' — Widely shared indigenous self-designation."
+              "notes": "Historical Burmese exonym"
             }
           ],
-          "earliest_attestation_year": 1100,
-          "earliest_attestation_note": "c. 12th century CE (Pagan-era Old Burmese inscriptions)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 33,
+          "earliest_attestation_note": "33 CE (Traditional founding of the Ningthouja dynasty in the Cheitharol Kumbaba)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tibeto-Burman highland peoples of the western Myanmar hills and Chindwin-Irrawaddy watershed.",
-          "source_url": "https://en.wikipedia.org/wiki/Chin_people"
+          "etymology_notes": "Tibeto-Burman people of the Imphal and Kabaw borderlands known in Burmese chronicles as Kathe. Onomastic note: Meitei 'Meitei' (Endonym in Meetei Mayek script); Burmese 'Kathe' (Historical Burmese exonym).",
+          "source_url": "https://en.wikipedia.org/wiki/Meitei_people"
         },
         {
           "name": "Myittha River",
@@ -16657,9 +16594,9 @@
               "notes": "Shan hydronym"
             }
           ],
-          "earliest_attestation_year": 1100,
-          "earliest_attestation_note": "c. 12th century CE (Pagan-era Old Burmese references)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 700,
+          "earliest_attestation_note": "1st millennium CE (Pyu and early Upper Burma riverine corridors)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -16785,9 +16722,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -16920,9 +16857,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -17055,9 +16992,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -17190,9 +17127,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -17332,9 +17269,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -17474,9 +17411,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -17616,9 +17553,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -17628,45 +17565,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Irrawaddy_River"
         },
         {
-          "name": "Shweli River",
+          "name": "Mu River",
           "disambiguation_note": null,
-          "localisation_stem": "Shweli",
+          "localisation_stem": "Mu",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Myedu.",
+          "relationship": "Principal river flowing directly south past Myedu through the central Sagaing plain.",
           "language_variants": [
             {
-              "form": "Shweli",
-              "native_script": null,
+              "form": "Mu Myit",
+              "native_script": "မူးမြစ်",
               "language": "Burmese",
               "language_code": "mya",
               "notes": "Burmese hydronym"
-            },
-            {
-              "form": "Nam Mao",
-              "native_script": null,
-              "language": "Shan",
-              "language_code": "shn",
-              "notes": "Shan hydronym (Mong Mao)"
-            },
-            {
-              "form": "Ruili Jiang",
-              "native_script": null,
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese hydronym"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "c. 13th century CE (Mong Mao and Tagaung chronicles)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 700,
+          "earliest_attestation_note": "1st millennium CE (Pyu-era agricultural and irrigation works along the Mu valley)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major eastern tributary of the Irrawaddy flowing from Yunnan through Mongmit to Tagaung.",
-          "source_url": "https://en.wikipedia.org/wiki/Shweli_River"
+          "etymology_notes": "Major tributary of the Irrawaddy rising near Wuntho and watering the Myedu plain.",
+          "source_url": "https://en.wikipedia.org/wiki/Mu_River_(Irrawaddy)"
         }
       ]
     },
@@ -17792,9 +17715,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -17927,9 +17850,9 @@
               "notes": "Sanskrit name meaning 'elephant river' or 'giver of water'"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 11th century CE (Pagan inscriptions; classical Sanskrit Airavati)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -18545,31 +18468,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Indawgyi_Lake"
         },
         {
-          "name": "Uyu River",
+          "name": "Kumon Range",
           "disambiguation_note": null,
-          "localisation_stem": "Uyu",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Shwegu.",
+          "localisation_stem": "Kumon",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Major north-south mountain range of Kachin State flanking the Mogaung and Shwegu watersheds.",
           "language_variants": [
             {
-              "form": "Uyu",
+              "form": "Kumon Taungdan",
               "native_script": null,
               "language": "Burmese",
               "language_code": "mya",
-              "notes": "Burmese hydronym"
+              "notes": "Burmese oronym"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 16th century CE (upper Chindwin-Hpakant jade-belt records)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate highland spine of northern Myanmar.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Eastern tributary of the Chindwin River draining the Hpakant hills.",
-          "source_url": "https://en.wikipedia.org/wiki/Uyu_River"
+          "etymology_notes": "Kachin Hills subrange separating the Chindwin headwaters from the upper Irrawaddy.",
+          "source_url": "https://en.wikipedia.org/wiki/Kumon_Range"
         }
       ]
     },
@@ -18789,9 +18712,9 @@
               "notes": "Shan hydronym"
             }
           ],
-          "earliest_attestation_year": 1100,
-          "earliest_attestation_note": "c. 12th century CE (Pagan-era Old Burmese references)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 700,
+          "earliest_attestation_note": "1st millennium CE (Pyu and early Upper Burma riverine corridors)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -19173,8 +19096,8 @@
               "notes": "Chinese hydronym"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -19238,38 +19161,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Lisu people",
+          "name": "Jingpo people",
           "disambiguation_note": null,
-          "localisation_stem": "Lisu",
+          "localisation_stem": "Jingpo",
           "category": "tribe",
           "feature_subtype": "tibeto_burman_people",
-          "relationship": "Historical group inhabiting the Chihpwi area.",
+          "relationship": "Primary Tibeto-Burman people of the Kachin Hills inhabiting the Chihpwi valley.",
           "language_variants": [
             {
-              "form": "Lisu",
-              "native_script": null,
+              "form": "Jinghpaw",
+              "native_script": "ဂျိန်းဖော",
               "language": "Burmese",
               "language_code": "mya",
-              "notes": "Burmese ethnonym"
+              "notes": "Burmese transcription"
             },
             {
-              "form": "Lisu",
-              "native_script": null,
+              "form": "Jǐngpōzú",
+              "native_script": "景颇族",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese ethnonym (Lisuzu)"
+              "notes": "Chinese ethnonym"
             }
           ],
-          "earliest_attestation_year": 1400,
-          "earliest_attestation_note": "c. 15th century CE (Ming-era Yunnan records)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Tibeto-Burman core group of the Kachin confederation.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tibeto-Burman Loloish people of the upper Salween (Nu) and N'Mai valleys.",
-          "source_url": "https://en.wikipedia.org/wiki/Lisu_people"
+          "etymology_notes": "Largest Kachin ethnolinguistic group of northern Myanmar and western Yunnan.",
+          "source_url": "https://en.wikipedia.org/wiki/Jingpo_people"
         },
         {
           "name": "N'Mai River",
@@ -19352,38 +19275,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Lisu people",
+          "name": "Nung Rawang",
           "disambiguation_note": null,
-          "localisation_stem": "Lisu",
+          "localisation_stem": "Nung Rawang",
           "category": "tribe",
           "feature_subtype": "tibeto_burman_people",
-          "relationship": "Historical group inhabiting the Sawlaw area.",
+          "relationship": "Indigenous Tibeto-Burman mountain people inhabiting northern Kachin valleys near Sawlaw.",
           "language_variants": [
             {
-              "form": "Lisu",
+              "form": "Rawang",
               "native_script": null,
-              "language": "Burmese",
-              "language_code": "mya",
-              "notes": "Burmese ethnonym"
+              "language": "Rawang",
+              "language_code": "raw",
+              "notes": "Endonym"
             },
             {
-              "form": "Lisu",
+              "form": "Rùwàng",
               "native_script": null,
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese ethnonym (Lisuzu)"
+              "notes": "Chinese transcription"
             }
           ],
-          "earliest_attestation_year": 1400,
-          "earliest_attestation_note": "c. 15th century CE (Ming-era Yunnan records)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Tibeto-Burman group of far northern Myanmar and Nujiang.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tibeto-Burman Loloish people of the upper Salween (Nu) and N'Mai valleys.",
-          "source_url": "https://en.wikipedia.org/wiki/Lisu_people"
+          "etymology_notes": "Upland Tibeto-Burman people speaking Nungish languages of the N'Mai and upper Salween basins. Onomastic note: Rawang 'Rawang' (Endonym).",
+          "source_url": "https://en.wikipedia.org/wiki/Nung_Rawang"
         },
         {
           "name": "N'Mai River",
@@ -19536,8 +19459,8 @@
               "notes": "Chinese hydronym"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -20068,8 +19991,8 @@
               "notes": "Chinese hydronym"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -20203,8 +20126,8 @@
               "notes": "Chinese hydronym"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -20338,8 +20261,8 @@
               "notes": "Chinese hydronym"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -20446,8 +20369,8 @@
               "notes": "Chinese hydronym"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -20511,38 +20434,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Wa people",
+          "name": "Lahu people",
           "disambiguation_note": null,
-          "localisation_stem": "Wa",
+          "localisation_stem": "Lahu",
           "category": "tribe",
-          "feature_subtype": "austroasiatic_people",
-          "relationship": "Historical group inhabiting the Gengma area.",
+          "feature_subtype": "tibeto_burman_people",
+          "relationship": "Indigenous Tibeto-Burman hill people inhabiting the Gengma and Lincang borderlands.",
           "language_variants": [
             {
-              "form": "Wa",
+              "form": "Ladhof",
               "native_script": null,
-              "language": "Burmese",
-              "language_code": "mya",
-              "notes": "Burmese ethnonym"
+              "language": "Lahu",
+              "language_code": "lhu",
+              "notes": "Lahu endonym"
             },
             {
-              "form": "Wa",
-              "native_script": null,
+              "form": "Lāhùzú",
+              "native_script": "拉祜族",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese ethnonym (Wazu)"
+              "notes": "Chinese ethnonym"
             }
           ],
-          "earliest_attestation_year": 1400,
-          "earliest_attestation_note": "c. 15th century CE (Ming-era Yunnan frontier records)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Tibeto-Burman highland group of southwestern Yunnan.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Austroasiatic Palaungic people of the Salween-Mekong watershed between Shan State and Yunnan.",
-          "source_url": "https://en.wikipedia.org/wiki/Wa_people"
+          "etymology_notes": "Lolo-Burmese speaking mountain people native to the Lancang-Salween divide. Onomastic note: Lahu endonym ('Ladhof').",
+          "source_url": "https://en.wikipedia.org/wiki/Lahu_people"
         },
         {
           "name": "Salween River",
@@ -20574,8 +20497,8 @@
               "notes": "Chinese hydronym"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -20639,38 +20562,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Wa people",
+          "name": "Blang people",
           "disambiguation_note": null,
-          "localisation_stem": "Wa",
+          "localisation_stem": "Blang",
           "category": "tribe",
           "feature_subtype": "austroasiatic_people",
-          "relationship": "Historical group inhabiting the Lincang area.",
+          "relationship": "Indigenous Austroasiatic Palaungic people inhabiting the Lincang and Shuangjiang hills.",
           "language_variants": [
             {
-              "form": "Wa",
+              "form": "Plang",
               "native_script": null,
-              "language": "Burmese",
-              "language_code": "mya",
-              "notes": "Burmese ethnonym"
+              "language": "Blang",
+              "language_code": "blr",
+              "notes": "Blang autonym"
             },
             {
-              "form": "Wa",
-              "native_script": null,
+              "form": "Bùlǎngzú",
+              "native_script": "布朗族",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese ethnonym (Wazu)"
+              "notes": "Chinese ethnonym"
             }
           ],
-          "earliest_attestation_year": 1400,
-          "earliest_attestation_note": "c. 15th century CE (Ming-era Yunnan frontier records)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Austroasiatic highland group of southwestern Yunnan.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Austroasiatic Palaungic people of the Salween-Mekong watershed between Shan State and Yunnan.",
-          "source_url": "https://en.wikipedia.org/wiki/Wa_people"
+          "etymology_notes": "Mon-Khmer Palaungic people closely related to the Wa of the upper Mekong-Salween hills.",
+          "source_url": "https://en.wikipedia.org/wiki/Bulang_people"
         },
         {
           "name": "Salween River",
@@ -20702,8 +20625,8 @@
               "notes": "Chinese hydronym"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -20830,8 +20753,8 @@
               "notes": "Chinese hydronym"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -20958,8 +20881,8 @@
               "notes": "Chinese hydronym"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -21233,31 +21156,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Bago_River"
         },
         {
-          "name": "Pegu Range",
+          "name": "Irrawaddy River",
           "disambiguation_note": null,
-          "localisation_stem": "Pegu",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Elevated landform overlooking Tharrawaddy.",
+          "localisation_stem": "Irrawaddy",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Great river flanking the western margin of the Tharrawaddy plain.",
           "language_variants": [
             {
-              "form": "Bago Yoma",
-              "native_script": null,
+              "form": "Ayeyarwady",
+              "native_script": "ဧရာဝတီမြစ်",
               "language": "Burmese",
               "language_code": "mya",
-              "notes": "Burmese name ('spine of Bago')"
+              "notes": "Burmese hydronym"
+            },
+            {
+              "form": "Airavati",
+              "native_script": null,
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Classical Sanskrit name"
             }
           ],
-          "earliest_attestation_year": 1100,
-          "earliest_attestation_note": "c. 12th century CE (Pagan and Toungoo-era records)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 100,
+          "earliest_attestation_note": "2nd century CE (attested in Pyu-era and classical Indian/Ptolemaic geography)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Low north-south mountain range dividing the Irrawaddy and Sittaung river basins.",
-          "source_url": "https://en.wikipedia.org/wiki/Pegu_Range"
+          "etymology_notes": "Principal river of Myanmar, derived from Sanskrit Airavati.",
+          "source_url": "https://en.wikipedia.org/wiki/Irrawaddy_River"
         }
       ]
     },
@@ -21361,31 +21291,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Sittaung_River"
         },
         {
-          "name": "Pegu Range",
+          "name": "Yangon River",
           "disambiguation_note": null,
-          "localisation_stem": "Pegu",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Elevated landform overlooking Phyu.",
+          "localisation_stem": "Yangon",
+          "category": "hydronym",
+          "feature_subtype": "estuary",
+          "relationship": "Tidal river channel draining the Lower Myanmar plain south of Phyu and Tharrawaddy.",
           "language_variants": [
             {
-              "form": "Bago Yoma",
-              "native_script": null,
+              "form": "Hlaing Myit",
+              "native_script": "လှိုင်မြစ်",
               "language": "Burmese",
               "language_code": "mya",
-              "notes": "Burmese name ('spine of Bago')"
+              "notes": "Burmese hydronym"
             }
           ],
-          "earliest_attestation_year": 1100,
-          "earliest_attestation_note": "c. 12th century CE (Pagan and Toungoo-era records)",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "c. 11th century CE (Mon-era Dagon and Syriam records)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Low north-south mountain range dividing the Irrawaddy and Sittaung river basins.",
-          "source_url": "https://en.wikipedia.org/wiki/Pegu_Range"
+          "etymology_notes": "Lower course of the Myitmaka-Hlaing system flowing past Yangon.",
+          "source_url": "https://en.wikipedia.org/wiki/Yangon_River"
         }
       ]
     },

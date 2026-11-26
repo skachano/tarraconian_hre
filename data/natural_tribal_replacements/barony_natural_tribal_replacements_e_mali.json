@@ -137,35 +137,43 @@
       "target_baronies_audited": 249,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 747,
-      "unique_replacement_names": 121,
-      "candidates_with_multilingual_variants": 321,
+      "unique_replacement_names": 126,
+      "candidates_with_multilingual_variants": 322,
       "wikipedia_source_attached": 747,
-      "unique_source_urls": 121,
+      "unique_source_urls": 126,
       "candidates_by_category": {
-        "choronym": 116,
-        "hydronym": 304,
-        "oronym": 61,
-        "topographic_feature": 17,
+        "choronym": 108,
+        "hydronym": 306,
+        "oronym": 69,
+        "topographic_feature": 15,
         "tribe": 249
       },
       "baronies_with_category": {
-        "has_choronym_candidate": 98,
-        "has_hydronym_candidate": 211,
-        "has_oronym_candidate": 58,
-        "has_topographic_feature_candidate": 16,
+        "has_choronym_candidate": 93,
+        "has_hydronym_candidate": 209,
+        "has_oronym_candidate": 64,
+        "has_topographic_feature_candidate": 14,
         "has_tribe_candidate": 249
       },
       "unique_language_codes": [
         "ara",
         "bam",
+        "ber",
         "dyo",
         "fra",
         "ful",
+        "gux",
         "khq",
+        "kno",
+        "lia",
         "mnk",
         "ses",
         "snk",
-        "wol"
+        "sus",
+        "tzm",
+        "wol",
+        "yor",
+        "zgh"
       ],
       "anachronism_type_counts": {
         "early_modern_foundation": 28,
@@ -176,17 +184,17 @@
         "unattested_indigenous_or_minor": 178
       },
       "candidates_by_attestation_basis": {
-        "attested_867_to_1066": 94,
-        "attested_pre_867": 175,
-        "indigenous_pre_literate": 478
+        "attested_867_to_1066": 88,
+        "attested_pre_867": 174,
+        "indigenous_pre_literate": 485
       },
       "bookmark_valid_candidates": {
-        "867": 653,
+        "867": 659,
         "1066": 747,
         "1178": 747
       },
       "baronies_with_867_valid_candidate": 249,
-      "unique_localisation_stems": 119
+      "unique_localisation_stems": 124
     }
   },
   "baronies": {
@@ -290,31 +298,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Senegal_River"
         },
         {
-          "name": "Karakoro River",
+          "name": "Tagant Plateau",
           "disambiguation_note": null,
-          "localisation_stem": "Karakoro",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Karakoro River, defining geographic feature of Guidimaka.",
+          "localisation_stem": "Tagant",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Mauritanian sandstone plateau rising north of Guidimaka.",
           "language_variants": [
             {
-              "form": "Karakoro",
+              "form": "Haḍabat Tikānt",
+              "native_script": "هضبة تكانت",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic Haḍbat Tagānt"
+            },
+            {
+              "form": "Tagant",
               "native_script": null,
-              "language": "Soninke",
-              "language_code": "snk",
-              "notes": "Soninke hydronym"
+              "language": "Standard Moroccan Tamazight",
+              "language_code": "zgh",
+              "notes": "Berber 'Forest / Thicket'"
             }
           ],
-          "earliest_attestation_year": 1400,
-          "earliest_attestation_note": "c. 1400 CE Soninke traditions of Galam and Guidimakha.",
+          "earliest_attestation_year": 1068,
+          "earliest_attestation_note": "Attested in 11th-century CE Arabic geographies (al-Bakri, 1068 CE) as Sanhaja plateau country.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Seasonal right-bank tributary of the Senegal River forming the Mauritania–Mali border.",
-          "source_url": "https://en.wikipedia.org/wiki/Karakoro_River"
+          "etymology_notes": "From Berber tagant ('forest'); sandstone plateau in central Mauritania south of the Adrar.",
+          "source_url": "https://en.wikipedia.org/wiki/Tagant_Plateau"
         }
       ]
     },
@@ -4055,31 +4070,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Aoukar"
         },
         {
-          "name": "Sahara",
+          "name": "Dhar Tichitt",
           "disambiguation_note": null,
-          "localisation_stem": "Sahara",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Sahara, defining geographic feature of Hodh-South.",
+          "localisation_stem": "Dhar Tichitt",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Sandstone cliff escarpment bounding the southern Hodh basin.",
           "language_variants": [
             {
-              "form": "Ṣaḥrāʾ",
-              "native_script": "صحراء",
+              "form": "Ẓahr an-Naʿma",
+              "native_script": "ظهر النعمة",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic ṣaḥrāʾ ('desert')"
+              "notes": "Arabic escarpment name"
             }
           ],
-          "earliest_attestation_year": -430,
-          "earliest_attestation_note": "c. 430 BCE classical accounts (Herodotus) and medieval Arabic geographies.",
+          "earliest_attestation_year": -2000,
+          "earliest_attestation_note": "Neolithic sandstone escarpment occupied by the Tichitt culture from c. 2000 BCE.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Arabic ṣaḥrāʾ ('great desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Sahara"
+          "etymology_notes": "Southern sandstone cliff system of the Hodh basin in southeastern Mauritania.",
+          "source_url": "https://en.wikipedia.org/wiki/Dhar_Tichitt"
         }
       ]
     },
@@ -4162,31 +4177,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Tagant_Plateau"
         },
         {
-          "name": "Sahara",
+          "name": "Dhar Tichitt",
           "disambiguation_note": null,
-          "localisation_stem": "Sahara",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Sahara, defining geographic feature of Hodh-West.",
+          "localisation_stem": "Dhar Tichitt",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Sandstone escarpment overlooking the Aoukar depression northwest of Hodh-West.",
           "language_variants": [
             {
-              "form": "Ṣaḥrāʾ",
-              "native_script": "صحراء",
+              "form": "Ẓahr Tīshīt",
+              "native_script": "ظهر تيشيت",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic ṣaḥrāʾ ('desert')"
+              "notes": "Hassaniya Arabic Ẓahr Tīshīt ('escarpment of Tichit')"
             }
           ],
-          "earliest_attestation_year": -430,
-          "earliest_attestation_note": "c. 430 BCE classical accounts (Herodotus) and medieval Arabic geographies.",
+          "earliest_attestation_year": -2000,
+          "earliest_attestation_note": "Neolithic sandstone escarpment occupied by the Tichitt culture from c. 2000 BCE.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Arabic ṣaḥrāʾ ('great desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Sahara"
+          "etymology_notes": "From Arabic ẓahr ('back/ridge/escarpment'), sandstone cliff line in southeastern Mauritania.",
+          "source_url": "https://en.wikipedia.org/wiki/Dhar_Tichitt"
         }
       ]
     },
@@ -4269,31 +4284,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Adrar_Plateau"
         },
         {
-          "name": "Sahara",
+          "name": "Aoukar",
           "disambiguation_note": null,
-          "localisation_stem": "Sahara",
+          "localisation_stem": "Aoukar",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Sahara, defining geographic feature of Tagant.",
+          "relationship": "Natural desert depression bordering the Tagant plateau to the southeast.",
           "language_variants": [
             {
-              "form": "Ṣaḥrāʾ",
-              "native_script": "صحراء",
+              "form": "Awkār",
+              "native_script": "أوكار",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic ṣaḥrāʾ ('desert')"
+              "notes": "Arabic Awkār"
             }
           ],
-          "earliest_attestation_year": -430,
-          "earliest_attestation_note": "c. 430 BCE classical accounts (Herodotus) and medieval Arabic geographies.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1068,
+          "earliest_attestation_note": "Attested as Awkar in 1068 CE by al-Bakri as the core region of the Ghana Empire.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Arabic ṣaḥrāʾ ('great desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Sahara"
+          "etymology_notes": "Natural geological depression in southern Mauritania between the Tagant and Hodh.",
+          "source_url": "https://en.wikipedia.org/wiki/Aoukar"
         }
       ]
     },
@@ -4483,31 +4498,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Aoukar"
         },
         {
-          "name": "Sahara",
+          "name": "Tagant Plateau",
           "disambiguation_note": null,
-          "localisation_stem": "Sahara",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Sahara, defining geographic feature of Tichitt.",
+          "localisation_stem": "Tagant",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Sandstone plateau bounding the Tichitt escarpment to the west.",
           "language_variants": [
             {
-              "form": "Ṣaḥrāʾ",
-              "native_script": "صحراء",
+              "form": "Haḍabat Tikānt",
+              "native_script": "هضبة تكانت",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic ṣaḥrāʾ ('desert')"
+              "notes": "Arabic Haḍbat Tagānt"
+            },
+            {
+              "form": "Tagant",
+              "native_script": null,
+              "language": "Standard Moroccan Tamazight",
+              "language_code": "zgh",
+              "notes": "Berber 'Forest / Thicket'"
             }
           ],
-          "earliest_attestation_year": -430,
-          "earliest_attestation_note": "c. 430 BCE classical accounts (Herodotus) and medieval Arabic geographies.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1068,
+          "earliest_attestation_note": "Attested in 11th-century CE Arabic geographies (al-Bakri, 1068 CE) as Sanhaja plateau country.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Arabic ṣaḥrāʾ ('great desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Sahara"
+          "etymology_notes": "From Berber tagant ('forest'); sandstone plateau in central Mauritania south of the Adrar.",
+          "source_url": "https://en.wikipedia.org/wiki/Tagant_Plateau"
         }
       ]
     },
@@ -4578,9 +4600,9 @@
               "notes": "Hassaniya Arabic Ẓahr Tīshīt ('escarpment of Tichit')"
             }
           ],
-          "earliest_attestation_year": null,
-          "earliest_attestation_note": "Prehistoric sandstone escarpment (inhabited c. 2000–500 BCE by the Tichitt tradition); no pre-18th-century CE written attestation of the compound name.",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -2000,
+          "earliest_attestation_note": "Neolithic sandstone escarpment occupied by the Tichitt culture from c. 2000 BCE.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -4847,9 +4869,9 @@
               "notes": "Hassaniya Arabic Ẓahr Tīshīt ('escarpment of Tichit')"
             }
           ],
-          "earliest_attestation_year": null,
-          "earliest_attestation_note": "Prehistoric sandstone escarpment (inhabited c. 2000–500 BCE by the Tichitt tradition); no pre-18th-century CE written attestation of the compound name.",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -2000,
+          "earliest_attestation_note": "Neolithic sandstone escarpment occupied by the Tichitt culture from c. 2000 BCE.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -4953,31 +4975,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Aoukar"
         },
         {
-          "name": "Sahara",
+          "name": "Tagant Plateau",
           "disambiguation_note": null,
-          "localisation_stem": "Sahara",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Sahara, defining geographic feature of Bou Khzama.",
+          "localisation_stem": "Tagant",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Sandstone plateau bounding the Aoukar depression to the northwest of Bou Khzama.",
           "language_variants": [
             {
-              "form": "Ṣaḥrāʾ",
-              "native_script": "صحراء",
+              "form": "Haḍabat Tikānt",
+              "native_script": "هضبة تكانت",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic ṣaḥrāʾ ('desert')"
+              "notes": "Arabic Haḍbat Tagānt"
+            },
+            {
+              "form": "Tagant",
+              "native_script": null,
+              "language": "Standard Moroccan Tamazight",
+              "language_code": "zgh",
+              "notes": "Berber 'Forest / Thicket'"
             }
           ],
-          "earliest_attestation_year": -430,
-          "earliest_attestation_note": "c. 430 BCE classical accounts (Herodotus) and medieval Arabic geographies.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1068,
+          "earliest_attestation_note": "Attested in 11th-century CE Arabic geographies (al-Bakri, 1068 CE) as Sanhaja plateau country.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Arabic ṣaḥrāʾ ('great desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Sahara"
+          "etymology_notes": "From Berber tagant ('forest'); sandstone plateau in central Mauritania south of the Adrar.",
+          "source_url": "https://en.wikipedia.org/wiki/Tagant_Plateau"
         }
       ]
     },
@@ -5632,9 +5661,9 @@
               "notes": "Hassaniya Arabic Ẓahr Tīshīt ('escarpment of Tichit')"
             }
           ],
-          "earliest_attestation_year": null,
-          "earliest_attestation_note": "Prehistoric sandstone escarpment (inhabited c. 2000–500 BCE by the Tichitt tradition); no pre-18th-century CE written attestation of the compound name.",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -2000,
+          "earliest_attestation_note": "Neolithic sandstone escarpment occupied by the Tichitt culture from c. 2000 BCE.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
@@ -5644,31 +5673,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Dhar_Tichitt"
         },
         {
-          "name": "Sahara",
+          "name": "Majabat al-Koubra",
           "disambiguation_note": null,
-          "localisation_stem": "Sahara",
+          "localisation_stem": "Majabat al-Koubra",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Sahara, defining geographic feature of Walata.",
+          "relationship": "Hyper-arid Saharan dune expanse stretching north of Walata.",
           "language_variants": [
             {
-              "form": "Ṣaḥrāʾ",
-              "native_script": "صحراء",
+              "form": "al-Majāba al-Kubrā",
+              "native_script": "المجابة الكبرى",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic ṣaḥrāʾ ('desert')"
+              "notes": "Arabic name meaning 'the Great Crossing'"
             }
           ],
-          "earliest_attestation_year": -430,
-          "earliest_attestation_note": "c. 430 BCE classical accounts (Herodotus) and medieval Arabic geographies.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1068,
+          "earliest_attestation_note": "Hyper-arid desert crossing north of Aoukar and Walata described in medieval Arabic geographies.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Arabic ṣaḥrāʾ ('great desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Sahara"
+          "etymology_notes": "From Arabic al-majāba al-kubrā; vast waterless dune expanse spanning eastern Mauritania and western Mali.",
+          "source_url": "https://en.wikipedia.org/wiki/Majabat_al-Koubra"
         }
       ]
     },
@@ -5765,31 +5794,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Aoukar"
         },
         {
-          "name": "Sahara",
+          "name": "Sahel",
           "disambiguation_note": null,
-          "localisation_stem": "Sahara",
+          "localisation_stem": "Sahel",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Sahara, defining geographic feature of Biru.",
+          "relationship": "Semi-arid transition belt bordering Biru and the southern Aoukar basin.",
           "language_variants": [
             {
-              "form": "Ṣaḥrāʾ",
-              "native_script": "صحراء",
+              "form": "Sāḥil",
+              "native_script": "ساحل",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic ṣaḥrāʾ ('desert')"
+              "notes": "Arabic sāḥil ('shore/border')"
             }
           ],
-          "earliest_attestation_year": -430,
-          "earliest_attestation_note": "c. 430 BCE classical accounts (Herodotus) and medieval Arabic geographies.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "c. 1000 CE medieval Arabic geographical usage.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Arabic ṣaḥrāʾ ('great desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Sahara"
+          "etymology_notes": "From Arabic sāḥil, the semi-arid transition belt between the Sahara and the Sudanian savanna.",
+          "source_url": "https://en.wikipedia.org/wiki/Sahel"
         }
       ]
     },
@@ -6222,31 +6251,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Gurma_people"
         },
         {
-          "name": "Sirba River",
+          "name": "Gorouol River",
           "disambiguation_note": null,
-          "localisation_stem": "Sirba",
+          "localisation_stem": "Gorouol",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Sirba River, major local natural feature serving Bilanga.",
+          "relationship": "Seasonal right-bank tributary of the Niger draining the plains north of Bilanga.",
           "language_variants": [
             {
-              "form": "Sirba",
+              "form": "Gorouol",
               "native_script": null,
               "language": "Koyraboro Senni Songhai",
               "language_code": "ses",
-              "notes": "Songhai-Gurma borderland river name"
+              "notes": "Regional Songhai river name"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Songhai-Zarma traditions of the middle Niger.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate seasonal tributary draining northern Burkina Faso into the Niger River.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tributary rising in eastern Burkina Faso and joining the Niger in western Niger.",
-          "source_url": "https://en.wikipedia.org/wiki/Sirba_River"
+          "etymology_notes": "Right-bank tributary of the Niger flowing through Oudalan and western Niger.",
+          "source_url": "https://en.wikipedia.org/wiki/Gorouol"
         },
         {
           "name": "Liptako",
@@ -6464,31 +6493,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Soninke_people"
         },
         {
-          "name": "Sirba River",
+          "name": "Tapoa River",
           "disambiguation_note": null,
-          "localisation_stem": "Sirba",
+          "localisation_stem": "Tapoa",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Sirba River, major local natural feature serving Tondikwarey.",
+          "relationship": "Right-bank Niger tributary flowing through Gourma south of Tondikwarey.",
           "language_variants": [
             {
-              "form": "Sirba",
+              "form": "Tapoa",
               "native_script": null,
               "language": "Koyraboro Senni Songhai",
               "language_code": "ses",
-              "notes": "Songhai-Gurma borderland river name"
+              "notes": "Regional Songhai-Zarma river name"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Songhai-Zarma traditions of the middle Niger.",
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE Zarma and Gourmantché borderland traditions.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tributary rising in eastern Burkina Faso and joining the Niger in western Niger.",
-          "source_url": "https://en.wikipedia.org/wiki/Sirba_River"
+          "etymology_notes": "Tributary flowing from eastern Burkina Faso into the Niger River south of Say.",
+          "source_url": "https://en.wikipedia.org/wiki/Tapoa_River"
         },
         {
           "name": "Niger River",
@@ -7739,31 +7768,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Tuareg_people"
         },
         {
-          "name": "Béli River",
+          "name": "Gorouol River",
           "disambiguation_note": null,
-          "localisation_stem": "Béli",
+          "localisation_stem": "Gorouol",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Béli River, major local natural feature serving Oursi.",
+          "relationship": "Seasonal river draining northern Burkina Faso past Oursi toward the Niger.",
           "language_variants": [
             {
-              "form": "Béli",
+              "form": "Gorouol",
               "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established West African French spelling"
+              "language": "Koyraboro Senni Songhai",
+              "language_code": "ses",
+              "notes": "Regional Songhai river name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Pre-colonial seasonal tributary of the Niger in Oudalan; no pre-18th-century CE written attestation.",
+          "earliest_attestation_note": "Pre-literate seasonal tributary draining northern Burkina Faso into the Niger River.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Seasonal Sahelian watercourse draining northern Burkina Faso toward the Niger River.",
-          "source_url": "https://en.wikipedia.org/wiki/B%C3%A9li_River"
+          "etymology_notes": "Right-bank tributary of the Niger flowing through Oudalan and western Niger.",
+          "source_url": "https://en.wikipedia.org/wiki/Gorouol"
         },
         {
           "name": "Liptako",
@@ -8271,31 +8300,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Niger_River"
         },
         {
-          "name": "Mount Hombori",
+          "name": "Inner Niger Delta",
           "disambiguation_note": null,
-          "localisation_stem": "Hombori",
-          "category": "oronym",
-          "feature_subtype": "mountain",
-          "relationship": "Mount Hombori, defining geographic feature of Zampia.",
+          "localisation_stem": "Inner Niger Delta",
+          "category": "hydronym",
+          "feature_subtype": "estuary",
+          "relationship": "Vast braided Niger floodplain lying immediately west of Zampia and Hombori.",
           "language_variants": [
             {
-              "form": "Hombori Tondo",
+              "form": "Delta intérieur du Niger",
               "native_script": null,
-              "language": "Koyraboro Senni Songhai",
-              "language_code": "ses",
-              "notes": "Songhai name ('Hombori rock/mountain')"
+              "language": "French",
+              "language_code": "fra",
+              "notes": "Established West African French name"
             }
           ],
-          "earliest_attestation_year": null,
-          "earliest_attestation_note": "Pre-colonial sandstone massif in the Niger bend; no pre-18th-century CE written attestation.",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -250,
+          "earliest_attestation_note": "c. 250 BCE urban settlement at Djenné-Djenno in the floodplain.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Highest peak in Mali (1,155 m), a flat-topped sandstone inselberg in the Gourma.",
-          "source_url": "https://en.wikipedia.org/wiki/Mount_Hombori"
+          "etymology_notes": "Vast inland floodplain of braided channels and lakes between Djenné and Timbuktu.",
+          "source_url": "https://en.wikipedia.org/wiki/Inner_Niger_Delta"
         }
       ]
     },
@@ -14197,31 +14226,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Geba_River"
         },
         {
-          "name": "Bijagós Islands",
+          "name": "Corubal River",
           "disambiguation_note": null,
-          "localisation_stem": "Bijagós",
-          "category": "topographic_feature",
-          "feature_subtype": "coastal_feature",
-          "relationship": "Bijagós Islands, defining geographic feature of Pepel.",
+          "localisation_stem": "Corubal",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major West African river draining from Fouta Djallon into the Geba estuary near Pepel.",
           "language_variants": [
             {
-              "form": "Archipel des Bijagos",
+              "form": "Koliba",
               "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established West African French name"
+              "language": "Mandinka",
+              "language_code": "mnk",
+              "notes": "Mandinka upper-course name"
             }
           ],
-          "earliest_attestation_year": 1456,
-          "earliest_attestation_note": "Attested in 15th-century CE Portuguese voyages (Alvise Cadamosto and Diogo Gomes, 1456 CE).",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE Portuguese coastal charts and Kaabu traditions.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Archipelago of ~88 islands off the Geba estuary in Guinea-Bissau.",
-          "source_url": "https://en.wikipedia.org/wiki/Bijag%C3%B3s_Islands"
+          "etymology_notes": "Major river flowing from Fouta Djallon into the Geba estuary.",
+          "source_url": "https://en.wikipedia.org/wiki/Corubal_River"
         }
       ]
     },
@@ -16050,38 +16079,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Soninke_people"
         },
         {
-          "name": "Falémé River",
+          "name": "Bafing River",
           "disambiguation_note": null,
-          "localisation_stem": "Falémé",
+          "localisation_stem": "Bafing",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Goundafa area.",
+          "relationship": "Major headstream of the Senegal River bordering eastern Bambouk near Goundafa.",
           "language_variants": [
             {
-              "form": "Faleme",
+              "form": "Bafing",
               "native_script": null,
-              "language": "Soninke",
-              "language_code": "snk",
-              "notes": "Soninke and Malinké river name"
-            },
-            {
-              "form": "Falémé",
-              "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established French form"
+              "language": "Mandinka",
+              "language_code": "mnk",
+              "notes": "Mandinka 'Black River'"
             }
           ],
-          "earliest_attestation_year": 1068,
-          "earliest_attestation_note": "1068 CE Arabic geographical account of al-Bakri describing the goldfields of Bambuk.",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE Manding and Fouta Djallon oral traditions.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major left-bank tributary of the Senegal River forming the border between Bambuk and Bundu.",
-          "source_url": "https://en.wikipedia.org/wiki/Fal%C3%A9m%C3%A9_River"
+          "etymology_notes": "Headwater tributary in the Guinean highlands (upper Sassandra/Senegal basins).",
+          "source_url": "https://en.wikipedia.org/wiki/Bafing_River"
         },
         {
           "name": "Bambouk",
@@ -16541,38 +16563,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Fula_people"
         },
         {
-          "name": "Falémé River",
+          "name": "Gambia River",
           "disambiguation_note": null,
-          "localisation_stem": "Falémé",
+          "localisation_stem": "Gambia",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Tenda area.",
+          "relationship": "Major West African river flowing directly through the Tenda borderlands.",
           "language_variants": [
             {
-              "form": "Faleme",
+              "form": "Kambaa",
               "native_script": null,
-              "language": "Soninke",
-              "language_code": "snk",
-              "notes": "Soninke and Malinké river name"
+              "language": "Mandinka",
+              "language_code": "mnk",
+              "notes": "Mandinka river name"
             },
             {
-              "form": "Falémé",
+              "form": "Fleuve Gambie",
               "native_script": null,
               "language": "French",
               "language_code": "fra",
-              "notes": "Established French form"
+              "notes": "Established West African French name"
             }
           ],
-          "earliest_attestation_year": 1068,
-          "earliest_attestation_note": "1068 CE Arabic geographical account of al-Bakri describing the goldfields of Bambuk.",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -450,
+          "earliest_attestation_note": "Major West African Atlantic river known since classical/early medieval Senegambian trade.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major left-bank tributary of the Senegal River forming the border between Bambuk and Bundu.",
-          "source_url": "https://en.wikipedia.org/wiki/Fal%C3%A9m%C3%A9_River"
+          "etymology_notes": "From Mandinka Kambra/Kambaa, major navigable waterway of Senegambia.",
+          "source_url": "https://en.wikipedia.org/wiki/Gambia_River"
         },
         {
           "name": "Senegal River",
@@ -16703,38 +16725,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Fal%C3%A9m%C3%A9_River"
         },
         {
-          "name": "Senegal River",
+          "name": "Mount Assirik",
           "disambiguation_note": null,
-          "localisation_stem": "Senegal",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Local river in the Niokolo area.",
+          "localisation_stem": "Assirik",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Prominent lateritic hill plateau rising within the Niokolo basin.",
           "language_variants": [
             {
-              "form": "Maayo Senegaal",
-              "native_script": null,
-              "language": "Fula",
-              "language_code": "ful",
-              "notes": "Fula river name"
-            },
-            {
-              "form": "Fleuve Sénégal",
+              "form": "Assirik",
               "native_script": null,
               "language": "French",
               "language_code": "fra",
-              "notes": "Established French form"
+              "notes": "Established Senegalese geographic name"
             }
           ],
-          "earliest_attestation_year": 1068,
-          "earliest_attestation_note": "1068 CE Arabic account of al-Bakri describing the river of Takrur (al-Nil).",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate lateritic plateau peak in southeastern Senegal.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major West African river flowing from Fouta Djallon past Galam, Silla, and Takrur to the Atlantic.",
-          "source_url": "https://en.wikipedia.org/wiki/Senegal_River"
+          "etymology_notes": "Highest hill plateau in the Niokolo-Koba basin of southeastern Senegal.",
+          "source_url": "https://en.wikipedia.org/wiki/Assirik"
         }
       ]
     },
@@ -16797,38 +16812,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Fula_people"
         },
         {
-          "name": "Falémé River",
+          "name": "Koulountou River",
           "disambiguation_note": null,
-          "localisation_stem": "Falémé",
+          "localisation_stem": "Koulountou",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Damantan area.",
+          "relationship": "Major left-bank tributary of the Gambia River flowing near Damantan.",
           "language_variants": [
             {
-              "form": "Faleme",
-              "native_script": null,
-              "language": "Soninke",
-              "language_code": "snk",
-              "notes": "Soninke and Malinké river name"
-            },
-            {
-              "form": "Falémé",
+              "form": "Koulountou",
               "native_script": null,
               "language": "French",
               "language_code": "fra",
-              "notes": "Established French form"
+              "notes": "Established West African French form"
             }
           ],
-          "earliest_attestation_year": 1068,
-          "earliest_attestation_note": "1068 CE Arabic geographical account of al-Bakri describing the goldfields of Bambuk.",
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE oral traditions of the Badiar and Upper Gambia borderlands.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major left-bank tributary of the Senegal River forming the border between Bambuk and Bundu.",
-          "source_url": "https://en.wikipedia.org/wiki/Fal%C3%A9m%C3%A9_River"
+          "etymology_notes": "Major left-bank tributary of the Gambia River flowing north from Fouta Djallon.",
+          "source_url": "https://en.wikipedia.org/wiki/Koulountou_River"
         },
         {
           "name": "Senegal River",
@@ -16891,38 +16899,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Fula people",
+          "name": "Bassari people",
           "disambiguation_note": null,
-          "localisation_stem": "Fula",
+          "localisation_stem": "Bassari",
           "category": "tribe",
           "feature_subtype": "atlantic_people",
-          "relationship": "Indigenous people historically inhabiting the Busura region.",
+          "relationship": "Indigenous Atlantic-speaking people inhabiting the Senegal-Guinea highlands near Busura.",
           "language_variants": [
             {
-              "form": "Fulɓe",
+              "form": "Biyan",
               "native_script": null,
-              "language": "Fula",
-              "language_code": "ful",
-              "notes": "Native Fula plural endonym"
-            },
-            {
-              "form": "Peul",
-              "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established West African French form"
+              "language": "Wolof",
+              "language_code": "wol",
+              "notes": "Regional Senegambian designation for the Bassari/Oniyan"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 1000 CE Arabic and Senegambian accounts of Takrur and pastoral migrations.",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Tenda-speaking Atlantic people of the Senegal-Guinea highlands.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Atlantic-speaking pastoralist and scholarly people spread across Senegambia, Fouta Djallon, and the Sahel. Onomastic note: Fula 'Fulɓe' (Native Fula plural endonym).",
-          "source_url": "https://en.wikipedia.org/wiki/Fula_people"
+          "etymology_notes": "Indigenous Atlantic-speaking people of the hilly southeastern Senegal and northern Guinea borderlands.",
+          "source_url": "https://en.wikipedia.org/wiki/Bassari_people"
         },
         {
           "name": "Falémé River",
@@ -17167,31 +17168,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Soninke_people"
         },
         {
-          "name": "Bafing River",
+          "name": "Senegal River",
           "disambiguation_note": null,
-          "localisation_stem": "Bafing",
+          "localisation_stem": "Senegal",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Nyeningo area.",
+          "relationship": "Major West African river formed by the Bafing and Bakoy confluence near Nyeningo.",
           "language_variants": [
             {
-              "form": "Bafing",
+              "form": "Maayo Seenegaal",
               "native_script": null,
-              "language": "Mandinka",
-              "language_code": "mnk",
-              "notes": "Mandinka compound meaning Black River"
+              "language": "Fula",
+              "language_code": "ful",
+              "notes": "Fula name"
+            },
+            {
+              "form": "Fleuve Sénégal",
+              "native_script": null,
+              "language": "French",
+              "language_code": "fra",
+              "notes": "Established West African French name"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Manding and Fouta Djallon oral traditions.",
+          "earliest_attestation_year": 1068,
+          "earliest_attestation_note": "1068 CE Arabic account of al-Bakri describing the river of Takrur (al-Nil).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Headwater river of the Senegal system rising in Fouta Djallon and joining the Bakoy at Bafoulabé. Onomastic note: Mandinka compound meaning Black River ('Bafing').",
-          "source_url": "https://en.wikipedia.org/wiki/Bafing_River"
+          "etymology_notes": "Linked either to the Zenaga (Sanhaja) Berber confederation or Wolof sunu gaal.",
+          "source_url": "https://en.wikipedia.org/wiki/Senegal_River"
         },
         {
           "name": "Bakoy River",
@@ -17637,38 +17645,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mandinka_people"
         },
         {
-          "name": "Gambia River",
+          "name": "Bafing River",
           "disambiguation_note": null,
-          "localisation_stem": "Gambia",
+          "localisation_stem": "Bafing",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Sangalan area.",
+          "relationship": "Major Senegal headstream flowing east of Sangalan along the Fouta Djallon slope.",
           "language_variants": [
             {
-              "form": "Kambra",
+              "form": "Bafing",
               "native_script": null,
               "language": "Mandinka",
               "language_code": "mnk",
-              "notes": "Indigenous Mandinka river name"
-            },
-            {
-              "form": "Fleuve Gambie",
-              "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established French form"
+              "notes": "Mandinka 'Black River'"
             }
           ],
-          "earliest_attestation_year": -450,
-          "earliest_attestation_note": "Major West African Atlantic river known since classical/early medieval Senegambian trade.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE Manding and Fouta Djallon oral traditions.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major West African river rising in Fouta Djallon and flowing west through Wuli and Kaabu to the Atlantic.",
-          "source_url": "https://en.wikipedia.org/wiki/Gambia_River"
+          "etymology_notes": "Headwater tributary in the Guinean highlands (upper Sassandra/Senegal basins).",
+          "source_url": "https://en.wikipedia.org/wiki/Bafing_River"
         },
         {
           "name": "Fouta Djallon",
@@ -17859,38 +17860,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Mandinka people",
+          "name": "Yalunka people",
           "disambiguation_note": null,
-          "localisation_stem": "Mandinka",
+          "localisation_stem": "Yalunka",
           "category": "tribe",
           "feature_subtype": "mande_people",
-          "relationship": "Indigenous people historically inhabiting the Woora Saabe region.",
+          "relationship": "Indigenous Mande-speaking people of the Fouta Djallon and Upper Gambia hills near Woora Saabe.",
           "language_variants": [
             {
-              "form": "Mandinka",
+              "form": "Jalonke",
               "native_script": null,
-              "language": "Mandinka",
-              "language_code": "mnk",
-              "notes": "Endonym meaning people of Manden"
+              "language": "Fula",
+              "language_code": "ful",
+              "notes": "Fula designation meaning inhabitants of Jallon"
             },
             {
-              "form": "Malinké",
+              "form": "Diallonké",
               "native_script": null,
               "language": "French",
               "language_code": "fra",
               "notes": "Established West African French form"
             }
           ],
-          "earliest_attestation_year": 1068,
-          "earliest_attestation_note": "Attested in 11th-century CE Arabic geography (al-Bakri, 1068 CE, as Malal/Manding).",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE Fouta Djallon and Solimana oral traditions.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "West African Mande people native to Manding, Kaabu, and the Upper Niger and Gambia basins. Onomastic note: Mandinka 'Mandinka' (Endonym meaning people of Manden).",
-          "source_url": "https://en.wikipedia.org/wiki/Mandinka_people"
+          "etymology_notes": "Mande people closely related to the Susu, early inhabitants of Fouta Djallon and Solimana. Onomastic note: Fula designation meaning inhabitants of Jallon ('Jalonke').",
+          "source_url": "https://en.wikipedia.org/wiki/Yalunka_people"
         },
         {
           "name": "Gambia River",
@@ -18626,31 +18627,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Fula_people"
         },
         {
-          "name": "Konkouré River",
+          "name": "Bafing River",
           "disambiguation_note": null,
-          "localisation_stem": "Konkouré",
+          "localisation_stem": "Bafing",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Kula area.",
+          "relationship": "Principal headstream of the Senegal River rising in the eastern Fouta Djallon near Kula.",
           "language_variants": [
             {
-              "form": "Konkouré",
+              "form": "Bafing",
               "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established West African French form"
+              "language": "Mandinka",
+              "language_code": "mnk",
+              "notes": "Mandinka 'Black River'"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE Fouta Djallon and Susu coastal traditions.",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE Manding and Fouta Djallon oral traditions.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river draining central Fouta Djallon westward to the Atlantic.",
-          "source_url": "https://en.wikipedia.org/wiki/Konkour%C3%A9_River"
+          "etymology_notes": "Headwater tributary in the Guinean highlands (upper Sassandra/Senegal basins).",
+          "source_url": "https://en.wikipedia.org/wiki/Bafing_River"
         },
         {
           "name": "Fouta Djallon",
@@ -18774,38 +18775,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Konkour%C3%A9_River"
         },
         {
-          "name": "Fouta Djallon",
+          "name": "Gambia River",
           "disambiguation_note": null,
-          "localisation_stem": "Fouta Djallon",
-          "category": "oronym",
-          "feature_subtype": "plateau",
-          "relationship": "Regional plateau encompassing or bordering Kompela.",
+          "localisation_stem": "Gambia",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major West African river rising on the Fouta Djallon plateau near Kompela.",
           "language_variants": [
             {
-              "form": "Fuuta Jaloo",
+              "form": "Kambaa",
               "native_script": null,
-              "language": "Fula",
-              "language_code": "ful",
-              "notes": "Native Fula name"
+              "language": "Mandinka",
+              "language_code": "mnk",
+              "notes": "Mandinka river name"
             },
             {
-              "form": "Fouta-Djallon",
+              "form": "Fleuve Gambie",
               "native_script": null,
               "language": "French",
               "language_code": "fra",
-              "notes": "Established French form"
+              "notes": "Established West African French name"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE West African traditions of the Jalonke and Fula highlands.",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -450,
+          "earliest_attestation_note": "Major West African Atlantic river known since classical/early medieval Senegambian trade.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Highland plateau in central Guinea forming the watershed of the Senegal, Gambia, and Niger rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Fouta_Djallon"
+          "etymology_notes": "From Mandinka Kambra/Kambaa, major navigable waterway of Senegambia.",
+          "source_url": "https://en.wikipedia.org/wiki/Gambia_River"
         }
       ]
     },
@@ -18834,38 +18835,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Fula people",
+          "name": "Yalunka people",
           "disambiguation_note": null,
-          "localisation_stem": "Fula",
+          "localisation_stem": "Yalunka",
           "category": "tribe",
-          "feature_subtype": "atlantic_people",
-          "relationship": "Indigenous people historically inhabiting the Ndama region.",
+          "feature_subtype": "mande_people",
+          "relationship": "Indigenous Mande-speaking people inhabiting the Fouta Djallon uplands around Ndama.",
           "language_variants": [
             {
-              "form": "Fulɓe",
+              "form": "Jalonke",
               "native_script": null,
               "language": "Fula",
               "language_code": "ful",
-              "notes": "Native Fula plural endonym"
+              "notes": "Fula designation meaning inhabitants of Jallon"
             },
             {
-              "form": "Peul",
+              "form": "Diallonké",
               "native_script": null,
               "language": "French",
               "language_code": "fra",
               "notes": "Established West African French form"
             }
           ],
-          "earliest_attestation_year": 1000,
-          "earliest_attestation_note": "c. 1000 CE Arabic and Senegambian accounts of Takrur and pastoral migrations.",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE Fouta Djallon and Solimana oral traditions.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Atlantic-speaking pastoralist and scholarly people spread across Senegambia, Fouta Djallon, and the Sahel. Onomastic note: Fula 'Fulɓe' (Native Fula plural endonym).",
-          "source_url": "https://en.wikipedia.org/wiki/Fula_people"
+          "etymology_notes": "Mande people closely related to the Susu, early inhabitants of Fouta Djallon and Solimana. Onomastic note: Fula designation meaning inhabitants of Jallon ('Jalonke').",
+          "source_url": "https://en.wikipedia.org/wiki/Yalunka_people"
         },
         {
           "name": "Konkouré River",
@@ -20002,31 +20003,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Kuranko people",
+          "name": "Limba people",
           "disambiguation_note": null,
-          "localisation_stem": "Kuranko",
+          "localisation_stem": "Limba",
           "category": "tribe",
-          "feature_subtype": "mande_people",
-          "relationship": "Indigenous people historically inhabiting the Seradu region.",
+          "feature_subtype": "niger_congo_people",
+          "relationship": "Indigenous northern Sierra Leonean people inhabiting the hills northwest of Seradu.",
           "language_variants": [
             {
-              "form": "Kouranko",
+              "form": "Hulimba",
               "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established West African French form"
+              "language": "Limba",
+              "language_code": "lia",
+              "notes": "Limba ethnonym"
             }
           ],
           "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE oral traditions of Mande migration into the Loma highlands.",
+          "earliest_attestation_note": "Attested in 17th-century CE Portuguese and Jesuit accounts of Sierra Leone.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Mandinka-related Mande people inhabiting the Guinea-Sierra Leone highland borderlands.",
-          "source_url": "https://en.wikipedia.org/wiki/Kuranko_people"
+          "etymology_notes": "Niger-Congo people of northern Sierra Leone.",
+          "source_url": "https://en.wikipedia.org/wiki/Limba_people"
         },
         {
           "name": "Sewa River",
@@ -20143,31 +20144,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mandinka_people"
         },
         {
-          "name": "Rokel River",
+          "name": "Tingi Hills",
           "disambiguation_note": null,
-          "localisation_stem": "Rokel",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Local river in the Mafindi-Kabaya area.",
+          "localisation_stem": "Tingi",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Granite mountain range in eastern Sierra Leone rising south of Mafindi-Kabaya.",
           "language_variants": [
             {
-              "form": "Seli",
+              "form": "Tingi",
               "native_script": null,
-              "language": "Mandinka",
-              "language_code": "mnk",
-              "notes": "Upper course name in Kuranko territory"
+              "language": "Kono",
+              "language_code": "kno",
+              "notes": "Regional Kono/Kuranko highland name"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Portuguese coastal accounts of the Sierra Leone estuary.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate mountain massif in eastern Sierra Leone adjoining the Loma range.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Longest river in Sierra Leone, rising in the Loma Mountains and Kuranko highlands.",
-          "source_url": "https://en.wikipedia.org/wiki/Rokel_River"
+          "etymology_notes": "Granite massif in eastern Sierra Leone rising to Sankan Biriwa (1,709 m).",
+          "source_url": "https://en.wikipedia.org/wiki/Tingi_Hills_Forest_Reserve"
         },
         {
           "name": "Loma Mountains",
@@ -20820,31 +20821,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mandinka_people"
         },
         {
-          "name": "Tinkisso River",
+          "name": "Sankarani River",
           "disambiguation_note": null,
-          "localisation_stem": "Tinkisso",
+          "localisation_stem": "Sankarani",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Siguiri area.",
+          "relationship": "Major Upper Niger tributary joining the river near Siguiri.",
           "language_variants": [
             {
-              "form": "Tinkisso",
+              "form": "Sankarani",
               "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established West African French form"
+              "language": "Mandinka",
+              "language_code": "mnk",
+              "notes": "Mandinka river name"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Manding oral traditions of Bure and Siguiri.",
+          "earliest_attestation_year": 1235,
+          "earliest_attestation_note": "c. 1235 CE heartland river of the Mali Empire.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major left-bank tributary of the Upper Niger joining near Siguiri in Bure.",
-          "source_url": "https://en.wikipedia.org/wiki/Tinkisso_River"
+          "etymology_notes": "Major upper Niger tributary draining eastern Guinea.",
+          "source_url": "https://en.wikipedia.org/wiki/Sankarani_River"
         },
         {
           "name": "Niger River",
@@ -20948,31 +20949,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mandinka_people"
         },
         {
-          "name": "Tinkisso River",
+          "name": "Niandan River",
           "disambiguation_note": null,
-          "localisation_stem": "Tinkisso",
+          "localisation_stem": "Niandan",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Kouroussa area.",
+          "relationship": "Major Niger tributary joining the main stem downstream of Kouroussa.",
           "language_variants": [
             {
-              "form": "Tinkisso",
+              "form": "Niandan",
               "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established West African French form"
+              "language": "Susu",
+              "language_code": "sus",
+              "notes": "Guinean hydronym"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Manding oral traditions of Bure and Siguiri.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate major right-bank tributary of the Upper Niger in Guinea.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major left-bank tributary of the Upper Niger joining near Siguiri in Bure.",
-          "source_url": "https://en.wikipedia.org/wiki/Tinkisso_River"
+          "etymology_notes": "Major river rising in the Guinean highlands and joining the Niger downstream of Kouroussa.",
+          "source_url": "https://en.wikipedia.org/wiki/Niandan"
         },
         {
           "name": "Niger River",
@@ -21076,31 +21077,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mandinka_people"
         },
         {
-          "name": "Tinkisso River",
+          "name": "Milo River",
           "disambiguation_note": null,
-          "localisation_stem": "Tinkisso",
+          "localisation_stem": "Milo",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Balato area.",
+          "relationship": "Major right-bank tributary of the Upper Niger east of Balato.",
           "language_variants": [
             {
-              "form": "Tinkisso",
+              "form": "Milo",
               "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established West African French form"
+              "language": "Mandinka",
+              "language_code": "mnk",
+              "notes": "Mandinka river name"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Manding oral traditions of Bure and Siguiri.",
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "c. 1600 CE oral traditions of Kankan and Upper Guinea.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major left-bank tributary of the Upper Niger joining near Siguiri in Bure.",
-          "source_url": "https://en.wikipedia.org/wiki/Tinkisso_River"
+          "etymology_notes": "Major right-bank tributary of the Niger River in eastern Guinea.",
+          "source_url": "https://en.wikipedia.org/wiki/Milo_River"
         },
         {
           "name": "Niger River",
@@ -21332,31 +21333,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mandinka_people"
         },
         {
-          "name": "Tinkisso River",
+          "name": "Fouta Djallon",
           "disambiguation_note": null,
-          "localisation_stem": "Tinkisso",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Local river in the Diakha area.",
+          "localisation_stem": "Fouta Djallon",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Highland plateau rising southwest of Diakha as the watershed of Upper Guinea.",
           "language_variants": [
             {
-              "form": "Tinkisso",
+              "form": "Fuuta Jaloo",
               "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established West African French form"
+              "language": "Susu",
+              "language_code": "sus",
+              "notes": "Regional Guinean highland name"
             }
           ],
           "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Manding oral traditions of Bure and Siguiri.",
+          "earliest_attestation_note": "c. 1500 CE West African traditions of the Jalonke and Fula highlands.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major left-bank tributary of the Upper Niger joining near Siguiri in Bure.",
-          "source_url": "https://en.wikipedia.org/wiki/Tinkisso_River"
+          "etymology_notes": "Highland plateau of central Guinea, watershed of major West African rivers.",
+          "source_url": "https://en.wikipedia.org/wiki/Fouta_Djallon"
         },
         {
           "name": "Niger River",
@@ -21958,31 +21959,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mandinka_people"
         },
         {
-          "name": "Milo River",
+          "name": "Niandan River",
           "disambiguation_note": null,
-          "localisation_stem": "Milo",
+          "localisation_stem": "Niandan",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Jelibakoro area.",
+          "relationship": "Major Upper Niger tributary flowing through the savanna near Jelibakoro.",
           "language_variants": [
             {
-              "form": "Milo",
+              "form": "Niandan",
               "native_script": null,
-              "language": "Mandinka",
-              "language_code": "mnk",
-              "notes": "Indigenous Manding river name"
+              "language": "Susu",
+              "language_code": "sus",
+              "notes": "Guinean hydronym"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE oral traditions of Kankan and Upper Guinea.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate major right-bank tributary of the Upper Niger in Guinea.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major right-bank tributary of the Upper Niger flowing north past Kankan.",
-          "source_url": "https://en.wikipedia.org/wiki/Milo_River"
+          "etymology_notes": "Major river rising in the Guinean highlands and joining the Niger downstream of Kouroussa.",
+          "source_url": "https://en.wikipedia.org/wiki/Niandan"
         },
         {
           "name": "Upper Guinea",
@@ -22099,31 +22100,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Milo_River"
         },
         {
-          "name": "Upper Guinea",
+          "name": "Sankarani River",
           "disambiguation_note": null,
-          "localisation_stem": "Upper Guinea",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Historical region encompassing Fadama.",
+          "localisation_stem": "Sankarani",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Upper Niger tributary bordering the eastern Kankan plains near Fadama.",
           "language_variants": [
             {
-              "form": "Haute-Guinée",
+              "form": "Sankarani",
               "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established French regional name"
+              "language": "Mandinka",
+              "language_code": "mnk",
+              "notes": "Mandinka river name"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE early modern geographical usage for the Upper Niger savanna.",
+          "earliest_attestation_year": 1235,
+          "earliest_attestation_note": "c. 1235 CE heartland river of the Mali Empire.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Savanna and upper Niger basin of northeastern Guinea, heartland of Manding.",
-          "source_url": "https://en.wikipedia.org/wiki/Upper_Guinea"
+          "etymology_notes": "Major upper Niger tributary draining eastern Guinea.",
+          "source_url": "https://en.wikipedia.org/wiki/Sankarani_River"
         }
       ]
     },
@@ -22152,38 +22153,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Mandinka people",
+          "name": "Susu people",
           "disambiguation_note": null,
-          "localisation_stem": "Mandinka",
+          "localisation_stem": "Susu",
           "category": "tribe",
           "feature_subtype": "mande_people",
-          "relationship": "Indigenous people historically inhabiting the Amana region.",
+          "relationship": "Indigenous Mande-speaking people historically inhabiting the Upper Guinean uplands around Amana.",
           "language_variants": [
             {
-              "form": "Mandinka",
+              "form": "Sosoxui",
               "native_script": null,
-              "language": "Mandinka",
-              "language_code": "mnk",
-              "notes": "Endonym meaning people of Manden"
-            },
-            {
-              "form": "Malinké",
-              "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established West African French form"
+              "language": "Susu",
+              "language_code": "sus",
+              "notes": "Susu ethnonym"
             }
           ],
-          "earliest_attestation_year": 1068,
-          "earliest_attestation_note": "Attested in 11th-century CE Arabic geography (al-Bakri, 1068 CE, as Malal/Manding).",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 1200,
+          "earliest_attestation_note": "Attested in medieval West African oral and Arabic traditions of the Sosso kingdom (c. 13th century CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "West African Mande people native to Manding, Kaabu, and the Upper Niger and Gambia basins. Onomastic note: Mandinka 'Mandinka' (Endonym meaning people of Manden).",
-          "source_url": "https://en.wikipedia.org/wiki/Mandinka_people"
+          "etymology_notes": "Mande (Niger-Congo) people of coastal Guinea and northwestern Sierra Leone.",
+          "source_url": "https://en.wikipedia.org/wiki/Susu_people"
         },
         {
           "name": "Milo River",
@@ -22327,31 +22321,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Sankarani_River"
         },
         {
-          "name": "Wassoulou",
+          "name": "Niger River",
           "disambiguation_note": null,
-          "localisation_stem": "Wassoulou",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Historical region encompassing Niani.",
+          "localisation_stem": "Niger",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Great West African river flowing northeastward past the Sankarani confluence near Niani.",
           "language_variants": [
             {
-              "form": "Wasulu",
+              "form": "Kwara",
               "native_script": null,
-              "language": "Bambara",
-              "language_code": "bam",
-              "notes": "Indigenous Bambara/Fula regional name"
+              "language": "Yoruba",
+              "language_code": "yor",
+              "notes": "Regional lower Niger name"
+            },
+            {
+              "form": "Joliba",
+              "native_script": null,
+              "language": "Mandinka",
+              "language_code": "mnk",
+              "notes": "Upper Niger Mandinka name"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE oral traditions of the Manding-Fula borderlands.",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -450,
+          "earliest_attestation_note": "c. 450 BCE possible classical reference in Herodotus; 1352 CE Ibn Battuta.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Cultural and geographical region spanning southern Mali and eastern Guinea around Yanfolila.",
-          "source_url": "https://en.wikipedia.org/wiki/Wassoulou"
+          "etymology_notes": "Great river of West Africa bordering eastern Borgu.",
+          "source_url": "https://en.wikipedia.org/wiki/Niger_River"
         }
       ]
     },
@@ -22441,31 +22442,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Sankarani_River"
         },
         {
-          "name": "Wassoulou",
+          "name": "Milo River",
           "disambiguation_note": null,
-          "localisation_stem": "Wassoulou",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Historical region encompassing Figuira.",
+          "localisation_stem": "Milo",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Upper Niger tributary draining the plains southwest of Figuira.",
           "language_variants": [
             {
-              "form": "Wasulu",
+              "form": "Milo",
               "native_script": null,
-              "language": "Bambara",
-              "language_code": "bam",
-              "notes": "Indigenous Bambara/Fula regional name"
+              "language": "Mandinka",
+              "language_code": "mnk",
+              "notes": "Mandinka river name"
             }
           ],
           "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE oral traditions of the Manding-Fula borderlands.",
+          "earliest_attestation_note": "c. 1600 CE oral traditions of Kankan and Upper Guinea.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Cultural and geographical region spanning southern Mali and eastern Guinea around Yanfolila.",
-          "source_url": "https://en.wikipedia.org/wiki/Wassoulou"
+          "etymology_notes": "Major right-bank tributary of the Niger River in eastern Guinea.",
+          "source_url": "https://en.wikipedia.org/wiki/Milo_River"
         }
       ]
     },
@@ -22669,31 +22670,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Baoul%C3%A9_River"
         },
         {
-          "name": "Wassoulou",
+          "name": "Fouta Djallon",
           "disambiguation_note": null,
-          "localisation_stem": "Wassoulou",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Historical region encompassing Yanfolila.",
+          "localisation_stem": "Fouta Djallon",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Highland plateau rising southwest of the Sankarani valley near Yanfolila.",
           "language_variants": [
             {
-              "form": "Wasulu",
+              "form": "Fuuta Jaloo",
               "native_script": null,
-              "language": "Bambara",
-              "language_code": "bam",
-              "notes": "Indigenous Bambara/Fula regional name"
+              "language": "Susu",
+              "language_code": "sus",
+              "notes": "Regional Guinean highland name"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE oral traditions of the Manding-Fula borderlands.",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE West African traditions of the Jalonke and Fula highlands.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Cultural and geographical region spanning southern Mali and eastern Guinea around Yanfolila.",
-          "source_url": "https://en.wikipedia.org/wiki/Wassoulou"
+          "etymology_notes": "Highland plateau of central Guinea, watershed of major West African rivers.",
+          "source_url": "https://en.wikipedia.org/wiki/Fouta_Djallon"
         }
       ]
     },
@@ -22783,31 +22784,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Bago%C3%A9_River"
         },
         {
-          "name": "Wassoulou",
+          "name": "Bani River",
           "disambiguation_note": null,
-          "localisation_stem": "Wassoulou",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Historical region encompassing Kamaro.",
+          "localisation_stem": "Bani",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Niger tributary formed by the Baoulé and Bagoé rivers north of Kamaro.",
           "language_variants": [
             {
-              "form": "Wasulu",
+              "form": "Bani",
               "native_script": null,
               "language": "Bambara",
               "language_code": "bam",
-              "notes": "Indigenous Bambara/Fula regional name"
+              "notes": "Mande 'Little River'"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE oral traditions of the Manding-Fula borderlands.",
+          "earliest_attestation_year": 1655,
+          "earliest_attestation_note": "Attested in 17th-century CE Timbuktu chronicles (Tarikh al-Sudan, c. 1655 CE) around Djenné.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Cultural and geographical region spanning southern Mali and eastern Guinea around Yanfolila.",
-          "source_url": "https://en.wikipedia.org/wiki/Wassoulou"
+          "etymology_notes": "From Mande ba-ni ('little river'), principal southern tributary of the Niger at Mopti.",
+          "source_url": "https://en.wikipedia.org/wiki/Bani_River"
         }
       ]
     },
@@ -25126,38 +25127,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Songhai people",
+          "name": "Sanhaja",
           "disambiguation_note": null,
-          "localisation_stem": "Songhai",
+          "localisation_stem": "Sanhaja",
           "category": "tribe",
-          "feature_subtype": "songhai_people",
-          "relationship": "Indigenous people historically inhabiting the Sarnah region.",
+          "feature_subtype": "berber_tribe",
+          "relationship": "Pre-867 Berber tribal confederation active along the Saharan-Niger bend routes near Sarnah.",
           "language_variants": [
             {
-              "form": "Soŋay",
-              "native_script": null,
-              "language": "Koyraboro Senni Songhai",
-              "language_code": "ses",
-              "notes": "Eastern Songhai endonym"
+              "form": "Ṣanhāja",
+              "native_script": "صنهاجة",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Classical Arabic form Ṣanhāja"
             },
             {
-              "form": "Koyra Chiini",
+              "form": "Iẓnagen",
               "native_script": null,
-              "language": "Koyra Chiini",
-              "language_code": "khq",
-              "notes": "Western Songhai of Timbuktu"
+              "language": "Berber",
+              "language_code": "ber",
+              "notes": "Indigenous Berber ethnonym"
             }
           ],
-          "earliest_attestation_year": 872,
-          "earliest_attestation_note": "872 CE Arabic chronicle of al-Ya'qubi mentioning the Kingdom of Kawkaw (Gao).",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 750,
+          "earliest_attestation_note": "Attested in early Islamic Arabic chronicles (8th century CE) as one of the largest Berber tribal confederations.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Nilo-Saharan-speaking riverine people of the Niger Bend from Timbuktu through Gao to Dendi.",
-          "source_url": "https://en.wikipedia.org/wiki/Songhai_people"
+          "etymology_notes": "Arabic rendering of Berber Iẓnagen, a major confederation spanning the Maghreb and western Sahara.",
+          "source_url": "https://en.wikipedia.org/wiki/Sanhaja"
         },
         {
           "name": "Tilemsi",
@@ -25288,31 +25289,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Songhai_people"
         },
         {
-          "name": "Tilemsi",
+          "name": "Azawad",
           "disambiguation_note": null,
-          "localisation_stem": "Tilemsi",
-          "category": "topographic_feature",
-          "feature_subtype": "valley",
-          "relationship": "Local valley in the Koima area.",
+          "localisation_stem": "Azawad",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Saharan-Sahelian basin stretching immediately north of Koima and the Niger bend.",
           "language_variants": [
             {
-              "form": "Tilemsi",
+              "form": "Azawād",
+              "native_script": "أزواد",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic Azawād"
+            },
+            {
+              "form": "Azawagh",
               "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established Saharan geographical form"
+              "language": "Central Atlas Tamazight",
+              "language_code": "tzm",
+              "notes": "Tuareg geographical name"
             }
           ],
-          "earliest_attestation_year": -2000,
-          "earliest_attestation_note": "c. 2000 BCE Neolithic pastoralist settlements along the palaeochannel.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE Timbuktu chronicles (Tarikh al-Sudan).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Fossil river valley descending from the Adrar des Ifoghas to the Niger Bend at Gao.",
-          "source_url": "https://en.wikipedia.org/wiki/Tilemsi"
+          "etymology_notes": "Saharan-Sahelian desert region of northern Mali between Timbuktu, Taoudeni, and Adrar des Ifoghas.",
+          "source_url": "https://en.wikipedia.org/wiki/Azawad"
         },
         {
           "name": "Niger River",
@@ -25699,31 +25707,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Niger_River"
         },
         {
-          "name": "Sirba River",
+          "name": "Gorouol River",
           "disambiguation_note": null,
-          "localisation_stem": "Sirba",
+          "localisation_stem": "Gorouol",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Tillaberi area.",
+          "relationship": "Right-bank tributary joining the Niger River near Tillaberi.",
           "language_variants": [
             {
-              "form": "Sirba",
+              "form": "Gorouol",
               "native_script": null,
               "language": "Koyraboro Senni Songhai",
               "language_code": "ses",
-              "notes": "Local Songhai-Zarma river name"
+              "notes": "Regional Songhai river name"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Songhai-Zarma traditions of the middle Niger.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate seasonal tributary draining northern Burkina Faso into the Niger River.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major right-bank tributary of the Niger River joining between Tillabéri and Niamey.",
-          "source_url": "https://en.wikipedia.org/wiki/Sirba_River"
+          "etymology_notes": "Right-bank tributary of the Niger flowing through Oudalan and western Niger.",
+          "source_url": "https://en.wikipedia.org/wiki/Gorouol"
         }
       ]
     },
@@ -25752,38 +25760,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Songhai people",
+          "name": "Gurma",
           "disambiguation_note": null,
-          "localisation_stem": "Songhai",
+          "localisation_stem": "Gurma",
           "category": "tribe",
-          "feature_subtype": "songhai_people",
-          "relationship": "Indigenous people historically inhabiting the Tando Husubiya region.",
+          "feature_subtype": "gur_people",
+          "relationship": "Indigenous Gur-speaking people inhabiting the right bank of the Niger bend near Tando Husubiya.",
           "language_variants": [
             {
-              "form": "Soŋay",
+              "form": "Gulimancema",
               "native_script": null,
-              "language": "Koyraboro Senni Songhai",
-              "language_code": "ses",
-              "notes": "Eastern Songhai endonym"
-            },
-            {
-              "form": "Koyra Chiini",
-              "native_script": null,
-              "language": "Koyra Chiini",
-              "language_code": "khq",
-              "notes": "Western Songhai of Timbuktu"
+              "language": "Gourmanchéma",
+              "language_code": "gux",
+              "notes": "Gurma ethnonym"
             }
           ],
-          "earliest_attestation_year": 872,
-          "earliest_attestation_note": "872 CE Arabic chronicle of al-Ya'qubi mentioning the Kingdom of Kawkaw (Gao).",
-          "attestation_basis": "attested_867_to_1066",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Attested in 16th-century CE Songhai chronicles of the Niger bend and northern Gur belt.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
-            "867": false,
+            "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Nilo-Saharan-speaking riverine people of the Niger Bend from Timbuktu through Gao to Dendi.",
-          "source_url": "https://en.wikipedia.org/wiki/Songhai_people"
+          "etymology_notes": "Gur-speaking people of eastern Burkina Faso, northern Togo, and northern Benin.",
+          "source_url": "https://en.wikipedia.org/wiki/Gurma_people"
         },
         {
           "name": "Niger River",
@@ -26397,31 +26398,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Azawad"
         },
         {
-          "name": "Sahara",
+          "name": "Taoudenni",
           "disambiguation_note": null,
-          "localisation_stem": "Sahara",
+          "localisation_stem": "Taoudenni",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Historical region encompassing Araouane.",
+          "relationship": "Remote Saharan salt-pan depression lying north of Araouane.",
           "language_variants": [
             {
-              "form": "al-Ṣaḥrāʾ",
-              "native_script": null,
+              "form": "Tāwūdannī",
+              "native_script": "تاودني",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic name meaning the Great Desert"
+              "notes": "Arabic oasis name"
             }
           ],
-          "earliest_attestation_year": -430,
-          "earliest_attestation_note": "c. 430 BCE classical accounts (Herodotus) and medieval Arabic geographies.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1586,
+          "earliest_attestation_note": "Saharan salt-pan depression succeeding nearby Taghaza in trans-Saharan caravan trade.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert spanning northern Africa immediately north of Arawan and Takrur. Onomastic note: Arabic name meaning the Great Desert ('al-Ṣaḥrāʾ').",
-          "source_url": "https://en.wikipedia.org/wiki/Sahara"
+          "etymology_notes": "Remote Saharan salt-mining depression in northern Mali north of Araouane.",
+          "source_url": "https://en.wikipedia.org/wiki/Taoudenni"
         }
       ]
     },
@@ -26504,31 +26505,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Azawad"
         },
         {
-          "name": "Sahara",
+          "name": "Erg Chech",
           "disambiguation_note": null,
-          "localisation_stem": "Sahara",
+          "localisation_stem": "Erg Chech",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Historical region encompassing Arawan Road.",
+          "relationship": "Vast Saharan sand sea extending across the northern caravan approaches to Arawan Road.",
           "language_variants": [
             {
-              "form": "al-Ṣaḥrāʾ",
-              "native_script": null,
+              "form": "ʿIrq Shāsh",
+              "native_script": "عرق شاش",
               "language": "Arabic",
               "language_code": "ara",
-              "notes": "Arabic name meaning the Great Desert"
+              "notes": "Arabic ʿIrq Shāsh"
             }
           ],
-          "earliest_attestation_year": -430,
-          "earliest_attestation_note": "c. 430 BCE classical accounts (Herodotus) and medieval Arabic geographies.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1352,
+          "earliest_attestation_note": "Attested in medieval trans-Saharan caravan itineraries between Touat and Taghaza (14th century CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great desert spanning northern Africa immediately north of Arawan and Takrur. Onomastic note: Arabic name meaning the Great Desert ('al-Ṣaḥrāʾ').",
-          "source_url": "https://en.wikipedia.org/wiki/Sahara"
+          "etymology_notes": "Vast uninhabited sand sea straddling southwestern Algeria and northern Mali west of the Tanezrouft.",
+          "source_url": "https://en.wikipedia.org/wiki/Erg_Chech"
         }
       ]
     },
@@ -26712,31 +26713,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Serer_people"
         },
         {
-          "name": "Sine River",
+          "name": "Ferlo Desert",
           "disambiguation_note": null,
-          "localisation_stem": "Sine",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Local river in the Laa area.",
+          "localisation_stem": "Ferlo",
+          "category": "choronym",
+          "feature_subtype": "region",
+          "relationship": "Semi-arid Sahelian steppe bordering the Baol plains to the east of Laa.",
           "language_variants": [
             {
-              "form": "Siin",
+              "form": "Ferlo",
               "native_script": null,
               "language": "Wolof",
               "language_code": "wol",
-              "notes": "Indigenous Serer and Wolof river name"
+              "notes": "Wolof/Fula regional name"
             }
           ],
-          "earliest_attestation_year": 1455,
-          "earliest_attestation_note": "c. 1455 CE Serer traditions and Portuguese coastal accounts.",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE Wolof and Fula pastoralist traditions.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Seasonal river flowing southwest through Baol and Sine into the Saloum delta.",
-          "source_url": "https://en.wikipedia.org/wiki/Sine_River"
+          "etymology_notes": "Semi-arid Sahelian steppe south of the Senegal River valley and east of Saloum.",
+          "source_url": "https://en.wikipedia.org/wiki/Ferlo_Desert"
         },
         {
           "name": "Petite Côte",
@@ -26826,31 +26827,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Serer_people"
         },
         {
-          "name": "Sine River",
+          "name": "Lake Guiers",
           "disambiguation_note": null,
-          "localisation_stem": "Sine",
+          "localisation_stem": "Guiers",
           "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Local river in the Lambaye area.",
+          "feature_subtype": "lake",
+          "relationship": "Freshwater floodplain lake located in northern Senegal north of Lambaye.",
           "language_variants": [
             {
-              "form": "Siin",
+              "form": "Nder",
               "native_script": null,
               "language": "Wolof",
               "language_code": "wol",
-              "notes": "Indigenous Serer and Wolof river name"
+              "notes": "Indigenous Wolof name of the lake basin"
             }
           ],
           "earliest_attestation_year": 1455,
-          "earliest_attestation_note": "c. 1455 CE Serer traditions and Portuguese coastal accounts.",
+          "earliest_attestation_note": "Indigenous Senegambian floodplain lake feeding the lower Senegal valley.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Seasonal river flowing southwest through Baol and Sine into the Saloum delta.",
-          "source_url": "https://en.wikipedia.org/wiki/Sine_River"
+          "etymology_notes": "Indigenous Wolof/Serer hydronym of the Waalo–Ferlo borderlands.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Guiers"
         },
         {
           "name": "Petite Côte",
@@ -27859,31 +27860,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Fula_people"
         },
         {
-          "name": "Gorgol River",
+          "name": "Senegal River",
           "disambiguation_note": null,
-          "localisation_stem": "Gorgol River",
+          "localisation_stem": "Senegal",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Wompou area.",
+          "relationship": "Major West African river forming the southern boundary of Wompou.",
           "language_variants": [
             {
-              "form": "Maayo Gorgol",
+              "form": "Maayo Seenegaal",
               "native_script": null,
               "language": "Fula",
               "language_code": "ful",
-              "notes": "Fula river name"
+              "notes": "Fula name"
+            },
+            {
+              "form": "Fleuve Sénégal",
+              "native_script": null,
+              "language": "French",
+              "language_code": "fra",
+              "notes": "Established West African French name"
             }
           ],
-          "earliest_attestation_year": 1400,
-          "earliest_attestation_note": "c. 1400 CE Futa Tooro traditions.",
+          "earliest_attestation_year": 1068,
+          "earliest_attestation_note": "1068 CE Arabic account of al-Bakri describing the river of Takrur (al-Nil).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Right-bank tributary of the Senegal River joining at Kaédi near Jowol.",
-          "source_url": "https://en.wikipedia.org/wiki/Gorgol_River"
+          "etymology_notes": "Linked either to the Zenaga (Sanhaja) Berber confederation or Wolof sunu gaal.",
+          "source_url": "https://en.wikipedia.org/wiki/Senegal_River"
         },
         {
           "name": "Gorgol",
@@ -28000,31 +28008,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Gorgol_River"
         },
         {
-          "name": "Gorgol",
+          "name": "Tagant Plateau",
           "disambiguation_note": null,
-          "localisation_stem": "Gorgol",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Historical region encompassing Ngoppugu.",
+          "localisation_stem": "Tagant",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "Highland sandstone plateau rising northeast of Ngoppugu.",
           "language_variants": [
             {
-              "form": "Gorgol",
+              "form": "Haḍabat Tikānt",
+              "native_script": "هضبة تكانت",
+              "language": "Arabic",
+              "language_code": "ara",
+              "notes": "Arabic Haḍbat Tagānt"
+            },
+            {
+              "form": "Tagant",
               "native_script": null,
-              "language": "Fula",
-              "language_code": "ful",
-              "notes": "Indigenous Pulaar name"
+              "language": "Standard Moroccan Tamazight",
+              "language_code": "zgh",
+              "notes": "Berber 'Forest / Thicket'"
             }
           ],
-          "earliest_attestation_year": 1400,
-          "earliest_attestation_note": "c. 1400 CE Futa Tooro and Soninke traditions.",
+          "earliest_attestation_year": 1068,
+          "earliest_attestation_note": "Attested in 11th-century CE Arabic geographies (al-Bakri, 1068 CE) as Sanhaja plateau country.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Riverine valley and historic district on the north bank of the Senegal River near Jowol.",
-          "source_url": "https://en.wikipedia.org/wiki/Gorgol"
+          "etymology_notes": "From Berber tagant ('forest'); sandstone plateau in central Mauritania south of the Adrar.",
+          "source_url": "https://en.wikipedia.org/wiki/Tagant_Plateau"
         }
       ]
     },

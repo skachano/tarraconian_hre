@@ -137,26 +137,27 @@
       "target_baronies_audited": 166,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 498,
-      "unique_replacement_names": 96,
-      "candidates_with_multilingual_variants": 446,
+      "unique_replacement_names": 103,
+      "candidates_with_multilingual_variants": 448,
       "wikipedia_source_attached": 498,
-      "unique_source_urls": 96,
+      "unique_source_urls": 103,
       "candidates_by_category": {
         "choronym": 20,
-        "hydronym": 286,
-        "oronym": 26,
+        "hydronym": 288,
+        "oronym": 24,
         "topographic_feature": 0,
         "tribe": 166
       },
       "baronies_with_category": {
         "has_choronym_candidate": 20,
         "has_hydronym_candidate": 166,
-        "has_oronym_candidate": 26,
+        "has_oronym_candidate": 24,
         "has_topographic_feature_candidate": 0,
         "has_tribe_candidate": 166
       },
       "unique_language_codes": [
         "ara",
+        "div",
         "grc",
         "kan",
         "mal",
@@ -176,8 +177,8 @@
         "unattested_indigenous_or_minor": 25
       },
       "candidates_by_attestation_basis": {
-        "attested_pre_867": 363,
-        "indigenous_pre_literate": 135
+        "attested_pre_867": 360,
+        "indigenous_pre_literate": 138
       },
       "bookmark_valid_candidates": {
         "867": 498,
@@ -185,7 +186,7 @@
         "1178": 498
       },
       "baronies_with_867_valid_candidate": 166,
-      "unique_localisation_stems": 96
+      "unique_localisation_stems": 103
     }
   },
   "baronies": {
@@ -1404,31 +1405,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Penna_River"
         },
         {
-          "name": "Velikonda Range",
+          "name": "Gundlakamma River",
           "disambiguation_note": null,
-          "localisation_stem": "Velikonda",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Elevated landform overlooking Mutfili.",
+          "localisation_stem": "Gundlakamma",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Eastern Ghats river reaching the coastal plain north of Mutfili.",
           "language_variants": [
             {
-              "form": "Velikonda",
-              "native_script": null,
+              "form": "Guṇḍlakamma",
+              "native_script": "గుండ్లకమ్మ",
               "language": "Telugu",
               "language_code": "tel",
-              "notes": "Telugu name meaning 'outer hill'"
+              "notes": "Telugu river name Gundlakamma"
+            },
+            {
+              "form": "Kuṇḍiprabhā",
+              "native_script": "కుండిప్రభా",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Classical Sanskritized form Kundiprabha"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "c. 13th century CE (medieval Nellore and Udayagiri records)",
+          "earliest_attestation_year": 1100,
+          "earliest_attestation_note": "c. 12th century CE (medieval Andhra epigraphy)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Telugu veli ('outer') and konda ('hill'), forming the easternmost ridge of the Eastern Ghats overlooking Nellore.",
-          "source_url": "https://en.wikipedia.org/wiki/Velikonda_Range"
+          "etymology_notes": "River rising in the Nallamala Hills near Cumbum and flowing southeast across Prakasam to the sea.",
+          "source_url": "https://en.wikipedia.org/wiki/Gundlakamma_River"
         }
       ]
     },
@@ -4428,38 +4436,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tunga_River"
         },
         {
-          "name": "Bhadra River",
+          "name": "Varada River",
           "disambiguation_note": null,
-          "localisation_stem": "Bhadra",
+          "localisation_stem": "Varada",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Masur.",
+          "relationship": "Malenadu river flowing past ancient Banavasi near Masur.",
           "language_variants": [
             {
-              "form": "Bhadra",
-              "native_script": null,
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskrit name ('auspicious')"
-            },
-            {
-              "form": "Bhadra",
-              "native_script": null,
+              "form": "Varadā",
+              "native_script": "ವರದಾ",
               "language": "Kannada",
               "language_code": "kan",
-              "notes": "Kannada river name"
+              "notes": "Kannada river name Varada"
+            },
+            {
+              "form": "Varadā",
+              "native_script": "वरदा",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Sanskrit river name meaning 'boon-giving'"
             }
           ],
-          "earliest_attestation_year": 700,
-          "earliest_attestation_note": "c. 8th century CE (early Malnad and Chalukya records)",
+          "earliest_attestation_year": 400,
+          "earliest_attestation_note": "Kadamba-era inscriptions and classical Sanskrit geography of Banavasi",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Twin headstream of the Tungabhadra rising in the Sahyadri and uniting with the Tunga at Kudali.",
-          "source_url": "https://en.wikipedia.org/wiki/Bhadra_River"
+          "etymology_notes": "Rises at Varadamoola in the Western Ghats and winds past Banavasi into the Tungabhadra. Onomastic note: Sanskrit river name meaning 'boon-giving' ('Varadā').",
+          "source_url": "https://en.wikipedia.org/wiki/Varada_River"
         }
       ]
     },
@@ -6686,38 +6694,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Krishna_River"
         },
         {
-          "name": "Tungabhadra River",
+          "name": "Bhima River",
           "disambiguation_note": null,
-          "localisation_stem": "Tungabhadra",
+          "localisation_stem": "Bhima",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Raichur.",
+          "relationship": "Major Krishna tributary meeting the Krishna just north of Raichur.",
           "language_variants": [
             {
-              "form": "Tungabhadra",
-              "native_script": null,
+              "form": "Bhīmarathī",
+              "native_script": "भीमरथी",
               "language": "Sanskrit",
               "language_code": "san",
-              "notes": "Classical Sanskrit name (union of Tunga and Bhadra)"
+              "notes": "Classical Sanskrit name Bhimarathi in Puranas"
             },
             {
-              "form": "Tungabhadra",
-              "native_script": null,
+              "form": "Bhīmā",
+              "native_script": "भीमा",
+              "language": "Marathi",
+              "language_code": "mar",
+              "notes": "Marathi river name"
+            },
+            {
+              "form": "Bhīmā",
+              "native_script": "ಭೀಮಾ",
               "language": "Kannada",
               "language_code": "kan",
-              "notes": "Kannada river name; also 'Pampa' — Ancient literary name in Kannada and Sanskrit."
+              "notes": "Kannada river name"
             }
           ],
-          "earliest_attestation_year": 400,
-          "earliest_attestation_note": "c. 4th-5th century CE (Kadamba and Chalukya inscriptions)",
+          "earliest_attestation_year": 300,
+          "earliest_attestation_note": "c. 3rd-4th century CE (Puranic river lists and early Deccan epigraphy)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Sacred river of Karnataka formed by the confluence of the Tunga and Bhadra rivers, flowing past Vijayanagara to join the Krishna.",
-          "source_url": "https://en.wikipedia.org/wiki/Tungabhadra_River"
+          "etymology_notes": "Major tributary of the Krishna River rising at Bhimashankar in the Sahyadri and flowing southeast across Maharashtra and northern Karnataka.",
+          "source_url": "https://en.wikipedia.org/wiki/Bhima_River"
         }
       ]
     },
@@ -10864,31 +10879,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Indrayani_River"
         },
         {
-          "name": "Ghod River",
+          "name": "Mutha River",
           "disambiguation_note": null,
-          "localisation_stem": "Ghod",
+          "localisation_stem": "Mutha",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Kondana.",
+          "relationship": "Western Ghats river flowing below the Kondana escarpment toward Pune.",
           "language_variants": [
             {
-              "form": "Ghod",
-              "native_script": null,
+              "form": "Muṭhā",
+              "native_script": "मुठा",
               "language": "Marathi",
               "language_code": "mar",
-              "notes": "Marathi river name ('horse river')"
+              "notes": "Marathi river name Mutha"
+            },
+            {
+              "form": "Mūṭhā",
+              "native_script": "मूठा",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Sanskritized form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "c. 13th century CE (medieval Bhima-basin records)",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 758,
+          "earliest_attestation_note": "8th-century Rashtrakuta copper-plate geography of the Pune region",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tributary of the Bhima River rising near Bhimashankar in the Sahyadri.",
-          "source_url": "https://en.wikipedia.org/wiki/Ghod_River"
+          "etymology_notes": "Rises in the Sahyadri hills near Vegare and joins the Mula River before feeding the Bhima basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Mutha_River"
         }
       ]
     },
@@ -12810,31 +12832,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Bhima_River"
         },
         {
-          "name": "Sina River",
+          "name": "Bori River",
           "disambiguation_note": null,
-          "localisation_stem": "Sina",
+          "localisation_stem": "Bori",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Naldurg.",
+          "relationship": "Bhima tributary carving the rocky gorge beneath Naldurg.",
           "language_variants": [
             {
-              "form": "Sina",
-              "native_script": null,
+              "form": "Borī",
+              "native_script": "बोरी",
               "language": "Marathi",
               "language_code": "mar",
-              "notes": "Marathi river name"
+              "notes": "Marathi river name Bori"
+            },
+            {
+              "form": "Borī",
+              "native_script": "ಬೋರಿ",
+              "language": "Kannada",
+              "language_code": "kan",
+              "notes": "Kannada borderland form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "c. 13th century CE (Yadava and Bahmani-era Solapur records)",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Indigenous pre-literate hydronym of the Dharashiv-Kalaburagi plateau",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Left-bank tributary of the Bhima River flowing past Ahmadnagar and Solapur.",
-          "source_url": "https://en.wikipedia.org/wiki/Sina_River"
+          "etymology_notes": "Originates in the Balaghat Range near Tuljapur and flows south past Naldurg into the Bhima River.",
+          "source_url": "https://en.wikipedia.org/wiki/Bori_River"
         }
       ]
     },
@@ -13811,38 +13840,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Wardha_River"
         },
         {
-          "name": "Tapti River",
-          "disambiguation_note": null,
-          "localisation_stem": "Tapti",
+          "name": "Purna River",
+          "disambiguation_note": "tributary of Tapti",
+          "localisation_stem": "Purna",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Amravati.",
+          "relationship": "Major northern tributary of the Tapti flowing through the Amravati plains.",
           "language_variants": [
             {
-              "form": "Tapi",
-              "native_script": null,
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Classical Sanskrit name ('daughter of Surya')"
-            },
-            {
-              "form": "Tapi",
-              "native_script": null,
+              "form": "Pūrṇā",
+              "native_script": "पूर्णा",
               "language": "Marathi",
               "language_code": "mar",
-              "notes": "Marathi river name"
+              "notes": "Marathi river name Purna"
+            },
+            {
+              "form": "Pūrṇā",
+              "native_script": "पूर्णा",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Classical Sanskrit hydronym meaning 'full'"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 1st millennium BCE (Mahabharata and Puranas as Tāpī)",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "Ancient and early medieval Sanskrit Puranic geography of Vidarbha",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major westward-flowing river of central India draining northern Vidarbha and Khandesh to the Arabian Sea.",
-          "source_url": "https://en.wikipedia.org/wiki/Tapti_River"
+          "etymology_notes": "From Sanskrit Purna ('full/abundant'); rises in the Satpura hills of Betul and drains Vidarbha westward into the Tapti.",
+          "source_url": "https://en.wikipedia.org/wiki/Purna_River_(tributary_of_Tapti)"
         }
       ]
     },
@@ -16527,45 +16556,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Laccadive_Sea"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Kardiva Channel",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
+          "localisation_stem": "Kardiva Channel",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Watercourse flowing near Mahal.",
+          "feature_subtype": "strait",
+          "relationship": "Deep maritime channel crossing the central Maldives north of Mahal.",
           "language_variants": [
             {
-              "form": "Ratnakara",
-              "native_script": null,
+              "form": "Kāshidhoo Kaṇḍu",
+              "native_script": "ކާށިދޫ ކަނޑު",
+              "language": "Dhivehi",
+              "language_code": "div",
+              "notes": "Dhivehi name Kaashidhoo Kandu"
+            },
+            {
+              "form": "Kārdīva",
+              "native_script": "कार्दीव",
               "language": "Sanskrit",
               "language_code": "san",
-              "notes": "Classical Sanskrit ('maker of jewels')"
-            },
-            {
-              "form": "Indikon Pelagos",
-              "native_script": null,
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Ancient Greek name in Arrian and Strabo"
-            },
-            {
-              "form": "Bahr al-Hind",
-              "native_script": null,
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic name ('Sea of India')"
+              "notes": "Historical Sanskritized maritime name Kardiva"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Pre-modern Indian Ocean navigation routes dividing the northern and central Maldivian atolls",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great southern ocean surrounding the Maldives and Lanka, attested in Sanskrit, Greek, and Arabic antiquity.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Named after Kaashidhoo (Kardiva) Island; a broad navigable passage across the Maldivian archipelago.",
+          "source_url": "https://en.wikipedia.org/wiki/Kardiva_Channel"
         }
       ]
     },
@@ -16662,45 +16684,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Laccadive_Sea"
         },
         {
-          "name": "Indian Ocean",
+          "name": "Eight Degree Channel",
           "disambiguation_note": null,
-          "localisation_stem": "Indian Ocean",
+          "localisation_stem": "Eight Degree Channel",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Watercourse flowing near Thiladhunmathi.",
+          "feature_subtype": "strait",
+          "relationship": "Maritime strait immediately north of Thiladhunmathi separating the Maldives from Minicoy.",
           "language_variants": [
             {
-              "form": "Ratnakara",
-              "native_script": null,
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Classical Sanskrit ('maker of jewels')"
-            },
-            {
-              "form": "Indikon Pelagos",
-              "native_script": null,
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Ancient Greek name in Arrian and Strabo"
-            },
-            {
-              "form": "Bahr al-Hind",
-              "native_script": null,
-              "language": "Arabic",
-              "language_code": "ara",
-              "notes": "Medieval Arabic name ('Sea of India')"
+              "form": "Maliku Kaṇḍu",
+              "native_script": "މަލިކު ކަނޑު",
+              "language": "Dhivehi",
+              "language_code": "div",
+              "notes": "Dhivehi name Maliku Kandu"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in classical Greek, Indian, and Arab maritime records by the 3rd century BCE.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Indigenous Dhivehi maritime nomenclature and early nautical charts",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Great southern ocean surrounding the Maldives and Lanka, attested in Sanskrit, Greek, and Arabic antiquity.",
-          "source_url": "https://en.wikipedia.org/wiki/Indian_Ocean"
+          "etymology_notes": "Known locally as Maliku Kandu; lies along the eighth parallel north between Minicoy and Ihavandippolhu.",
+          "source_url": "https://en.wikipedia.org/wiki/Maliku_Kandu"
         }
       ]
     },
@@ -22330,38 +22338,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Painganga_River"
         },
         {
-          "name": "Pranhita River",
+          "name": "Kadam River",
           "disambiguation_note": null,
-          "localisation_stem": "Pranhita",
+          "localisation_stem": "Kadam",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Watercourse flowing near Nirmal.",
+          "relationship": "Left-bank Godavari tributary flowing directly through the Nirmal district.",
           "language_variants": [
             {
-              "form": "Pranahita",
-              "native_script": null,
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskrit name ('life-giver')"
-            },
-            {
-              "form": "Pranahita",
-              "native_script": null,
+              "form": "Kadam",
+              "native_script": "కడం",
               "language": "Telugu",
               "language_code": "tel",
-              "notes": "Telugu river name"
+              "notes": "Telugu river name Kadam"
+            },
+            {
+              "form": "Kadamba",
+              "native_script": "कदम्ब",
+              "language": "Sanskrit",
+              "language_code": "san",
+              "notes": "Sanskritized regional form"
             }
           ],
-          "earliest_attestation_year": 800,
-          "earliest_attestation_note": "c. 9th century CE (medieval Deccan Puranic geography)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Indigenous pre-literate hydronym of northern Telangana",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Largest tributary of the Godavari River, formed by the confluence of the Wardha and Wainganga rivers.",
-          "source_url": "https://en.wikipedia.org/wiki/Pranhita_River"
+          "etymology_notes": "Rises near Bazarhatnoor in Adilabad and descends through Kuntala Waterfall past Nirmal into the Godavari.",
+          "source_url": "https://en.wikipedia.org/wiki/Kadam_River"
         }
       ]
     },
@@ -22600,45 +22608,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Manjira_River"
         },
         {
-          "name": "Deccan Plateau",
+          "name": "Manair River",
           "disambiguation_note": null,
-          "localisation_stem": "Deccan",
-          "category": "oronym",
-          "feature_subtype": "plateau",
-          "relationship": "Elevated landform overlooking Orugallu.",
+          "localisation_stem": "Manair",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Right-bank Godavari tributary draining the northern uplands near Orugallu.",
           "language_variants": [
             {
-              "form": "Dakshinapatha",
-              "native_script": null,
+              "form": "Mānēru",
+              "native_script": "మానేరు",
+              "language": "Telugu",
+              "language_code": "tel",
+              "notes": "Telugu river name Maneru"
+            },
+            {
+              "form": "Mānēra",
+              "native_script": "मानेर",
               "language": "Sanskrit",
               "language_code": "san",
-              "notes": "Classical Sanskrit ('the southern path/region')"
-            },
-            {
-              "form": "Dachinabades",
-              "native_script": null,
-              "language": "Ancient Greek",
-              "language_code": "grc",
-              "notes": "Ancient Greek rendering in the Periplus"
-            },
-            {
-              "form": "Dakhkhan",
-              "native_script": null,
-              "language": "Marathi",
-              "language_code": "mar",
-              "notes": "Medieval Marathi/Prakrit form"
+              "notes": "Sanskritized form"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "c. 3rd century BCE (Dakshinapatha in Sanskrit and Pali literature)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Indigenous pre-literate hydronym of central Telangana",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Sanskrit dakshina ('south'), denoting the vast basaltic plateau of peninsular India.",
-          "source_url": "https://en.wikipedia.org/wiki/Deccan_Plateau"
+          "etymology_notes": "Originates in the Sircilla hills and flows eastward across north-central Telangana to join the Godavari.",
+          "source_url": "https://en.wikipedia.org/wiki/Manair_River"
         }
       ]
     },

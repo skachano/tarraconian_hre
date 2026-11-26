@@ -137,10 +137,10 @@
       "target_baronies_audited": 43,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 129,
-      "unique_replacement_names": 72,
+      "unique_replacement_names": 71,
       "candidates_with_multilingual_variants": 103,
       "wikipedia_source_attached": 129,
-      "unique_source_urls": 72,
+      "unique_source_urls": 71,
       "candidates_by_category": {
         "choronym": 0,
         "hydronym": 69,
@@ -175,8 +175,8 @@
       },
       "candidates_by_attestation_basis": {
         "attested_867_to_1066": 4,
-        "attested_pre_867": 58,
-        "indigenous_pre_literate": 67
+        "attested_pre_867": 59,
+        "indigenous_pre_literate": 66
       },
       "bookmark_valid_candidates": {
         "867": 125,
@@ -184,7 +184,7 @@
         "1178": 129
       },
       "baronies_with_867_valid_candidate": 43,
-      "unique_localisation_stems": 72
+      "unique_localisation_stems": 71
     }
   },
   "baronies": {
@@ -2296,38 +2296,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Nùng people",
+          "name": "Lạc Việt",
           "disambiguation_note": null,
-          "localisation_stem": "Nùng",
+          "localisation_stem": "Lạc Việt",
           "category": "tribe",
-          "feature_subtype": "kra_dai_people",
-          "relationship": "Central Tai people of the Cao Bằng and Lạng Sơn borderlands.",
+          "feature_subtype": "austroasiatic_people",
+          "relationship": "Ancient Austroasiatic people of the northern Vietnamese river valleys and upland frontier.",
           "language_variants": [
             {
-              "form": "Người Nùng",
+              "form": "Lạc Việt",
               "native_script": null,
               "language": "Vietnamese",
               "language_code": "vie",
-              "notes": "Vietnamese designation"
+              "notes": "Vietnamese historical name"
             },
             {
-              "form": "Nóngzú",
-              "native_script": "儂族",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Historical clan and ethnonym (Nong)"
+              "form": "Luòyuè",
+              "native_script": "駱越",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Han-era Chinese chronicle form"
             }
           ],
-          "earliest_attestation_year": 1038,
-          "earliest_attestation_note": "Attested in 11th-century Song and Lý dynasty records via the Nùng Trí Cao polity from 1038 CE.",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -250,
+          "earliest_attestation_note": "Attested in Han Shiji and Bronze Age Đông Sơn culture.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Central Tai-speaking people of the Cao Bằng and Lạng Sơn borderlands.",
-          "source_url": "https://en.wikipedia.org/wiki/N%C3%B9ng_people"
+          "etymology_notes": "Early Vietic Austroasiatic confederation of northern Vietnam.",
+          "source_url": "https://en.wikipedia.org/wiki/L%E1%BA%A1c_Vi%E1%BB%87t"
         },
         {
           "name": "Kỳ Cùng River",

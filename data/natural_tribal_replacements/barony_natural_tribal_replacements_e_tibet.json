@@ -137,31 +137,36 @@
       "target_baronies_audited": 400,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 1200,
-      "unique_replacement_names": 188,
-      "candidates_with_multilingual_variants": 1037,
+      "unique_replacement_names": 194,
+      "candidates_with_multilingual_variants": 1038,
       "wikipedia_source_attached": 1200,
-      "unique_source_urls": 188,
+      "unique_source_urls": 194,
       "candidates_by_category": {
-        "choronym": 53,
-        "hydronym": 474,
-        "oronym": 242,
-        "topographic_feature": 31,
+        "choronym": 47,
+        "hydronym": 486,
+        "oronym": 240,
+        "topographic_feature": 27,
         "tribe": 400
       },
       "baronies_with_category": {
-        "has_choronym_candidate": 53,
+        "has_choronym_candidate": 47,
         "has_hydronym_candidate": 376,
-        "has_oronym_candidate": 234,
-        "has_topographic_feature_candidate": 31,
+        "has_oronym_candidate": 231,
+        "has_topographic_feature_candidate": 26,
         "has_tribe_candidate": 400
       },
       "unique_language_codes": [
+        "asm",
+        "ben",
         "bod",
         "dzo",
+        "hin",
+        "kas",
         "mon",
         "nep",
         "otb",
         "san",
+        "uig",
         "zho"
       ],
       "anachronism_type_counts": {
@@ -173,8 +178,8 @@
         "unattested_indigenous_or_minor": 274
       },
       "candidates_by_attestation_basis": {
-        "attested_pre_867": 805,
-        "indigenous_pre_literate": 395
+        "attested_pre_867": 789,
+        "indigenous_pre_literate": 411
       },
       "bookmark_valid_candidates": {
         "867": 1200,
@@ -182,7 +187,7 @@
         "1178": 1200
       },
       "baronies_with_867_valid_candidate": 400,
-      "unique_localisation_stems": 186
+      "unique_localisation_stems": 192
     }
   },
   "baronies": {
@@ -758,8 +763,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -893,8 +898,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -1028,8 +1033,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -1163,8 +1168,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -1298,8 +1303,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -1433,8 +1438,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -1568,8 +1573,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -1703,8 +1708,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -1838,8 +1843,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -1973,8 +1978,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -2108,8 +2113,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -2243,8 +2248,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -2378,8 +2383,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -2513,8 +2518,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -2648,8 +2653,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -2788,38 +2793,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Kunlun_Mountains"
         },
         {
-          "name": "Tibetan Plateau",
+          "name": "Hoh Xil",
           "disambiguation_note": null,
-          "localisation_stem": "Tibetan",
+          "localisation_stem": "Hoh Xil",
           "category": "oronym",
           "feature_subtype": "plateau",
-          "relationship": "Prominent plateau dominating the Nagormo landscape near Hohaséco.",
+          "relationship": "High-altitude intermontane plateau basin enclosing the Hohaseco lakes.",
           "language_variants": [
             {
-              "form": "Mtsho-bod-mtho-sgang",
-              "native_script": "མཚོ་བོད་མཐོ་སྒང",
+              "form": "A-chen Gangs-rgyab",
+              "native_script": "ཨ་ཆེན་གངས་རྒྱབ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name (Mtsho bod mtho sgang)"
+              "notes": "Tibetan regional name Achen Ganggyab"
             },
             {
-              "form": "Qīngzàng Gāoyuán",
-              "native_script": "青藏高原",
+              "form": "Khökh Shil",
+              "native_script": "Хөх шил",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian name Khökh Shil ('blue ridge')"
+            },
+            {
+              "form": "Kěkěxīlǐ",
+              "native_script": "可可西里",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name (Qīngzàng Gāoyuán)"
+              "notes": "Chinese transcription Kekexili"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Described as the high plateau of Bod/Tubo in Tang-era geographical accounts (7th century CE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Indigenous pre-literate Mongolian and Tibetan steppe-plateau nomenclature",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Highest and largest plateau in the world, encompassing Amdo, Kham, Ü-Tsang, and Ngari.",
-          "source_url": "https://en.wikipedia.org/wiki/Tibetan_Plateau"
+          "etymology_notes": "From Mongolian Khökh Shil ('blue mountain ridge'); high uninhabited basin south of the Kunlun Mountains.",
+          "source_url": "https://en.wikipedia.org/wiki/Hoh_Xil"
         }
       ]
     },
@@ -2916,38 +2928,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Kunlun_Mountains"
         },
         {
-          "name": "Tibetan Plateau",
+          "name": "Tanggula Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Tibetan",
+          "localisation_stem": "Tanggula",
           "category": "oronym",
-          "feature_subtype": "plateau",
-          "relationship": "Prominent plateau dominating the Nagormo landscape near Ragba'ngadung.",
+          "feature_subtype": "mountain_range",
+          "relationship": "Major plateau mountain chain bounding the southern edge of the Ragbangadung highlands.",
           "language_variants": [
             {
-              "form": "Mtsho-bod-mtho-sgang",
-              "native_script": "མཚོ་བོད་མཐོ་སྒང",
+              "form": "gDang-la",
+              "native_script": "གདང་ལ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name (Mtsho bod mtho sgang)"
+              "notes": "Tibetan mountain range name Dang-la"
             },
             {
-              "form": "Qīngzàng Gāoyuán",
-              "native_script": "青藏高原",
+              "form": "Tánggǔlā Shān",
+              "native_script": "唐古拉山",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name (Qīngzàng Gāoyuán)"
+              "notes": "Chinese name Tanggula Shan"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Described as the high plateau of Bod/Tubo in Tang-era geographical accounts (7th century CE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Highest and largest plateau in the world, encompassing Amdo, Kham, Ü-Tsang, and Ngari.",
-          "source_url": "https://en.wikipedia.org/wiki/Tibetan_Plateau"
+          "etymology_notes": "From Tibetan Dang-la; central Tibetan range forming the watershed between the Yangtze and Salween-endorheic basins.",
+          "source_url": "https://en.wikipedia.org/wiki/Tanggula_Mountains"
         }
       ]
     },
@@ -3138,38 +3150,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tuyuhun"
         },
         {
-          "name": "Lake Ayakkum",
+          "name": "Ulugh Muztagh",
           "disambiguation_note": null,
-          "localisation_stem": "Ayakkum",
-          "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Major lake draining or bordering the Nagormo highlands near Aqqikkol.",
+          "localisation_stem": "Ulugh Muztagh",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Towering glaciated Kunlun peak overlooking the southern rim of the Aqqikkol basin.",
           "language_variants": [
             {
-              "form": "A-yag-khum-mtsho",
-              "native_script": "ཨ་ཡག་ཁུམ་མཚོ",
-              "language": "Tibetan",
-              "language_code": "bod",
-              "notes": "Tibetan transcription"
+              "form": "Ulugh Muztagh",
+              "native_script": "ئۇلۇغ مۇزتاغ",
+              "language": "Uyghur",
+              "language_code": "uig",
+              "notes": "Uyghur name meaning 'great ice mountain'"
             },
             {
-              "form": "Āyákèkùmù Hú",
-              "native_script": "阿牙克庫木湖",
+              "form": "Wūlǔkè Mùzītagé",
+              "native_script": "烏魯克木孜塔格",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription (Āyákèkùmùhú)"
+              "notes": "Chinese transcription"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "Attested in early modern Turkic and Qing-era descriptions of the Kumkol basin (c. 17th century CE).",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Indigenous pre-literate Turkic mountain nomenclature of the Kunlun borderlands",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Large endorheic salt lake in the Kumkol basin between the Altyn-Tagh and Kunlun Mountains.",
-          "source_url": "https://en.wikipedia.org/wiki/Lake_Ayakkum"
+          "etymology_notes": "From Uyghur ulugh ('great') and muztagh ('ice mountain'); highest peak of the Arka Tagh.",
+          "source_url": "https://en.wikipedia.org/wiki/Ulugh_Muztagh"
         },
         {
           "name": "Altyn-Tagh",
@@ -3266,38 +3278,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tuyuhun"
         },
         {
-          "name": "Lake Ayakkum",
+          "name": "Qiemo River",
           "disambiguation_note": null,
-          "localisation_stem": "Ayakkum",
+          "localisation_stem": "Qiemo",
           "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Major lake draining or bordering the Nagormo highlands near Kytkol.",
+          "feature_subtype": "river",
+          "relationship": "Endorheic Tarim river rising in the Kunlun ridges adjacent to the Kytkol basin.",
           "language_variants": [
             {
-              "form": "A-yag-khum-mtsho",
-              "native_script": "ཨ་ཡག་ཁུམ་མཚོ",
-              "language": "Tibetan",
-              "language_code": "bod",
-              "notes": "Tibetan transcription"
+              "form": "Cherchen Darya",
+              "native_script": "چەرچەن دەرياسى",
+              "language": "Uyghur",
+              "language_code": "uig",
+              "notes": "Uyghur river name Cherchen Darya"
             },
             {
-              "form": "Āyákèkùmù Hú",
-              "native_script": "阿牙克庫木湖",
+              "form": "Qiěmò Hé",
+              "native_script": "且末河",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription (Āyákèkùmùhú)"
+              "notes": "Chinese name Qiemo He"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "Attested in early modern Turkic and Qing-era descriptions of the Kumkol basin (c. 17th century CE).",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -100,
+          "earliest_attestation_note": "c. 100 BCE (Han dynasty Book of Han on the Qiemo oasis)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Large endorheic salt lake in the Kumkol basin between the Altyn-Tagh and Kunlun Mountains.",
-          "source_url": "https://en.wikipedia.org/wiki/Lake_Ayakkum"
+          "etymology_notes": "Known in Uyghur as Cherchen Darya and in Chinese as Qiemo He; drains the northern Kunlun slopes into Lop Nor.",
+          "source_url": "https://en.wikipedia.org/wiki/Qiemo_River"
         },
         {
           "name": "Altyn-Tagh",
@@ -3428,45 +3440,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Kunlun_Mountains"
         },
         {
-          "name": "Qaidam Basin",
+          "name": "Altyn-Tagh",
           "disambiguation_note": null,
-          "localisation_stem": "Qaidam",
-          "category": "topographic_feature",
-          "feature_subtype": "valley",
-          "relationship": "Major valley shaping the terrain around Lenghu in Nagormo.",
+          "localisation_stem": "Altyn-Tagh",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Mountain range framing the northern margin of the Lenghu desert.",
           "language_variants": [
             {
-              "form": "Tshwa-'dam",
-              "native_script": "ཚྭ་འདམ",
+              "form": "Al-tin-ri-rgyud",
+              "native_script": "ཨལ་ཏིན་རི་རྒྱུད",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name (Tshwa 'dam, 'Salt Marsh')"
+              "notes": "Tibetan transcription"
             },
             {
-              "form": "Cháidámù Péndì",
-              "native_script": "柴達木盆地",
+              "form": "Ā'ěrjīn Shān",
+              "native_script": "阿爾金山",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription (Cháidámù Péndì)"
-            },
-            {
-              "form": "Tsaydam",
-              "native_script": "Цайдам",
-              "language": "Mongolian",
-              "language_code": "mon",
-              "notes": "Mongolian name (Tsaidam)"
+              "notes": "Chinese transcription (Ā'ěrjīnshān)"
             }
           ],
-          "earliest_attestation_year": 350,
-          "earliest_attestation_note": "Attested in Tuyuhun-era Chinese and Tibetan records of the salt-marsh basin (4th century CE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Attested in medieval Turkic and Song-era frontier itineraries (c. 11th century CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mongolian *Tsaidam* / Tibetan *Tshwa 'dam* ('salt marsh'); hyperarid intermontane basin of Nagormo and Tuyuhun.",
-          "source_url": "https://en.wikipedia.org/wiki/Qaidam_Basin"
+          "etymology_notes": "From Turkic *Altın Dağ* ('Gold Mountain'); range separating the Qaidam Basin from the Tarim Basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Altyn-Tagh"
         }
       ]
     },
@@ -3563,45 +3568,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Kunlun_Mountains"
         },
         {
-          "name": "Qaidam Basin",
+          "name": "Golmud River",
           "disambiguation_note": null,
-          "localisation_stem": "Qaidam",
-          "category": "topographic_feature",
-          "feature_subtype": "valley",
-          "relationship": "Major valley shaping the terrain around Urtmoron in Nagormo.",
+          "localisation_stem": "Golmud",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Qaidam river flowing north from the Kunlun Mountains into Qarhan Playa near Urtmoron.",
           "language_variants": [
             {
-              "form": "Tshwa-'dam",
-              "native_script": "ཚྭ་འདམ",
+              "form": "Na-gor-mo Chu",
+              "native_script": "ན་གོར་མོ་ཆུ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name (Tshwa 'dam, 'Salt Marsh')"
+              "notes": "Tibetan river name Na-gor-mo Chu"
             },
             {
-              "form": "Cháidámù Péndì",
-              "native_script": "柴達木盆地",
+              "form": "Gé'ěrmù Hé",
+              "native_script": "格爾木河",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription (Cháidámù Péndì)"
+              "notes": "Chinese name Ge'ermu He"
             },
             {
-              "form": "Tsaydam",
-              "native_script": "Цайдам",
+              "form": "Golmod",
+              "native_script": "Голмод",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name (Tsaidam)"
+              "notes": "Mongolian name Golmod ('river groves')"
             }
           ],
-          "earliest_attestation_year": 350,
-          "earliest_attestation_note": "Attested in Tuyuhun-era Chinese and Tibetan records of the salt-marsh basin (4th century CE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Indigenous pre-literate Mongolian and Tibetan hydronym of the Qaidam Basin",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mongolian *Tsaidam* / Tibetan *Tshwa 'dam* ('salt marsh'); hyperarid intermontane basin of Nagormo and Tuyuhun.",
-          "source_url": "https://en.wikipedia.org/wiki/Qaidam_Basin"
+          "etymology_notes": "From Mongolian Golmod ('rivers'); drains the Kunlun glaciers across the southern Qaidam flats.",
+          "source_url": "https://en.wikipedia.org/wiki/Golmud_River"
         }
       ]
     },
@@ -4893,38 +4898,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Tangut_people"
         },
         {
-          "name": "Ngoring Lake",
+          "name": "Bayan Har Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Ngoring",
-          "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Major lake draining or bordering the Qumarleb highlands near Matö.",
+          "localisation_stem": "Bayan Har",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Major Kunlun branch forming the southern divide of the Mato-Ngoring headwaters.",
           "language_variants": [
             {
-              "form": "Mtsho-sngo-rengs",
-              "native_script": "མཚོ་སྔོ་རེངས",
+              "form": "Ba-yan-ha-ra",
+              "native_script": "བ་ཡན་ཧ་ར",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name (Mtsho sngo rengs, 'Long Blue Lake')"
+              "notes": "Tibetan transcription"
             },
             {
-              "form": "Èlíng Hú",
-              "native_script": "鄂陵湖",
+              "form": "Bāyánkālā Shān",
+              "native_script": "巴顏喀拉山",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription (Èlínghú)"
+              "notes": "Chinese transcription (Bāyánkālāshān)"
+            },
+            {
+              "form": "Bayan khar",
+              "native_script": "Баян хар",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian name ('Rich Black Mountains')"
             }
           ],
-          "earliest_attestation_year": 635,
-          "earliest_attestation_note": "Attested in Tang dynasty accounts of the Yellow River headwaters (7th century CE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "Attested in Oirat Mongol and Qing-era geographical records (c. 17th century CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Large alpine lake fed by the upper Yellow River immediately east of Gyaring Lake.",
-          "source_url": "https://en.wikipedia.org/wiki/Ngoring_Lake"
+          "etymology_notes": "From Mongolian *Bayan Khara*; mountain range dividing the Yellow River and Yangtze basins in Qumarleb and Golog.",
+          "source_url": "https://en.wikipedia.org/wiki/Bayan_Har_Mountains"
         },
         {
           "name": "Gyaring Lake",
@@ -7465,38 +7477,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Tuyuhun"
         },
         {
-          "name": "Datong River",
+          "name": "Qinghai Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Datong",
+          "localisation_stem": "Qinghai",
           "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river draining or bordering the Xining highlands near Serkok.",
+          "feature_subtype": "lake",
+          "relationship": "Vast plateau salt lake lying just west of the Xining-Datong basin.",
           "language_variants": [
             {
-              "form": "'Ju-lag-chu",
-              "native_script": "འཇུ་ལག་ཆུ",
+              "form": "Mtsho-sngon-po",
+              "native_script": "མཚོ་སྔོན་པོ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name ('Ju lag chu)"
+              "notes": "Tibetan name (Mtsho sngon po, 'Blue Lake')"
             },
             {
-              "form": "Dàtōng Hé",
-              "native_script": "大通河",
+              "form": "Qīnghǎi Hú",
+              "native_script": "青海湖",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name (Dàtōnghé)"
+              "notes": "Chinese name (Qīnghǎihú)"
+            },
+            {
+              "form": "Khökh nuur",
+              "native_script": "Хөх нуур",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian name (Khökh nuur, 'Kokonor')"
             }
           ],
           "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Haomen River in Han dynasty geographical records (c. 1st century BCE).",
+          "earliest_attestation_note": "1st century BCE (attested as Xihai 'Western Sea' in Han chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Principal tributary of the Huangshui River rising in the Qilian Mountains and flowing past Datong.",
-          "source_url": "https://en.wikipedia.org/wiki/Datong_River"
+          "etymology_notes": "Largest salt lake on the Tibetan Plateau, known as Tso Ngonpo in Tibetan and Kokonor in Mongolian.",
+          "source_url": "https://en.wikipedia.org/wiki/Qinghai_Lake"
         },
         {
           "name": "Huangshui River",
@@ -10962,38 +10981,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Sutlej"
         },
         {
-          "name": "Kamet",
+          "name": "Sengge Zangbo",
           "disambiguation_note": null,
-          "localisation_stem": "Kamet",
-          "category": "oronym",
-          "feature_subtype": "mountain",
-          "relationship": "Prominent mountain dominating the Ngari landscape near Trashigang.",
+          "localisation_stem": "Sengge Zangbo",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Upper Indus headwater stream flowing northwest past Trashigang in Ngari.",
           "language_variants": [
             {
-              "form": "Ka-med",
-              "native_script": "ཀ་མེད",
+              "form": "Seng-ge Kha-'bab",
+              "native_script": "སེང་གེ་ཁ་འབབ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name (Ka med / Kangmed)"
+              "notes": "Tibetan name Seng-ge Kha-'bab ('lion-mouth river')"
             },
             {
-              "form": "Kāmēta",
-              "native_script": "कामेत",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskritized Himalayan form"
+              "form": "Shīquán Hé",
+              "native_script": "獅泉河",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Chinese calque Shiquan He ('lion spring river')"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "Attested in early modern Tibetan and Garhwali frontier itineraries (c. 17th century CE).",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": 600,
+          "earliest_attestation_note": "Early Tibetan geographical lore of the four sacred rivers of Mount Kailash",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Tibetan *Kangmed* ('Lower Snows'); 7,756 m peak on the southern border of Guge near Tsaparang.",
-          "source_url": "https://en.wikipedia.org/wiki/Kamet"
+          "etymology_notes": "From Tibetan Seng-ge ('lion'); the main upper headstream of the Indus flowing through western Ngari.",
+          "source_url": "https://en.wikipedia.org/wiki/Sengge_Zangbo"
         }
       ]
     },
@@ -11553,31 +11572,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Tangra_Yumco"
         },
         {
-          "name": "Dagze Co",
+          "name": "Zhari Namco",
           "disambiguation_note": null,
-          "localisation_stem": "Dagze Co",
+          "localisation_stem": "Zhari Namco",
           "category": "hydronym",
           "feature_subtype": "lake",
-          "relationship": "Major lake draining or bordering the Nyima highlands near Ladoi.",
+          "relationship": "Major Changtang salt lake lying south of the Tangra Yumco basin near Ladoi.",
           "language_variants": [
             {
-              "form": "Stag-rtse-mtsho",
-              "native_script": "སྟག་རྩེ་མཚོ",
+              "form": "bKra-ri gNam-mtsho",
+              "native_script": "བཀྲ་རི གནམ་མཚོ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name (Stag rtse mtsho)"
+              "notes": "Tibetan name (Bkra ri gnam mtsho)"
             }
           ],
-          "earliest_attestation_year": 1400,
-          "earliest_attestation_note": "Attested in Tibetan itineraries of the Nyima-Changtang lake basin (c. 15th century CE).",
+          "earliest_attestation_year": 1200,
+          "earliest_attestation_note": "Attested in Tibetan Bön and Buddhist pilgrimage itineraries of western Tibet (c. 13th century CE).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Endorheic salt lake in Nyima north of Tangra Yumco.",
-          "source_url": "https://en.wikipedia.org/wiki/Dagze_Co"
+          "etymology_notes": "Large sacred saltwater lake in Coqen, revered as one of the great sacred lakes of Zhangzhung.",
+          "source_url": "https://en.wikipedia.org/wiki/Zhari_Namco"
         }
       ]
     },
@@ -13794,45 +13813,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yarlung_Tsangpo"
         },
         {
-          "name": "Himalayas",
+          "name": "Lake Manasarovar",
           "disambiguation_note": null,
-          "localisation_stem": "Himalayas",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Prominent mountain range dominating the Purang landscape near Labrang.",
+          "localisation_stem": "Manasarovar",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Sacred freshwater lake of Purang west of the upper Yarlung Tsangpo headwaters near Labrang.",
           "language_variants": [
             {
-              "form": "Hi-ma-la-ya",
-              "native_script": "ཧི་མ་ལ་ཡ",
+              "form": "Ma-pham-g.yu-mtsho",
+              "native_script": "མ་ཕམ་གཡུ་མཚོ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan form (Hi ma la ya)"
+              "notes": "Tibetan name (Ma pham g.yu mtsho)"
             },
             {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
+              "form": "Mānasarōvara",
+              "native_script": "मानसरोवर",
               "language": "Sanskrit",
               "language_code": "san",
-              "notes": "Sanskrit name (Himālaya, 'Abode of Snow')"
-            },
-            {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
-              "language": "Nepali",
-              "language_code": "nep",
-              "notes": "Nepali name"
+              "notes": "Sanskrit name (Mānasasarovara)"
             }
           ],
-          "earliest_attestation_year": -1500,
-          "earliest_attestation_note": "Attested as Himavat in the Rigveda (c. 1500 BCE).",
+          "earliest_attestation_year": -300,
+          "earliest_attestation_note": "Attested as Mānasasarovara in Sanskrit epics and Puranas (c. 3rd century BCE).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Sanskrit *hima* ('snow') + *ālaya* ('abode'); great mountain arc bordering Purang, Guge, and Mustang.",
-          "source_url": "https://en.wikipedia.org/wiki/Himalayas"
+          "etymology_notes": "Sacred freshwater lake in Purang south of Mount Kailash, known as Mapham Yumtso in Tibetan.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Manasarovar"
         }
       ]
     },
@@ -13936,45 +13948,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yarlung_Tsangpo"
         },
         {
-          "name": "Himalayas",
+          "name": "Lake Rakshastal",
           "disambiguation_note": null,
-          "localisation_stem": "Himalayas",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Prominent mountain range dominating the Purang landscape near Baryang.",
+          "localisation_stem": "Rakshastal",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "High-altitude saltwater lake of Purang west of Baryang.",
           "language_variants": [
             {
-              "form": "Hi-ma-la-ya",
-              "native_script": "ཧི་མ་ལ་ཡ",
+              "form": "La-ngag mTsho",
+              "native_script": "ལ་ངག་མཚོ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan form (Hi ma la ya)"
+              "notes": "Tibetan lake name La-ngag mTsho"
             },
             {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
+              "form": "Rākṣasatāla",
+              "native_script": "राक्षसताल",
               "language": "Sanskrit",
               "language_code": "san",
-              "notes": "Sanskrit name (Himālaya, 'Abode of Snow')"
-            },
-            {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
-              "language": "Nepali",
-              "language_code": "nep",
-              "notes": "Nepali name"
+              "notes": "Classical Sanskrit name Rakshasatala"
             }
           ],
-          "earliest_attestation_year": -1500,
-          "earliest_attestation_note": "Attested as Himavat in the Rigveda (c. 1500 BCE).",
+          "earliest_attestation_year": -300,
+          "earliest_attestation_note": "Ancient Sanskrit Puranic geography and early Tibetan sacred-lake traditions",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Sanskrit *hima* ('snow') + *ālaya* ('abode'); great mountain arc bordering Purang, Guge, and Mustang.",
-          "source_url": "https://en.wikipedia.org/wiki/Himalayas"
+          "etymology_notes": "Known in Tibetan as Langag Tso; saline twin lake immediately west of Lake Manasarovar.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Rakshastal"
         }
       ]
     },
@@ -14078,45 +14083,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yarlung_Tsangpo"
         },
         {
-          "name": "Himalayas",
+          "name": "Mount Kailash",
           "disambiguation_note": null,
-          "localisation_stem": "Himalayas",
+          "localisation_stem": "Kailash",
           "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Prominent mountain range dominating the Purang landscape near Penchi.",
+          "feature_subtype": "mountain",
+          "relationship": "Sacred Transhimalayan peak towering northwest of Penchi in Purang.",
           "language_variants": [
             {
-              "form": "Hi-ma-la-ya",
-              "native_script": "ཧི་མ་ལ་ཡ",
+              "form": "Gangs-rin-po-che",
+              "native_script": "གངས་རིན་པོ་ཆེ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan form (Hi ma la ya)"
+              "notes": "Tibetan name (Gangs rin po che, 'Precious Jewel of Snow')"
             },
             {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
+              "form": "Kailāsa",
+              "native_script": "कैलास",
               "language": "Sanskrit",
               "language_code": "san",
-              "notes": "Sanskrit name (Himālaya, 'Abode of Snow')"
-            },
-            {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
-              "language": "Nepali",
-              "language_code": "nep",
-              "notes": "Nepali name"
+              "notes": "Sanskrit name (Kailāsa)"
             }
           ],
-          "earliest_attestation_year": -1500,
-          "earliest_attestation_note": "Attested as Himavat in the Rigveda (c. 1500 BCE).",
+          "earliest_attestation_year": -300,
+          "earliest_attestation_note": "Attested as Kailāsa in Sanskrit epics and Puranic literature (c. 3rd century BCE).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Sanskrit *hima* ('snow') + *ālaya* ('abode'); great mountain arc bordering Purang, Guge, and Mustang.",
-          "source_url": "https://en.wikipedia.org/wiki/Himalayas"
+          "etymology_notes": "Sacred peak of the Transhimalaya in Purang and Ngari, revered in Hinduism, Buddhism, Jainism, and Bön.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Kailash"
         }
       ]
     },
@@ -14220,45 +14218,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Yarlung_Tsangpo"
         },
         {
-          "name": "Himalayas",
+          "name": "Gurla Mandhata",
           "disambiguation_note": null,
-          "localisation_stem": "Himalayas",
+          "localisation_stem": "Gurla Mandhata",
           "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Prominent mountain range dominating the Purang landscape near Yagra.",
+          "feature_subtype": "mountain",
+          "relationship": "Highest peak of the Nalakankar range overlooking the Purang basin near Yagra.",
           "language_variants": [
             {
-              "form": "Hi-ma-la-ya",
-              "native_script": "ཧི་མ་ལ་ཡ",
+              "form": "gNas-mo Na-nyi",
+              "native_script": "གནས་མོ་ན་ཉི",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan form (Hi ma la ya)"
+              "notes": "Tibetan name Naimona'nyi"
             },
             {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskrit name (Himālaya, 'Abode of Snow')"
+              "form": "Nàmùní Fēng",
+              "native_script": "納木尼峰",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Chinese transcription Namuni Feng"
             },
             {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
-              "language": "Nepali",
-              "language_code": "nep",
-              "notes": "Nepali name"
+              "form": "Gurlā Māndhātā",
+              "native_script": "गुर्ला मांधाता",
+              "language": "Hindi",
+              "language_code": "hin",
+              "notes": "Indo-Aryan name Gurla Mandhata"
             }
           ],
-          "earliest_attestation_year": -1500,
-          "earliest_attestation_note": "Attested as Himavat in the Rigveda (c. 1500 BCE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Medieval Indo-Tibetan pilgrimage lore around Purang and Manasarovar",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Sanskrit *hima* ('snow') + *ālaya* ('abode'); great mountain arc bordering Purang, Guge, and Mustang.",
-          "source_url": "https://en.wikipedia.org/wiki/Himalayas"
+          "etymology_notes": "Known in Tibetan as Naimona'nyi; prominent glaciated massif south of Lake Manasarovar.",
+          "source_url": "https://en.wikipedia.org/wiki/Gurla_Mandhata"
         }
       ]
     },
@@ -14611,31 +14609,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Xianshui_River"
         },
         {
-          "name": "Daxue Mountains",
+          "name": "Yalong River",
           "disambiguation_note": null,
-          "localisation_stem": "Daxue",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Prominent mountain range dominating the Chakla landscape near Dawu.",
+          "localisation_stem": "Yalong",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Yangtze tributary receiving the Xianshui River flowing through Dawu.",
           "language_variants": [
             {
-              "form": "Dàxuě Shān",
-              "native_script": "大雪山",
+              "form": "Nyag-chu",
+              "native_script": "ཉག་ཆུ",
+              "language": "Tibetan",
+              "language_code": "bod",
+              "notes": "Tibetan name (Nyag chu)"
+            },
+            {
+              "form": "Yǎlóng Jiāng",
+              "native_script": "雅礱江",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name (Dàxuěshān, 'Great Snow Mountains')"
+              "notes": "Chinese name (Yǎlóngjiāng)"
             }
           ],
-          "earliest_attestation_year": 1400,
-          "earliest_attestation_note": "Attested in Ming-era gazetteers of the Chakla-Dartsedo frontier (c. 15th century CE).",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -100,
+          "earliest_attestation_note": "Attested as Ruoshui in Han dynasty chronicles (1st century BCE).",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "High range of the Hengduan system culminating in Mount Gongga across Chakla.",
-          "source_url": "https://en.wikipedia.org/wiki/Daxue_Mountains"
+          "etymology_notes": "Largest tributary of the Jinsha River, known in Tibetan as Nyagchu, flowing through Dege, Garze, Nyagrong, and Litang.",
+          "source_url": "https://en.wikipedia.org/wiki/Yalong_River"
         }
       ]
     },
@@ -18891,38 +18896,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Dadu_River"
         },
         {
-          "name": "Min River",
-          "disambiguation_note": "Sichuan",
-          "localisation_stem": "Min",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river draining or bordering the Gyalrong highlands near Zainlha.",
+          "name": "Mount Siguniang",
+          "disambiguation_note": null,
+          "localisation_stem": "Siguniang",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Highest peak of the Qionglai range towering on the eastern border of Zainlha.",
           "language_variants": [
             {
-              "form": "Zung-chu",
-              "native_script": "ཟུང་ཆུ",
+              "form": "sKu-bla",
+              "native_script": "སྐུ་བླ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name for upper Min (Zung chu)"
+              "notes": "Traditional Gyalrong-Tibetan sacred name Mount Skubla"
             },
             {
-              "form": "Mín Jiāng",
-              "native_script": "岷江",
+              "form": "Sìgūniáng Shān",
+              "native_script": "四姑娘山",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name (Mínjiāng)"
+              "notes": "Chinese name Siguniang Shan"
             }
           ],
-          "earliest_attestation_year": -300,
-          "earliest_attestation_note": "Attested in the Tribute of Yu (Yu Gong) and Qin-era Shu records (c. 3rd century BCE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Indigenous pre-literate Gyalrong sacred mountain tradition (Mount Skubla)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major Yangtze tributary rising in the Min Mountains near Sungqu (Songpan).",
-          "source_url": "https://en.wikipedia.org/wiki/Min_River_(Sichuan)"
+          "etymology_notes": "Known locally in Gyalrong Tibetan as Mount Skubla; glaciated massif separating Xiaojin (Zainlha) from the Min basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Siguniang"
         }
       ]
     },
@@ -19518,38 +19523,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tibetans"
         },
         {
-          "name": "Zoige Marsh",
+          "name": "Bailong River",
           "disambiguation_note": null,
-          "localisation_stem": "Zoige",
-          "category": "topographic_feature",
-          "feature_subtype": "marsh",
-          "relationship": "Major marsh shaping the terrain around Yunglro in Gyalrong.",
+          "localisation_stem": "Bailong",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Upper Yangtze tributary rising along the northeastern edge of Zoige near Yunglro.",
           "language_variants": [
             {
-              "form": "Mdzod-dge",
-              "native_script": "མཛོད་དགེ",
+              "form": "'Brug-chu",
+              "native_script": "འབྲུག་ཆུ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name (Mdzod dge)"
+              "notes": "Tibetan name ('Brug chu, 'Dragon River')"
             },
             {
-              "form": "Ruò'ěrgài Shīdì",
-              "native_script": "若爾蓋濕地",
+              "form": "Báilóng Jiāng",
+              "native_script": "白龍江",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name (Ruò'ěrgài Shīdì)"
+              "notes": "Chinese name (Báilóngjiāng, 'White Dragon River')"
             }
           ],
-          "earliest_attestation_year": 1400,
-          "earliest_attestation_note": "Attested in Tibetan chronicles of eastern Amdo and Ngawa (c. 15th century CE).",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -100,
+          "earliest_attestation_note": "1st century BCE (attested as Baishui in Han records of Longnan/Wudu)",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Vast high-altitude peatland and marsh along the upper Yellow River bend in northern Gyalrong.",
-          "source_url": "https://en.wikipedia.org/wiki/Zoige_Marsh"
+          "etymology_notes": "Known in Tibetan as Drugchu ('Dragon River'), flowing through Tewo and Zhugqu.",
+          "source_url": "https://en.wikipedia.org/wiki/Bailong_River"
         },
         {
           "name": "Yellow River",
@@ -22224,38 +22229,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Parlung_Tsangpo"
         },
         {
-          "name": "Ranwu Lake",
+          "name": "Yiong Tsangpo",
           "disambiguation_note": null,
-          "localisation_stem": "Ranwu",
+          "localisation_stem": "Yiong Tsangpo",
           "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Major lake draining or bordering the Boyul highlands near Bomê.",
+          "feature_subtype": "river",
+          "relationship": "Major tributary joining the Parlung Tsangpo in Bomê County.",
           "language_variants": [
             {
-              "form": "Rag-wa-mtsho",
-              "native_script": "རག་ཝ་མཚོ",
+              "form": "Yid-'ong gTsang-po",
+              "native_script": "ཡིད་འོང་གཙང་པོ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name (Rag wa mtsho)"
+              "notes": "Tibetan river name Yid-'ong gTsang-po"
             },
             {
-              "form": "Ránwū Hú",
-              "native_script": "然烏湖",
+              "form": "Yìgòng Zàngbù",
+              "native_script": "易貢藏布",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription (Ránwūhú)"
+              "notes": "Chinese transcription Yigong Zangbu"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "Attested in early modern Tibetan itineraries of Baxoi and Boyul (c. 17th century CE).",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Indigenous pre-literate Tibetan hydronym of Kongpo-Poyul",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Glacial landslide lake at the headwaters of the Parlung Tsangpo in Baxoi.",
-          "source_url": "https://en.wikipedia.org/wiki/Ranwu_Lake"
+          "etymology_notes": "From Tibetan Yid-'ong ('pleasant/delightful'); rises in the Nyenchen Tanglha range and flows through Bomê.",
+          "source_url": "https://en.wikipedia.org/wiki/Yiong_Tsangpo"
         }
       ]
     },
@@ -24101,8 +24106,8 @@
               "notes": "Chinese name (Nùjiāng)"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -24236,8 +24241,8 @@
               "notes": "Chinese name (Nùjiāng)"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -24371,8 +24376,8 @@
               "notes": "Chinese name (Nùjiāng)"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -24506,8 +24511,8 @@
               "notes": "Chinese name (Nùjiāng)"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -24641,8 +24646,8 @@
               "notes": "Chinese name (Nùjiāng)"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -24776,8 +24781,8 @@
               "notes": "Chinese name (Nùjiāng)"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -24911,8 +24916,8 @@
               "notes": "Chinese name (Nùjiāng)"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -26717,8 +26722,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -26852,8 +26857,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -27066,38 +27071,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tibetans"
         },
         {
-          "name": "Nyang River",
+          "name": "Namcha Barwa",
           "disambiguation_note": null,
-          "localisation_stem": "Nyang",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "River bordering or adjoining Pagsum.",
+          "localisation_stem": "Namcha Barwa",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Towering eastern Himalayan peak overlooking the Gongbo bend across from Gyala Peri.",
           "language_variants": [
             {
-              "form": "Nyang-chu",
-              "native_script": "ཉང་ཆུ",
+              "form": "gNam-lcags 'Bar-ba",
+              "native_script": "གནམ་ལྕགས འབར་བ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan river name in Kongpo/Nyingchi"
+              "notes": "Tibetan name ('Sky Iron Burning')"
             },
             {
-              "form": "Níyáng Hé",
-              "native_script": "尼洋河",
+              "form": "Nánjiābāwǎ Fēng",
+              "native_script": "南迦巴瓦峰",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name"
+              "notes": "Chinese transcription"
             }
           ],
-          "earliest_attestation_year": 800,
-          "earliest_attestation_note": "Attested in early Tibetan geographical and Kongpo inscriptions (c. 8th-9th century CE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1200,
+          "earliest_attestation_note": "Attested in Tibetan Bon and Nyingma sacred geography of Kongpo and Pemako (c. 13th century CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Named after the Nyang clan/region of Kongpo; chu means 'water/river' in Tibetan.",
-          "source_url": "https://en.wikipedia.org/wiki/Nyang_River"
+          "etymology_notes": "From Tibetan gnam-lcags ('meteoric iron/thunderbolt') + 'bar-ba ('blazing').",
+          "source_url": "https://en.wikipedia.org/wiki/Namcha_Barwa"
         },
         {
           "name": "Gyala Peri",
@@ -27756,8 +27761,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -27790,8 +27795,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 800,
-          "earliest_attestation_note": "Attested in Old Tibetan sources from the imperial era (c. 8th-9th century CE).",
+          "earliest_attestation_year": 750,
+          "earliest_attestation_note": "8th-century Tibetan imperial-era sacred mountain traditions (Padmasambhava cycle)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -27884,8 +27889,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -27918,8 +27923,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 800,
-          "earliest_attestation_note": "Attested in Old Tibetan sources from the imperial era (c. 8th-9th century CE).",
+          "earliest_attestation_year": 750,
+          "earliest_attestation_note": "8th-century Tibetan imperial-era sacred mountain traditions (Padmasambhava cycle)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -28012,8 +28017,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -28046,8 +28051,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 800,
-          "earliest_attestation_note": "Attested in Old Tibetan sources from the imperial era (c. 8th-9th century CE).",
+          "earliest_attestation_year": 750,
+          "earliest_attestation_note": "8th-century Tibetan imperial-era sacred mountain traditions (Padmasambhava cycle)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -28140,8 +28145,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -28181,8 +28186,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -28275,8 +28280,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -28316,8 +28321,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -28410,8 +28415,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -28451,8 +28456,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -28545,8 +28550,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -28680,8 +28685,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -28815,8 +28820,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -29462,8 +29467,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -29496,8 +29501,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 800,
-          "earliest_attestation_note": "Attested in Old Tibetan sources from the imperial era (c. 8th-9th century CE).",
+          "earliest_attestation_year": 750,
+          "earliest_attestation_note": "8th-century Tibetan imperial-era sacred mountain traditions (Padmasambhava cycle)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -29590,8 +29595,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -29624,8 +29629,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 800,
-          "earliest_attestation_note": "Attested in Old Tibetan sources from the imperial era (c. 8th-9th century CE).",
+          "earliest_attestation_year": 750,
+          "earliest_attestation_note": "8th-century Tibetan imperial-era sacred mountain traditions (Padmasambhava cycle)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -29718,8 +29723,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -29730,38 +29735,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Salween_River"
         },
         {
-          "name": "Nyenchen Tanglha Mountains",
+          "name": "Sepu Kangri",
           "disambiguation_note": null,
-          "localisation_stem": "Nyenchen Tanglha",
+          "localisation_stem": "Sepu Kangri",
           "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Mountain range in the Biru area.",
+          "feature_subtype": "mountain",
+          "relationship": "Highest peak of the eastern Nyenchen Tanglha standing inside Biru County.",
           "language_variants": [
             {
-              "form": "gNyan-chen Thang-lha Ri-rgyud",
-              "native_script": "གཉན་ཆེན ཐང་ལྶ རི་རྒྱུད",
+              "form": "gSe-phu Gangs-ri",
+              "native_script": "གསེ་ཕུ་གངས་རི",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan range name"
+              "notes": "Tibetan sacred peak name gSe-phu Gangs-ri"
             },
             {
-              "form": "Niànqīng Tánggǔlā Shānmài",
-              "native_script": "念青唐古拉山脈",
+              "form": "Sàipǔ Gāngrì",
+              "native_script": "色浦崗日",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name"
+              "notes": "Chinese transcription"
             }
           ],
-          "earliest_attestation_year": 800,
-          "earliest_attestation_note": "Attested in Old Tibetan sources from the imperial era (c. 8th-9th century CE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Indigenous pre-literate Tibetan mountain tradition in Biru",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Range stretching from Namtso and Lhasa eastwards to Nyingchi and Qamdo.",
-          "source_url": "https://en.wikipedia.org/wiki/Nyenchen_Tanglha_Mountains"
+          "etymology_notes": "Revered in local Bon and Buddhist lore as a sacred snow peak overlooking the upper Salween basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Sepu_Kangri"
         }
       ]
     },
@@ -29846,8 +29851,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -29880,8 +29885,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 800,
-          "earliest_attestation_note": "Attested in Old Tibetan sources from the imperial era (c. 8th-9th century CE).",
+          "earliest_attestation_year": 750,
+          "earliest_attestation_note": "8th-century Tibetan imperial-era sacred mountain traditions (Padmasambhava cycle)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -30114,38 +30119,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Kuri_Chhu"
         },
         {
-          "name": "Bumthang Valley",
+          "name": "Mangde Chhu",
           "disambiguation_note": null,
-          "localisation_stem": "Bumthang",
-          "category": "topographic_feature",
-          "feature_subtype": "valley",
-          "relationship": "Local valley in the Lhuentse area.",
+          "localisation_stem": "Mangde Chhu",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major central Bhutanese river draining the peaks west of Lhuentse and Bumthang.",
           "language_variants": [
             {
-              "form": "Bum-thang",
-              "native_script": "བུམ་ཐང",
+              "form": "Mang-sde Chu",
+              "native_script": "མང་སྡེ་ཆུ",
               "language": "Dzongkha",
               "language_code": "dzo",
-              "notes": "Dzongkha name"
+              "notes": "Dzongkha river name Mang-sde Chu"
             },
             {
-              "form": "Bum-thang",
-              "native_script": "བུམ་ཐང",
+              "form": "Mang-sde Chu",
+              "native_script": "མང་སྡེ་ཆུ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan form"
+              "notes": "Classical Tibetan script form"
             }
           ],
-          "earliest_attestation_year": 800,
-          "earliest_attestation_note": "Attested in Bhutanese traditions of Padmasambhava (8th century CE) and Kurjey.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1400,
+          "earliest_attestation_note": "Attested in Bhutanese chronicles of Trongsa and Mangde (c. 15th century CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Highland valley complex in central Bhutan.",
-          "source_url": "https://en.wikipedia.org/wiki/Bumthang_Valley"
+          "etymology_notes": "Glacial river rising near Gangkhar Puensum and flowing south to join the Manas basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Mangde_Chhu"
         }
       ]
     },
@@ -30991,8 +30996,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -31119,8 +31124,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -31247,8 +31252,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -34377,38 +34382,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Raidak_River"
         },
         {
-          "name": "Paro Valley",
+          "name": "Torsa River",
           "disambiguation_note": null,
-          "localisation_stem": "Paro",
-          "category": "topographic_feature",
-          "feature_subtype": "valley",
-          "relationship": "Local valley in the Thimpu area.",
+          "localisation_stem": "Torsa",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Western Bhutanese river flowing from the Chumbi valley parallel to the Wang Chhu west of Thimpu.",
           "language_variants": [
             {
-              "form": "sPa-ro",
-              "native_script": "སྤ་རོ",
+              "form": "A-mo Chu",
+              "native_script": "ཨ་མོ་ཆུ",
               "language": "Dzongkha",
               "language_code": "dzo",
-              "notes": "Dzongkha valley name"
+              "notes": "Dzongkha name Amo Chhu"
             },
             {
-              "form": "sPa-gro",
-              "native_script": "སྤ་གྲོ",
-              "language": "Tibetan",
-              "language_code": "bod",
-              "notes": "Classical Tibetan spelling"
+              "form": "Torsā",
+              "native_script": "तोर्सा",
+              "language": "Nepali",
+              "language_code": "nep",
+              "notes": "Eastern Himalayan lower-course name Torsa"
+            },
+            {
+              "form": "Tōrṣā",
+              "native_script": "তোর্ষা",
+              "language": "Bengali",
+              "language_code": "ben",
+              "notes": "Bengali duars river name"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in 13th-century CE Bhutanese monastic records.",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE (Kamata-Koch kingdom riverine records)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major agricultural valley of western Bhutan.",
-          "source_url": "https://en.wikipedia.org/wiki/Paro_Valley"
+          "etymology_notes": "Known in Bhutan as Amo Chhu; originates in Tibet's Chumbi valley and flows south through western Bhutan.",
+          "source_url": "https://en.wikipedia.org/wiki/Torsa_River"
         }
       ]
     },
@@ -39368,38 +39380,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Pangong_Tso"
         },
         {
-          "name": "Ngari",
+          "name": "Spanggur Tso",
           "disambiguation_note": null,
-          "localisation_stem": "Ngari",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Traditional regional name encompassing Risum.",
+          "localisation_stem": "Spanggur Tso",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "High-altitude salt lake in western Rutog County just south of Pangong Tso near Risum.",
           "language_variants": [
             {
-              "form": "mNga'-ris",
-              "native_script": "མངའ་རིས",
+              "form": "sPang-sgur mTsho",
+              "native_script": "སྤང་སྒུར་མཚོ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name ('Dominion/Western Tibet')"
+              "notes": "Tibetan lake name sPang-sgur mTsho"
             },
             {
-              "form": "Ālǐ",
-              "native_script": "阿里",
+              "form": "Màndōng Cuò",
+              "native_script": "曼冬錯",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese transcription"
+              "notes": "Chinese name Mandong Cuo"
             }
           ],
-          "earliest_attestation_year": 950,
-          "earliest_attestation_note": "Attested from the 10th century CE as the western Tibetan kingdom of Ngari Korsum.",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Indigenous pre-literate Tibetan hydronym of western Ngari",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Tibetan mnga'-ris ('domain/province'), denoting western Tibet.",
-          "source_url": "https://en.wikipedia.org/wiki/Ngari"
+          "etymology_notes": "Soda-salt lake lying in the Spanggur valley along the Ladakh-Rutog frontier.",
+          "source_url": "https://en.wikipedia.org/wiki/Spanggur_Tso"
         }
       ]
     },
@@ -40301,31 +40313,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Suru_Valley"
         },
         {
-          "name": "Dras River",
+          "name": "Zoji La",
           "disambiguation_note": null,
-          "localisation_stem": "Dras",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "River bordering or adjoining Purig.",
+          "localisation_stem": "Zoji La",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "Strategic Himalayan pass linking Kashmir with the Purig and Suru valleys.",
           "language_variants": [
             {
-              "form": "'Bras-chu",
-              "native_script": "འབྲས་ཆུ",
+              "form": "Zo-ji La",
+              "native_script": "ཟོ་ཇི་ལ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan/Purigpa name"
+              "notes": "Tibetan and Ladakhi pass name Zoji La"
+            },
+            {
+              "form": "Zōjī Lā",
+              "native_script": "ज़ोज़ी ला",
+              "language": "Kashmiri",
+              "language_code": "kas",
+              "notes": "Kashmiri mountain pass name"
             }
           ],
-          "earliest_attestation_year": 1100,
-          "earliest_attestation_note": "Region attested in Kalhana's Rajatarangini (12th century CE) as Hemabab.",
+          "earliest_attestation_year": 1148,
+          "earliest_attestation_note": "12th-century Rajatarangini references to the northern mountain frontier pass of Kashmir",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tributary of the Suru River draining the Zoji La and Dras basin.",
-          "source_url": "https://en.wikipedia.org/wiki/Dras_River"
+          "etymology_notes": "From Ladakhi-Tibetan la ('pass'); high corridor connecting the Sind valley of Kashmir to Dras and Purig.",
+          "source_url": "https://en.wikipedia.org/wiki/Zoji_La"
         }
       ]
     },
@@ -41055,38 +41074,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Yarlung_Tsangpo"
         },
         {
-          "name": "Transhimalaya",
+          "name": "Zhari Namco",
           "disambiguation_note": null,
-          "localisation_stem": "Transhimalaya",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Mountain range in the Sangsang area.",
+          "localisation_stem": "Zhari Namco",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Large sacred salt lake situated north of Sangsang in western Tsang.",
           "language_variants": [
             {
-              "form": "Gangs Ti-se",
-              "native_script": "གངས ཏི་སེ",
+              "form": "bKra-ri gNam-mtsho",
+              "native_script": "བཀྲ་རི གནམ་མཚོ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name (Gangdise)"
-            },
-            {
-              "form": "Gāngdǐsī Shānmài",
-              "native_script": "岡底斯山脈",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese name"
+              "notes": "Tibetan name (Bkra ri gnam mtsho)"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested as the Gangdise/Kailash range in early Tibetan geography (c. 7th century CE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1200,
+          "earliest_attestation_note": "Attested in Tibetan Bön and Buddhist pilgrimage itineraries of western Tibet (c. 13th century CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Mountain system north of the Yarlung Tsangpo including the Gangdise and Nyenchen Tanglha ranges.",
-          "source_url": "https://en.wikipedia.org/wiki/Transhimalaya"
+          "etymology_notes": "Large sacred saltwater lake in Coqen, revered as one of the great sacred lakes of Zhangzhung.",
+          "source_url": "https://en.wikipedia.org/wiki/Zhari_Namco"
         }
       ]
     },
@@ -42312,45 +42324,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yarlung_Tsangpo"
         },
         {
-          "name": "Himalayas",
+          "name": "Lake Pelku",
           "disambiguation_note": null,
-          "localisation_stem": "Himalayas",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Mountain range in the Kyakyaru area.",
+          "localisation_stem": "Pelku",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "High-altitude brackish lake in western Shigatse near Kyakyaru.",
           "language_variants": [
             {
-              "form": "Hi-ma-la-ya",
-              "native_script": "ཧི་མ་ལ་ཡ",
+              "form": "dPal-khud mTsho",
+              "native_script": "དཔལ་ཁུད མཚོ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan loan from Sanskrit"
+              "notes": "Tibetan name (Paiku Co)"
             },
             {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskrit name ('Abode of Snow')"
-            },
-            {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
-              "language": "Nepali",
-              "language_code": "nep",
-              "notes": "Nepali name"
+              "form": "Pèikū Cuò",
+              "native_script": "佩枯錯",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Chinese transcription"
             }
           ],
-          "earliest_attestation_year": -1500,
-          "earliest_attestation_note": "Attested as Himavat in the Rigveda (c. 1500 BCE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Tibetan hydronym; exact earliest written date unattested.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Sanskrit hima ('snow') + ālaya ('abode').",
-          "source_url": "https://en.wikipedia.org/wiki/Himalayas"
+          "etymology_notes": "High-altitude lake in Gyirong/Nyalam north of Shishapangma.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Pelku"
         }
       ]
     },
@@ -42454,45 +42459,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yarlung_Tsangpo"
         },
         {
-          "name": "Himalayas",
+          "name": "Shishapangma",
           "disambiguation_note": null,
-          "localisation_stem": "Himalayas",
+          "localisation_stem": "Shishapangma",
           "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Mountain range in the Changgo area.",
+          "feature_subtype": "mountain",
+          "relationship": "Eight-thousander peak rising in southern Shigatse near Changgo.",
           "language_variants": [
             {
-              "form": "Hi-ma-la-ya",
-              "native_script": "ཧི་མ་ལ་ཡ",
+              "form": "Shi-sha sPang-ma",
+              "native_script": "ཤི་ཤ སྤང་མ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan loan from Sanskrit"
+              "notes": "Tibetan name"
             },
             {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskrit name ('Abode of Snow')"
-            },
-            {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
-              "language": "Nepali",
-              "language_code": "nep",
-              "notes": "Nepali name"
+              "form": "Xīxiàbāngmǎ Fēng",
+              "native_script": "希夏邦馬峰",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Chinese transcription"
             }
           ],
-          "earliest_attestation_year": -1500,
-          "earliest_attestation_note": "Attested as Himavat in the Rigveda (c. 1500 BCE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1100,
+          "earliest_attestation_note": "Attested in Milarepa's 11th-12th century CE biographical traditions in Nyalam/Lapchi.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Sanskrit hima ('snow') + ālaya ('abode').",
-          "source_url": "https://en.wikipedia.org/wiki/Himalayas"
+          "etymology_notes": "Tibetan name meaning 'crest above the grassy plains', located in Nyalam (Tsang).",
+          "source_url": "https://en.wikipedia.org/wiki/Shishapangma"
         }
       ]
     },
@@ -42596,45 +42594,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yarlung_Tsangpo"
         },
         {
-          "name": "Himalayas",
+          "name": "Cho Oyu",
           "disambiguation_note": null,
-          "localisation_stem": "Himalayas",
+          "localisation_stem": "Cho Oyu",
           "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Mountain range in the Lhagcang area.",
+          "feature_subtype": "mountain",
+          "relationship": "High glaciated peak on the southern Tingri-Tsang border near Lhagcang.",
           "language_variants": [
             {
-              "form": "Hi-ma-la-ya",
-              "native_script": "ཧི་མ་ལ་ཡ",
+              "form": "Jo-bo dBu-yu",
+              "native_script": "ཇོ་བོ དབུ་ཡུ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan loan from Sanskrit"
+              "notes": "Tibetan name ('Turquoise Goddess')"
             },
             {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskrit name ('Abode of Snow')"
-            },
-            {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
+              "form": "Coyu",
+              "native_script": "चॊयु",
               "language": "Nepali",
               "language_code": "nep",
-              "notes": "Nepali name"
+              "notes": "Nepali form"
             }
           ],
-          "earliest_attestation_year": -1500,
-          "earliest_attestation_note": "Attested as Himavat in the Rigveda (c. 1500 BCE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Traditional Tibetan-Sherpa oronym on the Tingri-Khumbu border; exact earliest written date unattested.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Sanskrit hima ('snow') + ālaya ('abode').",
-          "source_url": "https://en.wikipedia.org/wiki/Himalayas"
+          "etymology_notes": "From Tibetan jo-bo ('lord/goddess') + gyu ('turquoise').",
+          "source_url": "https://en.wikipedia.org/wiki/Cho_Oyu"
         }
       ]
     },
@@ -43555,45 +43546,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Arun_River"
         },
         {
-          "name": "Tsang",
+          "name": "Yarlung Tsangpo",
           "disambiguation_note": null,
-          "localisation_stem": "Tsang",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Traditional regional name encompassing Lhaze.",
+          "localisation_stem": "Yarlung Tsangpo",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Upper Brahmaputra river flowing eastward directly past Lhaze.",
           "language_variants": [
             {
-              "form": "gTsang",
-              "native_script": "གཙང",
+              "form": "Yar-klungs gTsang-po",
+              "native_script": "ཡར་ཀླུངས་གཙང་པོ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name of west-central Tibet"
+              "notes": "Tibetan name Yar-klungs gTsang-po"
             },
             {
-              "form": "gTsang",
-              "native_script": "གཙང",
-              "language": "Old Tibetan",
-              "language_code": "otb",
-              "notes": "Old Tibetan form"
-            },
-            {
-              "form": "Hòuzàng",
-              "native_script": "後藏",
+              "form": "Yǎlǔ Zàngbù Jiāng",
+              "native_script": "雅魯藏布江",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name"
+              "notes": "Chinese name Yalu Zangbu Jiang"
             }
           ],
           "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Old Tibetan imperial annals (c. 7th century CE) as gTsang.",
+          "earliest_attestation_note": "Attested in Old Tibetan imperial sources (c. 7th century CE) as the river of Yarlung and Tsang.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Historic region of central-western Tibet centered on the upper-middle Yarlung Tsangpo.",
-          "source_url": "https://en.wikipedia.org/wiki/Tsang"
+          "etymology_notes": "Upper course of the Brahmaputra flowing across southern Tibet north of Monyul.",
+          "source_url": "https://en.wikipedia.org/wiki/Yarlung_Tsangpo"
         }
       ]
     },
@@ -44258,45 +44242,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Puma_Yumco"
         },
         {
-          "name": "Himalayas",
+          "name": "Noijin Kangsang",
           "disambiguation_note": null,
-          "localisation_stem": "Himalayas",
+          "localisation_stem": "Noijin Kangsang",
           "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Mountain range in the Kangmar area.",
+          "feature_subtype": "mountain",
+          "relationship": "Glaciated massif rising directly northwest of Kangmar above the Karo La pass.",
           "language_variants": [
             {
-              "form": "Hi-ma-la-ya",
-              "native_script": "ཧི་མ་ལ་ཡ",
+              "form": "gNod-sbyin Gangs-bzang",
+              "native_script": "གནོད་སྦྱིན གངས་བཟང",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan loan from Sanskrit"
+              "notes": "Tibetan name ('Yaksha Good Snow')"
             },
             {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskrit name ('Abode of Snow')"
-            },
-            {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
-              "language": "Nepali",
-              "language_code": "nep",
-              "notes": "Nepali name"
+              "form": "Níngjīn Kàngshā Fēng",
+              "native_script": "寧金抗沙峰",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Chinese transcription"
             }
           ],
-          "earliest_attestation_year": -1500,
-          "earliest_attestation_note": "Attested as Himavat in the Rigveda (c. 1500 BCE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1300,
+          "earliest_attestation_note": "Attested in medieval Tibetan sacred geography of Tsang (c. 14th century CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Sanskrit hima ('snow') + ālaya ('abode').",
-          "source_url": "https://en.wikipedia.org/wiki/Himalayas"
+          "etymology_notes": "Highest peak of the Lhagoi Kangri range between Gyangzê and Yamdrok.",
+          "source_url": "https://en.wikipedia.org/wiki/Noijin_Kangsang"
         }
       ]
     },
@@ -44400,45 +44377,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Puma_Yumco"
         },
         {
-          "name": "Himalayas",
+          "name": "Yamdrok Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Himalayas",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Mountain range in the Kamru 2 area.",
+          "localisation_stem": "Yamdrok",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Sacred turquoise lake lying northeast of Puma Yumco in the Kangmar-Nagarze highlands.",
           "language_variants": [
             {
-              "form": "Hi-ma-la-ya",
-              "native_script": "ཧི་མ་ལ་ཡ",
+              "form": "Yar-'brog gYu-mtsho",
+              "native_script": "ཡར་འབྲོག གཡུ་མཚོ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan loan from Sanskrit"
+              "notes": "Tibetan name ('Upper Pasture Turquoise Lake')"
             },
             {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskrit name ('Abode of Snow')"
-            },
-            {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
-              "language": "Nepali",
-              "language_code": "nep",
-              "notes": "Nepali name"
+              "form": "Yángzhuó Yōngcuò",
+              "native_script": "羊卓雍錯",
+              "language": "Chinese",
+              "language_code": "zho",
+              "notes": "Chinese transcription"
             }
           ],
-          "earliest_attestation_year": -1500,
-          "earliest_attestation_note": "Attested as Himavat in the Rigveda (c. 1500 BCE).",
+          "earliest_attestation_year": 800,
+          "earliest_attestation_note": "Attested in early Tibetan sacred geography (c. 8th-9th century CE).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Sanskrit hima ('snow') + ālaya ('abode').",
-          "source_url": "https://en.wikipedia.org/wiki/Himalayas"
+          "etymology_notes": "From Tibetan yar-'brog ('upper pasture') + gyu-mtsho ('turquoise lake').",
+          "source_url": "https://en.wikipedia.org/wiki/Yamdrok_Lake"
         }
       ]
     },
@@ -44826,45 +44796,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yarlung_Tsangpo"
         },
         {
-          "name": "Tsang",
+          "name": "Nangchu River",
           "disambiguation_note": null,
-          "localisation_stem": "Tsang",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Traditional regional name encompassing Banam.",
+          "localisation_stem": "Nangchu",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Right-bank Yarlung Tsangpo tributary flowing directly past Banam to Xigaze.",
           "language_variants": [
             {
-              "form": "gTsang",
-              "native_script": "གཙང",
+              "form": "Myang-chu",
+              "native_script": "མྱང་ཆུ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name of west-central Tibet"
+              "notes": "Tibetan river name Myang-chu / Nyang-chu"
             },
             {
-              "form": "gTsang",
-              "native_script": "གཙང",
-              "language": "Old Tibetan",
-              "language_code": "otb",
-              "notes": "Old Tibetan form"
-            },
-            {
-              "form": "Hòuzàng",
-              "native_script": "後藏",
+              "form": "Niánchǔ Hé",
+              "native_script": "年楚河",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name"
+              "notes": "Chinese transcription Nianchu He"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Old Tibetan imperial annals (c. 7th century CE) as gTsang.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Medieval Tsang chronicles of Gyantse and Shigatse",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Historic region of central-western Tibet centered on the upper-middle Yarlung Tsangpo.",
-          "source_url": "https://en.wikipedia.org/wiki/Tsang"
+          "etymology_notes": "Drains the Karo La and northern Himalayan valleys northwestward through Panam (Banam) into the Yarlung Tsangpo.",
+          "source_url": "https://en.wikipedia.org/wiki/Nangchu_River"
         }
       ]
     },
@@ -44968,45 +44931,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yarlung_Tsangpo"
         },
         {
-          "name": "Tsang",
+          "name": "Noijin Kangsang",
           "disambiguation_note": null,
-          "localisation_stem": "Tsang",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Traditional regional name encompassing Namling.",
+          "localisation_stem": "Noijin Kangsang",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Glaciated massif rising south of the Yarlung Tsangpo opposite Namling.",
           "language_variants": [
             {
-              "form": "gTsang",
-              "native_script": "གཙང",
+              "form": "gNod-sbyin Gangs-bzang",
+              "native_script": "གནོད་སྦྱིན གངས་བཟང",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name of west-central Tibet"
+              "notes": "Tibetan name ('Yaksha Good Snow')"
             },
             {
-              "form": "gTsang",
-              "native_script": "གཙང",
-              "language": "Old Tibetan",
-              "language_code": "otb",
-              "notes": "Old Tibetan form"
-            },
-            {
-              "form": "Hòuzàng",
-              "native_script": "後藏",
+              "form": "Níngjīn Kàngshā Fēng",
+              "native_script": "寧金抗沙峰",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name"
+              "notes": "Chinese transcription"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Old Tibetan imperial annals (c. 7th century CE) as gTsang.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1300,
+          "earliest_attestation_note": "Attested in medieval Tibetan sacred geography of Tsang (c. 14th century CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Historic region of central-western Tibet centered on the upper-middle Yarlung Tsangpo.",
-          "source_url": "https://en.wikipedia.org/wiki/Tsang"
+          "etymology_notes": "Highest peak of the Lhagoi Kangri range between Gyangzê and Yamdrok.",
+          "source_url": "https://en.wikipedia.org/wiki/Noijin_Kangsang"
         }
       ]
     },
@@ -46356,8 +46312,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -46484,8 +46440,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -46583,45 +46539,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Siling_Co"
         },
         {
-          "name": "Tanggula Mountains",
+          "name": "Namtso",
           "disambiguation_note": null,
-          "localisation_stem": "Tanggula",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Mountain range in the Yuyico area.",
+          "localisation_stem": "Namtso",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Great sacred salt lake southeast of the Siling Co basin near Yuyico.",
           "language_variants": [
             {
-              "form": "gDang-la",
-              "native_script": "གདང་ལ",
+              "form": "gNam-mtsho",
+              "native_script": "གནམ་མཚོ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name (Dangla)"
+              "notes": "Tibetan name meaning 'Heavenly Lake'"
             },
             {
-              "form": "Tánggǔlā Shānmài",
-              "native_script": "唐古拉山脈",
+              "form": "Nàmùcuò",
+              "native_script": "納木錯",
               "language": "Chinese",
               "language_code": "zho",
               "notes": "Chinese transcription"
             },
             {
-              "form": "Tangla",
-              "native_script": "Тангла",
+              "form": "Tengeri Nuur",
+              "native_script": "Тенгери Нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian form"
+              "notes": "Mongolian name meaning 'Heaven Lake'"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1100,
+          "earliest_attestation_note": "Attested in Tibetan sacred geography and Kagyu hagiographies from the 11th-12th century CE.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Central Tibetan plateau range dividing Nagqu and Kham/Qinghai.",
-          "source_url": "https://en.wikipedia.org/wiki/Tanggula_Mountains"
+          "etymology_notes": "From Tibetan gnam ('sky/heaven') + mtsho ('lake').",
+          "source_url": "https://en.wikipedia.org/wiki/Namtso"
         }
       ]
     },
@@ -46740,8 +46696,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -47421,45 +47377,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Lhasa_River"
         },
         {
-          "name": "Ü",
-          "disambiguation_note": "region",
-          "localisation_stem": "Ü",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Traditional regional name encompassing Kunggar.",
+          "name": "Yarlung Tsangpo",
+          "disambiguation_note": null,
+          "localisation_stem": "Yarlung Tsangpo",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Great Tibetan river flowing directly past Kunggar south of Gyama.",
           "language_variants": [
             {
-              "form": "dBus",
-              "native_script": "དབུས",
+              "form": "Yar-klungs gTsang-po",
+              "native_script": "ཡར་ཀླུངས་གཙང་པོ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name meaning 'Center'"
+              "notes": "Tibetan name Yar-klungs gTsang-po"
             },
             {
-              "form": "dBus",
-              "native_script": "དབུས",
-              "language": "Old Tibetan",
-              "language_code": "otb",
-              "notes": "Old Tibetan form"
-            },
-            {
-              "form": "Qiánzàng",
-              "native_script": "前藏",
+              "form": "Yǎlǔ Zàngbù Jiāng",
+              "native_script": "雅魯藏布江",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name"
+              "notes": "Chinese name Yalu Zangbu Jiang"
             }
           ],
           "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Old Tibetan imperial records (c. 7th century CE) as dBus.",
+          "earliest_attestation_note": "Attested in Old Tibetan imperial sources (c. 7th century CE) as the river of Yarlung and Tsang.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Tibetan dbus ('center/heartland'), denoting central Tibet around Lhasa and Yarlung.",
-          "source_url": "https://en.wikipedia.org/wiki/%C3%9C_(region)"
+          "etymology_notes": "Upper course of the Brahmaputra flowing across southern Tibet north of Monyul.",
+          "source_url": "https://en.wikipedia.org/wiki/Yarlung_Tsangpo"
         }
       ]
     },
@@ -47563,45 +47512,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Lhasa_River"
         },
         {
-          "name": "Ü",
-          "disambiguation_note": "region",
-          "localisation_stem": "Ü",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Traditional regional name encompassing Drigung.",
+          "name": "Nyenchen Tanglha Mountains",
+          "disambiguation_note": null,
+          "localisation_stem": "Nyenchen Tanglha",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "High alpine range rising immediately north of the Drigung valley.",
           "language_variants": [
             {
-              "form": "dBus",
-              "native_script": "དབུས",
+              "form": "gNyan-chen Thang-lha",
+              "native_script": "གཉན་ཆེན་ཐང་ལྷ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name meaning 'Center'"
+              "notes": "Tibetan sacred mountain name gNyan-chen Thang-lha"
             },
             {
-              "form": "dBus",
-              "native_script": "དབུས",
-              "language": "Old Tibetan",
-              "language_code": "otb",
-              "notes": "Old Tibetan form"
-            },
-            {
-              "form": "Qiánzàng",
-              "native_script": "前藏",
+              "form": "Niànqīng Tánggǔlā Shān",
+              "native_script": "念青唐古拉山",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name"
+              "notes": "Chinese transcription Nianqing Tanggula Shan"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Old Tibetan imperial records (c. 7th century CE) as dBus.",
+          "earliest_attestation_year": 750,
+          "earliest_attestation_note": "8th-century Tibetan imperial-era sacred mountain traditions (Padmasambhava cycle)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Tibetan dbus ('center/heartland'), denoting central Tibet around Lhasa and Yarlung.",
-          "source_url": "https://en.wikipedia.org/wiki/%C3%9C_(region)"
+          "etymology_notes": "Named after the mountain deity Nyenchen Tanglha; separates the Yarlung-Kyi Chu basin from the Changtang lakes.",
+          "source_url": "https://en.wikipedia.org/wiki/Nyenchen_Tanglha_Mountains"
         }
       ]
     },
@@ -47955,38 +47897,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tibetans"
         },
         {
-          "name": "Lhasa River",
+          "name": "Mount Gephel",
           "disambiguation_note": null,
-          "localisation_stem": "Lhasa",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "River bordering or adjoining Potala.",
+          "localisation_stem": "Gephel",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Sacred mountain rising immediately west of Potala above Drepung.",
           "language_variants": [
             {
-              "form": "sKyid-chu",
-              "native_script": "སྐྱིད་ཆུ",
+              "form": "dGe-'phel Ri",
+              "native_script": "དགེ་འཕེལ་རི",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name meaning 'River of Happiness'"
+              "notes": "Tibetan sacred peak name dGe-'phel Ri"
             },
             {
-              "form": "Lāsà Hé",
-              "native_script": "拉薩河",
+              "form": "Gēnpéi Wūzī Shān",
+              "native_script": "根培烏孜山",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name"
+              "notes": "Chinese transcription"
             }
           ],
-          "earliest_attestation_year": 700,
-          "earliest_attestation_note": "Attested in Tibetan Empire-era records (c. 7th-8th century CE) as Skyid-chu.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1416,
+          "earliest_attestation_note": "Early Gelug chronicles of Drepung Monastery at the foot of Gephel Utse",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Indigenous Tibetan name sKyid-chu ('auspicious/joyous river') flowing past Lhasa into the Yarlung Tsangpo. Onomastic note: Tibetan name meaning 'River of Happiness' ('sKyid-chu').",
-          "source_url": "https://en.wikipedia.org/wiki/Lhasa_River"
+          "etymology_notes": "From Tibetan dGe-'phel ('virtue-increasing'); prominent peak overlooking the western Lhasa plain.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Gephel"
         },
         {
           "name": "Yarlung Tsangpo",
@@ -48090,38 +48032,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tibetans"
         },
         {
-          "name": "Lhasa River",
+          "name": "Nyenchen Tanglha Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Lhasa",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "River bordering or adjoining Doilungdeqen.",
+          "localisation_stem": "Nyenchen Tanglha",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Major mountain range rising directly northwest of Doilungdeqen.",
           "language_variants": [
             {
-              "form": "sKyid-chu",
-              "native_script": "སྐྱིད་ཆུ",
+              "form": "gNyan-chen Thang-lha",
+              "native_script": "གཉན་ཆེན་ཐང་ལྷ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name meaning 'River of Happiness'"
+              "notes": "Tibetan sacred mountain name gNyan-chen Thang-lha"
             },
             {
-              "form": "Lāsà Hé",
-              "native_script": "拉薩河",
+              "form": "Niànqīng Tánggǔlā Shān",
+              "native_script": "念青唐古拉山",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name"
+              "notes": "Chinese transcription Nianqing Tanggula Shan"
             }
           ],
-          "earliest_attestation_year": 700,
-          "earliest_attestation_note": "Attested in Tibetan Empire-era records (c. 7th-8th century CE) as Skyid-chu.",
+          "earliest_attestation_year": 750,
+          "earliest_attestation_note": "8th-century Tibetan imperial-era sacred mountain traditions (Padmasambhava cycle)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Indigenous Tibetan name sKyid-chu ('auspicious/joyous river') flowing past Lhasa into the Yarlung Tsangpo. Onomastic note: Tibetan name meaning 'River of Happiness' ('sKyid-chu').",
-          "source_url": "https://en.wikipedia.org/wiki/Lhasa_River"
+          "etymology_notes": "Named after the mountain deity Nyenchen Tanglha; borders the northern approaches of Doilungdeqen.",
+          "source_url": "https://en.wikipedia.org/wiki/Nyenchen_Tanglha_Mountains"
         },
         {
           "name": "Yarlung Tsangpo",
@@ -48225,38 +48167,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tibetans"
         },
         {
-          "name": "Lhasa River",
+          "name": "Yamdrok Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Lhasa",
+          "localisation_stem": "Yamdrok",
           "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "River bordering or adjoining Quxu.",
+          "feature_subtype": "lake",
+          "relationship": "Sacred alpine lake lying immediately south of Quxu across the Kamba La pass.",
           "language_variants": [
             {
-              "form": "sKyid-chu",
-              "native_script": "སྐྱིད་ཆུ",
+              "form": "Yar-'brog gYu-mtsho",
+              "native_script": "ཡར་འབྲོག གཡུ་མཚོ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name meaning 'River of Happiness'"
+              "notes": "Tibetan name ('Upper Pasture Turquoise Lake')"
             },
             {
-              "form": "Lāsà Hé",
-              "native_script": "拉薩河",
+              "form": "Yángzhuó Yōngcuò",
+              "native_script": "羊卓雍錯",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese name"
+              "notes": "Chinese transcription"
             }
           ],
-          "earliest_attestation_year": 700,
-          "earliest_attestation_note": "Attested in Tibetan Empire-era records (c. 7th-8th century CE) as Skyid-chu.",
+          "earliest_attestation_year": 800,
+          "earliest_attestation_note": "Attested in early Tibetan sacred geography (c. 8th-9th century CE).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Indigenous Tibetan name sKyid-chu ('auspicious/joyous river') flowing past Lhasa into the Yarlung Tsangpo. Onomastic note: Tibetan name meaning 'River of Happiness' ('sKyid-chu').",
-          "source_url": "https://en.wikipedia.org/wiki/Lhasa_River"
+          "etymology_notes": "From Tibetan yar-'brog ('upper pasture') + gyu-mtsho ('turquoise lake').",
+          "source_url": "https://en.wikipedia.org/wiki/Yamdrok_Lake"
         },
         {
           "name": "Yarlung Tsangpo",
@@ -48416,8 +48358,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 800,
-          "earliest_attestation_note": "Attested in Old Tibetan sources from the imperial era (c. 8th-9th century CE).",
+          "earliest_attestation_year": 750,
+          "earliest_attestation_note": "8th-century Tibetan imperial-era sacred mountain traditions (Padmasambhava cycle)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -48551,8 +48493,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 800,
-          "earliest_attestation_note": "Attested in Old Tibetan sources from the imperial era (c. 8th-9th century CE).",
+          "earliest_attestation_year": 750,
+          "earliest_attestation_note": "8th-century Tibetan imperial-era sacred mountain traditions (Padmasambhava cycle)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -48686,8 +48628,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 800,
-          "earliest_attestation_note": "Attested in Old Tibetan sources from the imperial era (c. 8th-9th century CE).",
+          "earliest_attestation_year": 750,
+          "earliest_attestation_note": "8th-century Tibetan imperial-era sacred mountain traditions (Padmasambhava cycle)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -49434,8 +49376,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 800,
-          "earliest_attestation_note": "Attested in Old Tibetan sources from the imperial era (c. 8th-9th century CE).",
+          "earliest_attestation_year": 750,
+          "earliest_attestation_note": "8th-century Tibetan imperial-era sacred mountain traditions (Padmasambhava cycle)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -49468,8 +49410,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -49562,8 +49504,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 800,
-          "earliest_attestation_note": "Attested in Old Tibetan sources from the imperial era (c. 8th-9th century CE).",
+          "earliest_attestation_year": 750,
+          "earliest_attestation_note": "8th-century Tibetan imperial-era sacred mountain traditions (Padmasambhava cycle)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -49596,8 +49538,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -49690,8 +49632,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 800,
-          "earliest_attestation_note": "Attested in Old Tibetan sources from the imperial era (c. 8th-9th century CE).",
+          "earliest_attestation_year": 750,
+          "earliest_attestation_note": "8th-century Tibetan imperial-era sacred mountain traditions (Padmasambhava cycle)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -49724,8 +49666,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -49818,8 +49760,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -49859,8 +49801,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -49953,8 +49895,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -49965,45 +49907,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Salween_River"
         },
         {
-          "name": "Tanggula Mountains",
+          "name": "Namtso",
           "disambiguation_note": null,
-          "localisation_stem": "Tanggula",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Mountain range in the Lhomar area.",
+          "localisation_stem": "Namtso",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Great sacred salt lake on the southern Changtang margin near Lhomar.",
           "language_variants": [
             {
-              "form": "gDang-la",
-              "native_script": "གདང་ལ",
+              "form": "gNam-mtsho",
+              "native_script": "གནམ་མཚོ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan name (Dangla)"
+              "notes": "Tibetan name meaning 'Heavenly Lake'"
             },
             {
-              "form": "Tánggǔlā Shānmài",
-              "native_script": "唐古拉山脈",
+              "form": "Nàmùcuò",
+              "native_script": "納木錯",
               "language": "Chinese",
               "language_code": "zho",
               "notes": "Chinese transcription"
             },
             {
-              "form": "Tangla",
-              "native_script": "Тангла",
+              "form": "Tengeri Nuur",
+              "native_script": "Тенгери Нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian form"
+              "notes": "Mongolian name meaning 'Heaven Lake'"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1100,
+          "earliest_attestation_note": "Attested in Tibetan sacred geography and Kagyu hagiographies from the 11th-12th century CE.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Central Tibetan plateau range dividing Nagqu and Kham/Qinghai.",
-          "source_url": "https://en.wikipedia.org/wiki/Tanggula_Mountains"
+          "etymology_notes": "From Tibetan gnam ('sky/heaven') + mtsho ('lake').",
+          "source_url": "https://en.wikipedia.org/wiki/Namtso"
         }
       ]
     },
@@ -50088,8 +50030,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -50129,8 +50071,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -50223,8 +50165,8 @@
               "notes": "Chinese name"
             }
           ],
-          "earliest_attestation_year": 600,
-          "earliest_attestation_note": "Attested in Tang-era records of the Tibetan-Yunnan frontier (7th century CE).",
+          "earliest_attestation_year": 500,
+          "earliest_attestation_note": "1st millennium CE (attested in early Southeast Asian and Chinese geographic chronicles)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
@@ -50264,8 +50206,8 @@
               "notes": "Mongolian form"
             }
           ],
-          "earliest_attestation_year": 1200,
-          "earliest_attestation_note": "Attested in Tibetan-Mongol itinerary traditions (Dangla) from the 13th century CE.",
+          "earliest_attestation_year": 1000,
+          "earliest_attestation_note": "Traditional Tibetan plateau geographic nomenclature (Dangla)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
@@ -50384,45 +50326,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Kula_Kangri"
         },
         {
-          "name": "Himalayas",
+          "name": "Subansiri River",
           "disambiguation_note": null,
-          "localisation_stem": "Himalayas",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Mountain range in the Comai area.",
+          "localisation_stem": "Subansiri",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Trans-Himalayan river whose upper headwaters rise in the Comai-Lhuntse highlands.",
           "language_variants": [
             {
-              "form": "Hi-ma-la-ya",
-              "native_script": "ཧི་མ་ལ་ཡ",
+              "form": "gSer-chu",
+              "native_script": "གསེར་ཆུ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan loan from Sanskrit"
+              "notes": "Tibetan upper-course name Ser-chu ('gold river')"
             },
             {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
+              "form": "Suvarṇaśrī",
+              "native_script": "सुवर्णश्री",
               "language": "Sanskrit",
               "language_code": "san",
-              "notes": "Sanskrit name ('Abode of Snow')"
+              "notes": "Sanskrit name Suvarnasri ('golden')"
             },
             {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
-              "language": "Nepali",
-              "language_code": "nep",
-              "notes": "Nepali name"
+              "form": "Sōraṇaśirai",
+              "native_script": "সোরণশিরৈ",
+              "language": "Assamese",
+              "language_code": "asm",
+              "notes": "Assamese lower-course form"
             }
           ],
-          "earliest_attestation_year": -1500,
-          "earliest_attestation_note": "Attested as Himavat in the Rigveda (c. 1500 BCE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1200,
+          "earliest_attestation_note": "Attested in medieval Assamese and Sanskritic traditions (c. 13th-16th century CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Sanskrit hima ('snow') + ālaya ('abode').",
-          "source_url": "https://en.wikipedia.org/wiki/Himalayas"
+          "etymology_notes": "Largest tributary of the Brahmaputra, famed for alluvial gold; from Sanskrit Suvarnashri.",
+          "source_url": "https://en.wikipedia.org/wiki/Subansiri_River"
         }
       ]
     },
@@ -50533,45 +50475,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Kula_Kangri"
         },
         {
-          "name": "Himalayas",
+          "name": "Kuri Chhu",
           "disambiguation_note": null,
-          "localisation_stem": "Himalayas",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Mountain range in the Lhozhag area.",
+          "localisation_stem": "Kuri Chhu",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major trans-Himalayan river rising in Lhozhag County and flowing into Bhutan.",
           "language_variants": [
             {
-              "form": "Hi-ma-la-ya",
-              "native_script": "ཧི་མ་ལ་ཡ",
+              "form": "Ku-ri-chu",
+              "native_script": "ཀུ་རི་ཆུ",
+              "language": "Dzongkha",
+              "language_code": "dzo",
+              "notes": "Dzongkha river name"
+            },
+            {
+              "form": "Ku-ri-chu",
+              "native_script": "ཀུ་རི་ཆུ",
               "language": "Tibetan",
               "language_code": "bod",
-              "notes": "Tibetan loan from Sanskrit"
-            },
-            {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
-              "language": "Sanskrit",
-              "language_code": "san",
-              "notes": "Sanskrit name ('Abode of Snow')"
-            },
-            {
-              "form": "Himālaya",
-              "native_script": "हिमालय",
-              "language": "Nepali",
-              "language_code": "nep",
-              "notes": "Nepali name"
+              "notes": "Tibetan form"
             }
           ],
-          "earliest_attestation_year": -1500,
-          "earliest_attestation_note": "Attested as Himavat in the Rigveda (c. 1500 BCE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1400,
+          "earliest_attestation_note": "Attested in Bhutanese religious biographies of Lhuentse/Kurtoed (c. 15th century CE).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Sanskrit hima ('snow') + ālaya ('abode').",
-          "source_url": "https://en.wikipedia.org/wiki/Himalayas"
+          "etymology_notes": "Major river of eastern Bhutan rising in Lhozhag (Tibet) and flowing through Kurtoed and Mongar.",
+          "source_url": "https://en.wikipedia.org/wiki/Kuri_Chhu"
         }
       ]
     },

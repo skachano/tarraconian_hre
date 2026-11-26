@@ -137,22 +137,22 @@
       "target_baronies_audited": 87,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 261,
-      "unique_replacement_names": 80,
-      "candidates_with_multilingual_variants": 254,
+      "unique_replacement_names": 85,
+      "candidates_with_multilingual_variants": 256,
       "wikipedia_source_attached": 261,
-      "unique_source_urls": 80,
+      "unique_source_urls": 85,
       "candidates_by_category": {
-        "choronym": 17,
-        "hydronym": 87,
-        "oronym": 60,
-        "topographic_feature": 10,
+        "choronym": 12,
+        "hydronym": 91,
+        "oronym": 62,
+        "topographic_feature": 9,
         "tribe": 87
       },
       "baronies_with_category": {
-        "has_choronym_candidate": 17,
-        "has_hydronym_candidate": 66,
-        "has_oronym_candidate": 51,
-        "has_topographic_feature_candidate": 10,
+        "has_choronym_candidate": 12,
+        "has_hydronym_candidate": 68,
+        "has_oronym_candidate": 53,
+        "has_topographic_feature_candidate": 9,
         "has_tribe_candidate": 87
       },
       "unique_language_codes": [
@@ -175,8 +175,8 @@
       "candidates_by_attestation_basis": {
         "attested_1066_to_1178": 13,
         "attested_867_to_1066": 6,
-        "attested_pre_867": 102,
-        "indigenous_pre_literate": 140
+        "attested_pre_867": 92,
+        "indigenous_pre_literate": 150
       },
       "bookmark_valid_candidates": {
         "867": 242,
@@ -184,7 +184,7 @@
         "1178": 261
       },
       "baronies_with_867_valid_candidate": 87,
-      "unique_localisation_stems": 80
+      "unique_localisation_stems": 85
     }
   },
   "baronies": {
@@ -410,23 +410,23 @@
           "source_url": "https://en.wikipedia.org/wiki/Naimans"
         },
         {
-          "name": "Oigon Lake",
-          "disambiguation_note": null,
-          "localisation_stem": "Oigon",
+          "name": "Khar Lake",
+          "disambiguation_note": "Zavkhan",
+          "localisation_stem": "Khar",
           "category": "hydronym",
           "feature_subtype": "lake",
-          "relationship": "Endorheic saline lake in the local county.",
+          "relationship": "Steppe lake in Zavkhan Province southwest of Tsetsen Khairkhan.",
           "language_variants": [
             {
-              "form": "Oygon nuur",
-              "native_script": "Ойгон нуур",
+              "form": "Khar nuur",
+              "native_script": "Хар нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name"
+              "notes": "Mongolian name ('Black Lake')"
             },
             {
-              "form": "Oygon-Nur",
-              "native_script": "Ойгон-Нур",
+              "form": "Khara-Nur",
+              "native_script": "Хара-Нур",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
@@ -440,8 +440,8 @@
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Endorheic saline lake on the Zavkhan-Arkhangai border.",
-          "source_url": "https://en.wikipedia.org/wiki/Oigon_Lake"
+          "etymology_notes": "Freshwater lake in Zavkhan Province; from Mongolian khar nuur ('black lake').",
+          "source_url": "https://en.wikipedia.org/wiki/Khar_Lake_(Zavkhan)"
         },
         {
           "name": "Zavkhan River",
@@ -1133,23 +1133,23 @@
           "source_url": "https://en.wikipedia.org/wiki/Ider_River"
         },
         {
-          "name": "Telmen Lake",
+          "name": "Chuluut River",
           "disambiguation_note": null,
-          "localisation_stem": "Telmen",
+          "localisation_stem": "Chuluut",
           "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Nearby saline lake in the western Zavkhan-Khangai zone.",
+          "feature_subtype": "river",
+          "relationship": "Khangai river joining the Ider near Ikh-Uul.",
           "language_variants": [
             {
-              "form": "Telmen nuur",
-              "native_script": "Телмен нуур",
+              "form": "Chuluut gol",
+              "native_script": "Чулуут гол",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name"
+              "notes": "Mongolian name ('Stony River')"
             },
             {
-              "form": "T·elm·en-Nur",
-              "native_script": "Тэлмэн-Нур",
+              "form": "Chuluut",
+              "native_script": "Чулуут",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
@@ -1163,8 +1163,8 @@
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Saline lake in the western Khangai foothills of Zavkhan.",
-          "source_url": "https://en.wikipedia.org/wiki/Telmen_Lake"
+          "etymology_notes": "Tributary of the Ider River in Arkhangai; from Mongolian chuluu ('stone').",
+          "source_url": "https://en.wikipedia.org/wiki/Chuluut_River"
         }
       ]
     },
@@ -1532,79 +1532,72 @@
           "source_url": "https://en.wikipedia.org/wiki/Tiele_people"
         },
         {
-          "name": "Aj Bogd",
+          "name": "Burkhan Buudai",
           "disambiguation_note": null,
-          "localisation_stem": "Aj Bogd",
+          "localisation_stem": "Burkhan Buudai",
           "category": "oronym",
           "feature_subtype": "mountain",
-          "relationship": "Dominant mountain massif in southern Govi-Altai.",
+          "relationship": "Prominent Gobi-Altai massif rising northeast of Tseel.",
           "language_variants": [
             {
-              "form": "Aj Bogd",
-              "native_script": "Аj Богд",
+              "form": "Burkhan Buudai",
+              "native_script": "Бурхан Буудай",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name"
+              "notes": "Mongolian sacred mountain name"
             },
             {
-              "form": "Adzh-Bogd",
-              "native_script": "Адж-Богд",
+              "form": "Burkhan-Buday",
+              "native_script": "Бурхан-Будай",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian oronym",
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian sacred oronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Prominent mountain massif in southern Govi-Altai.",
-          "source_url": "https://en.wikipedia.org/wiki/Aj_Bogd"
+          "etymology_notes": "Prominent glaciated massif of the Gobi-Altai range in Govi-Altai Province; from Mongolian burkhan ('buddha, deity') and buudai ('wheat').",
+          "source_url": "https://en.wikipedia.org/wiki/Burkhan_Buudai"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Ulaan Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Arid steppe-desert belt extending south of the Altai.",
+          "localisation_stem": "Ulaan",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Desert steppe lake lying east of the Gobi-Altai chain.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Ulaan nuur",
+              "native_script": "Улаан нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('gravelly semi-desert')"
+              "notes": "Mongolian name ('Red Lake')"
             },
             {
-              "form": "Gobi",
-              "native_script": "Гоби",
+              "form": "Ulan-Nur",
+              "native_script": "Улан-Нур",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
-            },
-            {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical transcription (Gebi)"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mongolian govi ('waterless gravel steppe/desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Terminal desert lake of the Ongi River in Omnogovi; from Mongolian ulaan ('red') and nuur ('lake'), after its reddish clay basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Ulaan_Lake"
         }
       ]
     },
@@ -1729,23 +1722,23 @@
           "source_url": "https://en.wikipedia.org/wiki/Altai_Mountains"
         },
         {
-          "name": "Aj Bogd",
+          "name": "Sutai Mountain",
           "disambiguation_note": null,
-          "localisation_stem": "Aj Bogd",
+          "localisation_stem": "Sutai",
           "category": "oronym",
           "feature_subtype": "mountain",
-          "relationship": "High massif in the nearby southern Govi-Altai.",
+          "relationship": "Glaciated massif rising northwest of Alag Khairkhan.",
           "language_variants": [
             {
-              "form": "Aj Bogd",
-              "native_script": "Аj Богд",
+              "form": "Sutay khayrkhan",
+              "native_script": "Сутай хайрхан",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name"
+              "notes": "Mongolian name ('Milky Mountain')"
             },
             {
-              "form": "Adzh-Bogd",
-              "native_script": "Адж-Богд",
+              "form": "Sutay-Uul",
+              "native_script": "Сутай-Уул",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
@@ -1759,8 +1752,8 @@
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Prominent mountain massif in southern Govi-Altai.",
-          "source_url": "https://en.wikipedia.org/wiki/Aj_Bogd"
+          "etymology_notes": "Glaciated peak on the Govi-Altai–Khovd border; from Mongolic süü ('milk').",
+          "source_url": "https://en.wikipedia.org/wiki/Sutai_Mountain"
         }
       ]
     },
@@ -1878,45 +1871,45 @@
           "source_url": "https://en.wikipedia.org/wiki/Altai_Mountains"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Ulungur River",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Arid desert-steppe zone bordering the massif to the south.",
+          "localisation_stem": "Ulungur River",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Trans-Altai river rising on the western slopes near the Aj Bogd borderlands.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Bulgan gol",
+              "native_script": "Булган гол",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('gravelly semi-desert')"
+              "notes": "Mongolian upper-course name ('Sable River')"
             },
             {
-              "form": "Gobi",
-              "native_script": "Гоби",
-              "language": "Russian",
-              "language_code": "rus",
-              "notes": "Russian geographical name"
+              "form": "Ulingir ozeni",
+              "native_script": "Үліңгір өзені",
+              "language": "Kazakh",
+              "language_code": "kaz",
+              "notes": "Kazakh name"
             },
             {
-              "form": "Gēbì",
-              "native_script": "戈壁",
+              "form": "Wulungu He",
+              "native_script": "乌伦古河",
               "language": "Chinese",
               "language_code": "zho",
-              "notes": "Chinese historical transcription (Gebi)"
+              "notes": "Chinese river name"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1650,
+          "earliest_attestation_note": "Attested in 17th-century CE Oirat and Qing geographical surveys.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mongolian govi ('waterless gravel steppe/desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Major river rising in the Altai Mountains and flowing west into Ulungur Lake.",
+          "source_url": "https://en.wikipedia.org/wiki/Ulungur_River"
         }
       ]
     },
@@ -2020,45 +2013,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Aj_Bogd"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Burkhan Buudai",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Southern desert-steppe region bordering the range.",
+          "localisation_stem": "Burkhan Buudai",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "High Gobi-Altai massif rising north of the Trans-Altai Gobi.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Burkhan Buudai",
+              "native_script": "Бурхан Буудай",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('gravelly semi-desert')"
+              "notes": "Mongolian sacred mountain name"
             },
             {
-              "form": "Gobi",
-              "native_script": "Гоби",
+              "form": "Burkhan-Buday",
+              "native_script": "Бурхан-Будай",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
-            },
-            {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical transcription (Gebi)"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian sacred oronym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mongolian govi ('waterless gravel steppe/desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Prominent glaciated massif of the Gobi-Altai range in Govi-Altai Province; from Mongolian burkhan ('buddha, deity') and buudai ('wheat').",
+          "source_url": "https://en.wikipedia.org/wiki/Burkhan_Buudai"
         }
       ]
     },
@@ -2155,45 +2141,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Aj_Bogd"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Nemegt Basin",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
+          "localisation_stem": "Nemegt",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Arid desert-steppe surrounding the Trans-Altai outcrops.",
+          "relationship": "Arid desert basin extending east of Eej Khairkhan.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Nemegt",
+              "native_script": "Нэмэгт",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('gravelly semi-desert')"
+              "notes": "Mongolian massif and basin name"
             },
             {
-              "form": "Gobi",
-              "native_script": "Гоби",
+              "form": "Nemegetu",
+              "native_script": "Нэмэгэту",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian geographical name"
-            },
-            {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical transcription (Gebi)"
+              "notes": "Russian paleontological and geographical form"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian desert basin name.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mongolian govi ('waterless gravel steppe/desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Arid intermontane basin of the northwestern Gobi Desert in Omnogovi Province, bordered by the Nemegt range.",
+          "source_url": "https://en.wikipedia.org/wiki/Nemegt_basin"
         }
       ]
     },
@@ -2263,45 +2242,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Xiongnu"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Orog Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Arid desert-steppe belt encompassing the Trans-Altai oasis zone.",
+          "localisation_stem": "Orog",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Desert-margin lake north of the Gobi-Altai massif.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Orog nuur",
+              "native_script": "Орог нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('gravelly semi-desert')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Gobi",
-              "native_script": "Гоби",
+              "form": "Orog-Nur",
+              "native_script": "Орог-Нур",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
-            },
-            {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical transcription (Gebi)"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mongolian govi ('waterless gravel steppe/desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Endorheic lake at the northern foot of Ikh Bogd in the Valley of the Lakes.",
+          "source_url": "https://en.wikipedia.org/wiki/Orog_Lake"
         },
         {
           "name": "Ikh Bogd",
@@ -2900,38 +2872,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Sayan_Mountains"
         },
         {
-          "name": "Kazyr",
+          "name": "Kan River",
           "disambiguation_note": null,
-          "localisation_stem": "Kazyr",
+          "localisation_stem": "Kan",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major river draining the northern slopes of the Sayan.",
+          "relationship": "Right tributary of the Yenisei draining the Eastern Sayan north of the Kazyr.",
           "language_variants": [
             {
-              "form": "Kazyr",
-              "native_script": "Казйр",
+              "form": "Kan",
+              "native_script": "Кан",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             },
             {
-              "form": "Khazyr",
-              "native_script": "Хазйр",
+              "form": "Khan",
+              "native_script": "Хан",
               "language": "Khakas",
               "language_code": "kjh",
-              "notes": "Khakas name ('Fierce/Rapid')"
+              "notes": "Khakas regional form"
             }
           ],
-          "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Sayan hydronym",
+          "earliest_attestation_year": 1628,
+          "earliest_attestation_note": "Attested in 17th-century CE Russian Siberian records (Kansk ostrog, 1628 CE).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Eastern Sayan river joining the Kizir to form the Tuba; from Turkic qazïr ('fierce/swift').",
-          "source_url": "https://en.wikipedia.org/wiki/Kazyr"
+          "etymology_notes": "Right tributary of the Yenisei rising in the Eastern Sayan.",
+          "source_url": "https://en.wikipedia.org/wiki/Kan_River"
         }
       ]
     },
@@ -3413,38 +3385,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tiele_people"
         },
         {
-          "name": "Ergaki",
+          "name": "Great Yenisei",
           "disambiguation_note": null,
-          "localisation_stem": "Ergaki",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Jagged granite ridge of the central Western Sayan.",
+          "localisation_stem": "Great Yenisei",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Northern headstream of the Yenisei flowing south of the Ergaki ridge.",
           "language_variants": [
             {
-              "form": "Yergaki",
-              "native_script": "Ергаки",
+              "form": "Bii-Khem",
+              "native_script": "Бии-Хем",
+              "language": "Tuvan",
+              "language_code": "tyv",
+              "notes": "Indigenous Tuvan name ('Big River')"
+            },
+            {
+              "form": "Bolshoy Yenisey",
+              "native_script": "Большой Енисей",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
-            },
-            {
-              "form": "Ergek",
-              "native_script": "Эргек",
-              "language": "Tuvan",
-              "language_code": "tyv",
-              "notes": "Tuvan form ('thumb/finger', from jagged peaks)"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Sayan toponym",
+          "earliest_attestation_note": "No pre-1700 CE written attestation under this specific branch name; indigenous Sayan hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Granite ridge in the Western Sayan; from Turkic ergek ('finger/thumb') for its spire-like peaks.",
-          "source_url": "https://en.wikipedia.org/wiki/Ergaki"
+          "etymology_notes": "Northern main headstream of the Yenisei rising in the Eastern Sayan; Tuvan Bii-Khem ('big river'), Russian Bolshoy Yenisey.",
+          "source_url": "https://en.wikipedia.org/wiki/Great_Yenisei"
         },
         {
           "name": "Sayan Mountains",
@@ -3555,38 +3527,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Dingling"
         },
         {
-          "name": "Ergaki",
-          "disambiguation_note": null,
-          "localisation_stem": "Ergaki",
-          "category": "oronym",
-          "feature_subtype": "mountain_range",
-          "relationship": "Adjacent granite massif in the Western Sayan.",
+          "name": "Tuba",
+          "disambiguation_note": "river",
+          "localisation_stem": "Tuba",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major right tributary of the Yenisei draining the northern Sayan slopes.",
           "language_variants": [
             {
-              "form": "Yergaki",
-              "native_script": "Ергаки",
+              "form": "Tuba",
+              "native_script": "Туба",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             },
             {
-              "form": "Ergek",
-              "native_script": "Эргек",
-              "language": "Tuvan",
-              "language_code": "tyv",
-              "notes": "Tuvan form ('thumb/finger', from jagged peaks)"
+              "form": "Tuba",
+              "native_script": "Туба",
+              "language": "Khakas",
+              "language_code": "kjh",
+              "notes": "Khakas form"
             }
           ],
-          "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Sayan toponym",
+          "earliest_attestation_year": 1628,
+          "earliest_attestation_note": "1628 CE (17th-century Russian Yenisei basin records)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Granite ridge in the Western Sayan; from Turkic ergek ('finger/thumb') for its spire-like peaks.",
-          "source_url": "https://en.wikipedia.org/wiki/Ergaki"
+          "etymology_notes": "Right tributary of the Yenisei formed by the Kazyr and Kizir, named after the Tuba/Dubo people.",
+          "source_url": "https://en.wikipedia.org/wiki/Tuba_(river)"
         },
         {
           "name": "Kuznetsk Alatau",
@@ -4434,38 +4406,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Lake_Kh%C3%B6vsg%C3%B6l"
         },
         {
-          "name": "Darkhad Valley",
+          "name": "Ulaan Taiga",
           "disambiguation_note": null,
-          "localisation_stem": "Darkhad",
-          "category": "topographic_feature",
-          "feature_subtype": "valley",
-          "relationship": "Highland basin immediately west of the range.",
+          "localisation_stem": "Ulaan Taiga",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Highland mountain massif bordering the Khoridol Saridag range on the west.",
           "language_variants": [
             {
-              "form": "Darkhadïn khotgor",
-              "native_script": null,
+              "form": "Ulaan Taiga",
+              "native_script": "Улаан Тайга",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name"
+              "notes": "Mongolian name ('Red Taiga')"
             },
             {
-              "form": "Darkhat·skaya kotlovina",
-              "native_script": "Дархатская котловина",
+              "form": "Ulan-Tayga",
+              "native_script": "Улан-Тайга",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian toponym",
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian oronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Highland lacustrine basin in northwestern Khövsgöl drained by the Shishged (Little Yenisei).",
-          "source_url": "https://en.wikipedia.org/wiki/Darkhad_Valley"
+          "etymology_notes": "Mountain massif bordering the Darkhad Valley in northwestern Khovsgol; from Mongolian ulaan ('red') and taiga ('boreal mountain forest').",
+          "source_url": "https://en.wikipedia.org/wiki/Ulaan_Taiga"
         }
       ]
     },
@@ -4528,38 +4500,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tiele_people"
         },
         {
-          "name": "Darkhad Valley",
+          "name": "Delger mörön",
           "disambiguation_note": null,
-          "localisation_stem": "Darkhad",
-          "category": "topographic_feature",
-          "feature_subtype": "valley",
-          "relationship": "Highland lacustrine basin in northwestern Khövsgöl.",
+          "localisation_stem": "Delger mörön",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major headwater river of the Selenga flowing south of the Tsagaannuur basin.",
           "language_variants": [
             {
-              "form": "Darkhadïn khotgor",
-              "native_script": null,
+              "form": "Delger moron",
+              "native_script": "Дэлгэр мөрөн",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name"
+              "notes": "Mongolian name ('Wide River')"
             },
             {
-              "form": "Darkhat·skaya kotlovina",
-              "native_script": "Дархатская котловина",
+              "form": "Delger-Muren",
+              "native_script": "Дэлгэр-Мурен",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian toponym",
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Highland lacustrine basin in northwestern Khövsgöl drained by the Shishged (Little Yenisei).",
-          "source_url": "https://en.wikipedia.org/wiki/Darkhad_Valley"
+          "etymology_notes": "Headwater river of the Selenga flowing south of the Ulaan Taiga and Khoridol Saridag.",
+          "source_url": "https://en.wikipedia.org/wiki/Delger_m%C3%B6r%C3%B6n"
         },
         {
           "name": "Dood Tsagaan Lake",
@@ -4690,23 +4662,23 @@
           "source_url": "https://en.wikipedia.org/wiki/Delger_m%C3%B6r%C3%B6n"
         },
         {
-          "name": "Sangiin Dalai Lake",
+          "name": "Ider River",
           "disambiguation_note": null,
-          "localisation_stem": "Sangiin Dalai",
+          "localisation_stem": "Ider",
           "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Large saline lake southwest of Tömörbulag.",
+          "feature_subtype": "river",
+          "relationship": "Major Khangai river converging with the Delger moron near Tomorbulag.",
           "language_variants": [
             {
-              "form": "Sangiyn dalay nuur",
-              "native_script": "Сангийн далай нуур",
+              "form": "Ideriin gol",
+              "native_script": "Идэрийн гол",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('Treasury Sea')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Sangiyn-Dalay-Nur",
-              "native_script": "Сангийн-Далай-Нур",
+              "form": "Ider",
+              "native_script": "Идэр",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
@@ -4720,8 +4692,8 @@
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Saline lake on the border of Khövsgöl and Zavkhan provinces.",
-          "source_url": "https://en.wikipedia.org/wiki/Sangiin_Dalai_Lake"
+          "etymology_notes": "Major river of the Khangai range joining the Delger mörön to form the Selenga.",
+          "source_url": "https://en.wikipedia.org/wiki/Ider_River"
         }
       ]
     },
@@ -5345,38 +5317,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Rouran_Khaganate"
         },
         {
-          "name": "Böön Tsagaan Lake",
+          "name": "Baga Bogd",
           "disambiguation_note": null,
-          "localisation_stem": "Böön Tsagaan",
-          "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Large saline lake in the nearby Valley of the Lakes.",
+          "localisation_stem": "Baga Bogd",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Prominent Gobi-Altai massif rising southeast of the Bombogor basin.",
           "language_variants": [
             {
-              "form": "Böön Tsagaan nuur",
-              "native_script": "Бөөн Цагаан нуур",
+              "form": "Baga Bogd",
+              "native_script": "Бага Богд",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name"
+              "notes": "Mongolian name ('Lesser Saint')"
             },
             {
-              "form": "Bun-Tsagan-Nur",
-              "native_script": "Бун-Цаган-Нур",
+              "form": "Baga-Bogd",
+              "native_script": "Бага-Богд",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym",
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian oronym",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Largest saline lake of the Valley of the Lakes in Bayankhongor.",
-          "source_url": "https://en.wikipedia.org/wiki/B%C3%B6%C3%B6n_Tsagaan_Lake"
+          "etymology_notes": "Major massif of the Gobi-Altai range; from Mongolian baga ('lesser') and bogd ('holy').",
+          "source_url": "https://en.wikipedia.org/wiki/Baga_Bogd"
         },
         {
           "name": "Khangai Mountains",
@@ -5622,23 +5594,23 @@
           "source_url": "https://en.wikipedia.org/wiki/Tiele_people"
         },
         {
-          "name": "Böön Tsagaan Lake",
+          "name": "Orog Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Böön Tsagaan",
+          "localisation_stem": "Orog",
           "category": "hydronym",
           "feature_subtype": "lake",
-          "relationship": "Major saline lake of the Bayankhongor depression.",
+          "relationship": "Adjacent endorheic lake in the Valley of the Lakes southeast of Khutag.",
           "language_variants": [
             {
-              "form": "Böön Tsagaan nuur",
-              "native_script": "Бөөн Цагаан нуур",
+              "form": "Orog nuur",
+              "native_script": "Орог нуур",
               "language": "Mongolian",
               "language_code": "mon",
               "notes": "Mongolian name"
             },
             {
-              "form": "Bun-Tsagan-Nur",
-              "native_script": "Бун-Цаган-Нур",
+              "form": "Orog-Nur",
+              "native_script": "Орог-Нур",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
@@ -5652,8 +5624,8 @@
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Largest saline lake of the Valley of the Lakes in Bayankhongor.",
-          "source_url": "https://en.wikipedia.org/wiki/B%C3%B6%C3%B6n_Tsagaan_Lake"
+          "etymology_notes": "Endorheic lake at the northern foot of Ikh Bogd in the Valley of the Lakes.",
+          "source_url": "https://en.wikipedia.org/wiki/Orog_Lake"
         },
         {
           "name": "Valley of the Lakes",
@@ -5757,45 +5729,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Xiongnu"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Khongoryn Els",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
+          "localisation_stem": "Khongoryn Els",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Arid desert-steppe belt spanning southern Övörkhangai.",
+          "relationship": "Extensive dune field stretching along the northern edge of the Gurvan Saikhan range.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Khongoryn els",
+              "native_script": "Хонгорын элс",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('gravelly semi-desert')"
+              "notes": "Mongolian name ('Pale-Yellow Sands')"
             },
             {
-              "form": "Gobi",
-              "native_script": "Гоби",
+              "form": "Khongoryn-Els",
+              "native_script": "Хонгорын-Элс",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
-            },
-            {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical transcription (Gebi)"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian toponym.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mongolian govi ('waterless gravel steppe/desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Dune field on the northern flank of the Gurvan Saikhan range; from Mongolian khongor ('pale yellow, tawny') and els ('sand').",
+          "source_url": "https://en.wikipedia.org/wiki/Khongoryn_Els"
         },
         {
           "name": "Baga Bogd",
@@ -5899,45 +5864,38 @@
           "source_url": "https://en.wikipedia.org/wiki/G%C3%B6kt%C3%BCrks"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Yolyn Am",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
-          "category": "choronym",
-          "feature_subtype": "region",
-          "relationship": "Arid desert-steppe surrounding the Gurvan Saikhan range.",
+          "localisation_stem": "Yolyn Am",
+          "category": "topographic_feature",
+          "feature_subtype": "valley",
+          "relationship": "Deep ice-filled canyon cutting through the eastern Gurvan Saikhan massif.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Yolyn am",
+              "native_script": "Ёлын ам",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('gravelly semi-desert')"
+              "notes": "Mongolian name ('Lammergeier Gorge')"
             },
             {
-              "form": "Gobi",
-              "native_script": "Гоби",
+              "form": "Yolyn-Am",
+              "native_script": "Ёлын-Ам",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
-            },
-            {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical transcription (Gebi)"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian gorge name.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mongolian govi ('waterless gravel steppe/desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Deep ice-filled gorge in the Zuun Saikhan massif; from Mongolian yol ('bearded vulture, lammergeier') and am ('mouth, canyon').",
+          "source_url": "https://en.wikipedia.org/wiki/Yolyn_Am"
         },
         {
           "name": "Baga Bogd",
@@ -6041,45 +5999,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Rouran_Khaganate"
         },
         {
-          "name": "Gobi Desert",
+          "name": "Nemegt Basin",
           "disambiguation_note": null,
-          "localisation_stem": "Gobi",
+          "localisation_stem": "Nemegt",
           "category": "choronym",
           "feature_subtype": "region",
-          "relationship": "Arid desert-steppe zone of southern Övörkhangai.",
+          "relationship": "Arid intermontane desert basin extending west of the Gurvan Saikhan foothills.",
           "language_variants": [
             {
-              "form": "Govi",
-              "native_script": "Гови",
+              "form": "Nemegt",
+              "native_script": "Нэмэгт",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('gravelly semi-desert')"
+              "notes": "Mongolian massif and basin name"
             },
             {
-              "form": "Gobi",
-              "native_script": "Гоби",
+              "form": "Nemegetu",
+              "native_script": "Нэмэгэту",
               "language": "Russian",
               "language_code": "rus",
-              "notes": "Russian geographical name"
-            },
-            {
-              "form": "Gēbì",
-              "native_script": "戈壁",
-              "language": "Chinese",
-              "language_code": "zho",
-              "notes": "Chinese historical transcription (Gebi)"
+              "notes": "Russian paleontological and geographical form"
             }
           ],
-          "earliest_attestation_year": -100,
-          "earliest_attestation_note": "Attested as Shamo / Hanhai in Han-dynasty Chinese sources (1st century BCE) and Gobi in Mongolic sources.",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian desert basin name.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Mongolian govi ('waterless gravel steppe/desert').",
-          "source_url": "https://en.wikipedia.org/wiki/Gobi_Desert"
+          "etymology_notes": "Arid intermontane basin of the northwestern Gobi Desert in Omnogovi Province, bordered by the Nemegt range.",
+          "source_url": "https://en.wikipedia.org/wiki/Nemegt_basin"
         },
         {
           "name": "Ongi River",
@@ -6190,38 +6141,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Xiongnu"
         },
         {
-          "name": "Orog Lake",
+          "name": "Baga Bogd",
           "disambiguation_note": null,
-          "localisation_stem": "Orog",
-          "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Endorheic lake lying at the northern foot of Ikh Bogd.",
+          "localisation_stem": "Baga Bogd",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Sister Gobi-Altai massif rising east of Ikh Bogd along the southern basin rim.",
           "language_variants": [
             {
-              "form": "Orog nuur",
-              "native_script": "Орог нуур",
+              "form": "Baga Bogd",
+              "native_script": "Бага Богд",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name"
+              "notes": "Mongolian name ('Lesser Saint')"
             },
             {
-              "form": "Orog-Nur",
-              "native_script": "Орог-Нур",
+              "form": "Baga-Bogd",
+              "native_script": "Бага-Богд",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym",
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian oronym",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Endorheic lake at the northern foot of Ikh Bogd in the Valley of the Lakes.",
-          "source_url": "https://en.wikipedia.org/wiki/Orog_Lake"
+          "etymology_notes": "Major massif of the Gobi-Altai range; from Mongolian baga ('lesser') and bogd ('holy').",
+          "source_url": "https://en.wikipedia.org/wiki/Baga_Bogd"
         },
         {
           "name": "Valley of the Lakes",
@@ -6325,23 +6276,23 @@
           "source_url": "https://en.wikipedia.org/wiki/Tiele_people"
         },
         {
-          "name": "Orog Lake",
+          "name": "Taatsiin Tsagaan Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Orog",
+          "localisation_stem": "Taatsiin Tsagaan",
           "category": "hydronym",
           "feature_subtype": "lake",
-          "relationship": "Terminal lake fed by the Tuin River in the Valley of the Lakes.",
+          "relationship": "Neighboring saline lake in the Valley of the Lakes east of the Tuin outlet.",
           "language_variants": [
             {
-              "form": "Orog nuur",
-              "native_script": "Орог нуур",
+              "form": "Taatsyn Tsagaan nuur",
+              "native_script": "Таацын Цагаан нуур",
               "language": "Mongolian",
               "language_code": "mon",
               "notes": "Mongolian name"
             },
             {
-              "form": "Orog-Nur",
-              "native_script": "Орог-Нур",
+              "form": "Tatsyn-Tsagan-Nur",
+              "native_script": "Тацын-Цаган-Нур",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
@@ -6355,8 +6306,8 @@
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Endorheic lake at the northern foot of Ikh Bogd in the Valley of the Lakes.",
-          "source_url": "https://en.wikipedia.org/wiki/Orog_Lake"
+          "etymology_notes": "Saline lake in the Valley of the Lakes fed by the Taats River.",
+          "source_url": "https://en.wikipedia.org/wiki/Taatsiin_Tsagaan_Lake"
         },
         {
           "name": "Khangai Mountains",
@@ -6467,38 +6418,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Rouran_Khaganate"
         },
         {
-          "name": "Ikh Bogd",
+          "name": "Böön Tsagaan Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Ikh Bogd",
-          "category": "oronym",
-          "feature_subtype": "mountain",
-          "relationship": "Massive Gobi-Altai peak towering south of the lake.",
+          "localisation_stem": "Böön Tsagaan",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Major neighboring lake in the Valley of the Lakes northwest of Orog Lake.",
           "language_variants": [
             {
-              "form": "Ikh Bogd",
-              "native_script": "Их Богд",
+              "form": "Böön Tsagaan nuur",
+              "native_script": "Бөөн Цагаан нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('Great Saint')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Ikh-Bogd",
-              "native_script": "Их-Богд",
+              "form": "Bun-Tsagan-Nur",
+              "native_script": "Бун-Цаган-Нур",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian oronym",
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Highest peak of the Gobi-Altai range; from Mongolian ikh ('great') and bogd ('holy/saint').",
-          "source_url": "https://en.wikipedia.org/wiki/Ikh_Bogd"
+          "etymology_notes": "Largest saline lake of the Valley of the Lakes in Bayankhongor.",
+          "source_url": "https://en.wikipedia.org/wiki/B%C3%B6%C3%B6n_Tsagaan_Lake"
         },
         {
           "name": "Valley of the Lakes",
@@ -6609,31 +6560,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Naimans"
         },
         {
-          "name": "Gegeen Lake",
+          "name": "Airag Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Gegeen",
+          "localisation_stem": "Airag",
           "category": "hydronym",
           "feature_subtype": "lake",
-          "relationship": "Lake on the Zavkhan basin near Khasagt Khairkhan.",
+          "relationship": "Freshwater lake fed by the Zavkhan River downstream from Khasagt Khairkhan.",
           "language_variants": [
             {
-              "form": "Gegeen nuur",
-              "native_script": "Гегеен нуур",
+              "form": "Airag nuur",
+              "native_script": "Айраг нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('Bright/Luminous Lake')"
+              "notes": "Mongolian name ('Kumis Lake')"
+            },
+            {
+              "form": "Ayrag-Nur",
+              "native_script": "Айраг-Нур",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym",
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Lake on the Zavkhan River basin near Khasagt Khairkhan.",
-          "source_url": "https://en.wikipedia.org/wiki/Gegeen_Lake"
+          "etymology_notes": "Freshwater lake fed by the Zavkhan River in the Great Lakes Depression; from Mongolian airag ('fermented mare's milk') and nuur ('lake').",
+          "source_url": "https://en.wikipedia.org/wiki/Airag_Lake"
         },
         {
           "name": "Zavkhan River",
@@ -6744,23 +6702,23 @@
           "source_url": "https://en.wikipedia.org/wiki/Naimans"
         },
         {
-          "name": "Khasagt Khairkhan",
+          "name": "Sutai Mountain",
           "disambiguation_note": null,
-          "localisation_stem": "Khasagt Khairkhan",
+          "localisation_stem": "Sutai",
           "category": "oronym",
           "feature_subtype": "mountain",
-          "relationship": "Sacred Gobi-Altai peak rising southwest of the lake.",
+          "relationship": "Glaciated Gobi-Altai peak rising southwest of Gegeen Lake.",
           "language_variants": [
             {
-              "form": "Khasagt Khayrkhan",
-              "native_script": "Хасагт Хайрхан",
+              "form": "Sutay khayrkhan",
+              "native_script": "Сутай хайрхан",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name"
+              "notes": "Mongolian name ('Milky Mountain')"
             },
             {
-              "form": "Khasagt-Khayrkhan",
-              "native_script": "Хасагт-Хайрхан",
+              "form": "Sutay-Uul",
+              "native_script": "Сутай-Уул",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
@@ -6774,8 +6732,8 @@
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Sacred peak of the Gobi-Altai system; khairkhan is a reverential Mongolian mountain epithet.",
-          "source_url": "https://en.wikipedia.org/wiki/Khasagt_Khairkhan"
+          "etymology_notes": "Glaciated peak on the Govi-Altai–Khovd border; from Mongolic süü ('milk').",
+          "source_url": "https://en.wikipedia.org/wiki/Sutai_Mountain"
         },
         {
           "name": "Zavkhan River",
@@ -6872,53 +6830,60 @@
           "source_url": "https://en.wikipedia.org/wiki/Yenisei_Kyrgyz"
         },
         {
-          "name": "Khasagt Khairkhan",
+          "name": "Burkhan Buudai",
           "disambiguation_note": null,
-          "localisation_stem": "Khasagt Khairkhan",
+          "localisation_stem": "Burkhan Buudai",
           "category": "oronym",
           "feature_subtype": "mountain",
-          "relationship": "Dominant mountain massif of the local county.",
+          "relationship": "Sacred Gobi-Altai massif rising southeast of the Taigan range.",
           "language_variants": [
             {
-              "form": "Khasagt Khayrkhan",
-              "native_script": "Хасагт Хайрхан",
+              "form": "Burkhan Buudai",
+              "native_script": "Бурхан Буудай",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name"
+              "notes": "Mongolian sacred mountain name"
             },
             {
-              "form": "Khasagt-Khayrkhan",
-              "native_script": "Хасагт-Хайрхан",
+              "form": "Burkhan-Buday",
+              "native_script": "Бурхан-Будай",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian oronym",
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian sacred oronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Sacred peak of the Gobi-Altai system; khairkhan is a reverential Mongolian mountain epithet.",
-          "source_url": "https://en.wikipedia.org/wiki/Khasagt_Khairkhan"
+          "etymology_notes": "Prominent glaciated massif of the Gobi-Altai range in Govi-Altai Province; from Mongolian burkhan ('buddha, deity') and buudai ('wheat').",
+          "source_url": "https://en.wikipedia.org/wiki/Burkhan_Buudai"
         },
         {
-          "name": "Gegeen Lake",
-          "disambiguation_note": null,
-          "localisation_stem": "Gegeen",
+          "name": "Khar Lake",
+          "disambiguation_note": "Zavkhan",
+          "localisation_stem": "Khar",
           "category": "hydronym",
           "feature_subtype": "lake",
-          "relationship": "Nearby lake in the Zavkhan river system.",
+          "relationship": "Freshwater lake in the Zavkhan basin north of Taigan Lake.",
           "language_variants": [
             {
-              "form": "Gegeen nuur",
-              "native_script": "Гегеен нуур",
+              "form": "Khar nuur",
+              "native_script": "Хар нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('Bright/Luminous Lake')"
+              "notes": "Mongolian name ('Black Lake')"
+            },
+            {
+              "form": "Khara-Nur",
+              "native_script": "Хара-Нур",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
           "earliest_attestation_year": null,
@@ -6929,8 +6894,8 @@
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Lake on the Zavkhan River basin near Khasagt Khairkhan.",
-          "source_url": "https://en.wikipedia.org/wiki/Gegeen_Lake"
+          "etymology_notes": "Freshwater lake in Zavkhan Province; from Mongolian khar nuur ('black lake').",
+          "source_url": "https://en.wikipedia.org/wiki/Khar_Lake_(Zavkhan)"
         }
       ]
     },
@@ -7000,38 +6965,38 @@
           "source_url": "https://en.wikipedia.org/wiki/G%C3%B6kt%C3%BCrks"
         },
         {
-          "name": "Taatsiin Tsagaan Lake",
+          "name": "Ulaan Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Taatsiin Tsagaan",
+          "localisation_stem": "Ulaan",
           "category": "hydronym",
           "feature_subtype": "lake",
-          "relationship": "Nearby saline lake in the Valley of the Lakes.",
+          "relationship": "Terminal desert lake fed by the lower Ongi River.",
           "language_variants": [
             {
-              "form": "Taatsïn Tsagaan nuur",
-              "native_script": null,
+              "form": "Ulaan nuur",
+              "native_script": "Улаан нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name"
+              "notes": "Mongolian name ('Red Lake')"
             },
             {
-              "form": "Tatsyn-Tsagan-Nur",
-              "native_script": "Тацын-Цаган-Нур",
+              "form": "Ulan-Nur",
+              "native_script": "Улан-Нур",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym",
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Saline lake in the Valley of the Lakes fed by the Taats River.",
-          "source_url": "https://en.wikipedia.org/wiki/Taatsiin_Tsagaan_Lake"
+          "etymology_notes": "Terminal desert lake of the Ongi River in Omnogovi; from Mongolian ulaan ('red') and nuur ('lake'), after its reddish clay basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Ulaan_Lake"
         },
         {
           "name": "Khangai Mountains",
@@ -7149,45 +7114,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Keraites"
         },
         {
-          "name": "Ongi River",
+          "name": "Orog Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Ongi",
+          "localisation_stem": "Orog",
           "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Adjacent endorheic river flowing from the Khangai range.",
+          "feature_subtype": "lake",
+          "relationship": "Neighboring endorheic lake in the Valley of the Lakes west of Taatsiin Tsagaan.",
           "language_variants": [
             {
-              "form": "Ongiin Gol",
-              "native_script": "Онгиин Гол",
+              "form": "Orog nuur",
+              "native_script": "Орог нуур",
               "language": "Mongolian",
               "language_code": "mon",
               "notes": "Mongolian name"
             },
             {
-              "form": "Ongiin-Gol",
-              "native_script": "Онгиин-Гол",
+              "form": "Orog-Nur",
+              "native_script": "Орог-Нур",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
-            },
-            {
-              "form": "Ongïn",
-              "native_script": null,
-              "language": "Old Turkic",
-              "language_code": "otk",
-              "notes": "Old Turkic Orkhon-region hydronym"
             }
           ],
-          "earliest_attestation_year": 732,
-          "earliest_attestation_note": "c. 732 CE (Old Turkic Ongin inscription)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Endorheic river flowing from the Khangai Mountains southward into the Gobi.",
-          "source_url": "https://en.wikipedia.org/wiki/Ongi_River"
+          "etymology_notes": "Endorheic lake at the northern foot of Ikh Bogd in the Valley of the Lakes.",
+          "source_url": "https://en.wikipedia.org/wiki/Orog_Lake"
         },
         {
           "name": "Valley of the Lakes",
@@ -7298,45 +7256,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Keraites"
         },
         {
-          "name": "Ongi River",
+          "name": "Ikh Bogd",
           "disambiguation_note": null,
-          "localisation_stem": "Ongi",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river draining central Övörkhangai southward.",
+          "localisation_stem": "Ikh Bogd",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Highest massif of the Gobi-Altai west of the Myangan Yamaat highlands.",
           "language_variants": [
             {
-              "form": "Ongiin Gol",
-              "native_script": "Онгиин Гол",
+              "form": "Ikh Bogd",
+              "native_script": "Их Богд",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name"
+              "notes": "Mongolian name ('Great Saint')"
             },
             {
-              "form": "Ongiin-Gol",
-              "native_script": "Онгиин-Гол",
+              "form": "Ikh-Bogd",
+              "native_script": "Их-Богд",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
-            },
-            {
-              "form": "Ongïn",
-              "native_script": null,
-              "language": "Old Turkic",
-              "language_code": "otk",
-              "notes": "Old Turkic Orkhon-region hydronym"
             }
           ],
-          "earliest_attestation_year": 732,
-          "earliest_attestation_note": "c. 732 CE (Old Turkic Ongin inscription)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian oronym",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Endorheic river flowing from the Khangai Mountains southward into the Gobi.",
-          "source_url": "https://en.wikipedia.org/wiki/Ongi_River"
+          "etymology_notes": "Highest peak of the Gobi-Altai range; from Mongolian ikh ('great') and bogd ('holy/saint').",
+          "source_url": "https://en.wikipedia.org/wiki/Ikh_Bogd"
         },
         {
           "name": "Baga Bogd",
@@ -8944,45 +8895,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yenisei_Kyrgyz"
         },
         {
-          "name": "Mongun-Taiga",
+          "name": "Üüreg Lake",
           "disambiguation_note": null,
-          "localisation_stem": "Mongun-Taiga",
-          "category": "oronym",
-          "feature_subtype": "mountain",
-          "relationship": "Glaciated massif overlooking Khindiktig-Khol.",
+          "localisation_stem": "Üüreg",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Highland saline lake lying just south of the Western Tannu-Ola range.",
           "language_variants": [
             {
-              "form": "Mönggün-Tayga",
-              "native_script": "Мöнггüн-Тайга",
-              "language": "Tuvan",
-              "language_code": "tyv",
-              "notes": "Tuvan name ('Silver Taiga/Mountain')"
+              "form": "Üüreg nuur",
+              "native_script": "Үүрэг нуур",
+              "language": "Mongolian",
+              "language_code": "mon",
+              "notes": "Mongolian name"
             },
             {
-              "form": "Mongun-Tayga",
-              "native_script": "Монгун-Тайга",
+              "form": "Ureg-Nur",
+              "native_script": "Урэг-Нур",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
-            },
-            {
-              "form": "Möngön tayga",
-              "native_script": "Мөнгөн тайга",
-              "language": "Mongolian",
-              "language_code": "mon",
-              "notes": "Mongolian form"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Tuvan oronym",
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Highest peak in Tuva; from Tuvan möngün ('silver', referring to perpetual snow) and taiga.",
-          "source_url": "https://en.wikipedia.org/wiki/Mongun-Taiga"
+          "etymology_notes": "Highland endorheic salt lake between the Tsagaan Shuvuut and Turgen ranges on the northern flank of the Altai-Tannu watershed.",
+          "source_url": "https://en.wikipedia.org/wiki/%C3%9C%C3%BCreg_Lake"
         },
         {
           "name": "Tannu-Ola Mountains",
@@ -9086,45 +9030,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yenisei_Kyrgyz"
         },
         {
-          "name": "Tes River",
+          "name": "Khan Khökhii",
           "disambiguation_note": null,
-          "localisation_stem": "Tes",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Primary river flowing through the eastern Uvs basin.",
+          "localisation_stem": "Khan Khökhii",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Sacred mountain range separating the Uvs basin from the Khyargas depression.",
           "language_variants": [
             {
-              "form": "Tesiyn gol",
-              "native_script": "Тесийн гол",
+              "form": "Khan Khokhiy",
+              "native_script": "Хан Хөхий",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name"
+              "notes": "Mongolian name ('Royal Blue')"
             },
             {
-              "form": "Tes-Khem",
-              "native_script": "Тес-Хем",
-              "language": "Tuvan",
-              "language_code": "tyv",
-              "notes": "Tuvan name"
-            },
-            {
-              "form": "T·es",
-              "native_script": "Тэс",
+              "form": "Khan-Khukhey",
+              "native_script": "Хан-Хухэй",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "Traditional Mongolic/Turkic river name of northwestern Mongolia.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian oronym",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Primary tributary of Uvs Lake, flowing along the Tuva-Mongolia border.",
-          "source_url": "https://en.wikipedia.org/wiki/Tes_River"
+          "etymology_notes": "Western extension of the Khangai range separating the Uvs and Khyargas basins.",
+          "source_url": "https://en.wikipedia.org/wiki/Khan_Kh%C3%B6khii"
         },
         {
           "name": "Uvs Lake Basin",
@@ -9235,45 +9172,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Tiele_people"
         },
         {
-          "name": "Tes River",
+          "name": "Khyargas Nuur",
           "disambiguation_note": null,
-          "localisation_stem": "Tes",
+          "localisation_stem": "Khyargas Nuur",
           "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "River bordering the Altan Els sand dunes to the north.",
+          "feature_subtype": "lake",
+          "relationship": "Large saline lake in the Great Lakes Depression south of Khan Khokhii.",
           "language_variants": [
             {
-              "form": "Tesiyn gol",
-              "native_script": "Тесийн гол",
+              "form": "Khyargas nuur",
+              "native_script": "Хяргас нуур",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name"
+              "notes": "Mongolian name ('Kyrgyz Lake')"
             },
             {
-              "form": "Tes-Khem",
-              "native_script": "Тес-Хем",
-              "language": "Tuvan",
-              "language_code": "tyv",
-              "notes": "Tuvan name"
-            },
-            {
-              "form": "T·es",
-              "native_script": "Тэс",
+              "form": "Khirgis-Nur",
+              "native_script": "Хиргис-Нур",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "Traditional Mongolic/Turkic river name of northwestern Mongolia.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym preserving medieval Kyrgyz presence.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Primary tributary of Uvs Lake, flowing along the Tuva-Mongolia border.",
-          "source_url": "https://en.wikipedia.org/wiki/Tes_River"
+          "etymology_notes": "Large saline endorheic lake in the Great Lakes Depression; Mongolian Khyargas ('Kyrgyz') + nuur ('lake').",
+          "source_url": "https://en.wikipedia.org/wiki/Khyargas_Nuur"
         },
         {
           "name": "Uvs Lake",
@@ -10236,45 +10166,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Yenisei_Kyrgyz"
         },
         {
-          "name": "Kantegir",
+          "name": "Abakan",
           "disambiguation_note": null,
-          "localisation_stem": "Kantegir",
+          "localisation_stem": "Abakan",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Major Sayan tributary of the Yenisei.",
+          "relationship": "Major left tributary of the Yenisei draining the Western Sayan slopes west of Kantegir.",
           "language_variants": [
             {
-              "form": "Kantegir",
-              "native_script": "Кантегир",
-              "language": "Russian",
-              "language_code": "rus",
-              "notes": "Russian geographical name"
-            },
-            {
-              "form": "Khan-Tigir",
-              "native_script": "Хан-Тигир",
+              "form": "Aghban",
+              "native_script": "Ағбан",
               "language": "Khakas",
               "language_code": "kjh",
               "notes": "Khakas name"
             },
             {
-              "form": "Khan-D·e·er",
-              "native_script": "Хан-Дээр",
-              "language": "Tuvan",
-              "language_code": "tyv",
-              "notes": "Tuvan name"
+              "form": "Abakan",
+              "native_script": "Абакан",
+              "language": "Russian",
+              "language_code": "rus",
+              "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": null,
-          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Sayan hydronym",
+          "earliest_attestation_year": 1675,
+          "earliest_attestation_note": "1675 CE (17th-century Russian Siberian cartography)",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Left tributary of the Yenisei in the Western Sayan; from Turkic Khan-Tengir ('Lord Sky').",
-          "source_url": "https://en.wikipedia.org/wiki/Kantegir"
+          "etymology_notes": "Major left tributary of the Yenisei flowing from the Western Sayan through the Minusinsk Hollow.",
+          "source_url": "https://en.wikipedia.org/wiki/Abakan_(river)"
         },
         {
           "name": "Sayan Mountains",
@@ -11591,38 +11514,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Naimans"
         },
         {
-          "name": "Khar-Us Lake",
+          "name": "Jargalant Khairkhan",
           "disambiguation_note": null,
-          "localisation_stem": "Khar-Us",
-          "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Adjacent freshwater lake draining toward Dörgön Lake.",
+          "localisation_stem": "Jargalant Khairkhan",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Isolated Mongol-Altai massif overlooking the Khar-Us and Dorgon lakes.",
           "language_variants": [
             {
-              "form": "Khar-Us nuur",
-              "native_script": "Хар-Ус нуур",
+              "form": "Jargalant Khairkhan",
+              "native_script": "Жаргалант Хайрхан",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('Black Water Lake')"
+              "notes": "Mongolian mountain name"
             },
             {
-              "form": "Khara-Us-Nur",
-              "native_script": "Хара-Ус-Нур",
+              "form": "Dzhargalant-Khayrkhan",
+              "native_script": "Джаргалант-Хайрхан",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "Attested in 17th-century CE Oirat-Mongol geographical accounts.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian sacred oronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Large freshwater lake in the Great Lakes Depression; from Mongolian khar us ('black/clear water').",
-          "source_url": "https://en.wikipedia.org/wiki/Khar-Us_Lake"
+          "etymology_notes": "Isolated Mongol-Altai massif overlooking Khar-Us Lake in Khovd Province; from Mongolian jargalant ('happy, blessed') and khairkhan ('gracious sacred mountain').",
+          "source_url": "https://en.wikipedia.org/wiki/Jargalant_Khairkhan"
         },
         {
           "name": "Great Lakes Depression",
@@ -11726,23 +11649,23 @@
           "source_url": "https://en.wikipedia.org/wiki/Kipchaks"
         },
         {
-          "name": "Dörgön Lake",
+          "name": "Buyant River",
           "disambiguation_note": null,
-          "localisation_stem": "Dörgön",
+          "localisation_stem": "Buyant",
           "category": "hydronym",
-          "feature_subtype": "lake",
-          "relationship": "Saline lake bordering the western Zavkhan dunes.",
+          "feature_subtype": "river",
+          "relationship": "Glacial Altai river feeding the Khar-Us basin in Khovd.",
           "language_variants": [
             {
-              "form": "Dörgön nuur",
-              "native_script": "Дөргөн нуур",
+              "form": "Buyant gol",
+              "native_script": "Буянт гол",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name"
+              "notes": "Mongolian name ('Virtuous/Blessed River')"
             },
             {
-              "form": "Durgen-Nur",
-              "native_script": "Дурген-Нур",
+              "form": "Buyantu-Gol",
+              "native_script": "Буянту-Гол",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
@@ -11756,8 +11679,8 @@
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Saline lake in the Great Lakes Depression of western Mongolia.",
-          "source_url": "https://en.wikipedia.org/wiki/D%C3%B6rg%C3%B6n_Lake"
+          "etymology_notes": "Tributary of the Khovd River flowing from the Mongolian Altai to Khar-Us Lake.",
+          "source_url": "https://en.wikipedia.org/wiki/Buyant_River"
         },
         {
           "name": "Zavkhan River",
@@ -11868,38 +11791,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Naimans"
         },
         {
-          "name": "Otgontenger",
+          "name": "Ider River",
           "disambiguation_note": null,
-          "localisation_stem": "Otgontenger",
-          "category": "oronym",
-          "feature_subtype": "mountain",
-          "relationship": "Sacred highest peak of the Khangai east of Uliastai.",
+          "localisation_stem": "Ider",
+          "category": "hydronym",
+          "feature_subtype": "river",
+          "relationship": "Major Khangai river draining north of the Uliastai divide.",
           "language_variants": [
             {
-              "form": "Otgontenger",
-              "native_script": "Отгонтенгер",
+              "form": "Ideriin gol",
+              "native_script": "Идэрийн гол",
               "language": "Mongolian",
               "language_code": "mon",
-              "notes": "Mongolian name ('Youngest Sky')"
+              "notes": "Mongolian name"
             },
             {
-              "form": "Otgon-T·eng·er",
-              "native_script": "Отгон-Тэнгэр",
+              "form": "Ider",
+              "native_script": "Идэр",
               "language": "Russian",
               "language_code": "rus",
               "notes": "Russian geographical name"
             }
           ],
-          "earliest_attestation_year": 1691,
-          "earliest_attestation_note": "1691 CE (pre-1700 CE Khalkha mountain-worship chronicles)",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "No pre-1700 CE written attestation; traditional Mongolian hydronym",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Highest peak of the Khangai range; from Mongolic otgon ('youngest') and tenger ('sky/heaven').",
-          "source_url": "https://en.wikipedia.org/wiki/Otgontenger"
+          "etymology_notes": "Major river of the Khangai range joining the Delger mörön to form the Selenga.",
+          "source_url": "https://en.wikipedia.org/wiki/Ider_River"
         },
         {
           "name": "Zavkhan River",

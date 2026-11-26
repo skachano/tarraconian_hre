@@ -137,21 +137,21 @@
       "target_baronies_audited": 100,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 300,
-      "unique_replacement_names": 252,
+      "unique_replacement_names": 251,
       "candidates_with_multilingual_variants": 168,
       "wikipedia_source_attached": 300,
-      "unique_source_urls": 257,
+      "unique_source_urls": 256,
       "candidates_by_category": {
         "choronym": 8,
-        "hydronym": 111,
-        "oronym": 63,
+        "hydronym": 112,
+        "oronym": 62,
         "topographic_feature": 16,
         "tribe": 102
       },
       "baronies_with_category": {
         "has_choronym_candidate": 8,
         "has_hydronym_candidate": 89,
-        "has_oronym_candidate": 58,
+        "has_oronym_candidate": 57,
         "has_topographic_feature_candidate": 16,
         "has_tribe_candidate": 100
       },
@@ -186,7 +186,7 @@
         "1178": 300
       },
       "baronies_with_867_valid_candidate": 100,
-      "unique_localisation_stems": 251
+      "unique_localisation_stems": 250
     }
   },
   "baronies": {
@@ -4311,38 +4311,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Belfast_Lough"
         },
         {
-          "name": "Slemish",
+          "name": "Lough Neagh",
           "disambiguation_note": null,
-          "localisation_stem": "Slemish",
-          "category": "oronym",
-          "feature_subtype": "hill",
-          "relationship": "Distinctive basaltic volcanic plug in County Antrim associated with Saint Patrick's captivity.",
+          "localisation_stem": "Lough Neagh",
+          "category": "hydronym",
+          "feature_subtype": "lake",
+          "relationship": "Largest freshwater lake in Ulster, lying immediately west of the Antrim plateau behind Carrickfergus.",
           "language_variants": [
             {
-              "form": "Sliabh Mis",
-              "native_script": null,
-              "language": "Irish",
-              "language_code": "gle",
-              "notes": "Irish name of the hill."
-            },
-            {
-              "form": "Sliab Mis",
+              "form": "Loch nEchach",
               "native_script": null,
               "language": "Old Irish",
               "language_code": "sga",
-              "notes": "Old Irish form in Patrician hagiography."
+              "notes": "Early medieval Irish hydronym meaning 'Lake of Eochu'"
+            },
+            {
+              "form": "Loch nEachach",
+              "native_script": null,
+              "language": "Irish",
+              "language_code": "gle",
+              "notes": "Modern Irish name of the lake"
             }
           ],
-          "earliest_attestation_year": 690,
-          "earliest_attestation_note": "Late 7th century CE in Muirchú's Life of Saint Patrick.",
+          "earliest_attestation_year": 600,
+          "earliest_attestation_note": "7th century CE in early Irish annals and dindsenchas.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "From Old Irish Sliab Mis, 'mountain of Mis'.",
-          "source_url": "https://en.wikipedia.org/wiki/Slemish"
+          "etymology_notes": "Irish loch ('lake') + genitive of the legendary/mythological personal name Eochu (Old Irish Loch nEchach). Onomastic note: Old Irish 'Loch nEchach' (Early medieval Irish hydronym meaning 'Lake of Eochu').",
+          "source_url": "https://en.wikipedia.org/wiki/Lough_Neagh"
         }
       ]
     },

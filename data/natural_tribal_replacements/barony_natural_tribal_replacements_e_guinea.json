@@ -137,30 +137,33 @@
       "target_baronies_audited": 295,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 885,
-      "unique_replacement_names": 166,
+      "unique_replacement_names": 182,
       "candidates_with_multilingual_variants": 112,
       "wikipedia_source_attached": 885,
-      "unique_source_urls": 166,
+      "unique_source_urls": 182,
       "candidates_by_category": {
         "choronym": 19,
-        "hydronym": 489,
-        "oronym": 65,
-        "topographic_feature": 17,
+        "hydronym": 484,
+        "oronym": 69,
+        "topographic_feature": 18,
         "tribe": 295
       },
       "baronies_with_category": {
         "has_choronym_candidate": 19,
-        "has_hydronym_candidate": 291,
-        "has_oronym_candidate": 61,
-        "has_topographic_feature_candidate": 17,
+        "has_hydronym_candidate": 290,
+        "has_oronym_candidate": 65,
+        "has_topographic_feature_candidate": 18,
         "has_tribe_candidate": 295
       },
       "unique_language_codes": [
         "adj",
         "aka",
+        "anw",
         "any",
+        "bam",
         "bba",
         "bci",
+        "bib",
         "bin",
         "bsq",
         "dnj",
@@ -173,17 +176,18 @@
         "gol",
         "grb",
         "gux",
+        "hau",
         "ibo",
+        "ige",
         "kbp",
         "kdh",
         "klu",
         "knk",
-        "kno",
         "kpe",
+        "krw",
         "lia",
         "lom",
         "men",
-        "mev",
         "mnk",
         "mos",
         "nzi",
@@ -192,6 +196,8 @@
         "snk",
         "sus",
         "tem",
+        "tiv",
+        "vai",
         "yor"
       ],
       "anachronism_type_counts": {
@@ -202,8 +208,8 @@
       },
       "candidates_by_attestation_basis": {
         "attested_867_to_1066": 18,
-        "attested_pre_867": 40,
-        "indigenous_pre_literate": 827
+        "attested_pre_867": 41,
+        "indigenous_pre_literate": 826
       },
       "bookmark_valid_candidates": {
         "867": 867,
@@ -211,7 +217,7 @@
         "1178": 885
       },
       "baronies_with_867_valid_candidate": 295,
-      "unique_localisation_stems": 162
+      "unique_localisation_stems": 180
     }
   },
   "baronies": {
@@ -8567,38 +8573,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Zou_River"
         },
         {
-          "name": "Ouémé River",
+          "name": "Agbado River",
           "disambiguation_note": null,
-          "localisation_stem": "Ouémé",
+          "localisation_stem": "Agbado",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Principal river of Benin east of the Savalou hills.",
+          "relationship": "Tributary of the Zou River flowing directly past Savalou.",
           "language_variants": [
             {
-              "form": "Weme",
+              "form": "Agbado",
               "native_script": null,
               "language": "Fon",
               "language_code": "fon",
-              "notes": "Fon river name"
-            },
-            {
-              "form": "Òfì",
-              "native_script": null,
-              "language": "Yoruba",
-              "language_code": "yor",
-              "notes": "Regional Yoruba name"
+              "notes": "Gbe/Fon river name"
             }
           ],
-          "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "Attested in 17th-century CE European Slave Coast accounts.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate river flowing past Savalou into the Zou basin.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Longest river of Benin, flowing south from the Atakora foothills to Lake Nokoué.",
-          "source_url": "https://en.wikipedia.org/wiki/Ou%C3%A9m%C3%A9_River"
+          "etymology_notes": "Tributary of the Zou River draining central Benin near Savalou.",
+          "source_url": "https://en.wikipedia.org/wiki/Agbado_River"
         }
       ]
     },
@@ -9953,31 +9952,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Bassa people",
+          "name": "Kpelle people",
           "disambiguation_note": null,
-          "localisation_stem": "Bassa",
+          "localisation_stem": "Kpelle",
           "category": "tribe",
           "feature_subtype": "niger_congo_people",
-          "relationship": "Kru-speaking Bassa population of the central Liberian interior.",
+          "relationship": "Mande-speaking indigenous people inhabiting the central Liberian interior north of Gebba.",
           "language_variants": [
             {
-              "form": "Ɓǎsàa",
+              "form": "Kpɛlɛɛ",
               "native_script": null,
-              "language": "Bassa",
-              "language_code": "bsq",
-              "notes": "Bassa ethnonym"
+              "language": "Kpelle",
+              "language_code": "kpe",
+              "notes": "Kpelle/Guerzé ethnonym"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "Attested in 16th-century CE Portuguese coastal narratives of central Liberia.",
+          "earliest_attestation_year": 1650,
+          "earliest_attestation_note": "Attested in 17th-century CE European coastal-hinterland reports (Olfert Dapper, 1668 CE).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Kru-speaking Niger-Congo people of central coastal Liberia.",
-          "source_url": "https://en.wikipedia.org/wiki/Bassa_people_(Liberia)"
+          "etymology_notes": "Largest Mande (Niger-Congo) people of central Liberia and Guinée forestière.",
+          "source_url": "https://en.wikipedia.org/wiki/Kpelle_people"
         },
         {
           "name": "Cestos River",
@@ -10409,31 +10408,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Mano people",
+          "name": "Dan people",
           "disambiguation_note": null,
-          "localisation_stem": "Mano",
+          "localisation_stem": "Dan",
           "category": "tribe",
           "feature_subtype": "niger_congo_people",
-          "relationship": "Southern Mande Mano population along the upper Cestos/Nuon basin.",
+          "relationship": "Southern Mande people inhabiting the forested highlands around Nuon.",
           "language_variants": [
             {
-              "form": "Ma",
+              "form": "Dan",
               "native_script": null,
-              "language": "Mann",
-              "language_code": "mev",
-              "notes": "Mano/Mah ethnonym"
+              "language": "Dan",
+              "language_code": "dnj",
+              "notes": "Dan/Gio ethnonym"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in Nimba-region oral tradition and 19th-century CE records; no pre-1700 written date.",
+          "earliest_attestation_note": "Attested in oral tradition and 19th-century CE accounts; no pre-1700 written date.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Southern Mande (Niger-Congo) people of north-central Liberia and southeastern Guinea.",
-          "source_url": "https://en.wikipedia.org/wiki/Mano_people"
+          "etymology_notes": "Southern Mande (Niger-Congo) people of western Ivory Coast and northeastern Liberia.",
+          "source_url": "https://en.wikipedia.org/wiki/Dan_people"
         },
         {
           "name": "Cestos River",
@@ -10523,31 +10522,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Mano people",
+          "name": "Krahn people",
           "disambiguation_note": null,
-          "localisation_stem": "Mano",
+          "localisation_stem": "Krahn",
           "category": "tribe",
           "feature_subtype": "niger_congo_people",
-          "relationship": "Southern Mande Mano population of north-central Liberia.",
+          "relationship": "Kru-speaking people settled in the forest zone southeast of Gbanshay.",
           "language_variants": [
             {
-              "form": "Ma",
+              "form": "Wee",
               "native_script": null,
-              "language": "Mann",
-              "language_code": "mev",
-              "notes": "Mano/Mah ethnonym"
+              "language": "Western Krahn",
+              "language_code": "krw",
+              "notes": "Indigenous Krahn/Wee ethnonym"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in Nimba-region oral tradition and 19th-century CE records; no pre-1700 written date.",
+          "earliest_attestation_note": "Pre-literate Kru-speaking people of eastern Liberia and western Ivory Coast.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Southern Mande (Niger-Congo) people of north-central Liberia and southeastern Guinea.",
-          "source_url": "https://en.wikipedia.org/wiki/Mano_people"
+          "etymology_notes": "Kru-speaking Niger-Congo people inhabiting the forested borderlands east of Nimba.",
+          "source_url": "https://en.wikipedia.org/wiki/Krahn_people"
         },
         {
           "name": "Nimba Range",
@@ -10858,31 +10857,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Kpelle people",
+          "name": "Bassa people",
           "disambiguation_note": null,
-          "localisation_stem": "Kpelle",
+          "localisation_stem": "Bassa",
           "category": "tribe",
           "feature_subtype": "niger_congo_people",
-          "relationship": "Central Liberian Mande Kpelle population along the St. Paul corridor.",
+          "relationship": "Kru-speaking coastal and central Liberian people living south of Kokasu.",
           "language_variants": [
             {
-              "form": "Kpɛlɛɛ",
+              "form": "Ɓǎsàa",
               "native_script": null,
-              "language": "Kpelle",
-              "language_code": "kpe",
-              "notes": "Kpelle/Guerzé ethnonym"
+              "language": "Bassa",
+              "language_code": "bsq",
+              "notes": "Bassa ethnonym"
             }
           ],
-          "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "Attested in 17th-century CE European coastal-hinterland reports (Olfert Dapper, 1668 CE).",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Attested in 16th-century CE Portuguese coastal narratives of central Liberia.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Largest Mande (Niger-Congo) people of central Liberia and Guinée forestière.",
-          "source_url": "https://en.wikipedia.org/wiki/Kpelle_people"
+          "etymology_notes": "Kru-speaking Niger-Congo people of central coastal Liberia.",
+          "source_url": "https://en.wikipedia.org/wiki/Bassa_people_(Liberia)"
         },
         {
           "name": "Diani River",
@@ -10965,31 +10964,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Kpelle people",
+          "name": "Vai people",
           "disambiguation_note": null,
-          "localisation_stem": "Kpelle",
+          "localisation_stem": "Vai",
           "category": "tribe",
-          "feature_subtype": "niger_congo_people",
-          "relationship": "Mande Kpelle and Gola populations of the western Liberian forest.",
+          "feature_subtype": "mande_people",
+          "relationship": "Mande-speaking people inhabiting the northwestern Liberian coast near Kondo.",
           "language_variants": [
             {
-              "form": "Kpɛlɛɛ",
+              "form": "Vai",
               "native_script": null,
-              "language": "Kpelle",
-              "language_code": "kpe",
-              "notes": "Kpelle/Guerzé ethnonym"
+              "language": "Vai",
+              "language_code": "vai",
+              "notes": "Vai endonym"
             }
           ],
-          "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "Attested in 17th-century CE European coastal-hinterland reports (Olfert Dapper, 1668 CE).",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "Pre-literate Mande-speaking coastal people attested in 16th-century CE European coastal records.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Largest Mande (Niger-Congo) people of central Liberia and Guinée forestière.",
-          "source_url": "https://en.wikipedia.org/wiki/Kpelle_people"
+          "etymology_notes": "Mande-speaking people settled along the northwestern Liberian and southern Sierra Leonean coast. Onomastic note: Vai endonym ('Vai').",
+          "source_url": "https://en.wikipedia.org/wiki/Vai_people"
         },
         {
           "name": "Lofa River",
@@ -11393,31 +11392,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Kono people",
+          "name": "Temne people",
           "disambiguation_note": null,
-          "localisation_stem": "Kono",
+          "localisation_stem": "Temne",
           "category": "tribe",
           "feature_subtype": "niger_congo_people",
-          "relationship": "Mande-speaking Kono population of eastern-central Sierra Leone.",
+          "relationship": "Mel-speaking Niger-Congo people inhabiting central Sierra Leone west of Kunike.",
           "language_variants": [
             {
-              "form": "Kɔnɔ",
+              "form": "Themne",
               "native_script": null,
-              "language": "Kono",
-              "language_code": "kno",
-              "notes": "Kono ethnonym"
+              "language": "Temne",
+              "language_code": "tem",
+              "notes": "Temne ethnonym"
             }
           ],
-          "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "Attested in 17th-century CE accounts of eastern Sierra Leone.",
+          "earliest_attestation_year": 1506,
+          "earliest_attestation_note": "Attested in early 16th-century CE Portuguese accounts (Valentim Fernandes, c. 1506–1510 CE).",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Mande (Niger-Congo) people of eastern Sierra Leone.",
-          "source_url": "https://en.wikipedia.org/wiki/Kono_people"
+          "etymology_notes": "Mel (Niger-Congo) people of northern and central Sierra Leone.",
+          "source_url": "https://en.wikipedia.org/wiki/Temne_people"
         },
         {
           "name": "Rokel River",
@@ -11500,31 +11499,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Kono people",
+          "name": "Limba people",
           "disambiguation_note": null,
-          "localisation_stem": "Kono",
+          "localisation_stem": "Limba",
           "category": "tribe",
           "feature_subtype": "niger_congo_people",
-          "relationship": "Mande-speaking Kono population of the upper Sewa-Moa divide.",
+          "relationship": "Indigenous northern Sierra Leonean people living northwest of Kuramora.",
           "language_variants": [
             {
-              "form": "Kɔnɔ",
+              "form": "Hulimba",
               "native_script": null,
-              "language": "Kono",
-              "language_code": "kno",
-              "notes": "Kono ethnonym"
+              "language": "Limba",
+              "language_code": "lia",
+              "notes": "Limba ethnonym"
             }
           ],
-          "earliest_attestation_year": 1650,
-          "earliest_attestation_note": "Attested in 17th-century CE accounts of eastern Sierra Leone.",
+          "earliest_attestation_year": 1600,
+          "earliest_attestation_note": "Attested in 17th-century CE Portuguese and Jesuit accounts of Sierra Leone.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Mande (Niger-Congo) people of eastern Sierra Leone.",
-          "source_url": "https://en.wikipedia.org/wiki/Kono_people"
+          "etymology_notes": "Niger-Congo people of northern Sierra Leone.",
+          "source_url": "https://en.wikipedia.org/wiki/Limba_people"
         },
         {
           "name": "Sewa River",
@@ -12525,31 +12524,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Grebo_people"
         },
         {
-          "name": "Sassandra River",
+          "name": "Taï Forest",
           "disambiguation_note": null,
-          "localisation_stem": "Sassandra",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river marking the eastern Kru littoral.",
+          "localisation_stem": "Taï",
+          "category": "topographic_feature",
+          "feature_subtype": "forest",
+          "relationship": "Primary Upper Guinean rainforest stretching inland behind East Kru.",
           "language_variants": [
             {
-              "form": "Rio de Santo André",
+              "form": "Forêt de Taï",
               "native_script": null,
-              "language": "Portuguese",
-              "language_code": "por",
-              "notes": "15th-century Portuguese maritime name"
+              "language": "French",
+              "language_code": "fra",
+              "notes": "Established West African French name"
             }
           ],
-          "earliest_attestation_year": 1471,
-          "earliest_attestation_note": "Attested in late 15th-century CE Portuguese coastal charts as Rio de Santo André.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Primary Upper Guinean lowland rainforest preserved between the Cavalla and Sassandra rivers.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river of western Ivory Coast draining the Guinean highlands into the Gulf of Guinea.",
-          "source_url": "https://en.wikipedia.org/wiki/Sassandra_River"
+          "etymology_notes": "Ancient primary tropical rainforest spanning southwestern Ivory Coast along the Kru-Grebo borderlands.",
+          "source_url": "https://en.wikipedia.org/wiki/Ta%C3%AF_National_Park"
         },
         {
           "name": "Cavalla River",
@@ -12659,31 +12658,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Cavalla_River"
         },
         {
-          "name": "Sassandra River",
+          "name": "Mount Tonkoui",
           "disambiguation_note": null,
-          "localisation_stem": "Sassandra",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river draining the eastern Ivorian Kru coast.",
+          "localisation_stem": "Tonkoui",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "High granite peak rising in the western Ivorian highlands north of West Kru.",
           "language_variants": [
             {
-              "form": "Rio de Santo André",
+              "form": "Tonkoui",
               "native_script": null,
-              "language": "Portuguese",
-              "language_code": "por",
-              "notes": "15th-century Portuguese maritime name"
+              "language": "Dan",
+              "language_code": "dnj",
+              "notes": "Indigenous Dan mountain name"
             }
           ],
-          "earliest_attestation_year": 1471,
-          "earliest_attestation_note": "Attested in late 15th-century CE Portuguese coastal charts as Rio de Santo André.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate highland peak of the Toura-Man massif in western Ivory Coast.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river of western Ivory Coast draining the Guinean highlands into the Gulf of Guinea.",
-          "source_url": "https://en.wikipedia.org/wiki/Sassandra_River"
+          "etymology_notes": "Prominent granite peak (1,189 m) overlooking the western Ivorian forest-savanna transition.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Tonkoui"
         }
       ]
     },
@@ -13181,31 +13180,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Baga_people"
         },
         {
-          "name": "Konkouré River",
+          "name": "Nunez River",
           "disambiguation_note": null,
-          "localisation_stem": "Konkouré",
+          "localisation_stem": "Nunez",
           "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major coastal river south of the Nalu-Rio Nunez littoral.",
+          "feature_subtype": "estuary",
+          "relationship": "Major coastal river and estuary draining the Boké plains of Nalu.",
           "language_variants": [
             {
-              "form": "Konkouré",
+              "form": "Rio Nunez",
               "native_script": null,
-              "language": "Susu",
-              "language_code": "sus",
-              "notes": "Susu coastal river name"
+              "language": "French",
+              "language_code": "fra",
+              "notes": "Historical maritime name"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE Fouta Djallon and Susu coastal traditions.",
+          "earliest_attestation_year": 1446,
+          "earliest_attestation_note": "1446 CE Portuguese voyage of Nuno Tristão.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river of central-western Guinea descending from Fouta Djallon to the Atlantic.",
-          "source_url": "https://en.wikipedia.org/wiki/Konkour%C3%A9_River"
+          "etymology_notes": "Major tidal river and estuary of northwestern Guinea below Kokoli.",
+          "source_url": "https://en.wikipedia.org/wiki/Nunez_River"
         },
         {
           "name": "Fatala River",
@@ -13315,31 +13314,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Fatala_River"
         },
         {
-          "name": "Konkouré River",
+          "name": "Pongo River",
           "disambiguation_note": null,
-          "localisation_stem": "Konkouré",
+          "localisation_stem": "Pongo",
           "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Major river descending from Fouta Djallon south of Bake.",
+          "feature_subtype": "estuary",
+          "relationship": "Coastal Guinean river and mangrove estuary situated south of Boké.",
           "language_variants": [
             {
-              "form": "Konkouré",
+              "form": "Rio Pongo",
               "native_script": null,
-              "language": "Susu",
-              "language_code": "sus",
-              "notes": "Susu coastal river name"
+              "language": "French",
+              "language_code": "fra",
+              "notes": "Historical maritime name"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE Fouta Djallon and Susu coastal traditions.",
+          "earliest_attestation_year": 1500,
+          "earliest_attestation_note": "c. 1500 CE Portuguese coastal charts of Guinea.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river of central-western Guinea descending from Fouta Djallon to the Atlantic.",
-          "source_url": "https://en.wikipedia.org/wiki/Konkour%C3%A9_River"
+          "etymology_notes": "Estuary and tidal river system draining western Fouta Djallon to the Atlantic.",
+          "source_url": "https://en.wikipedia.org/wiki/Pongo_River"
         }
       ]
     },
@@ -19028,31 +19027,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Sota_River"
         },
         {
-          "name": "Mékrou River",
+          "name": "Niger River",
           "disambiguation_note": null,
-          "localisation_stem": "Mékrou",
+          "localisation_stem": "Niger",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Alibori area.",
+          "relationship": "Great West African river receiving the Alibori and Sota along northern Benin.",
           "language_variants": [
             {
-              "form": "Mékrou",
+              "form": "Kwara",
               "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established French orthography"
+              "language": "Yoruba",
+              "language_code": "yor",
+              "notes": "Regional lower Niger name"
+            },
+            {
+              "form": "Joliba",
+              "native_script": null,
+              "language": "Mandinka",
+              "language_code": "mnk",
+              "notes": "Upper Niger Mandinka name"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE Dendi and Borgu oral traditions.",
-          "attestation_basis": "indigenous_pre_literate",
+          "earliest_attestation_year": -450,
+          "earliest_attestation_note": "c. 450 BCE possible classical reference in Herodotus; 1352 CE Ibn Battuta.",
+          "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tributary of the Niger River rising in northern Benin near Kouandé.",
-          "source_url": "https://en.wikipedia.org/wiki/M%C3%A9krou_River"
+          "etymology_notes": "Great river of West Africa bordering eastern Borgu.",
+          "source_url": "https://en.wikipedia.org/wiki/Niger_River"
         }
       ]
     },
@@ -19135,31 +19141,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Atakora"
         },
         {
-          "name": "Mékrou River",
+          "name": "Ouémé River",
           "disambiguation_note": null,
-          "localisation_stem": "Mékrou",
+          "localisation_stem": "Ouémé",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Kouandé area.",
+          "relationship": "Principal river of Benin rising in the Atakora foothills near Kouandé.",
           "language_variants": [
             {
-              "form": "Mékrou",
+              "form": "Weme",
               "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established French orthography"
+              "language": "Fon",
+              "language_code": "fon",
+              "notes": "Fon river name"
+            },
+            {
+              "form": "Òfì",
+              "native_script": null,
+              "language": "Yoruba",
+              "language_code": "yor",
+              "notes": "Regional Yoruba name"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE Dendi and Borgu oral traditions.",
+          "earliest_attestation_year": 1650,
+          "earliest_attestation_note": "Attested in 17th-century CE European Slave Coast accounts.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tributary of the Niger River rising in northern Benin near Kouandé.",
-          "source_url": "https://en.wikipedia.org/wiki/M%C3%A9krou_River"
+          "etymology_notes": "Longest river of Benin, flowing south from the Atakora foothills to Lake Nokoué.",
+          "source_url": "https://en.wikipedia.org/wiki/Ou%C3%A9m%C3%A9_River"
         }
       ]
     },
@@ -19242,31 +19255,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Atakora"
         },
         {
-          "name": "Alibori River",
+          "name": "Mono River",
           "disambiguation_note": null,
-          "localisation_stem": "Alibori",
+          "localisation_stem": "Mono",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Yohongou area.",
+          "relationship": "Major coastal river rising in the highlands southwest of the Atakora range.",
           "language_variants": [
             {
-              "form": "Alibori",
+              "form": "Mono",
               "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established French orthography"
+              "language": "Ewe",
+              "language_code": "ewe",
+              "notes": "Regional Ewe/Gbe river name"
             }
           ],
           "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE Dendi and northern Benin traditions.",
+          "earliest_attestation_note": "Attested in 17th-century CE European coastal maps of Togo and Benin.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tributary of the Niger River in northern Benin rising near the Atakora range.",
-          "source_url": "https://en.wikipedia.org/wiki/Alibori_River"
+          "etymology_notes": "Principal river of Togo and western Benin, rising near Sokodé and flowing south to the Bight of Benin.",
+          "source_url": "https://en.wikipedia.org/wiki/Mono_River"
         }
       ]
     },
@@ -19295,38 +19308,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Gurunsi people",
+          "name": "Bissa people",
           "disambiguation_note": null,
-          "localisation_stem": "Gurunsi",
+          "localisation_stem": "Bissa",
           "category": "tribe",
-          "feature_subtype": "gur_people",
-          "relationship": "Regional people historically associated with Pô.",
+          "feature_subtype": "mande_people",
+          "relationship": "Eastern Mande people inhabiting the White and Red Volta valleys east of Pô.",
           "language_variants": [
             {
-              "form": "Gourounsi",
+              "form": "Bisa",
               "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established French orthography"
-            },
-            {
-              "form": "Gurensi",
-              "native_script": null,
-              "language": "Mossi",
-              "language_code": "mos",
-              "notes": "Mooré exonym"
+              "language": "Bissa",
+              "language_code": "bib",
+              "notes": "Indigenous Bissa endonym"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Unattested in pre-1700 CE written records; indigenous Gur-speaking savanna communities.",
+          "earliest_attestation_note": "Pre-literate Eastern Mande people of south-central Burkina Faso.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Cluster of Gur-speaking peoples of southern Burkina Faso and northern Ghana. Onomastic note: Mossi 'Gurensi' (Mooré exonym).",
-          "source_url": "https://en.wikipedia.org/wiki/Gurunsi_people"
+          "etymology_notes": "Eastern Mande-speaking ethnic group settled along the White and Red Volta valleys near Pô. Onomastic note: Bissa 'Bisa' (Indigenous Bissa endonym).",
+          "source_url": "https://en.wikipedia.org/wiki/Bissa_people"
         },
         {
           "name": "Red Volta",
@@ -20051,31 +20057,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Ibibio people",
+          "name": "Anaang people",
           "disambiguation_note": null,
-          "localisation_stem": "Ibibio",
+          "localisation_stem": "Anaang",
           "category": "tribe",
           "feature_subtype": "niger_congo_people",
-          "relationship": "Historical people associated with Chukwu.",
+          "relationship": "Lower Cross ethnic group living adjacent to Chukwu and the Cross River basin.",
           "language_variants": [
             {
-              "form": "Ibibio",
+              "form": "Anaang",
               "native_script": null,
-              "language": "Igbo",
-              "language_code": "ibo",
-              "notes": "Regional Niger-Congo ethnonym"
+              "language": "Anaang",
+              "language_code": "anw",
+              "notes": "Indigenous Anaang endonym"
             }
           ],
-          "earliest_attestation_year": 1600,
-          "earliest_attestation_note": "c. 1600 CE European coastal trade accounts of the Cross River.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Lower Cross ethnic group of the Cross River basin.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Benue-Congo coastal people of the lower Cross River and Kwa Ibo River basins.",
-          "source_url": "https://en.wikipedia.org/wiki/Ibibio_people"
+          "etymology_notes": "Lower Cross Niger-Congo people inhabiting northwestern Akwa Ibom adjoining Ibibio and Arochukwu. Onomastic note: Anaang 'Anaang' (Indigenous Anaang endonym).",
+          "source_url": "https://en.wikipedia.org/wiki/Anaang_people"
         },
         {
           "name": "Cross River",
@@ -20372,31 +20378,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Idoma people",
+          "name": "Igede people",
           "disambiguation_note": null,
-          "localisation_stem": "Idoma",
+          "localisation_stem": "Igede",
           "category": "tribe",
-          "feature_subtype": "volta_niger_people",
-          "relationship": "Historical people associated with Abakaliki.",
+          "feature_subtype": "niger_congo_people",
+          "relationship": "Benue-Congo people inhabiting the borderlands north of Abakaliki.",
           "language_variants": [
             {
-              "form": "Idoma",
+              "form": "Igede",
               "native_script": null,
-              "language": "Igbo",
-              "language_code": "ibo",
-              "notes": "Regional Benue-valley ethnonym"
+              "language": "Igede",
+              "language_code": "ige",
+              "notes": "Indigenous Igede endonym"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Unattested in pre-1700 CE written records; indigenous Benue valley oral tradition.",
+          "earliest_attestation_note": "Pre-literate Benue-Congo people of the lower Benue-Cross River divide.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Volta-Niger (Idomoid) people of the lower Benue River valley in central-eastern Nigeria.",
-          "source_url": "https://en.wikipedia.org/wiki/Idoma_people"
+          "etymology_notes": "Idomoid-related Benue-Congo people inhabiting southeastern Benue State near Abakaliki and Otukpo. Onomastic note: Igede 'Igede' (Indigenous Igede endonym).",
+          "source_url": "https://en.wikipedia.org/wiki/Igede_people"
         },
         {
           "name": "Cross River",
@@ -20586,31 +20592,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Idoma people",
+          "name": "Tiv people",
           "disambiguation_note": null,
-          "localisation_stem": "Idoma",
+          "localisation_stem": "Tiv",
           "category": "tribe",
-          "feature_subtype": "volta_niger_people",
-          "relationship": "Historical people associated with Otukpo.",
+          "feature_subtype": "niger_congo_people",
+          "relationship": "Bantoid agricultural people settled in the Benue plains east of Otukpo.",
           "language_variants": [
             {
-              "form": "Idoma",
+              "form": "Tiv",
               "native_script": null,
-              "language": "Igbo",
-              "language_code": "ibo",
-              "notes": "Regional Benue-valley ethnonym"
+              "language": "Tiv",
+              "language_code": "tiv",
+              "notes": "Indigenous Tiv endonym"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Unattested in pre-1700 CE written records; indigenous Benue valley oral tradition.",
+          "earliest_attestation_note": "Pre-literate Tivoid Bantu people of the middle Benue valley.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Volta-Niger (Idomoid) people of the lower Benue River valley in central-eastern Nigeria.",
-          "source_url": "https://en.wikipedia.org/wiki/Idoma_people"
+          "etymology_notes": "Bantoid-speaking agricultural people inhabiting the Benue plains east of Idoma. Onomastic note: Tiv 'Tiv' (Indigenous Tiv endonym).",
+          "source_url": "https://en.wikipedia.org/wiki/Tiv_people"
         },
         {
           "name": "Benue River",
@@ -20807,31 +20813,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Igala people",
+          "name": "Ebira people",
           "disambiguation_note": null,
-          "localisation_stem": "Igala",
+          "localisation_stem": "Ebira",
           "category": "tribe",
           "feature_subtype": "volta_niger_people",
-          "relationship": "Historical people associated with Ibah.",
+          "relationship": "Nupoid people inhabiting the banks across the Niger-Benue confluence from Ibah.",
           "language_variants": [
             {
-              "form": "Igala",
+              "form": "Igbirra",
               "native_script": null,
               "language": "Yoruba",
               "language_code": "yor",
-              "notes": "Closely related Yoruboid-branch ethnonym"
+              "notes": "Historical regional exonym"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Igala Kingdom oral traditions at Idah.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Unattested in pre-1700 CE written records; indigenous Nupoid tradition.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Volta-Niger (Yoruboid) people of the Niger-Benue confluence.",
-          "source_url": "https://en.wikipedia.org/wiki/Igala_people"
+          "etymology_notes": "Volta-Niger (Nupoid) people of the Niger-Benue confluence. Onomastic note: Yoruba 'Igbirra' (Historical regional exonym).",
+          "source_url": "https://en.wikipedia.org/wiki/Ebira_people"
         },
         {
           "name": "Anambra River",
@@ -21570,58 +21576,58 @@
       },
       "replacement_candidates": [
         {
-          "name": "Ijaw people",
+          "name": "Ogoni people",
           "disambiguation_note": null,
-          "localisation_stem": "Ijaw",
+          "localisation_stem": "Ogoni",
           "category": "tribe",
           "feature_subtype": "niger_congo_people",
-          "relationship": "Historical people associated with Okrika.",
+          "relationship": "Cross River people inhabiting the eastern Niger Delta creeks near Okrika.",
           "language_variants": [
             {
-              "form": "Ịzọn",
+              "form": "Khana",
               "native_script": null,
               "language": "Igbo",
               "language_code": "ibo",
-              "notes": "Regional delta ethnonym"
+              "notes": "Regional Cross River designation for the Ogoni-Khana group"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Portuguese accounts of Rio Real and the Niger Delta.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Cross River ethnic group inhabiting the eastern Niger Delta.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Indigenous Ijoid-speaking Niger-Congo people of the Niger Delta.",
-          "source_url": "https://en.wikipedia.org/wiki/Ijaw_people"
+          "etymology_notes": "Kegboid (Cross River) Niger-Congo people settled along the eastern Niger Delta creeks near Okrika.",
+          "source_url": "https://en.wikipedia.org/wiki/Ogoni_people"
         },
         {
-          "name": "Bonny River",
+          "name": "Orashi River",
           "disambiguation_note": null,
-          "localisation_stem": "Bonny",
+          "localisation_stem": "Orashi",
           "category": "hydronym",
-          "feature_subtype": "estuary",
-          "relationship": "River estuary adjoining Okrika.",
+          "feature_subtype": "river",
+          "relationship": "Major lower Niger distributary flowing through the delta west of Okrika.",
           "language_variants": [
             {
-              "form": "Ibani",
+              "form": "Urashi",
               "native_script": null,
               "language": "Igbo",
               "language_code": "ibo",
-              "notes": "Regional delta ethno-hydronym"
+              "notes": "Indigenous Igbo hydronym"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Portuguese Rio Real accounts.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Unattested in pre-1700 CE written records; indigenous Igbo hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tidal estuary of the eastern Niger Delta.",
-          "source_url": "https://en.wikipedia.org/wiki/Bonny_River"
+          "etymology_notes": "River of western Igboland flowing south into the Niger Delta.",
+          "source_url": "https://en.wikipedia.org/wiki/Orashi_River"
         },
         {
           "name": "New Calabar River",
@@ -21677,31 +21683,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Ijaw people",
+          "name": "Isoko people",
           "disambiguation_note": null,
-          "localisation_stem": "Ijaw",
+          "localisation_stem": "Isoko",
           "category": "tribe",
-          "feature_subtype": "niger_congo_people",
-          "relationship": "Historical people associated with Nembe.",
+          "feature_subtype": "volta_niger_people",
+          "relationship": "Edoid Niger Delta people living northwest of Nembe.",
           "language_variants": [
             {
-              "form": "Ịzọn",
+              "form": "Isoko",
               "native_script": null,
-              "language": "Igbo",
-              "language_code": "ibo",
-              "notes": "Regional delta ethnonym"
+              "language": "Edo",
+              "language_code": "bin",
+              "notes": "Edoid Niger Delta designation"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Portuguese accounts of Rio Real and the Niger Delta.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Edoid ethnic group of the northwestern Niger Delta.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Indigenous Ijoid-speaking Niger-Congo people of the Niger Delta.",
-          "source_url": "https://en.wikipedia.org/wiki/Ijaw_people"
+          "etymology_notes": "Edoid-speaking people closely related to the Urhobo along the western Niger Delta tributaries.",
+          "source_url": "https://en.wikipedia.org/wiki/Isoko_people"
         },
         {
           "name": "Brass River",
@@ -22568,31 +22574,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Nupe people",
+          "name": "Kambari people",
           "disambiguation_note": null,
-          "localisation_stem": "Nupe",
+          "localisation_stem": "Kambari",
           "category": "tribe",
-          "feature_subtype": "volta_niger_people",
-          "relationship": "Historical people associated with Bida.",
+          "feature_subtype": "niger_congo_people",
+          "relationship": "Kainji-speaking people inhabiting the middle Niger basin northwest of Bida.",
           "language_variants": [
             {
-              "form": "Tapa",
+              "form": "Kambari",
               "native_script": null,
-              "language": "Yoruba",
-              "language_code": "yor",
-              "notes": "Established Yoruba exonym for the Nupe"
+              "language": "Hausa",
+              "language_code": "hau",
+              "notes": "Regional Hausa ethnonym"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Nupe Kingdom traditions under Tsoede.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Kainji-speaking agriculturalists of the middle Niger valley.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Volta-Niger (Nupoid) people of the middle Niger and Kaduna River basins. Onomastic note: Yoruba 'Tapa' (Established Yoruba exonym for the Nupe).",
-          "source_url": "https://en.wikipedia.org/wiki/Nupe_people"
+          "etymology_notes": "Kainji Niger-Congo people inhabiting northern Nupeland and the Kontagora-Kainji basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Kambari_people"
         },
         {
           "name": "Kaduna River",
@@ -22682,31 +22688,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Nupe people",
+          "name": "Kamuku people",
           "disambiguation_note": null,
-          "localisation_stem": "Nupe",
+          "localisation_stem": "Kamuku",
           "category": "tribe",
-          "feature_subtype": "volta_niger_people",
-          "relationship": "Historical people associated with Kulfo.",
+          "feature_subtype": "niger_congo_people",
+          "relationship": "Kainji-speaking agriculturalists inhabiting the savanna hills north of Kulfo.",
           "language_variants": [
             {
-              "form": "Tapa",
+              "form": "Kamuku",
               "native_script": null,
-              "language": "Yoruba",
-              "language_code": "yor",
-              "notes": "Established Yoruba exonym for the Nupe"
+              "language": "Hausa",
+              "language_code": "hau",
+              "notes": "Regional Hausa ethnonym"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Nupe Kingdom traditions under Tsoede.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-literate Kainji-speaking people of Niger and Kaduna states.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Volta-Niger (Nupoid) people of the middle Niger and Kaduna River basins. Onomastic note: Yoruba 'Tapa' (Established Yoruba exonym for the Nupe).",
-          "source_url": "https://en.wikipedia.org/wiki/Nupe_people"
+          "etymology_notes": "Kainji Niger-Congo people inhabiting the savanna hills north of Nupeland.",
+          "source_url": "https://en.wikipedia.org/wiki/Kamuku_people"
         },
         {
           "name": "Oli River",
@@ -22796,31 +22802,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Nupe people",
+          "name": "Ebira people",
           "disambiguation_note": null,
-          "localisation_stem": "Nupe",
+          "localisation_stem": "Ebira",
           "category": "tribe",
           "feature_subtype": "volta_niger_people",
-          "relationship": "Historical people associated with Kutigi.",
+          "relationship": "Nupoid ethnic group settled along the Niger-Benue confluence southeast of Kutigi.",
           "language_variants": [
             {
-              "form": "Tapa",
+              "form": "Igbirra",
               "native_script": null,
               "language": "Yoruba",
               "language_code": "yor",
-              "notes": "Established Yoruba exonym for the Nupe"
+              "notes": "Historical regional exonym"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Nupe Kingdom traditions under Tsoede.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Unattested in pre-1700 CE written records; indigenous Nupoid tradition.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Volta-Niger (Nupoid) people of the middle Niger and Kaduna River basins. Onomastic note: Yoruba 'Tapa' (Established Yoruba exonym for the Nupe).",
-          "source_url": "https://en.wikipedia.org/wiki/Nupe_people"
+          "etymology_notes": "Volta-Niger (Nupoid) people of the Niger-Benue confluence. Onomastic note: Yoruba 'Igbirra' (Historical regional exonym).",
+          "source_url": "https://en.wikipedia.org/wiki/Ebira_people"
         },
         {
           "name": "Kaduna River",
@@ -22910,31 +22916,38 @@
       },
       "replacement_candidates": [
         {
-          "name": "Nupe people",
+          "name": "Bariba people",
           "disambiguation_note": null,
-          "localisation_stem": "Nupe",
+          "localisation_stem": "Bariba",
           "category": "tribe",
-          "feature_subtype": "volta_niger_people",
-          "relationship": "Historical people associated with Gbajigbo.",
+          "feature_subtype": "gur_people",
+          "relationship": "Gur-speaking people of Borgu living across the Niger west of Gbajigbo.",
           "language_variants": [
             {
-              "form": "Tapa",
+              "form": "Baatonu",
+              "native_script": null,
+              "language": "Baatonum",
+              "language_code": "bba",
+              "notes": "Endonym (pl. Baatombu)"
+            },
+            {
+              "form": "Bariba",
               "native_script": null,
               "language": "Yoruba",
               "language_code": "yor",
-              "notes": "Established Yoruba exonym for the Nupe"
+              "notes": "Regional Yoruba exonym"
             }
           ],
           "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Nupe Kingdom traditions under Tsoede.",
+          "earliest_attestation_note": "Attested in 16th-century CE Songhai chronicles (Tarikh al-Sudan / Tarikh al-Fattash) regarding Borgu.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Volta-Niger (Nupoid) people of the middle Niger and Kaduna River basins. Onomastic note: Yoruba 'Tapa' (Established Yoruba exonym for the Nupe).",
-          "source_url": "https://en.wikipedia.org/wiki/Nupe_people"
+          "etymology_notes": "Dominant Gur-speaking people of Borgu across northern Benin and northwestern Nigeria. Onomastic note: Baatonum 'Baatonu' (Endonym (pl. Baatombu)); Yoruba 'Bariba' (Regional Yoruba exonym).",
+          "source_url": "https://en.wikipedia.org/wiki/Bariba_people"
         },
         {
           "name": "Niger River",
@@ -24015,31 +24028,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Senufo people",
+          "name": "Lobi people",
           "disambiguation_note": null,
-          "localisation_stem": "Senufo",
+          "localisation_stem": "Lobi",
           "category": "tribe",
           "feature_subtype": "gur_people",
-          "relationship": "Historical people associated with Kong.",
+          "relationship": "Gur-speaking people inhabiting the northeastern savanna borderlands around Kong.",
           "language_variants": [
             {
-              "form": "Sénoufo",
+              "form": "Lobiri",
               "native_script": null,
               "language": "French",
               "language_code": "fra",
-              "notes": "Established French orthography"
+              "notes": "Established French ethnonym/glossonym"
             }
           ],
-          "earliest_attestation_year": 1655,
-          "earliest_attestation_note": "Attested in 17th-century CE West African chronicles and Sikasso/Kénédougou regional traditions.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Unattested in pre-1700 CE written records; indigenous Gur-speaking tradition.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Gur-speaking agricultural people of northern Ivory Coast, southern Mali, and southwestern Burkina Faso.",
-          "source_url": "https://en.wikipedia.org/wiki/Senufo_people"
+          "etymology_notes": "Gur-speaking people of southwestern Burkina Faso, northeastern Ivory Coast, and northwestern Ghana.",
+          "source_url": "https://en.wikipedia.org/wiki/Lobi_people"
         },
         {
           "name": "Komoé River",
@@ -24156,31 +24169,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Soninke_people"
         },
         {
-          "name": "Komoé River",
+          "name": "Black Volta",
           "disambiguation_note": null,
-          "localisation_stem": "Komoé",
+          "localisation_stem": "Black Volta",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Dabakala area.",
+          "relationship": "Major Volta headstream bounding the northeastern savanna east of Dabakala.",
           "language_variants": [
             {
-              "form": "Comoé",
+              "form": "Mouhoun",
               "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established French orthography"
+              "language": "Mossi",
+              "language_code": "mos",
+              "notes": "Regional Gur/Burkinabe name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in pre-colonial Ivory Coast traditions and 19th-century CE surveys; no pre-1700 written date.",
+          "earliest_attestation_note": "Unattested in pre-1700 CE written records; indigenous Mouhoun hydronym.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river rising in southwestern Burkina Faso and flowing south through Ivory Coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Komo%C3%A9_River"
+          "etymology_notes": "Westernmost major tributary of the Volta River, bordering Bono and Gyaman.",
+          "source_url": "https://en.wikipedia.org/wiki/Black_Volta"
         },
         {
           "name": "Bandama River",
@@ -24805,31 +24818,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Baoul%C3%A9_people"
         },
         {
-          "name": "Bandama River",
+          "name": "Mont-Korhogo",
           "disambiguation_note": null,
-          "localisation_stem": "Bandama",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Local river in the Bouaké area.",
+          "localisation_stem": "Mont-Korhogo",
+          "category": "oronym",
+          "feature_subtype": "hill",
+          "relationship": "Prominent granite inselberg rising in the northern savanna beyond Bouaké.",
           "language_variants": [
             {
-              "form": "Fleuve Bandama",
+              "form": "Mont Korhogo",
               "native_script": null,
               "language": "French",
               "language_code": "fra",
-              "notes": "Established French orthography"
+              "notes": "Established Ivorian French name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Unattested in pre-1700 CE written records; indigenous Bandama hydronym.",
+          "earliest_attestation_note": "Prominent granite inselberg in the northern Ivory Coast savanna.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Longest river of Ivory Coast flowing from the north to the Gulf of Guinea.",
-          "source_url": "https://en.wikipedia.org/wiki/Bandama_River"
+          "etymology_notes": "Sacred granite hill (567 m) rising above the northern Bandama-Komoé watershed.",
+          "source_url": "https://en.wikipedia.org/wiki/Mont-Korhogo"
         },
         {
           "name": "Eastern Guinean forests",
@@ -24912,31 +24925,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Baoul%C3%A9_people"
         },
         {
-          "name": "Bandama River",
+          "name": "Sassandra River",
           "disambiguation_note": null,
-          "localisation_stem": "Bandama",
+          "localisation_stem": "Sassandra",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Middle N'Zi area.",
+          "relationship": "Major Ivorian river system flowing west of the central Bandama basin.",
           "language_variants": [
             {
-              "form": "Fleuve Bandama",
+              "form": "Rio de Santo André",
               "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established French orthography"
+              "language": "Portuguese",
+              "language_code": "por",
+              "notes": "15th-century Portuguese maritime name"
             }
           ],
-          "earliest_attestation_year": null,
-          "earliest_attestation_note": "Unattested in pre-1700 CE written records; indigenous Bandama hydronym.",
+          "earliest_attestation_year": 1471,
+          "earliest_attestation_note": "Attested in late 15th-century CE Portuguese coastal charts as Rio de Santo André.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Longest river of Ivory Coast flowing from the north to the Gulf of Guinea.",
-          "source_url": "https://en.wikipedia.org/wiki/Bandama_River"
+          "etymology_notes": "Major river of western Ivory Coast draining the Guinean highlands into the Gulf of Guinea.",
+          "source_url": "https://en.wikipedia.org/wiki/Sassandra_River"
         },
         {
           "name": "Agnéby River",
@@ -25875,31 +25888,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Lobi_people"
         },
         {
-          "name": "Komoé River",
+          "name": "Bougouriba",
           "disambiguation_note": null,
-          "localisation_stem": "Komoé",
+          "localisation_stem": "Bougouriba",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Loropéni area.",
+          "relationship": "Perennial tributary of the Black Volta draining the Lobi country north of Loropéni.",
           "language_variants": [
             {
-              "form": "Comoé",
+              "form": "Bougouriba",
               "native_script": null,
               "language": "French",
               "language_code": "fra",
-              "notes": "Established French orthography"
+              "notes": "Established Burkina Faso French hydronym"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in pre-colonial Ivory Coast traditions and 19th-century CE surveys; no pre-1700 written date.",
+          "earliest_attestation_note": "Pre-literate western tributary of the Black Volta draining the Lobi and Dagara country.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river rising in southwestern Burkina Faso and flowing south through Ivory Coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Komo%C3%A9_River"
+          "etymology_notes": "Perennial river of southwestern Burkina Faso flowing east into the Black Volta.",
+          "source_url": "https://en.wikipedia.org/wiki/Bougouriba_Province"
         },
         {
           "name": "Black Volta",
@@ -25982,31 +25995,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Lobi_people"
         },
         {
-          "name": "Komoé River",
+          "name": "Mount Tenakourou",
           "disambiguation_note": null,
-          "localisation_stem": "Komoé",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Local river in the Iringou area.",
+          "localisation_stem": "Tenakourou",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Sandstone massif rising on the Burkina-Mali border northwest of Iringou.",
           "language_variants": [
             {
-              "form": "Comoé",
+              "form": "Mont Ténakourou",
               "native_script": null,
               "language": "French",
               "language_code": "fra",
-              "notes": "Established French orthography"
+              "notes": "Established West African French name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Attested in pre-colonial Ivory Coast traditions and 19th-century CE surveys; no pre-1700 written date.",
+          "earliest_attestation_note": "Pre-colonial sandstone peak on the Burkina Faso–Mali border; no pre-18th-century CE written attestation.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Major river rising in southwestern Burkina Faso and flowing south through Ivory Coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Komo%C3%A9_River"
+          "etymology_notes": "Highest point in Burkina Faso (749 m), near the Sikasso Plateau.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Tenakourou"
         },
         {
           "name": "Black Volta",
@@ -27079,31 +27092,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Bago%C3%A9_River"
         },
         {
-          "name": "Baoulé River",
+          "name": "Bani River",
           "disambiguation_note": null,
-          "localisation_stem": "Baoulé",
+          "localisation_stem": "Bani",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Banifing area.",
+          "relationship": "Major Niger tributary formed north of the Banifing basin.",
           "language_variants": [
             {
-              "form": "Fleuve Baoulé",
+              "form": "Bani",
               "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established French orthography (from Manding 'Red River')"
+              "language": "Bambara",
+              "language_code": "bam",
+              "notes": "Mande 'Little River'"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Manding and Wassoulou traditions.",
+          "earliest_attestation_year": 1655,
+          "earliest_attestation_note": "Attested in 17th-century CE Timbuktu chronicles (Tarikh al-Sudan, c. 1655 CE) around Djenné.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River of southern Mali joining the Bagoé to form the Bani River. Onomastic note: French 'Fleuve Baoulé' (Established French orthography (from Manding 'Red River')).",
-          "source_url": "https://en.wikipedia.org/wiki/Baoul%C3%A9_River"
+          "etymology_notes": "From Mande ba-ni ('little river'), principal southern tributary of the Niger at Mopti.",
+          "source_url": "https://en.wikipedia.org/wiki/Bani_River"
         }
       ]
     },
@@ -27293,31 +27306,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Bago%C3%A9_River"
         },
         {
-          "name": "Banifing River",
+          "name": "Mount Tenakourou",
           "disambiguation_note": null,
-          "localisation_stem": "Banifing",
-          "category": "hydronym",
-          "feature_subtype": "river",
-          "relationship": "Local river in the Dégou area.",
+          "localisation_stem": "Tenakourou",
+          "category": "oronym",
+          "feature_subtype": "mountain",
+          "relationship": "Sandstone massif on the Mali-Burkina border east of Dégou.",
           "language_variants": [
             {
-              "form": "Banifing",
+              "form": "Mont Ténakourou",
               "native_script": null,
               "language": "French",
               "language_code": "fra",
-              "notes": "Established French orthography"
+              "notes": "Established West African French name"
             }
           ],
           "earliest_attestation_year": null,
-          "earliest_attestation_note": "Pre-colonial tributary of the Bani River in southern Mali; no pre-18th-century CE written attestation.",
+          "earliest_attestation_note": "Pre-colonial sandstone peak on the Burkina Faso–Mali border; no pre-18th-century CE written attestation.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tributary of the Bani River in southern Mali and northern Ivory Coast.",
-          "source_url": "https://en.wikipedia.org/wiki/Banifing_River"
+          "etymology_notes": "Highest point in Burkina Faso (749 m), near the Sikasso Plateau.",
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Tenakourou"
         }
       ]
     },
@@ -27373,31 +27386,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mandinka_people"
         },
         {
-          "name": "Baoulé River",
+          "name": "Sankarani River",
           "disambiguation_note": null,
-          "localisation_stem": "Baoulé",
+          "localisation_stem": "Sankarani",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Tudugu area.",
+          "relationship": "Upper Niger tributary flowing west of the Tudugu savanna.",
           "language_variants": [
             {
-              "form": "Fleuve Baoulé",
+              "form": "Sankarani",
               "native_script": null,
-              "language": "French",
-              "language_code": "fra",
-              "notes": "Established French orthography (from Manding 'Red River')"
+              "language": "Mandinka",
+              "language_code": "mnk",
+              "notes": "Mandinka river name"
             }
           ],
-          "earliest_attestation_year": 1500,
-          "earliest_attestation_note": "c. 1500 CE Manding and Wassoulou traditions.",
+          "earliest_attestation_year": 1235,
+          "earliest_attestation_note": "c. 1235 CE heartland river of the Mali Empire.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "River of southern Mali joining the Bagoé to form the Bani River. Onomastic note: French 'Fleuve Baoulé' (Established French orthography (from Manding 'Red River')).",
-          "source_url": "https://en.wikipedia.org/wiki/Baoul%C3%A9_River"
+          "etymology_notes": "Major upper Niger tributary draining eastern Guinea.",
+          "source_url": "https://en.wikipedia.org/wiki/Sankarani_River"
         },
         {
           "name": "Bagoé River",
@@ -28163,31 +28176,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Ovia_River"
         },
         {
-          "name": "Benin River",
+          "name": "Ikpoba River",
           "disambiguation_note": null,
-          "localisation_stem": "Benin",
+          "localisation_stem": "Ikpoba",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Local river in the Benin City area.",
+          "relationship": "Perennial rainforest river flowing directly along the eastern edge of Benin City.",
           "language_variants": [
             {
-              "form": "Rio Formoso",
+              "form": "Ikpoba",
               "native_script": null,
-              "language": "Portuguese",
-              "language_code": "por",
-              "notes": "15th-century Portuguese name"
+              "language": "Edo",
+              "language_code": "bin",
+              "notes": "Indigenous Edo river name"
             }
           ],
-          "earliest_attestation_year": 1485,
-          "earliest_attestation_note": "c. 1485 CE Portuguese navigation of the Benin estuary.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Edo river flowing along the eastern edge of ancient Benin.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Tidal river and estuary in the western Niger Delta.",
-          "source_url": "https://en.wikipedia.org/wiki/Benin_River"
+          "etymology_notes": "Perennial rainforest river passing through Benin City and draining toward the Benin River basin.",
+          "source_url": "https://en.wikipedia.org/wiki/Ikpoba_River"
         }
       ]
     },
@@ -32445,38 +32458,31 @@
       },
       "replacement_candidates": [
         {
-          "name": "Edo people",
+          "name": "Esan people",
           "disambiguation_note": null,
-          "localisation_stem": "Edo",
+          "localisation_stem": "Esan",
           "category": "tribe",
           "feature_subtype": "volta_niger_people",
-          "relationship": "Historical people associated with Osse.",
+          "relationship": "Edoid ethnic group inhabiting the forested plateau northeast of Osse.",
           "language_variants": [
             {
-              "form": "Ẹdo",
+              "form": "Esan",
               "native_script": null,
               "language": "Edo",
               "language_code": "bin",
-              "notes": "Edo endonym"
-            },
-            {
-              "form": "Bini",
-              "native_script": null,
-              "language": "Yoruba",
-              "language_code": "yor",
-              "notes": "Regional exonym"
+              "notes": "Edoid regional ethnonym"
             }
           ],
-          "earliest_attestation_year": 1180,
-          "earliest_attestation_note": "c. 1180 CE Oba dynasty of Benin.",
+          "earliest_attestation_year": 1450,
+          "earliest_attestation_note": "Pre-literate Edoid population attested in Edo oral traditions of the 15th century CE.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Volta-Niger (Edoid) people of the Benin Kingdom. Onomastic note: Edo endonym ('Ẹdo'); Yoruba 'Bini' (Regional exonym).",
-          "source_url": "https://en.wikipedia.org/wiki/Edo_people"
+          "etymology_notes": "Edoid-speaking people inhabiting the forest plateau northeast of Benin City.",
+          "source_url": "https://en.wikipedia.org/wiki/Esan_people"
         },
         {
           "name": "Benin River",

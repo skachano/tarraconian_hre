@@ -137,22 +137,22 @@
       "target_baronies_audited": 105,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 315,
-      "unique_replacement_names": 104,
-      "candidates_with_multilingual_variants": 312,
+      "unique_replacement_names": 105,
+      "candidates_with_multilingual_variants": 307,
       "wikipedia_source_attached": 315,
-      "unique_source_urls": 104,
+      "unique_source_urls": 105,
       "candidates_by_category": {
         "choronym": 4,
-        "hydronym": 114,
-        "oronym": 84,
-        "topographic_feature": 8,
+        "hydronym": 109,
+        "oronym": 88,
+        "topographic_feature": 9,
         "tribe": 105
       },
       "baronies_with_category": {
         "has_choronym_candidate": 4,
-        "has_hydronym_candidate": 91,
-        "has_oronym_candidate": 76,
-        "has_topographic_feature_candidate": 8,
+        "has_hydronym_candidate": 87,
+        "has_oronym_candidate": 77,
+        "has_topographic_feature_candidate": 9,
         "has_tribe_candidate": 105
       },
       "unique_language_codes": [
@@ -171,8 +171,8 @@
       },
       "candidates_by_attestation_basis": {
         "attested_867_to_1066": 4,
-        "attested_pre_867": 169,
-        "indigenous_pre_literate": 142
+        "attested_pre_867": 166,
+        "indigenous_pre_literate": 145
       },
       "bookmark_valid_candidates": {
         "867": 311,
@@ -180,7 +180,7 @@
         "1178": 315
       },
       "baronies_with_867_valid_candidate": 105,
-      "unique_localisation_stems": 104
+      "unique_localisation_stems": 105
     }
   },
   "baronies": {
@@ -8491,38 +8491,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Okjeo"
         },
         {
-          "name": "Sea of Japan",
+          "name": "Kaema Plateau",
           "disambiguation_note": null,
-          "localisation_stem": "Sea of Japan",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering the Namhae-bu coast.",
+          "localisation_stem": "Kaema",
+          "category": "oronym",
+          "feature_subtype": "plateau",
+          "relationship": "High northern basalt highland rising immediately inland northwest of the Hamhung littoral and East Korea Bay.",
           "language_variants": [
             {
-              "form": "Donghae",
-              "native_script": "동해",
+              "form": "Gaema Gowon",
+              "native_script": null,
               "language": "Korean",
               "language_code": "kor",
-              "notes": "Korean Donghae ('East Sea')"
-            },
-            {
-              "form": "Dōnghǎi",
-              "native_script": "東海",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Classical Chinese form Donghae ('East Sea')"
+              "notes": "Korean geographical name Gaema (개마고원), traditionally derived from Gaima / Koguryo-era highland names."
             }
           ],
-          "earliest_attestation_year": -37,
-          "earliest_attestation_note": "Recorded as Donghae ('East Sea') in Samguk Sagi traditions (1st century BCE).",
+          "earliest_attestation_year": 280,
+          "earliest_attestation_note": "c. 280 CE (Gaemadaesan attested in the Records of the Three Kingdoms)",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea bordering the eastern coast of the Korean Peninsula, traditionally called Donghae ('East Sea') in Korea.",
-          "source_url": "https://en.wikipedia.org/wiki/Sea_of_Japan"
+          "etymology_notes": "Traditional Korean regional oronym Gaema for the highest plateau of northern Korea.",
+          "source_url": "https://en.wikipedia.org/wiki/Kaema_Plateau"
         },
         {
           "name": "East Korea Bay",
@@ -8653,38 +8646,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Chilbosan"
         },
         {
-          "name": "Sea of Japan",
+          "name": "Hamgyong Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Sea of Japan",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering northeastern Hamgyong.",
+          "localisation_stem": "Hamgyong",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Highest coastal mountain range of northeastern Korea running parallel to the northern Sea of Japan littoral near Chilbosan.",
           "language_variants": [
             {
-              "form": "Donghae",
-              "native_script": "동해",
+              "form": "Hamgyeong Sanmaek",
+              "native_script": null,
               "language": "Korean",
               "language_code": "kor",
-              "notes": "Korean Donghae ('East Sea')"
-            },
-            {
-              "form": "Dōnghǎi",
-              "native_script": "東海",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Classical Chinese form Donghae ('East Sea')"
+              "notes": "Korean regional range name meaning Hamgyong mountain chain."
             }
           ],
-          "earliest_attestation_year": -37,
-          "earliest_attestation_note": "Recorded as Donghae ('East Sea') in Samguk Sagi traditions (1st century BCE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1454,
+          "earliest_attestation_note": "1454 CE (Northeastern mountain chain documented in Joseon-era geography)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea bordering the eastern coast of the Korean Peninsula, traditionally called Donghae ('East Sea') in Korea.",
-          "source_url": "https://en.wikipedia.org/wiki/Sea_of_Japan"
+          "etymology_notes": "Korean regional oronym designating the northeastern coastal mountain chain containing Kwanmo Peak.",
+          "source_url": "https://en.wikipedia.org/wiki/Hamgyong_Mountains"
         }
       ]
     },
@@ -9691,38 +9677,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Seoraksan"
         },
         {
-          "name": "Sea of Japan",
+          "name": "Taebaek Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Sea of Japan",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering the Ganseong coast.",
+          "localisation_stem": "Taebaek",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Main eastern mountain spine of the Korean Peninsula towering directly behind Ganseong and Seoraksan.",
           "language_variants": [
             {
-              "form": "Donghae",
-              "native_script": "동해",
+              "form": "Taebaek Sanmaek",
+              "native_script": null,
               "language": "Korean",
               "language_code": "kor",
-              "notes": "Korean Donghae ('East Sea')"
-            },
-            {
-              "form": "Dōnghǎi",
-              "native_script": "東海",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Classical Chinese form Donghae ('East Sea')"
+              "notes": "From classical Korean Taebaek ('Great White' mountain)."
             }
           ],
-          "earliest_attestation_year": -37,
-          "earliest_attestation_note": "Recorded as Donghae ('East Sea') in Samguk Sagi traditions (1st century BCE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1145,
+          "earliest_attestation_note": "1145 CE (Taebaek ridge attested in the Samguk Sagi)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea bordering the eastern coast of the Korean Peninsula, traditionally called Donghae ('East Sea') in Korea.",
-          "source_url": "https://en.wikipedia.org/wiki/Sea_of_Japan"
+          "etymology_notes": "Sino-Korean Taebaek ('Great White'), an ancient Three Kingdoms-era name for sacred high peaks along the eastern ridge. Onomastic note: Korean 'Taebaek Sanmaek' (From classical Korean Taebaek ('Great White' mountain)).",
+          "source_url": "https://en.wikipedia.org/wiki/Taebaek_Mountains"
         }
       ]
     },
@@ -9819,38 +9798,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Mount_Kumgang"
         },
         {
-          "name": "Sea of Japan",
+          "name": "Lake Samilpo",
           "disambiguation_note": null,
-          "localisation_stem": "Sea of Japan",
+          "localisation_stem": "Samilpo",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering Tongcheon.",
+          "feature_subtype": "lake",
+          "relationship": "Coastal freshwater lagoon below Mount Kumgang along the Tongcheon-Kosong littoral.",
           "language_variants": [
             {
-              "form": "Donghae",
-              "native_script": "동해",
+              "form": "Samilpo",
+              "native_script": null,
               "language": "Korean",
               "language_code": "kor",
-              "notes": "Korean Donghae ('East Sea')"
-            },
-            {
-              "form": "Dōnghǎi",
-              "native_script": "東海",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Classical Chinese form Donghae ('East Sea')"
+              "notes": "Korean 'Three-Day Lake', traditionally named during Silla Hwarang excursions."
             }
           ],
-          "earliest_attestation_year": -37,
-          "earliest_attestation_note": "Recorded as Donghae ('East Sea') in Samguk Sagi traditions (1st century BCE).",
+          "earliest_attestation_year": 700,
+          "earliest_attestation_note": "Named in Samguk yusa legends of the Silla Hwarang who sojourned at the lagoon near Mount Kumgang.",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea bordering the eastern coast of the Korean Peninsula, traditionally called Donghae ('East Sea') in Korea.",
-          "source_url": "https://en.wikipedia.org/wiki/Sea_of_Japan"
+          "etymology_notes": "Korean Samilpo ('Three-Day Inlet'), celebrated since the Silla period along the eastern Gangwon lagoon coast.",
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Samilpo"
         }
       ]
     },
@@ -11376,38 +11348,31 @@
           "source_url": "https://en.wikipedia.org/wiki/Juwangsan"
         },
         {
-          "name": "Sea of Japan",
+          "name": "Taebaek Mountains",
           "disambiguation_note": null,
-          "localisation_stem": "Sea of Japan",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea bordering the Yeju coast.",
+          "localisation_stem": "Taebaek",
+          "category": "oronym",
+          "feature_subtype": "mountain_range",
+          "relationship": "Southern foothills of the Taebaek Range forming the coastal highland spine behind Juwangsan and Yeju.",
           "language_variants": [
             {
-              "form": "Donghae",
-              "native_script": "동해",
+              "form": "Taebaek Sanmaek",
+              "native_script": null,
               "language": "Korean",
               "language_code": "kor",
-              "notes": "Korean Donghae ('East Sea')"
-            },
-            {
-              "form": "Dōnghǎi",
-              "native_script": "東海",
-              "language": "Literary Chinese",
-              "language_code": "lzh",
-              "notes": "Classical Chinese form Donghae ('East Sea')"
+              "notes": "From classical Korean Taebaek ('Great White' mountain)."
             }
           ],
-          "earliest_attestation_year": -37,
-          "earliest_attestation_note": "Recorded as Donghae ('East Sea') in Samguk Sagi traditions (1st century BCE).",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1145,
+          "earliest_attestation_note": "1145 CE (Taebaek ridge attested in the Samguk Sagi)",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea bordering the eastern coast of the Korean Peninsula, traditionally called Donghae ('East Sea') in Korea.",
-          "source_url": "https://en.wikipedia.org/wiki/Sea_of_Japan"
+          "etymology_notes": "Sino-Korean Taebaek ('Great White'), naming the eastern ridge behind northern Gyeongsang. Onomastic note: Korean 'Taebaek Sanmaek' (From classical Korean Taebaek ('Great White' mountain)).",
+          "source_url": "https://en.wikipedia.org/wiki/Taebaek_Mountains"
         }
       ]
     },
@@ -13667,38 +13632,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Silla"
         },
         {
-          "name": "Sea of Japan",
-          "disambiguation_note": null,
-          "localisation_stem": "Sea of Japan",
-          "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Marginal sea surrounding Ulleungdo off the eastern Korean coast.",
+          "name": "Dokdo",
+          "disambiguation_note": "historical Usan-do / Liancourt Rocks",
+          "localisation_stem": "Dokdo",
+          "category": "topographic_feature",
+          "feature_subtype": "coastal_feature",
+          "relationship": "Volcanic islets lying southeast of Ulleungdo, historically paired with Ulleungdo as Usan-guk in Silla records.",
           "language_variants": [
             {
-              "form": "Donghae",
-              "native_script": "동해",
+              "form": "Usan-do",
+              "native_script": null,
               "language": "Korean",
               "language_code": "kor",
-              "notes": "Korean name (East Sea)"
+              "notes": "Historical Silla and Goryeo name for the islets east of Ulleungdo; modern Korean Dokdo."
             },
             {
-              "form": "Nihonkai",
-              "native_script": "日本海",
+              "form": "Takeshima",
+              "native_script": null,
               "language": "Japanese",
               "language_code": "jpn",
-              "notes": "Japanese name"
+              "notes": "Japanese name for the volcanic islets."
             }
           ],
-          "earliest_attestation_year": -37,
-          "earliest_attestation_note": "Recorded as Donghae ('East Sea') in Samguk Sagi traditions (1st century BCE).",
+          "earliest_attestation_year": 512,
+          "earliest_attestation_note": "Ulleungdo and adjacent islets of the island polity of Usan-guk were subjugated by Silla general Isabu in 512 CE (Samguk Sagi).",
           "attestation_basis": "attested_pre_867",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Marginal sea between Korea and Japan.",
-          "source_url": "https://en.wikipedia.org/wiki/Sea_of_Japan"
+          "etymology_notes": "Historically known in Korea as Usan-do and Dokseom/Dokdo ('solitary island' in local Jeju/coastal dialect).",
+          "source_url": "https://en.wikipedia.org/wiki/Liancourt_Rocks"
         },
         {
           "name": "Seonginbong",

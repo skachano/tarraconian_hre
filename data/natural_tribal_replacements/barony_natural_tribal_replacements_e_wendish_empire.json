@@ -137,10 +137,10 @@
       "target_baronies_audited": 104,
       "candidates_per_barony": 3,
       "total_replacement_candidates": 312,
-      "unique_replacement_names": 130,
+      "unique_replacement_names": 132,
       "candidates_with_multilingual_variants": 279,
       "wikipedia_source_attached": 312,
-      "unique_source_urls": 131,
+      "unique_source_urls": 133,
       "candidates_by_category": {
         "choronym": 22,
         "hydronym": 163,
@@ -164,7 +164,8 @@
         "lit",
         "liv",
         "pol",
-        "prg"
+        "prg",
+        "swe"
       ],
       "anachronism_type_counts": {
         "early_modern_foundation": 6,
@@ -174,8 +175,8 @@
         "renamed_post_867": 1
       },
       "candidates_by_attestation_basis": {
-        "attested_pre_867": 41,
-        "indigenous_pre_literate": 271
+        "attested_pre_867": 39,
+        "indigenous_pre_literate": 273
       },
       "bookmark_valid_candidates": {
         "867": 312,
@@ -183,7 +184,7 @@
         "1178": 312
       },
       "baronies_with_867_valid_candidate": 104,
-      "unique_localisation_stems": 129
+      "unique_localisation_stems": 131
     }
   },
   "baronies": {
@@ -1118,66 +1119,38 @@
           "source_url": "https://en.wikipedia.org/wiki/K%C3%B5pu_Peninsula"
         },
         {
-          "name": "Baltic Sea",
+          "name": "Soela Strait",
           "disambiguation_note": null,
-          "localisation_stem": "Baltic Sea",
+          "localisation_stem": "Soela",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Prominent sea in the western Estonian islands.",
+          "feature_subtype": "strait",
+          "relationship": "Shallow maritime strait separating the southern shore of Hiiumaa from Saaremaa.",
           "language_variants": [
             {
-              "form": "Läänemeri",
+              "form": "Soela väin",
               "native_script": null,
               "language": "Estonian",
               "language_code": "est",
-              "notes": "Estonian name ('Western Sea')."
+              "notes": "Estonian name of the strait"
             },
             {
-              "form": "Baltijas jūra",
+              "form": "Sölasund",
               "native_script": null,
-              "language": "Latvian",
-              "language_code": "lav",
-              "notes": "Latvian name."
-            },
-            {
-              "form": "Baltijos jūra",
-              "native_script": null,
-              "language": "Lithuanian",
-              "language_code": "lit",
-              "notes": "Lithuanian name."
-            },
-            {
-              "form": "Morze Bałtyckie",
-              "native_script": null,
-              "language": "Polish",
-              "language_code": "pol",
-              "notes": "Polish name."
-            },
-            {
-              "form": "Ostsee",
-              "native_script": null,
-              "language": "German",
-              "language_code": "deu",
-              "notes": "German name ('East Sea')."
-            },
-            {
-              "form": "Mare Balticum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Medieval Latin name (Adam of Bremen, c. 1075 CE)."
+              "language": "Swedish",
+              "language_code": "swe",
+              "notes": "Estonian-Swedish historical name"
             }
           ],
-          "earliest_attestation_year": 98,
-          "earliest_attestation_note": "98 CE (Tacitus, Germania 45, as Mare Suebicum; Mare Balticum in Adam of Bremen c. 1075 CE)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Natural maritime passage between the two main islands of the West Estonian archipelago.",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Possibly linked to Latin *balteus* ('belt') or to the Baltic root *baltas* ('white').",
-          "source_url": "https://en.wikipedia.org/wiki/Baltic_Sea"
+          "etymology_notes": "Estonian Soela (possibly from Finnic sõel 'sieve', referring to treacherous shoals, or Old Swedish söl) + väin ('strait').",
+          "source_url": "https://en.wikipedia.org/wiki/Soela_Strait"
         }
       ]
     },
@@ -10881,38 +10854,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Jeziorak"
         },
         {
-          "name": "Drwęca",
+          "name": "Liwa",
           "disambiguation_note": null,
-          "localisation_stem": "Drwęca",
+          "localisation_stem": "Liwa",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent river in eastern Pomesania.",
+          "relationship": "Pomesanian river rising in the moraine lakeland immediately northwest of Lake Jeziorak and Eylau.",
           "language_variants": [
             {
-              "form": "Drwęca",
+              "form": "Liwa",
               "native_script": null,
               "language": "Polish",
               "language_code": "pol",
-              "notes": "Polish name."
+              "notes": "Polish hydronym"
             },
             {
-              "form": "Drewenz",
+              "form": "Liebe",
               "native_script": null,
               "language": "German",
               "language_code": "deu",
-              "notes": "Historical German name."
+              "notes": "German historical hydronym"
             }
           ],
-          "earliest_attestation_year": 1222,
-          "earliest_attestation_note": "1222 CE — Attested as Drvancia in early 13th-century Prussian/Polish charters.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Pre-Teutonic Old Prussian hydronym of western Pomesania.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Ancient Indo-European/Baltic-Slavic hydronym from *dru-* ('flow, run').",
-          "source_url": "https://en.wikipedia.org/wiki/Drw%C4%99ca"
+          "etymology_notes": "From Old Prussian *Līwa / *Līva (cognate with Baltic *līv- 'mud, mire, wetland'), adapted into German Liebe and Polish Liwa.",
+          "source_url": "https://en.wikipedia.org/wiki/Liwa_(river)"
         }
       ]
     },
@@ -10996,38 +10969,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Old_Prussians"
         },
         {
-          "name": "Drwęca",
+          "name": "Wel",
           "disambiguation_note": null,
-          "localisation_stem": "Drwęca",
+          "localisation_stem": "Wel",
           "category": "hydronym",
           "feature_subtype": "river",
-          "relationship": "Prominent river in the Drwęca–Chełmno borderland.",
+          "relationship": "Major left tributary of the Drwęca entering just east of Brodnica.",
           "language_variants": [
             {
-              "form": "Drwęca",
+              "form": "Wel",
               "native_script": null,
               "language": "Polish",
               "language_code": "pol",
-              "notes": "Polish name."
+              "notes": "Polish hydronym"
             },
             {
-              "form": "Drewenz",
+              "form": "Welle",
               "native_script": null,
               "language": "German",
               "language_code": "deu",
-              "notes": "Historical German name."
+              "notes": "German historical hydronym"
             }
           ],
-          "earliest_attestation_year": 1222,
-          "earliest_attestation_note": "1222 CE — Attested as Drvancia in early 13th-century Prussian/Polish charters.",
+          "earliest_attestation_year": null,
+          "earliest_attestation_note": "Indigenous Baltic-Slavic border river of Lubavia and Chełmno Land.",
           "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Ancient Indo-European/Baltic-Slavic hydronym from *dru-* ('flow, run').",
-          "source_url": "https://en.wikipedia.org/wiki/Drw%C4%99ca"
+          "etymology_notes": "Derived from an Old European or Baltic hydronymic root *vel- / *val- ('to well, flow, surge').",
+          "source_url": "https://en.wikipedia.org/wiki/Wel"
         },
         {
           "name": "Chełmno Land",
@@ -14647,66 +14620,38 @@
           "source_url": "https://en.wikipedia.org/wiki/Curonians"
         },
         {
-          "name": "Baltic Sea",
+          "name": "Bārta",
           "disambiguation_note": null,
-          "localisation_stem": "Baltic Sea",
+          "localisation_stem": "Bārta",
           "category": "hydronym",
-          "feature_subtype": "sea",
-          "relationship": "Prominent sea in the Samogitian–Curonian Baltic coast.",
+          "feature_subtype": "river",
+          "relationship": "Coastal Curonian river rising inland in western Samogitia just northeast of Palanga and Šventoji.",
           "language_variants": [
             {
-              "form": "Läänemeri",
-              "native_script": null,
-              "language": "Estonian",
-              "language_code": "est",
-              "notes": "Estonian name ('Western Sea')."
-            },
-            {
-              "form": "Baltijas jūra",
+              "form": "Bārta",
               "native_script": null,
               "language": "Latvian",
               "language_code": "lav",
-              "notes": "Latvian name."
+              "notes": "Latvian hydronym"
             },
             {
-              "form": "Baltijos jūra",
+              "form": "Bartuva",
               "native_script": null,
               "language": "Lithuanian",
               "language_code": "lit",
-              "notes": "Lithuanian name."
-            },
-            {
-              "form": "Morze Bałtyckie",
-              "native_script": null,
-              "language": "Polish",
-              "language_code": "pol",
-              "notes": "Polish name."
-            },
-            {
-              "form": "Ostsee",
-              "native_script": null,
-              "language": "German",
-              "language_code": "deu",
-              "notes": "German name ('East Sea')."
-            },
-            {
-              "form": "Mare Balticum",
-              "native_script": null,
-              "language": "Latin",
-              "language_code": "lat",
-              "notes": "Medieval Latin name (Adam of Bremen, c. 1075 CE)."
+              "notes": "Lithuanian hydronym for the upper course"
             }
           ],
-          "earliest_attestation_year": 98,
-          "earliest_attestation_note": "98 CE (Tacitus, Germania 45, as Mare Suebicum; Mare Balticum in Adam of Bremen c. 1075 CE)",
-          "attestation_basis": "attested_pre_867",
+          "earliest_attestation_year": 1253,
+          "earliest_attestation_note": "1253 CE in Courland partition charters (*Bartowe* / *Barta*).",
+          "attestation_basis": "indigenous_pre_literate",
           "valid_for_bookmarks": {
             "867": true,
             "1066": true,
             "1178": true
           },
-          "etymology_notes": "Possibly linked to Latin *balteus* ('belt') or to the Baltic root *baltas* ('white').",
-          "source_url": "https://en.wikipedia.org/wiki/Baltic_Sea"
+          "etymology_notes": "Baltic hydronym from Proto-Baltic *bart- / *bert- ('to flow, scatter') or Curonian substrate.",
+          "source_url": "https://en.wikipedia.org/wiki/B%C4%81rta"
         },
         {
           "name": "Šventoji",
