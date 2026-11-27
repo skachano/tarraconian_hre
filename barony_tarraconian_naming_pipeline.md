@@ -126,7 +126,9 @@ Stage 2 resolves the exact source form via a deterministic fallback chain:
 
 ---
 
-### Stage 3: Coinage-Era Holder Personality Archetype & Structural Synthesis
+### Stage 3: Coinage-Era Holder Personality Archetype & Structural Synthesis — *Implemented*
+Implemented in [`pipeline_stage3_synthesis.py`](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/pipeline_stage3_synthesis.py) $\rightarrow$ [`data/pipeline_stage3_synthesized.json`](file:///home/siarzhuk/code/personal/tarraconian_hre/data/pipeline_stage3_synthesized.json) (`30.27 MB`), synthesizing native `coinage_culture` compounds on all `5,599` `requires_stage3_synthesis` baronies (`4,640` pass-throughs; `1,058` unoccupied blank) using [`data/barony_coinage_rulers.json`](file:///home/siarzhuk/code/personal/tarraconian_hre/data/barony_coinage_rulers.json), [`data/global_onomasticon_adaptation.json`](file:///home/siarzhuk/code/personal/tarraconian_hre/data/global_onomasticon_adaptation.json), [`data/saint_holding_imagery.json`](file:///home/siarzhuk/code/personal/tarraconian_hre/data/saint_holding_imagery.json), [`data/barony_physical_and_event_context.json`](file:///home/siarzhuk/code/personal/tarraconian_hre/data/barony_physical_and_event_context.json), and [`data/barony_geography.json`](file:///home/siarzhuk/code/personal/tarraconian_hre/data/barony_geography.json):
+- **Effective Archetype Distribution (`5,599` synthesized):** `topographic_default` (`51.21%` / `2,867`), `pious_devotional` (`14.82%` / `830`), `martial_frontier` (`14.45%` / `809`), `mercantile_civic` (`11.23%` / `629`), and `vain_dynastic` (`8.29%` / `464`), with county-level eponym/devotional quotas, circular house exclusion, `231` strictly sea-coast-gated maritime generics (`0` inland leaks), `104` inland waterborne generics, and `19` 2-character Classical Chinese coinages (`Track_S`).
 
 Triggered for **Track C2** (post-867 feudalizations), **Track D2** (post-867 foundations), and **Track A/B castles or temples** overridden by foreign coinage rules (`castle_overrule_*`, `temple_faith_change_25y`).
 

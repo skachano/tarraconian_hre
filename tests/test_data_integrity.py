@@ -2221,6 +2221,44 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_ka'abir"]["selected_source_form"] == "Khalīj Ḥawākil"
         assert baronies["b_ka'abir"]["selected_iso"] == "ara"
 
+    def test_pipeline_stage3_synthesis(self):
+        path = REPO_DIR / "data" / "pipeline_stage3_synthesized.json"
+        assert path.exists(), "data/pipeline_stage3_synthesized.json missing"
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        with open(REPO_DIR / "data" / "barony_geography.json", "r", encoding="utf-8") as f:
+            geo = json.load(f)["baronies"]
+
+        meta = data["metadata"]
+        baronies = data["baronies"]
+        assert meta["total_baronies"] == 11297 == len(baronies)
+        assert meta["occupied_baronies"] == 10239
+        assert meta["unoccupied_baronies"] == 1058
+        assert meta["stage3_synthesized_count"] + meta["stage3_passthrough_count"] == 10239
+
+        # Toponym-first distribution check: topographic_default >= 50% of synthesized baronies
+        shares = meta["effective_archetype_shares_pct"]
+        assert shares["topographic_default"] >= 50.0
+        assert shares["vain_dynastic"] <= 15.0
+
+        for bk, rec in baronies.items():
+            if not rec["is_occupied"]:
+                assert rec["final_record"]["name"] == ""
+                continue
+            assert rec["coined_source_form"], f"{bk} missing coined_source_form"
+            assert rec["effective_archetype"]
+            gen = rec.get("coined_generic")
+            if gen and gen.get("gate") == "sea_coast":
+                assert geo[bk]["is_sea_coast"] is True, f"Inland sea_coast generic leak on {bk}"
+            assert "_" not in rec["coined_source_form"], f"Raw CK3 underscore in {bk}: {rec['coined_source_form']}"
+
+        # Spot checks
+        assert baronies["b_london"]["stage3_mode"] == "passthrough_stage2_stem"
+        assert baronies["b_woxbrigge"]["coined_source_form"] == "Colenceaster"
+        assert baronies["b_kalocsa"]["coined_source_form"] == "Donaustat"
+        assert baronies["b_vestfirdir"]["saint_dedication"]["native_name"] == "Thorlak"
+        assert baronies["b_bagerhat"]["coined_hanzi"] == "高觀"
+
     def test_pipeline_stage1_routing(self):
         path = REPO_DIR / "data" / "pipeline_stage1_routed.json"
         assert path.exists(), "data/pipeline_stage1_routed.json missing"
