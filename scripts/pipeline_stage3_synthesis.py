@@ -38,8 +38,47 @@ from ck3_name_decoder import decode_ck3_personal_name
 REPO_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_DIR / "data"
 
-# Transparent English concept modifiers used across archetypes & building proxies
-CONCEPT_NATIVE_GLOSS: dict[str, dict[str, dict[str, str]]] = {
+IMPERIAL_CULTURES = {
+    "Tarraconian",
+    "Lothringian",
+    "Croato-Tarraconian",
+    "Alpine-Tarraconian",
+    "Ungwârer",
+}
+
+CHRISTIAN_FAITHS = {
+    "catholic", "orthodox", "armenian_apostolic", "miaphysitism", "nestorian",
+    "insular_celtic", "mozarabic_rite", "cathar", "waldensian", "lollard", "hussite",
+    "adamites", "bogomilist", "paulician", "iconoclast", "messalian", "conversos",
+}
+
+CHRISTIAN_TRADITIONAL_FAMILIES = {
+    "tarraconian_imperial", "high_german", "low_german_dutch", "anglo_saxon",
+    "north_germanic", "gallo_romance", "occitano_catalan", "ibero_romance",
+    "italo_romance", "eastern_romance", "latin_classical", "goidelic", "brythonic",
+    "hellenic", "armenian", "kartvelian", "ethiopic_cushitic", "egyptian_coptic",
+    "east_slavic", "south_slavic", "west_slavic_lechitic", "west_slavic_czech_slovak",
+    "magyar", "basque", "albanian", "finnic", "baltic",
+}
+
+CHRISTIAN_ONLY_TARR_GENERICS = {"-kirchen", "-clôster", "-munster", "-abtei", "-kapelle", "Zant-", "-zelle"}
+
+
+def is_christian_holding(coin_culture: str, fam_key: str, ruler_rec: dict[str, Any]) -> bool:
+    """Determine whether church/devotional coinage follows Christian Chancellery conventions."""
+    if coin_culture in IMPERIAL_CULTURES:
+        return True
+    rel = (ruler_rec.get("religion_type") or "").lower()
+    ftype = (ruler_rec.get("faith_type") or "").lower()
+    if rel:
+        return "christian" in rel
+    if ftype:
+        return ftype in CHRISTIAN_FAITHS
+    return fam_key in CHRISTIAN_TRADITIONAL_FAMILIES
+
+
+# Native-language concept modifiers used across archetypes (zero raw English defaults!)
+CONCEPT_NATIVE_GLOSS: dict[str, dict[str, Any]] = {
     "martial_castle": {
         "concept": "shield_defense",
         "tarr": ("Schirm", "Wart", "Îsen", "Rîtter", "Landes"),
@@ -49,7 +88,6 @@ CONCEPT_NATIVE_GLOSS: dict[str, dict[str, dict[str, str]]] = {
         "turkic": ("Demir", "Kara", "Aslan"),
         "indic": ("Vijaya", "Vikrama", "Ran"),
         "sinitic": ("安邊", "靖北", "威鎮", "鐵關"),
-        "default": ("Guard", "Iron", "Watch"),
     },
     "martial_battle": {
         "concept": "victory_triumph",
@@ -60,18 +98,16 @@ CONCEPT_NATIVE_GLOSS: dict[str, dict[str, dict[str, str]]] = {
         "turkic": ("Zafar", "Batyr"),
         "indic": ("Jaya", "Vijaya"),
         "sinitic": ("凱旋", "定功"),
-        "default": ("Victory", "Battle"),
     },
     "mercantile_city": {
         "concept": "free_chartered",
-        "tarr": ("Frî", "Nîe", "Marct", "Zol", "Kouf"),
+        "tarr": ("Frî", "Nîe", "Zol", "Kouf"),
         "romance": ("Franca", "Nova", "Mercat"),
         "arabic": ("as-Suq", "al-Bandar", "al-Jadida"),
         "slavic": ("Novy", "Torg", "Volny"),
         "turkic": ("Bazar", "Yangi", "Altun"),
         "indic": ("Nava", "Ratna", "Vanij"),
         "sinitic": ("通寶", "豐市", "新津", "利埠"),
-        "default": ("New", "Free", "Market"),
     },
     "mercantile_castle": {
         "concept": "toll_customs",
@@ -82,7 +118,6 @@ CONCEPT_NATIVE_GLOSS: dict[str, dict[str, dict[str, str]]] = {
         "turkic": ("Tamga", "Altun"),
         "indic": ("Shulka", "Suvarna"),
         "sinitic": ("稅關", "金鎖"),
-        "default": ("Toll", "Customs"),
     },
     "pious_generic": {
         "concept": "holy_sacred",
@@ -93,7 +128,6 @@ CONCEPT_NATIVE_GLOSS: dict[str, dict[str, dict[str, str]]] = {
         "turkic": ("Qut", "Iman", "Nûr"),
         "indic": ("Dharma", "Shanti", "Deva"),
         "sinitic": ("清淨", "慈恩", "永寧", "法華"),
-        "default": ("Holy", "Cross", "Peace"),
     },
 }
 
@@ -197,22 +231,40 @@ def select_family_generic(
     is_frontier: bool,
     is_hilly: bool,
     barony_key: str,
+    *,
+    is_christian: bool = True,
+    allow_zant: bool = False,
+    religion_type: str = "",
 ) -> dict[str, Any]:
     """
     Choose an environmentally & typologically congruent generic from `morphology_families`,
-    strictly enforcing sea_coast gating on maritime generics.
+    strictly enforcing sea_coast gating on maritime generics and Christian vs non-Christian
+    sanctuary generics on church holdings.
     """
     cands = list(fam_obj["generics"].get(holding_type) or fam_obj["generics"]["castle"])
 
-    # Filter out sea_coast generics unless verified ocean sea_coast
     allowed = []
     for g in cands:
         gate = g.get("gate")
+        tc = g.get("tarr_calque", "")
         if gate == "sea_coast" and not is_sea_coast:
             continue
+        if not allow_zant and tc.startswith("Zant"):
+            continue
+        if holding_type == "church" and not is_christian and tc in CHRISTIAN_ONLY_TARR_GENERICS:
+            continue
         allowed.append(g)
+
+    if not allowed and holding_type == "church" and not is_christian:
+        rel_low = (religion_type or "").lower()
+        if "islam" in rel_low:
+            return {"form": "-masjid", "affix_position": "suffix", "joiner": "", "gloss": "mosque / sanctuary", "tarr_calque": "-meschit", "gate": None}
+        if "juda" in rel_low:
+            return {"form": "Beit ", "affix_position": "prefix", "joiner": " ", "gloss": "house of assembly", "tarr_calque": "-schûle", "gate": None}
+        return {"form": "-vihara", "affix_position": "suffix", "joiner": "", "gloss": "temple / sanctuary", "tarr_calque": "-tempel", "gate": None}
+
     if not allowed:
-        allowed = cands
+        allowed = [g for g in cands if allow_zant or not g.get("tarr_calque", "").startswith("Zant")] or cands
 
     # Score allowed generics against context
     scored: list[tuple[int, int, dict[str, Any]]] = []
@@ -279,22 +331,25 @@ def resolve_saint_dedication(
     shi: dict[str, Any],
     ono_by_raw: dict[str, Any],
     ono_by_clean: dict[str, Any],
+    *,
+    is_christian: bool = True,
 ) -> tuple[str, str, str]:
-    """Return `(native_saint_name, tarr_saint_name, source_label)`."""
-    # Priority 1a: Attested saint_holding_imagery (non-generic)
+    """Return `(native_saint_name, tarr_saint_name, source_label)` gated on faith congruence."""
+    # Priority 1a: Attested saint_holding_imagery (only assign Christian saints to Christian holdings!)
     s_img = shi.get(bk)
-    if s_img and s_img.get("saint_name") and not s_img["saint_name"].startswith("Patron Saint of"):
+    if is_christian and s_img and s_img.get("saint_name") and not s_img["saint_name"].startswith("Patron Saint of"):
         raw_st = strip_saint_prefix(s_img["saint_name"])
-        if raw_st and "Holy Cross" not in s_img["saint_name"] and "Buddha" not in s_img["saint_name"] and "Avalokiteśvara" not in s_img["saint_name"]:
+        if raw_st and not any(bad in s_img["saint_name"] for bad in ("Holy Cross", "Holy Savior", "Buddha", "Avalokiteśvara")):
             cl_rec = ono_by_clean.get(raw_st)
             tarr = cl_rec["primary_tarr_name"] if cl_rec else raw_st
             return (raw_st, tarr, "saint_holding_imagery")
 
-    # Priority 1b: poi_buried_saint or ruler faith canonical saint list in melted_save
+    # Priority 1b: poi_buried_saint or explicit shrine / faith_saints (strictly gated so a 1-saint faith isn't cloned 100x!)
+    has_shrine_poi = bool(phys_rec.get("saint_shrine")) or any("buried" in p for p in (phys_rec.get("points_of_interest") or []))
     fid = str(ruler_rec.get("faith_id") or "")
     if fid in phys_saints and phys_saints[fid].get("saints"):
         s_list = [s for s in phys_saints[fid]["saints"] if s.get("raw_name")]
-        if s_list:
+        if s_list and (has_shrine_poi or len(s_list) >= 3):
             picked = deterministic_pick(s_list, f"{bk}:faith:{fid}")
             raw_n = picked["raw_name"]
             o_rec = ono_by_raw.get(raw_n)
@@ -303,14 +358,22 @@ def resolve_saint_dedication(
             clean_n = picked.get("clean_name") or raw_n
             return (clean_n, clean_n, f"faith_saints:{fid}")
 
-    # Priority 1c: Christian ruler fallback saint pantheon (for Catholic/Orthodox/etc.)
-    rel = (ruler_rec.get("religion_type") or "").lower()
-    ftype = (ruler_rec.get("faith_type") or "").lower()
-    if "christian" in rel or ftype in {"catholic", "orthodox", "armenian_apostolic", "miaphysitism", "nestorian", "cathar", "waldensian", "lollard", "hussite"}:
+    # Priority 1c: Christian ruler fallback saint pantheon ONLY when genuinely Christian
+    if is_christian:
         nat, tarr = deterministic_pick(DEFAULT_CHRISTIAN_SAINTS, f"{bk}:christian_patron")
         return (nat, tarr, "christian_patron_calendar")
 
-    return ("", "", "devotional_abstract")
+    return ("", "", "devotional_topographic")
+
+
+def is_tautological_modifier(mod_text: str, gen_obj: dict[str, Any]) -> bool:
+    """Detect whether modifier duplicates the generic form (e.g. Marct+marct, Burch+burch)."""
+    m_low = re.sub(r"[^a-z]", "", (mod_text or "").lower())
+    g_nat = re.sub(r"[^a-z]", "", (gen_obj.get("form") or "").lower())
+    g_tar = re.sub(r"[^a-z]", "", (gen_obj.get("tarr_calque") or "").lower())
+    if not m_low:
+        return False
+    return (g_nat and (m_low == g_nat or m_low.endswith(g_nat))) or (g_tar and (m_low == g_tar or m_low.endswith(g_tar)))
 
 
 def run_stage3() -> dict[str, Any]:
@@ -390,7 +453,7 @@ def run_stage3() -> dict[str, Any]:
                 "stage3_mode": "passthrough_stage2_stem",
                 "raw_ruler_archetype": coinage[bk].get("archetype", "topographic_default"),
                 "effective_archetype": "attested_retained",
-                "coined_source_form": r2["selected_source_form"],
+                "coined_source_form": r2["clean_source_stem"] if r2["stage1_track"].startswith("Track_B") else r2["selected_source_form"],
                 "coined_hanzi": r2.get("extracted_hanzi"),
                 "coined_compound_order": None,
                 "coined_modifier": {
@@ -435,8 +498,10 @@ def run_stage3() -> dict[str, Any]:
         sig = set(ruler.get("archetype_signals") or [])
         is_circ = bool(ruler.get("is_circular_house", False))
         faith_change_rule = r2["coinage_rule"] == "temple_faith_change_25y"
+        is_christian = is_christian_holding(r2["coinage_culture"], fam_key, ruler)
+        is_pre867_charter = r2["stage1_track"] in {"Track_C1_pre867_feudalized", "Track_D1_pre867_chartered"}
 
-        # Toponym-First Archetype Arbitration (respecting POIs + county quotas)
+        # Toponym-First Archetype Arbitration (respecting pre-867 stems, POIs, faith, & county quotas)
         effective_arch = "topographic_default"
         saint_nat, saint_tarr, saint_src = ("", "", "")
         ruler_ono = ono_by_raw.get(ruler.get("raw_first_name") or "")
@@ -446,20 +511,30 @@ def run_stage3() -> dict[str, Any]:
         house_hanzi = house_dec["hanzi_chars"]
         use_house = bool(house_clean) and house_clean.lower() not in {"unknown", "lowborn"} and not is_circ
 
-        if has_buried_saint or has_shrine or faith_change_rule:
+        if is_pre867_charter:
+            # Pre-867 settlements keep their attested historical stem (only saint_holding_imagery POI overrides if documented)
+            if has_buried_saint or has_shrine or (is_christian and bk in shi and not shi[bk].get("saint_name", "").startswith("Patron Saint of")):
+                saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean, is_christian=is_christian)
+                effective_arch = "pious_devotional" if saint_nat else "topographic_default"
+            elif has_battle_poi or has_holy_order:
+                effective_arch = "martial_frontier"
+            else:
+                effective_arch = "topographic_default"
+        elif has_buried_saint or has_shrine or faith_change_rule:
             effective_arch = "pious_devotional"
-            saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean)
+            saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean, is_christian=is_christian)
         elif has_battle_poi or has_holy_order:
             effective_arch = "martial_frontier"
         elif ht == "church" and raw_arch == "pious_devotional":
-            saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean)
-            if saint_nat or len({"zealous", "theologian", "pilgrim", "monk", "saint"} & traits) >= 1:
+            saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean, is_christian=is_christian)
+            if saint_nat or (is_christian and len({"zealous", "theologian", "pilgrim", "monk", "saint"} & traits) >= 1 and county_pious_secular_used[cty] < 1):
                 effective_arch = "pious_devotional"
+                county_pious_secular_used[cty] += 1
             else:
                 effective_arch = "topographic_default"
         elif raw_arch == "pious_devotional":
             if ({"zealous", "saint", "pilgrim"} & traits) and county_pious_secular_used[cty] < 1:
-                saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean)
+                saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean, is_christian=is_christian)
                 if saint_nat:
                     effective_arch = "pious_devotional"
                     county_pious_secular_used[cty] += 1
@@ -483,7 +558,7 @@ def run_stage3() -> dict[str, Any]:
             effective_arch = "mercantile_civic"
         elif ht == "church" and county_pious_secular_used[cty] < 1 and len({"monastic_schools", "hospices"} & bldgs) >= 2:
             # Occasional institutional pious foundation on well-endowed temples
-            saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean)
+            saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean, is_christian=is_christian)
             effective_arch = "pious_devotional" if saint_nat else "topographic_default"
 
         effective_archetype_counts[effective_arch] += 1
@@ -498,6 +573,9 @@ def run_stage3() -> dict[str, Any]:
             is_frontier=is_frontier,
             is_hilly=is_hilly,
             barony_key=bk,
+            is_christian=is_christian,
+            allow_zant=bool(saint_nat) and is_christian,
+            religion_type=ruler.get("religion_type") or "",
         )
         if gen_obj.get("gate") == "sea_coast":
             sea_gated_harbor_count += 1
@@ -548,11 +626,35 @@ def run_stage3() -> dict[str, Any]:
             saint_rec = None
             mod_hanzi = r2.get("extracted_hanzi")
 
+            def pick_concept_pair(cfg_key: str, tag: str) -> tuple[str, str] | None:
+                bucket_opts = CONCEPT_NATIVE_GLOSS[cfg_key].get(m_bucket)
+                if not bucket_opts:
+                    return None
+                valid_mods = [m for m in bucket_opts if not is_tautological_modifier(m, gen_obj)]
+                valid_tarrs = [t for t in CONCEPT_NATIVE_GLOSS[cfg_key]["tarr"] if not is_tautological_modifier(t, gen_obj)]
+                if not valid_mods or not valid_tarrs:
+                    return None
+                return (
+                    deterministic_pick(valid_mods, f"{bk}:{tag}"),
+                    deterministic_pick(valid_tarrs, f"{bk}:{tag}_t"),
+                )
+
+            def make_landscape_record() -> tuple[str, dict[str, Any]]:
+                form = assemble_compound(land_stem, gen_obj, compound_order)
+                rec = {
+                    "text": land_stem,
+                    "tarr_equivalent": None,
+                    "semantic_concept": r2["stem_category"],
+                    "gloss_en": land_raw,
+                    "is_opaque_eponym": r2["is_opaque_proper_stem"],
+                    "hanzi": mod_hanzi,
+                }
+                return form, rec
+
             if effective_arch == "pious_devotional":
                 if saint_nat:
                     # Saint sanctuary dedication (Priority 1)
-                    # Override generic on Christian church with Zant- if Zant- is available or monastery generic
-                    if ht == "church" and fam_key in {"tarraconian_imperial", "high_german", "low_german_dutch"} and (has_buried_saint or has_shrine):
+                    if is_christian and ht == "church" and fam_key in {"tarraconian_imperial", "high_german", "low_german_dutch"} and (has_buried_saint or has_shrine):
                         mod_text = saint_nat
                         gen_obj = next((g for g in fam_obj["generics"]["church"] if "Zant" in g["form"] or "Saint" in g["form"]), gen_obj)
                     else:
@@ -570,20 +672,25 @@ def run_stage3() -> dict[str, Any]:
                     synthesis_pattern_counts["pious_saint_dedication"] += 1
                     stage3_mode = "synthesized_pious_saint"
                 else:
-                    # Generic devotional modifier (Priority 2)
-                    bucket_opts = CONCEPT_NATIVE_GLOSS["pious_generic"].get(m_bucket) or CONCEPT_NATIVE_GLOSS["pious_generic"]["default"]
-                    mod_text = deterministic_pick(list(bucket_opts), f"{bk}:pious_mod")
-                    coined_form = assemble_compound(mod_text, gen_obj, compound_order)
-                    mod_record = {
-                        "text": mod_text,
-                        "tarr_equivalent": deterministic_pick(list(CONCEPT_NATIVE_GLOSS["pious_generic"]["tarr"]), f"{bk}:pious_tarr"),
-                        "semantic_concept": "holy_sacred",
-                        "gloss_en": "holy / sacred",
-                        "is_opaque_eponym": False,
-                        "hanzi": None,
-                    }
-                    synthesis_pattern_counts["pious_abstract"] += 1
-                    stage3_mode = "synthesized_pious_abstract"
+                    # Non-saint pious holdings keep local topographic stem unless Christian + non-pre867 + native abstract available
+                    cp = pick_concept_pair("pious_generic", "pious_mod") if (is_christian and not is_pre867_charter and not is_tautological_modifier("Hiligen", gen_obj) and int(hashlib.md5(bk.encode()).hexdigest()[:4], 16) % 10 < 3) else None
+                    if cp:
+                        mod_text, mod_tarr_eq = cp
+                        coined_form = assemble_compound(mod_text, gen_obj, compound_order)
+                        mod_record = {
+                            "text": mod_text,
+                            "tarr_equivalent": mod_tarr_eq,
+                            "semantic_concept": "holy_sacred",
+                            "gloss_en": "holy / sacred",
+                            "is_opaque_eponym": False,
+                            "hanzi": None,
+                        }
+                        synthesis_pattern_counts["pious_abstract"] += 1
+                        stage3_mode = "synthesized_pious_abstract"
+                    else:
+                        coined_form, mod_record = make_landscape_record()
+                        synthesis_pattern_counts["pious_landscape_sanctuary"] += 1
+                        stage3_mode = "synthesized_pious_sanctuary"
 
             elif effective_arch == "vain_dynastic":
                 # Choose between cleaned first_name (70%) and non-circular house_name (30% on castles/cities when available)
@@ -620,58 +727,36 @@ def run_stage3() -> dict[str, Any]:
                 stage3_mode = "synthesized_vain_eponym"
 
             elif effective_arch == "martial_frontier":
-                if has_battle_poi or has_holy_order or ht == "castle":
-                    cfg_key = "martial_battle" if has_battle_poi else "martial_castle"
-                    # 65% landscape + martial fort generic, 35% pure martial modifier (higher if battle POI / frontier)
-                    use_abstract_martial = has_battle_poi or has_holy_order or is_frontier or (int(hashlib.md5(bk.encode()).hexdigest()[:4], 16) % 10 < 4)
-                    if use_abstract_martial:
-                        opts = CONCEPT_NATIVE_GLOSS[cfg_key].get(m_bucket) or CONCEPT_NATIVE_GLOSS[cfg_key]["default"]
-                        mod_text = deterministic_pick(list(opts), f"{bk}:martial")
-                        coined_form = assemble_compound(mod_text, gen_obj, compound_order)
-                        mod_record = {
-                            "text": mod_text,
-                            "tarr_equivalent": deterministic_pick(list(CONCEPT_NATIVE_GLOSS[cfg_key]["tarr"]), f"{bk}:martial_t"),
-                            "semantic_concept": CONCEPT_NATIVE_GLOSS[cfg_key]["concept"],
-                            "gloss_en": "battle / shield / watch",
-                            "is_opaque_eponym": False,
-                            "hanzi": None,
-                        }
-                        synthesis_pattern_counts["martial_abstract"] += 1
-                    else:
-                        coined_form = assemble_compound(land_stem, gen_obj, compound_order)
-                        mod_record = {
-                            "text": land_stem,
-                            "tarr_equivalent": None,
-                            "semantic_concept": r2["stem_category"],
-                            "gloss_en": land_raw,
-                            "is_opaque_eponym": r2["is_opaque_proper_stem"],
-                            "hanzi": mod_hanzi,
-                        }
-                        synthesis_pattern_counts["martial_landscape_fort"] += 1
-                else:
-                    coined_form = assemble_compound(land_stem, gen_obj, compound_order)
+                cfg_key = "martial_battle" if has_battle_poi else "martial_castle"
+                use_abstract_martial = (not is_pre867_charter) and (has_battle_poi or has_holy_order or ht == "castle") and (has_battle_poi or has_holy_order or is_frontier or (int(hashlib.md5(bk.encode()).hexdigest()[:4], 16) % 10 < 4))
+                cp = pick_concept_pair(cfg_key, "martial") if use_abstract_martial else None
+                if cp:
+                    mod_text, mod_tarr_eq = cp
+                    coined_form = assemble_compound(mod_text, gen_obj, compound_order)
                     mod_record = {
-                        "text": land_stem,
-                        "tarr_equivalent": None,
-                        "semantic_concept": r2["stem_category"],
-                        "gloss_en": land_raw,
-                        "is_opaque_eponym": r2["is_opaque_proper_stem"],
-                        "hanzi": mod_hanzi,
+                        "text": mod_text,
+                        "tarr_equivalent": mod_tarr_eq,
+                        "semantic_concept": CONCEPT_NATIVE_GLOSS[cfg_key]["concept"],
+                        "gloss_en": "battle / shield / watch",
+                        "is_opaque_eponym": False,
+                        "hanzi": None,
                     }
+                    synthesis_pattern_counts["martial_abstract"] += 1
+                else:
+                    coined_form, mod_record = make_landscape_record()
                     synthesis_pattern_counts["martial_landscape_fort"] += 1
                 stage3_mode = "synthesized_martial_frontier"
 
             elif effective_arch == "mercantile_civic":
                 cfg_key = "mercantile_castle" if ht == "castle" else "mercantile_city"
-                # Prefer landscape/hydronym + mercantile/sea-coast/waterborne generic (~75%), or chartered market coin (~25%)
-                use_charter = (ht == "castle") or (int(hashlib.md5(bk.encode()).hexdigest()[:4], 16) % 10 < 3)
-                if use_charter:
-                    opts = CONCEPT_NATIVE_GLOSS[cfg_key].get(m_bucket) or CONCEPT_NATIVE_GLOSS[cfg_key]["default"]
-                    mod_text = deterministic_pick(list(opts), f"{bk}:merc")
+                use_charter = (not is_pre867_charter) and ((ht == "castle") or (int(hashlib.md5(bk.encode()).hexdigest()[:4], 16) % 10 < 3))
+                cp = pick_concept_pair(cfg_key, "merc") if use_charter else None
+                if cp:
+                    mod_text, mod_tarr_eq = cp
                     coined_form = assemble_compound(mod_text, gen_obj, compound_order)
                     mod_record = {
                         "text": mod_text,
-                        "tarr_equivalent": deterministic_pick(list(CONCEPT_NATIVE_GLOSS[cfg_key]["tarr"]), f"{bk}:merc_t"),
+                        "tarr_equivalent": mod_tarr_eq,
                         "semantic_concept": CONCEPT_NATIVE_GLOSS[cfg_key]["concept"],
                         "gloss_en": "chartered market / toll",
                         "is_opaque_eponym": False,
@@ -679,15 +764,7 @@ def run_stage3() -> dict[str, Any]:
                     }
                     synthesis_pattern_counts["mercantile_charter"] += 1
                 else:
-                    coined_form = assemble_compound(land_stem, gen_obj, compound_order)
-                    mod_record = {
-                        "text": land_stem,
-                        "tarr_equivalent": None,
-                        "semantic_concept": r2["stem_category"],
-                        "gloss_en": land_raw,
-                        "is_opaque_eponym": r2["is_opaque_proper_stem"],
-                        "hanzi": mod_hanzi,
-                    }
+                    coined_form, mod_record = make_landscape_record()
                     synthesis_pattern_counts["mercantile_landscape_port"] += 1
                 stage3_mode = "synthesized_mercantile_civic"
 

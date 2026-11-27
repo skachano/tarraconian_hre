@@ -2390,16 +2390,23 @@ class TestBaronyCoinageAndContext:
                         assert r < 0.75, f"Near-homophonic collision in {ck}: {bk1} vs {bk2} ({p1}/{p2} r={r:.3f})"
 
         assert baronies["b_london"]["b_tarr_hist"] == "London"
-        assert baronies["b_aachen"]["b_tarr_hist"] == "Aachen"
+        assert baronies["b_aachen"]["b_tarr_hist"] == "Âchen"
         assert baronies["b_chur"]["b_tarr_hist"] == "Chur"
         assert "parent_county_reconciled" not in baronies["b_aachen"]
         assert baronies["b_cork"]["b_tarr_hist"] == "Corkport"
-        assert baronies["b_tralee"]["b_tarr_hist"] == "CaerCellachân"
+        assert baronies["b_tralee"]["b_tarr_hist"] == "Caer Cellachân"
         assert baronies["b_beyta"]["b_tarr_hist"] == "Sankaraniburch"
         assert baronies["b_qartajana"]["b_tarr_hist"] == "Nîeport"
         assert baronies["b_EMan_Huligai"]["b_tarr_hist"] == "Hûchânflôz"
         assert baronies["b_ka'abir"]["b_tarr_hist"] == "Hawâkilhâven"
-        assert baronies["b_mansa'l-kharaz"]["b_tarr_hist"] == "Ischkilport"
+        assert baronies["b_mansa'l-kharaz"]["b_tarr_hist"] == "Marijaport"
+        # Regression checks for quality remediation fixes
+        assert baronies["b_kos"]["b_tarr_hist"] == "Kos"
+        assert baronies["b_canterbury"]["b_tarr_hist"] == "Canterbury"
+        assert baronies["b_admont"]["b_tarr_hist"] == "Admontkirchen"
+        assert baronies["b_BOR_Badak"]["b_tarr_hist"] == "Bugistempel"
+        assert baronies["b_Liao_Haibeizhou"]["b_tarr_hist"] == "Liangtempel"
+        assert baronies["b_spas"]["b_tarr_hist"] == "Zant-Andrew"
 
     def test_pipeline_stage1_routing(self):
         path = REPO_DIR / "data" / "pipeline_stage1_routed.json"

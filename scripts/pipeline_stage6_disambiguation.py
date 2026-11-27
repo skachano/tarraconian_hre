@@ -66,11 +66,12 @@ OUT_V1_RES = ROOT / "data" / "barony_resolutions.json"
 # Sorted longest-first so suffix stripping matches multi-char generics cleanly.
 KNOWN_GENERICS = (
     "kirchen", "clôster", "klôster", "munster", "mynster", "castel", "ceaster",
-    "brügge", "brück", "strâte", "wazzer", "pyrgos", "hûsen", "hâven", "marct",
-    "markt", "berge", "berch", "velde", "burch", "veste", "stein", "gouwe",
-    "zelle", "klûse", "clûse", "stât", "stat", "burg", "berg", "haim", "heim", "dorp", "dorf",
-    "port", "flôz", "wîer", "torre", "polis", "torn", "walt", "wald", "lant",
-    "land", "hof", "wîc", "furt", "sêe", "sê", "wal", "pel",
+    "brügge", "brück", "strâte", "wazzer", "pyrgos", "meschit", "tempel",
+    "schûle", "hûsen", "hâven", "marct", "markt", "berge", "berch", "velde",
+    "burch", "veste", "stein", "gouwe", "halle", "zelle", "klûse", "clûse",
+    "stât", "stat", "burg", "berg", "haim", "heim", "dorp", "dorf", "port",
+    "flôz", "wîer", "torre", "polis", "torn", "walt", "wald", "lant", "land",
+    "palz", "wîe", "hof", "wîc", "furt", "sêe", "sê", "wal", "pel",
 )
 
 COASTAL_GENERICS = {"hâven", "port", "wik", "wîc"}
@@ -79,7 +80,9 @@ HOLDING_GENERIC_POOLS = {
     "castle": ["burch", "veste", "stein", "berch", "wal", "castel", "torn"],
     "city": ["stat", "marct", "dorp", "brügge", "hof", "wîc", "furt"],
     "church": ["kirchen", "zelle", "munster", "clôster"],
+    "church_non_christian": ["tempel", "wîe", "halle", "meschit", "schûle"],
 }
+CHRISTIAN_CHURCH_GENERICS = {"kirchen", "zelle", "munster", "clôster", "mynster", "klôster"}
 COASTAL_EXTRA_GENERICS = {
     "castle": ["port"],
     "city": ["hâven", "port"],
@@ -263,21 +266,39 @@ def adapt_with_stage4(raw: str, b_rec: dict, med_ctx: dict) -> str:
     return adapted
 
 
-def render_ntr_candidate(cand: dict, b_rec: dict, is_sea_coast: bool, med_ctx: dict) -> str | None:
+def _is_non_christian_church(b_rec: dict, ruler_info: dict | None) -> bool:
+    """True when a church holding has an explicitly non-Christian ruler and non-imperial culture."""
+    if b_rec.get("holding_type") != "church":
+        return False
+    if b_rec.get("coinage_culture") in {"Tarraconian", "Lothringian", "Croato-Tarraconian", "Alpine-Tarraconian", "Ungwârer"}:
+        return False
+    rel = ((ruler_info or {}).get("religion_type") or "").lower()
+    if rel:
+        return "christian" not in rel
+    return bool(strip_holding_generic(b_rec.get("tarr_hist", ""))[1] in {"tempel", "meschit", "schûle", "wîe", "halle", "palz"})
+
+
+def render_ntr_candidate(
+    cand: dict,
+    b_rec: dict,
+    is_sea_coast: bool,
+    med_ctx: dict,
+    *,
+    ruler_info: dict | None = None,
+) -> str | None:
     """Mediate an NTR ranked candidate into a Tarraconian Stage 5 compliant name."""
-    raw = (cand.get("selected_form") or cand.get("localisation_stem") or cand.get("candidate_name") or "").strip()
+    raw = (cand.get("clean_stem") or cand.get("selected_form") or cand.get("localisation_stem") or cand.get("candidate_name") or "").strip()
     if not raw or "_" in raw:
         return None
-    # Strip trailing modern English generic words if candidate_name leaked in
     raw = re.sub(r"\s+(people|tribe|group|dynasty)$", "", raw, flags=re.I)
     ht = b_rec.get("holding_type", "castle")
+    non_christ = _is_non_christian_church(b_rec, ruler_info)
     base_tarr = adapt_with_stage4(raw, b_rec, med_ctx)
     if not base_tarr:
         return None
     _base_clean, existing_gen = strip_holding_generic(base_tarr)
     subtype = (cand.get("feature_subtype") or "").lower()
 
-    # Keep physical suffix for explicit landform candidates when appropriate, otherwise attach holding generic
     if existing_gen and (existing_gen not in COASTAL_GENERICS or is_sea_coast):
         candidate_raw = base_tarr
     else:
@@ -288,21 +309,32 @@ def render_ntr_candidate(cand: dict, b_rec: dict, is_sea_coast: bool, med_ctx: d
         elif subtype in ("mountain", "peak", "hill", "ridge") and ht == "castle":
             candidate_raw = f"{base_tarr}stein"
         else:
-            gen = {"castle": "burch", "city": "stat", "church": "kirchen"}.get(ht, "burch")
+            church_gen = "tempel" if non_christ else "kirchen"
+            gen = {"castle": "burch", "city": "stat", "church": church_gen}.get(ht, "burch")
             candidate_raw = f"{base_tarr}{gen}"
 
     return finalize_candidate_name(candidate_raw, b_rec, is_sea_coast=is_sea_coast)
 
 
-def build_generic_variants(current_name: str, b_rec: dict, is_sea_coast: bool) -> list[str]:
+def build_generic_variants(
+    current_name: str,
+    b_rec: dict,
+    is_sea_coast: bool,
+    *,
+    ruler_info: dict | None = None,
+) -> list[str]:
     """Generate Step 2 candidates by swapping or attaching holding-type generics."""
     ht = b_rec.get("holding_type", "castle")
+    non_christ = _is_non_christian_church(b_rec, ruler_info)
     base, cur_gen = strip_holding_generic(current_name)
-    pool = list(HOLDING_GENERIC_POOLS.get(ht, ["burch", "stat", "kirchen"]))
+    pool_key = "church_non_christian" if (ht == "church" and non_christ) else ht
+    pool = list(HOLDING_GENERIC_POOLS.get(pool_key, ["burch", "stat", "tempel" if non_christ else "kirchen"]))
     if is_sea_coast:
         pool = COASTAL_EXTRA_GENERICS.get(ht, []) + pool
-    # Also allow cross-holding fallback generics last if intra-holding exhausted
-    for extra in ("burch", "stat", "kirchen", "zelle", "stein", "veste", "dorp", "hûsen", "velde", "hof"):
+    extras = ("burch", "stat", "stein", "veste", "dorp", "hûsen", "velde", "hof")
+    if not non_christ:
+        extras = extras + ("kirchen", "zelle")
+    for extra in extras:
         if extra not in pool:
             pool.append(extra)
 
@@ -433,7 +465,7 @@ def resolve_barony_collision(
     # Step 1: Try 2nd or 3rd candidate in ranked_ntr_candidates (prefer non-adjacent collision too!)
     ntr_cands = b_rec.get("ranked_ntr_candidates") or []
     for idx, nc in enumerate(ntr_cands):
-        cand_name = render_ntr_candidate(nc, b_rec, is_sea, med_ctx)
+        cand_name = render_ntr_candidate(nc, b_rec, is_sea, med_ctx, ruler_info=ruler_info)
         if not cand_name or cand_name == cur_name:
             continue
         if passes(cand_name, strict_stem=True) and all(
@@ -442,14 +474,14 @@ def resolve_barony_collision(
             return cand_name, f"step1_ntr_candidate_rank_{nc.get('rank', idx + 1)}", nc.get("rank", idx + 1)
     # Relax strict_stem slightly if only holding-generic distinguishes an NTR rank, still requiring full passes()
     for idx, nc in enumerate(ntr_cands):
-        cand_name = render_ntr_candidate(nc, b_rec, is_sea, med_ctx)
+        cand_name = render_ntr_candidate(nc, b_rec, is_sea, med_ctx, ruler_info=ruler_info)
         if not cand_name or cand_name == cur_name:
             continue
         if passes(cand_name, strict_stem=False):
             return cand_name, f"step1_ntr_candidate_rank_{nc.get('rank', idx + 1)}", nc.get("rank", idx + 1)
 
     # Step 2: Differentiate by holding-type generic
-    for cand_name in build_generic_variants(cur_name, b_rec, is_sea):
+    for cand_name in build_generic_variants(cur_name, b_rec, is_sea, ruler_info=ruler_info):
         if passes(cand_name, strict_stem=False):
             return cand_name, "step2_holding_generic", None
 
@@ -498,6 +530,8 @@ def build_origin_and_anachronism(
     in_game = ruler_info.get("in_game_name", raw_in_game) if ruler_info else raw_in_game
     origin_type = b_rec.get("origin_type", "")
     lang = b_rec.get("selected_language") or b_rec.get("coinage_culture") or "Tarraconian"
+    if isinstance(lang, str) and lang.startswith("language_"):
+        lang = lang.removeprefix("language_").replace("_", " ").title()
     calque_mode = b_rec.get("calque_mode", "")
     pathway = b_rec.get("phonological_pathway", "")
     th = b_rec["tarr_hist"]
@@ -549,6 +583,46 @@ def write_v2_loc_yml(baronies_out: dict[str, dict], out_path: Path) -> None:
         lines.append(f' {bk}: "{safe}"')
     payload = ("\r\n".join(lines) + "\r\n").encode("utf-8-sig")
     out_path.write_bytes(payload)
+
+
+def _apply_disambiguation_record(
+    rec: dict,
+    scope: str,
+    method: str,
+    old_name: str,
+    new_name: str,
+    ntr_rank: int | None,
+    med_ctx: dict,
+) -> None:
+    """Apply Stage 6 disambiguation result and keep NTR/tarr_direct provenance aligned."""
+    rec["_disambiguation"] = {
+        "scope": scope,
+        "method": method,
+        "original_tarr_hist": old_name,
+        "resolved_tarr_hist": new_name,
+        "ntr_rank_used": ntr_rank,
+    }
+    if ntr_rank is not None:
+        cands = rec.get("ranked_ntr_candidates") or []
+        nc = next((c for i, c in enumerate(cands) if c.get("rank", i + 1) == ntr_rank), None)
+        if nc and nc.get("selected_form"):
+            rec["selected_source_form"] = nc["selected_form"]
+            rec["clean_source_stem"] = nc.get("clean_stem") or nc["selected_form"]
+            if nc.get("selected_iso"):
+                rec["selected_iso"] = nc["selected_iso"]
+            if nc.get("selected_language"):
+                rec["selected_language"] = nc["selected_language"]
+            if nc.get("category"):
+                rec["stem_category"] = nc["category"]
+            direct_norm = apply_full_stage5_sound_laws(
+                adapt_with_stage4(rec["clean_source_stem"], rec, med_ctx),
+                is_sinosphere=bool(rec.get("is_sinosphere_scope", False)),
+                macro_family=rec.get("coinage_morphology_family", ""),
+            )
+            rec["tarr_direct"] = direct_norm or new_name
+    elif rec.get("tarr_direct") == old_name:
+        rec["tarr_direct"] = new_name
+    rec["tarr_hist"] = new_name
 
 
 def main() -> None:
@@ -633,27 +707,7 @@ def main() -> None:
             if not new_name:
                 raise RuntimeError(f"Failed to resolve intra-county collision for {bk} ({cur_name}) in {ck} against {accepted_names}")
 
-            b_rec["_disambiguation"] = {
-                "scope": "intra_county",
-                "method": method,
-                "original_tarr_hist": cur_name,
-                "resolved_tarr_hist": new_name,
-                "ntr_rank_used": ntr_rank,
-            }
-            if ntr_rank is not None:
-                # Keep tarr_direct synchronized with newly picked NTR rank if step 1 switched candidates
-                nc = next((c for c in (b_rec.get("ranked_ntr_candidates") or []) if c.get("rank") == ntr_rank), None)
-                if nc and nc.get("selected_form"):
-                    direct_norm = apply_full_stage5_sound_laws(
-                        adapt_with_stage4(nc["selected_form"], b_rec, med_ctx),
-                        is_sinosphere=bool(b_rec.get("is_sinosphere_scope", False)),
-                        macro_family=b_rec.get("coinage_morphology_family", ""),
-                    )
-                    b_rec["tarr_direct"] = direct_norm or new_name
-            elif b_rec.get("tarr_direct") == cur_name:
-                b_rec["tarr_direct"] = new_name
-
-            b_rec["tarr_hist"] = new_name
+            _apply_disambiguation_record(b_rec, "intra_county", method, cur_name, new_name, ntr_rank, med_ctx)
             accepted_names.append(new_name)
             stats["intra_county_disambiguated"] += 1
             stats[f"method:{method}"] += 1
@@ -704,26 +758,7 @@ def main() -> None:
             for_adjacent=True,
         )
         if new_name:
-            old_name = tb["tarr_hist"]
-            tb["_disambiguation"] = {
-                "scope": "adjacent_barony",
-                "method": method,
-                "original_tarr_hist": old_name,
-                "resolved_tarr_hist": new_name,
-                "ntr_rank_used": ntr_rank,
-            }
-            if ntr_rank is not None:
-                nc = next((c for c in (tb.get("ranked_ntr_candidates") or []) if c.get("rank") == ntr_rank), None)
-                if nc and nc.get("selected_form"):
-                    direct_norm = apply_full_stage5_sound_laws(
-                        adapt_with_stage4(nc["selected_form"], tb, med_ctx),
-                        is_sinosphere=bool(tb.get("is_sinosphere_scope", False)),
-                        macro_family=tb.get("coinage_morphology_family", ""),
-                    )
-                    tb["tarr_direct"] = direct_norm or new_name
-            elif tb.get("tarr_direct") == old_name:
-                tb["tarr_direct"] = new_name
-            tb["tarr_hist"] = new_name
+            _apply_disambiguation_record(tb, "adjacent_barony", method, tb["tarr_hist"], new_name, ntr_rank, med_ctx)
             stats["adjacent_barony_disambiguated"] += 1
 
     # 4. Recompute IPA, daughter dialects, and verify 0 intra-county collisions & 0 phonotactic issues

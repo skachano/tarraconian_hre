@@ -141,10 +141,17 @@ def apply_full_stage5_sound_laws(
     # Canonical Chancellery normalizer from resolve_barony_titles.py
     s = enforce_tarraconian_sound_laws(s)
 
-    # Extra Auslautverhärtung & German cluster repair
+    # Extra Auslautverhärtung, double-vowel circumflex alignment & German cluster repair
+    s = re.sub(r"\bAa(?=[a-z])", "Â", s)
+    s = re.sub(r"aa", "â", s)
+    s = re.sub(r"oo", "ô", s)
+    s = re.sub(r"(?<![qQ])uu", "û", s)
     s = re.sub(r"([a-zâêîôûäöü])\1\1+", r"\1\1", s, flags=re.I)
     s = re.sub(r"schsch", "sch", s, flags=re.I)
+    s = re.sub(r"(?:tz|ts)tsch", "tsch", s, flags=re.I)
     s = re.sub(r"tschtsch", "tsch", s, flags=re.I)
+    s = re.sub(r"burchburch\b", "burch", s, flags=re.I)
+    s = re.sub(r"berchberch\b", "berch", s, flags=re.I)
     s = re.sub(r"tzburch\b", "tzburch", s, flags=re.I)
     # Fix any surviving 'sh' not in -heim/-hûsen
     s = re.sub(r"(?<!c)[Ss]h(?!eim|ûsen)", lambda m: "Sch" if m.group(0)[0].isupper() else "sch", s)

@@ -149,6 +149,7 @@ def parse_save_context_and_chars(save_path: Path, extra_char_ids: set):
     title_id_to_key = {}  # tid -> key
     religions = {}
     faiths = {}
+    rites = {}
     holy_orders = {}      # order_id -> {...}
     title_to_holy_order = {}  # barony_tid -> order_obj
     epidemics_by_prov = defaultdict(list)
@@ -176,6 +177,8 @@ def parse_save_context_and_chars(save_path: Path, extra_char_ids: set):
     in_faith_db = False
     cur_fid = None
     in_saints = False
+    in_rite_db = False
+    cur_rite_id = None
 
     cur_cm_county = None
     cur_ho_id = None
@@ -201,6 +204,8 @@ def parse_save_context_and_chars(save_path: Path, extra_char_ids: set):
                 sec = "religion"; continue
             elif line.startswith("faiths={"):
                 sec = "faiths"; continue
+            elif line.startswith("rites={"):
+                sec = "rites"; continue
             elif line.startswith("county_manager={"):
                 sec = "county_manager"; continue
             elif line.startswith("holy_orders={"):
@@ -400,6 +405,22 @@ def parse_save_context_and_chars(save_path: Path, extra_char_ids: set):
                             k, v = line.strip().split("=", 1)
                             if k in ("faith_type", "religion", "name"):
                                 faiths[cur_fid][k] = v.strip('"')
+
+            elif sec == "rites":
+                if line.startswith("\tdatabase={"):
+                    in_rite_db = True
+                elif in_rite_db:
+                    if line.startswith("\t}"):
+                        in_rite_db = False
+                    elif line.startswith("\t\t") and not line.startswith("\t\t\t") and "={" in line:
+                        cur_rite_id = line.strip().split("=", 1)[0]
+                        rites[cur_rite_id] = {}
+                    elif line.startswith("\t\t}"):
+                        cur_rite_id = None
+                    elif cur_rite_id and line.startswith("\t\t\t") and not line.startswith("\t\t\t\t") and "=" in line:
+                        k, v = line.strip().split("=", 1)
+                        if k in ("rite_type", "faith"):
+                            rites[cur_rite_id][k] = v.strip('"')
 
             elif sec == "county_manager":
                 if line.startswith("\t\t") and not line.startswith("\t\t\t") and "={" in line:
@@ -648,6 +669,7 @@ def parse_save_context_and_chars(save_path: Path, extra_char_ids: set):
         "title_id_to_key": title_id_to_key,
         "religions": religions,
         "faiths": faiths,
+        "rites": rites,
         "holy_orders": holy_orders,
         "title_to_holy_order": title_to_holy_order,
         "epidemics_by_prov": epidemics_by_prov,
@@ -702,6 +724,7 @@ def main():
     baronies_save = save["baronies_save"]
     religions = save["religions"]
     faiths = save["faiths"]
+    rites = save["rites"]
     title_to_holy_order = save["title_to_holy_order"]
     epidemics_by_prov = save["epidemics_by_prov"]
     county_plague_mod = save["county_plague_mod"]
@@ -1038,7 +1061,9 @@ def main():
         is_chat = (dyn_id == 1582)
         circ_house = is_circular_house(house_name, bk, ck)
 
-        fid = str(ch.get("rite")) if ch.get("rite") is not None else None
+        rite_id_str = str(ch.get("rite")) if ch.get("rite") is not None else None
+        robj_rite = rites.get(rite_id_str, {}) if rite_id_str else {}
+        fid = str(robj_rite.get("faith")) if robj_rite.get("faith") is not None else rite_id_str
         fobj = faiths.get(fid, {}) if fid else {}
         robj = religions.get(str(fobj.get("religion", "")), {}) if fobj else {}
 

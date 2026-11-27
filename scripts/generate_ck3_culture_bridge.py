@@ -699,7 +699,7 @@ MORPHOLOGY_FAMILIES = {
         ],
         church=[
             g("Deir ", "prefix", " ", "monastery / convent", "-clôster"),
-            g("Mashhad ", "prefix", " ", "martyr shrine", "Zant-", "pious"),
+            g("Mashhad ", "prefix", " ", "martyr shrine", "-wîe", "pious"),
             g("Ribat ", "prefix", " ", "devotional ribat", "-zelle", "pious"),
             g("Kanisat ", "prefix", " ", "church / sanctuary", "-kirchen"),
         ],
@@ -722,8 +722,8 @@ MORPHOLOGY_FAMILIES = {
             g("Marsa ", "prefix", " ", "sea anchorage", "-hâven", "sea_coast"),
         ],
         church=[
-            g("Zawiya ", "prefix", " ", "religious lodge", "-clôster", "pious"),
-            g("Sidi ", "prefix", " ", "saint / marabout shrine", "Zant-", "pious"),
+            g("Zawiya ", "prefix", " ", "religious lodge", "-wîe", "pious"),
+            g("Sidi ", "prefix", " ", "marabout shrine", "-wîe", "pious"),
         ],
         tribal=[
             g("Aït ", "prefix", " ", "clan / sons of", "-ingen"),
@@ -804,8 +804,8 @@ MORPHOLOGY_FAMILIES = {
             g("Tenda ", "prefix", " ", "river landing / port", "-hâven", "waterborne"),
         ],
         church=[
-            g("Masallaci ", "prefix", " ", "mosque / sanctuary", "-kirchen"),
-            g("Nia ", "prefix", " ", "sacred shrine", "-zelle", "pious"),
+            g("Masallaci ", "prefix", " ", "mosque / sanctuary", "-meschit"),
+            g("Nia ", "prefix", " ", "sacred shrine", "-wîe", "pious"),
         ],
         tribal=[
             g("Dugu ", "prefix", " ", "town / land", "-lant"),
@@ -824,8 +824,8 @@ MORPHOLOGY_FAMILIES = {
             g("Kivuko ", "prefix", " ", "river ford / ferry", "-vurt", "waterborne"),
         ],
         church=[
-            g("Msikiti ", "prefix", " ", "mosque / sanctuary", "-kirchen"),
-            g("Ziyara ", "prefix", " ", "saint shrine", "Zant-", "pious"),
+            g("Msikiti ", "prefix", " ", "mosque / sanctuary", "-meschit"),
+            g("Ziyara ", "prefix", " ", "shrine sanctuary", "-wîe", "pious"),
         ],
         tribal=[
             g("Kwa ", "prefix", " ", "settlement of", "-ingen"),
@@ -848,10 +848,10 @@ MORPHOLOGY_FAMILIES = {
             g("-bazar", "suffix", "", "market town", "-marct", "mercantile"),
         ],
         church=[
-            g("-masjid", "suffix", "", "mosque / temple", "-kirchen"),
-            g("-atashgah", "suffix", "", "sacred fire temple", "-kirchen"),
-            g("-khanaqah", "suffix", "", "cloister / hospice", "-clôster", "pious"),
-            g("-mazar", "suffix", "", "saint shrine", "Zant-", "pious"),
+            g("-masjid", "suffix", "", "mosque", "-meschit"),
+            g("-atashgah", "suffix", "", "sacred fire temple", "-tempel"),
+            g("-khanaqah", "suffix", "", "dervish hospice / sanctuary", "-wîe", "pious"),
+            g("-mazar", "suffix", "", "memorial shrine", "-wîe", "pious"),
         ],
         tribal=[
             g("-deh", "suffix", "", "village", "-dorf"),
@@ -875,9 +875,9 @@ MORPHOLOGY_FAMILIES = {
             g("-keçit", "suffix", "", "river ford", "-vurt", "waterborne"),
         ],
         church=[
-            g("-tekke", "suffix", "", "dervish convent / cloister", "-clôster", "pious"),
+            g("-tekke", "suffix", "", "dervish lodge / sanctuary", "-wîe", "pious"),
             g("-manastır", "suffix", "", "monastery", "-clôster"),
-            g("-mescit", "suffix", "", "sanctuary / mosque", "-kirchen"),
+            g("-mescit", "suffix", "", "mosque", "-meschit"),
         ],
         tribal=[
             g("-ordu", "suffix", "", "horde camp", "-hûs"),
@@ -915,8 +915,8 @@ MORPHOLOGY_FAMILIES = {
             g("-olam", "suffix", "", "river ford", "-vurt", "waterborne"),
         ],
         church=[
-            g("-sume", "suffix", "", "temple / monastery", "-kirchen", "pious"),
-            g("-khiid", "suffix", "", "hermitage / monastery", "-clôster", "pious"),
+            g("-sume", "suffix", "", "temple / sanctuary", "-tempel", "pious"),
+            g("-khiid", "suffix", "", "hermitage / sanctuary", "-wîe", "pious"),
         ],
         tribal=[
             g("-ordu", "suffix", "", "imperial camp", "-hûs"),
@@ -934,7 +934,7 @@ MORPHOLOGY_FAMILIES = {
             g("-zhen", "suffix", "", "garrison market town", "-marct"),
         ],
         church=[
-            g("-si", "suffix", "", "monastery / temple", "-clôster", "pious"),
+            g("-si", "suffix", "", "monastery / temple", "-tempel", "pious"),
         ],
         tribal=[
             g("-ordo", "suffix", "", "tent palace / appanage", "-palz"),
@@ -953,7 +953,7 @@ MORPHOLOGY_FAMILIES = {
             g("-namu", "suffix", "", "sea bay / coast", "-hâven", "sea_coast"),
         ],
         church=[
-            g("-juktehen", "suffix", "", "shrine / temple", "-kirchen", "pious"),
+            g("-juktehen", "suffix", "", "shrine / temple", "-wîe", "pious"),
         ],
         tribal=[
             g("-hala", "suffix", "", "clan settlement", "-ingen"),
@@ -976,8 +976,8 @@ MORPHOLOGY_FAMILIES = {
             g("津", "suffix", "", "river ferry / ford", "-vurt", "waterborne"),
         ],
         church=[
-            g("寺", "suffix", "", "monastery / temple", "-clôster", "pious"),
-            g("院", "suffix", "", "cloister / academy", "-munster", "pious"),
+            g("寺", "suffix", "", "monastery / temple", "-tempel", "pious"),
+            g("院", "suffix", "", "cloister / academy", "-hof", "pious"),
             g("觀", "suffix", "", "Taoist abbey / shrine", "-zelle"),
             g("宮", "suffix", "", "sacred palace", "-palz"),
         ],
@@ -999,7 +999,7 @@ MORPHOLOGY_FAMILIES = {
             g("-jin", "suffix", "", "river ferry / ford (津)", "-vurt", "waterborne"),
         ],
         church=[
-            g("-sa", "suffix", "", "Buddhist temple (寺)", "-clôster", "pious"),
+            g("-sa", "suffix", "", "Buddhist temple (寺)", "-tempel", "pious"),
             g("-am", "suffix", "", "hermitage (庵)", "-zelle"),
         ],
         tribal=[
@@ -1021,9 +1021,9 @@ MORPHOLOGY_FAMILIES = {
             g("-watari", "suffix", "", "river crossing (渡)", "-vurt", "waterborne"),
         ],
         church=[
-            g("-dera", "suffix", "", "Buddhist temple (寺)", "-clôster", "pious"),
+            g("-dera", "suffix", "", "Buddhist temple (寺)", "-tempel", "pious"),
             g("-in", "suffix", "", "cloister / sub-temple (院)", "-zelle", "pious"),
-            g("-miya", "suffix", "", "shrine (宮)", "-kirchen"),
+            g("-miya", "suffix", "", "shrine (宮)", "-wîe"),
         ],
         tribal=[
             g("-mura", "suffix", "", "village (村)", "-dorf"),
@@ -1061,8 +1061,8 @@ MORPHOLOGY_FAMILIES = {
             g("Bến ", "prefix", " ", "river ferry landing", "-vurt", "waterborne"),
         ],
         church=[
-            g("Chùa ", "prefix", " ", "pagoda / monastery", "-clôster", "pious"),
-            g("Đền ", "prefix", " ", "shrine / temple", "-kirchen"),
+            g("Chùa ", "prefix", " ", "pagoda / monastery", "-tempel", "pious"),
+            g("Đền ", "prefix", " ", "shrine / temple", "-wîe"),
         ],
         tribal=[
             g("Làng ", "prefix", " ", "village", "-dorf"),
@@ -1083,9 +1083,9 @@ MORPHOLOGY_FAMILIES = {
             g("-ghat", "suffix", "", "river steps / ferry", "-vurt", "waterborne"),
         ],
         church=[
-            g("-mandir", "suffix", "", "temple", "-kirchen"),
-            g("-vihara", "suffix", "", "monastery", "-clôster", "pious"),
-            g("-tirtha", "suffix", "", "pilgrimage ford / shrine", "Zant-", "pious"),
+            g("-mandir", "suffix", "", "temple", "-tempel"),
+            g("-vihara", "suffix", "", "monastery", "-wîe", "pious"),
+            g("-tirtha", "suffix", "", "pilgrimage ford / shrine", "-wîe", "pious"),
         ],
         tribal=[
             g("-gram", "suffix", "", "village", "-dorf"),
@@ -1105,8 +1105,8 @@ MORPHOLOGY_FAMILIES = {
             g("-turai", "suffix", "", "river crossing / harbor", "-vurt", "waterborne"),
         ],
         church=[
-            g("-koil", "suffix", "", "temple", "-kirchen"),
-            g("-palli", "suffix", "", "monastic sanctuary", "-clôster", "pious"),
+            g("-koil", "suffix", "", "temple", "-tempel"),
+            g("-palli", "suffix", "", "monastic sanctuary", "-wîe", "pious"),
         ],
         tribal=[
             g("-padi", "suffix", "", "hamlet", "-dorf"),
@@ -1126,8 +1126,8 @@ MORPHOLOGY_FAMILIES = {
             g("-zam", "suffix", "", "river bridge", "-brücke", "waterborne"),
         ],
         church=[
-            g("-gonpa", "suffix", "", "monastery", "-clôster", "pious"),
-            g("-lhakhang", "suffix", "", "temple sanctuary", "-kirchen"),
+            g("-gonpa", "suffix", "", "monastery", "-wîe", "pious"),
+            g("-lhakhang", "suffix", "", "temple sanctuary", "-tempel"),
             g("Chos-", "prefix", "", "sacred dharma seat", "Hilig-", "pious"),
         ],
         tribal=[
@@ -1147,8 +1147,8 @@ MORPHOLOGY_FAMILIES = {
             g("Kyaung-", "prefix", "", "river landing", "-vurt", "waterborne"),
         ],
         church=[
-            g("Kyaung ", "prefix", " ", "monastery", "-clôster", "pious"),
-            g("Paya ", "prefix", " ", "pagoda / shrine", "-kirchen", "pious"),
+            g("Kyaung ", "prefix", " ", "monastery", "-wîe", "pious"),
+            g("Paya ", "prefix", " ", "pagoda / shrine", "-tempel", "pious"),
         ],
         tribal=[
             g("Ywa ", "prefix", " ", "village", "-dorf"),
@@ -1166,8 +1166,8 @@ MORPHOLOGY_FAMILIES = {
             g("Pak ", "prefix", " ", "estuary / sea mouth", "-hâven", "sea_coast"),
         ],
         church=[
-            g("Wat ", "prefix", " ", "monastery / temple", "-clôster", "pious"),
-            g("That ", "prefix", " ", "reliquary stupa", "Zant-", "pious"),
+            g("Wat ", "prefix", " ", "monastery / temple", "-tempel", "pious"),
+            g("That ", "prefix", " ", "reliquary stupa", "-wîe", "pious"),
         ],
         tribal=[
             g("Ban ", "prefix", " ", "village", "-dorf"),
@@ -1185,8 +1185,8 @@ MORPHOLOGY_FAMILIES = {
             g("Kompong ", "prefix", " ", "river/sea landing", "-hâven", "waterborne"),
         ],
         church=[
-            g("Prasat ", "prefix", " ", "stone temple", "-kirchen"),
-            g("Wat ", "prefix", " ", "monastery", "-clôster", "pious"),
+            g("Prasat ", "prefix", " ", "stone temple", "-tempel"),
+            g("Wat ", "prefix", " ", "monastery", "-wîe", "pious"),
         ],
         tribal=[
             g("Phum ", "prefix", " ", "village", "-dorf"),
@@ -1206,8 +1206,8 @@ MORPHOLOGY_FAMILIES = {
             g("Pasar ", "prefix", " ", "market town", "-marct", "mercantile"),
         ],
         church=[
-            g("Candi ", "prefix", " ", "stone temple", "-kirchen"),
-            g("Vihara ", "prefix", " ", "monastery", "-clôster", "pious"),
+            g("Candi ", "prefix", " ", "stone temple", "-tempel"),
+            g("Vihara ", "prefix", " ", "monastery", "-wîe", "pious"),
         ],
         tribal=[
             g("Kampung ", "prefix", " ", "village", "-dorf"),
@@ -2066,13 +2066,11 @@ TRANSMISSION_RULES = {
     },
     "greek_to_tarraconian": {
         "intermediary_family": "hellenic",
-        "summary": "Byzantine Greek θ -> t, χ -> ch, φ -> f, -os/-on dropped, -ion -> -jen, -eia -> -êe, -polis -> -pel.",
+        "summary": "Byzantine Greek θ -> t, χ -> ch, φ -> f, polysyllabic -os/-on dropped (short stems preserved), -ion -> -jen, -eia -> -êe, -polis -> -pel.",
         "substitutions": [
             ["polis$", "pel"],
             ["ion$", "jen"],
             ["eia$", "êe"],
-            ["os$", ""],
-            ["on$", ""],
             ["ph", "f"],
             ["th", "t"],
             ["kh", "ch"],

@@ -93,6 +93,74 @@ FAMILY_PROTO_EXPANSION: dict[str, list[str]] = {
 CLASSICAL_LINGUA_FRANCA_ISOS = ["lat", "grc", "ara", "san", "lzh", "fas", "bod"]
 CJK_RE = re.compile(r"[\u3400-\u9FFF\uF900-\uFAFF]+")
 
+# Multi-word foreign/English geographic or ethnolinguistic classifiers stripped from clean_source_stem
+# so downstream Stage 3/6 compounding produces "Sulawesikirchen" rather than "Laut Sulawesikirchen".
+NTR_HEADWORD_RE = re.compile(
+    r"^(?:"
+    r"Gunung\s+Bukit|"
+    r"Kipot\s+ng|Golpo\s+ng|Look\s+ng|Tangway\s+ng|"
+    r"Cnoic\s+na|Slieve\s+|Carrick\s+|"
+    r"Dary[āa]cheh-?ye|R[ūu]d-?e|K[ūu]h-?e|"
+    r"Nahr\s+al-|Nahr|W[āa]d[īi]|Bahr\s+al-|Bahr|Jabal|Khal[īi]j|"
+    r"Laut|Dagat|Sungai|Bukit|Gunung|Pegunungan|Danau|Selat|Pulau|Teluk|Tanjung|Kuala|Muara|Suku|Urang|Bundok|"
+    r"Loch|Glen|Strath|Port|Plain\s+of|Gulf\s+of|Bay\s+of|Strait\s+of|Lake|Mount|Mountain|River|Island|"
+    r"Ozero|Reka|Gora|Zaliv|Ostrov|R[íi]o|Lago|Monte|Sierra"
+    r")\s+",
+    re.I,
+)
+NTR_TRAILING_RE = re.compile(
+    r"\s+(?:people|tribe|group|river|lake|sea|mountain|mountains|range|hills|hill|plain|basin|valley|gulf|bay|strait|island|islands|peninsula|mTsho|mtsho)$",
+    re.I,
+)
+WYLIE_PREFIX_TEST_RE = re.compile(r"(?:^|[\s\-])[srbdgml][KGCJTDNPBMZSYRW]")
+
+
+def clean_wylie_tibetan(stem: str, iso_code: str | None) -> str:
+    """Convert Tibetan Wylie transliteration (e.g. `sPang-gong mTsho`) into readable phonetic form."""
+    if not stem:
+        return stem
+    is_tib = (iso_code in {"bod", "otb", "xct", "dz", "dzo"}) or bool(WYLIE_PREFIX_TEST_RE.search(stem))
+    if not is_tib:
+        return stem
+
+    def _clean_syl(tok: str) -> str:
+        # Handle trailing 'mTsho' -> 'Tscho', 'gTsang' -> 'Tsang', 'sPang' -> 'Pang', 'rGyal' -> 'Gyal', 'Dwangs' -> 'Dang'
+        t = re.sub(r"Dwangs\b", "Dangs", tok, flags=re.I)
+        # Strip silent Wylie prefix consonant before root consonant (sPang -> Pang, bKra -> Kra, lDum -> Dum, rGyal -> Gyal)
+        m = re.match(r"^([srbdgml])([KGCJTDNPBMZSYRWH][a-zA-Z\-']*)$", t)
+        if m and not (m.group(1).lower() == "l" and m.group(2).lower().startswith("ha")):
+            t = m.group(2)
+        else:
+            t = re.sub(r"^([srbdgml])(?=(?:tsh|dz|ng|ny|ky|gy|nj|[kgcjtdpbmzsy])[aeiou])", "", t, flags=re.I)
+        t = re.sub(r"tsh", "tsch", t, flags=re.I)
+        t = t.replace("'", "")
+        return t[:1].upper() + t[1:] if t else ""
+
+    parts = re.split(r"([\s\-]+)", stem)
+    cleaned = "".join(p if p.isspace() or p == "-" else _clean_syl(p) for p in parts)
+    return cleaned
+
+
+def clean_ntr_stem_for_compounding(raw_form: str, iso_code: str | None, *, strip_heads: bool = True) -> str:
+    """Clean Wylie prefixes, leading geographic classifiers, and trailing qualifiers for Stage 3/6."""
+    s = raw_form.lstrip("*").strip()
+    if not s:
+        return ""
+    s = clean_wylie_tibetan(s, iso_code)
+    if strip_heads:
+        # Strip leading foreign/English classifier if >= 3 letters remain
+        m = NTR_HEADWORD_RE.match(s)
+        if m:
+            rest = s[m.end():].strip()
+            if len(re.sub(r"[^A-Za-zÀ-ɏ]", "", rest)) >= 3:
+                s = rest
+        m2 = NTR_TRAILING_RE.search(s)
+        if m2:
+            rest2 = s[:m2.start()].strip(" -")
+            if len(re.sub(r"[^A-Za-zÀ-ɏ]", "", rest2)) >= 3:
+                s = rest2
+    return s
+
 
 def load_sharded_baronies(pattern: str) -> dict[str, dict[str, Any]]:
     combined: dict[str, dict[str, Any]] = {}
@@ -307,6 +375,7 @@ def score_ntr_candidate(
         "feature_subtype": sub,
         "score": total_score,
         "selected_form": chosen_form,
+        "clean_stem": clean_ntr_stem_for_compounding(chosen_form, chosen_iso, strip_heads=True),
         "native_script": chosen_native,
         "selected_iso": chosen_iso,
         "selected_language": chosen_lang,
@@ -499,9 +568,11 @@ def run_stage2() -> dict[str, Any]:
         else:
             raise RuntimeError(f"Unhandled stem_source {stem_source!r} for {bk}")
 
-        # Strip reconstruction asterisk prefix only if keeping raw display? Keep raw form + clean_stem!
-        clean_stem = selected_form.lstrip("*").strip()
-        hanzi_str = extract_cjk_chars(selected_native) or extract_cjk_chars(selected_form)
+        # Strip leading/trailing geographic headwords ONLY on non-867/NTR stems when downstream synthesis compounds them,
+        # while always normalizing Tibetan Wylie transliteration and stripping reconstruction asterisks.
+        strip_heads = stem_source in {"natural_tribal_replacements_867", "ntr_sino_variant", "stage3_sino_coined_compound"} or bool(r1.get("requires_stage3_synthesis"))
+        clean_stem = clean_ntr_stem_for_compounding(selected_form, selected_iso, strip_heads=strip_heads)
+        hanzi_str = (extract_cjk_chars(selected_native) or extract_cjk_chars(selected_form)) if is_sino else ""
 
         # Rule 3 opaqueness signal
         is_opaque = bool(audit_rec.get("eponym")) or (stem_category == "tribe")

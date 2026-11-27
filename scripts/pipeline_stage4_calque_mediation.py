@@ -103,11 +103,19 @@ TRANSPARENT_NTR_HEADS: dict[str, tuple[str, str]] = {
     "commandery": ("-march", "commandery"),
     "mountain": ("-berch", "mountain"),
     "mountains": ("-berch", "mountains"),
+    "mount": ("-berch", "mount"),
+    "mt": ("-berch", "mount"),
     "lake": ("-sêe", "lake"),
     "island": ("-werder", "island"),
     "bay": ("-bucht", "bay"),
     "gulf": ("-bucht", "gulf"),
+    "plain": ("-ebene", "plain"),
+    "great": ("Grôz-", "great"),
+    "little": ("Klein-", "little"),
+    "cape": ("Kap-", "cape"),
 }
+
+ENGLISH_META_GEO_WORDS = {"mount", "mt", "great", "little", "plain", "gulf", "bay", "river", "lake", "mountain", "mountains", "island", "strait"}
 
 # Supplementary Traditional/Simplified Hanzi & Stage 3 classifier entries
 SUPPLEMENTARY_HANZI: dict[str, tuple[str, str, str]] = {
@@ -247,6 +255,18 @@ def transliterate_stem_to_tarr(
         elif len(pat) <= 3 and re.fullmatch(r"[A-Za-zÀ-ɏ]+", pat):
             subs_map[pat.lower()] = repl.lower()
 
+    # Guarded polysyllabic Greek -os / -on drop (never clip short/classical island stems like Kos, Chios, Argos, Ainos, Andros, Lemnos)
+    if transmission_profile == "greek_to_tarraconian":
+        s_words = s.split()
+        out_gw = []
+        for gw in s_words:
+            mg = re.match(r"^([A-Za-zÀ-ɏ]+)(os|on)$", gw, flags=re.I)
+            if mg and len(mg.group(1)) >= 5 and len(re.findall(r"[aeiouyâêîôûäöü]+", mg.group(1), flags=re.I)) >= 2:
+                out_gw.append(mg.group(1))
+            else:
+                out_gw.append(gw)
+        s = " ".join(out_gw)
+
     if tf in {"arabic", "berber", "aramaic_hebrew"}:
         subs_map.update({"kh": "ch", "sh": "sch", "dh": "d", "th": "t", "gh": "g", "j": "dsch", "q": "k"})
     elif tf in {"turkic", "oghur", "mongolic", "iranian"}:
@@ -308,6 +328,8 @@ def transliterate_stem_to_tarr(
         "ł": "l", "Ł": "L", "ń": "n", "Ń": "N", "þ": "th", "Þ": "Th", "ð": "d", "Ð": "D",
         "ʿ": "", "ʾ": "", "'": "", "ı": "i",
     }
+    # Avoid mid-word CamelCase when stripping apostrophes (N'Echach -> Nechach, N'Zi -> Nzi, d'Arcachon -> d'arcachon)
+    s = re.sub(r"\b([A-Za-z])'([A-Z])", lambda m: m.group(1) + m.group(2).lower(), s)
     s = "".join(char_rep.get(c, c) for c in s)
     s = re.sub(r"(?:ch){2,}", "ch", s, flags=re.I)
     s = re.sub(r"(?:tsch){2,}", "tsch", s, flags=re.I)
@@ -511,6 +533,22 @@ def run_stage4() -> dict[str, Any]:
             kanji_readings=kanji_readings, is_rupture=is_rupture,
         )
 
+        def _strip_eng_meta(s: str) -> str:
+            if not any(w.lower() in ENGLISH_META_GEO_WORDS for w in s.split()):
+                return s
+            ws = [w for w in s.split() if w.lower() != "of"]
+            if len(ws) >= 2:
+                if ws[-1].lower() in TRANSPARENT_NTR_HEADS:
+                    hsuf, _ = TRANSPARENT_NTR_HEADS[ws[-1].lower()]
+                    return f"{' '.join(ws[:-1])}{hsuf.strip('-')}"
+                if ws[0].lower() in TRANSPARENT_NTR_HEADS:
+                    hsuf, _ = TRANSPARENT_NTR_HEADS[ws[0].lower()]
+                    rest = " ".join(ws[1:])
+                    return f"{hsuf}{rest}" if hsuf.endswith("-") else f"{rest}{hsuf.strip('-')}"
+            return s
+
+        tarr_direct = _strip_eng_meta(tarr_direct)
+
         def adapt(txt: str, prof: str | None = None, rup: bool = False) -> str:
             res, _ = transliterate_stem_to_tarr(
                 txt, prof or eff_trans_prof, coin_fam, trans_fam, inter_map, trans_rules,
@@ -544,9 +582,10 @@ def run_stage4() -> dict[str, Any]:
                 # Transitional or opaque/post-867 synthesized Sinosphere: adapt modifier + calque generic if transparent & not rupture
                 if gen and not is_rupture:
                     mod_adapt = adapt(mod["text"], trans_prof)
-                    g_tarr = gen["tarr_calque"].strip("-")
-                    if gen.get("tarr_calque", "").startswith("Zant") or gen.get("affix_position") == "prefix":
-                        tarr_hist = f"{g_tarr}{mod_adapt}"
+                    tc_raw = gen.get("tarr_calque", "")
+                    g_tarr = tc_raw.strip("-")
+                    if tc_raw.startswith("Zant") or tc_raw.endswith("-"):
+                        tarr_hist = f"{tc_raw}{mod_adapt}"
                     else:
                         tarr_hist = f"{mod_adapt}{g_tarr}"
                     calque_mode = "sinosphere_hybrid_generic_calque" if mod.get("is_opaque_eponym") else "sinosphere_12c_phonetic"
@@ -562,11 +601,12 @@ def run_stage4() -> dict[str, Any]:
             if mod.get("is_opaque_eponym") and r3["stage3_mode"] in {"synthesized_vain_eponym", "synthesized_pious_saint"}:
                 mod_src = mod["tarr_equivalent"] or mod["text"]
                 if gen:
-                    raw_part = (
-                        f"{gen['native_form'].strip()}{mod_src}"
-                        if gen["affix_position"] == "prefix"
-                        else f"{mod_src}{gen['native_form'].lstrip('-')}"
-                    )
+                    g_nat = gen["native_form"]
+                    if gen["affix_position"] == "prefix":
+                        sep = "" if g_nat.endswith("-") else (gen.get("joiner") or " ")
+                        raw_part = f"{g_nat.strip()}{sep}{mod_src}"
+                    else:
+                        raw_part = f"{mod_src}{g_nat.lstrip('-')}"
                     tarr_hist = adapt(raw_part, trans_prof, rup=True)
                 else:
                     tarr_hist = adapt(mod_src, trans_prof, rup=True)
@@ -652,18 +692,26 @@ def run_stage4() -> dict[str, Any]:
 
         # --- BRANCH D: Passthrough Pre-867 Attested or NTR/Natural Restitution (no generic appended) ---
         else:
-            # Guard: only inspect audit_morphemes when stem_source actually derives from audited name!
+            # Guard: only inspect audit_morphemes when stem_source actually derives from audited name
+            # and contains no ethnonymic/tribal root (e.g. preserve Canterbury rather than reducing it to 'Volcburch')!
+            audit_ms = r3.get("audit_morphemes") or []
+            has_ethnonym_morpheme = any(
+                any(w in (m.get("translation") or "").lower() for w in ("people", "tribe", "folk", "king", "ethnic"))
+                or (m.get("form") or "").lower() in {"cantwara"}
+                for m in audit_ms if isinstance(m, dict)
+            )
             can_calque_audit = (
                 is_direct_trans
                 and not r3["is_opaque_proper_stem"]
+                and not has_ethnonym_morpheme
                 and r3["stem_source"] in {"pre867_attested_vanilla", "existing_natural_proper_name"}
             )
             desc_calque, matched_cids = (
-                match_descriptive_audit_calque(r3.get("audit_morphemes") or [], lex)
+                match_descriptive_audit_calque(audit_ms, lex)
                 if can_calque_audit
                 else (None, [])
             )
-            if desc_calque:
+            if desc_calque and not (" " not in coined_form and any(cid == "people_folk" for cid in matched_cids)):
                 tarr_hist = desc_calque
                 calque_mode = "full_semantic_calque"
                 calque_concepts = matched_cids
@@ -671,25 +719,32 @@ def run_stage4() -> dict[str, Any]:
             else:
                 if r3["is_opaque_proper_stem"]:
                     rule3_blocked_count += 1
-                words = coined_form.split()
-                if is_direct_trans and len(words) >= 2 and words[0].lower() in TRANSPARENT_NTR_HEADS:
-                    hsuf, hgl = TRANSPARENT_NTR_HEADS[words[0].lower()]
+                words = [w for w in coined_form.replace(".", "").split() if w.lower() != "of"]
+                head_w = words[0].lower() if len(words) >= 2 else ""
+                tail_w = words[-1].lower() if len(words) >= 2 else ""
+                head_is_eng_meta = head_w in ENGLISH_META_GEO_WORDS
+                tail_is_eng_meta = tail_w in ENGLISH_META_GEO_WORDS
+                if (is_direct_trans or head_is_eng_meta) and len(words) >= 2 and head_w in TRANSPARENT_NTR_HEADS:
+                    hsuf, hgl = TRANSPARENT_NTR_HEADS[head_w]
                     rest_ad = adapt(" ".join(words[1:]))
-                    tarr_hist = f"{rest_ad}{hsuf.strip('-')}"
+                    tarr_hist = f"{hsuf}{rest_ad}" if hsuf.endswith("-") else f"{rest_ad}{hsuf.strip('-')}"
                     calque_mode = "hybrid_generic_calque"
                     calque_concepts = [hgl]
                     pathway = f"{coined_form} -> [Direct Transparency Head '{words[0]}' -> '{hsuf}'] -> {tarr_hist}"
-                elif is_direct_trans and len(words) >= 2 and words[-1].lower() in TRANSPARENT_NTR_HEADS:
-                    hsuf, hgl = TRANSPARENT_NTR_HEADS[words[-1].lower()]
+                elif (is_direct_trans or tail_is_eng_meta) and len(words) >= 2 and tail_w in TRANSPARENT_NTR_HEADS:
+                    hsuf, hgl = TRANSPARENT_NTR_HEADS[tail_w]
                     rest_ad = adapt(" ".join(words[:-1]))
-                    tarr_hist = f"{rest_ad}{hsuf.strip('-')}"
+                    tarr_hist = f"{hsuf}{rest_ad}" if hsuf.endswith("-") else f"{rest_ad}{hsuf.strip('-')}"
                     calque_mode = "hybrid_generic_calque"
                     calque_concepts = [hgl]
                     pathway = f"{coined_form} -> [Direct Transparency Tail '{words[-1]}' -> '{hsuf}'] -> {tarr_hist}"
                 else:
+                    # Guard against non-Sinosphere standalone cardinal calque like 'West' replacing 'Xi'
                     tarr_hist = tarr_direct
                     calque_mode = "phonetic_mediation_direct"
                     pathway = f"{coined_form} ({r3['coinage_culture']}) -> [Phonetic Mediation: {eff_trans_prof}] -> {tarr_hist}"
+
+        tarr_hist = _strip_eng_meta(tarr_hist)
 
         if inter_notes:
             intermediary_applied_count += 1
