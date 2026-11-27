@@ -113,9 +113,13 @@ TRANSPARENT_NTR_HEADS: dict[str, tuple[str, str]] = {
     "great": ("Grôz-", "great"),
     "little": ("Klein-", "little"),
     "cape": ("Kap-", "cape"),
+    "northern": ("Nord-", "northern"),
+    "southern": ("Sût-", "southern"),
+    "eastern": ("Ôst-", "eastern"),
+    "western": ("West-", "western"),
 }
 
-ENGLISH_META_GEO_WORDS = {"mount", "mt", "great", "little", "plain", "gulf", "bay", "river", "lake", "mountain", "mountains", "island", "strait"}
+ENGLISH_META_GEO_WORDS = {"mount", "mt", "great", "little", "plain", "gulf", "bay", "river", "lake", "mountain", "mountains", "island", "strait", "commandery", "prefecture", "northern", "southern", "eastern", "western"}
 
 # Supplementary Traditional/Simplified Hanzi & Stage 3 classifier entries
 SUPPLEMENTARY_HANZI: dict[str, tuple[str, str, str]] = {

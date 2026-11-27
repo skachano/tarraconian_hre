@@ -2453,6 +2453,14 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_lingui"]["b_tarr_hist"] == "Bî-dem-Lôrber"
         assert baronies["b_djanet"]["b_tarr_hist"] == "Tasili n Adscherklûse"
         assert baronies["b_kaole"]["b_tarr_hist"] == "Zanzibarmeschit"
+        # Round-6 final micro-polish checks
+        assert baronies["b_carrick"]["b_tarr_hist"] == "Baile An Ziûir"
+        assert baronies["b_labrang"]["b_tarr_hist"] == "Yar-Lung Zang-Po"
+        assert baronies["b_Liao_Fengzhou3"]["b_tarr_direct"] == "Anningmarch"
+        assert baronies["b_yongning"]["b_tarr_direct"] == "Nord-Lingtschiu"
+        assert baronies["b_taunggyi_south"]["b_tarr_direct"] == "Pao"
+        assert "post-867 post-867" not in baronies["b_taunggyi_south"]["b_anachronism"].lower()
+        assert "_" not in baronies["b_EMan_Yizhou"]["b_anachronism"]
 
     def test_pipeline_stage1_routing(self):
         path = REPO_DIR / "data" / "pipeline_stage1_routed.json"

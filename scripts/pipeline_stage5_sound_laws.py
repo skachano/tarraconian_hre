@@ -163,6 +163,7 @@ def apply_full_stage5_sound_laws(
     s = re.sub(r"kastel\b", "castel", s)
     s = re.sub(r"\b([NnMm])([AEIOU][a-z]{2,})", lambda m: m.group(1).upper() + m.group(2).lower(), s)
     s = re.sub(r"\b([A-Za-z]{1,2})([A-Z])(?=[a-z])", lambda m: m.group(1) + m.group(2).lower() if m.group(1) != "IJ" else m.group(0), s)
+    s = re.sub(r"\b([A-Z][a-z]{1,2})([A-Z])\b", lambda m: m.group(1) + m.group(2).lower(), s)
     s = re.sub(r"\bAa(?=[a-z])", "Â", s)
     s = re.sub(r"aa", "â", s)
     s = re.sub(r"oo", "ô", s)

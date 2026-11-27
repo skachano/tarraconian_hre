@@ -197,8 +197,8 @@ def enforce_tarraconian_sound_laws(name: str) -> str:
     s = re.sub(r"land\b", "lant", s, flags=re.I)
     
     # 7. Affricates
-    # Initial ts -> z
-    s = re.sub(r"\bts(?!ch)", "z", s, flags=re.I)
+    # Initial ts -> z (preserve leading or eclipsed capital case like Tsang-Po -> Zang-Po, tSiûir -> Ziûir)
+    s = re.sub(r"\bts(?!ch)", lambda m: "Z" if any(c.isupper() for c in m.group(0)) else "z", s, flags=re.I)
     # Medial/final ts -> tz (only after vowels, preventing corruption of -st- clusters like -stat, -stûr, -sachsen)
     s = re.sub(r"(?<=[aeiouyâêîôûäöü])ts(?!ch|z)", "tz", s, flags=re.I)
     s = re.sub(r"tz[z]+", "tz", s, flags=re.I)

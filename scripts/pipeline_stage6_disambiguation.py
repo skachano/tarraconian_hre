@@ -613,11 +613,18 @@ def _humanize_culture(val: str) -> str:
 
 
 def _humanize_pathway(pathway: str) -> str:
-    return re.sub(
-        r"\[([a-z][a-z0-9_]*)\]",
-        lambda m: "[" + ("Anglo-Saxon" if m.group(1) == "anglo_saxon" else m.group(1).replace("_", " ").title()) + "]",
-        pathway or "",
-    )
+    def _repl(m: re.Match[str]) -> str:
+        inner = m.group(1)
+        if re.fullmatch(r"[a-z][a-z0-9_]*", inner):
+            return "[" + ("Anglo-Saxon" if inner == "anglo_saxon" else inner.replace("_", " ").title()) + "]"
+        inner = re.sub(
+            r"\b([a-z]+(?:_[a-z0-9]+)+)\b",
+            lambda tm: "Anglo-Saxon" if tm.group(1) == "anglo_saxon" else tm.group(1).replace("_", " "),
+            inner,
+        )
+        return f"[{inner}]"
+
+    return re.sub(r"\[([^\[\]]+)\]", _repl, pathway or "")
 
 
 def build_origin_and_anachronism(
@@ -676,7 +683,7 @@ def build_origin_and_anachronism(
         if ruler_info and ruler_info.get("clean_first_name"):
             rname = f" under coinage ruler {ruler_info['clean_first_name']} ({cult_lbl})"
         anach = (
-            f"Post-867 {orig_lbl} ({crule_lbl}){rname}; "
+            f"{orig_lbl[:1].upper() + orig_lbl[1:]} ({crule_lbl}){rname}; "
             f"resolved as {track_lbl}."
         )
     elif b_rec.get("coinage_overrule"):
