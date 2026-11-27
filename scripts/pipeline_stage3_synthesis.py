@@ -371,7 +371,7 @@ def resolve_saint_dedication(
             tarr = cl_rec["primary_tarr_name"] if cl_rec else raw_st
             return (raw_st, tarr, "saint_holding_imagery")
 
-    # Priority 1b: poi_buried_saint or explicit shrine / faith_saints (scoped to compatible macro-sphere!)
+    # Priority 1b: poi_buried_saint or explicit shrine / faith_saints (strictly require matching sphere; never let culture=None non-Christian saints leak cross-regionally!)
     has_shrine_poi = bool(phys_rec.get("saint_shrine")) or any("buried" in p for p in (phys_rec.get("points_of_interest") or []))
     hold_sphere = _saint_macro_sphere(holding_culture or ruler_rec.get("coinage_culture"))
     fid = str(ruler_rec.get("faith_id") or "")
@@ -379,7 +379,7 @@ def resolve_saint_dedication(
         raw_saints = [s for s in phys_saints[fid]["saints"] if s.get("raw_name")]
         compat_saints = [
             s for s in raw_saints
-            if is_christian or not s.get("culture") or _saint_macro_sphere(s.get("culture")) == hold_sphere
+            if is_christian or (s.get("culture") and _saint_macro_sphere(s.get("culture")) == hold_sphere)
         ]
         if compat_saints and (has_shrine_poi or len(compat_saints) >= 3):
             picked = deterministic_pick(compat_saints, f"{bk}:faith:{fid}")

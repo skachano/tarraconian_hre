@@ -97,10 +97,10 @@ CJK_RE = re.compile(r"[\u3400-\u9FFF\uF900-\uFAFF]+")
 # so downstream Stage 3/6 compounding produces "Sulawesikirchen" rather than "Laut Sulawesikirchen".
 NTR_HEADWORD_RE = re.compile(
     r"^(?:"
-    r"Gunung\s+Bukit|Doi\s+Phu|Mae\s+Nam|Al-Irk\s+al-|Adrar\s+n|"
+    r"Gunung\s+Bukit|Doi\s+Phu|Mae\s+Nam|Al-Irk\s+al-|Adrar\s+n|Asif\s+n|"
     r"Kipot\s+ng|Golpo\s+ng|Look\s+ng|Tangway\s+ng|"
-    r"Cnoic\s+na|Slieve\s+|Carrick\s+|Monadh|"
-    r"Dary[āa]cheh-?ye|R[ūu]d-?e|K[ūu]h-?e|"
+    r"Cnoic\s+na|Slieve\s+|Carrick\s+|Monadh|Uisge|"
+    r"Dary[āa]cheh-?ye|Dasht-?e|R[ūu]d-?e|K[ūu]h-?e|"
     r"Nahr\s+al-|Nahr|W[āa]d[īi]|Bahr\s+al-|Bahr|Jabal|Jib[āa]l|Khal[īi]j|"
     r"Laut|Dagat|Sungai|Bukit|Gunung|Pegunungan|Danau|Selat|Pulau|Teluk|Tanjung|Kuala|Muara|Suku|Urang|Bundok|"
     r"Tonle|Mae|Nam|Doi|Phu|"

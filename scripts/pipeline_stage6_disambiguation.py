@@ -80,7 +80,15 @@ HOLDING_GENERIC_POOLS = {
     "castle": ["burch", "veste", "stein", "berch", "wal", "castel", "torn"],
     "city": ["stat", "marct", "dorp", "brügge", "hof", "wîc", "furt"],
     "church": ["kirchen", "zelle", "munster", "clôster"],
-    "church_non_christian": ["tempel", "wîe", "halle", "meschit", "schûle"],
+    "church_islam": ["meschit", "wîe", "halle"],
+    "church_judaism": ["schûle", "halle", "wîe"],
+    "church_non_christian": ["tempel", "wîe", "halle"],
+}
+NON_CHRISTIAN_FAMILIES = {
+    "sinosphere_chinese", "korean", "japonic", "viet", "khitan", "tungusic",
+    "mongolic", "austronesian", "indo_aryan", "dravidian", "tibetic",
+    "burmese_qiangic", "tai_hmong", "mon_khmer", "arabic", "berber",
+    "iranian", "turkic", "oghur", "west_central_african", "east_bantu_swahili",
 }
 CHRISTIAN_CHURCH_GENERICS = {"kirchen", "zelle", "munster", "clôster", "mynster", "klôster"}
 COASTAL_EXTRA_GENERICS = {
@@ -266,16 +274,26 @@ def adapt_with_stage4(raw: str, b_rec: dict, med_ctx: dict) -> str:
     return adapted
 
 
-def _is_non_christian_church(b_rec: dict, ruler_info: dict | None) -> bool:
-    """True when a church holding has an explicitly non-Christian ruler and non-imperial culture."""
+def _church_pool_key(b_rec: dict, ruler_info: dict | None) -> str:
+    """Return faith-appropriate generic pool key for church holdings."""
     if b_rec.get("holding_type") != "church":
-        return False
+        return b_rec.get("holding_type", "castle")
     if b_rec.get("coinage_culture") in {"Tarraconian", "Lothringian", "Croato-Tarraconian", "Alpine-Tarraconian", "Ungwârer"}:
-        return False
+        return "church"
     rel = ((ruler_info or {}).get("religion_type") or "").lower()
     if rel:
-        return "christian" not in rel
-    return bool(strip_holding_generic(b_rec.get("tarr_hist", ""))[1] in {"tempel", "meschit", "schûle", "wîe", "halle", "palz"})
+        if "christian" in rel:
+            return "church"
+        if "islam" in rel:
+            return "church_islam"
+        if "juda" in rel:
+            return "church_judaism"
+        return "church_non_christian"
+    if b_rec.get("coinage_morphology_family") in NON_CHRISTIAN_FAMILIES or b_rec.get("is_sinosphere_scope"):
+        return "church_non_christian"
+    if strip_holding_generic(b_rec.get("tarr_hist", ""))[1] in {"tempel", "meschit", "schûle", "wîe", "halle", "palz"}:
+        return "church_non_christian"
+    return "church"
 
 
 def render_ntr_candidate(
@@ -292,7 +310,7 @@ def render_ntr_candidate(
         return None
     raw = re.sub(r"\s+(people|tribe|group|dynasty)$", "", raw, flags=re.I)
     ht = b_rec.get("holding_type", "castle")
-    non_christ = _is_non_christian_church(b_rec, ruler_info)
+    ckey = _church_pool_key(b_rec, ruler_info)
     base_tarr = adapt_with_stage4(raw, b_rec, med_ctx)
     if not base_tarr:
         return None
@@ -309,7 +327,7 @@ def render_ntr_candidate(
         elif subtype in ("mountain", "peak", "hill", "ridge") and ht == "castle":
             candidate_raw = f"{base_tarr}stein"
         else:
-            church_gen = "tempel" if non_christ else "kirchen"
+            church_gen = HOLDING_GENERIC_POOLS.get(ckey, ["kirchen"])[0]
             gen = {"castle": "burch", "city": "stat", "church": church_gen}.get(ht, "burch")
             candidate_raw = f"{base_tarr}{gen}"
 
@@ -325,9 +343,9 @@ def build_generic_variants(
 ) -> list[str]:
     """Generate Step 2 candidates by swapping or attaching holding-type generics."""
     ht = b_rec.get("holding_type", "castle")
-    non_christ = _is_non_christian_church(b_rec, ruler_info)
+    pool_key = _church_pool_key(b_rec, ruler_info)
+    non_christ = pool_key != "church" and ht == "church"
     base, cur_gen = strip_holding_generic(current_name)
-    pool_key = "church_non_christian" if (ht == "church" and non_christ) else ht
     pool = list(HOLDING_GENERIC_POOLS.get(pool_key, ["burch", "stat", "tempel" if non_christ else "kirchen"]))
     if is_sea_coast:
         pool = COASTAL_EXTRA_GENERICS.get(ht, []) + pool
@@ -577,6 +595,22 @@ def build_source_origin_string(b_rec: dict) -> str:
     return f"{stem_src}:{cat}"
 
 
+def _humanize_culture(val: str) -> str:
+    if not val:
+        return ""
+    if val.startswith("language_"):
+        val = val.removeprefix("language_")
+    if "_" in val and val.islower():
+        if val == "anglo_saxon":
+            return "Anglo-Saxon"
+        return val.replace("_", " ").title()
+    return val
+
+
+def _humanize_pathway(pathway: str) -> str:
+    return re.sub(r"\[([a-z0-9_]+)\]", lambda m: "[" + m.group(1).replace("_", " ") + "]", pathway or "")
+
+
 def build_origin_and_anachronism(
     bk: str,
     b_rec: dict,
@@ -585,25 +619,23 @@ def build_origin_and_anachronism(
 ) -> tuple[str, str]:
     """Construct human-readable b_origin and b_anachronism notes from v2 provenance."""
     s3_mode = b_rec.get("stage3_mode", "")
-    lang = b_rec.get("selected_language") or b_rec.get("coinage_culture") or "Tarraconian"
-    if isinstance(lang, str) and lang.startswith("language_"):
-        lang = lang.removeprefix("language_").replace("_", " ").title()
+    lang = _humanize_culture(b_rec.get("selected_language") or b_rec.get("coinage_culture") or "Tarraconian")
 
     # Cite the actual founder eponym or saint dedication when Stage 3 synthesized a non-topographic compound
     eponym = (b_rec.get("ruler_eponym") or {})
     saint = (b_rec.get("saint_dedication") or {})
     if s3_mode == "synthesized_vain_eponym" and eponym.get("clean_name") and not b_rec.get("_disambiguation"):
         raw_source = eponym["clean_name"].strip()
-        lang = b_rec.get("coinage_culture") or lang
+        lang = _humanize_culture(b_rec.get("coinage_culture") or lang)
     elif s3_mode == "synthesized_pious_saint" and saint.get("native_name") and not b_rec.get("_disambiguation"):
         raw_source = f"Saint {saint['native_name']}".strip()
-        lang = b_rec.get("coinage_culture") or lang
+        lang = _humanize_culture(b_rec.get("coinage_culture") or lang)
     else:
         raw_source = (b_rec.get("clean_source_stem") or b_rec.get("selected_source_form") or bk).strip()
 
     origin_type = b_rec.get("origin_type", "")
     calque_mode_lbl = _humanize_enum(b_rec.get("calque_mode", ""), HUMAN_CALQUE_MODE)
-    pathway = b_rec.get("phonological_pathway", "")
+    pathway = _humanize_pathway(b_rec.get("phonological_pathway", ""))
     th = b_rec["tarr_hist"]
 
     origin_parts = [f"{th}"]
@@ -623,6 +655,7 @@ def build_origin_and_anachronism(
     orig_lbl = _humanize_enum(origin_type, HUMAN_ORIGIN_TYPE)
     crule_lbl = _humanize_enum(b_rec.get("coinage_rule", ""), HUMAN_COINAGE_RULE)
     track_lbl = _humanize_enum(b_rec.get("stage1_track", ""), HUMAN_TRACK_LABEL)
+    cult_lbl = _humanize_culture(b_rec.get("coinage_culture") or "")
 
     if b_rec.get("is_sinosphere_scope") and origin_type != "pre_867_established":
         anach = (
@@ -632,7 +665,7 @@ def build_origin_and_anachronism(
     elif origin_type in ("founded_post_867", "feudalized_post_867", "unattested_tribal_post867"):
         rname = ""
         if ruler_info and ruler_info.get("clean_first_name"):
-            rname = f" under coinage ruler {ruler_info['clean_first_name']} ({b_rec.get('coinage_culture')})"
+            rname = f" under coinage ruler {ruler_info['clean_first_name']} ({cult_lbl})"
         anach = (
             f"Post-867 {orig_lbl} ({crule_lbl}){rname}; "
             f"resolved as {track_lbl}."
@@ -640,7 +673,7 @@ def build_origin_and_anachronism(
     elif b_rec.get("coinage_overrule"):
         anach = (
             f"Pre-867 vanilla name overruled due to coinage/transmission shift "
-            f"({b_rec.get('coinage_culture')} / {b_rec.get('continuity_status')})."
+            f"({cult_lbl} / {b_rec.get('continuity_status')})."
         )
     return b_origin, anach
 
@@ -688,6 +721,14 @@ def _apply_disambiguation_record(
                 rec["selected_language"] = nc["selected_language"]
             if nc.get("category"):
                 rec["stem_category"] = nc["category"]
+            # Synchronize b_hanzi with newly chosen NTR candidate so stale Hanzi never persists after a rank swap
+            if rec.get("is_sinosphere_scope"):
+                new_hz = "".join(re.findall(r"[\u3400-\u9FFF\uF900-\uFAFF]+", nc.get("native_script") or ""))
+                rec["extracted_hanzi"] = new_hz or None
+                rec["coined_hanzi"] = new_hz or None
+            else:
+                rec["extracted_hanzi"] = None
+                rec["coined_hanzi"] = None
             direct_norm = apply_full_stage5_sound_laws(
                 adapt_with_stage4(rec["clean_source_stem"], rec, med_ctx),
                 is_sinosphere=bool(rec.get("is_sinosphere_scope", False)),

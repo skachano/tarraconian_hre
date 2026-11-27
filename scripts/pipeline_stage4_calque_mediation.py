@@ -397,16 +397,19 @@ def match_descriptive_audit_calque(
     matched_cids: list[str] = []
     for mor in audit_morphemes:
         tr = (mor.get("translation") or "").lower()
+        mlang = (mor.get("language") or "").lower()
         if not tr:
             return None, []
-        if any(om in tr for om in opaque_m) or "?" in tr:
+        if any(om in tr for om in opaque_m) or "?" in tr or "reinterpreted" in mlang or "folk" in tr or "rabah" in tr:
             return None, []
         words = re.findall(r"[a-z]+", tr)
         if any(w in DISQUALIFIED_GLOSS_WORDS for w in words):
             return None, []
+        # Disambiguate adverbial "well / good" (Latin bene) from noun "well" (water spring -> Brunn-)
+        is_adverb_well = ("well" in words and any(w in words for w in ("good", "propitious", "fortunate", "favorable")))
         cid = None
         for w in words:
-            if w in stops:
+            if w in stops or (w == "well" and is_adverb_well):
                 continue
             if w in gidx:
                 cid = gidx[w]
@@ -415,7 +418,8 @@ def match_descriptive_audit_calque(
             return None, []
         matched_cids.append(cid)
 
-    if len(matched_cids) < 2:
+    # Reject tautological double-identical concepts (e.g. Châteaudun = castle + castle -> Burchburch)
+    if len(matched_cids) < 2 or len(set(matched_cids)) < len(matched_cids):
         return None, []
 
     # Build Tarraconian compound: modifier(s) as prefix, final element as suffix
@@ -573,10 +577,12 @@ def run_stage4() -> dict[str, Any]:
         # --- BRANCH A: Track S (Sinosphere Procedure 1 + 12th-century Phonetics) ---
         if is_sino:
             NO_LITERAL_HANZI_CALQUE = {"b_iyo", "b_kinasir", "b_xi"}
+            is_khingan_phonetic = bool(hanzi_str and "興安" in hanzi_str)
             opaque_sino = (
                 r3["is_opaque_proper_stem"]
                 or (r3["stem_category"] == "tribe")
                 or (bk in NO_LITERAL_HANZI_CALQUE)
+                or is_khingan_phonetic
             )
             hz_count = len(re.findall(r"[\u3400-\u9FFF\uF900-\uFAFF]", hanzi_str or ""))
             if hanzi_str and hz_count >= 2 and not opaque_sino and not is_rupture:

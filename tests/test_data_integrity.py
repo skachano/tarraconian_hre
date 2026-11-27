@@ -2405,7 +2405,7 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_canterbury"]["b_tarr_hist"] == "Canterbury"
         assert baronies["b_admont"]["b_tarr_hist"] == "Admontkirchen"
         assert baronies["b_BOR_Badak"]["b_tarr_hist"] == "Bugistempel"
-        assert baronies["b_Liao_Haibeizhou"]["b_tarr_hist"] == "Yunditempel"
+        assert baronies["b_Liao_Haibeizhou"]["b_tarr_hist"] == "Yîwûlü schântempel"
         assert baronies["b_spas"]["b_tarr_hist"] == "Zant-Andrew"
         assert baronies["b_debrc"]["b_tarr_hist"] == "Sawagaj"
         assert baronies["b_iyo"]["b_tarr_hist"] == "Iyo"
@@ -2416,6 +2416,11 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_dungannon"]["b_tarr_hist"] == "Nechachwal"
         assert baronies["b_satama-sokoro"]["b_tarr_hist"] == "Nzistat"
         assert baronies["b_taunggyi_south"]["b_tarr_hist"] == "Paotempel"
+        assert baronies["b_marrakesh"]["b_tarr_hist"] == "Tansiftburch"
+        assert baronies["b_benevento"]["b_tarr_hist"] == "Benevent"
+        assert baronies["b_chateaudun"]["b_tarr_hist"] == "Schâteaudun"
+        assert baronies["b_baoshun"]["b_hanzi"] == "神農架"
+        assert baronies["b_aso"]["b_tarr_hist"] == "Dangs-Ra Yu-Tscho"
 
     def test_pipeline_stage1_routing(self):
         path = REPO_DIR / "data" / "pipeline_stage1_routed.json"

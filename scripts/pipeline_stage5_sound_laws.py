@@ -79,6 +79,12 @@ EXOTIC_CHAR_MAP: dict[str, str] = {
 
 DAUGHTER_DIALECTS = {"Alpine-Tarraconian", "Croato-Tarraconian", "Ungwârer"}
 
+ALPINE_MARCH_DUCHIES = {
+    "d_lombardia", "d_piedmont", "d_savoie", "d_transjurania", "d_currezia",
+    "d_tyrol", "d_steyermark", "d_carinthia", "d_krain", "d_friuli",
+    "d_verona", "d_genoa", "d_emilia", "d_salzburg", "d_osterreich", "d_bavaria",
+}
+
 
 def pre_normalize_for_chancellery(s: str, is_sinosphere: bool = False, macro_family: str = "") -> str:
     """Clean exotic characters, punctuation, and illicit digraphs BEFORE sound laws."""
@@ -146,7 +152,6 @@ def apply_full_stage5_sound_laws(
     s = re.sub(r"mynster\b", "munster", s)
     s = re.sub(r"\b([NnMm])([AEIOU][a-z]{2,})", lambda m: m.group(1).upper() + m.group(2).lower(), s)
     s = re.sub(r"\b([A-Za-z]{1,2})([A-Z])(?=[a-z])", lambda m: m.group(1) + m.group(2).lower() if m.group(1) != "IJ" else m.group(0), s)
-    s = re.sub(r"-tscho\b", "-Tscho", s)
     s = re.sub(r"\bAa(?=[a-z])", "Â", s)
     s = re.sub(r"aa", "â", s)
     s = re.sub(r"oo", "ô", s)
@@ -155,6 +160,7 @@ def apply_full_stage5_sound_laws(
     s = re.sub(r"schsch", "sch", s, flags=re.I)
     s = re.sub(r"(?:tz|ts)tsch", "tsch", s, flags=re.I)
     s = re.sub(r"tschtsch", "tsch", s, flags=re.I)
+    s = re.sub(r"-tscho(?=\b|stat|sê|veit|burch|tempel)", "-Tscho", s)
     s = re.sub(r"burchburch\b", "burch", s, flags=re.I)
     s = re.sub(r"berchberch\b", "berch", s, flags=re.I)
     s = re.sub(r"tzburch\b", "tzburch", s, flags=re.I)
@@ -255,13 +261,22 @@ def run_stage5() -> dict[str, Any]:
                 "disallowed": disallowed,
             })
 
-        # Daughter dialect overlay if any stratum or 1194 incumbent belongs to Alpine/Croato/Ungwârer
+        # Daughter dialect overlay by culture stratum OR Imperial march geography (tarraconian_linguistics_guide.md § 6)
         prof = profiles[bk]
         c1194 = prof.get("c1194")
         active_dialect = next(
             (c for c in (r4["coinage_culture"], c1194, r4["transmission_culture"], r4["substrate_culture"]) if c in DAUGHTER_DIALECTS),
             None,
         )
+        if not active_dialect and r4.get("tarraconian_conquered"):
+            hier = r4.get("hierarchy") or {}
+            kd, dd = hier.get("kingdom", ""), hier.get("duchy", "")
+            if kd == "k_hungary":
+                active_dialect = "Ungwârer"
+            elif kd == "k_croatia":
+                active_dialect = "Croato-Tarraconian"
+            elif dd in ALPINE_MARCH_DUCHIES:
+                active_dialect = "Alpine-Tarraconian"
         dialect_var = None
         if active_dialect:
             dialect_counts[active_dialect] += 1
