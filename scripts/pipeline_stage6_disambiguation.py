@@ -40,7 +40,11 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from audit_phonotactics_titles import check_title_phonotactics
-from pipeline_stage4_calque_mediation import transliterate_stem_to_tarr
+from pipeline_stage4_calque_mediation import (
+    NON_LATIN_MISATTRIBUTED,
+    adapt_latin_to_tarraconian,
+    transliterate_stem_to_tarr,
+)
 from pipeline_stage5_sound_laws import (
     ALLOWED_CHANCELLERY_CHARS,
     apply_full_stage5_sound_laws,
@@ -250,8 +254,16 @@ def load_mediation_ctx() -> dict:
     }
 
 
-def adapt_with_stage4(raw: str, b_rec: dict, med_ctx: dict) -> str:
-    """Invoke Stage 4 single-pass transliterate_stem_to_tarr for a barony record."""
+def adapt_with_stage4(
+    raw: str,
+    b_rec: dict,
+    med_ctx: dict,
+    *,
+    source_iso: str | None = None,
+) -> str:
+    """Invoke Stage 4 single-pass adaptation for a barony record or NTR candidate."""
+    if source_iso == "lat" and raw.strip() not in NON_LATIN_MISATTRIBUTED:
+        return adapt_latin_to_tarraconian(raw, suppress_geo_head=True)
     cult_bridge = med_ctx["cult_bridge"]
     coin_fam = b_rec.get("coinage_morphology_family") or ""
     trans_cult = b_rec.get("transmission_culture") or ""
@@ -311,9 +323,14 @@ def render_ntr_candidate(
     if not raw or "_" in raw:
         return None
     raw = re.sub(r"\s+(people|tribe|group|dynasty)$", "", raw, flags=re.I)
+    m_mtn = re.match(r"^(?:Montes|Monts)\s+(?:de|du)\s+(.{3,})$", raw, flags=re.I)
+    if m_mtn:
+        raw = m_mtn.group(1).strip()
+    elif re.match(r"^Montes\s+(.{3,})$", raw, flags=re.I) and cand.get("selected_iso") != "lat":
+        raw = re.sub(r"^Montes\s+", "", raw, flags=re.I).strip()
     ht = b_rec.get("holding_type", "castle")
     ckey = _church_pool_key(b_rec, ruler_info)
-    base_tarr = adapt_with_stage4(raw, b_rec, med_ctx)
+    base_tarr = adapt_with_stage4(raw, b_rec, med_ctx, source_iso=cand.get("selected_iso"))
     if not base_tarr:
         return None
     _base_clean, existing_gen = strip_holding_generic(base_tarr)
@@ -749,8 +766,19 @@ def _apply_disambiguation_record(
             else:
                 rec["extracted_hanzi"] = None
                 rec["coined_hanzi"] = None
+            raw_direct = rec["clean_source_stem"]
+            m_mtn_d = re.match(r"^(?:Montes|Monts)\s+(?:de|du)\s+(.{3,})$", raw_direct, flags=re.I)
+            if m_mtn_d:
+                raw_direct = m_mtn_d.group(1).strip()
+            elif re.match(r"^Montes\s+(.{3,})$", raw_direct, flags=re.I) and rec.get("selected_iso") != "lat":
+                raw_direct = re.sub(r"^Montes\s+", "", raw_direct, flags=re.I).strip()
             direct_norm = apply_full_stage5_sound_laws(
-                adapt_with_stage4(rec["clean_source_stem"], rec, med_ctx),
+                adapt_with_stage4(
+                    raw_direct,
+                    rec,
+                    med_ctx,
+                    source_iso=rec.get("selected_iso") if rec.get("stem_source") != "existing_natural_proper_name" else None,
+                ),
                 is_sinosphere=bool(rec.get("is_sinosphere_scope", False)),
                 macro_family=rec.get("coinage_morphology_family", ""),
             )

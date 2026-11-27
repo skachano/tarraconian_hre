@@ -2043,14 +2043,19 @@ TRANSMISSION_RULES = {
     },
     "latin_to_tarraconian": {
         "intermediary_family": "latin_classical",
-        "summary": "Classical Latin -um/-us/-os apocopated; -ia -> -îe/-jen; c(e,i) -> z.",
+        "summary": "Classical Latin -um/-us/-os/-o apocopated; -ia -> -îe, -ium -> -jen/-tz, -ea -> -êe, -a -> -e; ae/oe/ph/th -> ê/ö/f/t; c(e,i) -> z; transparent Latin generics (Portus/Vicus/Forum/Aquae/Mare/Mons) calqued.",
         "substitutions": [
             ["um$", ""],
             ["us$", ""],
             ["ia$", "îe"],
+            ["ium$", "jen"],
+            ["ae", "ê"],
+            ["oe", "ö"],
+            ["ph", "f"],
+            ["th", "t"],
             ["^C(?=[ei])", "Z"],
         ],
-        "examples": ["Roma -> Rôm", "Tarraconem -> Tarracôn"],
+        "examples": ["Roma -> Rôm", "Cillium -> Zilljen", "Portus Magnus -> Grôzport", "Vicus Saravus -> Sârwîch", "Aquae -> Bâden"],
     },
     "celtic_to_tarraconian": {
         "intermediary_family": "brythonic",
