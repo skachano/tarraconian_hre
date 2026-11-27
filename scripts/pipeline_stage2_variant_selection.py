@@ -97,12 +97,14 @@ CJK_RE = re.compile(r"[\u3400-\u9FFF\uF900-\uFAFF]+")
 # so downstream Stage 3/6 compounding produces "Sulawesikirchen" rather than "Laut Sulawesikirchen".
 NTR_HEADWORD_RE = re.compile(
     r"^(?:"
-    r"Gunung\s+Bukit|"
+    r"Gunung\s+Bukit|Doi\s+Phu|Mae\s+Nam|Al-Irk\s+al-|Adrar\s+n|"
     r"Kipot\s+ng|Golpo\s+ng|Look\s+ng|Tangway\s+ng|"
-    r"Cnoic\s+na|Slieve\s+|Carrick\s+|"
+    r"Cnoic\s+na|Slieve\s+|Carrick\s+|Monadh|"
     r"Dary[āa]cheh-?ye|R[ūu]d-?e|K[ūu]h-?e|"
-    r"Nahr\s+al-|Nahr|W[āa]d[īi]|Bahr\s+al-|Bahr|Jabal|Khal[īi]j|"
+    r"Nahr\s+al-|Nahr|W[āa]d[īi]|Bahr\s+al-|Bahr|Jabal|Jib[āa]l|Khal[īi]j|"
     r"Laut|Dagat|Sungai|Bukit|Gunung|Pegunungan|Danau|Selat|Pulau|Teluk|Tanjung|Kuala|Muara|Suku|Urang|Bundok|"
+    r"Tonle|Mae|Nam|Doi|Phu|"
+    r"Webi|Kogin|Mto|Odo|Ilog|Asif|Adrar|Mun[țt]ii|Muntzii|"
     r"Loch|Glen|Strath|Port|Plain\s+of|Gulf\s+of|Bay\s+of|Strait\s+of|Lake|Mount|Mountain|River|Island|"
     r"Ozero|Reka|Gora|Zaliv|Ostrov|R[íi]o|Lago|Monte|Sierra"
     r")\s+",
@@ -124,8 +126,9 @@ def clean_wylie_tibetan(stem: str, iso_code: str | None) -> str:
         return stem
 
     def _clean_syl(tok: str) -> str:
-        # Handle trailing 'mTsho' -> 'Tscho', 'gTsang' -> 'Tsang', 'sPang' -> 'Pang', 'rGyal' -> 'Gyal', 'Dwangs' -> 'Dang'
+        # Handle trailing 'mTsho' -> 'Tscho', 'gTsang' -> 'Tsang', 'sPang' -> 'Pang', 'rGyal' -> 'Gyal', 'Dwangs' -> 'Dangs', 'klungs' -> 'Lung'
         t = re.sub(r"Dwangs\b", "Dangs", tok, flags=re.I)
+        t = re.sub(r"klungs\b", "Lung", t, flags=re.I)
         # Strip silent Wylie prefix consonant before root consonant (sPang -> Pang, bKra -> Kra, lDum -> Dum, rGyal -> Gyal)
         m = re.match(r"^([srbdgml])([KGCJTDNPBMZSYRWH][a-zA-Z\-']*)$", t)
         if m and not (m.group(1).lower() == "l" and m.group(2).lower().startswith("ha")):

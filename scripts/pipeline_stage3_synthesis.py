@@ -235,6 +235,7 @@ def select_family_generic(
     is_christian: bool = True,
     allow_zant: bool = False,
     religion_type: str = "",
+    fam_key: str = "",
 ) -> dict[str, Any]:
     """
     Choose an environmentally & typologically congruent generic from `morphology_families`,
@@ -261,7 +262,13 @@ def select_family_generic(
             return {"form": "-masjid", "affix_position": "suffix", "joiner": "", "gloss": "mosque / sanctuary", "tarr_calque": "-meschit", "gate": None}
         if "juda" in rel_low:
             return {"form": "Beit ", "affix_position": "prefix", "joiner": " ", "gloss": "house of assembly", "tarr_calque": "-schûle", "gate": None}
-        return {"form": "-vihara", "affix_position": "suffix", "joiner": "", "gloss": "temple / sanctuary", "tarr_calque": "-tempel", "gate": None}
+        if fam_key in {"indo_aryan", "dravidian", "austronesian", "mon_khmer", "tai_hmong", "burmese_qiangic"} or any(x in rel_low for x in ("buddh", "hindu", "jain")):
+            return {"form": "-vihara", "affix_position": "suffix", "joiner": "", "gloss": "temple / sanctuary", "tarr_calque": "-tempel", "gate": None}
+        if fam_key in {"east_slavic", "south_slavic", "west_slavic_lechitic", "west_slavic_czech_slovak"}:
+            return {"form": "-gaj", "affix_position": "suffix", "joiner": "", "gloss": "sacred grove / sanctuary", "tarr_calque": "-hain", "gate": None}
+        if fam_key in {"baltic", "finnic", "sami", "volga_permian", "magyar"}:
+            return {"form": "-alkas", "affix_position": "suffix", "joiner": "", "gloss": "sacred grove / sanctuary", "tarr_calque": "-hêl", "gate": None}
+        return {"form": "-wîe", "affix_position": "suffix", "joiner": "", "gloss": "sacred sanctuary", "tarr_calque": "-wîe", "gate": None}
 
     if not allowed:
         allowed = [g for g in cands if allow_zant or not g.get("tarr_calque", "").startswith("Zant")] or cands
@@ -323,6 +330,25 @@ def strip_saint_prefix(s: str) -> str:
     return s
 
 
+def _saint_macro_sphere(culture_name: str | None) -> str:
+    c = (culture_name or "").lower()
+    if any(x in c for x in ("javan", "malay", "sunda", "bugis", "dayak", "balin", "aceh", "batak", "banjar", "khmer", "mon", "tai", "siamese", "lao", "burm", "pyu", "shan", "cham", "philip", "tagalog", "visay")):
+        return "se_asia"
+    if any(x in c for x in ("han", "canton", "min", "wu", "hakka", "jurchen", "khitan", "balhae", "goguryeo", "silla", "baekje", "korean", "samhan", "japanese", "yamato", "ryukyu", "ainu", "viet", "mohe", "nivkh", "tangut")):
+        return "east_asia"
+    if any(x in c for x in ("tibetan", "bodpa", "zhangzhung", "sumpa", "tsang", "qiang")):
+        return "tibet"
+    if any(x in c for x in ("mongol", "oirat", "kirghiz", "kazakh", "karluk", "uyghur", "turk", "cuman", "kipchak", "pecheneg", "khazar", "bolghar")):
+        return "steppe"
+    if any(x in c for x in ("tamil", "kannada", "telugu", "bengal", "hindustan", "marath", "gujarat", "punjab", "sindh", "rajput", "oriya", "assam", "nepali", "sinhala")):
+        return "india"
+    if any(x in c for x in ("arab", "bedouin", "levant", "egypt", "maghreb", "persian", "kurd", "daylam", "afghan", "sogdian", "tajik", "berber", "butr", "baranis")):
+        return "mena"
+    if any(x in c for x in ("ethiop", "somali", "nubian", "beja", "akan", "yoruba", "mand", "hausa", "songhai", "kanuri", "wolof", "swahili")):
+        return "africa"
+    return "europe"
+
+
 def resolve_saint_dedication(
     bk: str,
     ruler_rec: dict[str, Any],
@@ -333,8 +359,9 @@ def resolve_saint_dedication(
     ono_by_clean: dict[str, Any],
     *,
     is_christian: bool = True,
+    holding_culture: str = "",
 ) -> tuple[str, str, str]:
-    """Return `(native_saint_name, tarr_saint_name, source_label)` gated on faith congruence."""
+    """Return `(native_saint_name, tarr_saint_name, source_label)` gated on faith & sphere congruence."""
     # Priority 1a: Attested saint_holding_imagery (only assign Christian saints to Christian holdings!)
     s_img = shi.get(bk)
     if is_christian and s_img and s_img.get("saint_name") and not s_img["saint_name"].startswith("Patron Saint of"):
@@ -344,13 +371,18 @@ def resolve_saint_dedication(
             tarr = cl_rec["primary_tarr_name"] if cl_rec else raw_st
             return (raw_st, tarr, "saint_holding_imagery")
 
-    # Priority 1b: poi_buried_saint or explicit shrine / faith_saints (strictly gated so a 1-saint faith isn't cloned 100x!)
+    # Priority 1b: poi_buried_saint or explicit shrine / faith_saints (scoped to compatible macro-sphere!)
     has_shrine_poi = bool(phys_rec.get("saint_shrine")) or any("buried" in p for p in (phys_rec.get("points_of_interest") or []))
+    hold_sphere = _saint_macro_sphere(holding_culture or ruler_rec.get("coinage_culture"))
     fid = str(ruler_rec.get("faith_id") or "")
     if fid in phys_saints and phys_saints[fid].get("saints"):
-        s_list = [s for s in phys_saints[fid]["saints"] if s.get("raw_name")]
-        if s_list and (has_shrine_poi or len(s_list) >= 3):
-            picked = deterministic_pick(s_list, f"{bk}:faith:{fid}")
+        raw_saints = [s for s in phys_saints[fid]["saints"] if s.get("raw_name")]
+        compat_saints = [
+            s for s in raw_saints
+            if is_christian or not s.get("culture") or _saint_macro_sphere(s.get("culture")) == hold_sphere
+        ]
+        if compat_saints and (has_shrine_poi or len(compat_saints) >= 3):
+            picked = deterministic_pick(compat_saints, f"{bk}:faith:{fid}")
             raw_n = picked["raw_name"]
             o_rec = ono_by_raw.get(raw_n)
             if o_rec:
@@ -514,7 +546,7 @@ def run_stage3() -> dict[str, Any]:
         if is_pre867_charter:
             # Pre-867 settlements keep their attested historical stem (only saint_holding_imagery POI overrides if documented)
             if has_buried_saint or has_shrine or (is_christian and bk in shi and not shi[bk].get("saint_name", "").startswith("Patron Saint of")):
-                saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean, is_christian=is_christian)
+                saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean, is_christian=is_christian, holding_culture=r2["coinage_culture"])
                 effective_arch = "pious_devotional" if saint_nat else "topographic_default"
             elif has_battle_poi or has_holy_order:
                 effective_arch = "martial_frontier"
@@ -522,11 +554,11 @@ def run_stage3() -> dict[str, Any]:
                 effective_arch = "topographic_default"
         elif has_buried_saint or has_shrine or faith_change_rule:
             effective_arch = "pious_devotional"
-            saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean, is_christian=is_christian)
+            saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean, is_christian=is_christian, holding_culture=r2["coinage_culture"])
         elif has_battle_poi or has_holy_order:
             effective_arch = "martial_frontier"
         elif ht == "church" and raw_arch == "pious_devotional":
-            saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean, is_christian=is_christian)
+            saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean, is_christian=is_christian, holding_culture=r2["coinage_culture"])
             if saint_nat or (is_christian and len({"zealous", "theologian", "pilgrim", "monk", "saint"} & traits) >= 1 and county_pious_secular_used[cty] < 1):
                 effective_arch = "pious_devotional"
                 county_pious_secular_used[cty] += 1
@@ -534,7 +566,7 @@ def run_stage3() -> dict[str, Any]:
                 effective_arch = "topographic_default"
         elif raw_arch == "pious_devotional":
             if ({"zealous", "saint", "pilgrim"} & traits) and county_pious_secular_used[cty] < 1:
-                saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean, is_christian=is_christian)
+                saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean, is_christian=is_christian, holding_culture=r2["coinage_culture"])
                 if saint_nat:
                     effective_arch = "pious_devotional"
                     county_pious_secular_used[cty] += 1
@@ -558,7 +590,7 @@ def run_stage3() -> dict[str, Any]:
             effective_arch = "mercantile_civic"
         elif ht == "church" and county_pious_secular_used[cty] < 1 and len({"monastic_schools", "hospices"} & bldgs) >= 2:
             # Occasional institutional pious foundation on well-endowed temples
-            saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean, is_christian=is_christian)
+            saint_nat, saint_tarr, saint_src = resolve_saint_dedication(bk, ruler, phys, phys_saints, shi, ono_by_raw, ono_by_clean, is_christian=is_christian, holding_culture=r2["coinage_culture"])
             effective_arch = "pious_devotional" if saint_nat else "topographic_default"
 
         effective_archetype_counts[effective_arch] += 1
@@ -576,6 +608,7 @@ def run_stage3() -> dict[str, Any]:
             is_christian=is_christian,
             allow_zant=bool(saint_nat) and is_christian,
             religion_type=ruler.get("religion_type") or "",
+            fam_key=fam_key,
         )
         if gen_obj.get("gate") == "sea_coast":
             sea_gated_harbor_count += 1

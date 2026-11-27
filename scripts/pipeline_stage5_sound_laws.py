@@ -141,7 +141,12 @@ def apply_full_stage5_sound_laws(
     # Canonical Chancellery normalizer from resolve_barony_titles.py
     s = enforce_tarraconian_sound_laws(s)
 
-    # Extra Auslautverhärtung, double-vowel circumflex alignment & German cluster repair
+    # Extra Auslautverhärtung, double-vowel circumflex alignment & cluster repair
+    s = re.sub(r"burh\b", "burch", s)
+    s = re.sub(r"mynster\b", "munster", s)
+    s = re.sub(r"\b([NnMm])([AEIOU][a-z]{2,})", lambda m: m.group(1).upper() + m.group(2).lower(), s)
+    s = re.sub(r"\b([A-Za-z]{1,2})([A-Z])(?=[a-z])", lambda m: m.group(1) + m.group(2).lower() if m.group(1) != "IJ" else m.group(0), s)
+    s = re.sub(r"-tscho\b", "-Tscho", s)
     s = re.sub(r"\bAa(?=[a-z])", "Â", s)
     s = re.sub(r"aa", "â", s)
     s = re.sub(r"oo", "ô", s)

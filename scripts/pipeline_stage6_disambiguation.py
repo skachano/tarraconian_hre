@@ -509,6 +509,64 @@ def resolve_barony_collision(
     return None, None, None
 
 
+HUMAN_CALQUE_MODE = {
+    "hybrid_generic_calque": "hybrid generic calque",
+    "phonetic_mediation_direct": "phonetic adaptation",
+    "sinosphere_procedure1_calque": "Sinosphere logographic calque",
+    "full_semantic_calque": "full semantic calque",
+    "semantic_rupture_phonetic": "historical phonetic mediation",
+    "sinosphere_12c_phonetic": "Sinosphere 12th-century phonetic reading",
+    "sinosphere_hybrid_generic_calque": "Sinosphere hybrid generic calque",
+}
+
+HUMAN_ORIGIN_TYPE = {
+    "pre_867_established": "pre-867 attested settlement",
+    "founded_post_867": "post-867 foundation",
+    "feudalized_post_867": "post-867 feudalization",
+    "unattested_tribal_post867": "unattested post-867 tribal settlement",
+    "pre_867_unfeudalized": "pre-867 unfeudalized site",
+}
+
+HUMAN_COINAGE_RULE = {
+    "pre_867_substrate_inertia": "pre-867 substrate retention",
+    "founded_pre_conquest_50y": "founded prior to imperial conquest",
+    "founded_post_conquest_tarraconian": "founded under Tarraconian Chancellery rule",
+    "colonial_feudalization": "colonial feudalization",
+    "native_feudalization": "native feudalization",
+    "temple_faith_change_25y": "sacred endowment after faith transition",
+    "chartered_civic_grant": "chartered civic grant",
+    "sinosphere_civic_25y": "Sinosphere civic administration",
+    "city_overrule_150y": "long-term urban language shift",
+    "demographic_replacement_50y": "demographic shift",
+    "unfeudalized_50y_streak": "tribal restitution",
+}
+
+HUMAN_TRACK_LABEL = {
+    "Track_A_retained": "pre-867 retained continuum",
+    "Track_A_coinage_overrule": "pre-867 stem with coinage overrule",
+    "Track_B_ntr_restitution": "867 natural/tribal restitution",
+    "Track_B_historical_names": "pre-867 historical witness",
+    "Track_B_existing_natural": "natural landscape name",
+    "Track_C1_pre867_feudalized": "pre-867 feudalized seat",
+    "Track_C2_post867_feudalized": "post-867 feudal foundation",
+    "Track_D1_pre867_chartered": "pre-867 chartered settlement",
+    "Track_D2_post867_foundation": "post-867 newly chartered foundation",
+    "Track_S_pre867_attested": "pre-867 Sinosphere logographic continuum",
+    "Track_S_pre867_overruled": "pre-867 Sinosphere overruled stem",
+    "Track_S_post867_historical_anchor": "post-867 Sinosphere historical anchor",
+    "Track_S_post867_ntr_sino_variant": "post-867 Sinosphere geographic variant",
+    "Track_S_post867_coined_compound": "post-867 Classical Chinese compound",
+}
+
+
+def _humanize_enum(val: str, table: dict[str, str]) -> str:
+    if not val:
+        return ""
+    if val in table:
+        return table[val]
+    return val.replace("_", " ")
+
+
 def build_source_origin_string(b_rec: dict) -> str:
     """Format concise machine-readable source_origin provenance."""
     stem_src = b_rec.get("stem_source", "unknown")
@@ -526,23 +584,35 @@ def build_origin_and_anachronism(
     disambig_note: str | None,
 ) -> tuple[str, str]:
     """Construct human-readable b_origin and b_anachronism notes from v2 provenance."""
-    raw_in_game = (b_rec.get("clean_source_stem") or b_rec.get("selected_source_form") or bk).strip()
-    in_game = ruler_info.get("in_game_name", raw_in_game) if ruler_info else raw_in_game
-    origin_type = b_rec.get("origin_type", "")
+    s3_mode = b_rec.get("stage3_mode", "")
     lang = b_rec.get("selected_language") or b_rec.get("coinage_culture") or "Tarraconian"
     if isinstance(lang, str) and lang.startswith("language_"):
         lang = lang.removeprefix("language_").replace("_", " ").title()
-    calque_mode = b_rec.get("calque_mode", "")
+
+    # Cite the actual founder eponym or saint dedication when Stage 3 synthesized a non-topographic compound
+    eponym = (b_rec.get("ruler_eponym") or {})
+    saint = (b_rec.get("saint_dedication") or {})
+    if s3_mode == "synthesized_vain_eponym" and eponym.get("clean_name") and not b_rec.get("_disambiguation"):
+        raw_source = eponym["clean_name"].strip()
+        lang = b_rec.get("coinage_culture") or lang
+    elif s3_mode == "synthesized_pious_saint" and saint.get("native_name") and not b_rec.get("_disambiguation"):
+        raw_source = f"Saint {saint['native_name']}".strip()
+        lang = b_rec.get("coinage_culture") or lang
+    else:
+        raw_source = (b_rec.get("clean_source_stem") or b_rec.get("selected_source_form") or bk).strip()
+
+    origin_type = b_rec.get("origin_type", "")
+    calque_mode_lbl = _humanize_enum(b_rec.get("calque_mode", ""), HUMAN_CALQUE_MODE)
     pathway = b_rec.get("phonological_pathway", "")
     th = b_rec["tarr_hist"]
 
     origin_parts = [f"{th}"]
-    if raw_in_game and raw_in_game.lower() != th.lower():
-        origin_parts.append(f"(source: {raw_in_game} [{lang}]")
+    if raw_source and raw_source.lower() != th.lower():
+        origin_parts.append(f"(source: {raw_source} [{lang}]")
     else:
         origin_parts.append(f"({lang}")
-    if calque_mode:
-        origin_parts[-1] += f", {calque_mode})"
+    if calque_mode_lbl:
+        origin_parts[-1] += f", {calque_mode_lbl})"
     else:
         origin_parts[-1] += ")"
     if disambig_note:
@@ -550,18 +620,22 @@ def build_origin_and_anachronism(
     b_origin = " ".join(origin_parts)
 
     anach = ""
+    orig_lbl = _humanize_enum(origin_type, HUMAN_ORIGIN_TYPE)
+    crule_lbl = _humanize_enum(b_rec.get("coinage_rule", ""), HUMAN_COINAGE_RULE)
+    track_lbl = _humanize_enum(b_rec.get("stage1_track", ""), HUMAN_TRACK_LABEL)
+
     if b_rec.get("is_sinosphere_scope") and origin_type != "pre_867_established":
         anach = (
-            f"Sinosphere ({b_rec.get('horizon_date')}) {origin_type}; "
-            f"{b_rec.get('coinage_rule')}; mediated via {pathway}."
+            f"Sinosphere ({b_rec.get('horizon_date')}) {orig_lbl}; "
+            f"{crule_lbl}; mediated via {pathway}."
         )
     elif origin_type in ("founded_post_867", "feudalized_post_867", "unattested_tribal_post867"):
         rname = ""
         if ruler_info and ruler_info.get("clean_first_name"):
             rname = f" under coinage ruler {ruler_info['clean_first_name']} ({b_rec.get('coinage_culture')})"
         anach = (
-            f"Post-867 {origin_type} ({b_rec.get('coinage_rule')}){rname}; "
-            f"resolved via {b_rec.get('stage1_track')}."
+            f"Post-867 {orig_lbl} ({crule_lbl}){rname}; "
+            f"resolved as {track_lbl}."
         )
     elif b_rec.get("coinage_overrule"):
         anach = (
@@ -867,7 +941,15 @@ def main() -> None:
         disambig = b_rec.get("_disambiguation")
         disambig_note = None
         if disambig:
-            disambig_note = f"{disambig['scope']}: {disambig['method']} ({disambig['original_tarr_hist']} -> {disambig['resolved_tarr_hist']})"
+            scope_lbl = "intra-county" if disambig["scope"] == "intra_county" else "cross-border neighbor"
+            m_str = disambig["method"]
+            if m_str.startswith("step1_ntr_candidate_rank_"):
+                m_lbl = f"rank {m_str.rsplit('_', 1)[-1]} NTR candidate"
+            elif m_str == "step2_holding_generic":
+                m_lbl = "holding generic disambiguation"
+            else:
+                m_lbl = m_str.replace("_", " ")
+            disambig_note = f"{scope_lbl} {m_lbl}: {disambig['original_tarr_hist']} -> {disambig['resolved_tarr_hist']}"
 
         b_origin, b_anachronism = build_origin_and_anachronism(
             bk, b_rec, ruler_raw, disambig_note

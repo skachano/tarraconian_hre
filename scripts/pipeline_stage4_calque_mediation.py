@@ -328,8 +328,10 @@ def transliterate_stem_to_tarr(
         "ł": "l", "Ł": "L", "ń": "n", "Ń": "N", "þ": "th", "Þ": "Th", "ð": "d", "Ð": "D",
         "ʿ": "", "ʾ": "", "'": "", "ı": "i",
     }
-    # Avoid mid-word CamelCase when stripping apostrophes (N'Echach -> Nechach, N'Zi -> Nzi, d'Arcachon -> d'arcachon)
-    s = re.sub(r"\b([A-Za-z])'([A-Z])", lambda m: m.group(1) + m.group(2).lower(), s)
+    # Avoid mid-word CamelCase when stripping apostrophes or Gaelic eclipsis prefixes
+    # (N'Echach / nEchach -> Nechach, N'Zi -> Nzi, Pa'O -> Pao, d'Arcachon -> Darcaischon)
+    s = re.sub(r"\b([A-Za-z])'([A-Z]+)", lambda m: m.group(1) + m.group(2).lower(), s)
+    s = re.sub(r"\b([NnMm])([AEIOU][a-z]{2,})", lambda m: m.group(1).upper() + m.group(2).lower(), s)
     s = "".join(char_rep.get(c, c) for c in s)
     s = re.sub(r"(?:ch){2,}", "ch", s, flags=re.I)
     s = re.sub(r"(?:tsch){2,}", "tsch", s, flags=re.I)
@@ -570,10 +572,16 @@ def run_stage4() -> dict[str, Any]:
 
         # --- BRANCH A: Track S (Sinosphere Procedure 1 + 12th-century Phonetics) ---
         if is_sino:
-            opaque_sino = r3["is_opaque_proper_stem"] or (r3["stem_category"] == "tribe")
-            if hanzi_str and not opaque_sino and not is_rupture:
+            NO_LITERAL_HANZI_CALQUE = {"b_iyo", "b_kinasir", "b_xi"}
+            opaque_sino = (
+                r3["is_opaque_proper_stem"]
+                or (r3["stem_category"] == "tribe")
+                or (bk in NO_LITERAL_HANZI_CALQUE)
+            )
+            hz_count = len(re.findall(r"[\u3400-\u9FFF\uF900-\uFAFF]", hanzi_str or ""))
+            if hanzi_str and hz_count >= 2 and not opaque_sino and not is_rupture:
                 calqued_hz, hz_meanings = calque_hanzi_string(hanzi_str, kanji_map)
-                if calqued_hz:
+                if calqued_hz and len(calqued_hz) >= 3:
                     tarr_hist = calqued_hz
                     calque_mode = "sinosphere_procedure1_calque"
                     calque_concepts = hz_meanings
