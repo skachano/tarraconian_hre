@@ -1971,15 +1971,16 @@ TRANSMISSION_RULES = {
     },
     "gallo_romance_to_tarraconian": {
         "intermediary_family": "gallo_romance",
-        "summary": "Catalan/Franconian dual apocope: gn -> nj, j/g(e,i) -> sch, ch -> sch, final -on/-an/-o apocopated with circumflex stress.",
+        "summary": "12th-century Old French -> Tarraconian: ch -> tsch, j/g(e,i) -> dsch, ç/c(e,i) -> z/tz, gn -> nj, ill -> lj, -eux -> -ös, -eau/-au -> -ô, eu -> ö, ou -> u, u -> ü, on -> ôn, a -> e.",
         "substitutions": [
             ["gn", "nj"],
-            ["ch", "sch"],
-            ["ou", "ou"],
+            ["ch", "tsch"],
+            ["ç", "tz"],
+            ["bourg$", "burch"],
             ["on$", "ôn"],
             ["a$", "e"],
         ],
-        "examples": ["Anjou -> Anschou", "Armagnac -> Armanjach", "Alençon -> Alenzûn"],
+        "examples": ["Dreux -> Drös", "Alençon -> Alentzôn", "Châteaudun -> Tschâtôdün", "Bourges -> Burdsches", "Bayeux -> Bajös"],
     },
     "occitano_catalan_to_tarraconian": {
         "intermediary_family": "occitano_catalan",

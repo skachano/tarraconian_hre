@@ -310,17 +310,18 @@ def generate_tarraconian_ipa(name: str) -> str:
     res = re.sub(r"c(?=[eiêîy])", "ts", res)
     res = res.replace("c", "k")
     
-    # Palatal nj / ny / ll / lj (Catalan/Romance)
+    # Palatal nj / ny / lj (leave plain double ll in French/German names as [l])
     res = re.sub(r"nj|ny", "ɲ", res)
-    res = re.sub(r"lj|ll", "ʎ", res)
+    res = re.sub(r"lj", "ʎ", res)
     
     # Long vowels (from circumflexes)
     res = res.replace("â", "aː").replace("ê", "eː").replace("î", "iː").replace("ô", "oː").replace("û", "uː")
     res = res.replace("ö", "øː").replace("ü", "yː")
     
-    # Diphthongs: ei is [ɛɪ] (native MHG), ai is [aɪ] (Romance/Arabic/Asian/Southern loans)
+    # Diphthongs: ei is [ɛɪ] (native MHG), ai is [aɪ], oi is [ɔɪ], ou/au is [ɔʊ], eu is [ɔʏ]
     res = re.sub(r"ei", "ɛɪ", res)
     res = re.sub(r"ai", "aɪ", res)
+    res = re.sub(r"oi", "ɔɪ", res)
     res = re.sub(r"ou|au", "ɔʊ", res)
     res = re.sub(r"eu", "ɔʏ", res)
     
@@ -346,7 +347,7 @@ def generate_tarraconian_ipa(name: str) -> str:
     # Reduced vowel [ə] in unstressed Germanic inflectional endings (-en, -er, -el, -e)
     # Only in multisyllabic words (must be preceded by a vowel in the stem)
     # But preserve stressed Romance -el, -et, -at, -on, -an
-    v_regex = r"(?:[aːeːiːoːuːøːyːaɛɪɔʊʏœə]|aɪ|ɛɪ|ɔʊ|ɔʏ)"
+    v_regex = r"(?:[aːeːiːoːuːøːyːaɛɪɔʊʏœə]|aɪ|ɛɪ|ɔɪ|ɔʊ|ɔʏ)"
     C_SET = r"[bdfɡɣkmnprstvwxzʒʃçʎɲ]"
     res = re.sub(f"({v_regex}{C_SET}*?)({C_SET})ɛn\\b", r"\1\2ən", res)
     res = re.sub(f"({v_regex}{C_SET}*?)({C_SET})ɛr\\b", r"\1\2ər", res)
@@ -377,7 +378,7 @@ def generate_tarraconian_ipa(name: str) -> str:
         if not w:
             return ""
         
-        vowel_phones = ["aː", "eː", "iː", "oː", "uː", "øː", "yː", "aɪ", "ɛɪ", "ɔʊ", "ɔʏ", "a", "ɛ", "ɪ", "ɔ", "ʊ", "ʏ", "œ", "ə"]
+        vowel_phones = ["aː", "eː", "iː", "oː", "uː", "øː", "yː", "aɪ", "ɛɪ", "ɔɪ", "ɔʊ", "ɔʏ", "a", "ɛ", "ɪ", "ɔ", "ʊ", "ʏ", "œ", "ə"]
         consonant_phones = [
             "dʒ", "tʃ", "ts", "ʃ", "ç", "x", "ŋk", "ŋ",
             "b", "d", "ɡ", "ɣ", "p", "t", "k", "f", "v", "s", "z", "h",

@@ -2348,7 +2348,7 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_taunggyi_south"]["b_tarr_hist"] == "Paotempel"
         assert baronies["b_marrakesh"]["b_tarr_hist"] == "Tansiftburch"
         assert baronies["b_benevento"]["b_tarr_hist"] == "Benevent"
-        assert baronies["b_chateaudun"]["b_tarr_hist"] == "Schâteaudun"
+        assert baronies["b_chateaudun"]["b_tarr_hist"] == "Tschâtôdün"
         assert baronies["b_baoshun"]["b_hanzi"] == "神農架"
         assert baronies["b_aso"]["b_tarr_hist"] == "Dangs-Ra Yu-Tscho"
         # Round-4 polish regression checks
@@ -2562,6 +2562,63 @@ class TestTarraconianPhonotacticsSpec:
         assert report["baronies_with_errors"] == 0, (
             f"Found errors: {report['rule_counts']} / {report['samples']}"
         )
+
+
+class TestOldFrenchToTarraconianRevision:
+    def test_french_draft_reorganized_away(self):
+        assert not (REPO_DIR / "french_tarraconian_draft").exists(), (
+            "french_tarraconian_draft should be removed after integration"
+        )
+
+    def test_old_french_baronies_and_ipa(self):
+        with open(REPO_DIR / "data" / "barony_resolutions_v2.json", "r", encoding="utf-8") as f:
+            baronies = json.load(f)["baronies"]
+
+        expected_hist = {
+            "b_auxerre": "Ôssêr",
+            "b_dole": "Dûs",
+            "b_reims": "Rêms",
+            "b_lisieux": "Lisjös",
+            "b_dreux": "Drös",
+            "b_evreux": "Êvrös",
+            "b_bayeux": "Bajös",
+            "b_meaux": "Môs",
+            "b_aix": "Ais",
+            "b_beaune": "Bône",
+            "b_beauvais": "Bôvais",
+            "b_chaumont": "Tschômont",
+            "b_autun": "Ôtün",
+            "b_eu": "Ö",
+            "b_bourges": "Burdsches",
+            "b_bourbon": "Burbôn",
+            "b_chablis": "Tschablîs",
+            "b_dijon": "Didschôn",
+            "b_angers": "Andschêrs",
+            "b_beaugency": "Bôdschentzî",
+            "b_alencon": "Alentzôn",
+            "b_besancon": "Besantzôn",
+            "b_montlucon": "Montlützôn",
+            "b_boulogne": "Bulonje",
+            "b_jonzac": "Sönje",
+            "b_montreuil": "Montrölj",
+            "b_abbeville": "Abbevîle",
+            "b_la_rochelle": "La Rotschele",
+            "b_saint_quentin": "Zant-Kentîn",
+            "b_perigueux": "Pêrigös",
+            "b_chateaudun": "Tschâtôdün",
+            "b_tourraine": "Landschais",
+        }
+        for bk, exp in expected_hist.items():
+            assert baronies[bk]["b_tarr_hist"] == exp, f"{bk}: got {baronies[bk]['b_tarr_hist']} != {exp}"
+
+        # Plain French ll keeps [l] (never spurious [ʎ]), while -ill-/-il -> lj keeps [ʎ]
+        assert "ʎ" not in baronies["b_abbeville"]["b_ipa"]
+        assert "ʎ" not in baronies["b_la_rochelle"]["b_ipa"]
+        assert "ʎ" in baronies["b_montreuil"]["b_ipa"]
+        # Old French oi diphthong syllabifies as single [ɔɪ], not hiatus [ɔ.ɪ]
+        for bk in ("b_blois", "b_le_lude", "b_saumur", "b_poitiers"):
+            assert "ɔɪ" in baronies[bk]["b_ipa"], f"{bk} missing [ɔɪ]: {baronies[bk]['b_ipa']}"
+            assert "ɔ.ɪ" not in baronies[bk]["b_ipa"], f"{bk} has hiatus [ɔ.ɪ]: {baronies[bk]['b_ipa']}"
 
 
 

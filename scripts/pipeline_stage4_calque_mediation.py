@@ -533,6 +533,183 @@ def is_true_latin_stem(rec: dict[str, Any]) -> bool:
     return True
 
 
+# ==============================================================================
+# Old French / Gallo-Romance (12th c.) -> Tarraconian Chancellery Adaptation
+# ==============================================================================
+
+GALLO_ROMANCE_ISOS: set[str] = {"fra", "fro", "nrf", "pcd", "wln"}
+
+TARRACONIAN_DIRECT_CULTURES: set[str] = {
+    "Tarraconian",
+    "Lothringian",
+    "Croato-Tarraconian",
+    "Alpine-Tarraconian",
+    "Ungwârer",
+}
+
+GALLO_ROMANCE_IRREGULAR_STEMS: dict[str, str] = {
+    "auxerre": "Ôssêr",
+    "auxonne": "Ôssône",
+    "bruxelles": "Brüssels",
+    "doubs": "Dûs",
+    "reims": "Rêms",
+    "rouen": "Ruwân",
+    "caen": "Kân",
+    "metz": "Metz",
+    "chablis": "Tschablîs",
+    "quentin": "Kentîn",
+    "saint-quentin": "Zant-Kentîn",
+    "aix": "Ais",
+    "creuse": "Kröse",
+}
+
+# Non-French Italian, Latin, Arpitan, African, or already-calqued generic tokens
+# that may sit inside records tagged with French coinage/ISO metadata.
+NON_GALLO_ROMANCE_WORDS: set[str] = {
+    "acqui", "ajaccio", "alba", "di", "monferrato", "aosta", "asti", "biella",
+    "bologna", "brescello", "cortona", "empoli", "emilia", "ivrea", "luni",
+    "modena", "novara", "reggio", "tortona", "vercelli", "volterra",
+    "bandiagara", "loma", "everardo", "luitgard", "zwinisława", "zwinislawa",
+    "anicium", "tusiacum", "octodurus", "sinaca", "gartona", "condate",
+    "otmus", "mariana", "durivum", "ligericulus", "romanchia", "albantia",
+    "olonna", "geneva", "birni", "masallaci", "gari", "tenda", "eglwys", "porth",
+    "margarita", "margeride",
+    "burch", "stat", "kirchen", "kapelle", "wart", "munster", "meschit",
+    "tempel", "marct", "hâven", "werc", "palz", "clôster", "stein", "berch",
+    "bühil", "vurt", "walt", "velt", "lant", "zelle", "brunn", "port",
+}
+
+
+def adapt_gallo_romance_word(w: str) -> str | None:
+    """
+    Adapt one 12th-century Old French / Gallo-Romance token to Tarraconian
+    Chancellery orthography. Returns None if the token belongs to NON_GALLO_ROMANCE_WORDS
+    or Latin -um/-ium so callers can fall back to general transmission rules.
+    """
+    low = w.lower()
+    if low in GALLO_ROMANCE_IRREGULAR_STEMS:
+        return GALLO_ROMANCE_IRREGULAR_STEMS[low]
+    if low in {"de", "des", "du", "le", "la", "les", "sur", "en", "l", "d"}:
+        return w
+    if low in NON_GALLO_ROMANCE_WORDS or low.endswith(("um", "ium")):
+        return None
+
+    s = w
+    rep_pre = {
+        "é": "ê", "É": "Ê", "è": "e", "È": "E", "ê": "ê", "Ê": "Ê",
+        "à": "a", "À": "A", "á": "â", "Á": "Â", "â": "â", "Â": "Â",
+        "î": "î", "Î": "Î", "ï": "ï", "Ï": "Ï",
+        "ô": "ô", "Ô": "Ô", "û": "û", "Û": "Û", "ù": "u", "Ù": "U",
+        "œ": "ö", "Œ": "Ö",
+    }
+    s = "".join(rep_pre.get(c, c) for c in s)
+
+    # 1. Silent u in qu/gu before front vowels BEFORE j/g->dsch and BEFORE eux->ös
+    s = re.sub(r"qu(?=[eiyêî])", lambda m: "K" if m.group(0)[0].isupper() else "k", s, flags=re.I)
+    s = re.sub(r"gu(?=[eiyêî])", lambda m: "\uE013" if m.group(0)[0].isupper() else "\uE012", s, flags=re.I)
+    # Protect remaining qu/gu u (e.g. before a/o) from standalone u->ü
+    s = re.sub(r"([qgQG])u", lambda m: m.group(1) + "\uE015", s)
+
+    # 2. 12th-c. voiced postalveolar affricate j / g(e,i) / ge(a,o) -> dsch BEFORE any palatal j is emitted
+    s = re.sub(r"j|ge(?=[ao])|g(?=[eiyêî])", lambda m: "Dsch" if m.group(0)[0].isupper() else "dsch", s, flags=re.I)
+    s = s.replace("\uE013", "G").replace("\uE012", "g")
+
+    # 3. Coda -x endings (12th-c. scribal -x after u/eau/au represents [s], never [ks])
+    s = re.sub(r"[iy]eux\b", lambda m: ("J" if m.group(0)[0].isupper() else "j") + "ös", s, flags=re.I)
+    s = re.sub(r"eux\b", lambda m: ("Ö" if m.group(0)[0].isupper() else "ö") + "s", s, flags=re.I)
+    s = re.sub(r"e?aux\b", lambda m: ("Ô" if m.group(0)[0].isupper() else "ô") + "s", s, flags=re.I)
+    s = re.sub(r"([ao])ix\b", lambda m: m.group(1) + "is", s, flags=re.I)
+
+    # 4. Vocalized -l / rounded front vowel digraphs (protecting MHG -auwe/-euwe/-ouwe)
+    s = re.sub(r"eau", lambda m: "Ô" if m.group(0)[0].isupper() else "ô", s, flags=re.I)
+    s = re.sub(r"au(?!we)", lambda m: "Ô" if m.group(0)[0].isupper() else "ô", s, flags=re.I)
+    s = re.sub(r"(?:oeu|eu)(?!we)", lambda m: "Ö" if m.group(0)[0].isupper() else "ö", s, flags=re.I)
+    s = re.sub(r"ou(?!we)", lambda m: "\uE011" if m.group(0)[0].isupper() else "\uE010", s, flags=re.I)
+
+    # 5. Voiceless affricate ch -> tsch (skip already-Tarraconian sch/tsch/dsch)
+    s = re.sub(r"(?<![stdSTD])ch", lambda m: "Tsch" if m.group(0)[0].isupper() else "tsch", s, flags=re.I)
+
+    # 6. Alveolar affricate ç / c(e,i) -> z- / -tz- (string-start safe with sentinels)
+    s = s.replace("Ç", "Tz").replace("ç", "tz")
+    if re.match(r"^[cC](?=[eiyêî])", s):
+        s = ("Z" if s[0].isupper() else "z") + s[1:]
+    s = re.sub(r"(?<=.)c(?=[eiyêî])", "tz", s, flags=re.I)
+
+    # 7. Palatal nasal gn -> nj
+    s = re.sub(r"gn", lambda m: "Nj" if m.group(0)[0].isupper() else "nj", s, flags=re.I)
+
+    # 8. Palatal liquid -ill-/-il -> lj; plain French geminates -ville -> -vîle, -lle -> -le
+    s = re.sub(r"(?<=[aeiouâêîôûöü\uE010\uE011])ill", "lj", s, flags=re.I)
+    s = re.sub(r"(?<=[aeiouâêîôûöü\uE010\uE011])il\b", "lj", s, flags=re.I)
+    s = re.sub(r"ville\b", "vîle", s, flags=re.I)
+    s = re.sub(r"lle\b", "le", s, flags=re.I)
+
+    # 9. Silent French etymological -h- in th -> t
+    s = re.sub(r"[Tt]h", lambda m: "T" if m.group(0)[0].isupper() else "t", s)
+
+    # 10. Standalone French u -> ü, then restore protected u from ou/qu/gu
+    s = s.replace("u", "ü").replace("U", "Ü")
+    s = s.replace("\uE011", "U").replace("\uE010", "u").replace("\uE015", "u")
+
+    # 11. Final -y -> -î after consonant, -on(s) -> -ôn(s), polysyllabic -ers -> -êrs, -a -> -e
+    s = re.sub(r"(?<=[^aeiouâêîôûäöü])y\b", "î", s)
+    s = re.sub(r"on(s?)\b", r"ôn\1", s)
+    s = re.sub(r"(?<=[A-Za-zÀ-ɏ]{3})ers\b", "êrs", s)
+    s = re.sub(r"([A-Za-zÀ-ɏ]{2,})a\b", r"\1e", s)
+    return s
+
+
+def adapt_gallo_romance_to_tarraconian(stem: str) -> tuple[str, bool]:
+    """
+    Adapt a Gallo-Romance phrase or compound to Tarraconian, returning `(adapted, used_fallback)`
+    for any embedded non-French tokens so callers can run standard transmission on them.
+    """
+    s = stem.strip()
+    if not s:
+        return s, False
+    low = s.lower()
+    if low in GALLO_ROMANCE_IRREGULAR_STEMS:
+        return GALLO_ROMANCE_IRREGULAR_STEMS[low], False
+
+    parts = re.split(r"([\s\-]+)", s)
+    out: list[str] = []
+    any_fallback = False
+    for p in parts:
+        if not p or re.fullmatch(r"[\s\-]+", p):
+            out.append(p)
+        elif p[0].isalpha() or any(ord(c) > 127 for c in p):
+            res = adapt_gallo_romance_word(p)
+            if res is None:
+                out.append(p)
+                any_fallback = True
+            else:
+                out.append(res)
+        else:
+            out.append(p)
+    joined = "".join(out)
+    if joined and joined[0].islower():
+        joined = joined[0].upper() + joined[1:]
+    return joined, any_fallback
+
+
+def is_gallo_romance_stem(rec: dict[str, Any], trans_family: str = "") -> bool:
+    """Return True when the record holds a Gallo-Romance (fra/fro/nrf/pcd/wln) stem."""
+    if is_true_latin_stem(rec):
+        return False
+    cc = rec.get("coinage_culture") or ""
+    src = rec.get("stem_source") or ""
+    tf = (trans_family or "").lower()
+    is_vanilla_fr = (cc == "Tarraconian" and src == "pre867_attested_vanilla" and tf == "gallo_romance")
+    if cc in TARRACONIAN_DIRECT_CULTURES and not is_vanilla_fr:
+        return False
+    if is_vanilla_fr:
+        return True
+    return (
+        rec.get("selected_iso") in GALLO_ROMANCE_ISOS
+        or rec.get("coinage_morphology_family") == "gallo_romance"
+    )
+
+
 def transliterate_stem_to_tarr(
     stem: str,
     transmission_profile: str,
@@ -914,6 +1091,7 @@ def run_stage4() -> dict[str, Any]:
         is_rupture = cs == "Semantic Rupture (>= 50y)" and not is_direct_trans
 
         is_true_latin = is_true_latin_stem(r3)
+        is_gallo_stem = is_gallo_romance_stem(r3, trans_fam)
         coined_form = r3["coined_source_form"]
         mod = r3["coined_modifier"]
         gen = r3["coined_generic"]
@@ -922,7 +1100,7 @@ def run_stage4() -> dict[str, Any]:
         # Do not run Magyar/Slavic transmission substitutions onto compounds already coined in Imperial German
         eff_trans_prof = (
             "tarraconian_direct"
-            if r3["coinage_culture"] in {"Tarraconian", "Lothringian", "Croato-Tarraconian", "Alpine-Tarraconian", "Ungwârer"}
+            if (r3["coinage_culture"] in TARRACONIAN_DIRECT_CULTURES and not is_gallo_stem)
             else trans_prof
         )
 
@@ -941,9 +1119,36 @@ def run_stage4() -> dict[str, Any]:
                     return f"{hsuf}{rest}" if hsuf.endswith("-") else f"{rest}{hsuf.strip('-')}"
             return s
 
-        def adapt(txt: str, prof: str | None = None, rup: bool = False) -> str:
+        def adapt(txt: str, prof: str | None = None, rup: bool = False, force_gallo: bool = False) -> str:
+            use_prof = prof or eff_trans_prof
+            if force_gallo or (is_gallo_stem and use_prof != "tarraconian_direct"):
+                fr_out, used_fb = adapt_gallo_romance_to_tarraconian(txt)
+                if not used_fb:
+                    return fr_out
+                # Mixed phrase containing exempt non-French tokens (Italian/Latin/African heads):
+                # adapt each non-French token via standard transmission rules cleanly.
+                tokens = re.split(r"([\s\-]+)", txt)
+                rebuilt: list[str] = []
+                for tok in tokens:
+                    if not tok or re.fullmatch(r"[\s\-]+", tok):
+                        rebuilt.append(tok)
+                    elif tok[0].isalpha() or any(ord(c) > 127 for c in tok):
+                        fr_tok = adapt_gallo_romance_word(tok)
+                        if fr_tok is not None:
+                            rebuilt.append(fr_tok)
+                        else:
+                            fb_prof = "general_phonetic_adaptation" if (use_prof == "gallo_romance_to_tarraconian" and coin_fam == "gallo_romance") else use_prof
+                            fb_tok, _ = transliterate_stem_to_tarr(
+                                tok, fb_prof, coin_fam, trans_fam, inter_map, trans_rules,
+                                kanji_readings=kanji_readings, is_rupture=rup,
+                            )
+                            rebuilt.append(fb_tok)
+                    else:
+                        rebuilt.append(tok)
+                res_mixed = "".join(rebuilt)
+                return res_mixed[:1].upper() + res_mixed[1:] if res_mixed and res_mixed[0].islower() else res_mixed
             res, _ = transliterate_stem_to_tarr(
-                txt, prof or eff_trans_prof, coin_fam, trans_fam, inter_map, trans_rules,
+                txt, use_prof, coin_fam, trans_fam, inter_map, trans_rules,
                 kanji_readings=kanji_readings, is_rupture=rup,
             )
             return res
@@ -955,18 +1160,33 @@ def run_stage4() -> dict[str, Any]:
             elif r3["stage3_mode"] not in {"synthesized_pious_saint", "synthesized_vain_eponym"} and not mod.get("tarr_equivalent"):
                 mod_lat_dir = adapt_latin_to_tarraconian(mod["text"], suppress_geo_head=(gen["affix_position"] == "suffix" or gen["tarr_calque"].startswith("Castel-")))
                 g_nat_dir = gen["native_form"]
+                g_is_fr = (coin_fam == "gallo_romance")
                 if gen["affix_position"] == "prefix":
                     sep = "" if g_nat_dir.endswith("-") else (gen.get("joiner") or " ")
-                    g_part = adapt(g_nat_dir.strip(), eff_trans_prof, rup=is_rupture)
+                    g_part = adapt(g_nat_dir.strip(), eff_trans_prof, rup=is_rupture, force_gallo=g_is_fr)
                     tarr_direct = f"{g_part}{sep}{mod_lat_dir}"
                 else:
-                    g_part = adapt(g_nat_dir.lstrip("-"), eff_trans_prof, rup=is_rupture).lower()
+                    g_part = adapt(g_nat_dir.lstrip("-"), eff_trans_prof, rup=is_rupture, force_gallo=g_is_fr).lower()
                     tarr_direct = f"{mod_lat_dir}{g_part}"
             else:
-                tarr_direct, inter_notes = transliterate_stem_to_tarr(
-                    coined_form, eff_trans_prof, coin_fam, trans_fam, inter_map, trans_rules,
-                    kanji_readings=kanji_readings, is_rupture=is_rupture,
-                )
+                if coin_fam == "gallo_romance" and gen and r3["stage3_mode"] in {"synthesized_pious_saint", "synthesized_vain_eponym"}:
+                    g_nat_dir = gen["native_form"]
+                    mod_s3 = mod.get("tarr_equivalent") or mod["text"]
+                    if gen["affix_position"] == "prefix":
+                        sep = "" if g_nat_dir.endswith("-") else (gen.get("joiner") or " ")
+                        g_part = adapt(g_nat_dir.strip(), eff_trans_prof, rup=is_rupture, force_gallo=True)
+                        tarr_direct = f"{g_part}{sep}{mod_s3}"
+                    else:
+                        g_part = adapt(g_nat_dir.lstrip("-"), eff_trans_prof, rup=is_rupture, force_gallo=True).lower()
+                        tarr_direct = f"{mod_s3}{g_part}"
+                else:
+                    tarr_direct, inter_notes = transliterate_stem_to_tarr(
+                        coined_form, eff_trans_prof, coin_fam, trans_fam, inter_map, trans_rules,
+                        kanji_readings=kanji_readings, is_rupture=is_rupture,
+                    )
+        elif is_gallo_stem:
+            inter_notes = []
+            tarr_direct = adapt(coined_form, eff_trans_prof, rup=is_rupture)
         else:
             tarr_direct, inter_notes = transliterate_stem_to_tarr(
                 coined_form, eff_trans_prof, coin_fam, trans_fam, inter_map, trans_rules,
@@ -1052,12 +1272,22 @@ def run_stage4() -> dict[str, Any]:
                 mod_src = mod["tarr_equivalent"] or mod["text"]
                 if gen:
                     g_nat = gen["native_form"]
+                    g_is_fr = (coin_fam == "gallo_romance")
                     if gen["affix_position"] == "prefix":
                         sep = "" if g_nat.endswith("-") else (gen.get("joiner") or " ")
-                        raw_part = f"{g_nat.strip()}{sep}{mod_src}"
+                        raw_g = adapt(g_nat.strip(), trans_prof, rup=True, force_gallo=g_is_fr) if g_is_fr else None
+                        if raw_g is not None:
+                            tarr_hist = f"{raw_g}{sep}{mod_src}"
+                        else:
+                            raw_part = f"{g_nat.strip()}{sep}{mod_src}"
+                            tarr_hist = adapt(raw_part, trans_prof, rup=True)
                     else:
-                        raw_part = f"{mod_src}{g_nat.lstrip('-')}"
-                    tarr_hist = adapt(raw_part, trans_prof, rup=True)
+                        raw_g = adapt(g_nat.lstrip("-"), trans_prof, rup=True, force_gallo=g_is_fr).lower() if g_is_fr else None
+                        if raw_g is not None:
+                            tarr_hist = f"{mod_src}{raw_g}"
+                        else:
+                            raw_part = f"{mod_src}{g_nat.lstrip('-')}"
+                            tarr_hist = adapt(raw_part, trans_prof, rup=True)
                 else:
                     tarr_hist = adapt(mod_src, trans_prof, rup=True)
             elif is_true_latin:
@@ -1067,12 +1297,13 @@ def run_stage4() -> dict[str, Any]:
                     mod_src_text = mod["text"]
                     mod_lat = adapt_latin_to_tarraconian(mod_src_text, suppress_geo_head=(gen["affix_position"] == "suffix" or gen["tarr_calque"].startswith("Castel-")))
                     g_nat = gen["native_form"]
+                    g_is_fr = (coin_fam == "gallo_romance")
                     if gen["affix_position"] == "prefix":
                         sep = "" if g_nat.endswith("-") else (gen.get("joiner") or " ")
-                        g_part = adapt(g_nat.strip(), trans_prof, rup=True)
+                        g_part = adapt(g_nat.strip(), trans_prof, rup=True, force_gallo=g_is_fr)
                         tarr_hist = f"{g_part}{sep}{mod_lat}"
                     else:
-                        g_part = adapt(g_nat.lstrip("-"), trans_prof, rup=True).lower()
+                        g_part = adapt(g_nat.lstrip("-"), trans_prof, rup=True, force_gallo=g_is_fr).lower()
                         tarr_hist = f"{mod_lat}{g_part}"
             else:
                 tarr_hist = tarr_direct
@@ -1090,7 +1321,7 @@ def run_stage4() -> dict[str, Any]:
                 rule3_blocked_count += 1
                 mod_tarr = mod.get("tarr_equivalent")
                 if not mod_tarr:
-                    mod_tarr = adapt_latin_to_tarraconian(mod_text, suppress_geo_head=True) if is_true_latin else adapt(mod_text, trans_prof)
+                    mod_tarr = adapt_latin_to_tarraconian(mod_text, suppress_geo_head=True) if is_true_latin else adapt(mod_text, eff_trans_prof)
                 if g_calque.startswith("Zant-"):
                     tarr_hist = f"Zant-{mod_tarr}"
                 elif g_calque.endswith("-"):
@@ -1119,7 +1350,7 @@ def run_stage4() -> dict[str, Any]:
                     pathway = f"{coined_form} -> [Direct Transparency Full Calque: {t_mod} + {g_calque}] -> {tarr_hist}"
                 else:
                     # Transitional (<50y): keep adapted modifier, calque generic
-                    mod_ad = adapt_latin_to_tarraconian(mod_text, suppress_geo_head=True) if is_true_latin else adapt(mod_text, trans_prof)
+                    mod_ad = adapt_latin_to_tarraconian(mod_text, suppress_geo_head=True) if is_true_latin else adapt(mod_text, eff_trans_prof)
                     tarr_hist = f"{mod_ad}{g_clean}" if not g_calque.endswith("-") else f"{g_calque}{mod_ad}"
                     calque_mode = "hybrid_generic_calque"
                     pathway = f"{coined_form} -> [Transitional <50y Hybrid: {mod_ad} + {g_calque}] -> {tarr_hist}"

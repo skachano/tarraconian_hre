@@ -42,11 +42,12 @@ Tarraconian scribes write their Moselle-Franconian High German using a blend of 
 | **ô** | `[oː]` | Long close-mid back vowel (from Germanic *ō/au* before dentals and Romance stressed *o*). | **Tarracôn** `[ta.ra.ˈkoːn]` ("Tarragona"), **Rômisch** `[ˈroː.mɪʃ]` |
 | **u** | `[ʊ]` or `[u]` | Short close back rounded vowel. | **Munster** `[ˈmʊn.stər]` ("Münster") |
 | **û** | `[uː]` | Long close back vowel (has not yet diphthongized to *au* as in Modern German). | **Lûke** `[ˈluː.kə]` ("Lucca"), **Lûnstat** `[ˈluːn.stat]` ("Lunéville") |
-| **ü / iu** | `[ʏ]` / `[yː]` | Close front rounded vowel (umlaut of *u* / *û*, or borrowed Old French/Occitan/Greek *u/y*). | **Fürst** `[fʏrst]` ("Prince"), **Brüsch** `[brʏʃ]` ("Brysis") |
-| **ö / oe** | `[œ]` / `[øː]` | Mid front rounded vowel (umlaut of *o* / *ô*). | **Böhmisch** `[ˈbøː.mɪʃ]` ("Bohemian"), **Kölne** `[ˈkœl.nə]` |
+| **ü / iu** | `[ʏ]` / `[yː]` | Close front rounded vowel (umlaut of *u* / *û*, or 12th-c. Old French/Occitan/Greek *u/y*). | **Fürst** `[fʏrst]` ("Prince"), **Brüsch** `[brʏʃ]` ("Brysis"), **Tschâtôdün** `[ˈtʃaː.toː.dyːn]` ("Châteaudun") |
+| **ö / oe** | `[œ]` / `[øː]` | Mid front rounded vowel (umlaut of *o* / *ô* and 12th-c. Old French *eu / œu*). | **Böhmisch** `[ˈbøː.mɪʃ]` ("Bohemian"), **Drös** `[drøːs]` ("Dreux"), **Kölne** `[ˈkœl.nə]` |
 | **ei** | `[ɛɪ]` | Native Middle High German falling diphthong. | **Keiser** `[ˈkɛɪ.zər]` ("Emperor"), **Heidelberch** `[ˈhɛɪ.dɛl.bɛrx]` |
 | **ai / ay** | `[aɪ]` | Open closing diphthong; standard in Romance/Catalan, Arabic, Greek, Asian, Celtic, Steppe, and southern Germanic loans and names. | **Kaisarêe** `[kaɪ.za.ˈreː.ə]`, **Bôhai** `[boː.ˈhaɪ]`, **Znaim** `[tsnaɪm]`, **Baidha** `[ˈbaɪ.ða]` |
-| **ou / au** | `[ɔʊ]` | Rounded back diphthong; often followed by glide `-w-` (`-ouwe`). | **Anschou** `[ˈan.ʃɔʊ]` ("Anjou"), **Troppouwe** `[ˈtrɔ.pɔʊ.wə]` ("Opava") |
+| **oi** | `[ɔɪ]` | Rounded closing diphthong retained in 12th-century Old French loans. | **Blois** `[blɔɪs]` ("Blois"), **Loire** `[ˈlɔɪ.rə]` ("Loire") |
+| **ou / au** | `[ɔʊ]` | Rounded back diphthong in MHG roots and Occitan/Slavic loans; often followed by glide `-w-` (`-ouwe`). Note: 12th-c. Old French *ou* (`[u]`) maps directly to **`u`** (**Burbôn**), while vocalized *au / eau* maps to **`ô`** (**Tschômont**, **Môs**). | **Troppouwe** `[ˈtrɔ.pɔʊ.wə]` ("Opava"), **Jaroslouwe** `[ja.rɔ.ˈslɔʊ.wə]` |
 | **îe / ie** | `[iː.ə]` or `[iə]` | Centering diphthong `[iə]` in German roots; disyllabic `[iː.ə]` in Romance/Greek `-ia` endings. | **Bastîe** `[bas.ˈtiː.ə]` ("Bastia"), **Veguerîe** `[vɛ.ɣə.ˈriː.ə]` ("Magistracy") |
 
 ---
@@ -66,14 +67,14 @@ Tarraconian scribes write their Moselle-Franconian High German using a blend of 
 | **j** | `[j]` | Palatal approximant `[j]` in native German, Slavic, Baltic, Norse, Biblical, and Arabic roots (Arabic `ي` *yā'*). Foreign affricates `[dʒ]`, `[dʐ]`, `[tɕ]` (Pinyin *j-*, Korean *ㅈ / -ju*, Sanskrit *j*, Swahili/African *j*, Arabic *jīm*) must NEVER be written with bare `j`, but strictly with **`dsch`** (or **`tsch`**). | **Jûlich** `[ˈjyː.lɪç]`, **Jûtlant** `[ˈjyːt.lant]`, **Jaroslouwe** `[ja.rɔ.ˈslɔʊ.wə]`, **Janbû** `[ˈjan.buː]` |
 | **k** | `[k]` | Voiceless velar stop, used before front vowels (*e, i*) and in Greek/Slavic/Turkic/Celtic stems. | **Keiser** `[ˈkɛɪ.zər]`, **Kertsch** `[kɛrtʃ]` ("Kerch") |
 | **l** | `[l]` (`[ɫ]` coda) | Alveolar lateral; velarized ("dark L" `[ɫ]`) in syllable codas under Catalan and Rhineland influence. | **Castel** `[kas.ˈtɛɫ]` |
-| **ll** | `[ʎ]` or `[lː]` | Palatal lateral `[ʎ]` in Catalan/Iberian/Gaelic names; geminate `[lː]` in German compounds. | **Castellon** `[kas.tɛ.ˈʎoːn]` |
+| **ll / lj** | `[l]` or `[ʎ]` | Plain `[l]` in German/Old French *-ville/-elle/-kapelle* (**Abbevîle**, **La Rotschele**); palatal lateral **`lj`** `[ʎ]` for Old French *-ill-/-il* (**Montrölj**, **Marselje**) and Catalan/Iberian palatals (**Sevîlje**). | **Montrölj** `[ˈmɔn.trøːʎ]`, **Abbevîle** `[a.bɛ.ˈviː.lɛ]` |
 | **m, n** | `[m]`, `[n]` (`[ŋ]` before *k/g*) | Standard bilabial and alveolar nasals. | **Mênz** `[meːnts]` |
 | **nj / ny / nh** | `[ɲ]` | Palatal nasal borrowed from Old Catalan (`ny`), Occitan (`nh`), and Romance/Slavic/Celtic palatalizations (`nj`). | **Armanjach** `[ar.ma.ˈɲax]` ("Armagnac"), **ikonjen** `[i.ˈkoː.njən]` |
 | **p, t** | `[p]`, `[t]` | Voiceless stops. Note: Moselle/Rhine Franconian preserves unshifted `p-` initially and in `mp/rp/lp` (**Palz** `[palts]` instead of Upper German *Pfalz*). | **Palz** `[palts]`, **Plintenburch** `[ˈplɪn.tən.bʊrx]` |
 | **qu** | `[kw]` or `[k]` | `[kw]` in Latin/Germanic words; `[k]` before *e/i* in Catalan/Iberian stems. | **Aquitanjen** `[a.kwi.ˈta.ɲən]` |
 | **r** | `[r]` | Apical alveolar trill, standard in both medieval High German and Old Catalan. | **Tarracôn** `[ta.ra.ˈkoːn]` |
 | **s / ss** | `[z]`, `[s]`, or `[s̺]` | Voiced `[z]` initially before vowels and between vowels; voiceless `[s]` finally or when doubled (`ss`). Before consonants (`st-, sp-, sw-, sl-, sm-, sn-`), retracted apico-alveolar `[s̺ ~ ʃ]`; note that MHG `sw-, sl-, sm-` (**Swâben**, **Slêswîch**, **Smalkalden**) have not yet merged into `schw-, schl-, schm-`. | **Zant-Sêr** `[tsant.ˈseːr]` ("Sancerre"), **Oske** `[ˈɔs.kə]` |
-| **sch** | `[ʃ]` | Voiceless postalveolar fricative (from OHG *sk*, Romance *ch / x*, Slavic *š*, Arabic *sh*, and Turkic *ş*). | **Anschou** `[ˈan.ʃɔʊ]`, **Schêisar** `[ˈʃɛɪ.zar]` ("Shayzar") |
+| **sch** | `[ʃ]` | Voiceless postalveolar fricative (from OHG *sk*, Catalan *x*, Slavic *š*, Arabic *sh*, and Turkic *ş*). Note: 12th-century Old French *ch* retained its affricate value `[tʃ]` and maps to **`tsch`**. | **Schêisar** `[ˈʃɛɪ.zar]` ("Shayzar"), **Schatz** `[ʃats]` |
 | **tsch** | `[tʃ]` | Voiceless postalveolar affricate (used for Slavic *č*, Italian *-ci-*, Georgian *č/č'*, and Turkic *ç*). | **Batsch** `[batʃ]` ("Bács"), **Petschênêch** `[pɛ.tʃeː.ˈneːx]` |
 | **w** | `[w]` or `[ʋ]` | Bilabial/labiodental approximant. | **Werle** `[ˈwɛr.lə]`, **Swenigorot** `[ˈswɛ.ni.ɡɔ.rɔt]` |
 | **z / tz** | `[ts]` | Voiceless alveolar affricate (from the High German consonant shift of *t* $\rightarrow$ *z*). Word-initial `[ts]` is strictly written **`z-`** (**Zips**, **Zang**, **Zugaru**, **Zuschime**, **Zezen**); medial and final `[ts]` is strictly written **`-tz-`** / **`-tz`** (**Lîgnitz**, **Ützang**, **Satzume**, **Gyatze**, **Bisantz**). Modern transliteration **`ts`** is strictly illicit in root morphemes. | **Zips** `[tsɪps]` ("Spiš"), **Lîgnitz** `[ˈliːɡ.nɪts]`, **Ützang** `[yː.ˈtsaŋ]` |
@@ -97,7 +98,7 @@ Old Catalan drops unstressed final vowels (*-o, -e*) after most consonants, whil
 * Final `-o`, `-um`, `-us`, `-os`, `-on`, and `-polis` are apocopated or reduced:
   * *Tarraconem / Tarragona* $\rightarrow$ **Tarracôn** `[ta.ra.ˈkoːn]`
   * *Lanciano* $\rightarrow$ **Lantschân** `[lan.ˈtʃaːn]`, *Butrinto* $\rightarrow$ **Butrînt** `[bu.ˈtrɪnt]`
-  * *Alençon* $\rightarrow$ **Alenzûn** `[a.lɛn.ˈtsuːn]`
+  * *Alençon* $\rightarrow$ **Alentzôn** `[a.lɛn.ˈtsoːn]` (`ç` $\rightarrow$ `-tz-`, `-on` $\rightarrow$ `-ôn`)
   * *Ephesos* $\rightarrow$ **Ephês** `[ɛ.ˈfeːs]`, *Korinthos* $\rightarrow$ **Korînt** `[ko.ˈrɪnt]`, *Dorostorum* $\rightarrow$ **Durostôr**, *Damaskos* $\rightarrow$ **Damasch**
   * *Kallipolis* $\rightarrow$ **Kallîpel**, *Nikopolis* $\rightarrow$ **Nikôpel**
 * Greek `-ion` becomes **`-jen`** (**Ikônjen**, **Amôrjen**, **Filomêljen**), while `-eon`, `-ea`, and `-eia` become **`-êe`** `[eː.ə]` (**Kaisarêe**, **Nîkêe**, **Sebastêe**, **Laodikêe**, **Dorîlêe**).
@@ -107,7 +108,11 @@ Old Catalan drops unstressed final vowels (*-o, -e*) after most consonants, whil
 ### Rule 3: Palatal Assimilation & Slavic `-sk` Adaptation
 Because Tarraconian scribes are fluent in both Romance and Germanic sounds, foreign palatals, sibilants, and Slavic suffixes are systematically mapped:
 * Romance `ny / nh / gn` (`/ɲ/`) $\rightarrow$ **`nj`** `[ɲ]`: *Armagnac* $\rightarrow$ **Armanjach** `[ar.ma.ˈɲax]`, *Lusignan* $\rightarrow$ **Lusinjan** `[lu.zɪ.ˈɲan]`.
-* French/Occitan/Arabic/Turkic `j / g(e,i) / ch / sh / ş` $\rightarrow$ **`sch`** `[ʃ]` or **`dsch`** `[dʒ]`: *Anjou* $\rightarrow$ **Anschou** `[ˈan.ʃɔʊ]`, *Shayzar* $\rightarrow$ **Schêisar** `[ˈʃɛɪ.zar]`, *Jimi* $\rightarrow$ **Dschîmi** `[ˈdʒiː.mi]`.
+* **12th-Century Old French Affricates & Rounded Vowels (` Fra / Fro / Nrf / Pcd / Wln`):** Rather than back-projecting Modern French deaffricated fricatives or `[ks]` in scribal `-x`, Old French stems reflect c. 1150–1194 Gallo-Romance phonology:
+  * **Affricates:** `ch` $\rightarrow$ **`tsch`** (`[tʃ]`, *Châteaudun* $\rightarrow$ **Tschâtôdün**, *Chablis* $\rightarrow$ **Tschablîs**); `j / g(e,i) / ge(a,o)` $\rightarrow$ **`dsch`** (`[dʒ]`, *Dijon* $\rightarrow$ **Didschôn**, *Bourges* $\rightarrow$ **Burdsches**, *Angers* $\rightarrow$ **Andschêrs**); `ç / c(e,i)` $\rightarrow$ **`z- / -tz-`** (`[ts]`, *Besançon* $\rightarrow$ **Besantzôn**, *Alençon* $\rightarrow$ **Alentzôn**, *Beaugency* $\rightarrow$ **Bôdschentzî**).
+  * **Coda `-x` & Rounded Vowels:** Final `-ieux / -eux` $\rightarrow$ **`-jös / -ös`** (*Dreux* $\rightarrow$ **Drös**, *Lisieux* $\rightarrow$ **Lisjös**, *Bayeux* $\rightarrow$ **Bajös**); `-eaux / -aux` $\rightarrow$ **`-ôs`** (*Meaux* $\rightarrow$ **Môs**); vocalized `au / eau` $\rightarrow$ **`ô`**; `eu / œu` $\rightarrow$ **`ö`** (*Feurs* $\rightarrow$ **Förs**, *Creuse* $\rightarrow$ **Kröse**); `ou` $\rightarrow$ **`u`** (*Bourbon* $\rightarrow$ **Burbôn**); standalone `u` $\rightarrow$ **`ü`** (*Autun* $\rightarrow$ **Ôtün**, *Montluçon* $\rightarrow$ **Montlützôn**); `qu(e,i) / gu(e,i)` $\rightarrow$ **`k / g`** (*Saint-Quentin* $\rightarrow$ **Zant-Kentîn**, *Périgueux* $\rightarrow$ **Pêrigös**).
+  * **Liquids:** Palatal `-ill- / -il` $\rightarrow$ **`lj`** (*Montreuil* $\rightarrow$ **Montrölj**, *Marseille* $\rightarrow$ **Marselje**); plain French geminates `-ville / -lle` $\rightarrow$ **`-vîle / -le`** (*Abbeville* $\rightarrow$ **Abbevîle**, *La Rochelle* $\rightarrow$ **La Rotschele**).
+* Occitan/Arabic/Turkic `sh / ş` $\rightarrow$ **`sch`** (`[ʃ]`): *Shayzar* $\rightarrow$ **Schêisar** `[ˈʃɛɪ.zar]`, *Jimi* $\rightarrow$ **Dschîmi** `[ˈdʒiː.mi]`.
 * **Foreign Affricates (`[dʒ]`, `[dʐ]`, `[tɕ]`) $\rightarrow$ `dsch` `[dʒ]` (or `tsch` `[tʃ]`):** Foreign sounds that modern Latin alphabets transcribe as `j` (Indic `ज` *j*, Korean `ㅈ` *j / -ju*, Pinyin `j`, Japanese *j*, Arabic `ج` *jīm*, Persian `ج`, African *j / dj*, and Kazakh `Ж` *zh/j*) must strictly be rendered as **`dsch`** (or **`tsch`** in voiceless/final environments per Auslautverhärtung), **NEVER** with bare `j`. Bare `j` in Tarraconian is reserved exclusively for the palatal glide `[j]` (German *Jûlich*, *Jûtlant*; Slavic *Jaroslouwe*; Arabic *Janbû*; Pinyin *Jandschou* for *Yanzhou*):
   * Indic: *Jaunpur* $\rightarrow$ **Dschounpur**, *Kanyakubja* $\rightarrow$ **Kanjakubdsche**, *Jejakabhukti* $\rightarrow$ **Dschedschâkabhukti**, *Ajmer* $\rightarrow$ **Adschmêr**, *Ujjayini* $\rightarrow$ **Udschajinî**.
   * Korean: Administrative *-ju* (州) $\rightarrow$ **`-dschu`** (*Gyeongju* $\rightarrow$ **Gjongdschu**, *Gwangju* $\rightarrow$ **Gwangdschu**, *Haeju* $\rightarrow$ **Haedschu**, *Tschungju* $\rightarrow$ **Tschungdschu**); initial *Jang-* $\rightarrow$ **`Dschang-`** (*Jangjeong* $\rightarrow$ **Dschangdschong**).
@@ -225,6 +230,9 @@ In 1122, **The Roman Empire** (`h_roman_empire`) operates an imperial bureaucrac
 | In-Game Title | Tarraconian Name | IPA Transcription | Linguistic Derivation |
 | :--- | :--- | :--- | :--- |
 | Magistracy of **Mainz** | **Magistrat van Mênz** | `[ma.ɡɪs.ˈtraːt van meːnts]` | Native Rhine-Moselle Franconian *Mênz* (from MHG *Meinz / Mênze*). |
+| County / Barony of **Dreux** | **Drös** | `[drøːs]` | 12th-century Old French *Drewes* (`eu` $\rightarrow$ `ö`, scribal coda `-x` $\rightarrow$ `[s]`). |
+| Barony of **Alençon** (`b_alencon`) | **Alentzôn** | `[a.lɛn.ˈtsoːn]` | Old French `[ts]` (`ç` $\rightarrow$ `tz`) with lengthened final **`-ôn`**. |
+| Barony of **Châteaudun** (`b_chateaudun`) | **Tschâtôdün** | `[ˈtʃaː.toː.dyːn]` | 12th-century Old French affricate `ch` $\rightarrow$ `tsch`, `eau` $\rightarrow$ `ô`, and palatalized `u` $\rightarrow$ `ü`. |
 | Magistracy of **Nancy** (`c_nancy`) | **Magistrat van Lûnstat** | `[ma.ɡɪs.ˈtraːt van ˈluːn.stat]` | Pre-1070 comital seat *Lunéville / Lünstadt* (`b_blankenberg`). |
 | Magistracy of **Gowrie** (`c_gowrie`) | **Magistrat van Gouwerîe** *(or **Skône**)* | `[ma.ɡɪs.ˈtraːt van ˈskɔː.nə]` | Scottish royal inauguration seat *Scone* (`b_coupar_angus`), resolving post-1122 *St Johnston*. |
 | Magistracy of **Ennis** (`c_ennis`) | **Magistrat van Kinkôre** | `[ma.ɡɪs.ˈtraːt van kɪŋ.ˈkoː.rə]` | Dál gCais royal fortress *Ceann Coradh / Kincora* (`b_kincora`), resolving 13th-c. *Ennis*. |
