@@ -1,0 +1,735 @@
+#!/usr/bin/env python3
+"""
+pipeline_stage4_calque_mediation.py
+
+Stage 4 of the Tarraconian Barony-Tier Toponymic Naming Pipeline (v2):
+Procedure 1 & 2 Transparency, Calquing & Phonological Mediation across all
+10,239 occupied baronies from Stage 3 (`data/pipeline_stage3_synthesized.json`).
+
+Implements:
+  - Track S Procedure 1 CJK logographic calquing (1,235-char lexicon from
+    data/sinosphere_kanji_tarraconian.json + SINO_BARONY_KANJI_EXT), paired
+    with pre-867 Hanzi enrichment from barony_resolutions.json ONLY for
+    pre-867 attested Track S sites, and 12th-century LMC/EMK/EMJ phonetics.
+  - Rule 1 Gate: Rule 3 opaque marker / eponym / tribal guard (with exception
+    for productive <Founder/Saint> + <Holding Generic> compounds).
+  - Rule 2 (Direct Transparency): Full semantic calquing of transparent
+    audit morphemes & Stage 3 abstract compounds, plus generic+topographic-head
+    translation (e.g. Khalīj Ḥawākil -> Hawâkilbucht / Marsa -> -hâven).
+  - Rule 3 (Transitional Mediation < 50y): Hybrid calque — indigenous proper
+    stem adapted via transmission_profile + holding generic calqued.
+  - Rule 4 (Semantic Rupture >= 50y): Strict phonetic nativization via
+    multi-hop `historical_intermediaries` + `transmission_rules.to_tarraconian`.
+
+Emits:
+  - data/pipeline_stage4_mediated.json
+"""
+
+from __future__ import annotations
+
+import json
+import re
+from collections import Counter
+from pathlib import Path
+from typing import Any
+
+from sino_barony_kanji_ext import SINO_BARONY_KANJI_EXT
+
+REPO_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = REPO_DIR / "data"
+
+# Proper-person descriptors that must NEVER trigger accidental adjective/noun calquing
+DISQUALIFIED_GLOSS_WORDS = {
+    "alexander", "antiochus", "augustus", "attalus", "apama", "seleucus",
+    "caesar", "constantine", "hadrian", "trajan", "philip", "ptolemy",
+    "pompey", "tiberius", "herod", "king", "queen", "emperor", "prince",
+    "duke", "count", "saint", "deity", "god", "goddess", "hero", "legendary",
+    "possibly", "perhaps", "uncertain", "probably", "ancient",
+}
+
+# Transparent initial geographic heads commonly appearing in 2-word NTR phrases (Direct Transparency)
+TRANSPARENT_NTR_HEADS: dict[str, tuple[str, str]] = {
+    # lowercase phrase head/tail -> (tarr_suffix, gloss)
+    "khalīj": ("-bucht", "gulf/bay"),
+    "khalij": ("-bucht", "gulf/bay"),
+    "buḥayrat": ("-sêe", "lake/lagoon"),
+    "buhayrat": ("-sêe", "lake/lagoon"),
+    "baḥr": ("-mêr", "sea/river"),
+    "wādī": ("-vliez", "wadi/valley"),
+    "wadi": ("-vliez", "wadi/valley"),
+    "oued": ("-vliez", "river/wadi"),
+    "jebel": ("-berch", "mountain"),
+    "djebel": ("-berch", "mountain"),
+    "jabal": ("-berch", "mountain"),
+    "gunung": ("-berch", "mountain"),
+    "bukit": ("-bühil", "hill"),
+    "teluk": ("-bucht", "bay"),
+    "selat": ("-strâte", "strait"),
+    "pulau": ("-werder", "island"),
+    "nusa": ("-werder", "island"),
+    "dataran": ("-velt", "plain"),
+    "banjaran": ("-grat", "range"),
+    "kali": ("-bach", "river"),
+    "sungai": ("-flôz", "river"),
+    "batang": ("-flôz", "river"),
+    "muara": ("-münde", "estuary"),
+    "mont": ("-berch", "mount"),
+    "monte": ("-berch", "mount"),
+    "sierra": ("-kamm", "mountain range"),
+    "rio": ("-flôz", "river"),
+    "río": ("-flôz", "river"),
+    "lago": ("-sêe", "lake"),
+    "isola": ("-werder", "island"),
+    "valle": ("-tâl", "valley"),
+    "ponte": ("-brücke", "bridge"),
+    "porto": ("-hâven", "harbor"),
+    "ozero": ("-sêe", "lake"),
+    "reka": ("-flôz", "river"),
+    "gora": ("-berch", "mountain"),
+    "ostrov": ("-werder", "island"),
+    "kolpos": ("-bucht", "gulf"),
+    "kólpos": ("-bucht", "gulf"),
+    "potamos": ("-flôz", "river"),
+    "limni": ("-sêe", "lake"),
+    "oros": ("-berch", "mountain"),
+    "nessos": ("-werder", "island"),
+    "sinus": ("-bucht", "gulf"),
+    "lacus": ("-sêe", "lake"),
+    "flumen": ("-flôz", "river"),
+    "mons": ("-berch", "mountain"),
+    "insula": ("-werder", "island"),
+    "river": ("-flôz", "river"),
+    "prefecture": ("-stat", "prefecture"),
+    "commandery": ("-march", "commandery"),
+    "mountain": ("-berch", "mountain"),
+    "mountains": ("-berch", "mountains"),
+    "lake": ("-sêe", "lake"),
+    "island": ("-werder", "island"),
+    "bay": ("-bucht", "bay"),
+    "gulf": ("-bucht", "gulf"),
+}
+
+# Supplementary Traditional/Simplified Hanzi & Stage 3 classifier entries
+SUPPLEMENTARY_HANZI: dict[str, tuple[str, str, str]] = {
+    "觀": ("-zelle", "Sacral Suffix", "Taoist abbey / Shrine"),
+    "观": ("-zelle", "Sacral Suffix", "Taoist abbey / Shrine"),
+    "關": ("-klûse", "Defensive Suffix", "Mountain pass / Frontier gate"),
+    "院": ("-clôster", "Sacral Suffix", "Cloister / Monastery"),
+    "宮": ("-palz", "Sacral Suffix", "Sacred palace / Shrine"),
+    "宫": ("-palz", "Sacral Suffix", "Sacred palace / Shrine"),
+    "府": ("-palz", "Administrative Suffix", "Prefectural seat"),
+    "港": ("-hâven", "Maritime Suffix", "Sea harbor"),
+    "津": ("-vurt", "Riparian Suffix", "River ford / ferry"),
+    "汗": ("chân", "Phonetic Morpheme", "Khan / Huhan phonetic"),
+    "慈": ("Gnâd-", "Virtue Prefix", "Merciful / Compassion"),
+    "法": ("Êw-", "Sacral Prefix", "Dharma / Sacred Law"),
+    "靖": ("Frid-", "Frontier Prefix", "Pacify / Tranquilize"),
+    "寶": ("Edel-", "Precious Prefix", "Treasure"),
+    "豐": ("Rîch-", "Abundance Prefix", "Abundant / Prosperous"),
+    "鐵": ("Îsen-", "Material Prefix", "Iron"),
+    "鎮": ("-wart", "Defensive Suffix", "Garrison fort"),
+    "高": ("Hôch-", "Elevation Prefix", "High / Lofty"),
+    "明": ("Lîcht-", "Solar Prefix", "Bright / Radiant"),
+}
+
+# Fallback 12th-century raw romanized readings BEFORE single-pass adaptation
+HANZI_PHONETIC_READINGS: dict[str, str] = {
+    "城": "cheng", "堡": "bao", "關": "guan", "关": "guan", "鎮": "zhen", "镇": "zhen",
+    "州": "zhou", "府": "fu", "市": "shi", "港": "gang", "津": "jin",
+    "寺": "si", "院": "yuan", "觀": "guan", "观": "guan", "宮": "gong", "宫": "gong",
+    "威": "wei", "靖": "jing", "鐵": "tie", "铁": "tie", "高": "gao", "明": "ming",
+    "清": "qing", "白": "bai", "青": "qing", "石": "shi", "松": "song",
+    "慈": "ci", "法": "fa", "福": "fu", "靜": "jing", "寶": "bao", "宝": "bao",
+    "豐": "feng", "丰": "feng", "利": "li", "通": "tong", "興": "xing", "兴": "xing",
+    "永": "yong", "隆": "long", "德": "de", "昌": "chang",
+}
+
+
+def _apply_case(src: str, target: str) -> str:
+    if not src:
+        return target
+    if src[0].isupper():
+        return target[:1].upper() + target[1:]
+    return target.lower() if target.isupper() else target
+
+
+def _romanize_embedded_hanzi(
+    s: str,
+    kanji_readings: dict[str, tuple[str, str, str]],
+    tf: str,
+) -> str:
+    """Replace any CJK Hanzi in a phonetic string using 12th-c. LMC/EMK/EMJ readings."""
+    if not re.search(r"[\u3400-\u9FFF\uF900-\uFAFF]", s):
+        return s
+    out: list[str] = []
+    for ch in s:
+        if "\u3400" <= ch <= "\u9FFF" or "\uF900" <= ch <= "\uFAFF":
+            if ch in kanji_readings:
+                py, kr, jp = kanji_readings[ch]
+                if "korean" in tf and kr:
+                    rd = kr.split("/")[0].strip().lower()
+                elif "japonic" in tf and jp:
+                    rd = jp.split("/")[0].strip().lower()
+                else:
+                    rd = (py or kr or jp or "").split("/")[0].strip().lower()
+                # strip pinyin tone marks
+                for a, b in [("ā","a"),("á","a"),("ǎ","a"),("à","a"),("ē","e"),("é","e"),("ě","e"),("è","e"),("ī","i"),("í","i"),("ǐ","i"),("ì","i"),("ō","o"),("ó","o"),("ǒ","o"),("ò","o"),("ū","u"),("ú","u"),("ǔ","u"),("ù","u"),("ǖ","ü"),("ǘ","ü"),("ǚ","ü"),("ǜ","ü")]:
+                    rd = rd.replace(a, b)
+                out.append(rd or HANZI_PHONETIC_READINGS.get(ch, ""))
+            else:
+                out.append(HANZI_PHONETIC_READINGS.get(ch, ""))
+        else:
+            out.append(ch)
+    return "".join(out)
+
+
+def transliterate_stem_to_tarr(
+    stem: str,
+    transmission_profile: str,
+    coinage_family: str,
+    transmission_family: str,
+    intermediaries_map: dict[tuple[str, str], dict[str, Any]],
+    trans_rules: dict[str, Any],
+    kanji_readings: dict[str, tuple[str, str, str]] | None = None,
+    is_rupture: bool = False,
+) -> tuple[str, list[str]]:
+    """
+    Cascade-free single-pass phonological adaptation:
+      1. Romanize any embedded CJK Hanzi into 12th-century phonetic reading.
+      2. Apply documented historical multi-hop intermediary shift (when applicable).
+      3. Apply single-pass longest-match digraph/orthography adaptation per family
+         (no double `J -> Dsch -> Dstsch` or `kh -> ch -> tsch` cascades!).
+    """
+    notes: list[str] = []
+    s = stem.strip()
+    if not s:
+        return s, notes
+
+    tf = (transmission_family or coinage_family or "").lower()
+    if kanji_readings is not None:
+        s = _romanize_embedded_hanzi(s, kanji_readings, tf)
+
+    # Step 1: Multi-hop historical intermediary filter (when coinage != transmission)
+    if (coinage_family, transmission_family) in intermediaries_map:
+        inter = intermediaries_map[(coinage_family, transmission_family)]
+        iid = inter["id"]
+        notes.append(iid)
+        if iid == "greek_to_turkish":
+            s = re.sub(r"polis$", "bolu", s, flags=re.I)
+            s = re.sub(r"^K(?=[aeiou])", "G", s)
+        elif iid == "greek_to_south_slavic":
+            s = re.sub(r"polis$", "pol", s, flags=re.I)
+            s = re.sub(r"os$", "", s, flags=re.I) if len(s) > 4 else s
+        elif iid == "greek_to_arabic":
+            s = re.sub(r"polis$", "bulus", s, flags=re.I)
+            s = s.replace("p", "b").replace("P", "B")
+        elif iid == "arabic_to_ibero_romance":
+            s = re.sub(r"^W[aā]d[iī]\s+", "Guad-", s, flags=re.I)
+            s = re.sub(r"^Qal['’`]?at\s+", "Calat-", s, flags=re.I)
+            s = re.sub(r"\bkh", "g", s, flags=re.I)
+        elif iid == "slavic_to_magyar":
+            s = re.sub(r"grad$", "grád", s, flags=re.I)
+        elif iid == "celtic_to_anglo_saxon":
+            s = re.sub(r"dunum$", "tun", s, flags=re.I)
+
+    # Step 2: Build single-pass non-overlapping substitution table for target family
+    subs_map: dict[str, str] = {}
+    rule_obj = trans_rules.get(transmission_profile) or {}
+    # Import safe literal tokens from transmission_rules (excluding end-only anchors unless matched cleanly)
+    for pat, repl in rule_obj.get("substitutions", []):
+        if pat.startswith("^") or pat.endswith("$"):
+            try:
+                # only apply anchor-specific rules like vár$ -> wâr, burg$ -> burch
+                if pat.endswith("$"):
+                    s = re.sub(pat, repl, s)
+            except re.error:
+                pass
+        elif len(pat) <= 3 and re.fullmatch(r"[A-Za-zÀ-ɏ]+", pat):
+            subs_map[pat.lower()] = repl.lower()
+
+    if tf in {"arabic", "berber", "aramaic_hebrew"}:
+        subs_map.update({"kh": "ch", "sh": "sch", "dh": "d", "th": "t", "gh": "g", "j": "dsch", "q": "k"})
+    elif tf in {"turkic", "oghur", "mongolic", "iranian"}:
+        subs_map.update({"kh": "ch", "sh": "sch", "ş": "sch", "š": "sch", "ç": "tsch", "č": "tsch", "q": "k"})
+        if tf == "turkic":
+            subs_map["c"] = "dsch"
+        if tf == "iranian":
+            subs_map["ch"] = "tsch"
+            subs_map["j"] = "dsch"
+    elif tf in {"east_slavic", "south_slavic", "west_slavic_lechitic", "west_slavic_czech_slovak", "baltic"}:
+        subs_map.update({"sz": "sch", "cz": "tsch", "rz": "rsch", "zh": "sch", "sh": "sch", "š": "sch", "č": "tsch", "ž": "sch", "ř": "rsch", "v": "w"})
+    elif tf in {"magyar"}:
+        subs_map.update({"cs": "tsch", "sz": "s", "zs": "sch", "sh": "sch", "v": "w"})
+    elif tf in {"indo_aryan", "dravidian", "austronesian", "mon_khmer", "tai_hmong", "tibetic", "burmese_qiangic"}:
+        subs_map.update({"sh": "sch", "ch": "tsch", "ś": "sch", "ṣ": "sch", "j": "dsch"})
+    elif tf in {"sinosphere_chinese", "korean", "japonic", "viet", "khitan", "tungusic"}:
+        subs_map.update({"zh": "dsch", "ch": "tsch", "sh": "sch", "ts": "tz", "j": "dsch", "q": "tsch"})
+    elif tf in {"tarraconian_imperial", "high_german", "low_german_dutch"}:
+        # Preserve Tarraconian/German orthography cleanly without corrupting -st- / ch / j
+        subs_map = {"ß": "ss"}
+    else:
+        subs_map.update({"sh": "sch", "zh": "sch", "š": "sch", "č": "tsch", "ž": "sch"})
+
+    if subs_map:
+        # Sort longest keys first; match without cascading overlaps
+        pat_parts = sorted(subs_map.keys(), key=len, reverse=True)
+        # Do not match 'q' inside 'qu'
+        regex_tokens = []
+        for k in pat_parts:
+            if k == "q":
+                regex_tokens.append(r"q(?![uU])")
+            elif k == "c" and tf in {"east_slavic", "south_slavic", "west_slavic_lechitic", "west_slavic_czech_slovak"}:
+                regex_tokens.append(r"c(?=[eiy]|$)")
+            else:
+                regex_tokens.append(re.escape(k))
+        single_re = re.compile("|".join(regex_tokens), re.I)
+
+        def _repl_tok(m: re.Match[str]) -> str:
+            tok = m.group(0)
+            target = subs_map.get(tok.lower(), tok)
+            return _apply_case(tok, target)
+
+        s = single_re.sub(_repl_tok, s)
+
+    # Handle word-initial Sinosphere Y->J / Ts->Z without re-scanning Ch/Sch
+    if tf in {"sinosphere_chinese", "korean", "japonic", "viet", "khitan", "tungusic"}:
+        s = re.sub(r"\b[Yy](?=[aeiou])", lambda m: "J" if m.group(0).isupper() else "j", s)
+        s = re.sub(r"\b[Tt]z", lambda m: "Z" if m.group(0)[0].isupper() else "z", s)
+
+    # Diacritic & acute -> circumflex normalization (Rule 1)
+    char_rep = {
+        "ā": "â", "á": "â", "à": "a", "Ā": "Â", "Á": "Â", "À": "A",
+        "ē": "ê", "é": "ê", "è": "e", "æ": "ê", "Ē": "Ê", "É": "Ê", "È": "E", "Æ": "Ê",
+        "ī": "î", "í": "î", "ì": "i", "ý": "î", "Ī": "Î", "Í": "Î", "Ì": "I", "Ý": "Î",
+        "ō": "ô", "ó": "ô", "ò": "o", "ø": "ö", "Ō": "Ô", "Ó": "Ô", "Ò": "O", "Ø": "Ö",
+        "ū": "û", "ú": "û", "ù": "u", "Ū": "Û", "Ú": "Û", "Ù": "U",
+        "ḥ": "h", "Ḥ": "H", "ṭ": "t", "Ṭ": "T", "ṣ": "s", "Ṣ": "S",
+        "ḍ": "d", "Ḍ": "D", "ẓ": "z", "Ẓ": "Z", "ğ": "g", "Ğ": "G",
+        "ł": "l", "Ł": "L", "ń": "n", "Ń": "N", "þ": "th", "Þ": "Th", "ð": "d", "Ð": "D",
+        "ʿ": "", "ʾ": "", "'": "", "ı": "i",
+    }
+    s = "".join(char_rep.get(c, c) for c in s)
+    s = re.sub(r"(?:ch){2,}", "ch", s, flags=re.I)
+    s = re.sub(r"(?:tsch){2,}", "tsch", s, flags=re.I)
+    if s and s[0].islower():
+        s = s[0].upper() + s[1:]
+    return s, notes
+
+
+def calque_hanzi_string(
+    hanzi: str,
+    kanji_map: dict[str, tuple[str, str, str]],
+) -> tuple[str | None, list[str]]:
+    """
+    Translate a multi-character CJK Hanzi compound character-by-character into Tarraconian
+    using the 1,235-char Sinosphere lexicon (`sinosphere_kanji_tarraconian.json` +
+    `SINO_BARONY_KANJI_EXT`). Returns `(calqued_str_or_None, gloss_parts)`.
+    """
+    chars = re.findall(r"[\u3400-\u9FFF\uF900-\uFAFF]", hanzi or "")
+    if not chars:
+        return None, []
+    # Check coverage: calque if at least all chars map cleanly or >= 2-char compound where all except maybe 1 are known
+    parts: list[str] = []
+    meanings: list[str] = []
+    missing = 0
+    for idx, ch in enumerate(chars):
+        if ch in kanji_map:
+            m, role, mean = kanji_map[ch]
+            clean_m = m.strip("-").strip()
+            if idx == 0:
+                clean_m = clean_m[:1].upper() + clean_m[1:]
+            else:
+                clean_m = clean_m.lower()
+            parts.append(clean_m)
+            if mean:
+                meanings.append(mean.split("/")[0].strip())
+        else:
+            missing += 1
+            break
+    if missing > 0 or not parts:
+        return None, []
+    joined = "".join(parts)
+    # Collapse accidental triple consonants at boundaries (e.g. nnn -> nn)
+    joined = re.sub(r"([a-z])\1\1+", r"\1\1", joined)
+    return joined, meanings
+
+
+def match_descriptive_audit_calque(
+    audit_morphemes: list[dict[str, Any]],
+    lex: dict[str, Any],
+) -> tuple[str | None, list[str]]:
+    """
+    Strict check for Procedure 2 full semantic calquing of pre-867 descriptive audit morphemes.
+    Requires >= 2 morphemes, zero opaque/proper/uncertain markers, and complete lexicon hit.
+    """
+    if len(audit_morphemes) < 2:
+        return None, []
+
+    gidx = lex["gloss_index"]
+    concepts = lex["concepts"]
+    stops = set(lex["grammatical_stopwords"])
+    opaque_m = set(lex["rule3_opaque_markers"])
+
+    matched_cids: list[str] = []
+    for mor in audit_morphemes:
+        tr = (mor.get("translation") or "").lower()
+        if not tr:
+            return None, []
+        if any(om in tr for om in opaque_m) or "?" in tr:
+            return None, []
+        words = re.findall(r"[a-z]+", tr)
+        if any(w in DISQUALIFIED_GLOSS_WORDS for w in words):
+            return None, []
+        cid = None
+        for w in words:
+            if w in stops:
+                continue
+            if w in gidx:
+                cid = gidx[w]
+                break
+        if cid is None:
+            return None, []
+        matched_cids.append(cid)
+
+    if len(matched_cids) < 2:
+        return None, []
+
+    # Build Tarraconian compound: modifier(s) as prefix, final element as suffix
+    # Heuristic: in Romance/Arabic/Celtic (head-initial) if first morpheme is a holding/feature noun
+    # and last is adjective/color/cardinal (e.g. Algeciras = island + green), swap order in German!
+    first_c = concepts[matched_cids[0]]
+    last_c = concepts[matched_cids[-1]]
+    ordered = list(matched_cids)
+    # Adjectives/numbers/colors/materials go BEFORE nouns in Germanic compounds
+    adj_categories = {"colors_and_qualities", "numerals", "color", "size_age_quality", "cardinal_direction", "material_resource"}
+    if (
+        len(ordered) == 2
+        and (last_c.get("category") in adj_categories or "quality" in (last_c.get("category") or ""))
+        and first_c.get("category") not in adj_categories
+    ):
+        ordered = [ordered[1], ordered[0]]
+
+    pieces: list[str] = []
+    for idx, cid in enumerate(ordered):
+        cobj = concepts[cid]
+        if idx == 0:
+            form = (cobj.get("tarr_prefix") or cobj.get("tarr_standalone") or "").strip("-")
+            form = form[:1].upper() + form[1:]
+        else:
+            form = (cobj.get("tarr_suffix") or cobj.get("tarr_standalone") or "").strip("-").lower()
+        if not form:
+            return None, []
+        pieces.append(form)
+
+    return "".join(pieces), ordered
+
+
+def run_stage4() -> dict[str, Any]:
+    with open(DATA_DIR / "pipeline_stage3_synthesized.json", "r", encoding="utf-8") as f:
+        s3 = json.load(f)["baronies"]
+    with open(DATA_DIR / "ck3_culture_to_iso_and_generics.json", "r", encoding="utf-8") as f:
+        cb = json.load(f)
+    cult_bridge = cb["cultures"]
+    trans_rules = cb["transmission_rules"]["to_tarraconian"]
+    inter_map = {
+        (x["source_family"], x["transmission_family"]): x
+        for x in cb["transmission_rules"]["historical_intermediaries"]
+    }
+    with open(DATA_DIR / "multilingual_morpheme_calque_lexicon.json", "r", encoding="utf-8") as f:
+        lex = json.load(f)
+    with open(DATA_DIR / "sinosphere_kanji_tarraconian.json", "r", encoding="utf-8") as f:
+        kanji_list = json.load(f)
+    kanji_map: dict[str, tuple[str, str, str]] = {}
+    kanji_readings: dict[str, tuple[str, str, str]] = {}
+    kanji_map.update(SUPPLEMENTARY_HANZI)
+    for ch, val in SINO_BARONY_KANJI_EXT.items():
+        if isinstance(val, (tuple, list)) and len(val) >= 3:
+            kanji_map[ch] = (val[0], val[1], val[2])
+    for item in kanji_list:
+        ch = item.get("char")
+        if ch:
+            kanji_map[ch] = (
+                item.get("tarr_morpheme") or "",
+                item.get("tarr_role") or "",
+                item.get("meaning") or "",
+            )
+            kanji_readings[ch] = (
+                item.get("pinyin_sort") or item.get("pinyin") or "",
+                item.get("kr") or "",
+                item.get("jp") or "",
+            )
+            if item.get("var") and item["var"] != "-":
+                for vch in item["var"].split("/"):
+                    vch = vch.strip()
+                    if vch:
+                        kanji_map.setdefault(vch, kanji_map[ch])
+                        kanji_readings.setdefault(vch, kanji_readings[ch])
+
+    with open(DATA_DIR / "barony_resolutions.json", "r", encoding="utf-8") as f:
+        v1_res = json.load(f)
+
+    calque_mode_counts: Counter[str] = Counter()
+    rule3_blocked_count = 0
+    intermediary_applied_count = 0
+    stage4_baronies: dict[str, dict[str, Any]] = {}
+
+    for bk in sorted(s3.keys()):
+        r3 = s3[bk]
+        if not r3["is_occupied"]:
+            stage4_baronies[bk] = {
+                "barony_key": bk,
+                "is_occupied": False,
+                "final_record": r3["final_record"],
+            }
+            continue
+
+        cs = r3["continuity_status"]
+        coin_fam = r3["coinage_morphology_family"]
+        trans_cult = r3["transmission_culture"]
+        trans_info = cult_bridge.get(trans_cult) or {}
+        trans_fam = trans_info.get("morphology_family") or coin_fam
+        trans_prof = r3["transmission_profile"] or "general_phonetic_adaptation"
+
+        is_sino = bool(r3["is_sinosphere_scope"])
+        is_direct_trans = (cs == "Direct Transparency") or (r3["coinage_culture"] in {"Tarraconian", "Lothringian", "Croato-Tarraconian", "Alpine-Tarraconian", "Ungwârer"})
+        is_transitional = cs == "Transitional Mediation (< 50y)" and not is_direct_trans
+        is_rupture = cs == "Semantic Rupture (>= 50y)" and not is_direct_trans
+
+        coined_form = r3["coined_source_form"]
+        mod = r3["coined_modifier"]
+        gen = r3["coined_generic"]
+
+        # Always compute direct phonological adaptation of the Stage 3 form
+        # Do not run Magyar/Slavic transmission substitutions onto compounds already coined in Imperial German
+        eff_trans_prof = (
+            "tarraconian_direct"
+            if r3["coinage_culture"] in {"Tarraconian", "Lothringian", "Croato-Tarraconian", "Alpine-Tarraconian", "Ungwârer"}
+            else trans_prof
+        )
+        tarr_direct, inter_notes = transliterate_stem_to_tarr(
+            coined_form, eff_trans_prof, coin_fam, trans_fam, inter_map, trans_rules,
+            kanji_readings=kanji_readings, is_rupture=is_rupture,
+        )
+
+        def adapt(txt: str, prof: str | None = None, rup: bool = False) -> str:
+            res, _ = transliterate_stem_to_tarr(
+                txt, prof or eff_trans_prof, coin_fam, trans_fam, inter_map, trans_rules,
+                kanji_readings=kanji_readings, is_rupture=rup,
+            )
+            return res
+
+        # Pre-867 Track S: supplement Hanzi from verified v1 Sinosphere entry ONLY when pre-867 attested!
+        hanzi_str = r3.get("coined_hanzi")
+        if is_sino and not hanzi_str and r3["is_historical_867"]:
+            v1_hz = (v1_res.get(bk) or {}).get("b_hanzi") or ""
+            if v1_hz and r3["stem_category"] != "tribe":
+                hanzi_str = v1_hz
+
+        tarr_hist = ""
+        calque_mode = ""
+        calque_concepts: list[str] = []
+        pathway = ""
+
+        # --- BRANCH A: Track S (Sinosphere Procedure 1 + 12th-century Phonetics) ---
+        if is_sino:
+            opaque_sino = r3["is_opaque_proper_stem"] or (r3["stem_category"] == "tribe")
+            if hanzi_str and not opaque_sino and not is_rupture:
+                calqued_hz, hz_meanings = calque_hanzi_string(hanzi_str, kanji_map)
+                if calqued_hz:
+                    tarr_hist = calqued_hz
+                    calque_mode = "sinosphere_procedure1_calque"
+                    calque_concepts = hz_meanings
+                    pathway = f"{coined_form} ({hanzi_str}) -> [Procedure 1 CJK Calque: {' + '.join(hz_meanings)}] -> {tarr_hist}"
+            if not tarr_hist:
+                # Transitional or opaque/post-867 synthesized Sinosphere: adapt modifier + calque generic if transparent & not rupture
+                if gen and not is_rupture:
+                    mod_adapt = adapt(mod["text"], trans_prof)
+                    g_tarr = gen["tarr_calque"].strip("-")
+                    if gen.get("tarr_calque", "").startswith("Zant") or gen.get("affix_position") == "prefix":
+                        tarr_hist = f"{g_tarr}{mod_adapt}"
+                    else:
+                        tarr_hist = f"{mod_adapt}{g_tarr}"
+                    calque_mode = "sinosphere_hybrid_generic_calque" if mod.get("is_opaque_eponym") else "sinosphere_12c_phonetic"
+                    pathway = f"{coined_form} ({hanzi_str or '12c phonetic'}) -> [{trans_prof}] -> {tarr_hist}"
+                else:
+                    tarr_hist = tarr_direct
+                    calque_mode = "semantic_rupture_phonetic" if is_rupture else "sinosphere_12c_phonetic"
+                    pathway = f"{coined_form} -> [{calque_mode}: {trans_prof}] -> {tarr_hist}"
+
+        # --- BRANCH B: Rule 4 Semantic Rupture (>= 50y) ---
+        elif is_rupture:
+            # Strict phonetic mediation through transmission_culture (no semantic calquing, single-pass)
+            if mod.get("is_opaque_eponym") and r3["stage3_mode"] in {"synthesized_vain_eponym", "synthesized_pious_saint"}:
+                mod_src = mod["tarr_equivalent"] or mod["text"]
+                if gen:
+                    raw_part = (
+                        f"{gen['native_form'].strip()}{mod_src}"
+                        if gen["affix_position"] == "prefix"
+                        else f"{mod_src}{gen['native_form'].lstrip('-')}"
+                    )
+                    tarr_hist = adapt(raw_part, trans_prof, rup=True)
+                else:
+                    tarr_hist = adapt(mod_src, trans_prof, rup=True)
+            else:
+                tarr_hist = tarr_direct
+            calque_mode = "semantic_rupture_phonetic"
+            pathway = f"{coined_form} ({r3['coinage_culture']}) -> [Rupture >=50y via {trans_cult} ({', '.join(inter_notes) or trans_prof})] -> {tarr_hist}"
+
+        # --- BRANCH C: Synthesized Stage 3 Compounds (Direct Transparency or Transitional < 50y) ---
+        elif r3["stage3_mode"] != "passthrough_stage2_stem" and gen is not None:
+            g_calque = gen["tarr_calque"]
+            g_clean = g_calque.strip("-")
+            mod_text = mod["text"]
+
+            # Case C1: Opaque personal/saint/tribal modifier -> Exception: adapt modifier + calque generic
+            if mod.get("is_opaque_eponym"):
+                rule3_blocked_count += 1
+                mod_tarr = mod.get("tarr_equivalent")
+                if not mod_tarr:
+                    mod_tarr = adapt(mod_text, trans_prof)
+                if g_calque.startswith("Zant-"):
+                    tarr_hist = f"Zant-{mod_tarr}"
+                elif g_calque.endswith("-"):
+                    tarr_hist = f"{g_calque}{mod_tarr}"
+                elif g_calque.startswith("Castel-"):
+                    tarr_hist = f"{mod_tarr}burch"
+                else:
+                    tarr_hist = f"{mod_tarr}{g_clean}"
+                calque_mode = "hybrid_generic_calque"
+                pathway = f"{coined_form} -> [Rule 3 Proper Stem + Calqued Generic '{g_calque}'] -> {tarr_hist}"
+
+            # Case C2: Transparent abstract Stage 3 modifier (shield, market, toll, holy, battle)
+            elif mod.get("tarr_equivalent"):
+                t_mod = mod["tarr_equivalent"]
+                if is_direct_trans:
+                    if g_calque.startswith("Zant-"):
+                        tarr_hist = f"Zant-{t_mod}"
+                    elif g_calque.endswith("-"):
+                        tarr_hist = f"{g_calque}{t_mod}"
+                    elif g_calque.startswith("Castel-"):
+                        tarr_hist = f"Castel-{t_mod}"
+                    else:
+                        tarr_hist = f"{t_mod}{g_clean}"
+                    calque_mode = "full_semantic_calque"
+                    calque_concepts = [mod.get("semantic_concept", ""), gen.get("gloss", "")]
+                    pathway = f"{coined_form} -> [Direct Transparency Full Calque: {t_mod} + {g_calque}] -> {tarr_hist}"
+                else:
+                    # Transitional (<50y): keep adapted modifier, calque generic
+                    mod_ad = adapt(mod_text, trans_prof)
+                    tarr_hist = f"{mod_ad}{g_clean}" if not g_calque.endswith("-") else f"{g_calque}{mod_ad}"
+                    calque_mode = "hybrid_generic_calque"
+                    pathway = f"{coined_form} -> [Transitional <50y Hybrid: {mod_ad} + {g_calque}] -> {tarr_hist}"
+
+            # Case C3: NTR landscape stem + holding generic
+            else:
+                words = mod_text.split()
+                head_calq = TRANSPARENT_NTR_HEADS.get(words[0].lower()) if len(words) >= 2 else None
+                if is_direct_trans and head_calq:
+                    rest_stem = " ".join(words[1:])
+                    rest_ad = adapt(rest_stem)
+                    tarr_hist = f"{rest_ad}{g_clean}"
+                    calque_mode = "hybrid_generic_calque"
+                    calque_concepts = [head_calq[1], gen.get("gloss", "")]
+                    pathway = f"{coined_form} -> [Direct NTR Head '{words[0]}' + {g_calque}] -> {tarr_hist}"
+                elif is_direct_trans and len(words) >= 2 and words[-1].lower() in TRANSPARENT_NTR_HEADS:
+                    rest_stem = " ".join(words[:-1])
+                    tail_calq = TRANSPARENT_NTR_HEADS[words[-1].lower()]
+                    rest_ad = adapt(rest_stem)
+                    tarr_hist = f"{rest_ad}{g_clean}"
+                    calque_mode = "hybrid_generic_calque"
+                    calque_concepts = [tail_calq[1], gen.get("gloss", "")]
+                    pathway = f"{coined_form} -> [Direct NTR Tail '{words[-1]}' + {g_calque}] -> {tarr_hist}"
+                else:
+                    mod_ad = adapt(mod_text)
+                    if g_calque.startswith("Castel-"):
+                        tarr_hist = f"Castel-{mod_ad}"
+                    elif g_calque.endswith("-"):
+                        tarr_hist = f"{g_calque}{mod_ad}"
+                    else:
+                        tarr_hist = f"{mod_ad}{g_clean}"
+                    calque_mode = "hybrid_generic_calque"
+                    pathway = f"{coined_form} -> [Hybrid Generic Calque: {mod_ad} + {g_calque}] -> {tarr_hist}"
+
+        # --- BRANCH D: Passthrough Pre-867 Attested or NTR/Natural Restitution (no generic appended) ---
+        else:
+            # Guard: only inspect audit_morphemes when stem_source actually derives from audited name!
+            can_calque_audit = (
+                is_direct_trans
+                and not r3["is_opaque_proper_stem"]
+                and r3["stem_source"] in {"pre867_attested_vanilla", "existing_natural_proper_name"}
+            )
+            desc_calque, matched_cids = (
+                match_descriptive_audit_calque(r3.get("audit_morphemes") or [], lex)
+                if can_calque_audit
+                else (None, [])
+            )
+            if desc_calque:
+                tarr_hist = desc_calque
+                calque_mode = "full_semantic_calque"
+                calque_concepts = matched_cids
+                pathway = f"{coined_form} -> [Direct Transparency Audit Calque: {' + '.join(matched_cids)}] -> {tarr_hist}"
+            else:
+                if r3["is_opaque_proper_stem"]:
+                    rule3_blocked_count += 1
+                words = coined_form.split()
+                if is_direct_trans and len(words) >= 2 and words[0].lower() in TRANSPARENT_NTR_HEADS:
+                    hsuf, hgl = TRANSPARENT_NTR_HEADS[words[0].lower()]
+                    rest_ad = adapt(" ".join(words[1:]))
+                    tarr_hist = f"{rest_ad}{hsuf.strip('-')}"
+                    calque_mode = "hybrid_generic_calque"
+                    calque_concepts = [hgl]
+                    pathway = f"{coined_form} -> [Direct Transparency Head '{words[0]}' -> '{hsuf}'] -> {tarr_hist}"
+                elif is_direct_trans and len(words) >= 2 and words[-1].lower() in TRANSPARENT_NTR_HEADS:
+                    hsuf, hgl = TRANSPARENT_NTR_HEADS[words[-1].lower()]
+                    rest_ad = adapt(" ".join(words[:-1]))
+                    tarr_hist = f"{rest_ad}{hsuf.strip('-')}"
+                    calque_mode = "hybrid_generic_calque"
+                    calque_concepts = [hgl]
+                    pathway = f"{coined_form} -> [Direct Transparency Tail '{words[-1]}' -> '{hsuf}'] -> {tarr_hist}"
+                else:
+                    tarr_hist = tarr_direct
+                    calque_mode = "phonetic_mediation_direct"
+                    pathway = f"{coined_form} ({r3['coinage_culture']}) -> [Phonetic Mediation: {eff_trans_prof}] -> {tarr_hist}"
+
+        if inter_notes:
+            intermediary_applied_count += 1
+        calque_mode_counts[calque_mode] += 1
+
+        stage4_baronies[bk] = {
+            **r3,
+            "tarr_direct_pre_law": tarr_direct,
+            "tarr_hist_pre_law": tarr_hist,
+            "coined_hanzi": hanzi_str,
+            "calque_mode": calque_mode,
+            "calque_concepts": calque_concepts,
+            "intermediary_shifts_applied": inter_notes,
+            "phonological_pathway": pathway,
+        }
+
+    payload = {
+        "metadata": {
+            "schema_version": "1.0.0",
+            "pipeline_stage": "stage_4_calquing_and_phonological_mediation",
+            "total_baronies": len(stage4_baronies),
+            "occupied_baronies": sum(calque_mode_counts.values()),
+            "unoccupied_baronies": len(stage4_baronies) - sum(calque_mode_counts.values()),
+            "calque_mode_counts": dict(calque_mode_counts),
+            "rule3_opaque_calque_blocks": rule3_blocked_count,
+            "intermediary_shift_applications": intermediary_applied_count,
+        },
+        "baronies": stage4_baronies,
+    }
+    return payload
+
+
+def main() -> None:
+    payload = run_stage4()
+    out_path = DATA_DIR / "pipeline_stage4_mediated.json"
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))
+    print(f"Wrote {out_path} ({out_path.stat().st_size / (1024*1024):.2f} MB)")
+    print("Stage 4 metadata:", json.dumps(payload["metadata"], indent=2))
+
+
+if __name__ == "__main__":
+    main()

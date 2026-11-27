@@ -156,7 +156,10 @@ Crucially, **coin the compound in `coinage_culture`'s own morphological system f
 
 ---
 
-### Stage 4: Procedure 1 & 2 Transparency, Calquing & Phonological Mediation
+### Stage 4: Procedure 1 & 2 Transparency, Calquing & Phonological Mediation — *Implemented*
+Implemented in [`pipeline_stage4_calque_mediation.py`](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/pipeline_stage4_calque_mediation.py) $\rightarrow$ [`data/pipeline_stage4_mediated.json`](file:///home/siarzhuk/code/personal/tarraconian_hre/data/pipeline_stage4_mediated.json) (`33.01 MB`), emitting both `tarr_direct_pre_law` and canonical `tarr_hist_pre_law` across all `10,239` occupied baronies:
+- **Track S Logographic & Phonetic Modes:** `sinosphere_procedure1_calque` (`1,577` using the 1,235-char CJK lexicon), `sinosphere_hybrid_generic_calque` (`80`), and `sinosphere_12c_phonetic` (`457`).
+- **Procedure 2 & Rule 3 Gates:** `hybrid_generic_calque` (`3,902`), `phonetic_mediation_direct` (`2,392`), `full_semantic_calque` (`923`), and `semantic_rupture_phonetic` (`908`), enforcing `1,350` Rule 3 opaque calque blocks and `163` historical multi-hop intermediary shifts via single-pass cascade-free substitution tables (`0` raw CJK Hanzi leaks).
 
 Once Stages 1–3 produce a **source-stratum name** in `coinage_culture` (with its morphemic glosses if descriptive or newly coined), Stage 4 determines how Tarraconian clerks absorb it using `barony_toponymic_profiles.json`'s `continuity_status` (`cs`) and `transmission_culture` (`t`):
 

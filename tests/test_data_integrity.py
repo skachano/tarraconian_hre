@@ -2259,6 +2259,44 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_vestfirdir"]["saint_dedication"]["native_name"] == "Thorlak"
         assert baronies["b_bagerhat"]["coined_hanzi"] == "高觀"
 
+    def test_pipeline_stage4_calque_mediation(self):
+        import re
+
+        path = REPO_DIR / "data" / "pipeline_stage4_mediated.json"
+        assert path.exists(), "data/pipeline_stage4_mediated.json missing"
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        meta = data["metadata"]
+        baronies = data["baronies"]
+        assert meta["total_baronies"] == 11297 == len(baronies)
+        assert meta["occupied_baronies"] == 10239
+        assert meta["unoccupied_baronies"] == 1058
+        assert sum(meta["calque_mode_counts"].values()) == 10239
+
+        for bk, rec in baronies.items():
+            if not rec["is_occupied"]:
+                assert rec["final_record"]["name"] == ""
+                continue
+            th = rec["tarr_hist_pre_law"]
+            td = rec["tarr_direct_pre_law"]
+            assert th and td, f"{bk} missing pre-law Tarraconian string"
+            assert "_" not in th and "_" not in td
+            assert not re.search(r"[\u3400-\u9fff]", th), f"Raw Hanzi leak in {bk}: {th}"
+            assert not re.search(r"[\u3400-\u9fff]", td), f"Raw Hanzi leak in {bk} direct: {td}"
+            assert not re.search(r"dstsch|tschtsch|schch", th, re.I), f"Cascade cluster in {bk}: {th}"
+
+        # Verify Procedure 1, Procedure 2, and Rule 4 Semantic Rupture spot checks
+        assert baronies["b_EMan_Huligai"]["calque_mode"] == "sinosphere_procedure1_calque"
+        assert baronies["b_EMan_Huligai"]["tarr_hist_pre_law"] == "Hûchânflôz"
+        assert baronies["b_bagerhat"]["calque_mode"] == "sinosphere_procedure1_calque"
+        assert baronies["b_bagerhat"]["tarr_hist_pre_law"] == "Hôchzelle"
+        assert baronies["b_algeciras"]["tarr_hist_pre_law"] == "Grûneinsel"
+        assert baronies["b_kalocsa"]["tarr_hist_pre_law"] == "Donaustat"
+        assert baronies["b_ka'abir"]["calque_mode"] == "hybrid_generic_calque"
+        assert baronies["b_Goryeo_Seohae_Jangyeon"]["calque_mode"] == "semantic_rupture_phonetic"
+        assert baronies["b_Goryeo_Seohae_Jangyeon"]["tarr_hist_pre_law"] == "Dschangyeongang"
+
     def test_pipeline_stage1_routing(self):
         path = REPO_DIR / "data" / "pipeline_stage1_routed.json"
         assert path.exists(), "data/pipeline_stage1_routed.json missing"
