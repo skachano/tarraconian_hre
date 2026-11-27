@@ -10,6 +10,12 @@ import re
 import sys
 from pathlib import Path
 
+_SCRIPTS_DIR = Path(__file__).resolve().parent
+if str(_SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS_DIR))
+
+from tarraconian_phonotactics import check_title_phonotactics  # noqa: E402
+
 def clean_title(raw_str):
     """Strip prefixes, markdown formatting, IPA, and philological notes."""
     s = raw_str.strip()
@@ -22,62 +28,6 @@ def clean_title(raw_str):
     s = re.sub(r"^(Kûnincrich|Gubernat|Keiserrîch|Magistrat|Erzbisdom|Fürstbisdom)\s+van\s+(?:dem\s+|der\s+|den\s+)?", "", s, flags=re.I)
     return s.strip()
 
-def check_title_phonotactics(raw_title, key, source_context):
-    issues = []
-    
-    # Check parenthetical / variant forms if present
-    # e.g. "Gubernat van X *(or Y)*"
-    parts = re.split(r"\s*(?:\*\(or\s+|\bor\b|\/)\s*", raw_title)
-    
-    for part in parts:
-        part_clean = clean_title(part)
-        # ignore empty or note parts
-        if not part_clean or "direct vanilla" in part_clean.lower() or "attested" in part_clean.lower() or "calque" in part_clean.lower():
-            continue
-            
-        name = part_clean.strip("()*, ")
-        
-        # 1. Acute accents (should be circumflex)
-        acutes = re.findall(r"[áéíóúÁÉÍÓÚ]", name)
-        if acutes:
-            issues.append(f"Acute accent {acutes} in '{name}' (must use circumflex â, ê, î, ô, û)")
-            
-        # 2. Illicit digraph: eo (Modern Korean Revised Romanization; exempt Greek Georg-, Neo-, and Theo-)
-        if re.search(r"(?<!g)(?<!n)(?<!th)eo", name, re.I):
-            issues.append(f"Illicit digraph 'eo' in '{name}' (prohibited modern Korean Romanization)")
-
-        # 3. Modern Pinyin: zh (exempting Tarraconian compound boundaries like Flôz-hügil, Grôz-hâven, Swartz-hirsch)
-        if re.search(r"zh(?!(?:eim|ûsen|âven|aven|ügil|irsch|êilichdom|îa|êl|ôch|olm|of|ûs|ain|age|al|out))", name, re.I):
-            issues.append(f"Modern Pinyin 'zh' in '{name}' (must be 'dsch')")
-
-        # 4. Bare 'sh' (not part of 'sch', exempting compound boundaries like -heim, -hûsen, -hâven, -hügil, -hêl, -holm)
-        sh_matches = re.findall(r"(?<!c)sh(?!(?:eim|ûsen|âven|aven|ügil|irsch|êilichdom|îa|êl|ôch|olm|of|ûs|ain|age|al|out))", name, re.I)
-        if sh_matches:
-            issues.append(f"Non-German 'sh' {sh_matches} in '{name}' (must be 'sch')")
-
-        # 5. Initial ts- (Rule 5.1: Initial [ts] is strictly 'z-')
-        ts_init = re.findall(r"\bts(?!ch)", name, re.I)
-        if ts_init:
-            issues.append(f"Initial 'ts-' (not 'tsch-') in '{name}' (Rule 5.1: Initial [ts] must be 'z-')")
-
-        # 6. Pinyin bare q (not 'qu')
-        if re.search(r"\bq(?!u)", name, re.I):
-            issues.append(f"Pinyin 'q-' in '{name}' (must be 'tsch' or 'ch')")
-
-        # 7. Final -burg instead of -burch (Auslautverhärtung)
-        if re.search(r"burg\b", name, re.I):
-            issues.append(f"Final '-burg' in '{name}' (Auslautverhärtung requires '-burch')")
-
-        # 8. Final -bad instead of -bat
-        if re.search(r"bad\b", name, re.I) and not re.search(r"bagdad", name, re.I):
-            issues.append(f"Final '-bad' in '{name}' (Auslautverhärtung requires '-bat')")
-
-        # 9. Word-final -dsch instead of -tsch
-        if re.search(r"dsch\b", name, re.I):
-            issues.append(f"Word-final '-dsch' in '{name}' (Auslautverhärtung requires '-tsch')")
-
-    return issues
-
 def audit_sinosphere():
     print("=== AUDITING SINOSPHERE KINGDOMS & DUCHIES ===")
     
@@ -88,11 +38,11 @@ def audit_sinosphere():
     sino_titles = []
     for line in sino_md.splitlines():
         # Kingdoms
-        m_k = re.search(r"^####\s+[\d\.]+\s+Kingdom\s+of\s+([^(]+)\(`(k_[^`]+)`\s*/\s*([^)]+)\)\s*—\s*(.+)", line)
+        m_k = re.search(r"^####\s+[\d\.]+\s+Kingdom\s+of\s+([^(]+)\(`(k_[^`]+)`\s*/\s*([^)]+)\)\s*—\s*\*\*([^*]+)\*\*", line)
         if m_k:
             sino_titles.append((m_k.group(2), f"Kingdom of {m_k.group(1).strip()}", m_k.group(4).strip(), "sinosphere_titles_and_characters_1154.md"))
         # Duchies
-        m_d = re.search(r"^#####\s+Duchy\s+of\s+([^(]+)\(`([dx][^`]+)`\s*/\s*([^)]+)\)\s*—\s*(.+)", line)
+        m_d = re.search(r"^#####\s+Duchy\s+of\s+([^(]+)\(`([dx][^`]+)`\s*/\s*([^)]+)\)\s*—\s*\*\*([^*]+)\*\*", line)
         if m_d:
             sino_titles.append((m_d.group(2), f"Duchy of {m_d.group(1).strip()}", m_d.group(4).strip(), "sinosphere_titles_and_characters_1154.md"))
 

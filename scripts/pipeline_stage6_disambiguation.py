@@ -39,7 +39,7 @@ import sys
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from audit_phonotactics_titles import check_title_phonotactics
+from tarraconian_phonotactics import ValidationContext, check_title_phonotactics
 from pipeline_stage4_calque_mediation import (
     NON_LATIN_MISATTRIBUTED,
     adapt_latin_to_tarraconian,
@@ -204,10 +204,25 @@ def finalize_candidate_name(
         _, gen2 = strip_holding_generic(normalized)
         if gen2 in COASTAL_GENERICS:
             return None
+    def _ctx(rec: dict) -> ValidationContext:
+        dv = rec.get("daughter_dialect_variant")
+        dial = dv.get("dialect", "") if isinstance(dv, dict) else ""
+        pt = rec.get("pipeline_track", "") or ""
+        return ValidationContext(
+            title_key=rec.get("barony_key", ""),
+            pipeline_track=pt,
+            coinage_culture=rec.get("coinage_culture", "") or "",
+            transmission_culture=rec.get("transmission_culture", "") or "",
+            macro_family=rec.get("coinage_morphology_family", "") or "",
+            daughter_dialect=dial,
+            is_sinosphere=bool(rec.get("is_sinosphere_scope", False)) or pt.startswith("Track_S"),
+        )
+
     issues = check_title_phonotactics(
         normalized,
         b_rec["barony_key"],
-        b_rec.get("hierarchy", {}).get("empire", ""),
+        b_rec.get("pipeline_track", "") or b_rec.get("hierarchy", {}).get("empire", ""),
+        context=_ctx(b_rec),
     )
     if issues:
         return None
@@ -933,7 +948,19 @@ def main() -> None:
         for bk in bks:
             b_rec = baronies_s5[bk]
             th = b_rec["tarr_hist"]
-            issues = check_title_phonotactics(th, bk, b_rec.get("hierarchy", {}).get("empire", ""))
+            dv_cur = b_rec.get("daughter_dialect_variant")
+            dial_cur = dv_cur.get("dialect", "") if isinstance(dv_cur, dict) else ""
+            pt_cur = b_rec.get("pipeline_track", "") or ""
+            v_ctx = ValidationContext(
+                title_key=bk,
+                pipeline_track=pt_cur,
+                coinage_culture=b_rec.get("coinage_culture", "") or "",
+                transmission_culture=b_rec.get("transmission_culture", "") or "",
+                macro_family=b_rec.get("coinage_morphology_family", "") or "",
+                daughter_dialect=dial_cur,
+                is_sinosphere=bool(b_rec.get("is_sinosphere_scope", False)) or pt_cur.startswith("Track_S"),
+            )
+            issues = check_title_phonotactics(th, bk, pt_cur or b_rec.get("hierarchy", {}).get("empire", ""), context=v_ctx)
             if issues:
                 phonotactic_failures += 1
             for pbk, pth in county_seen:

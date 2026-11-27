@@ -1,0 +1,650 @@
+# Tarraconian Phonotactics & Chancellery Orthography Specification
+# Canonical machine-readable ruleset derived from:
+#   - tarraconian_linguistics_guide.md (1194 Chancellery Standard)
+#   - sinosphere_phonetics_and_transcription_guide_1154.md
+#
+# Repository location: data/tarraconian_phonotactics.yaml
+# Consumed by: scripts/tarraconian_phonotactics.py (validator),
+#              scripts/audit_phonotactics_titles.py (legacy compatibility CLI),
+#              scripts/pipeline_stage5_sound_laws.py (normalizer & validator),
+#              scripts/pipeline_stage6_disambiguation.py (disambiguation gate),
+#              tests/test_data_integrity.py (regression suite)
+
+schema_version: "2.0.0"
+standard: "1194 Chancellery Standard"
+source_guides:
+  - "tarraconian_linguistics_guide.md"
+  - "sinosphere_phonetics_and_transcription_guide_1154.md"
+
+# ---------------------------------------------------------------------------
+# 1. Orthographic & Phonemic Inventory (§ 2.1 & § 2.2)
+# ---------------------------------------------------------------------------
+inventory:
+  allowed_chars: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzâêîôûÂÊÎÔÛäöüÄÖÜïëÏ '-"
+
+  vowels:
+    short: ["a", "e", "i", "o", "u", "y"]
+    long: ["â", "ê", "î", "ô", "û"]
+    umlaut: ["ä", "ö", "ü"]
+    diaeresis: ["ï", "ë"]
+    diphthongs: ["ei", "ai", "ay", "ou", "au", "eu", "iu", "îe", "ie", "oe"]
+
+  # Ordered longest-first for greedy Grapheme-to-Phoneme (G2P) tokenization
+  grapheme_to_phoneme:
+    - { grapheme: "dsch", phoneme: "dʒ", kind: "C" }
+    - { grapheme: "tsch", phoneme: "tʃ", kind: "C" }
+    - { grapheme: "sch",  phoneme: "ʃ",  kind: "C" }
+    - { grapheme: "ch",   phoneme: "x",  kind: "C" }   # palatalized to ç after front vowels
+    - { grapheme: "tz",   phoneme: "ts", kind: "C" }
+    - { grapheme: "dz",   phoneme: "dz", kind: "C" }   # voiced alveolar affricate (Tibetan/Albanian)
+    - { grapheme: "ng",   phoneme: "ŋ",  kind: "C" }
+    - { grapheme: "nk",   phoneme: "ŋk", kind: "C" }
+    - { grapheme: "nj",   phoneme: "ɲ",  kind: "C" }
+    - { grapheme: "ny",   phoneme: "ɲ",  kind: "C" }
+    - { grapheme: "nh",   phoneme: "ɲ",  kind: "C" }
+    - { grapheme: "lj",   phoneme: "ʎ",  kind: "C" }
+    - { grapheme: "ll",   phoneme: "ʎ",  kind: "C" }
+    - { grapheme: "ff",   phoneme: "f",  kind: "C" }
+    - { grapheme: "tg",   phoneme: "dʒ", kind: "C" }   # Old Catalan substrate variant
+    - { grapheme: "ei",   phoneme: "ɛɪ", kind: "V", weight: 2 }
+    - { grapheme: "ai",   phoneme: "aɪ", kind: "V", weight: 2 }
+    - { grapheme: "ay",   phoneme: "aɪ", kind: "V", weight: 2 }
+    - { grapheme: "ou",   phoneme: "ɔʊ", kind: "V", weight: 2 }
+    - { grapheme: "au",   phoneme: "ɔʊ", kind: "V", weight: 2 }
+    - { grapheme: "eu",   phoneme: "ɔʏ", kind: "V", weight: 2 }
+    - { grapheme: "iu",   phoneme: "yː", kind: "V", weight: 2 }
+    - { grapheme: "îe",   phoneme: "iː", kind: "V", weight: 2 }
+    - { grapheme: "ie",   phoneme: "iə", kind: "V", weight: 2 }
+    - { grapheme: "oe",   phoneme: "øː", kind: "V", weight: 2 }
+    - { grapheme: "â",    phoneme: "aː", kind: "V", weight: 2 }
+    - { grapheme: "ê",    phoneme: "eː", kind: "V", weight: 2 }
+    - { grapheme: "î",    phoneme: "iː", kind: "V", weight: 2 }
+    - { grapheme: "ô",    phoneme: "oː", kind: "V", weight: 2 }
+    - { grapheme: "û",    phoneme: "uː", kind: "V", weight: 2 }
+    - { grapheme: "ä",    phoneme: "ɛ",  kind: "V", weight: 1 }
+    - { grapheme: "ö",    phoneme: "øː", kind: "V", weight: 2 }
+    - { grapheme: "ü",    phoneme: "yː", kind: "V", weight: 2 }
+    - { grapheme: "ï",    phoneme: "i",  kind: "V", weight: 1 }
+    - { grapheme: "ë",    phoneme: "e",  kind: "V", weight: 1 }
+    - { grapheme: "a",    phoneme: "a",  kind: "V", weight: 1 }
+    - { grapheme: "e",    phoneme: "ɛ",  kind: "V", weight: 1 }
+    - { grapheme: "i",    phoneme: "ɪ",  kind: "V", weight: 1 }
+    - { grapheme: "o",    phoneme: "ɔ",  kind: "V", weight: 1 }
+    - { grapheme: "u",    phoneme: "ʊ",  kind: "V", weight: 1 }
+    - { grapheme: "y",    phoneme: "ɪ",  kind: "V", weight: 1 }
+    - { grapheme: "z",    phoneme: "ts", kind: "C" }
+    - { grapheme: "c",    phoneme: "k",  kind: "C" }   # ts before e/i/ê/î/y handled in G2P
+    - { grapheme: "x",    phoneme: "ks", kind: "C" }
+    - { grapheme: "g",    phoneme: "ɡ",  kind: "C" }
+    - { grapheme: "b",    phoneme: "b",  kind: "C" }
+    - { grapheme: "d",    phoneme: "d",  kind: "C" }
+    - { grapheme: "f",    phoneme: "f",  kind: "C" }
+    - { grapheme: "h",    phoneme: "h",  kind: "C" }
+    - { grapheme: "j",    phoneme: "j",  kind: "C" }
+    - { grapheme: "k",    phoneme: "k",  kind: "C" }
+    - { grapheme: "l",    phoneme: "l",  kind: "C" }
+    - { grapheme: "m",    phoneme: "m",  kind: "C" }
+    - { grapheme: "n",    phoneme: "n",  kind: "C" }
+    - { grapheme: "p",    phoneme: "p",  kind: "C" }
+    - { grapheme: "q",    phoneme: "k",  kind: "C" }   # qu+vowel -> kw handled in G2P
+    - { grapheme: "r",    phoneme: "r",  kind: "C" }
+    - { grapheme: "s",    phoneme: "s",  kind: "C" }
+    - { grapheme: "t",    phoneme: "t",  kind: "C" }
+    - { grapheme: "v",    phoneme: "v",  kind: "C" }
+    - { grapheme: "w",    phoneme: "w",  kind: "C" }
+
+  # Sonority hierarchy for onset rise / coda fall / Syllable Contact Law
+  # 1=stop, 2=affricate, 3=fricative, 4=nasal, 5=liquid, 6=glide, 7=vowel
+  sonority:
+    p: 1
+    b: 1
+    t: 1
+    d: 1
+    k: 1
+    ɡ: 1
+    ts: 2
+    dz: 2
+    tʃ: 2
+    dʒ: 2
+    f: 3
+    v: 3
+    s: 3
+    z: 3
+    ʃ: 3
+    ç: 3
+    x: 3
+    h: 3
+    m: 4
+    n: 4
+    ɲ: 4
+    ŋ: 4
+    l: 5
+    ʎ: 5
+    r: 5
+    j: 6
+    w: 6
+
+# ---------------------------------------------------------------------------
+# 2. Morpheme & Compound Boundary Segmentation
+# ---------------------------------------------------------------------------
+morphology:
+  # Administrative / title prefixes stripped before stem phonotactics
+  title_prefixes:
+    - "Kûnincrich"
+    - "Gubernat"
+    - "Keiserrîch"
+    - "Magistrat"
+    - "Erzbisdom"
+    - "Fürstbisdom"
+    - "Regenat"
+    - "Veguerîe"
+    - "Herzogamt"
+    - "Bisbalîe"
+
+  # Grammatical particles exempt from stem-level stress / apocope checks
+  lowercase_particles:
+    - "van"
+    - "vom"
+    - "von"
+    - "am"
+    - "an"
+    - "in"
+    - "im"
+    - "der"
+    - "dem"
+    - "den"
+    - "dat"
+    - "ende"
+    - "und"
+    - "al"
+    - "el"
+    - "de"
+    - "del"
+    - "du"
+    - "es"
+    - "er"
+    - "zu"
+    - "op"
+
+  # Productive Tarraconian compound generics (synced with multilingual_morpheme_calque_lexicon.json)
+  # Used to locate genuine morpheme seams (e.g. Grôz+hâven, Ôst+sachsen, Bucht+sunnen)
+  compound_suffixes:
+    # H-initial generics (protects -z+h- / -s+h- seams)
+    - "hêilichdom"
+    - "hôfstat"
+    - "haffburch"
+    - "hâven"
+    - "haven"
+    - "hûsen"
+    - "hügil"
+    - "hügel"
+    - "hirsch"
+    - "himel"
+    - "hâgen"
+    - "heim"
+    - "hirz"
+    - "hêde"
+    - "hôch"
+    - "holm"
+    - "holz"
+    - "hain"
+    - "hage"
+    - "hout"
+    - "hôf"
+    - "hof"
+    - "hûs"
+    - "hêl"
+    - "hîa"
+    - "hal"
+    # S-initial generics (protects -t+s- seams like Ôstsachsen, Altsôl, Buchtsunnen, Geistschatz)
+    - "sachsen"
+    - "schatz"
+    - "schâf"
+    - "schön"
+    - "silber"
+    - "sunnen"
+    - "sunne"
+    - "sêlich"
+    - "santer"
+    - "stater"
+    - "stein"
+    - "stern"
+    - "starc"
+    - "stûl"
+    - "stûr"
+    - "stîg"
+    - "slacht"
+    - "strâte"
+    - "stat"
+    - "salz"
+    - "sant"
+    - "sêge"
+    - "swartz"
+    - "snê"
+    - "sût"
+    - "sê"
+    - "sôl"
+    # Core holding & topographic generics
+    - "kirchen"
+    - "munster"
+    - "clôster"
+    - "meschit"
+    - "tempel"
+    - "brücke"
+    - "burch"
+    - "berch"
+    - "march"
+    - "marct"
+    - "veste"
+    - "stifft"
+    - "castel"
+    - "zelle"
+    - "brunn"
+    - "bache"
+    - "bühil"
+    - "flôz"
+    - "dorf"
+    - "vurt"
+    - "furt"
+    - "lant"
+    - "walt"
+    - "wald"
+    - "velt"
+    - "feld"
+    - "wart"
+    - "werc"
+    - "palz"
+    - "port"
+    - "ouwe"
+    - "euwe"
+    - "rîch"
+    - "schân"
+    - "tscho"
+    - "tal"
+    - "dal"
+    - "dom"
+    - "amt"
+    - "veit"
+    - "wîe"
+
+  compound_prefixes:
+    - "Nider"
+    - "Ober"
+    - "Hilich"
+    - "Hilig"
+    - "Swartz"
+    - "Klein"
+    - "Grôz"
+    - "Zant"
+    - "Nord"
+    - "West"
+    - "Ôst"
+    - "Sût"
+    - "Alt"
+    - "Nîe"
+
+# ---------------------------------------------------------------------------
+# 3. Syllable Template & Cluster Phonotactics (§ 3 Rule 4 & Rule 5)
+# ---------------------------------------------------------------------------
+syllable_template:
+  max_onset_phonemes: 3
+  max_coda_phonemes: 4
+
+  # Permitted 2- and 3-phoneme word-initial onsets (Rhine-Moselle Franconian, Old Catalan & attested loans)
+  permitted_complex_onsets:
+    # Stop + liquid
+    - ["p", "r"]
+    - ["b", "r"]
+    - ["t", "r"]
+    - ["d", "r"]
+    - ["k", "r"]
+    - ["ɡ", "r"]
+    - ["p", "l"]
+    - ["b", "l"]
+    - ["k", "l"]
+    - ["ɡ", "l"]
+    # Fricative + liquid / glide / nasal / stop
+    - ["f", "r"]
+    - ["f", "l"]
+    - ["v", "r"]
+    - ["v", "l"]
+    - ["w", "r"]
+    - ["x", "r"]
+    - ["x", "l"]
+    - ["ʃ", "r"]
+    - ["ʃ", "t"]
+    - ["s", "f"]
+    # Unshifted MHG sibilant + sonorant / stop (Rule 1.2) & Norse sv-
+    - ["s", "w"]
+    - ["s", "v"]
+    - ["s", "l"]
+    - ["s", "m"]
+    - ["s", "n"]
+    - ["s", "p"]
+    - ["s", "t"]
+    - ["s", "k"]
+    # 3-phoneme sibilant + stop + liquid
+    - ["s", "p", "r"]
+    - ["s", "t", "r"]
+    - ["s", "k", "r"]
+    - ["s", "p", "l"]
+    - ["s", "k", "l"]
+    - ["s", "k", "j"]
+    - ["s", "kw"]
+    # Stop / affricate + glide / nasal / voiced labiodental / aspirate
+    - ["k", "w"]
+    - ["t", "w"]
+    - ["d", "w"]
+    - ["d", "v"]
+    - ["ɡ", "w"]
+    - ["ts", "w"]
+    - ["ts", "v"]
+    - ["k", "n"]
+    - ["ɡ", "n"]
+    - ["k", "v"]
+    - ["x", "w"]
+    - ["t", "b"]
+    # Classical Greek / Welsh / Thai / Tibetan orthographic aspirate digraphs
+    - ["t", "h"]
+    - ["t", "h", "r"]
+    - ["p", "h"]
+    - ["p", "h", "r"]
+    - ["r", "h"]
+    - ["l", "h"]
+    # Old English / Old Norse / Slovak / Dalmatian / Burmese initial h + sonorant & Croatian slj-
+    - ["h", "w"]
+    - ["h", "v"]
+    - ["h", "r"]
+    - ["h", "l"]
+    - ["h", "j"]
+    - ["h", "n"]
+    - ["s", "ʎ"]
+    # Catalan / Romance / Nordic palatalized onsets
+    - ["p", "j"]
+    - ["b", "j"]
+    - ["f", "j"]
+    - ["v", "j"]
+    - ["m", "j"]
+    - ["n", "j"]
+    - ["s", "j"]
+    - ["t", "j"]
+    - ["d", "j"]
+    - ["k", "j"]
+    - ["ɡ", "j"]
+
+  # Explicit grapheme-level forbidden initial clusters (Rule 4 & Rule 5.1)
+  forbidden_initial_clusters:
+    - { pattern: "ng",    rule: "L3_INIT_VELAR_NASAL",       suggestion: "Insert prosthetic vowel (Ing-) or simplify to G-" }
+    - { pattern: "kh",    rule: "L2_FOREIGN_KH",             suggestion: "Replace foreign kh- with chancellery ch-" }
+    - { pattern: "bh",    rule: "L2_INDIC_ASPIRATE",         suggestion: "Deaspirate bh- to b-" }
+    - { pattern: "dh",    rule: "L2_INDIC_ASPIRATE",         suggestion: "Deaspirate dh- to d-" }
+    - { pattern: "gh",    rule: "L2_INDIC_ASPIRATE",         suggestion: "Deaspirate gh- to g-" }
+    - { pattern: "schw",  rule: "L2_NHG_SCH_SONORANT",       suggestion: "Preserve MHG Rhine-Moselle sw-" }
+    - { pattern: "schl",  rule: "L2_NHG_SCH_SONORANT",       suggestion: "Preserve MHG Rhine-Moselle sl-" }
+    - { pattern: "schm",  rule: "L2_NHG_SCH_SONORANT",       suggestion: "Preserve MHG Rhine-Moselle sm-" }
+    - { pattern: "schn",  rule: "L2_NHG_SCH_SONORANT",       suggestion: "Preserve MHG Rhine-Moselle sn-" }
+    - { pattern: "pf",    rule: "L2_UPPER_GERMAN_PF",        suggestion: "Preserve unshifted Rhine-Moselle p-" }
+    - { pattern: "stsch", rule: "L3_REDUNDANT_AFFRICATE",    suggestion: "Simplify stsch- to sch-" }
+    - { pattern: "wsch",  rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Repair via vowel epenthesis (Wisch-)" }
+    - { pattern: "mtz",   rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Repair via vowel epenthesis (Metz-)" }
+    - { pattern: "zch",   rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Repair via vowel epenthesis" }
+    - { pattern: "sr",    rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Insert homorganic stop (str-)" }
+    - { pattern: "rj",    rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Front vowel instead of palatal cluster (Rê-)" }
+    - { pattern: "plj",   rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Front vowel instead of palatal cluster (Plê-)" }
+    - { pattern: "ps",    rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Repair via vowel epenthesis (Pes-)" }
+    - { pattern: "pt",    rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Repair via vowel epenthesis or simplification" }
+    - { pattern: "kt",    rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Repair via vowel epenthesis" }
+    - { pattern: "tm",    rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Repair via vowel epenthesis (Tam-)" }
+    - { pattern: "ms",    rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Repair via vowel epenthesis (Mes-)" }
+    - { pattern: "mr",    rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Repair sonority inversion via vowel epenthesis" }
+    - { pattern: "mt",    rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Repair sonority inversion via vowel epenthesis" }
+    - { pattern: "mb",    rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Repair prenasalized onset via epenthesis or simplification" }
+    - { pattern: "mp",    rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Repair prenasalized onset via epenthesis or simplification" }
+    - { pattern: "nd",    rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Repair prenasalized onset via epenthesis or simplification" }
+    - { pattern: "nt",    rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Repair prenasalized onset via epenthesis or simplification" }
+    - { pattern: "nk",    rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Repair prenasalized onset via epenthesis or simplification" }
+    - { pattern: "nz",    rule: "L3_ILLICIT_ONSET_CLUSTER",  suggestion: "Repair prenasalized onset via epenthesis or simplification" }
+
+# ---------------------------------------------------------------------------
+# 4. Stratum & Daughter Dialect Profiles (§ 3 Rule 3 & § 6)
+# ---------------------------------------------------------------------------
+stratum_profiles:
+  affricate_j_suspect_families:
+    - "sinosphere"
+    - "indic"
+    - "korean"
+    - "japonic"
+    - "chinese"
+    - "turkic"
+    - "iranian"
+    - "african"
+    - "east_african"
+    - "west_african"
+    - "sahelian"
+
+  daughter_dialects:
+    Alpine-Tarraconian:
+      guide_ref: "§ 6.1"
+      ipa_expectation: "û -> [yː], final -n -> [ŋ]"
+      relaxed_rules: []
+    Croato-Tarraconian:
+      guide_ref: "§ 6.2"
+      ipa_expectation: "initial w- -> [v]; syllabic r permitted in attested stems (e.g. Krk)"
+      relaxed_rules: ["L3_ILLICIT_ONSET_CLUSTER"]
+      exempt_tokens: ["Krk"]
+    Ungwârer:
+      guide_ref: "§ 6.3"
+      ipa_expectation: "Circumflex long vowels preserved onto Old Hungarian long vowels"
+      relaxed_rules: []
+
+# ---------------------------------------------------------------------------
+# 5. Four-Layer Rule Catalog
+# ---------------------------------------------------------------------------
+rules:
+  # --- Layer 1: Orthography & Grapheme Hygiene ---
+  L1_DISALLOWED_CHAR:
+    layer: "L1_orthography"
+    severity: "error"
+    guide_ref: "§ 2"
+    description: "Character outside the 1194 Chancellery Latin + circumflex/umlaut inventory."
+  L1_ACUTE_OR_GRAVE_ACCENT:
+    layer: "L1_orthography"
+    severity: "error"
+    guide_ref: "§ 2.1"
+    description: "Acute or grave vowel accents are forbidden; long vowels must use circumflexes (â, ê, î, ô, û)."
+  L1_DOUBLE_VOWEL:
+    layer: "L1_orthography"
+    severity: "error"
+    guide_ref: "§ 2.1"
+    description: "Doubled vowels (aa, oo, uu outside qu-) must be written with circumflexes (â, ô, û)."
+  L1_PINYIN_ZH:
+    layer: "L1_orthography"
+    severity: "error"
+    guide_ref: "§ 2.2, Rule 3"
+    description: "Modern Pinyin 'zh' inside a morpheme must be rendered 'dsch' (genuine -z+h- compound seams are exempt)."
+  L1_NON_GERMAN_SH:
+    layer: "L1_orthography"
+    severity: "error"
+    guide_ref: "§ 2.2"
+    description: "Bare 'sh' (not 'sch') inside a morpheme must be rendered 'sch' (genuine -s+h- compound seams are exempt)."
+  L1_PINYIN_Q:
+    layer: "L1_orthography"
+    severity: "error"
+    guide_ref: "§ 2.2"
+    description: "Bare 'q' not followed by 'u' is illicit; use 'tsch'/'ch' (Sinosphere) or 'k' (Semitic/Turkic)."
+  L1_PINYIN_X:
+    layer: "L1_orthography"
+    severity: "warning"
+    guide_ref: "§ 2.2, Sinosphere Guide"
+    description: "Unadapted 'x' (especially Pinyin x before i/ü); escalate to error on Sinosphere tracks."
+  L1_KOREAN_RR_DIGRAPH:
+    layer: "L1_orthography"
+    severity: "error"
+    guide_ref: "§ 2.1, Sinosphere Guide"
+    description: "Modern Korean Revised Romanization 'eo' (outside Greek Georg-/Neo-/Theo-) is illicit."
+  L1_SINOSPHERE_RR_VOWEL:
+    layer: "L1_orthography"
+    severity: "warning"
+    guide_ref: "Sinosphere Guide"
+    description: "Modern Korean Revised Romanization 'ae' or 'eu' detected on a Sinosphere barony."
+  L1_TRIPLE_LETTER:
+    layer: "L1_orthography"
+    severity: "error"
+    guide_ref: "§ 2"
+    description: "Three or more identical consecutive letters."
+  L1_ENGLISH_PREPOSITION:
+    layer: "L1_orthography"
+    severity: "error"
+    guide_ref: "§ 4"
+    description: "Unadapted English preposition ('upon', 'under', 'the', 'of') inside a Tarraconian title."
+
+  # --- Layer 2: Positional & Allophonic Sound Laws ---
+  L2_FINAL_VOICED_B:
+    layer: "L2_positional"
+    severity: "error"
+    guide_ref: "§ 3 Rule 1.3 & 5.2"
+    description: "Word-final voiced '-b' violates universal Auslautverhärtung (must devoice to '-p')."
+  L2_FINAL_VOICED_D:
+    layer: "L2_positional"
+    severity: "error"
+    guide_ref: "§ 3 Rule 1.3 & 5.2"
+    description: "Word-final voiced '-d' violates universal Auslautverhärtung (must devoice to '-t')."
+  L2_FINAL_VOICED_G:
+    layer: "L2_positional"
+    severity: "error"
+    guide_ref: "§ 3 Rule 1.3 & 5.2"
+    description: "Word-final voiced '-g' (non-'-ng') violates Auslautverhärtung (must shift to '-ch')."
+  L2_FINAL_POSTVOCALIC_K:
+    layer: "L2_positional"
+    severity: "error"
+    guide_ref: "§ 3 Rule 1.1 & 5.2"
+    description: "Word-final post-vocalic '-k' must undergo Rhine-Moselle shift to '-ch'."
+  L2_FINAL_VOICED_DSCH:
+    layer: "L2_positional"
+    severity: "error"
+    guide_ref: "§ 3 Rule 1.3 & 5.2"
+    description: "Word-final voiced '-dsch' is strictly illicit (must devoice to '-tsch')."
+  L2_FINAL_TS_NOT_TZ:
+    layer: "L2_positional"
+    severity: "error"
+    guide_ref: "§ 3 Rule 5.2"
+    description: "Word-final '-ts' must be spelled '-tz'."
+  L2_INIT_TS_NOT_Z:
+    layer: "L2_positional"
+    severity: "error"
+    guide_ref: "§ 3 Rule 5.1"
+    description: "Word-initial [ts] must be written 'z-', never 'ts-'."
+  L2_MEDIAL_TS_NOT_TZ:
+    layer: "L2_positional"
+    severity: "error"
+    guide_ref: "§ 3 Rule 5.3"
+    description: "Medial '-ts-' inside a single morpheme must be written '-tz-' (compound -t+s- seams are exempt)."
+  L2_NHG_SCH_SONORANT:
+    layer: "L2_positional"
+    severity: "error"
+    guide_ref: "§ 3 Rule 1.2"
+    description: "New High German 'schw-/schl-/schm-/schn-' violates early MHG Rhine-Moselle 'sw-/sl-/sm-/sn-'."
+  L2_UPPER_GERMAN_PF:
+    layer: "L2_positional"
+    severity: "error"
+    guide_ref: "§ 3 Rule 1.2"
+    description: "Initial 'pf-' reflects Upper German shift; Rhine-Moselle preserves unshifted 'p-'."
+  L2_FOREIGN_KH:
+    layer: "L2_positional"
+    severity: "error"
+    guide_ref: "§ 3 Rule 5.1"
+    description: "Scribal 'kh' must be regularized to chancellery 'ch'."
+  L2_INDIC_ASPIRATE:
+    layer: "L2_positional"
+    severity: "error"
+    guide_ref: "§ 3 Rule 5.1"
+    description: "Initial aspirated stops 'bh-/dh-/gh-' must simplify to plain 'b-/d-/g-'."
+  L2_SLAVIC_SK_CODA:
+    layer: "L2_positional"
+    severity: "error"
+    guide_ref: "§ 3 Rule 3"
+    description: "Word-final '-sk'/'-zk' is phonotactically alien; resolve to '-tzich' or '-bsch'."
+  L2_SLAVIC_OV_CODA:
+    layer: "L2_positional"
+    severity: "warning"
+    guide_ref: "§ 3 Rule 1.3"
+    description: "Word-final '-ov/-ev/-av' should vocalize to MHG '-ouwe'/'-euwe'."
+
+  # --- Layer 3: Syllable Structure & Sonority Phonotactics ---
+  L3_INIT_VELAR_NASAL:
+    layer: "L3_syllable_cluster"
+    severity: "error"
+    guide_ref: "§ 3 Rule 5.1"
+    description: "Word-initial velar nasal 'ng-' (*#ŋ) is forbidden; insert prosthetic vowel or simplify."
+  L3_ILLICIT_ONSET_CLUSTER:
+    layer: "L3_syllable_cluster"
+    severity: "error"
+    guide_ref: "§ 3 Rule 4 & 5.1"
+    description: "Word-initial onset violates #C0^3 template, permitted onset inventory, or rising sonority."
+  L3_FINAL_SYLLABIC_LIQUID:
+    layer: "L3_syllable_cluster"
+    severity: "error"
+    guide_ref: "§ 3 Rule 4"
+    description: "Word-final obstruent + liquid (e.g. -dr, -kr, -kl, -mr, -wl) requires epenthesis or -ouwe."
+  L3_EXCESSIVE_CODA:
+    layer: "L3_syllable_cluster"
+    severity: "error"
+    guide_ref: "§ 3 Rule 5.2"
+    description: "Word-final coda exceeds the C0^4 phoneme template."
+  L3_REDUNDANT_AFFRICATE:
+    layer: "L3_syllable_cluster"
+    severity: "error"
+    guide_ref: "§ 3 Rule 4"
+    description: "Redundant sibilant/affricate stack (stsch, schsch, dschdsch, tschtsch, tztsch)."
+  L3_EXCESSIVE_MEDIAL_CLUSTER:
+    layer: "L3_syllable_cluster"
+    severity: "warning"
+    guide_ref: "§ 3 Rule 5.3"
+    description: "Unsegmented medial consonant cluster exceeding 4 phonemes across a single stem."
+
+  # --- Layer 4: Metrical, Prosodic & Stratum Consistency ---
+  L4_STRESS_TO_WEIGHT:
+    layer: "L4_metrical_stratum"
+    severity: "warning"
+    guide_ref: "§ 3 Rule 6.1"
+    description: "Primary stressed open syllable contains a short vowel instead of a long vowel or diphthong."
+  L4_FINAL_UNREDUCED_A:
+    layer: "L4_metrical_stratum"
+    severity: "warning"
+    guide_ref: "§ 3 Rule 2"
+    description: "Unaccented final '-a' on a multisyllabic stem should typically reduce to High German schwa '-e'."
+  L4_BARE_J_AFFRICATE_LEAK:
+    layer: "L4_metrical_stratum"
+    severity: "warning"
+    guide_ref: "§ 2.2, Rule 3"
+    description: "Bare 'j' appears on an affricate-prone stratum (Sinosphere/Indic/Korean/Arabic/African); verify whether [j] glide or [dʒ] ('dsch')."
+
+# ---------------------------------------------------------------------------
+# 6. Audited Exemption Registry
+# ---------------------------------------------------------------------------
+exemptions:
+  global_tokens:
+    - "IJ"          # Attested Dutch/Low Franconian hydronym (b_amsterdam)
+
+  by_rule:
+    L1_KOREAN_RR_DIGRAPH:
+      - "georg"
+      - "neo"
+      - "theo"
+      - "leon"
+      - "cleo"
+    L1_PINYIN_X:
+      - "brixen"
+      - "aix"
+      - "alexandr"
+      - "naxos"
+      - "sax"
+      - "luxem"
+      - "exeter"
+      - "oxford"
+      - "fênix"
+    L2_FINAL_VOICED_D: []
+    L2_FINAL_VOICED_G: []
+    L4_FINAL_UNREDUCED_A:
+      - "gênua"
+      - "futa"

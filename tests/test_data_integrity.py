@@ -335,7 +335,7 @@ class TestBaroniesGeoJSON:
         assert by_key["b_london"]["b_ipa"] == "[lɔn.ˈdɔn]"
 
         # Verify v2 pipeline historical/feudal/restituted holdings
-        assert by_key["b_zvenyhorod"]["name"] == "Dnisterwad"
+        assert by_key["b_zvenyhorod"]["name"] == "Denisterwat"
         assert by_key["b_lviv"]["name"] == "Emelrîchsstein"
         assert by_key["b_konigsberg"]["name"] == "Twerdypils"
 
@@ -2344,7 +2344,7 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_dublin"]["b_tarr_hist"] == "Dublinburch"
         assert baronies["b_kildare"]["b_tarr_hist"] == "Brigidmunster"
         assert baronies["b_dungannon"]["b_tarr_hist"] == "Nechachwal"
-        assert baronies["b_satama-sokoro"]["b_tarr_hist"] == "Nzistat"
+        assert baronies["b_satama-sokoro"]["b_tarr_hist"] == "Inzistat"
         assert baronies["b_taunggyi_south"]["b_tarr_hist"] == "Paotempel"
         assert baronies["b_marrakesh"]["b_tarr_hist"] == "Tansiftburch"
         assert baronies["b_benevento"]["b_tarr_hist"] == "Benevent"
@@ -2352,13 +2352,13 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_baoshun"]["b_hanzi"] == "神農架"
         assert baronies["b_aso"]["b_tarr_hist"] == "Dangs-Ra Yu-Tscho"
         # Round-4 polish regression checks
-        assert baronies["b_lidou"]["b_tarr_hist"] == "Juexipalz"
+        assert baronies["b_lidou"]["b_tarr_hist"] == "Jueschipalz"
         assert baronies["b_ijesha"]["b_tarr_hist"] == "Oduduwawîe"
         assert baronies["b_al-hajar"]["b_tarr_hist"] == "Al-Hadscharmeschit"
         assert baronies["b_PHI_Sugbu"]["b_tarr_hist"] == "Basîliclôster"
         assert baronies["b_kofuku_ji"]["b_tarr_hist"] == "Upgancsêlichtempel"
         assert baronies["b_simeulue"]["b_tarr_hist"] == "Hinakotempel"
-        assert baronies["b_sredets"]["b_tarr_hist"] == "Sredetz"
+        assert baronies["b_sredets"]["b_tarr_hist"] == "Stredetz"
         assert baronies["b_jiangjin"]["b_tarr_hist"] == "Flôzhaven"
         assert baronies["b_eketorp"]["b_tarr_hist"] == "Kârlshâven"
         assert baronies["b_datong"]["b_tarr_hist"] == "Tschîliân Schân"
@@ -2387,7 +2387,7 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_carrick"]["b_tarr_hist"] == "Baile An Ziûir"
         assert baronies["b_labrang"]["b_tarr_hist"] == "Yar-Lung Zang-Po"
         assert baronies["b_Liao_Fengzhou3"]["b_tarr_direct"] == "Anningmarch"
-        assert baronies["b_yongning"]["b_tarr_direct"] == "Nord-Lingtschiu"
+        assert baronies["b_yongning"]["b_tarr_direct"] == "Nort-Lingtschiu"
         assert baronies["b_taunggyi_south"]["b_tarr_direct"] == "Pao"
         assert "post-867 post-867" not in baronies["b_taunggyi_south"]["b_anachronism"].lower()
         assert "_" not in baronies["b_EMan_Yizhou"]["b_anachronism"]
@@ -2418,7 +2418,7 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_limia"]["b_tarr_hist"] == "Limîchmarct"
         assert baronies["b_portsmouth"]["b_tarr_hist"] == "Adurnport"
         assert baronies["b_mestre"]["b_tarr_hist"] == "Bî-Nûn"
-        assert baronies["b_annaba"]["b_tarr_hist"] == "Hippôn-Rêg"
+        assert baronies["b_annaba"]["b_tarr_hist"] == "Hippôn-Rêch"
         assert baronies["b_branicevo"]["b_tarr_hist"] == "Viminâzjenveste"
         assert baronies["b_alghero"]["b_tarr_hist"] == "Castel-Sardô"
         assert baronies["b_ditmarschen"]["b_tarr_hist"] == "Germântorn"
@@ -2431,6 +2431,22 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_abrantes"]["b_tarr_hist"] == "Ozecarmeschit"
         assert baronies["b_qasr_ash-shams"]["b_tarr_hist"] == "Marmaricestat"
         assert baronies["b_al-bahriya"]["b_tarr_hist"] == "Dschesdsches"
+        # Revised 4-layer phonotactics remediation checks
+        assert baronies["b_ak-taylak"]["b_tarr_hist"] == "Ach-Taylatschburch"
+        assert baronies["b_zhaltyr"]["b_tarr_hist"] == "Dschaltyrtübe"
+        assert baronies["b_BOR_Sibu"]["b_tarr_hist"] == "Muller-Swanertempel"
+        assert baronies["b_calw"]["b_tarr_hist"] == "Swartzwalt"
+        assert baronies["b_beichtinen"]["b_tarr_hist"] == "Smückeschanze"
+        assert baronies["b_al-hadr"]["b_tarr_hist"] == "Al-Hader"
+        assert baronies["b_hargeisa"]["b_tarr_hist"] == "Ôgomeschit"
+        assert baronies["b_kandat_uul"]["b_tarr_hist"] == "Kandat Ûl"
+        assert baronies["b_leiyang"]["b_tarr_hist"] == "Plûgsunnen"
+        assert baronies["b_momunofu"]["b_tarr_hist"] == "Pirsichlêvende"
+        assert baronies["b_mtskheta"]["b_tarr_hist"] == "Metzcheta"
+        assert baronies["b_claudiopolis"]["b_tarr_hist"] == "Claudiobolu"
+        assert baronies["b_aqmescit"]["b_tarr_hist"] == "Skythian Neapoliscastel"
+        assert baronies["b_battambang"]["b_tarr_hist"] == "Penom Samkostempel"
+        assert baronies["b_amdo"]["b_tarr_hist"] == "Do-Smat"
 
     def test_pipeline_stage1_routing(self):
         path = REPO_DIR / "data" / "pipeline_stage1_routed.json"
@@ -2471,6 +2487,81 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_FIC_Amur_Lindu"]["stage1_track"] == "Track_D2_post867_foundation"
         assert baronies["b_fic_eman_bixinshang"]["sino_scope_basis"] == "excluded_post_conquest_tarraconian"
         assert baronies["b_fic_eman_bixinshang"]["stage1_track"] == "Track_D2_post867_foundation"
+
+
+class TestTarraconianPhonotacticsSpec:
+    def test_spec_and_module_reorganized(self):
+        spec_path = REPO_DIR / "data" / "tarraconian_phonotactics.yaml"
+        mod_path = REPO_DIR / "scripts" / "tarraconian_phonotactics.py"
+        draft_dir = REPO_DIR / "phonotactics_draft"
+        assert spec_path.exists(), "data/tarraconian_phonotactics.yaml missing"
+        assert mod_path.exists(), "scripts/tarraconian_phonotactics.py missing"
+        assert not draft_dir.exists(), "phonotactics_draft should be removed after reorganization"
+
+    def test_four_layer_validator_rules_and_exemptions(self):
+        import sys
+        sys.path.insert(0, str(REPO_DIR / "scripts"))
+        from tarraconian_phonotactics import (
+            TarraconianPhonotacticsValidator,
+            ValidationContext,
+        )
+
+        val = TarraconianPhonotacticsValidator()
+        assert val.spec["schema_version"] == "2.0.0"
+
+        # Clean valid Tarraconian names & compound boundaries
+        for good in (
+            "Ôstsachsen",
+            "Grôzhâven",
+            "Buchtsunnen",
+            "Geistschatz",
+            "Stichtsunnen",
+            "Nyköbingwerc",
+            "Qurikanburch",
+            "Schiaoschîngânlingpalz",
+            "Swartzwalt",
+            "Plûgsunnen",
+        ):
+            errs = val.validate(good, ValidationContext(is_sinosphere=True), include_warnings=False)
+            assert not errs, f"Unexpected error on {good}: {[e.format_short() for e in errs]}"
+
+        # Dialect relaxation check (Krk in Croato-Tarraconian)
+        assert not val.validate("Krk", ValidationContext(daughter_dialect="Croato-Tarraconian"), include_warnings=False)
+
+        # Violation triggers across Layers 1, 2, 3
+        cases = [
+            ("Uul", "L1_DOUBLE_VOWEL", {}),
+            ("Zhaltyr", "L1_PINYIN_ZH", {}),
+            ("Suqian", "L1_PINYIN_Q", {}),
+            ("Khentiyn", "L2_FOREIGN_KH", {}),
+            ("Bhadra", "L2_INDIC_ASPIRATE", {}),
+            ("Schwartz", "L2_NHG_SCH_SONORANT", {}),
+            ("Pflûg", "L2_UPPER_GERMAN_PF", {}),
+            ("Halab", "L2_FINAL_VOICED_B", {}),
+            ("Bagdad", "L2_FINAL_VOICED_D", {}),
+            ("Hilig", "L2_FINAL_VOICED_G", {}),
+            ("Landak", "L2_FINAL_POSTVOCALIC_K", {}),
+            ("Ngamring", "L3_INIT_VELAR_NASAL", {}),
+            ("Sredetz", "L3_ILLICIT_ONSET_CLUSTER", {}),
+            ("Al-Hadr", "L3_FINAL_SYLLABIC_LIQUID", {}),
+        ]
+        for token, expected_rule, kw in cases:
+            ids = {v.rule_id for v in val.validate(token, ValidationContext(**kw), include_warnings=False)}
+            assert expected_rule in ids, f"{token} failed to trigger {expected_rule}: {ids}"
+
+    def test_all_10239_baronies_zero_phonotactic_errors(self):
+        import sys
+        sys.path.insert(0, str(REPO_DIR / "scripts"))
+        from tarraconian_phonotactics import audit_baronies_file
+
+        report = audit_baronies_file(
+            REPO_DIR / "data" / "barony_resolutions_v2.json",
+            include_warnings=False,
+        )
+        assert report["checked_baronies"] == 10239
+        assert report["baronies_with_errors"] == 0, (
+            f"Found errors: {report['rule_counts']} / {report['samples']}"
+        )
 
 
 

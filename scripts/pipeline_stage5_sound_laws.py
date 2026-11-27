@@ -26,7 +26,11 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-from audit_phonotactics_titles import check_title_phonotactics
+from tarraconian_phonotactics import (
+    ValidationContext,
+    check_title_phonotactics,
+    get_default_validator,
+)
 from resolve_barony_titles import enforce_tarraconian_sound_laws, generate_tarraconian_ipa
 
 REPO_DIR = Path(__file__).resolve().parent.parent
@@ -135,28 +139,187 @@ def pre_normalize_for_chancellery(s: str, is_sinosphere: bool = False, macro_fam
     return out
 
 
+_LOWERCASE_PARTICLES = {
+    "van", "vom", "von", "am", "an", "in", "im", "der", "dem", "den",
+    "dat", "ende", "und", "al", "el", "de", "del", "du", "es", "er", "zu", "op",
+    "upon", "under", "the", "of",
+}
+
+_PROTECTED_H_SUFFIXES = (
+    r"h(?:êilichdom|ôfstat|affburch|âven|aven|ûsen|ügil|ügel|irsch|imel|"
+    r"âgen|heim|irz|êde|ôch|olm|olz|ain|age|out|ôf|of|ûs|êl|îa)"
+)
+
+_PROTECTED_S_SUFFIXES = (
+    r"s(?:achsen|chatz|châf|chön|ilber|unnen|unne|êlich|anter|tater|tein|"
+    r"tern|tarc|tûl|tûr|tîg|lacht|trâte|tat|alz|ant|êge|wartz|nê|ût|ê|ôl|pitz|pital)"
+)
+
+
+def _apply_segment_orthography(
+    seg: str,
+    *,
+    is_sinosphere: bool = False,
+    macro_family: str = "",
+) -> str:
+    """Apply onset-cluster repairs and final Auslautverhärtung to one word/hyphen segment."""
+    if not seg or seg == "IJ" or seg.lower() in _LOWERCASE_PARTICLES:
+        return seg
+    w = seg
+
+    # Upper/Modern High German -> Rhine-Moselle Franconian
+    if re.match(r"^[Ss]ch(?:warsch|warz)", w):
+        w = re.sub(r"^[Ss]ch(?:warsch|warz)", lambda m: "Swartz" if m.group(0)[0].isupper() else "swartz", w)
+    elif re.match(r"^[Ss]ch([wlmn])", w):
+        w = re.sub(r"^[Ss]ch([wlmn])", lambda m: ("S" if m.group(0)[0].isupper() else "s") + m.group(1), w)
+    elif re.match(r"^[Ss]chv", w):
+        w = re.sub(r"^[Ss]chv", lambda m: "Sw" if m.group(0)[0].isupper() else "sw", w)
+    elif re.match(r"^[Pp]f", w):
+        w = re.sub(r"^[Pp]f", lambda m: "P" if m.group(0)[0].isupper() else "p", w)
+
+    # Simplify Czech/Polish intrusive 'Scht-' before r/p/i-clusters where German uses St-/Sp-
+    if re.match(r"^[Ss]cht(?:r|et)", w) or re.match(r"^[Ss]chp", w) or re.match(r"^[Ss]chtiav", w):
+        w = re.sub(r"^[Ss]ch([tp])", lambda m: ("S" if m.group(0)[0].isupper() else "s") + m.group(1), w)
+
+    # Aspirated stops (Gaelic lenited bh->v; Indic/Arabic bh/dh/gh -> b/d/g; Sanskrit sth -> st)
+    if macro_family in {"goidelic", "brythonic"} and re.match(r"^[Bb]h", w):
+        w = re.sub(r"^[Bb]h", lambda m: "V" if m.group(0)[0].isupper() else "v", w)
+    else:
+        w = re.sub(r"^([BbDdGg])h", r"\1", w)
+    w = re.sub(r"^(S)th", r"\1t", w, flags=re.I)
+
+    # Tibetan Wylie silent prefix cleanup inside capitalized tokens
+    if re.match(r"^[Mm]do\b", w):
+        w = ("D" if w[0].isupper() else "d") + w[2:]
+    elif re.match(r"^[Ss]by", w):
+        w = ("J" if w[0].isupper() else "j") + w[3:]
+    elif re.match(r"^[Ss]b(?=[uoy])", w):
+        w = ("B" if w[0].isupper() else "b") + w[2:]
+    elif re.match(r"^[Rr]t[sz]", w):
+        w = ("Z" if w[0].isupper() else "z") + w[3:]
+
+    # Forbidden initial velar nasal *#ŋ (Rule 5.1) -> Ing-
+    if re.match(r"^[Nn]g", w):
+        w = ("Ing" if w[0].isupper() else "ing") + w[2:]
+
+    # Prenasalized / sonority-inversion / consonant-cluster onset repairs (Rule 4 & Rule 5.1)
+    if re.match(r"^[Ss]r", w):
+        if macro_family in {"indo_aryan", "dravidian", "tai_hmong", "mon_khmer", "austronesian", "burmese_qiangic"} or w.lower().startswith("sri"):
+            w = ("Schr" if w[0].isupper() else "schr") + w[2:]
+        else:
+            w = ("Str" if w[0].isupper() else "str") + w[2:]
+    elif re.match(r"^[Pp]hn", w):
+        w = ("Pen" if w[0].isupper() else "pen") + w[3:]
+    elif re.match(r"^[Pp]s", w):
+        w = ("Pes" if w[0].isupper() else "pes") + w[2:]
+    elif re.match(r"^[Pp]tsch", w):
+        w = ("Petsch" if w[0].isupper() else "petsch") + w[4:]
+    elif re.match(r"^[Pp]t", w):
+        w = ("Pet" if w[0].isupper() else "pet") + w[2:]
+    elif re.match(r"^[Kk]t", w):
+        w = ("Ket" if w[0].isupper() else "ket") + w[2:]
+    elif re.match(r"^[Kk]b", w):
+        w = ("Keb" if w[0].isupper() else "keb") + w[2:]
+    elif re.match(r"^[Mm]tz", w):
+        w = ("Metz" if w[0].isupper() else "metz") + w[3:]
+    elif re.match(r"^[Mm][sz]", w):
+        w = ("Mes" if w[0].isupper() else "mes") + w[2:]
+    elif re.match(r"^[Mm]r", w):
+        w = ("Mer" if w[0].isupper() else "mer") + w[2:]
+    elif re.match(r"^[Mm]k", w):
+        w = ("Mek" if w[0].isupper() else "mek") + w[2:]
+    elif re.match(r"^[Mm][td]", w):
+        w = ("Me" + w[1].lower() if w[0].isupper() else "me" + w[1].lower()) + w[2:]
+    elif re.match(r"^[Nn]([dtkz])", w):
+        c2 = w[1].lower()
+        w = ("In" if w[0].isupper() else "in") + c2 + w[2:]
+    elif re.match(r"^[Mm]([bp])", w):
+        c2 = w[1].lower()
+        w = ("Em" if w[0].isupper() else "em") + c2 + w[2:]
+    elif re.match(r"^[Pp]lj", w):
+        w = ("Plê" if w[0].isupper() else "plê") + w[3:]
+    elif re.match(r"^[Tt]schh", w):
+        w = ("Tsch" if w[0].isupper() else "tsch") + w[5:]
+    elif re.match(r"^[Dd]schh", w):
+        w = ("Tsch" if w[0].isupper() else "tsch") + w[5:]
+    elif re.match(r"^[Tt]zch", w):
+        w = ("Zech" if w[0].isupper() else "zech") + w[4:]
+    elif re.match(r"^[Zz]b", w):
+        w = ("Zeb" if w[0].isupper() else "zeb") + w[2:]
+    elif re.match(r"^[Ss]wr", w):
+        w = ("Swer" if w[0].isupper() else "swer") + w[3:]
+    elif re.match(r"^[CcKk]lwy", w):
+        w = re.sub(r"^[CcKk]lwy", lambda m: "Klûi" if m.group(0)[0].isupper() else "klûi", w)
+    elif re.match(r"^[Ss]cy", w):
+        w = re.sub(r"^[Ss]cy", lambda m: "Sky" if m.group(0)[0].isupper() else "sky", w)
+    elif re.match(r"^[Ss]c(?=[eiêî])", w):
+        w = ("Z" if w[0].isupper() else "z") + w[2:]
+    elif re.match(r"^(?:[Pp]r|[Bb]r|[Cc]hr|[Kk]r|[Tt]schr)sch", w):
+        # Polish Przemsza/Brzeg/Chrzanów/Krzn -> insert -e- after initial obstruent/stop
+        w = re.sub(r"^([A-Za-z])([A-Za-z])", lambda m: m.group(1) + "e" + m.group(2).lower(), w, count=1)
+    elif re.match(r"^[Vv]rh", w):
+        w = ("Werch" if w[0].isupper() else "werch") + w[3:]
+    elif re.match(r"^[Vv]hrb", w):
+        w = ("Werchb" if w[0].isupper() else "werchb") + w[4:]
+    elif re.match(r"^(?:[Vv]r|[Cc]rv|[Kk]r[nb]|wrch|vrsch)", w, re.I):
+        if w.lower().startswith("crv"):
+            w = ("Zerw" if w[0].isupper() else "zerw") + w[3:]
+        elif w.lower().startswith("vr"):
+            w = ("Wer" if w[0].isupper() else "wer") + w[2:]
+        elif w.lower().startswith("wr"):
+            w = ("Wer" if w[0].isupper() else "wer") + w[2:]
+        else:
+            w = w[0] + "e" + w[1:]
+    elif re.match(r"^(?:[Rr]ksch|[Rr]sch|[Kk]sch|[Bb]zur|[Dd]man|[Hh]m|[Hh]kak|[Gg]z|[Ww]t|[Bb]w|[Pp]v|[Rr]k(?=[îi])|[Tt]l(?=[aeiou])|[Zz]n|[Dd]n)", w):
+        if w.lower().startswith("bw"):
+            w = ("Buw" if w[0].isupper() else "buw") + w[2:]
+        elif w.lower().startswith("rk"):
+            w = ("Rik" if w[0].isupper() else "rik") + w[2:]
+        else:
+            w = w[0] + "e" + w[1:]
+
+    # Devoice remaining word-final affricate & obstruents, then repair syllabic codas
+    w = re.sub(r"dsch$", "tsch", w)
+    w = re.sub(r"b$", "p", w)
+    w = re.sub(r"d$", "t", w)
+    w = re.sub(r"(?<!n)(?<!t)g$", "ch", w)
+    w = re.sub(r"(?<=[aeiouâêîôûäöüy])k$", "ch", w, flags=re.I)
+    w = re.sub(r"(?<!c)ts$", "tz", w)
+    w = re.sub(r"trc?h$", "terch", w)
+    # Epenthesis on final obstruent + liquid (excluding diphthong -awr/-awel)
+    w = re.sub(r"([bcdfgkpqtvz])([lr])$", r"\1e\2", w)
+    return w
+
+
 def apply_full_stage5_sound_laws(
     raw_form: str,
     is_sinosphere: bool = False,
     macro_family: str = "",
 ) -> str:
-    """Apply Stage 5 pre-normalization + canonical `enforce_tarraconian_sound_laws` + strict audit cleanup."""
+    """Apply Stage 5 pre-normalization + canonical `enforce_tarraconian_sound_laws` + Layers 1-3 cleanup."""
     s = pre_normalize_for_chancellery(raw_form, is_sinosphere=is_sinosphere, macro_family=macro_family)
     if not s:
         return ""
 
-    # Sinosphere Pinyin X before i/ü -> Sch
+    # Sinosphere Pinyin x before i/ü -> sch (both word-initial and medial inside compounds),
+    # Pinyin bare q -> tsch, Korean RR Geo -> Gô, and Korean RR ae -> ê
     if is_sinosphere:
-        s = re.sub(r"\b[Xx](?=[iuüîû])", lambda m: "Sch" if m.group(0).isupper() else "sch", s)
+        s = re.sub(r"[Xx](?=[iuüîû])", lambda m: "Sch" if m.group(0).isupper() else "sch", s)
+        s = re.sub(r"[Qq](?![uU])", lambda m: "Tsch" if m.group(0).isupper() else "tsch", s)
+        s = re.sub(r"\b[Gg]eo", lambda m: "Gô" if m.group(0)[0].isupper() else "gô", s)
+        s = re.sub(r"[Aa]e(?![uw])", lambda m: "Ê" if m.group(0)[0].isupper() else "ê", s)
 
-    # Protect genuine Tarraconian compound boundaries (-z + h-, -s + h-) from Pinyin zh->dsch / sh->sch
-    _COMPOUND_H = r"h(?:eim|ûsen|âven|aven|ügil|irsch|êilichdom|îa|êl|ôch|olm|of|ûs|ain|age|al|out)"
-    s = re.sub(rf"([ZzSs])(?={_COMPOUND_H})", "\\1\uE001", s)
+    # Protect genuine Tarraconian compound boundaries (-z/s/k + h-, -t + s-) before digraph normalizations
+    s = re.sub(rf"([ZzSsKk])(?={_PROTECTED_H_SUFFIXES})", "\\1\uE001", s)
+    s = re.sub(rf"([Tt])(?={_PROTECTED_S_SUFFIXES})", "\\1\uE002", s)
+
+    # Universal foreign 'kh' -> Chancellery 'ch' (protected -k+h- seams stay untouched)
+    s = re.sub(r"[Kk]h", lambda m: "Ch" if m.group(0)[0].isupper() else "ch", s)
 
     # Canonical Chancellery normalizer from resolve_barony_titles.py
     s = enforce_tarraconian_sound_laws(s)
 
-    # Extra Auslautverhärtung, double-vowel circumflex alignment & cluster repair
+    # Extra Auslautverhärtung & double-vowel circumflex alignment
     s = re.sub(r"burh\b", "burch", s)
     s = re.sub(r"mynster\b", "munster", s)
     s = re.sub(r"lhakhang\b", "lhachang", s)
@@ -164,10 +327,9 @@ def apply_full_stage5_sound_laws(
     s = re.sub(r"\b([NnMm])([AEIOU][a-z]{2,})", lambda m: m.group(1).upper() + m.group(2).lower(), s)
     s = re.sub(r"\b([A-Za-z]{1,2})([A-Z])(?=[a-z])", lambda m: m.group(1) + m.group(2).lower() if m.group(1) != "IJ" else m.group(0), s)
     s = re.sub(r"\b([A-Z][a-z]{1,2})([A-Z])\b", lambda m: m.group(1) + m.group(2).lower(), s)
-    s = re.sub(r"\bAa(?=[a-z])", "Â", s)
-    s = re.sub(r"aa", "â", s)
-    s = re.sub(r"oo", "ô", s)
-    s = re.sub(r"(?<![qQ])uu", "û", s)
+    s = re.sub(r"[Aa]a", lambda m: "Â" if m.group(0)[0].isupper() else "â", s)
+    s = re.sub(r"[Oo]o", lambda m: "Ô" if m.group(0)[0].isupper() else "ô", s)
+    s = re.sub(r"(?<![qQ])[Uu]u", lambda m: "Û" if m.group(0)[0].isupper() else "û", s)
     s = re.sub(r"([a-zâêîôûäöü])\1\1+", r"\1\1", s, flags=re.I)
     s = re.sub(r"schsch", "sch", s, flags=re.I)
     s = re.sub(r"dschdsch", "dsch", s, flags=re.I)
@@ -179,7 +341,7 @@ def apply_full_stage5_sound_laws(
     s = re.sub(r"\s+(schân|schui|tscho|nurû)(?=\b|burch|stat|tempel|veit|stein|meschit|palz|mai)", lambda m: " " + m.group(1)[:1].upper() + m.group(1)[1:], s)
     s = re.sub(r"\s+Hûsê\b", "sê", s)
     s = re.sub(r"(\s+Schân|-Schân)stein\b", r"\1", s)
-    s = re.sub(r"(\s+Uul)stein\b", r"\1", s)
+    s = re.sub(r"(\s+Ûl)stein\b", r"\1", s)
     s = re.sub(r"burchburch\b", "burch", s, flags=re.I)
     s = re.sub(r"berchberch\b", "berch", s, flags=re.I)
     s = re.sub(r"berchstein\b", "berch", s, flags=re.I)
@@ -188,12 +350,24 @@ def apply_full_stage5_sound_laws(
     s = re.sub(r"tzburch\b", "tzburch", s, flags=re.I)
     # Fix any surviving 'sh' not at a protected compound boundary
     s = re.sub(r"(?<!c)[Ss]h(?!(?:eim|ûsen|âven|aven|ügil|irsch|êilichdom|îa|êl|ôch|olm|of|ûs|ain|age|al|out))", lambda m: "Sch" if m.group(0)[0].isupper() else "sch", s)
-    # Fix any surviving 'eo' not after g/n/th (flagged by audit_phonotactics_titles.py)
+    # Fix any surviving 'eo' not after g/n/th
     s = re.sub(r"(?<!g)(?<!n)(?<!th)(?<!G)(?<!N)(?<!Th)eo", "ô", s)
-    # Initial Ts- -> Z-
+    # Initial Ts- -> Z-, and medial post-vocalic/n/l -ts- -> -tz- (protected -t+s- seams exempt via \uE002)
     s = re.sub(r"\b[Tt]s(?!ch)", lambda m: "Z" if m.group(0)[0].isupper() else "z", s)
-    # Restore protected compound seams before final character filter
-    s = s.replace("\uE001", "")
+    s = re.sub(r"(?<=[aeiouâêîôûäöünl])ts(?!ch|\b)", "tz", s, flags=re.I)
+    s = re.sub(r"schwarz", "swartz", s, flags=re.I)
+
+    # Restore protected compound seams before segment-level onset/coda hygiene
+    s = s.replace("\uE001", "").replace("\uE002", "")
+
+    # Segment-level Rhine-Moselle onset & universal Auslautverhärtung across spaces & hyphens
+    parts = re.split(r"([\s\-]+)", s)
+    fixed_parts = [
+        p if (not p or p.isspace() or p == "-") else _apply_segment_orthography(p, is_sinosphere=is_sinosphere, macro_family=macro_family)
+        for p in parts
+    ]
+    s = "".join(fixed_parts)
+
     # Strip any non-allowed chars one last time
     s = "".join(c for c in s if c in ALLOWED_CHANCELLERY_CHARS)
     s = re.sub(r"\s{2,}", " ", out_s := s).strip(" -'")
@@ -273,18 +447,6 @@ def run_stage5() -> dict[str, Any]:
 
         ipa = generate_tarraconian_ipa(final_hist)
 
-        # Automated phonotactic check using project canonical auditor on BOTH tarr_hist & tarr_direct
-        issues = check_title_phonotactics(final_hist, bk, "stage5_hist") + check_title_phonotactics(final_dir, bk, "stage5_direct")
-        disallowed = [ch for ch in (final_hist + final_dir) if ch not in ALLOWED_CHANCELLERY_CHARS]
-        if issues or disallowed:
-            audit_failures.append({
-                "barony_key": bk,
-                "name": final_hist,
-                "direct": final_dir,
-                "issues": issues,
-                "disallowed": disallowed,
-            })
-
         # Daughter dialect overlay by culture stratum OR Imperial march geography (tarraconian_linguistics_guide.md § 6)
         prof = profiles[bk]
         c1194 = prof.get("c1194")
@@ -305,6 +467,28 @@ def run_stage5() -> dict[str, Any]:
         if active_dialect:
             dialect_counts[active_dialect] += 1
             dialect_var = build_daughter_dialect_variant(final_hist, ipa, active_dialect)
+
+        # Automated phonotactic check using spec-driven validator on BOTH tarr_hist & tarr_direct
+        track_str = r4.get("pipeline_track", "")
+        v_ctx = ValidationContext(
+            title_key=bk,
+            pipeline_track=track_str,
+            coinage_culture=r4.get("coinage_culture", ""),
+            transmission_culture=r4.get("transmission_culture", ""),
+            macro_family=macro_fam,
+            daughter_dialect=active_dialect or "",
+            is_sinosphere=is_sino,
+        )
+        issues = check_title_phonotactics(final_hist, bk, track_str, context=v_ctx) + check_title_phonotactics(final_dir, bk, track_str, context=v_ctx)
+        disallowed = [ch for ch in (final_hist + final_dir) if ch not in ALLOWED_CHANCELLERY_CHARS]
+        if issues or disallowed:
+            audit_failures.append({
+                "barony_key": bk,
+                "name": final_hist,
+                "direct": final_dir,
+                "issues": issues,
+                "disallowed": disallowed,
+            })
 
         stage5_baronies[bk] = {
             **r4,

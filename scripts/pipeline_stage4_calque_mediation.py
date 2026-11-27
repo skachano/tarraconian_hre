@@ -612,9 +612,17 @@ def transliterate_stem_to_tarr(
     if tf in {"arabic", "berber", "aramaic_hebrew"}:
         subs_map.update({"kh": "ch", "sh": "sch", "dj": "dsch", "dh": "d", "th": "t", "gh": "g", "j": "dsch", "q": "k"})
     elif tf in {"turkic", "oghur", "mongolic", "iranian"}:
-        subs_map.update({"kh": "ch", "sh": "sch", "ş": "sch", "š": "sch", "ç": "tsch", "č": "tsch", "q": "k"})
+        subs_map.update({"kh": "ch", "zh": "dsch", "sh": "sch", "ş": "sch", "š": "sch", "ç": "tsch", "č": "tsch", "q": "k"})
         if tf == "turkic":
+            subs_map["ch"] = "tsch"
             subs_map["c"] = "dsch"
+        if (coinage_family or "").lower() in {
+            "hellenic", "latin_classical", "gallo_romance", "occitano_catalan",
+            "ibero_romance", "italo_romance", "eastern_romance",
+            "west_germanic", "north_germanic", "high_german", "low_german_dutch",
+            "goidelic", "brythonic",
+        }:
+            subs_map.pop("c", None)
         if tf == "iranian":
             subs_map["ch"] = "tsch"
             subs_map["j"] = "dsch"
@@ -623,16 +631,20 @@ def transliterate_stem_to_tarr(
     elif tf in {"magyar"}:
         subs_map.update({"cs": "tsch", "sz": "s", "zs": "sch", "sh": "sch", "v": "w"})
     elif tf in {"indo_aryan", "dravidian", "austronesian", "mon_khmer", "tai_hmong", "tibetic", "burmese_qiangic"}:
-        subs_map.update({"sh": "sch", "ch": "tsch", "ś": "sch", "ṣ": "sch", "j": "dsch"})
+        subs_map.update({"tsh": "tsch", "sh": "sch", "ch": "tsch", "ś": "sch", "ṣ": "sch", "j": "dsch"})
     elif tf in {"sinosphere_chinese", "korean", "japonic", "viet", "khitan", "tungusic"}:
         subs_map.update({"zh": "dsch", "ch": "tsch", "sh": "sch", "ts": "tz", "j": "dsch", "q": "tsch"})
     elif tf in {"tarraconian_imperial", "high_german", "low_german_dutch"}:
         # Preserve Tarraconian/German orthography cleanly without corrupting -st- / ch / j
         subs_map = {"ß": "ss"}
     else:
-        subs_map.update({"sh": "sch", "zh": "sch", "dj": "dsch", "š": "sch", "č": "tsch", "ž": "sch"})
+        subs_map.update({"sh": "sch", "zh": "sch", "dj": "dsch", "sj": "sch", "š": "sch", "č": "tsch", "ž": "sch"})
 
     if subs_map:
+        # Protect longer Chancellery digraphs so single-pass never tears apart sch/tsch/dsch/tz
+        for protected in ("dsch", "tsch", "sch", "tz"):
+            if protected not in subs_map and any(k in subs_map for k in ("c", "ch", "sh", "ts", "j")):
+                subs_map[protected] = protected
         # Sort longest keys first; match without cascading overlaps
         pat_parts = sorted(subs_map.keys(), key=len, reverse=True)
         # Do not match 'q' inside 'qu'
@@ -640,6 +652,8 @@ def transliterate_stem_to_tarr(
         for k in pat_parts:
             if k == "q":
                 regex_tokens.append(r"q(?![uU])")
+            elif k == "c" and tf == "turkic":
+                regex_tokens.append(r"c(?=[aeiouäöüı]|$)")
             elif k == "c" and tf in {"east_slavic", "south_slavic", "west_slavic_lechitic", "west_slavic_czech_slovak"}:
                 regex_tokens.append(r"c(?=[eiy]|$)")
             else:
