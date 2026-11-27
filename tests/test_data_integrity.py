@@ -2124,6 +2124,66 @@ class TestBaronyCoinageAndContext:
         assert by_raw["TsunetO__2"]["homonym_index"] == 2
         assert by_raw["TsunetO__2"]["tarr_name"] == "Zûnêtô"
 
+    def test_pipeline_stage0_occupancy(self):
+        import importlib.util
+
+        path = REPO_DIR / "data" / "pipeline_stage0_state.json"
+        assert path.exists(), "data/pipeline_stage0_state.json missing"
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        meta = data["metadata"]
+        baronies = data["baronies"]
+        assert meta["total_baronies"] == 11297 == len(baronies)
+        assert meta["occupied_baronies"] == 10239
+        assert meta["unoccupied_baronies"] == 1058
+        assert meta["holding_type_counts"] == {
+            "castle": 4360,
+            "church": 2978,
+            "city": 2901,
+            "unoccupied": 1058,
+        }
+        assert meta["occupied_capital_baronies"] == 3476
+        assert meta["occupied_historical_867"] + meta["occupied_post_867"] == 10239
+        assert meta["legacy_geojson_reconciled_keys"] == ["b_ka'abir", "b_mansa'l-kharaz"]
+
+        occ_cnt = 0
+        unocc_cnt = 0
+        for bk, rec in baronies.items():
+            assert rec["barony_key"] == bk
+            assert set(rec["hierarchy"].keys()) == {"empire", "kingdom", "duchy", "county", "barony"}
+            if rec["is_occupied"]:
+                occ_cnt += 1
+                assert rec["stage0_status"] == "ready_for_stage1"
+                assert rec["holding_type"] in {"castle", "church", "city"}
+            else:
+                unocc_cnt += 1
+                assert rec["stage0_status"] == "finalized_unoccupied"
+                assert rec["holding_type"] == "unoccupied"
+                fr = rec["final_record"]
+                for blank_fld in ("name", "b_tarr_direct", "b_tarr_hist", "b_ipa", "b_hanzi", "b_origin", "b_anachronism"):
+                    assert fr[blank_fld] == ""
+                assert fr["b_color"] == "#424242"
+
+        assert occ_cnt == 10239 and unocc_cnt == 1058
+        for reconciled_bk in ("b_ka'abir", "b_mansa'l-kharaz"):
+            rec = baronies[reconciled_bk]
+            assert rec["is_occupied"] is True
+            assert rec["holding_type"] == "city"
+            assert rec["stage0_status"] == "ready_for_stage1"
+            assert rec["legacy_holding_reconciled"] is True
+
+        # Verify offline API invocation
+        spec = importlib.util.spec_from_file_location(
+            "pipeline_stage0_occupancy", REPO_DIR / "scripts" / "pipeline_stage0_occupancy.py"
+        )
+        mod = importlib.util.module_from_spec(spec)
+        assert spec.loader is not None
+        spec.loader.exec_module(mod)
+        offline_res = mod.run_stage0(skip_save=True)
+        assert offline_res["metadata"]["occupied_baronies"] == 10239
+        assert offline_res["metadata"]["unoccupied_baronies"] == 1058
+
 
 
 

@@ -77,9 +77,11 @@ flowchart TD
 
 ---
 
-### Stage 0: Occupancy & Data Reconciliation Gate
-1. **Occupancy Source of Truth:** Read raw occupancy directly from `melted_save.ck3` (`provinces` `holding.type` — `10,239` occupied, `1,058` unoccupied), fixing the legacy apostrophe regex omission that misclassified `b_ka'abir` and `b_mansa'l-kharaz` as unoccupied in `barony_holdings.json`.
-2. **Unoccupied Rule:** Unoccupied baronies emit strictly blank strings (`name = ""`, `b_origin = ""`, `b_ipa = ""`, `b_anachronism = ""`).
+### Stage 0: Occupancy & Data Reconciliation Gate — *Implemented*
+Implemented in [`pipeline_stage0_occupancy.py`](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/pipeline_stage0_occupancy.py) $\rightarrow$ [`data/pipeline_stage0_state.json`](file:///home/siarzhuk/code/personal/tarraconian_hre/data/pipeline_stage0_state.json) (`3.94 MB`):
+1. **Occupancy Source of Truth:** Stream-parses `provinces` (`holding.type`) directly from `melted_save.ck3` (cross-checked 100% against `data/barony_holdings.json` and `ck3_baronies.geojson`: `10,239` occupied — `4,360` castle, `2,978` church, `2,901` city — plus `1,058` unoccupied reserves), reconciling the `2` apostrophe city holdings (`b_ka'abir`, `b_mansa'l-kharaz`) that legacy GeoJSON marked as `unoccupied`.
+2. **Upstream Schema Parity & Capital Annotation:** Verifies 1:1 key alignment across `ck3_baronies.geojson`, `barony_geography.json`, `barony_toponymic_profiles.json`, `barony_coinage_rulers.json`, `barony_physical_and_event_context.json`, `47` `anachronicity_audit` shards, `47` `natural_tribal_replacements` shards, and all Section 4.B lookup tables; annotates exact save capital baronies (`3,476`) and strict 867 split (`3,120` historical at 867 / `7,119` post-867).
+3. **Unoccupied Rule:** Immediately finalizes all `1,058` unoccupied baronies (`stage0_status = "finalized_unoccupied"`) with strictly blank output strings (`name = ""`, `b_tarr_direct = ""`, `b_tarr_hist = ""`, `b_ipa = ""`, `b_hanzi = ""`, `b_origin = ""`, `b_anachronism = ""`), bypassing Stages 1–5.
 
 ---
 
