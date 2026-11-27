@@ -2184,6 +2184,43 @@ class TestBaronyCoinageAndContext:
         assert offline_res["metadata"]["occupied_baronies"] == 10239
         assert offline_res["metadata"]["unoccupied_baronies"] == 1058
 
+    def test_pipeline_stage2_variant_selection(self):
+        path = REPO_DIR / "data" / "pipeline_stage2_variants.json"
+        assert path.exists(), "data/pipeline_stage2_variants.json missing"
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        meta = data["metadata"]
+        baronies = data["baronies"]
+        assert meta["total_baronies"] == 11297 == len(baronies)
+        assert meta["occupied_baronies"] == 10239
+        assert meta["unoccupied_baronies"] == 1058
+        assert meta["hanzi_extracted_count"] >= 2000
+
+        for bk, rec in baronies.items():
+            if not rec["is_occupied"]:
+                assert rec["final_record"]["name"] == ""
+            else:
+                assert rec["selected_source_form"], f"{bk} missing selected_source_form"
+                assert rec["match_tier"], f"{bk} missing match_tier"
+                assert rec["coinage_morphology_family"] and rec["substrate_morphology_family"]
+                if not rec["is_historical_867"]:
+                    assert len(rec["ranked_ntr_candidates"]) >= 1
+
+        # Spot-check variant resolution and coastal vs inland ranking
+        assert baronies["b_london"]["selected_source_form"] == "London"
+        assert baronies["b_southwark"]["selected_source_form"] == "Temes"
+        assert baronies["b_southwark"]["selected_iso"] == "ang"
+        assert baronies["b_woxbrigge"]["selected_source_form"] == "Colen"
+        assert baronies["b_woxbrigge"]["selected_iso"] == "ang"
+        assert baronies["b_szekesfehervar"]["selected_source_form"] == "Gorsium"
+        assert baronies["b_szekesfehervar"]["selected_iso"] == "lat"
+        assert baronies["b_vyshgorod"]["selected_source_form"] == "Danapris"
+        assert baronies["b_vyshgorod"]["selected_iso"] == "lat"
+        assert baronies["b_EMan_Huligai"]["extracted_hanzi"] == "忽汗河"
+        assert baronies["b_ka'abir"]["selected_source_form"] == "Khalīj Ḥawākil"
+        assert baronies["b_ka'abir"]["selected_iso"] == "ara"
+
     def test_pipeline_stage1_routing(self):
         path = REPO_DIR / "data" / "pipeline_stage1_routed.json"
         assert path.exists(), "data/pipeline_stage1_routed.json missing"

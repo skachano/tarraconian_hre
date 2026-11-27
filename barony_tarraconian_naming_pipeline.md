@@ -105,7 +105,8 @@ Applies whenever `coinage_culture` or `transmission_culture` has a Sinosphere he
 
 ---
 
-### Stage 2: Source-Language Variant Selection (`coinage` / `substrate` → ISO 639-3)
+### Stage 2: Source-Language Variant Selection (`coinage` / `substrate` → ISO 639-3) — *Implemented*
+Implemented in [`pipeline_stage2_variant_selection.py`](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/pipeline_stage2_variant_selection.py) $\rightarrow$ [`data/pipeline_stage2_variants.json`](file:///home/siarzhuk/code/personal/tarraconian_hre/data/pipeline_stage2_variants.json) (`24.89 MB`), resolving the prioritized source form, ISO code, native Hanzi (`2,108` baronies), Rule 3 opaqueness flag (`1,170` baronies), and ranked valid-867 `natural_tribal_replacements` candidate pools across all `10,239` occupied baronies (`97.1%` matched directly via pre-867 anchor, historical/natural stem, liturgical, exact/parent ISO, family/proto, transmission ISO, or classical lingua franca; only `299` `localisation_stem_fallback`).
 
 Both `anachronicity_audit` (`historical_names`, `morphemes`) and `natural_tribal_replacements` (`language_variants[]`) tag forms with **ISO 639-3 / ISO 639-5 / proto codes** (`lat`, `grc`, `deu`, `hun`, `ron`, `bul`, `sla-pro`, `gem-pro`, `cel-bry`, etc.), whereas `barony_toponymic_profiles.json` uses **CK3 cultures and languages**.
 
