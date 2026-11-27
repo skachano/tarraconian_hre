@@ -343,6 +343,8 @@ def transliterate_stem_to_tarr(
 def calque_hanzi_string(
     hanzi: str,
     kanji_map: dict[str, tuple[str, str, str]],
+    *,
+    religion_type: str = "",
 ) -> tuple[str | None, list[str]]:
     """
     Translate a multi-character CJK Hanzi compound character-by-character into Tarraconian
@@ -356,17 +358,27 @@ def calque_hanzi_string(
     parts: list[str] = []
     meanings: list[str] = []
     missing = 0
+    is_islam = "islam" in (religion_type or "").lower()
     for idx, ch in enumerate(chars):
         if ch in kanji_map:
             m, role, mean = kanji_map[ch]
             clean_m = m.strip("-").strip()
-            # Keep Buddhist/Taoist temple char 寺 as -tempel (not Christian -munster)
-            if ch == "寺" and clean_m.lower() == "munster":
-                clean_m = "tempel"
+            # Keep Buddhist/Taoist temple char 寺 as -tempel, or -meschit for Chinese Islamic holdings (清真寺)
+            if ch == "寺":
+                if is_islam:
+                    clean_m = "meschit"
+                elif clean_m.lower() == "munster":
+                    clean_m = "tempel"
             if idx == 0:
-                clean_m = clean_m[:1].upper() + clean_m[1:]
+                if clean_m.lower() == "bî-dem":
+                    clean_m = "Bî-dem-"
+                else:
+                    clean_m = clean_m[:1].upper() + clean_m[1:]
             else:
-                clean_m = clean_m.lower()
+                if parts and parts[-1].endswith("-"):
+                    clean_m = clean_m[:1].upper() + clean_m[1:].lower()
+                else:
+                    clean_m = clean_m.lower()
             # Deduplicate tautological double hydro/oronym generics (e.g. Huangflôz + flôz/wazzer, Wâgestein + berch)
             if parts:
                 prev_low = parts[-1].lower()
@@ -515,6 +527,8 @@ def run_stage4() -> dict[str, Any]:
 
     with open(DATA_DIR / "barony_resolutions.json", "r", encoding="utf-8") as f:
         v1_res = json.load(f)
+    with open(DATA_DIR / "barony_coinage_rulers.json", "r", encoding="utf-8") as f:
+        coinage_rulers = json.load(f)["baronies"]
 
     calque_mode_counts: Counter[str] = Counter()
     rule3_blocked_count = 0
@@ -596,25 +610,40 @@ def run_stage4() -> dict[str, Any]:
         pathway = ""
 
         # --- BRANCH A: Track S (Sinosphere Procedure 1 + 12th-century Phonetics) ---
-        if is_sino:
+        if coined_form.strip().lower() == "monastery of the transfiguration":
+            tarr_hist = "Verclêrungeclôster"
+            tarr_direct = "Verclêrungeclôster"
+            calque_mode = "full_semantic_calque"
+            calque_concepts = ["transfiguration", "monastery"]
+            pathway = f"{coined_form} -> [Direct Chancellery Calque: transfiguration + monastery] -> {tarr_hist}"
+        elif is_sino:
             NO_LITERAL_HANZI_CALQUE = {"b_iyo", "b_kinasir", "b_xi"}
             ATEJI_PHONETIC_SUBSTRINGS = (
                 "興安", "兴安", "祁連", "祁连", "烏蘇里", "乌苏里",
                 "穆稜", "穆棱", "貝爾", "贝尔", "粟末", "完達", "完达",
                 "張廣才", "张广才", "賀蘭", "贺兰", "沙魯里", "沙鲁里",
-                "率賓", "率宾", "夜郎",
+                "率賓", "率宾", "夜郎", "雅魯藏布", "雅鲁藏布",
             )
             is_ateji_phonetic = bool(hanzi_str and any(sub in hanzi_str for sub in ATEJI_PHONETIC_SUBSTRINGS))
+            has_ateji_morpheme = (
+                r3.get("stage3_mode") == "passthrough_stage2_stem"
+                and any(
+                    re.search(r"\b(?:ateji|phonetic)\b", (m.get("translation") or "").lower())
+                    for m in (r3.get("audit_morphemes") or [])
+                )
+            )
             opaque_sino = (
                 r3["is_opaque_proper_stem"]
                 or is_s3_named_eponym
                 or (r3["stem_category"] == "tribe")
                 or (bk in NO_LITERAL_HANZI_CALQUE)
                 or is_ateji_phonetic
+                or has_ateji_morpheme
             )
             hz_count = len(re.findall(r"[\u3400-\u9FFF\uF900-\uFAFF]", hanzi_str or ""))
+            rel_type = (coinage_rulers.get(bk) or {}).get("religion_type") or ""
             if hanzi_str and hz_count >= 2 and not opaque_sino and not is_rupture:
-                calqued_hz, hz_meanings = calque_hanzi_string(hanzi_str, kanji_map)
+                calqued_hz, hz_meanings = calque_hanzi_string(hanzi_str, kanji_map, religion_type=rel_type)
                 if calqued_hz and len(calqued_hz) >= 3:
                     tarr_hist = calqued_hz
                     calque_mode = "sinosphere_procedure1_calque"

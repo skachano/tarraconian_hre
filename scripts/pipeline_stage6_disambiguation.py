@@ -730,11 +730,13 @@ def _apply_disambiguation_record(
                 rec["selected_language"] = nc["selected_language"]
             if nc.get("category"):
                 rec["stem_category"] = nc["category"]
-            # Synchronize b_hanzi with newly chosen NTR candidate so stale Hanzi never persists after a rank swap
+            # Synchronize b_hanzi and calque_mode with newly chosen NTR candidate
             if rec.get("is_sinosphere_scope"):
                 new_hz = "".join(re.findall(r"[\u3400-\u9FFF\uF900-\uFAFF]+", nc.get("native_script") or ""))
                 rec["extracted_hanzi"] = new_hz or None
                 rec["coined_hanzi"] = new_hz or None
+                if rec.get("calque_mode") == "sinosphere_procedure1_calque":
+                    rec["calque_mode"] = "sinosphere_12c_phonetic"
             else:
                 rec["extracted_hanzi"] = None
                 rec["coined_hanzi"] = None

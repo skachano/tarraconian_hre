@@ -46,7 +46,10 @@ EXOTIC_CHAR_MAP: dict[str, str] = {
     "ƙ": "k", "Ƙ": "K",
     "ŋ": "ng", "Ŋ": "Ng",
     "ħ": "h", "Ħ": "H",
-    "ʻ": "", "ʼ": "", "ʹ": "", "ˈ": "", "ˌ": "", "ʔ": "", "ʿ": "", "ʾ": "",
+    "ß": "ss", "ẞ": "Ss",
+    "ʋ": "v", "Ʋ": "V",
+    "–": "-", "—": "-",
+    "ʻ": "", "ʼ": "", "ʹ": "", "ˈ": "", "ˌ": "", "ʔ": "", "ʿ": "", "ʾ": "", "’": "", "‘": "",
     # Pinyin tone carons / graves
     "ǎ": "a", "Ǎ": "A", "ǐ": "i", "Ǐ": "I", "ǒ": "o", "Ǒ": "O", "ǔ": "u", "Ǔ": "U",
     "ǜ": "ü", "Ǜ": "Ü", "ǘ": "ü", "Ǘ": "Ü", "ǖ": "ü", "Ǖ": "Ü", "ǚ": "ü", "Ǚ": "Ü",
@@ -96,6 +99,8 @@ def pre_normalize_for_chancellery(s: str, is_sinosphere: bool = False, macro_fam
     out = re.sub(r"\bSt\.(?:\s+|-)?", "Zant-", out)
     out = re.sub(r"\bSt\s+(?=[A-Z])", "Zant-", out)
     out = re.sub(r"\bSaint[\s\-]+", "Zant-", out, flags=re.I)
+    # Normalize Tibetan Wylie g.yu -> Yu before punctuation removal
+    out = re.sub(r"\b[Gg]\.yu\b", "Yu", out)
 
     # Disambiguate Bosnian/Croatian Đ (Dsch) vs Vietnamese Đ (D)
     if macro_family == "south_slavic":
@@ -164,11 +169,13 @@ def apply_full_stage5_sound_laws(
     s = re.sub(r"(?<![qQ])uu", "û", s)
     s = re.sub(r"([a-zâêîôûäöü])\1\1+", r"\1\1", s, flags=re.I)
     s = re.sub(r"schsch", "sch", s, flags=re.I)
+    s = re.sub(r"dschdsch", "dsch", s, flags=re.I)
     s = re.sub(r"(?:tz|ts|z)tsch", "tsch", s, flags=re.I)
     s = re.sub(r"tschtsch", "tsch", s, flags=re.I)
     s = re.sub(r"\b[Zz]tscho", "Tscho", s)
     s = re.sub(r"([Tt]scho)sê\b", r"\1", s)
     s = re.sub(r"-tscho(?=\b|stat|sê|veit|burch|tempel)", "-Tscho", s)
+    s = re.sub(r"\s+(schân|schui|tscho|nurû)(?=\b|burch|stat|tempel|veit|stein|meschit|palz|mai)", lambda m: " " + m.group(1)[:1].upper() + m.group(1)[1:], s)
     s = re.sub(r"\s+Hûsê\b", "sê", s)
     s = re.sub(r"(\s+Schân|-Schân)stein\b", r"\1", s)
     s = re.sub(r"(\s+Uul)stein\b", r"\1", s)

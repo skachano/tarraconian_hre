@@ -99,13 +99,13 @@ NTR_HEADWORD_RE = re.compile(
     r"^(?:"
     r"(?:Northern|Southern|Eastern|Western)\s+border\s+of|"
     r"Gunung\s+Bukit|Doi\s+Phu|Mae\s+Nam|Al-Irk\s+al-|Al-Ba[hḥ]r\s+al-|Adrar\s+n|Asif\s+n|"
-    r"Thio\s+Khao|Milima\s+ya|Monts\s+du|Monts\s+de|Plateau\s+de|"
-    r"Kipot\s+ng|Golpo\s+ng|Look\s+ng|Tangway\s+ng|"
-    r"Cnoic\s+na|Slieve\s+|Carrick\s+|Monadh|Uisge|"
-    r"Dary[āa]cheh-?ye|Dasht-?e|R[ūu]d-?e|K[ūu]h-?e|"
+    r"Thio\s+Khao|Milima\s+ya|Mfereji\s+wa|Monts\s+du|Monts\s+de|Plateau\s+de|Falaise\s+de|"
+    r"Kipot\s+ng|Golpo\s+ng|Gulpo\s+sa|Look\s+ng|Lawa\s+ng|Tangway\s+ng|Suba\s+sang|Suba\s+sa|Isla\s+sa|"
+    r"Cnoic\s+na|Slieve\s+|Carrick\s+|Monadh|Uisge|Bog\s+of|"
+    r"Dary[āa]cheh?-?ye|Dasht-?e|R[ūu]d-?e|K[ūu]h-?e|"
     r"Nahr\s+al-|Nahr|W[āa]d[īi]|Bahr\s+al-|Bahr|Jabal|Jib[āa]l|Khal[īi]j|Munkhafa[dḍ]|"
-    r"Qatork[ūu]hi|Vodii|Puszcza|Fforest|"
-    r"Laut|Dagat|Sungai|Bukit|Gunung|Pegunungan|Danau|Selat|Pulau|Teluk|Tanjung|Kuala|Muara|Suku|Urang|Bundok|"
+    r"Qatork[ūu]hi|Vodii|Puszcza|Fforest|Fadamar|"
+    r"Laut|Dagat|Sungai|Bukit|Gunung|Pegunungan|Kepulauan|Semenanjung|Danau|Selat|Pulau|Teluk|Tanjung|Kuala|Muara|Suku|Urang|Bundok|"
     r"Tonle|Mae|Nam|Doi|Phu|"
     r"Webi|Kogin|Mto|Odo|Ilog|Asif|Adrar|Mun[țt]ii|Muntzii|"
     r"Loch|Glen|Strath|Port|Plain\s+of|Gulf\s+of|Bay\s+of|Strait\s+of|Lake|Mount|Mountain|River|Island|Inner|"
@@ -145,8 +145,9 @@ def clean_wylie_tibetan(stem: str, iso_code: str | None) -> str:
         return stem
 
     def _clean_syl(tok: str) -> str:
-        # Handle trailing 'mTsho' -> 'Tscho', 'gTsang' -> 'Tsang', 'sPang' -> 'Pang', 'rGyal' -> 'Gyal', 'Dwangs' -> 'Dangs', 'klungs' -> 'Lung'
-        t = re.sub(r"Dwangs\b", "Dangs", tok, flags=re.I)
+        # Handle trailing 'mTsho' -> 'Tscho', 'g.yu' -> 'Yu', 'gTsang' -> 'Tsang', 'sPang' -> 'Pang', 'rGyal' -> 'Gyal', 'Dwangs' -> 'Dangs', 'klungs' -> 'Lung'
+        t = re.sub(r"g\.yu\b", "Yu", tok, flags=re.I)
+        t = re.sub(r"Dwangs\b", "Dangs", t, flags=re.I)
         t = re.sub(r"klungs\b", "Lung", t, flags=re.I)
         # Strip silent Wylie prefix consonant before root consonant (sPang -> Pang, bKra -> Kra, lDum -> Dum, rGyal -> Gyal)
         m = re.match(r"^([srbdgml])([KGCJTDNPBMZSYRWH][a-zA-Z\-']*)$", t)
@@ -207,7 +208,11 @@ def load_sharded_baronies(pattern: str) -> dict[str, dict[str, Any]]:
 def extract_cjk_chars(text: str | None) -> str:
     if not text:
         return ""
-    return "".join(CJK_RE.findall(text))
+    # Join CJK tokens separated solely by spaces, then take only the first contiguous CJK run
+    # (prevents slash/comma alternates like "若狭/若佐", "临 / 臨", "二荒山 / 二荒神" from concatenating)
+    collapsed = re.sub(r"(?<=[\u3400-\u9FFF\uF900-\uFAFF])\s+(?=[\u3400-\u9FFF\uF900-\uFAFF])", "", text)
+    m = CJK_RE.search(collapsed)
+    return m.group(0) if m else ""
 
 
 def get_culture_info(cult_bridge: dict[str, Any], name: str) -> dict[str, Any]:
@@ -532,7 +537,7 @@ def run_stage2() -> dict[str, Any]:
             # Prefer substrate ISO on pre-867 attested anchors unless overruled
             anchor_info = c_info if r1["stage2_culture_priority"] == "coinage_first" else s_info
             # Check if audit morphemes carry an explicit native form or Hanzi
-            mor_cjk = extract_cjk_chars(" ".join(m.get("form", "") for m in audit_morphemes))
+            mor_cjk = "".join(extract_cjk_chars(m.get("form", "")) for m in audit_morphemes)
             if is_sino and mor_cjk:
                 selected_native = mor_cjk
             selected_iso = anchor_info.get("primary_iso") or (audit_morphemes[0].get("language_code") if audit_morphemes else None)
@@ -557,7 +562,7 @@ def run_stage2() -> dict[str, Any]:
         elif stem_source == "existing_natural_proper_name":
             npn = audit_rec.get("natural_proper_name") or {}
             selected_form = audit_rec.get("vanilla_ck3_name") or npn.get("name") or ""
-            mor_cjk = extract_cjk_chars(" ".join(m.get("form", "") for m in audit_morphemes))
+            mor_cjk = "".join(extract_cjk_chars(m.get("form", "")) for m in audit_morphemes)
             selected_native = mor_cjk or None
             selected_iso = (
                 (audit_morphemes[0].get("language_code") if audit_morphemes else None)
