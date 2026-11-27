@@ -2332,6 +2332,75 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_algeciras"]["tarr_hist"] == "Grûneinsel"
         assert baronies["b_bagerhat"]["tarr_hist"] == "Hôchzelle"
 
+    def test_pipeline_stage6_disambiguation(self):
+        from difflib import SequenceMatcher
+        import sys
+        sys.path.insert(0, str(REPO_DIR / "scripts"))
+        from resolve_barony_titles import normalize_phonetic_stem
+
+        path = REPO_DIR / "data" / "barony_resolutions_v2.json"
+        yml_path = REPO_DIR / "data" / "tarraconian_barony_names_v2_l_english.yml"
+        s5_path = REPO_DIR / "data" / "pipeline_stage5_validated.json"
+        assert path.exists(), "data/barony_resolutions_v2.json missing"
+        assert yml_path.exists(), "data/tarraconian_barony_names_v2_l_english.yml missing"
+
+        raw_yml = yml_path.read_bytes()
+        assert raw_yml.startswith(b"\xef\xbb\xbf"), "CK3 localization yml missing UTF-8 BOM"
+        assert b"\r\n" in raw_yml, "CK3 localization yml missing CRLF line endings"
+
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        with open(s5_path, "r", encoding="utf-8") as f:
+            s5 = json.load(f)["baronies"]
+
+        meta = data["metadata"]
+        baronies = data["baronies"]
+        assert meta["total_baronies"] == 11297 == len(baronies)
+        assert meta["occupied_baronies"] == 10239
+        assert meta["unoccupied_baronies"] == 1058
+        assert meta["counties_processed"] == 3476
+        assert meta["intra_county_collisions_remaining"] == 0
+        assert meta["phonotactic_failures_remaining"] == 0
+
+        allowed = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzâêîôûÂÊÎÔÛäöüÄÖÜïëÏ '-")
+        by_county = {}
+        for bk, rec in baronies.items():
+            if not rec["is_occupied"]:
+                assert rec["name"] == ""
+                assert rec["b_tarr_hist"] == ""
+                assert rec["holding_type"] == "unoccupied"
+                continue
+            th = rec["b_tarr_hist"]
+            assert th == rec["name"] and th
+            assert rec["b_ipa"].startswith("[") and rec["b_ipa"].endswith("]")
+            assert rec["source_origin"] and rec["pipeline_track"]
+            assert all(c in allowed for c in th), f"Disallowed char in {bk}: {th}"
+            ck = s5[bk]["hierarchy"]["county"]
+            by_county.setdefault(ck, []).append((bk, th, normalize_phonetic_stem(th)))
+
+        # Independently verify zero exact or near-homophonic intra-county collisions across all 3,476 counties
+        for ck, items in by_county.items():
+            for i in range(len(items)):
+                bk1, _, p1 = items[i]
+                for j in range(i + 1, len(items)):
+                    bk2, _, p2 = items[j]
+                    assert p1 != p2, f"Exact intra-county collision in {ck}: {bk1} vs {bk2} ({p1})"
+                    if len(p1) >= 3 and len(p2) >= 3:
+                        r = max(SequenceMatcher(None, p1, p2).ratio(), SequenceMatcher(None, p2, p1).ratio())
+                        assert r < 0.75, f"Near-homophonic collision in {ck}: {bk1} vs {bk2} ({p1}/{p2} r={r:.3f})"
+
+        assert baronies["b_london"]["b_tarr_hist"] == "London"
+        assert baronies["b_aachen"]["b_tarr_hist"] == "Aachen"
+        assert baronies["b_chur"]["b_tarr_hist"] == "Chur"
+        assert "parent_county_reconciled" not in baronies["b_aachen"]
+        assert baronies["b_cork"]["b_tarr_hist"] == "Corkport"
+        assert baronies["b_tralee"]["b_tarr_hist"] == "CaerCellachân"
+        assert baronies["b_beyta"]["b_tarr_hist"] == "Sankaraniburch"
+        assert baronies["b_qartajana"]["b_tarr_hist"] == "Nîeport"
+        assert baronies["b_EMan_Huligai"]["b_tarr_hist"] == "Hûchânflôz"
+        assert baronies["b_ka'abir"]["b_tarr_hist"] == "Hawâkilhâven"
+        assert baronies["b_mansa'l-kharaz"]["b_tarr_hist"] == "Ischkilport"
+
     def test_pipeline_stage1_routing(self):
         path = REPO_DIR / "data" / "pipeline_stage1_routed.json"
         assert path.exists(), "data/pipeline_stage1_routed.json missing"

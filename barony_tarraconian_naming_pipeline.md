@@ -191,15 +191,15 @@ All candidate strings pass through a single deterministic Tarraconian normalizer
 
 ---
 
-### Stage 6: Intra-County & Neighbor Disambiguation + Provenance Export
+### Stage 6: Intra-County & Neighbor Disambiguation + Provenance Export *(Implemented: [`pipeline_stage6_disambiguation.py`](scripts/pipeline_stage6_disambiguation.py))*
 
-1. **Parent County Reconciliation:** Capital baronies (`capital_barony == yes`) coordinate with the parent county's resolved name in `tarraconian_titles_1059.md` / `ck3_counties.geojson`. When a sub-barony is the true pre-867 Option A seat (like `b_cork` vs. `b_tralee` in `c_desmond`), assign the historical seat to the sub-barony and disambiguate the capital cleanly.
-2. **Collision Resolution Cascade:** Enforce zero exact or near-homophonic collisions (`normalize_phonetic_stem` match or `SequenceMatcher >= 0.75`) within the same county (`c_*`) and flag duplicates across directly adjacent counties (`data/ck3_adjacencies.json`):
-   1. Try the **2nd or 3rd candidate** in `natural_tribal_replacements` (every non-867 barony has 3 distinct candidates).
-   2. Differentiate by **holding-type generic** (`-burch` vs `-stat` vs `-kirchen`).
-   3. Attach **true geographic directional/positional prefix** (`Ober-`/`Nider-`, `Ôst-`/`West-`, `Nord-`/`Sût-`, `Alt-`/`Nîe-`) computed from barony polygon centroids in `ck3_baronies.geojson`.
+1. **Bottom-Up Barony Autonomy (No County-Name Coupling):** Because upper-tier titles (`c_*`, `d_*`, `k_*`, `e_*`) will be regenerated *after* baronies are finalized, Stage 6 **never reconciles or pulls spellings from legacy county titles** (`ck3_counties.geojson` / `tarraconian_titles_1059.md`). Within each county group (`c_*`), priority strictly follows barony-level evidence: pre-867 attested anchors (`Track_A_retained`, `Track_S_pre867_attested`), pre-867 chartered/feudalized seats (`Track_D1`, `Track_C1`), county capitals (`capital_barony == yes`), restored NTR/historical-anchor holdings (`Track_B`, `Track_S_post867_historical_anchor`), and finally post-867 synthesized foundations (`Track_C2`, `Track_D2`, `Track_S_post867_*`). Thus a pre-867 sub-barony seat outranks a post-867 capital without consulting legacy county lists.
+2. **Collision Resolution Cascade:** Enforce zero exact or near-homophonic collisions (`normalize_phonetic_stem` match or `SequenceMatcher >= 0.75`) within the same county (`c_*`) and flag/reduce duplicates across directly adjacent counties and bordering baronies (`data/ck3_adjacencies.json`) — eliminating `553` intra-county collisions (and `80` directly bordering duplicate pairs) down to **`0` remaining intra-county collisions** and **`0` phonotactic failures**:
+   1. Try the **2nd or 3rd candidate** in `natural_tribal_replacements` (resolved via Stage 4/5 mediation).
+   2. Differentiate by **holding-type generic** (`-burch`/`-veste` vs `-stat`/`-marct` vs `-kirchen`/`-zelle`/`-munster`, with `-hâven`/`-port` strictly coastal-gated).
+   3. Attach **true geographic directional/positional prefix** (`Ober-`/`Nider-`, `Ôst-`/`West-`, `Nord-`/`Sût-`, `Alt-`/`Nîe-`) computed from `data/barony_geography.json` polygon centroids.
    4. Fall back to **Stage 3 coinage-era founder/shrine differentiation**.
-3. **Structured Output & Auditability:** Emit `data/barony_resolutions_v2.json` (plus updated `ck3_baronies.geojson` and CK3 localisation `.yml`) with full machine-readable provenance:
+3. **Structured Output & Auditability:** Emit [`data/barony_resolutions_v2.json`](data/barony_resolutions_v2.json) and CK3 localisation [`data/tarraconian_barony_names_v2_l_english.yml`](data/tarraconian_barony_names_v2_l_english.yml) (plus optional `--apply-to-geojson` export to `ck3_baronies.geojson`) with full machine-readable provenance:
    ```json
    {
      "barony_key": "b_example",
