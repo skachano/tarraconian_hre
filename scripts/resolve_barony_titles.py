@@ -106,9 +106,9 @@ def enforce_tarraconian_sound_laws(name: str) -> str:
 
     # Polish / Slavic nasals & digraphs
     s = s.replace("ą", "on").replace("ę", "en").replace("Ą", "On").replace("Ę", "En")
-    s = re.sub(r"cz", "tsch", s, flags=re.I)
-    s = re.sub(r"sz(?!elle)", "sch", s, flags=re.I)
-    s = re.sub(r"rz", "rsch", s, flags=re.I)
+    s = re.sub(r"cz", lambda m: "Tsch" if m.group(0)[0].isupper() else "tsch", s, flags=re.I)
+    s = re.sub(r"sz(?!elle)", lambda m: "Sch" if m.group(0)[0].isupper() else "sch", s, flags=re.I)
+    s = re.sub(r"rz", lambda m: "Rsch" if m.group(0)[0].isupper() else "rsch", s, flags=re.I)
     s = s.replace("ł", "l").replace("Ł", "L")
     s = s.replace("ń", "nj").replace("Ń", "Nj")
     s = s.replace("ś", "sch").replace("Ś", "Sch")
@@ -212,10 +212,14 @@ def enforce_tarraconian_sound_laws(name: str) -> str:
         LOWERCASE_PARTICLES = {"in", "an", "der", "dem", "den", "am", "van", "vom", "von", "ende", "und", "el", "es", "er", "al", "de", "del", "du", "hügel"}
         res_parts = []
         for idx, p in enumerate(parts):
-            if idx > 0 and p.lower() in LOWERCASE_PARTICLES:
-                res_parts.append(p.lower())
-            else:
-                res_parts.append(p[:1].upper() + p[1:] if p else "")
+            words = p.split(" ") if p else [""]
+            new_words = []
+            for w_idx, w in enumerate(words):
+                if (idx > 0 or w_idx > 0) and w.lower() in LOWERCASE_PARTICLES:
+                    new_words.append(w.lower())
+                else:
+                    new_words.append(w[:1].upper() + w[1:] if w else "")
+            res_parts.append(" ".join(new_words))
         s = "-".join(res_parts)
     else:
         s = s[:1].upper() + s[1:] if s else ""

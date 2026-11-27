@@ -2336,7 +2336,7 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_admont"]["b_tarr_hist"] == "Admontkirchen"
         assert baronies["b_BOR_Badak"]["b_tarr_hist"] == "Bugistempel"
         assert baronies["b_Liao_Haibeizhou"]["b_tarr_hist"] == "Yîwûlü Schântempel"
-        assert baronies["b_spas"]["b_tarr_hist"] == "Zant-Andrew"
+        assert baronies["b_spas"]["b_tarr_hist"] == "Zant-Andrêas"
         assert baronies["b_debrc"]["b_tarr_hist"] == "Sawagaj"
         assert baronies["b_iyo"]["b_tarr_hist"] == "Iyo"
         assert baronies["b_kinasir"]["b_tarr_hist"] == "Nemuro-Kaikyôburch"
@@ -2391,6 +2391,22 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_taunggyi_south"]["b_tarr_direct"] == "Pao"
         assert "post-867 post-867" not in baronies["b_taunggyi_south"]["b_anachronism"].lower()
         assert "_" not in baronies["b_EMan_Yizhou"]["b_anachronism"]
+        # Saint title/epithet stripping & digraph casing checks
+        assert baronies["b_sandomierz"]["b_tarr_hist"] == "Sâdokstein"
+        assert baronies["b_dasmenda"]["b_tarr_hist"] == "Zant-Gregôr"
+        assert baronies["b_halifax"]["b_tarr_hist"] == "Jôhanstat"
+        assert baronies["b_pteria"]["b_tarr_hist"] == "Thêôdôrclôster"
+        assert baronies["b_rozhyshche"]["b_tarr_hist"] == "Zant-Andrêas"
+        assert baronies["b_sokol"]["b_tarr_hist"] == "Sveti-Lûkas"
+        assert baronies["b_st_andrews"]["b_tarr_hist"] == "Andrêasmunster"
+        assert baronies["b_lemisele"]["b_tarr_hist"] == "Helga-Nîkôlôs"
+        assert baronies["b_lublin"]["b_tarr_hist"] == "Wass-de Tschegeburch"
+        # Mary Magdalene & faith_saints Chancellery canonical stem checks
+        assert baronies["b_morvan"]["b_tarr_hist"] == "Magdalênemunster"
+        assert baronies["b_irdning"]["b_tarr_hist"] == "Magdalêneclôster"
+        assert baronies["b_sheikh_dawud"]["b_tarr_hist"] == "Zant-Magdalêne"
+        assert baronies["b_ath"]["b_tarr_hist"] == "Nîkôlôsclôster"
+        assert baronies["b_berge"]["b_tarr_hist"] == "Zant-Andrêas"
 
     def test_pipeline_stage1_routing(self):
         path = REPO_DIR / "data" / "pipeline_stage1_routed.json"

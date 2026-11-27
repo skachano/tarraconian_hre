@@ -350,10 +350,36 @@ def assemble_compound(modifier: str, generic: dict[str, Any], compound_order: st
         return f"{mod}{g_clean}"
 
 
+SHI_SAINT_TARR_OVERRIDES: dict[str, str] = {
+    "Andrew": "Andrêas",
+    "Clement": "Klemens",
+    "Cyr": "Kyr",
+    "Cyril": "Kyrîl",
+    "Declan": "Declân",
+    "Gregory": "Gregôr",
+    "John": "Jôhan",
+    "Leonhard": "Lônhart",
+    "Luke": "Lûkas",
+    "Mary Magdalene": "Magdalêne",
+    "Nicholas": "Nîkôlôs",
+    "Sadoc": "Sâdok",
+    "Theodore": "Thêôdôr",
+    "Thorlak": "Thôrlâk",
+    "William": "Wilhalm",
+}
+
+
 def strip_saint_prefix(s: str) -> str:
-    s = re.sub(r"^(?:Saints?|Sanct|Zant|St\.?|Santa|Santo|Panagia)\s+", "", s.strip(), flags=re.I)
-    # Handle joined saints like "Peter & Ignatius of Antioch" -> "Peter"
-    s = re.split(r"\s*(?:&|\band\b|\bof\b|\(|,)\s*", s)[0].strip()
+    s = s.strip()
+    prefix_re = re.compile(
+        r"^(?:Saints?|Sanct|Zant|St\.?|Santa|Santo|Panagia|Blessed|Venerable|Pope|Patriarch|"
+        r"(?:Arch)?[Bb]ishop|Abbot|Abbess|Prior|Prophet|Apostle|Martyr|Brother|Sister|Father|Mother)\s+",
+        re.I,
+    )
+    while prefix_re.match(s):
+        s = prefix_re.sub("", s, count=1).strip()
+    # Handle joined saints or English epithets ("Peter & Ignatius of Antioch" -> "Peter", "John the Baptist" -> "John")
+    s = re.split(r"\s*(?:&|\band\b|\bof\b|\bthe\b|\(|,)\s*", s, maxsplit=1)[0].strip()
     return s
 
 
@@ -395,7 +421,7 @@ def resolve_saint_dedication(
         raw_st = strip_saint_prefix(s_img["saint_name"])
         if raw_st and not any(bad in s_img["saint_name"] for bad in ("Holy Cross", "Holy Savior", "Buddha", "Avalokiteśvara")):
             cl_rec = ono_by_clean.get(raw_st)
-            tarr = cl_rec["primary_tarr_name"] if cl_rec else raw_st
+            tarr = SHI_SAINT_TARR_OVERRIDES.get(raw_st) or (cl_rec["primary_tarr_name"] if cl_rec else raw_st)
             return (raw_st, tarr, "saint_holding_imagery")
 
     # Priority 1b: poi_buried_saint or explicit shrine / faith_saints (strictly require matching sphere; never let culture=None non-Christian saints leak cross-regionally!)
@@ -413,9 +439,12 @@ def resolve_saint_dedication(
             raw_n = picked["raw_name"]
             o_rec = ono_by_raw.get(raw_n)
             if o_rec:
-                return (o_rec["clean_name"], o_rec["tarr_name"], f"faith_saints:{fid}")
+                clean_n = o_rec["clean_name"]
+                tarr = SHI_SAINT_TARR_OVERRIDES.get(clean_n) or o_rec["tarr_name"]
+                return (clean_n, tarr, f"faith_saints:{fid}")
             clean_n = picked.get("clean_name") or raw_n
-            return (clean_n, clean_n, f"faith_saints:{fid}")
+            tarr = SHI_SAINT_TARR_OVERRIDES.get(clean_n) or clean_n
+            return (clean_n, tarr, f"faith_saints:{fid}")
 
     # Priority 1c: Christian ruler fallback saint pantheon ONLY when genuinely Christian
     if is_christian:

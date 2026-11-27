@@ -34474,7 +34474,7 @@
       "barony_key": "b_al-khanuqa",
       "is_occupied": true,
       "name": "Al-Furâtburch",
-      "b_tarr_direct": "Kalat Al-Furât",
+      "b_tarr_direct": "Kalat al-Furât",
       "b_tarr_hist": "Al-Furâtburch",
       "b_ipa": "[al ˈfʊ.raːt.bʊrx]",
       "b_hanzi": "",
@@ -34504,7 +34504,7 @@
       "barony_key": "b_al-kharj",
       "is_occupied": true,
       "name": "Al-Charjstat",
-      "b_tarr_direct": "Madinat Al-Charj",
+      "b_tarr_direct": "Madinat al-Charj",
       "b_tarr_hist": "Al-Charjstat",
       "b_ipa": "[al ˈxarj.stat]",
       "b_hanzi": "",
@@ -34834,7 +34834,7 @@
       "barony_key": "b_al-mushaqqar",
       "is_occupied": true,
       "name": "Al-Muschakkarstat",
-      "b_tarr_direct": "Madinat Al-Muschakkar",
+      "b_tarr_direct": "Madinat al-Muschakkar",
       "b_tarr_hist": "Al-Muschakkarstat",
       "b_ipa": "[al ˈmʊ.ʃa.kar.stat]",
       "b_hanzi": "",
@@ -36125,7 +36125,7 @@
       "barony_key": "b_alba_di_monferrato",
       "is_occupied": true,
       "name": "Alba di Monferratostat",
-      "b_tarr_direct": "Ville-Alba di Monferrato",
+      "b_tarr_direct": "Ville-Alba Di Monferrato",
       "b_tarr_hist": "Alba di Monferratostat",
       "b_ipa": "[ˈal.ba dɪ ˈmɔn.fɛ.ra.tɔs.tat]",
       "b_hanzi": "",
@@ -46694,7 +46694,7 @@
       "barony_key": "b_ash-shamsiya",
       "is_occupied": true,
       "name": "Al-Châbûrburch",
-      "b_tarr_direct": "Kalat Al-Châbûr",
+      "b_tarr_direct": "Kalat al-Châbûr",
       "b_tarr_hist": "Al-Châbûrburch",
       "b_ipa": "[al ˈxaː.buːr.bʊrx]",
       "b_hanzi": "",
@@ -48479,10 +48479,10 @@
     "b_ath": {
       "barony_key": "b_ath",
       "is_occupied": true,
-      "name": "Nicholasclôster",
+      "name": "Nîkôlôsclôster",
       "b_tarr_direct": "Nicholasklôster",
-      "b_tarr_hist": "Nicholasclôster",
-      "b_ipa": "[ˈnɪ.çɔ.las.kloːs.tər]",
+      "b_tarr_hist": "Nîkôlôsclôster",
+      "b_ipa": "[ˈniː.koː.loːs.kloːs.tər]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -48499,11 +48499,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Nicholasklooster -> [Rule 3 Proper Stem + Calqued Generic '-clôster'] -> Nicholasclôster",
+      "phonological_pathway": "Nicholasklooster -> [Rule 3 Proper Stem + Calqued Generic '-clôster'] -> Nîkôlôsclôster",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Nicholasclôster (source: Saint Nicholas [Dutch], hybrid generic calque)",
+      "b_origin": "Nîkôlôsclôster (source: Saint Nicholas [Dutch], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded prior to imperial conquest) under coinage ruler Reginar (Dutch); resolved as post-867 newly chartered foundation."
     },
     "b_ath-thalabiya": {
@@ -59467,9 +59467,9 @@
     "b_batina-east": {
       "barony_key": "b_batina-east",
       "is_occupied": true,
-      "name": "Juzur ad-Dîmânîyâtribât",
-      "b_tarr_direct": "Juzur ad-Dîmânîyâtribât",
-      "b_tarr_hist": "Juzur ad-Dîmânîyâtribât",
+      "name": "Juzur Ad-Dîmânîyâtribât",
+      "b_tarr_direct": "Juzur Ad-Dîmânîyâtribât",
+      "b_tarr_hist": "Juzur Ad-Dîmânîyâtribât",
       "b_ipa": "[jʊ.ˈtsʊr ad diː.maː.niː.jaː.trɪ.ˈbaːt]",
       "b_hanzi": "",
       "holding_type": "church",
@@ -59491,7 +59491,7 @@
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Juzur ad-Dîmânîyâtribât (source: Juzur ad-Dīmānīyāt [Arabic], hybrid generic calque)",
+      "b_origin": "Juzur Ad-Dîmânîyâtribât (source: Juzur ad-Dīmānīyāt [Arabic], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded prior to imperial conquest) under coinage ruler Himerios (Greek); resolved as post-867 newly chartered foundation."
     },
     "b_batkhaan": {
@@ -62847,10 +62847,10 @@
     "b_berge": {
       "barony_key": "b_berge",
       "is_occupied": true,
-      "name": "Zant-Andrew",
+      "name": "Zant-Andrêas",
       "b_tarr_direct": "Sankt-Andrew",
-      "b_tarr_hist": "Zant-Andrew",
-      "b_ipa": "[tsant ˈan.drɛw]",
+      "b_tarr_hist": "Zant-Andrêas",
+      "b_ipa": "[tsant ˈan.dreː.as]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -62867,11 +62867,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Sankt-Andrew -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Andrew",
+      "phonological_pathway": "Sankt-Andrew -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Andrêas",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Zant-Andrew (source: Saint Andrew [Franconian], hybrid generic calque)",
+      "b_origin": "Zant-Andrêas (source: Saint Andrew [Franconian], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded prior to imperial conquest) under coinage ruler Adalhard (Franconian); resolved as post-867 newly chartered foundation."
     },
     "b_bergen_op_zoom": {
@@ -87167,10 +87167,10 @@
     "b_clonmel": {
       "barony_key": "b_clonmel",
       "is_occupied": true,
-      "name": "Declanmunster",
+      "name": "Declânmunster",
       "b_tarr_direct": "Mainistir Declan",
-      "b_tarr_hist": "Declanmunster",
-      "b_ipa": "[ˈdɛ.klan.mʊn.stər]",
+      "b_tarr_hist": "Declânmunster",
+      "b_ipa": "[ˈdɛ.klaːn.mʊn.stər]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -87187,11 +87187,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Mainistir Declan -> [Rule 3 Proper Stem + Calqued Generic '-munster'] -> Declanmunster",
+      "phonological_pathway": "Mainistir Declan -> [Rule 3 Proper Stem + Calqued Generic '-munster'] -> Declânmunster",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Declanmunster (source: Saint Declan [Irish], hybrid generic calque)",
+      "b_origin": "Declânmunster (source: Saint Declan [Irish], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded dominant window) under coinage ruler Garb (Irish); resolved as post-867 newly chartered foundation."
     },
     "b_cloppenburg": {
@@ -88109,10 +88109,10 @@
     "b_contres": {
       "barony_key": "b_contres",
       "is_occupied": true,
-      "name": "Zant-Cyr",
+      "name": "Zant-Kyr",
       "b_tarr_direct": "Zant-Cyr",
-      "b_tarr_hist": "Zant-Cyr",
-      "b_ipa": "[tsant tsɪr]",
+      "b_tarr_hist": "Zant-Kyr",
+      "b_ipa": "[tsant kɪr]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -88129,11 +88129,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Saint-Cyr -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Cyr",
+      "phonological_pathway": "Saint-Cyr -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Kyr",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Zant-Cyr (source: Saint Cyr [French], hybrid generic calque)",
+      "b_origin": "Zant-Kyr (source: Saint Cyr [French], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded prior to imperial conquest) under coinage ruler Eudes (French); resolved as post-867 newly chartered foundation."
     },
     "b_coqen": {
@@ -89099,10 +89099,10 @@
     "b_craon": {
       "barony_key": "b_craon",
       "is_occupied": true,
-      "name": "Zant-Clement",
+      "name": "Zant-Klemens",
       "b_tarr_direct": "Zant-Clement",
-      "b_tarr_hist": "Zant-Clement",
-      "b_ipa": "[tsant ˈklɛ.mɛnt]",
+      "b_tarr_hist": "Zant-Klemens",
+      "b_ipa": "[tsant ˈklɛ.mɛns]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -89119,11 +89119,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Saint-Clement -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Clement",
+      "phonological_pathway": "Saint-Clement -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Klemens",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Zant-Clement (source: Saint Clement [French], hybrid generic calque)",
+      "b_origin": "Zant-Klemens (source: Saint Clement [French], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded prior to imperial conquest) under coinage ruler Eudes (French); resolved as pre-867 chartered settlement."
     },
     "b_cratea": {
@@ -93620,10 +93620,10 @@
     "b_dasmenda": {
       "barony_key": "b_dasmenda",
       "is_occupied": true,
-      "name": "Zant-Gregory Illuminator",
-      "b_tarr_direct": "Hagio-Gregory te Illuminator",
-      "b_tarr_hist": "Zant-Gregory Illuminator",
-      "b_ipa": "[tsant ˈɡrɛ.ɣɔ.rɪ ɪ.ʎʊ.mɪ.na.ˈtɔr]",
+      "name": "Zant-Gregôr",
+      "b_tarr_direct": "Hagio-Gregory",
+      "b_tarr_hist": "Zant-Gregôr",
+      "b_ipa": "[tsant ɡrɛ.ˈɣoːr]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -93640,11 +93640,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Hagio-Gregory the Illuminator -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Gregory the Illuminator",
+      "phonological_pathway": "Hagio-Gregory -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Gregôr",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Zant-Gregory Illuminator (source: Saint Gregory the Illuminator [Greek], hybrid generic calque)",
+      "b_origin": "Zant-Gregôr (source: Saint Gregory [Greek], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded prior to imperial conquest) under coinage ruler Methodios (Greek); resolved as pre-867 chartered settlement."
     },
     "b_dassel": {
@@ -94327,10 +94327,10 @@
     "b_dbilin": {
       "barony_key": "b_dbilin",
       "is_occupied": true,
-      "name": "Zant-Nicholas",
+      "name": "Zant-Nîkôlôs",
       "b_tarr_direct": "Sfântu Nicholas",
-      "b_tarr_hist": "Zant-Nicholas",
-      "b_ipa": "[tsant ˈnɪ.çɔ.las]",
+      "b_tarr_hist": "Zant-Nîkôlôs",
+      "b_ipa": "[tsant niː.koː.ˈloːs]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -94347,11 +94347,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Sfântu Nicholas -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Nicholas",
+      "phonological_pathway": "Sfântu Nicholas -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Nîkôlôs",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Zant-Nicholas (source: Saint Nicholas [Transylvanian], hybrid generic calque)",
+      "b_origin": "Zant-Nîkôlôs (source: Saint Nicholas [Transylvanian], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded prior to imperial conquest) under coinage ruler Béla (Transylvanian); resolved as post-867 newly chartered foundation."
     },
     "b_dean": {
@@ -101793,7 +101793,7 @@
       "barony_key": "b_dragugnian",
       "is_occupied": true,
       "name": "Massif des Maureswart",
-      "b_tarr_direct": "La Garde-Massif des Maures",
+      "b_tarr_direct": "La Garde-Massif Des Maures",
       "b_tarr_hist": "Massif des Maureswart",
       "b_ipa": "[ˈma.sɪf dɛs ˈmɔʊ.rɛs.wart]",
       "b_hanzi": "",
@@ -109965,10 +109965,10 @@
     "b_fazughli_east": {
       "barony_key": "b_fazughli_east",
       "is_occupied": true,
-      "name": "Zant-Andrew",
+      "name": "Zant-Andrêas",
       "b_tarr_direct": "Zant-Andrew",
-      "b_tarr_hist": "Zant-Andrew",
-      "b_ipa": "[tsant ˈan.drɛw]",
+      "b_tarr_hist": "Zant-Andrêas",
+      "b_ipa": "[tsant ˈan.dreː.as]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -109985,11 +109985,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Zant-Andrew -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Andrew",
+      "phonological_pathway": "Zant-Andrew -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Andrêas",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Zant-Andrew (source: Saint Andrew [Tarraconian], hybrid generic calque)",
+      "b_origin": "Zant-Andrêas (source: Saint Andrew [Tarraconian], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded under Tarraconian Chancellery rule) under coinage ruler Lambert (Tarraconian); resolved as post-867 newly chartered foundation."
     },
     "b_fecamp": {
@@ -125009,10 +125009,10 @@
     "b_goritsa": {
       "barony_key": "b_goritsa",
       "is_occupied": true,
-      "name": "Clementclôster",
+      "name": "Klemensclôster",
       "b_tarr_direct": "Clementmanastir",
-      "b_tarr_hist": "Clementclôster",
-      "b_ipa": "[ˈklɛ.mɛnt.kloːs.tər]",
+      "b_tarr_hist": "Klemensclôster",
+      "b_ipa": "[ˈklɛ.mɛns.kloːs.tər]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -125029,11 +125029,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Clementmanastir -> [Rule 3 Proper Stem + Calqued Generic '-clôster'] -> Clementclôster",
+      "phonological_pathway": "Clementmanastir -> [Rule 3 Proper Stem + Calqued Generic '-clôster'] -> Klemensclôster",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Clementclôster (source: Saint Clement [Bulgarian], hybrid generic calque)",
+      "b_origin": "Klemensclôster (source: Saint Clement [Bulgarian], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded prior to imperial conquest) under coinage ruler Yana (Bulgarian); resolved as post-867 newly chartered foundation."
     },
     "b_gorizia": {
@@ -125587,10 +125587,10 @@
     "b_govora": {
       "barony_key": "b_govora",
       "is_occupied": true,
-      "name": "Zant-Andrew",
+      "name": "Zant-Andrêas",
       "b_tarr_direct": "Sfântu Andrew",
-      "b_tarr_hist": "Zant-Andrew",
-      "b_ipa": "[tsant ˈan.drɛw]",
+      "b_tarr_hist": "Zant-Andrêas",
+      "b_ipa": "[tsant ˈan.dreː.as]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -125607,11 +125607,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Sfântu Andrew -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Andrew",
+      "phonological_pathway": "Sfântu Andrew -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Andrêas",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Zant-Andrew (source: Saint Andrew [Transylvanian], hybrid generic calque)",
+      "b_origin": "Zant-Andrêas (source: Saint Andrew [Transylvanian], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded prior to imperial conquest) under coinage ruler Béla (Transylvanian); resolved as post-867 newly chartered foundation."
     },
     "b_gowran": {
@@ -131131,10 +131131,10 @@
     "b_halifax": {
       "barony_key": "b_halifax",
       "is_occupied": true,
-      "name": "John Baptiststat",
-      "b_tarr_direct": "John Baptisttun",
-      "b_tarr_hist": "John Baptiststat",
-      "b_ipa": "[jɔhn ˈbap.tɪsts.tat]",
+      "name": "Jôhanstat",
+      "b_tarr_direct": "Johntun",
+      "b_tarr_hist": "Jôhanstat",
+      "b_ipa": "[ˈjoː.han.stat]",
       "b_hanzi": "",
       "holding_type": "city",
       "b_color": "#3b824a",
@@ -131151,11 +131151,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "John the Baptisttun -> [Rule 3 Proper Stem + Calqued Generic '-stat'] -> John the Baptiststat",
+      "phonological_pathway": "Johntun -> [Rule 3 Proper Stem + Calqued Generic '-stat'] -> Jôhanstat",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "John Baptiststat (source: Saint John the Baptist [Anglo-Saxon], hybrid generic calque)",
+      "b_origin": "Jôhanstat (source: Saint John [Anglo-Saxon], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded prior to imperial conquest) under coinage ruler Oswulf (Anglo-Saxon); resolved as post-867 newly chartered foundation."
     },
     "b_halikarnassos": {
@@ -144061,10 +144061,10 @@
     "b_irdning": {
       "barony_key": "b_irdning",
       "is_occupied": true,
-      "name": "Marîe Magdalêneclôster",
+      "name": "Magdalêneclôster",
       "b_tarr_direct": "Mary Magdaleneclôster",
-      "b_tarr_hist": "Marîe Magdalêneclôster",
-      "b_ipa": "[ma.ˈriː.ɛ ˈmaɡ.da.leː.nɛ.kloːs.tər]",
+      "b_tarr_hist": "Magdalêneclôster",
+      "b_ipa": "[ˈmaɡ.da.leː.nɛ.kloːs.tər]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -144081,16 +144081,16 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Mary Magdaleneclôster -> [Rule 3 Proper Stem + Calqued Generic '-clôster'] -> Marîe Magdalêneclôster",
+      "phonological_pathway": "Mary Magdaleneclôster -> [Rule 3 Proper Stem + Calqued Generic '-clôster'] -> Magdalêneclôster",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": {
         "dialect": "Alpine-Tarraconian",
-        "local_form": "Marîe Magdalêneclôster",
-        "local_ipa": "[ma.ˈriː.ɛ ˈmaɡ.da.leː.nɛ.kloːs.tər]",
+        "local_form": "Magdalêneclôster",
+        "local_ipa": "[ˈmaɡ.da.leː.nɛ.kloːs.tər]",
         "phonological_note": "Gallo-Italic vocalic fronting (û -> [yː]) and final nasalization (-n -> [ŋ])."
       },
-      "b_origin": "Marîe Magdalêneclôster (source: Saint Mary Magdalene [Tarraconian], hybrid generic calque)",
+      "b_origin": "Magdalêneclôster (source: Saint Mary Magdalene [Tarraconian], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded under Tarraconian Chancellery rule) under coinage ruler Wigerich (Tarraconian); resolved as post-867 newly chartered foundation."
     },
     "b_iren-chabirga": {
@@ -147033,9 +147033,9 @@
     "b_jalmat": {
       "barony_key": "b_jalmat",
       "is_occupied": true,
-      "name": "Bögelmä-Bäläbäy kalquligistein",
-      "b_tarr_direct": "Bögelmä-Bäläbäy kalquligikaya",
-      "b_tarr_hist": "Bögelmä-Bäläbäy kalquligistein",
+      "name": "Bögelmä-Bäläbäy Kalquligistein",
+      "b_tarr_direct": "Bögelmä-Bäläbäy Kalquligikaya",
+      "b_tarr_hist": "Bögelmä-Bäläbäy Kalquligistein",
       "b_ipa": "[ˈbøː.ɣɛl.mɛ bɛ.lɛ.ˈbɛɪ kalkw.lɪ.ɣɪs.ˈtɛɪn]",
       "b_hanzi": "",
       "holding_type": "castle",
@@ -147057,7 +147057,7 @@
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Bögelmä-Bäläbäy kalquligistein (source: Bögelmä-Bäläbäy qalqulığı [Tatar], hybrid generic calque)",
+      "b_origin": "Bögelmä-Bäläbäy Kalquligistein (source: Bögelmä-Bäläbäy qalqulığı [Tatar], hybrid generic calque)",
       "b_anachronism": "Post-867 feudalization (colonial feudalization) under coinage ruler Könçek (Laktan); resolved as post-867 feudal foundation."
     },
     "b_jalna": {
@@ -174675,10 +174675,10 @@
     "b_koro_toro": {
       "barony_key": "b_koro_toro",
       "is_occupied": true,
-      "name": "Nicholasstat",
+      "name": "Nîkôlôsstat",
       "b_tarr_direct": "Gari Nitscholas",
-      "b_tarr_hist": "Nicholasstat",
-      "b_ipa": "[ˈnɪ.çɔ.las.tat]",
+      "b_tarr_hist": "Nîkôlôsstat",
+      "b_ipa": "[ˈniː.koː.loːs.tat]",
       "b_hanzi": "",
       "holding_type": "city",
       "b_color": "#3b824a",
@@ -174695,11 +174695,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Gari Nicholas -> [Rule 3 Proper Stem + Calqued Generic '-stat'] -> Nicholasstat",
+      "phonological_pathway": "Gari Nicholas -> [Rule 3 Proper Stem + Calqued Generic '-stat'] -> Nîkôlôsstat",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Nicholasstat (source: Saint Nicholas [Zaghawa], hybrid generic calque)",
+      "b_origin": "Nîkôlôsstat (source: Saint Nicholas [Zaghawa], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded prior to imperial conquest) under coinage ruler Akab (Zaghawa); resolved as post-867 newly chartered foundation."
     },
     "b_korosko": {
@@ -176739,10 +176739,10 @@
     "b_kratovo": {
       "barony_key": "b_kratovo",
       "is_occupied": true,
-      "name": "Nicholasmunster",
+      "name": "Nîkôlôsmunster",
       "b_tarr_direct": "Nicholasmunster",
-      "b_tarr_hist": "Nicholasmunster",
-      "b_ipa": "[ˈnɪ.çɔ.las.mʊn.stər]",
+      "b_tarr_hist": "Nîkôlôsmunster",
+      "b_ipa": "[ˈniː.koː.loːs.mʊn.stər]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -176759,11 +176759,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Nicholasmunster -> [Rule 3 Proper Stem + Calqued Generic '-munster'] -> Nicholasmunster",
+      "phonological_pathway": "Nicholasmunster -> [Rule 3 Proper Stem + Calqued Generic '-munster'] -> Nîkôlôsmunster",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Nicholasmunster (source: Saint Nicholas [Tarraconian], hybrid generic calque)",
+      "b_origin": "Nîkôlôsmunster (source: Saint Nicholas [Tarraconian], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded under Tarraconian Chancellery rule) under coinage ruler Hatto (Tarraconian); resolved as post-867 newly chartered foundation."
     },
     "b_krawi": {
@@ -187237,10 +187237,10 @@
     "b_lemisele": {
       "barony_key": "b_lemisele",
       "is_occupied": true,
-      "name": "Helga-Nitscholas",
+      "name": "Helga-Nîkôlôs",
       "b_tarr_direct": "Helga-Nitscholas",
-      "b_tarr_hist": "Helga-Nitscholas",
-      "b_ipa": "[ˈhɛl.ɡa ˈnɪ.tʃɔ.las]",
+      "b_tarr_hist": "Helga-Nîkôlôs",
+      "b_ipa": "[ˈhɛl.ɡa niː.koː.ˈloːs]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -187257,11 +187257,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "semantic_rupture_phonetic",
-      "phonological_pathway": "Helga-Nicholas (norwegian) -> [Rupture >=50y via estonian (uralic_to_tarraconian)] -> Helga-Nitscholas",
+      "phonological_pathway": "Helga-Nicholas (norwegian) -> [Rupture >=50y via estonian (uralic_to_tarraconian)] -> Helga-Nîkôlôs",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Helga-Nitscholas (source: Saint Nicholas [Norwegian], historical phonetic mediation)",
+      "b_origin": "Helga-Nîkôlôs (source: Saint Nicholas [Norwegian], historical phonetic mediation)",
       "b_anachronism": "Post-867 foundation (founded dominant window) under coinage ruler Hólmgeirr (Norwegian); resolved as post-867 newly chartered foundation."
     },
     "b_lemnos": {
@@ -195655,9 +195655,9 @@
     "b_lublin": {
       "barony_key": "b_lublin",
       "is_occupied": true,
-      "name": "Wass-De tschegeburch",
-      "b_tarr_direct": "Wasch-De tschegewâr",
-      "b_tarr_hist": "Wass-De tschegeburch",
+      "name": "Wass-de Tschegeburch",
+      "b_tarr_direct": "Wasch-de Tschegewâr",
+      "b_tarr_hist": "Wass-de Tschegeburch",
       "b_ipa": "[was dɛ ˈtʃɛ.ɣɛ.bʊrx]",
       "b_hanzi": "",
       "holding_type": "castle",
@@ -195679,7 +195679,7 @@
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Wass-De tschegeburch (source: Ágoston [Mogyer], hybrid generic calque)",
+      "b_origin": "Wass-de Tschegeburch (source: Ágoston [Mogyer], hybrid generic calque)",
       "b_anachronism": "Post-867 feudalization (colonial feudalization) under coinage ruler Ágoston (Mogyer); resolved as post-867 feudal foundation."
     },
     "b_lubliniec": {
@@ -199964,9 +199964,9 @@
     "b_majar": {
       "barony_key": "b_majar",
       "is_occupied": true,
-      "name": "Kûma-Manysch oypatykirchen",
-      "b_tarr_direct": "Kûma-Manysch oypatyekklesia",
-      "b_tarr_hist": "Kûma-Manysch oypatykirchen",
+      "name": "Kûma-Manysch Oypatykirchen",
+      "b_tarr_direct": "Kûma-Manysch Oypatyekklesia",
+      "b_tarr_hist": "Kûma-Manysch Oypatykirchen",
       "b_ipa": "[ˈkuː.ma ˈma.nɪʃ ˈɔʏ.pa.tɪ.kɪr.xən]",
       "b_hanzi": "",
       "holding_type": "church",
@@ -199988,7 +199988,7 @@
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Kûma-Manysch oypatykirchen (source: Kūma-Manysh oypaty [Kazakh], hybrid generic calque)",
+      "b_origin": "Kûma-Manysch Oypatykirchen (source: Kūma-Manysh oypaty [Kazakh], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded prior to imperial conquest) under coinage ruler Garyphallia (Pontic); resolved as post-867 newly chartered foundation."
     },
     "b_makari": {
@@ -205669,9 +205669,9 @@
     "b_matrah": {
       "barony_key": "b_matrah",
       "is_occupied": true,
-      "name": "Juzur ad-Dîmânîyât",
-      "b_tarr_direct": "Juzur ad-Dîmânîyât",
-      "b_tarr_hist": "Juzur ad-Dîmânîyât",
+      "name": "Juzur Ad-Dîmânîyât",
+      "b_tarr_direct": "Juzur Ad-Dîmânîyât",
+      "b_tarr_hist": "Juzur Ad-Dîmânîyât",
       "b_ipa": "[jʊ.ˈtsʊr ad diː.maː.niː.ˈjaːt]",
       "b_hanzi": "",
       "holding_type": "city",
@@ -205693,7 +205693,7 @@
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Juzur ad-Dîmânîyât (source: Juzur ad-Dīmānīyāt [Arabic], phonetic adaptation)",
+      "b_origin": "Juzur Ad-Dîmânîyât (source: Juzur ad-Dīmānīyāt [Arabic], phonetic adaptation)",
       "b_anachronism": ""
     },
     "b_matrei": {
@@ -214921,10 +214921,10 @@
     "b_mortlach": {
       "barony_key": "b_mortlach",
       "is_occupied": true,
-      "name": "Nicholasmunster",
+      "name": "Nîkôlôsmunster",
       "b_tarr_direct": "Mainistir Nicholas",
-      "b_tarr_hist": "Nicholasmunster",
-      "b_ipa": "[ˈnɪ.çɔ.las.mʊn.stər]",
+      "b_tarr_hist": "Nîkôlôsmunster",
+      "b_ipa": "[ˈniː.koː.loːs.mʊn.stər]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -214941,11 +214941,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Mainistir Nicholas -> [Rule 3 Proper Stem + Calqued Generic '-munster'] -> Nicholasmunster",
+      "phonological_pathway": "Mainistir Nicholas -> [Rule 3 Proper Stem + Calqued Generic '-munster'] -> Nîkôlôsmunster",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Nicholasmunster (source: Saint Nicholas [Gaelic], hybrid generic calque)",
+      "b_origin": "Nîkôlôsmunster (source: Saint Nicholas [Gaelic], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded prior to imperial conquest) under coinage ruler Gilla-Críst (Gaelic); resolved as post-867 newly chartered foundation."
     },
     "b_moruran": {
@@ -214981,10 +214981,10 @@
     "b_morvan": {
       "barony_key": "b_morvan",
       "is_occupied": true,
-      "name": "Marîe Magdalênemunster",
+      "name": "Magdalênemunster",
       "b_tarr_direct": "Moutier-Mary Magdalene",
-      "b_tarr_hist": "Marîe Magdalênemunster",
-      "b_ipa": "[ma.ˈriː.ɛ ˈmaɡ.da.leː.nɛ.mʊn.stər]",
+      "b_tarr_hist": "Magdalênemunster",
+      "b_ipa": "[ˈmaɡ.da.leː.nɛ.mʊn.stər]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -215001,11 +215001,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Moutier-Mary Magdalene -> [Rule 3 Proper Stem + Calqued Generic '-munster'] -> Marîe Magdalênemunster",
+      "phonological_pathway": "Moutier-Mary Magdalene -> [Rule 3 Proper Stem + Calqued Generic '-munster'] -> Magdalênemunster",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Marîe Magdalênemunster (source: Saint Mary Magdalene [French], hybrid generic calque)",
+      "b_origin": "Magdalênemunster (source: Saint Mary Magdalene [French], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded dominant window) under coinage ruler Humbert (French); resolved as pre-867 chartered settlement."
     },
     "b_morvi": {
@@ -229334,9 +229334,9 @@
     "b_nufud-as-surrah": {
       "barony_key": "b_nufud-as-surrah",
       "is_occupied": true,
-      "name": "Nufud as-Surrah",
-      "b_tarr_direct": "Nufud as-Surrah",
-      "b_tarr_hist": "Nufud as-Surrah",
+      "name": "Nufud As-Surrah",
+      "b_tarr_direct": "Nufud As-Surrah",
+      "b_tarr_hist": "Nufud As-Surrah",
       "b_ipa": "[ˈnʊ.fʊd as ˈsʊ.rah]",
       "b_hanzi": "",
       "holding_type": "castle",
@@ -229358,7 +229358,7 @@
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Nufud as-Surrah (Arabic, phonetic adaptation)",
+      "b_origin": "Nufud As-Surrah (Arabic, phonetic adaptation)",
       "b_anachronism": ""
     },
     "b_nujiang_lisu": {
@@ -235614,10 +235614,10 @@
     "b_ostfurstenfeld": {
       "barony_key": "b_ostfurstenfeld",
       "is_occupied": true,
-      "name": "Nicholasmunster",
+      "name": "Nîkôlôsmunster",
       "b_tarr_direct": "Nicholasmunster",
-      "b_tarr_hist": "Nicholasmunster",
-      "b_ipa": "[ˈnɪ.çɔ.las.mʊn.stər]",
+      "b_tarr_hist": "Nîkôlôsmunster",
+      "b_ipa": "[ˈniː.koː.loːs.mʊn.stər]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -235634,16 +235634,16 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Nicholasmunster -> [Rule 3 Proper Stem + Calqued Generic '-munster'] -> Nicholasmunster",
+      "phonological_pathway": "Nicholasmunster -> [Rule 3 Proper Stem + Calqued Generic '-munster'] -> Nîkôlôsmunster",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": {
         "dialect": "Alpine-Tarraconian",
-        "local_form": "Nicholasmunster",
-        "local_ipa": "[ˈnɪ.çɔ.las.mʊn.stər]",
+        "local_form": "Nîkôlôsmunster",
+        "local_ipa": "[ˈniː.koː.loːs.mʊn.stər]",
         "phonological_note": "Gallo-Italic vocalic fronting (û -> [yː]) and final nasalization (-n -> [ŋ])."
       },
-      "b_origin": "Nicholasmunster (source: Saint Nicholas [Tarraconian], hybrid generic calque)",
+      "b_origin": "Nîkôlôsmunster (source: Saint Nicholas [Tarraconian], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded under Tarraconian Chancellery rule) under coinage ruler Humbert (Tarraconian); resolved as post-867 newly chartered foundation."
     },
     "b_osthammar": {
@@ -246199,10 +246199,10 @@
     "b_prades": {
       "barony_key": "b_prades",
       "is_occupied": true,
-      "name": "Nicholasmunster",
+      "name": "Nîkôlôsmunster",
       "b_tarr_direct": "Monestir Nicholas",
-      "b_tarr_hist": "Nicholasmunster",
-      "b_ipa": "[ˈnɪ.çɔ.las.mʊn.stər]",
+      "b_tarr_hist": "Nîkôlôsmunster",
+      "b_ipa": "[ˈniː.koː.loːs.mʊn.stər]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -246219,11 +246219,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Monestir Nicholas -> [Rule 3 Proper Stem + Calqued Generic '-munster'] -> Nicholasmunster",
+      "phonological_pathway": "Monestir Nicholas -> [Rule 3 Proper Stem + Calqued Generic '-munster'] -> Nîkôlôsmunster",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Nicholasmunster (source: Saint Nicholas [Catalan], hybrid generic calque)",
+      "b_origin": "Nîkôlôsmunster (source: Saint Nicholas [Catalan], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded prior to imperial conquest) under coinage ruler Sunifred (Catalan); resolved as post-867 newly chartered foundation."
     },
     "b_prades_rossello": {
@@ -246973,10 +246973,10 @@
     "b_prosek": {
       "barony_key": "b_prosek",
       "is_occupied": true,
-      "name": "Nicholasstein",
+      "name": "Nîkôlôsstein",
       "b_tarr_direct": "Nicholasstein",
-      "b_tarr_hist": "Nicholasstein",
-      "b_ipa": "[nɪ.çɔ.las.ˈtɛɪn]",
+      "b_tarr_hist": "Nîkôlôsstein",
+      "b_ipa": "[niː.koː.loːs.ˈtɛɪn]",
       "b_hanzi": "",
       "holding_type": "castle",
       "b_color": "#ab3348",
@@ -246993,11 +246993,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Nicholasstein -> [Rule 3 Proper Stem + Calqued Generic '-stein'] -> Nicholasstein",
+      "phonological_pathway": "Nicholasstein -> [Rule 3 Proper Stem + Calqued Generic '-stein'] -> Nîkôlôsstein",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Nicholasstein (source: Saint Nicholas [Tarraconian], hybrid generic calque)",
+      "b_origin": "Nîkôlôsstein (source: Saint Nicholas [Tarraconian], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded under Tarraconian Chancellery rule) under coinage ruler Hatto (Tarraconian); resolved as post-867 newly chartered foundation."
     },
     "b_prousos": {
@@ -247343,10 +247343,10 @@
     "b_pteria": {
       "barony_key": "b_pteria",
       "is_occupied": true,
-      "name": "Theodore Recruitclôster",
-      "b_tarr_direct": "Theodore Redschruitmoni",
-      "b_tarr_hist": "Theodore Recruitclôster",
-      "b_ipa": "[thɛ.ɔ.ˈdɔ.rə ˈrɛ.krʊ.ɪt.kloːs.tər]",
+      "name": "Thêôdôrclôster",
+      "b_tarr_direct": "Theodoremoni",
+      "b_tarr_hist": "Thêôdôrclôster",
+      "b_ipa": "[ˈtheː.oː.doːr.kloːs.tər]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -247363,11 +247363,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Theodore the Recruitmoni -> [Rule 3 Proper Stem + Calqued Generic '-clôster'] -> Theodore the Recruitclôster",
+      "phonological_pathway": "Theodoremoni -> [Rule 3 Proper Stem + Calqued Generic '-clôster'] -> Thêôdôrclôster",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Theodore Recruitclôster (source: Saint Theodore the Recruit [Greek], hybrid generic calque)",
+      "b_origin": "Thêôdôrclôster (source: Saint Theodore [Greek], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded prior to imperial conquest) under coinage ruler Ioannes (Greek); resolved as pre-867 chartered settlement."
     },
     "b_pu": {
@@ -255255,10 +255255,10 @@
     "b_rastenburg": {
       "barony_key": "b_rastenburg",
       "is_occupied": true,
-      "name": "Nicholasclôster",
+      "name": "Nîkôlôsclôster",
       "b_tarr_direct": "Nicholasmanastir",
-      "b_tarr_hist": "Nicholasclôster",
-      "b_ipa": "[ˈnɪ.çɔ.las.kloːs.tər]",
+      "b_tarr_hist": "Nîkôlôsclôster",
+      "b_ipa": "[ˈniː.koː.loːs.kloːs.tər]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -255275,11 +255275,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Nicholasmanastir -> [Rule 3 Proper Stem + Calqued Generic '-clôster'] -> Nicholasclôster",
+      "phonological_pathway": "Nicholasmanastir -> [Rule 3 Proper Stem + Calqued Generic '-clôster'] -> Nîkôlôsclôster",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Nicholasclôster (source: Saint Nicholas [Bosnian], hybrid generic calque)",
+      "b_origin": "Nîkôlôsclôster (source: Saint Nicholas [Bosnian], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded dominant window) under coinage ruler Danis (Bosnian); resolved as post-867 newly chartered foundation."
     },
     "b_rastovets": {
@@ -260365,10 +260365,10 @@
     "b_rozhyshche": {
       "barony_key": "b_rozhyshche",
       "is_occupied": true,
-      "name": "Zant-Andrew First-Called",
-      "b_tarr_direct": "Zant-Andrew First-Called",
-      "b_tarr_hist": "Zant-Andrew First-Called",
-      "b_ipa": "[tsant ˈan.drɛw fɪrst ˈka.ʎɛd]",
+      "name": "Zant-Andrêas",
+      "b_tarr_direct": "Zant-Andrew",
+      "b_tarr_hist": "Zant-Andrêas",
+      "b_ipa": "[tsant ˈan.dreː.as]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -260385,11 +260385,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Zant-Andrew the First-Called -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Andrew the First-Called",
+      "phonological_pathway": "Zant-Andrew -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Andrêas",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Zant-Andrew First-Called (source: Saint Andrew the First-Called [Tarraconian], hybrid generic calque)",
+      "b_origin": "Zant-Andrêas (source: Saint Andrew [Tarraconian], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded under Tarraconian Chancellery rule) under coinage ruler Richwara (Tarraconian); resolved as post-867 newly chartered foundation."
     },
     "b_rozi": {
@@ -266153,10 +266153,10 @@
     "b_sandomierz": {
       "barony_key": "b_sandomierz",
       "is_occupied": true,
-      "name": "Blessed Sadocstein",
-      "b_tarr_direct": "Blesched Schadocko",
-      "b_tarr_hist": "Blessed Sadocstein",
-      "b_ipa": "[ˈblɛ.sɛd sa.dɔk.ˈstɛɪn]",
+      "name": "Sâdokstein",
+      "b_tarr_direct": "Schadocko",
+      "b_tarr_hist": "Sâdokstein",
+      "b_ipa": "[saː.dɔk.ˈstɛɪn]",
       "b_hanzi": "",
       "holding_type": "castle",
       "b_color": "#ab3348",
@@ -266173,11 +266173,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Blessed Sadockő -> [Rule 3 Proper Stem + Calqued Generic '-stein'] -> Blessed Sadocstein",
+      "phonological_pathway": "Sadockő -> [Rule 3 Proper Stem + Calqued Generic '-stein'] -> Sâdokstein",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Blessed Sadocstein (source: Saint Blessed Sadoc [Mogyer], hybrid generic calque)",
+      "b_origin": "Sâdokstein (source: Saint Sadoc [Mogyer], hybrid generic calque)",
       "b_anachronism": "Post-867 feudalization (colonial feudalization) under coinage ruler Márk (Mogyer); resolved as post-867 feudal foundation."
     },
     "b_sandoway": {
@@ -270631,10 +270631,10 @@
     "b_seesjarvi": {
       "barony_key": "b_seesjarvi",
       "is_occupied": true,
-      "name": "Zant-Andrew",
+      "name": "Zant-Andrêas",
       "b_tarr_direct": "Sfântu Andrew",
-      "b_tarr_hist": "Zant-Andrew",
-      "b_ipa": "[tsant ˈan.drɛw]",
+      "b_tarr_hist": "Zant-Andrêas",
+      "b_ipa": "[tsant ˈan.dreː.as]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -270651,11 +270651,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Sfântu Andrew -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Andrew",
+      "phonological_pathway": "Sfântu Andrew -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Andrêas",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Zant-Andrew (source: Saint Andrew [Vlach], hybrid generic calque)",
+      "b_origin": "Zant-Andrêas (source: Saint Andrew [Vlach], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded dominant window) under coinage ruler Árrajuoksa (Vlach); resolved as post-867 newly chartered foundation."
     },
     "b_sefrou": {
@@ -270998,10 +270998,10 @@
     "b_sejny": {
       "barony_key": "b_sejny",
       "is_occupied": true,
-      "name": "Andrewclôster",
+      "name": "Andrêasclôster",
       "b_tarr_direct": "Andrewwienuolyn",
-      "b_tarr_hist": "Andrewclôster",
-      "b_ipa": "[ˈan.drɛw.kloːs.tər]",
+      "b_tarr_hist": "Andrêasclôster",
+      "b_ipa": "[ˈan.dreː.as.kloːs.tər]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -271018,11 +271018,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Andrewvienuolynas -> [Rule 3 Proper Stem + Calqued Generic '-clôster'] -> Andrewclôster",
+      "phonological_pathway": "Andrewvienuolynas -> [Rule 3 Proper Stem + Calqued Generic '-clôster'] -> Andrêasclôster",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Andrewclôster (source: Saint Andrew [Russo-Lithuanian], hybrid generic calque)",
+      "b_origin": "Andrêasclôster (source: Saint Andrew [Russo-Lithuanian], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded dominant window) under coinage ruler Treniotas (Russo-Lithuanian); resolved as post-867 newly chartered foundation."
     },
     "b_selenga": {
@@ -275251,10 +275251,10 @@
     "b_sheikh_dawud": {
       "barony_key": "b_sheikh_dawud",
       "is_occupied": true,
-      "name": "Zant-Marîe Magdalêne",
+      "name": "Zant-Magdalêne",
       "b_tarr_direct": "Kiddus Mary Magdalene",
-      "b_tarr_hist": "Zant-Marîe Magdalêne",
-      "b_ipa": "[tsant ma.ˈriː.ɛ maɡ.da.ˈleː.nə]",
+      "b_tarr_hist": "Zant-Magdalêne",
+      "b_ipa": "[tsant maɡ.da.ˈleː.nə]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -275271,11 +275271,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Qiddus Mary Magdalene -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Marîe Magdalêne",
+      "phonological_pathway": "Qiddus Mary Magdalene -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Magdalêne",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Zant-Marîe Magdalêne (source: Saint Mary Magdalene [Nubian], hybrid generic calque)",
+      "b_origin": "Zant-Magdalêne (source: Saint Mary Magdalene [Nubian], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded dominant window) under coinage ruler Dauid (Nubian); resolved as post-867 newly chartered foundation."
     },
     "b_sheksna": {
@@ -283115,10 +283115,10 @@
     "b_sokol": {
       "barony_key": "b_sokol",
       "is_occupied": true,
-      "name": "Sveti-Luke te Evangelist",
-      "b_tarr_direct": "Sveti-Luke te Evangelist",
-      "b_tarr_hist": "Sveti-Luke te Evangelist",
-      "b_ipa": "[ˈsvɛ.tɪ ˈlʊ.kə tɛ ˈɛ.va.ŋɛ.lɪst]",
+      "name": "Sveti-Lûkas",
+      "b_tarr_direct": "Sveti-Luke",
+      "b_tarr_hist": "Sveti-Lûkas",
+      "b_ipa": "[ˈsvɛ.tɪ ˈluː.kas]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -283135,16 +283135,16 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "semantic_rupture_phonetic",
-      "phonological_pathway": "Sveti-Luke the Evangelist (bosnian) -> [Rupture >=50y via greek (greek_to_tarraconian)] -> Sveti-Luke te Evangelist",
+      "phonological_pathway": "Sveti-Luke (bosnian) -> [Rupture >=50y via greek (greek_to_tarraconian)] -> Sveti-Lûkas",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": {
         "dialect": "Croato-Tarraconian",
-        "local_form": "Sveti-Luke te Evangelist",
-        "local_ipa": "[ˈsvɛ.tɪ ˈlʊ.kə tɛ ˈɛ.va.ŋɛ.lɪst]",
+        "local_form": "Sveti-Lûkas",
+        "local_ipa": "[ˈsvɛ.tɪ ˈluː.kas]",
         "phonological_note": "South Slavic labiodental onset (w- -> [v]) and Dinaric march register."
       },
-      "b_origin": "Sveti-Luke te Evangelist (source: Saint Luke the Evangelist [Bosnian], historical phonetic mediation)",
+      "b_origin": "Sveti-Lûkas (source: Saint Luke [Bosnian], historical phonetic mediation)",
       "b_anachronism": "Post-867 foundation (founded dominant window) under coinage ruler Branimir (Bosnian); resolved as post-867 newly chartered foundation."
     },
     "b_sokolka": {
@@ -285166,10 +285166,10 @@
     "b_spas": {
       "barony_key": "b_spas",
       "is_occupied": true,
-      "name": "Zant-Andrew",
+      "name": "Zant-Andrêas",
       "b_tarr_direct": "Zant-Andrew",
-      "b_tarr_hist": "Zant-Andrew",
-      "b_ipa": "[tsant ˈan.drɛw]",
+      "b_tarr_hist": "Zant-Andrêas",
+      "b_ipa": "[tsant ˈan.dreː.as]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -285186,11 +285186,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Zant-Andrew -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Andrew",
+      "phonological_pathway": "Zant-Andrew -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Andrêas",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Zant-Andrew (source: Saint Andrew [Tarraconian], hybrid generic calque)",
+      "b_origin": "Zant-Andrêas (source: Saint Andrew [Tarraconian], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded feudalizer fallback) under coinage ruler Emelrich (Tarraconian); resolved as post-867 newly chartered foundation."
     },
     "b_speri": {
@@ -286212,10 +286212,10 @@
     "b_st_andrews": {
       "barony_key": "b_st_andrews",
       "is_occupied": true,
-      "name": "Andrew Apostlemunster",
-      "b_tarr_direct": "Mainistir Andrew te Apostle",
-      "b_tarr_hist": "Andrew Apostlemunster",
-      "b_ipa": "[ˈan.drɛw ˈa.pɔst.lɛ.mʊn.stər]",
+      "name": "Andrêasmunster",
+      "b_tarr_direct": "Mainistir Andrew",
+      "b_tarr_hist": "Andrêasmunster",
+      "b_ipa": "[ˈan.dreː.as.mʊn.stər]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -286232,11 +286232,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Mainistir Andrew the Apostle -> [Rule 3 Proper Stem + Calqued Generic '-munster'] -> Andrew the Apostlemunster",
+      "phonological_pathway": "Mainistir Andrew -> [Rule 3 Proper Stem + Calqued Generic '-munster'] -> Andrêasmunster",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Andrew Apostlemunster (source: Saint Andrew the Apostle [Gaelic], hybrid generic calque)",
+      "b_origin": "Andrêasmunster (source: Saint Andrew [Gaelic], hybrid generic calque)",
       "b_anachronism": "Post-867 feudalization (native feudalization) under coinage ruler Drystan (Gaelic); resolved as post-867 feudal foundation."
     },
     "b_st_davids": {
@@ -295309,10 +295309,10 @@
     "b_tamsweg": {
       "barony_key": "b_tamsweg",
       "is_occupied": true,
-      "name": "Zant-Lônhard",
+      "name": "Zant-Lônhart",
       "b_tarr_direct": "Sveti-Lônhard",
-      "b_tarr_hist": "Zant-Lônhard",
-      "b_ipa": "[tsant ˈloːn.hard]",
+      "b_tarr_hist": "Zant-Lônhart",
+      "b_ipa": "[tsant ˈloːn.hart]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -295329,16 +295329,16 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Sveti-Leonhard -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Leonhard",
+      "phonological_pathway": "Sveti-Leonhard -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Lônhart",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": {
         "dialect": "Alpine-Tarraconian",
-        "local_form": "Zant-Lônhard",
-        "local_ipa": "[tsant ˈloːn.hard]",
+        "local_form": "Zant-Lônhart",
+        "local_ipa": "[tsant ˈloːn.hart]",
         "phonological_note": "Gallo-Italic vocalic fronting (û -> [yː]) and final nasalization (-n -> [ŋ])."
       },
-      "b_origin": "Zant-Lônhard (source: Saint Leonhard [Carantanian], hybrid generic calque)",
+      "b_origin": "Zant-Lônhart (source: Saint Leonhard [Carantanian], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded prior to imperial conquest) under coinage ruler Haermael (Carantanian); resolved as post-867 newly chartered foundation."
     },
     "b_tamusubulage": {
@@ -320318,10 +320318,10 @@
     "b_veseli": {
       "barony_key": "b_veseli",
       "is_occupied": true,
-      "name": "Cyrilclôster",
+      "name": "Kyrîlclôster",
       "b_tarr_direct": "Cyrilklâschter",
-      "b_tarr_hist": "Cyrilclôster",
-      "b_ipa": "[ˈtsɪ.rɪl.kloːs.tər]",
+      "b_tarr_hist": "Kyrîlclôster",
+      "b_ipa": "[ˈkɪ.riːl.kloːs.tər]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -320338,11 +320338,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Cyrilklášter -> [Rule 3 Proper Stem + Calqued Generic '-clôster'] -> Cyrilclôster",
+      "phonological_pathway": "Cyrilklášter -> [Rule 3 Proper Stem + Calqued Generic '-clôster'] -> Kyrîlclôster",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Cyrilclôster (source: Saint Cyril [Slovien], hybrid generic calque)",
+      "b_origin": "Kyrîlclôster (source: Saint Cyril [Slovien], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded prior to imperial conquest) under coinage ruler Walther (Slovien); resolved as post-867 newly chartered foundation."
     },
     "b_vesoul": {
@@ -320378,10 +320378,10 @@
     "b_vestfirdir": {
       "barony_key": "b_vestfirdir",
       "is_occupied": true,
-      "name": "Zant-Thorlak",
+      "name": "Zant-Thôrlâk",
       "b_tarr_direct": "Zant-Thorlak",
-      "b_tarr_hist": "Zant-Thorlak",
-      "b_ipa": "[tsant ˈthɔr.lak]",
+      "b_tarr_hist": "Zant-Thôrlâk",
+      "b_ipa": "[tsant thoːr.ˈlaːk]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -320398,11 +320398,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Zant-Thorlak -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Thorlak",
+      "phonological_pathway": "Zant-Thorlak -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Thôrlâk",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Zant-Thorlak (source: Saint Thorlak [Tarraconian], hybrid generic calque)",
+      "b_origin": "Zant-Thôrlâk (source: Saint Thorlak [Tarraconian], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded under Tarraconian Chancellery rule) under coinage ruler Ferdinand (Tarraconian); resolved as post-867 newly chartered foundation."
     },
     "b_veszprem": {
@@ -322015,10 +322015,10 @@
     "b_vinnytsia": {
       "barony_key": "b_vinnytsia",
       "is_occupied": true,
-      "name": "Zant-Nicholas",
+      "name": "Zant-Nîkôlôs",
       "b_tarr_direct": "Zant-Nicholas",
-      "b_tarr_hist": "Zant-Nicholas",
-      "b_ipa": "[tsant ˈnɪ.çɔ.las]",
+      "b_tarr_hist": "Zant-Nîkôlôs",
+      "b_ipa": "[tsant niː.koː.ˈloːs]",
       "b_hanzi": "",
       "holding_type": "church",
       "b_color": "#3069a8",
@@ -322035,11 +322035,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Zant-Nicholas -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Nicholas",
+      "phonological_pathway": "Zant-Nicholas -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Nîkôlôs",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Zant-Nicholas (source: Saint Nicholas [Tarraconian], hybrid generic calque)",
+      "b_origin": "Zant-Nîkôlôs (source: Saint Nicholas [Tarraconian], hybrid generic calque)",
       "b_anachronism": "Post-867 foundation (founded under Tarraconian Chancellery rule) under coinage ruler Arnold (Tarraconian); resolved as post-867 newly chartered foundation."
     },
     "b_vinukonda": {
@@ -335201,17 +335201,17 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Zant-Nicholas -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Nicholas",
+      "phonological_pathway": "Zant-Nicholas -> [Rule 3 Proper Stem + Calqued Generic 'Zant-'] -> Zant-Nîkôlôs",
       "disambiguation_applied": {
         "scope": "intra_county",
         "method": "step1_ntr_candidate_rank_1",
-        "original_tarr_hist": "Zant-Nicholas",
+        "original_tarr_hist": "Zant-Nîkôlôs",
         "resolved_tarr_hist": "Danastriskirchen",
         "ntr_rank_used": 1
       },
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Danastriskirchen (source: Danastris [Latin], hybrid generic calque) [intra-county rank 1 NTR candidate: Zant-Nicholas -> Danastriskirchen]",
+      "b_origin": "Danastriskirchen (source: Danastris [Latin], hybrid generic calque) [intra-county rank 1 NTR candidate: Zant-Nîkôlôs -> Danastriskirchen]",
       "b_anachronism": "Post-867 foundation (founded under Tarraconian Chancellery rule) under coinage ruler Arnold (Tarraconian); resolved as post-867 newly chartered foundation."
     },
     "b_yanbu": {
@@ -339843,10 +339843,10 @@
     "b_york": {
       "barony_key": "b_york",
       "is_occupied": true,
-      "name": "Williamcastel",
+      "name": "Wilhalmcastel",
       "b_tarr_direct": "Williamceaster",
-      "b_tarr_hist": "Williamcastel",
-      "b_ipa": "[wɪ.ʎɪ.am.kas.ˈtɛl]",
+      "b_tarr_hist": "Wilhalmcastel",
+      "b_ipa": "[wɪl.halm.kas.ˈtɛl]",
       "b_hanzi": "",
       "holding_type": "castle",
       "b_color": "#ab3348",
@@ -339863,11 +339863,11 @@
         "archetype": "pious_devotional"
       },
       "calque_mode": "hybrid_generic_calque",
-      "phonological_pathway": "Williamceaster -> [Rule 3 Proper Stem + Calqued Generic '-castel'] -> Williamcastel",
+      "phonological_pathway": "Williamceaster -> [Rule 3 Proper Stem + Calqued Generic '-castel'] -> Wilhalmcastel",
       "disambiguation_applied": null,
       "neighbor_duplicate_flags": [],
       "daughter_dialect_variant": null,
-      "b_origin": "Williamcastel (source: Saint William [Anglo-Saxon], hybrid generic calque)",
+      "b_origin": "Wilhalmcastel (source: Saint William [Anglo-Saxon], hybrid generic calque)",
       "b_anachronism": "Post-867 feudalization (colonial feudalization) under coinage ruler Ælfmær (Anglo-Saxon); resolved as pre-867 feudalized seat."
     },
     "b_yoshiki": {
