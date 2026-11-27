@@ -562,8 +562,62 @@ async function runE2ETests() {
       if (!tierBadge.includes('UNOCCUPIED')) {
         throw new Error(`Expected UNOCCUPIED tier badge, got "${tierBadge}"`);
       }
-      console.log(`  Unoccupied barony verified: key="${titleKey}", title name is blank, origin group hidden.`);
+      const topoHiddenUnocc = await page.locator('#drawer-toponymic-group').evaluate(el => el.classList.contains('hidden'));
+      if (!topoHiddenUnocc) {
+        throw new Error('Expected #drawer-toponymic-group to be hidden for unoccupied barony');
+      }
+      console.log(`  Unoccupied barony verified: key="${titleKey}", title name is blank, origin & toponymic groups hidden.`);
     }
+
+    // Test 3 new barony culture views (Coinage, Substrate, Transmission) + occupied barony toponymic profile
+    console.log('  Testing Barony view switcher (Coinage / Substrate / Transmission)...');
+    const viewControlsVisible = await page.locator('#barony-view-controls').evaluate(el => !el.classList.contains('hidden'));
+    if (!viewControlsVisible) {
+      throw new Error('Expected #barony-view-controls to be visible in Barony tier');
+    }
+
+    for (const [viewKey, legendTitle] of [
+      ['coinage_culture', 'Coinage:'],
+      ['substrate_culture', 'Substrate:'],
+      ['transmission_culture', 'Transmission:']
+    ]) {
+      await page.locator(`.barony-view-btn[data-view="${viewKey}"]`).click();
+      await page.waitForFunction((expectedTitle) => {
+        const legend = document.getElementById('barony-legend');
+        return legend && legend.textContent.includes(expectedTitle);
+      }, legendTitle, { timeout: 10000 });
+      const viewFills = await page.evaluate(() => {
+        const paths = Array.from(document.querySelectorAll('#map svg path'));
+        return Array.from(new Set(paths.slice(0, 200).map(p => p.getAttribute('fill'))));
+      });
+      if (viewFills.length < 3) {
+        throw new Error(`Expected diverse culture colors in ${viewKey} view, found ${viewFills.length}`);
+      }
+      console.log(`  ${viewKey} view active: ${viewFills.length} distinct sample colors, legend "${legendTitle}".`);
+    }
+
+    // Inspect an occupied barony via search (b_roma) and verify Toponymic Profile details
+    await page.locator('.barony-view-btn[data-view="holding_type"]').click();
+    await page.waitForFunction(() => {
+      const legend = document.getElementById('barony-legend');
+      return legend && legend.textContent.includes('Holdings:');
+    }, { timeout: 5000 });
+
+    const bSearch = page.locator('#title-search');
+    await bSearch.fill('b_roma');
+    await page.waitForSelector('#search-results .search-item', { timeout: 5000 });
+    await page.locator('#search-results .search-item[data-key="b_roma"]').click();
+    await page.waitForFunction(() => {
+      return document.getElementById('drawer-title-key').innerText === 'b_roma' &&
+             !document.getElementById('drawer-toponymic-group').classList.contains('hidden');
+    }, { timeout: 5000 });
+    const coinageText = await page.locator('#drawer-coinage-culture').innerText();
+    const substrateText = await page.locator('#drawer-substrate-culture').innerText();
+    const transmissionText = await page.locator('#drawer-transmission-culture').innerText();
+    if (!coinageText.includes('Italian') || !substrateText.includes('Italian') || !transmissionText.includes('Greek')) {
+      throw new Error(`Unexpected b_roma toponymic profile: C="${coinageText}", S="${substrateText}", T="${transmissionText}"`);
+    }
+    console.log(`  Occupied barony b_roma profile verified: C=${coinageText}, S=${substrateText}, T=${transmissionText}.`);
 
     // Switch back to County tier (must restore 3,476 county polygons)
     console.log('  Switching from Barony back to County tier...');
@@ -576,6 +630,10 @@ async function runE2ETests() {
     const legendHiddenInCounty = await page.locator('#barony-legend').evaluate(el => el.classList.contains('hidden'));
     if (!legendHiddenInCounty) {
       throw new Error('Expected #barony-legend to be hidden in County tier');
+    }
+    const viewControlsHiddenInCounty = await page.locator('#barony-view-controls').evaluate(el => el.classList.contains('hidden'));
+    if (!viewControlsHiddenInCounty) {
+      throw new Error('Expected #barony-view-controls to be hidden in County tier');
     }
 
     // Verify non-empty hex fill colors from map coloring

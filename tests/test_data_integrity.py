@@ -1787,6 +1787,91 @@ class TestSaintHoldingImagery:
         assert "saint_holding_imagery.json" in build_script
 
 
+@pytest.fixture(scope="module")
+def profiles_data():
+    path = REPO_DIR / "data" / "barony_toponymic_profiles.json"
+    assert path.exists(), "data/barony_toponymic_profiles.json missing"
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+class TestBaronyToponymicProfiles:
+    """Validates Alternative 1 3-Stratum Toponymic Profiles and web integration."""
+
+    def test_profiles_synced_to_docs(self, profiles_data):
+        docs_p = DATA_DIR / "barony_toponymic_profiles.json"
+        assert docs_p.exists(), "docs/data/barony_toponymic_profiles.json missing"
+        with open(docs_p, "r", encoding="utf-8") as f:
+            docs_data = json.load(f)
+        assert len(profiles_data["baronies"]) == len(docs_data["baronies"])
+        assert len(profiles_data["baronies"]) == 10239
+
+    def test_profiles_schema_and_strata(self, profiles_data):
+        cultures = profiles_data.get("cultures", {})
+        baronies = profiles_data.get("baronies", {})
+        assert len(cultures) >= 100
+        valid_origins = {
+            "pre_867_established",
+            "feudalized_post_867",
+            "founded_post_867",
+            "pre_867_unfeudalized",
+        }
+        valid_continuities = {
+            "Direct Transparency",
+            "Transitional Mediation (< 50y)",
+            "Semantic Rupture (>= 50y)",
+        }
+
+        for cname, meta in cultures.items():
+            assert re.match(r"^#[0-9a-fA-F]{6}$", meta["color"]), f"Bad color for {cname}"
+            assert meta.get("language")
+            assert meta.get("heritage")
+
+        for bk, prof in baronies.items():
+            assert bk.startswith("b_")
+            assert prof["c"] in cultures, f"Missing coinage culture {prof['c']} for {bk}"
+            assert prof["s"] in cultures, f"Missing substrate culture {prof['s']} for {bk}"
+            assert prof["t"] in cultures, f"Missing transmission culture {prof['t']} for {bk}"
+            assert prof["o"] in valid_origins, f"Invalid origin {prof['o']} for {bk}"
+            assert prof["cs"] in valid_continuities, f"Invalid continuity {prof['cs']} for {bk}"
+            assert prof["cd"] and prof["sn"] and prof["tn"]
+
+    def test_canonical_toponymic_profiles(self, profiles_data):
+        b = profiles_data["baronies"]
+        assert b["b_london"]["c"] == "anglo_saxon"
+        assert b["b_london"]["s"] == "anglo_saxon"
+        assert b["b_london"]["t"] == "anglo_saxon"
+        assert b["b_london"]["o"] == "pre_867_established"
+
+        assert b["b_roma"]["c"] == "italian"
+        assert b["b_roma"]["s"] == "italian"
+        assert b["b_roma"]["t"] == "greek"
+
+        assert b["b_kiev"]["c"] == "franconian"
+        assert b["b_kiev"]["s"] == "russian"
+        assert b["b_kiev"]["t"] == "franconian"
+        assert b["b_kiev"]["o"] == "feudalized_post_867"
+
+        assert b["b_reykjavik"]["c"] == "norse"
+        assert b["b_reykjavik"]["s"] == "norse"
+        assert b["b_reykjavik"]["t"] == "norse"
+
+    def test_web_assets_have_toponymic_views(self):
+        html = (REPO_DIR / "web" / "index.html").read_text(encoding="utf-8")
+        for view in ("holding_type", "coinage_culture", "substrate_culture", "transmission_culture"):
+            assert f'data-view="{view}"' in html
+        assert "drawer-toponymic-group" in html
+
+        js = (REPO_DIR / "web" / "js" / "app.js").read_text(encoding="utf-8")
+        assert "barony_toponymic_profiles.json" in js
+        assert "renderToponymicProfile" in js
+        assert "updateBaronyLegend" in js
+
+        build_script = (REPO_DIR / "scripts" / "build_webapp.py").read_text(encoding="utf-8")
+        assert "barony_toponymic_profiles.json" in build_script
+
+
+
 
 
 

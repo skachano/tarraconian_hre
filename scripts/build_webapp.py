@@ -43,6 +43,7 @@ def main():
         "ck3_counties.geojson",
         "ck3_baronies.geojson",
         "barony_resolutions.json",
+        "barony_toponymic_profiles.json",
         "ck3_title_tree.json",
         "ck3_adjacencies.json",
         "sinosphere_hanzi_calques.json",

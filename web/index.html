@@ -136,6 +136,45 @@
           </div>
         </div>
 
+        <!-- Toponymic Profile (Alternative 1: Coinage / Substrate / Transmission) -->
+        <div id="drawer-toponymic-group" class="info-group info-toponymic-group hidden">
+          <label class="toponymic-label">
+            <span>Toponymic Profile (Alt. 1)</span>
+            <span id="drawer-toponymic-continuity" class="toponymic-continuity-pill">—</span>
+          </label>
+          <div class="toponymic-card">
+            <div class="toponymic-meta-row">
+              <span id="drawer-toponymic-origin" class="toponymic-origin-badge">—</span>
+              <span id="drawer-toponymic-horizon" class="toponymic-horizon-badge">—</span>
+              <span id="drawer-toponymic-liturgical" class="toponymic-liturgical-badge hidden">—</span>
+            </div>
+            <div class="toponymic-strata-list">
+              <div class="toponymic-stratum-item">
+                <div class="stratum-header">
+                  <span class="stratum-title">Coinage Culture <small>(Origin / Naming)</small></span>
+                  <span id="drawer-coinage-culture" class="culture-chip">—</span>
+                </div>
+                <div id="drawer-coinage-detail" class="stratum-detail">—</div>
+              </div>
+              <div class="toponymic-stratum-item">
+                <div class="stratum-header">
+                  <span class="stratum-title">Substrate Culture <small>(Ground Population)</small></span>
+                  <span id="drawer-substrate-culture" class="culture-chip">—</span>
+                </div>
+                <div id="drawer-substrate-detail" class="stratum-detail">—</div>
+              </div>
+              <div class="toponymic-stratum-item">
+                <div class="stratum-header">
+                  <span class="stratum-title">Transmission Culture <small>(Mediating Stratum)</small></span>
+                  <span id="drawer-transmission-culture" class="culture-chip">—</span>
+                </div>
+                <div id="drawer-transmission-detail" class="stratum-detail">—</div>
+              </div>
+            </div>
+            <div id="drawer-toponymic-streaks" class="toponymic-streaks hidden"></div>
+          </div>
+        </div>
+
         <!-- Full Lineage Breadcrumb -->
         <div class="info-group">
           <label>De Jure Hierarchy</label>
@@ -161,6 +200,17 @@
         <button id="drawer-zoom-btn" class="btn-primary">Zoom to Title</button>
       </div>
     </aside>
+
+    <!-- Barony Layer View Selector (Visible only in Barony tier) -->
+    <div id="barony-view-controls" class="barony-view-controls hidden" role="radiogroup" aria-label="Barony Map Layer">
+      <span class="barony-view-label">Barony View:</span>
+      <div class="barony-view-pills">
+        <button class="barony-view-btn active" data-view="holding_type" title="Color by holding type (Castle, Bishopric, City, Unoccupied)">Holding Type</button>
+        <button class="barony-view-btn" data-view="coinage_culture" title="Color by Coinage Culture (origin/naming stratum)">Coinage Culture</button>
+        <button class="barony-view-btn" data-view="substrate_culture" title="Color by Substrate Culture (ground population stratum)">Substrate Culture</button>
+        <button class="barony-view-btn" data-view="transmission_culture" title="Color by Transmission Culture (intermediary/mediating stratum)">Transmission Culture</button>
+      </div>
+    </div>
 
     <!-- Map Floating Territory / Hover Badge -->
     <div class="map-stats-badge" aria-live="polite">

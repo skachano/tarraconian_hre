@@ -6,11 +6,16 @@
 // State
 let map = null;
 let currentTier = 'county';
+let currentBaronyView = 'holding_type';
 let countiesGeojson = null;
 let baroniesGeojson = null;
 let titleTree = null;
 let countiesLayer = null;
 let baroniesLayer = null;
+
+// Toponymic Profile dataset (Alternative 1)
+let baronyToponymicProfiles = null;
+let toponymicProfilesPromise = null;
 
 // Multi-feature selection and hover state
 let selectedFeature = null;
@@ -193,6 +198,9 @@ async function loadData() {
     renderActiveLayer();
     buildSearchIndex();
 
+    // Pre-fetch Alternative 1 barony toponymic profiles in background
+    ensureToponymicProfilesLoaded();
+
     const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
     const hoverBadge = document.getElementById('hover-info');
     if (hoverBadge && isTouch) {
@@ -207,8 +215,26 @@ async function loadData() {
   }
 }
 
+async function ensureToponymicProfilesLoaded() {
+  if (baronyToponymicProfiles) return baronyToponymicProfiles;
+  if (!toponymicProfilesPromise) {
+    toponymicProfilesPromise = fetch('data/barony_toponymic_profiles.json')
+      .then(res => (res.ok ? res.json() : null))
+      .then(data => {
+        if (data) baronyToponymicProfiles = data;
+        return baronyToponymicProfiles;
+      })
+      .catch(err => {
+        console.warn('Could not load barony_toponymic_profiles.json:', err);
+        return null;
+      });
+  }
+  return toponymicProfilesPromise;
+}
+
 // Lazy-load baronies GeoJSON when requested
 async function ensureBaroniesLoaded() {
+  await ensureToponymicProfilesLoaded();
   if (baroniesGeojson) return;
   const overlay = document.getElementById('loading-overlay') || createMiniOverlay();
   overlay.classList.remove('fade-out');
@@ -254,6 +280,35 @@ function createMiniOverlay() {
 // ---------------------------------------------------------------------------
 // Layer Rendering & Styling
 // ---------------------------------------------------------------------------
+function getBaronyProfile(baronyKey) {
+  if (!baronyKey || !baronyToponymicProfiles || !baronyToponymicProfiles.baronies) return null;
+  return baronyToponymicProfiles.baronies[baronyKey] || null;
+}
+
+function getCultureColor(cultureName) {
+  if (!cultureName) return '#555555';
+  const meta = baronyToponymicProfiles?.cultures?.[cultureName];
+  if (meta && meta.color) return meta.color;
+  return stringToColor(cultureName, 55, 45);
+}
+
+function formatCultureLabel(cultureName) {
+  if (!cultureName) return 'Unknown';
+  return cultureName.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function formatLanguageLabel(langKey) {
+  if (!langKey || langKey === 'Unknown') return '';
+  return langKey.replace(/^language_/, '').replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function getBaronyViewField(viewMode) {
+  if (viewMode === 'coinage_culture') return 'c';
+  if (viewMode === 'substrate_culture') return 's';
+  if (viewMode === 'transmission_culture') return 't';
+  return null;
+}
+
 function getFeatureColor(props, tier) {
   switch (tier) {
     case 'empire':
@@ -266,10 +321,18 @@ function getFeatureColor(props, tier) {
       return props.c_color || stringToColor(props.county, 45, 40);
     case 'barony': {
       const ht = props.holding_type || (props.barony && baronyPropsMap.get(props.barony)?.holding_type);
+      if (ht === 'unoccupied') return '#424242';
+      if (currentBaronyView !== 'holding_type') {
+        const field = getBaronyViewField(currentBaronyView);
+        const prof = getBaronyProfile(props.barony);
+        if (prof && field && prof[field]) {
+          return getCultureColor(prof[field]);
+        }
+        return '#555555';
+      }
       if (ht === 'castle') return '#ab3348';
       if (ht === 'church' || ht === 'temple') return '#3069a8';
       if (ht === 'city') return '#3b824a';
-      if (ht === 'unoccupied') return '#424242';
       return props.b_color || '#424242';
     }
     default:
@@ -299,13 +362,66 @@ function baronyStyle(feature) {
   };
 }
 
+function updateBaronyLegend() {
+  const legend = document.getElementById('barony-legend');
+  if (!legend) return;
+
+  if (currentBaronyView === 'holding_type') {
+    legend.innerHTML = `
+      <span class="legend-title">Holdings:</span>
+      <span class="legend-item"><span class="legend-dot dot-castle"></span>Barony</span>
+      <span class="legend-item"><span class="legend-dot dot-church"></span>Bishopric</span>
+      <span class="legend-item"><span class="legend-dot dot-city"></span>City</span>
+      <span class="legend-item"><span class="legend-dot dot-unoccupied"></span>Unoccupied</span>
+    `;
+    return;
+  }
+
+  const viewTitles = {
+    coinage_culture: 'Coinage:',
+    substrate_culture: 'Substrate:',
+    transmission_culture: 'Transmission:'
+  };
+  const countFields = {
+    coinage_culture: 'coinage_count',
+    substrate_culture: 'substrate_count',
+    transmission_culture: 'transmission_count'
+  };
+
+  const title = viewTitles[currentBaronyView] || 'Culture:';
+  const countKey = countFields[currentBaronyView];
+  const cultures = baronyToponymicProfiles?.cultures || {};
+  const topCultures = Object.entries(cultures)
+    .filter(([, meta]) => (meta[countKey] || 0) > 0)
+    .sort((a, b) => (b[1][countKey] || 0) - (a[1][countKey] || 0))
+    .slice(0, 8);
+
+  const itemsHtml = topCultures.map(([cname, meta]) => {
+    const label = formatCultureLabel(cname);
+    const cnt = meta[countKey] || 0;
+    return `<span class="legend-item" title="${label}: ${cnt.toLocaleString()} baronies"><span class="legend-dot" style="background:${meta.color}"></span>${label} <small style="opacity:0.65">(${cnt})</small></span>`;
+  }).join('');
+
+  legend.innerHTML = `
+    <span class="legend-title">${title}</span>
+    ${itemsHtml}
+    <span class="legend-item"><span class="legend-dot dot-unoccupied"></span>Unoccupied</span>
+  `;
+}
+
 function renderActiveLayer() {
   clearHover();
   const legend = document.getElementById('barony-legend');
+  const viewControls = document.getElementById('barony-view-controls');
+  const isBarony = currentTier === 'barony';
   if (legend) {
-    legend.classList.toggle('hidden', currentTier !== 'barony');
+    legend.classList.toggle('hidden', !isBarony);
+    if (isBarony) updateBaronyLegend();
   }
-  if (currentTier === 'barony') {
+  if (viewControls) {
+    viewControls.classList.toggle('hidden', !isBarony);
+  }
+  if (isBarony) {
     if (countiesLayer) map.removeLayer(countiesLayer);
     renderBaronies();
   } else {
@@ -513,6 +629,13 @@ function onHover(layer, feature, tier = currentTier) {
 
     if (tier === 'barony' && p.holding_type === 'unoccupied') {
       hoverBadge.innerHTML = `<strong>${rankLabel}:</strong> <span style="opacity:0.6;font-family:var(--font-mono)">(${titleKey})</span>`;
+    } else if (tier === 'barony' && currentBaronyView !== 'holding_type') {
+      const field = getBaronyViewField(currentBaronyView);
+      const prof = getBaronyProfile(p.barony);
+      const cVal = prof && field ? prof[field] : '';
+      const viewNames = { coinage_culture: 'Coinage', substrate_culture: 'Substrate', transmission_culture: 'Transmission' };
+      const viewLabel = cVal ? ` &bull; <span style="color:${getCultureColor(cVal)}">&#9679;</span> ${viewNames[currentBaronyView]}: <strong>${formatCultureLabel(cVal)}</strong>` : '';
+      hoverBadge.innerHTML = `<strong>${rankLabel}:</strong> ${titleName} <span style="opacity:0.6;font-family:var(--font-mono)">(${titleKey})</span>${viewLabel}`;
     } else {
       hoverBadge.innerHTML = `<strong>${rankLabel}:</strong> ${titleName} <span style="opacity:0.6;font-family:var(--font-mono)">(${titleKey})</span>`;
     }
@@ -897,10 +1020,108 @@ function openInspector(props, tier) {
     }
   }
 
+  // Toponymic Profile (Alternative 1) for occupied baronies
+  renderToponymicProfile(props, tier, isUnoccupiedBarony);
+
   // Constituent Titles list in drawer
   renderConstituentTitles(props, tier, baroniesSection, baroniesLabel, baroniesList);
 
   drawer.classList.add('open');
+}
+
+function renderToponymicProfile(props, tier, isUnoccupiedBarony) {
+  const group = document.getElementById('drawer-toponymic-group');
+  if (!group) return;
+
+  if (tier !== 'barony' || isUnoccupiedBarony || !props.barony) {
+    group.classList.add('hidden');
+    return;
+  }
+
+  const prof = getBaronyProfile(props.barony);
+  if (!prof) {
+    // Load profiles if not yet ready, then re-populate if still inspecting the same barony
+    group.classList.add('hidden');
+    ensureToponymicProfilesLoaded().then(data => {
+      if (data && selectedTitleTier === 'barony' && selectedTitleKey === props.barony) {
+        renderToponymicProfile(props, tier, isUnoccupiedBarony);
+      }
+    });
+    return;
+  }
+
+  group.classList.remove('hidden');
+
+  const contElem = document.getElementById('drawer-toponymic-continuity');
+  const originElem = document.getElementById('drawer-toponymic-origin');
+  const horizonElem = document.getElementById('drawer-toponymic-horizon');
+  const litElem = document.getElementById('drawer-toponymic-liturgical');
+
+  if (contElem) {
+    contElem.textContent = prof.cs || '—';
+    contElem.className = 'toponymic-continuity-pill';
+    if (prof.cs === 'Direct Transparency') contElem.classList.add('status-direct');
+    else if (prof.cs && prof.cs.includes('Transitional')) contElem.classList.add('status-transitional');
+    else if (prof.cs && prof.cs.includes('Rupture')) contElem.classList.add('status-rupture');
+  }
+
+  const originLabels = {
+    pre_867_established: 'Pre-867 Established',
+    feudalized_post_867: 'Post-867 Feudalized',
+    founded_post_867: 'Post-867 Founded',
+    pre_867_unfeudalized: 'Pre-867 Unfeudalized'
+  };
+  if (originElem) {
+    originElem.textContent = originLabels[prof.o] || prof.o || '—';
+  }
+  if (horizonElem) {
+    horizonElem.textContent = prof.tc
+      ? `Tarraconian Conquest: ${prof.hd}`
+      : `Unconquered (${prof.hd})`;
+  }
+  if (litElem) {
+    if (prof.ll) {
+      litElem.textContent = `Liturgical: ${prof.ll}`;
+      litElem.classList.remove('hidden');
+    } else {
+      litElem.classList.add('hidden');
+      litElem.textContent = '';
+    }
+  }
+
+  const setChip = (elemId, cname) => {
+    const el = document.getElementById(elemId);
+    if (!el) return;
+    const color = getCultureColor(cname);
+    const meta = baronyToponymicProfiles?.cultures?.[cname];
+    const langStr = meta?.language ? formatLanguageLabel(meta.language) : '';
+    const langTag = langStr ? ` <small style="opacity:0.65;font-weight:400">(${langStr})</small>` : '';
+    el.innerHTML = `<span class="culture-chip-dot" style="background:${color}"></span>${formatCultureLabel(cname)}${langTag}`;
+  };
+
+  setChip('drawer-coinage-culture', prof.c);
+  setChip('drawer-substrate-culture', prof.s);
+  setChip('drawer-transmission-culture', prof.t);
+
+  const cDet = document.getElementById('drawer-coinage-detail');
+  const sDet = document.getElementById('drawer-substrate-detail');
+  const tDet = document.getElementById('drawer-transmission-detail');
+  if (cDet) cDet.textContent = prof.cd || '—';
+  if (sDet) sDet.textContent = prof.sn || '—';
+  if (tDet) tDet.textContent = prof.tn || '—';
+
+  const streaksEl = document.getElementById('drawer-toponymic-streaks');
+  if (streaksEl) {
+    const s50 = (prof.ck && baronyToponymicProfiles?.county_streaks_50?.[prof.ck]) || [];
+    if (s50.length > 0) {
+      streaksEl.classList.remove('hidden');
+      const pills = s50.map(st => `<span class="toponymic-streak-pill">${formatCultureLabel(st.c)} (${st.s}–${st.e}, ${st.y}y)</span>`).join('');
+      streaksEl.innerHTML = `<div><strong>Pre-Horizon &ge;50y Ruler Stretches:</strong></div><div>${pills}</div>`;
+    } else {
+      streaksEl.classList.add('hidden');
+      streaksEl.innerHTML = '';
+    }
+  }
 }
 
 function renderConstituentTitles(props, tier, section, label, listElem) {
@@ -1303,6 +1524,26 @@ function setupEventListeners() {
             feat = countyLayerMap.get(feat.properties.county).feature;
           }
           onSelect(null, feat, currentTier);
+        }
+      }
+    });
+  });
+
+  // Barony sub-view selector pills (Holding Type / Coinage / Substrate / Transmission)
+  document.querySelectorAll('.barony-view-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      document.querySelectorAll('.barony-view-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentBaronyView = btn.getAttribute('data-view') || 'holding_type';
+      await ensureToponymicProfilesLoaded();
+      updateBaronyLegend();
+      if (baroniesLayer) {
+        baroniesLayer.setStyle(baronyStyle);
+        // Preserve selection highlight if a barony is selected
+        if (selectedLayers.length > 0 && currentTier === 'barony') {
+          for (const l of selectedLayers) {
+            l.setStyle({ weight: 3.0, color: '#ffffff', opacity: 1.0 });
+          }
         }
       }
     });

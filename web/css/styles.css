@@ -59,7 +59,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 1.5rem;
-  z-index: 1000;
+  z-index: 1200;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
   gap: 1.5rem;
 }
@@ -929,18 +929,20 @@ body {
   position: absolute;
   bottom: 60px;
   left: 20px;
+  max-width: calc(100vw - 440px);
   background: rgba(18, 16, 14, 0.88);
   border: 1px solid var(--border-gold);
-  border-radius: 20px;
-  padding: 0.35rem 0.95rem;
+  border-radius: 14px;
+  padding: 0.4rem 0.95rem;
   font-size: 0.75rem;
   color: var(--text-muted);
   backdrop-filter: blur(6px);
   z-index: 1000;
   pointer-events: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.45rem 0.7rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
@@ -2230,5 +2232,278 @@ body {
   color: var(--text-muted);
   line-height: 1.35;
 }
+
+/* --------------------------------------------------------------------------
+   Barony View Mode Switcher (Holding Type vs Coinage / Substrate / Transmission)
+   -------------------------------------------------------------------------- */
+.barony-view-controls {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(18, 16, 14, 0.92);
+  border: 1px solid var(--border-gold);
+  border-radius: 10px;
+  padding: 0.3rem 0.55rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.65);
+  max-width: calc(100vw - 140px);
+}
+
+.barony-view-controls.hidden {
+  display: none !important;
+}
+
+.barony-view-label {
+  font-family: var(--font-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.barony-view-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  background: #0d0b09;
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 6px;
+  padding: 2px;
+}
+
+.barony-view-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 0.28rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: all 0.18s ease;
+}
+
+.barony-view-btn:hover {
+  color: var(--text-main);
+  background: rgba(212, 175, 55, 0.12);
+}
+
+.barony-view-btn.active {
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-dim));
+  color: #0d0b09;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Toponymic Profile Card (Alternative 1 in Inspector Drawer)
+   -------------------------------------------------------------------------- */
+.toponymic-label {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.toponymic-continuity-pill {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 7px;
+  border-radius: 10px;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  background: rgba(212, 175, 55, 0.12);
+  color: var(--gold-bright);
+}
+
+.toponymic-continuity-pill.status-direct {
+  background: rgba(59, 130, 74, 0.22);
+  border-color: rgba(59, 130, 74, 0.6);
+  color: #8ae69d;
+}
+
+.toponymic-continuity-pill.status-transitional {
+  background: rgba(194, 139, 35, 0.22);
+  border-color: rgba(194, 139, 35, 0.6);
+  color: #f3c86a;
+}
+
+.toponymic-continuity-pill.status-rupture {
+  background: rgba(171, 51, 72, 0.25);
+  border-color: rgba(171, 51, 72, 0.65);
+  color: #f495a4;
+}
+
+.toponymic-card {
+  background: rgba(13, 11, 9, 0.72);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 8px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.toponymic-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.toponymic-origin-badge,
+.toponymic-horizon-badge,
+.toponymic-liturgical-badge {
+  font-size: 0.68rem;
+  padding: 2px 7px;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+}
+
+.toponymic-origin-badge {
+  border-color: rgba(212, 175, 55, 0.4);
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+.toponymic-horizon-badge {
+  border-color: rgba(48, 105, 168, 0.45);
+  color: #9dc8f3;
+}
+
+.toponymic-liturgical-badge {
+  border-color: rgba(120, 56, 132, 0.55);
+  color: #ddb4ea;
+}
+
+.toponymic-liturgical-badge.hidden {
+  display: none;
+}
+
+.toponymic-strata-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toponymic-stratum-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 6px;
+  padding: 0.45rem 0.6rem;
+}
+
+.stratum-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.stratum-title {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--gold-bright);
+}
+
+.stratum-title small {
+  font-weight: 400;
+  color: var(--text-dim);
+  font-size: 0.68rem;
+}
+
+.culture-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  padding: 2px 8px;
+}
+
+.culture-chip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.stratum-detail {
+  font-size: 0.73rem;
+  line-height: 1.35;
+  color: var(--text-muted);
+}
+
+.toponymic-streaks {
+  border-top: 1px dashed rgba(212, 175, 55, 0.25);
+  padding-top: 0.45rem;
+  font-size: 0.71rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.toponymic-streaks.hidden {
+  display: none;
+}
+
+.toponymic-streak-pill {
+  display: inline-block;
+  margin: 2px 4px 2px 0;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  color: var(--text-main);
+}
+
+@media (max-width: 768px) {
+  .barony-view-controls {
+    top: 48px;
+    left: 10px;
+    right: 10px;
+    transform: none;
+    max-width: calc(100vw - 20px);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    padding: 0.3rem 0.45rem;
+  }
+
+  .barony-view-pills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .barony-view-btn {
+    font-size: 0.68rem;
+    padding: 0.25rem 0.35rem;
+    text-align: center;
+  }
+
+  .inspector-drawer.open ~ .barony-view-controls {
+    display: none;
+  }
+}
+
 
 
