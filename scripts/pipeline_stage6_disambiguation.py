@@ -40,10 +40,11 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from tarraconian_phonotactics import ValidationContext, check_title_phonotactics
+from historical_phonology import resolve_wave1_decoder
 from pipeline_stage4_calque_mediation import (
     NON_LATIN_MISATTRIBUTED,
     adapt_latin_to_tarraconian,
-    transliterate_stem_to_tarr,
+    adapt_stage4a_text,
 )
 from pipeline_stage5_sound_laws import (
     ALLOWED_CHANCELLERY_CHARS,
@@ -276,7 +277,7 @@ def adapt_with_stage4(
     *,
     source_iso: str | None = None,
 ) -> str:
-    """Invoke Stage 4 single-pass adaptation for a barony record or NTR candidate."""
+    """Invoke Stage 4A historical phonology + transmission adaptation for an NTR candidate."""
     if source_iso == "lat" and raw.strip() not in NON_LATIN_MISATTRIBUTED:
         return adapt_latin_to_tarraconian(raw, suppress_geo_head=True)
     cult_bridge = med_ctx["cult_bridge"]
@@ -290,17 +291,46 @@ def adapt_with_stage4(
         in {"Tarraconian", "Lothringian", "Croato-Tarraconian", "Alpine-Tarraconian", "Ungwârer"}
     )
     is_rupture = (cs == "Semantic Rupture (>= 50y)") and not is_direct_trans
-    adapted, _notes = transliterate_stem_to_tarr(
+
+    eff_rec = dict(b_rec)
+    if source_iso:
+        eff_rec["selected_iso"] = source_iso
+        if eff_rec.get("coinage_culture") in {"Tarraconian", "Lothringian", "Croato-Tarraconian", "Alpine-Tarraconian", "Ungwârer"} and source_iso not in {"gmh", "deu", "goh"}:
+            eff_rec["coinage_culture"] = ""
+    wave1_dec = resolve_wave1_decoder(eff_rec, trans_fam)
+    has_intermediary = (coin_fam, trans_fam) in med_ctx["inter_map"]
+    if wave1_dec and wave1_dec[0] == "byzantine_greek_12c" and has_intermediary and is_rupture:
+        wave1_dec = None
+
+    eff_prof = trans_prof
+    if wave1_dec and eff_prof == "tarraconian_direct":
+        prof_map = {
+            "byzantine_greek_12c": "greek_to_tarraconian",
+            "goidelic_12c": "celtic_to_tarraconian",
+            "brythonic_12c": "celtic_to_tarraconian",
+            "anglo_saxon_12c": "west_germanic_to_tarraconian",
+            "west_slavic_lechitic_12c": "west_slavic_to_tarraconian",
+            "west_slavic_cs_12c": "west_slavic_to_tarraconian",
+            "chinese_12c_phonetic": "sinosphere_1154_to_tarraconian",
+            "korean_12c": "sinosphere_1154_to_tarraconian",
+            "japanese_12c": "sinosphere_1154_to_tarraconian",
+            "vietnamese_12c": "southeast_asian_to_tarraconian",
+            "turkic_12c": "turkic_to_tarraconian",
+            "iranian_12c": "iranian_to_tarraconian",
+        }
+        eff_prof = prof_map.get(wave1_dec[0], f"{wave1_dec[0].replace('_12c', '')}_to_tarraconian")
+
+    return adapt_stage4a_text(
         raw,
-        trans_prof,
+        eff_prof,
         coin_fam,
         trans_fam,
         med_ctx["inter_map"],
         med_ctx["trans_rules"],
+        wave1_dec,
         kanji_readings=med_ctx["kanji_readings"],
-        is_rupture=is_rupture,
+        rup=is_rupture,
     )
-    return adapted
 
 
 def _church_pool_key(b_rec: dict, ruler_info: dict | None) -> str:

@@ -6529,11 +6529,15 @@
       },
       "west_germanic_to_tarraconian": {
         "intermediary_family": "anglo_saxon",
-        "summary": "Nativize English/Anglo-Saxon/Dutch stems to Rhine Franconian cognates: th -> d, sh -> sch, ch -> k/tsch, -burh/-by -> -burch/-stat.",
+        "summary": "Late Old / Early Middle English -> Tarraconian: ch/ceaster/chester -> tsch/tschester, sc -> sch, þ/ð -> t/d, -burgh/-bury -> -burch, -geweorc -> -werc.",
         "substitutions": [
           [
-            "^Th",
-            "D"
+            "þ",
+            "t"
+          ],
+          [
+            "ð",
+            "d"
           ],
           [
             "sh",
@@ -6544,18 +6548,24 @@
             "burch"
           ],
           [
+            "burgh$",
+            "burch"
+          ],
+          [
             "geweorc$",
             "werc"
           ]
         ],
         "examples": [
           "Sūþgeweorc -> Sûtwerc",
-          "Lunden -> Lunden"
+          "Bamburgh -> Bamburch",
+          "Chester -> Tschester",
+          "Aylesbury -> Êlesburch"
         ]
       },
       "north_germanic_to_tarraconian": {
         "intermediary_family": "north_germanic",
-        "summary": "Map Old Norse/Scandinavian ð/þ -> d/t, ø -> ö, æ -> ê, -borg -> -burch, -vík -> -wîch.",
+        "summary": "12th-c. Old Norse / Nordic -> Tarraconian: strip modern definite -en/-et on -fjorden/-älven/-sjön/-vatnet, ð/þ -> d/t, ø -> ö, å -> ô, æ -> ê, -borg/-berg -> -burch/-berch, protect Nordic j.",
         "substitutions": [
           [
             "þ",
@@ -6568,6 +6578,10 @@
           [
             "ø",
             "ö"
+          ],
+          [
+            "å",
+            "ô"
           ],
           [
             "æ",
@@ -6584,7 +6598,8 @@
         ],
         "examples": [
           "Jótland -> Jûtlant",
-          "Sigtún -> Sigtûne"
+          "Byglandsfjorden -> Byglantsfjort",
+          "Børgefjell -> Börgefel"
         ]
       },
       "gallo_romance_to_tarraconian": {
@@ -6626,7 +6641,7 @@
       },
       "occitano_catalan_to_tarraconian": {
         "intermediary_family": "occitano_catalan",
-        "summary": "Core Catalan substrate conventions: ny -> nj, nh -> nj, j/tg -> dsch/tsch, apocope after l/r/n.",
+        "summary": "12th-century Occitan & Catalan -> Tarraconian: ny/nh -> nj, j/g(e,i)/tg -> dsch, qu/gu(e,i) -> k/g, ç/c(e,i) -> z/tz, ll -> lj, -ix/-ux -> -isch/-us, -on -> -ôn.",
         "substitutions": [
           [
             "ny",
@@ -6637,22 +6652,28 @@
             "nj"
           ],
           [
-            "ll",
-            "ll"
+            "ç",
+            "tz"
           ],
           [
-            "ona$",
+            "on$",
             "ôn"
+          ],
+          [
+            "a$",
+            "e"
           ]
         ],
         "examples": [
           "Tarragona -> Tarracôn",
-          "Castelló -> Castellon"
+          "Girona -> Dschirôn",
+          "Figeac -> Fidschach",
+          "Foix -> Foisch"
         ]
       },
       "ibero_romance_to_tarraconian": {
         "intermediary_family": "ibero_romance",
-        "summary": "Iberian ñ -> nj, ll -> ll, j -> ch/sch, final -o/-a -> apocopated or -e.",
+        "summary": "12th-century Old Ibero-Romance -> Tarraconian: j/g(e,i) -> dsch, x -> sch, ñ/nh -> nj, ll/lh -> lj, gü(e,i) -> gw, ç/c(e,i) -> z/tz, -o -> apocopated, -a -> -e.",
         "substitutions": [
           [
             "ñ",
@@ -6673,12 +6694,13 @@
         ],
         "examples": [
           "Tudela -> Tudêl",
-          "Huesca -> Oske"
+          "Huesca -> Oske",
+          "Cigüela -> Zîgwela"
         ]
       },
       "italo_romance_to_tarraconian": {
         "intermediary_family": "italo_romance",
-        "summary": "Italian -ggi-/-gi- -> dsch, -ci- -> tsch, gn -> nj, -c(k) -> k/ch, final -o/-a reduced or dropped.",
+        "summary": "12th-century Italo-Romance -> Tarraconian: sc(e,i) -> sch, (g)gi/(g)ge -> dsch, (c)ci/(c)ce -> tsch, cch/ch(e,i) -> k, gh(e,i) -> g, gl(i) -> lj, gn -> nj, zz -> tz.",
         "substitutions": [
           [
             "ggi",
@@ -6693,8 +6715,8 @@
             "nj"
           ],
           [
-            "sc(?=[ei])",
-            "sch"
+            "zz",
+            "tz"
           ],
           [
             "o$",
@@ -6707,13 +6729,14 @@
         ],
         "examples": [
           "Foggia -> Fodsche",
-          "Lucca -> Lûke",
+          "Brescia -> Bresche",
+          "Cagliari -> Kaljari",
           "Ravenna -> Raben"
         ]
       },
       "eastern_romance_to_tarraconian": {
         "intermediary_family": "eastern_romance",
-        "summary": "Vlach/Romanian ș -> sch, ț -> tz, â/î -> â/î, final -a -> -e.",
+        "summary": "Eastern Romance (Vlach) -> Tarraconian: ce/ci -> tsche/tschi, ge/gi -> dsche/dschi, che/ghi -> ke/gi, ș -> sch, ț -> tz, ă -> e, â/î -> â.",
         "substitutions": [
           [
             "ș",
@@ -6730,11 +6753,20 @@
           [
             "gea",
             "dsche"
+          ],
+          [
+            "ă",
+            "e"
+          ],
+          [
+            "î",
+            "â"
           ]
         ],
         "examples": [
           "Târgu -> Targû",
-          "Cetatea -> Tschetâte"
+          "Cetatea -> Tschetâte",
+          "Dâmbovița -> Dâmbovitze"
         ]
       },
       "balkan_to_tarraconian": {
@@ -6826,23 +6858,31 @@
       },
       "celtic_to_tarraconian": {
         "intermediary_family": "brythonic",
-        "summary": "Celtic mh/bh -> v/w, dh/gh -> Ø/g, th -> t, final -d -> -t.",
+        "summary": "9th-12th c. Goidelic & Brythonic Celtic -> Tarraconian: Irish/Gaelic bh/mh -> v, fh -> Ø, dh/gh -> Ø/lengthened vowel, c(e,i) -> k; Welsh dd -> d, f -> v, ff -> f, ll -> l, rh -> r.",
         "substitutions": [
           [
             "bh",
-            "w"
+            "v"
           ],
           [
             "mh",
-            "w"
-          ],
-          [
-            "th",
-            "t"
+            "v"
           ],
           [
             "dd",
             "d"
+          ],
+          [
+            "rh",
+            "r"
+          ],
+          [
+            "ff",
+            "f"
+          ],
+          [
+            "th",
+            "t"
           ],
           [
             "d$",
@@ -6850,13 +6890,15 @@
           ]
         ],
         "examples": [
-          "Gwened -> Gwenet",
-          "Dún -> Dûn"
+          "Môr Iwerddon -> Môr Iwerdon",
+          "Sliabh -> Slîv",
+          "Armagh -> Armâ",
+          "Afon Rhymni -> Avon Rymni"
         ]
       },
       "greek_to_tarraconian": {
         "intermediary_family": "hellenic",
-        "summary": "Byzantine Greek θ -> t, χ -> ch, φ -> f, polysyllabic -os/-on dropped (short stems preserved), -ion -> -jen, -eia -> -êe, -polis -> -pel.",
+        "summary": "12th-century Spoken Byzantine Greek -> Tarraconian: itacism (ei/oi/y -> î/i, ai -> ê), ou -> û, au/eu -> av/af & ev/ef, intervocalic b -> v, ph/th/kh -> f/t/ch, -ion -> -jen, -polis -> -pel.",
         "substitutions": [
           [
             "polis$",
@@ -6886,13 +6928,14 @@
         "examples": [
           "Kallipolis -> Kallîpel",
           "Nikaia -> Nîkêe",
-          "Ephesos -> Ephês",
-          "Ohrid -> Ochrît"
+          "Euchaita -> Efchêta",
+          "Móschoipyrgos -> Moschîtorn",
+          "Abydos -> Avîdos"
         ]
       },
       "east_slavic_to_tarraconian": {
         "intermediary_family": "east_slavic",
-        "summary": "Slavic -ov/-ev -> -ouwe, -sk -> -tzich/-bsch, -č -> -tsch, -š/-ž -> -sch, -k -> -ch, -a -> -e.",
+        "summary": "12th-c. Old East Slavic -> Tarraconian: ch -> tsch, kh -> ch, zh/sh/shch -> sch, c -> z-/tz, -ov/-ev -> -ouwe, -sk -> -tzich/-bsch; strip modern -sky/-skaya/-skoye frontier adjectives.",
         "substitutions": [
           [
             "ov$",
@@ -6930,12 +6973,13 @@
         "examples": [
           "Rostov -> Rostouwe",
           "Moskva -> Moskouwe",
-          "Mělník -> Melnîch"
+          "Dryhavichy -> Dryhawitschy",
+          "Amursky -> Amûr"
         ]
       },
       "west_slavic_to_tarraconian": {
         "intermediary_family": "west_slavic_lechitic",
-        "summary": "West Slavic č/cz -> tsch, š/sz -> sch, ř/rz -> rsch, c -> tz, -ice/-itz -> -itz, -ov -> -ouwe.",
+        "summary": "9th-12th c. West Slavic -> Tarraconian (Option A): palatal *r' (rz/ř) -> rj / post-C r, ę/ą -> en/on, č/ć/cz -> tsch, š/ś/ż/ž -> sch, c -> z-/tz, -ov -> -ouwe; preserve ch [x].",
         "substitutions": [
           [
             "cz",
@@ -6977,12 +7021,13 @@
         "examples": [
           "Lignice -> Lîgnitz",
           "Opava -> Troppouwe",
-          "Praga -> Prâge"
+          "Brzeg -> Breg",
+          "Pomorzanie -> Pomorjanie"
         ]
       },
       "south_slavic_to_tarraconian": {
         "intermediary_family": "south_slavic",
-        "summary": "South Slavic č/ć -> tsch, š -> sch, ž -> sch, đ/dž -> dsch, lj -> lj, nj -> nj.",
+        "summary": "9th-12th c. South Slavic -> Tarraconian: č/ć -> tsch, š/ž -> sch, đ/dž -> dsch, universal c -> z-/tz (-ica -> -itza), Bul. ch/sht -> tsch/scht.",
         "substitutions": [
           [
             "dž",
@@ -7015,7 +7060,8 @@
         ],
         "examples": [
           "Preslav -> Preslouwe",
-          "Ohrid -> Ochrît"
+          "Ohrid -> Ochrît",
+          "Čemernica -> Tschemernitza"
         ]
       },
       "baltic_to_tarraconian": {
@@ -7209,7 +7255,7 @@
       },
       "iranian_to_tarraconian": {
         "intermediary_family": "iranian",
-        "summary": "Persian/Sogdian sh -> sch, zh -> sch, kh -> ch, j -> dsch, ch -> tsch, final -b/-d/-g devoiced.",
+        "summary": "Early New Persian / Tajik / Kurdish / Sogdian -> Tarraconian: q -> k, sh/zh -> sch, č/ç/ch -> tsch, kh -> ch, gh -> g, j -> dsch, Tajik darë -> darjô, v -> w, -e- izafet lowercase.",
         "substitutions": [
           [
             "sh",
@@ -7222,6 +7268,22 @@
           [
             "kh",
             "ch"
+          ],
+          [
+            "gh",
+            "g"
+          ],
+          [
+            "č",
+            "tsch"
+          ],
+          [
+            "ç",
+            "tsch"
+          ],
+          [
+            "q",
+            "k"
           ],
           [
             "j$",
@@ -7239,12 +7301,13 @@
         "examples": [
           "Shiraz -> Schîrâz",
           "Jame -> Dschâm",
-          "Rukhaj -> Ruchatsch"
+          "Jebāl Bārez -> Dschebâl Bârez",
+          "Amudarë -> Amudarjô"
         ]
       },
       "turkic_to_tarraconian": {
         "intermediary_family": "turkic",
-        "summary": "Turkic ş -> sch, ç -> tsch, c -> dsch, q/kh -> ch, ö/ü preserved, post-vocalic -k -> -ch, j -> dsch.",
+        "summary": "Middle Turkic -> Tarraconian: ş -> sch, ç/č -> tsch, c/J- -> dsch, ğ/gh -> g, q/kh -> k/ch, ı/ï -> î, ö/ü preserved, post-vocalic -k -> -ch, -mescit -> -meschit.",
         "substitutions": [
           [
             "ş",
@@ -7252,6 +7315,10 @@
           ],
           [
             "ç",
+            "tsch"
+          ],
+          [
+            "č",
             "tsch"
           ],
           [
@@ -7267,6 +7334,22 @@
             "ch"
           ],
           [
+            "gh",
+            "g"
+          ],
+          [
+            "ğ",
+            "g"
+          ],
+          [
+            "q",
+            "k"
+          ],
+          [
+            "ı",
+            "î"
+          ],
+          [
             "k$",
             "ch"
           ],
@@ -7277,8 +7360,9 @@
         ],
         "examples": [
           "Arkalyk -> Arkalîch",
-          "Jend -> Dschent",
-          "Gelibolu -> Gelîbôl"
+          "Jitikul -> Dschetiköl",
+          "Julym -> Tschulîm",
+          "Muğaljar -> Mugaljar"
         ]
       },
       "mongolic_to_tarraconian": {
@@ -7317,7 +7401,7 @@
       },
       "sinosphere_1154_to_tarraconian": {
         "intermediary_family": "sinosphere_chinese",
-        "summary": "Sinosphere 1154 historical phonology: j/zh -> dsch, q/ch -> tsch, x/sh -> sch, z/c -> z-/-tz, initial y -> j.",
+        "summary": "Sinosphere 1154 historical phonology: j/zh -> dsch, q/ch -> tsch (qu -> tschü), x/sh -> sch, z/c -> z-/-tz, Korean eo/eu/ae -> ô/ü/ê, Japanese ts/y -> tz/j, initial y -> j.",
         "substitutions": [
           [
             "^Zh",
@@ -7334,6 +7418,18 @@
           [
             "^Sh",
             "Sch"
+          ],
+          [
+            "qu",
+            "tschü"
+          ],
+          [
+            "q",
+            "tsch"
+          ],
+          [
+            "x",
+            "sch"
           ],
           [
             "zh",
@@ -7354,8 +7450,9 @@
         ],
         "examples": [
           "Jinzhou -> Dschindschou",
-          "Yanzhou -> Jandschou",
-          "Gyeongju -> Gjongdschu"
+          "Wànquán -> Wantschüan",
+          "Pyongyang -> Pjôngjang",
+          "Seungpyeongpo -> Süngpjôngpo"
         ]
       },
       "east_asian_to_tarraconian": {

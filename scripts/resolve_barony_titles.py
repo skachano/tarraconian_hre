@@ -108,7 +108,7 @@ def enforce_tarraconian_sound_laws(name: str) -> str:
     s = s.replace("ą", "on").replace("ę", "en").replace("Ą", "On").replace("Ę", "En")
     s = re.sub(r"cz", lambda m: "Tsch" if m.group(0)[0].isupper() else "tsch", s, flags=re.I)
     s = re.sub(r"sz(?!elle)", lambda m: "Sch" if m.group(0)[0].isupper() else "sch", s, flags=re.I)
-    s = re.sub(r"rz", lambda m: "Rsch" if m.group(0)[0].isupper() else "rsch", s, flags=re.I)
+    s = re.sub(r"rz(?!elle)", lambda m: "Rsch" if m.group(0)[0].isupper() else "rsch", s, flags=re.I)
     s = s.replace("ł", "l").replace("Ł", "L")
     s = s.replace("ń", "nj").replace("Ń", "Nj")
     s = s.replace("ś", "sch").replace("Ś", "Sch")

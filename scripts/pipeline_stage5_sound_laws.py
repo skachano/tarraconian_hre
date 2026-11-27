@@ -63,9 +63,11 @@ EXOTIC_CHAR_MAP: dict[str, str] = {
     # Old English / Celtic / Germanic / Nordic
     "ǣ": "ê", "Ǣ": "Ê", "æ": "ê", "Æ": "Ê", "å": "ô", "Å": "Ô", "ø": "ö", "Ø": "Ö",
     "ǫ": "o", "Ǫ": "O", "þ": "th", "Þ": "Th", "ð": "d", "Ð": "D",
-    # Slavic yers / nasals / liquids
+    "ő": "ö", "Ő": "Ö", "ű": "ü", "Ű": "Ü",
+    # Slavic yers / nasals / liquids / caron sibilants
     "ĭ": "i", "Ĭ": "I", "ŭ": "u", "Ŭ": "U", "ľ": "l", "Ľ": "L", "ĺ": "l", "Ĺ": "L",
     "ŕ": "r", "Ŕ": "R", "ň": "n", "Ň": "N", "ď": "d", "Ď": "D", "ť": "t", "Ť": "T",
+    "š": "sch", "Š": "Sch", "ž": "sch", "Ž": "Sch", "č": "tsch", "Č": "Tsch",
     "ǧ": "g", "Ǧ": "G", "ė": "e", "Ė": "E",
     # Indic IAST
     "ṇ": "n", "Ṇ": "N", "ṅ": "ng", "Ṅ": "Ng", "ṃ": "m", "Ṃ": "M", "ṁ": "m", "Ṁ": "M",
@@ -241,6 +243,8 @@ def _apply_segment_orthography(
         w = ("Em" if w[0].isupper() else "em") + c2 + w[2:]
     elif re.match(r"^[Pp]lj", w):
         w = ("Plê" if w[0].isupper() else "plê") + w[3:]
+    elif re.match(r"^[Ss]chch", w):
+        w = ("Sch" if w[0].isupper() else "sch") + w[5:]
     elif re.match(r"^[Tt]schh", w):
         w = ("Tsch" if w[0].isupper() else "tsch") + w[5:]
     elif re.match(r"^[Dd]schh", w):
@@ -321,6 +325,10 @@ def apply_full_stage5_sound_laws(
 
     # Canonical Chancellery normalizer from resolve_barony_titles.py
     s = enforce_tarraconian_sound_laws(s)
+    # Keep Persian/Iranian izafet connectives (-e-, -e , -ye-, -je ) lowercase after title-casing
+    s = re.sub(r"-([EYJ]e?)(?=[-\s])", lambda m: "-" + m.group(1).lower(), s)
+    # Regularize any lingering Turkish -mescit -> -meschit
+    s = re.sub(r"mescit\b", "meschit", s, flags=re.I)
 
     # Extra Auslautverhärtung & double-vowel circumflex alignment
     s = re.sub(r"burh\b", "burch", s)

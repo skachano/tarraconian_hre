@@ -2429,7 +2429,7 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_kolomyia"]["b_tarr_hist"] == "Pyrêtkirkja"
         assert baronies["b_al-hajar_nubia"]["b_tarr_hist"] == "Nîlmarct"
         assert baronies["b_abrantes"]["b_tarr_hist"] == "Ozecarmeschit"
-        assert baronies["b_qasr_ash-shams"]["b_tarr_hist"] == "Marmaricestat"
+        assert baronies["b_qasr_ash-shams"]["b_tarr_hist"] == "Marmarikestat"
         assert baronies["b_al-bahriya"]["b_tarr_hist"] == "Dschesdsches"
         # Revised 4-layer phonotactics remediation checks
         assert baronies["b_ak-taylak"]["b_tarr_hist"] == "Ach-Taylatschburch"
@@ -2444,7 +2444,7 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_momunofu"]["b_tarr_hist"] == "Pirsichlêvende"
         assert baronies["b_mtskheta"]["b_tarr_hist"] == "Metzcheta"
         assert baronies["b_claudiopolis"]["b_tarr_hist"] == "Claudiobolu"
-        assert baronies["b_aqmescit"]["b_tarr_hist"] == "Skythian Neapoliscastel"
+        assert baronies["b_aqmescit"]["b_tarr_hist"] == "Skitian Neapelcastel"
         assert baronies["b_battambang"]["b_tarr_hist"] == "Penom Samkostempel"
         assert baronies["b_amdo"]["b_tarr_hist"] == "Do-Smat"
 
@@ -2619,6 +2619,469 @@ class TestOldFrenchToTarraconianRevision:
         for bk in ("b_blois", "b_le_lude", "b_saumur", "b_poitiers"):
             assert "ɔɪ" in baronies[bk]["b_ipa"], f"{bk} missing [ɔɪ]: {baronies[bk]['b_ipa']}"
             assert "ɔ.ɪ" not in baronies[bk]["b_ipa"], f"{bk} has hiatus [ɔ.ɪ]: {baronies[bk]['b_ipa']}"
+
+
+class TestPhase0AndWave1HistoricalPhonology:
+    def test_stage4a_package_and_provenance(self):
+        pkg_dir = REPO_DIR / "scripts" / "historical_phonology"
+        for fname in ("__init__.py", "latin.py", "gallo_romance.py", "byzantine_greek.py", "romance_mediterranean.py"):
+            assert (pkg_dir / fname).exists(), f"Missing {pkg_dir / fname}"
+        with open(REPO_DIR / "data" / "pipeline_stage4_mediated.json", "r", encoding="utf-8") as f:
+            meta = json.load(f)["metadata"]
+        counts = meta.get("historical_phonology_counts") or {}
+        for key in ("byzantine_greek_12c", "latin_classical", "gallo_romance_12c", "italo_romance_12c", "occitano_catalan_12c", "ibero_romance_12c", "eastern_romance_12c"):
+            assert counts.get(key, 0) > 0, f"Missing decoder count for {key}"
+
+    def test_phase0_and_wave1_barony_resolutions(self):
+        with open(REPO_DIR / "data" / "barony_resolutions_v2.json", "r", encoding="utf-8") as f:
+            baronies = json.load(f)["baronies"]
+
+        # Phase 0: Slavic -ica/-c -> -tz-, Slovak vrchy preserved, Hungarian ő/ű preserved, Arabic/Slavic uncorrupted
+        assert baronies["b_banjaluka"]["b_tarr_hist"] == "Tschemernitza"
+        assert baronies["b_bars"]["b_tarr_hist"] == "Stiavnickê werchy"
+        assert baronies["b_bekes"]["b_tarr_hist"] == "Gepidâkör"
+        assert baronies["b_constanta"]["b_tarr_hist"] == "Constanta"
+        assert baronies["b_akik"]["b_tarr_hist"] == "Dschazîrat Mukawwarkirchen"
+        assert baronies["b_al-janad"]["b_tarr_hist"] == "Al-Dschanat"
+        assert baronies["b_cherykaw"]["b_tarr_hist"] == "Soschmarct"
+        assert baronies["b_slonim"]["b_tarr_hist"] == "Scharastat"
+
+        # Wave 1A: Spoken Byzantine Greek (12th c. itacism, ou->u, au/eu->av/ev/af/ef, intervocalic b->v, exonyms kept, c->k, th/ph->t/f, -polis->-pel)
+        expected_byz = {
+            "b_abydos": "Avîdos",
+            "b_agranai": "Agranêkirchen",
+            "b_aigialos": "Êgial",
+            "b_aila": "Êlavurt",
+            "b_ainos": "Ênos",
+            "b_akhaltsikhe": "Môschîtorn",
+            "b_abu_geili": "Astâpusmeschit",
+            "b_aba-qomi": "Mêdîribât",
+            "b_claudiopolis": "Claudiobolu",
+            "b_claudiopolis_SELEUCIA": "Claudiopel",
+            "b_aqmescit": "Skitian Neapelcastel",
+            "b_athens": "Atên",
+            "b_ephesos": "Efêstorn",
+            "b_ankyra": "Ankira",
+            "b_seleukia": "Selefkia",
+            "b_chalcedon": "Chalket",
+            "b_kaisereia": "Kaisarêe",
+            "b_nikaea": "Nîkêe",
+            "b_arkadiopolis": "Arkadiopel",
+            "b_sinj": "Partîmeschit",
+            "b_qalat_ar-rum": "Efrâtês",
+            "b_dedoplitskhara": "Kambîsêsveste",
+            "b_wolqayt": "Atagaûburch",
+            "b_arrajan": "Arradschancastel",
+            "b_lezhe": "Lesche",
+        }
+        for bk, exp in expected_byz.items():
+            assert baronies[bk]["b_tarr_hist"] == exp, f"{bk}: got {baronies[bk]['b_tarr_hist']} != {exp}"
+
+        # Wave 1B: Mediterranean & Eastern Romance (12th c.) + substrate guard checks
+        expected_rom = {
+            "b_benevento": "Benevent",
+            "b_aquileia": "Aquilêe",
+            "b_brescia": "Bresche",
+            "b_bonifacio": "Bonifatsch",
+            "b_cagliari": "Caljari",
+            "b_cagli": "Calj",
+            "b_arezzo": "Aretzstein",
+            "b_ascoli_piceno": "Ascoli Pitschen",
+            "b_omis": "Kiese Omisch",
+            "b_girona": "Dschirôn",
+            "b_foix": "Foisch",
+            "b_limoges": "Limodsches",
+            "b_digne": "Dinje",
+            "b_llivia": "Ljivie",
+            "b_lleida": "Ljeide",
+            "b_limoux": "Limûs",
+            "b_seu_d_urgell": "Seu de Urdschelj",
+            "b_menorca": "Minorke",
+            "b_castellane": "Sinake",
+            "b_quintanar": "Zigweleburch",
+            "b_sedano": "Cordiljere Cantâbrike",
+            "b_melide": "Ulje",
+            "b_bucuresti": "Dâmbovitze",
+            "b_calafat": "Dunere",
+            "b_pitesti": "Vedeburch",
+            "b_orsova": "Portzile de Fierstat",
+            "b_viipuri": "Varjagitburch",
+            "b_sortavala": "Karjalaischetburch",
+        }
+        for bk, exp in expected_rom.items():
+            assert baronies[bk]["b_tarr_hist"] == exp, f"{bk}: got {baronies[bk]['b_tarr_hist']} != {exp}"
+
+
+class TestWave2CelticAndGermanicPhonology:
+    """Verify Wave 2 Stage 4A decoders (Goidelic, Brythonic, Anglo-Saxon/English, North Germanic)."""
+
+    def test_wave2_decoder_provenance(self):
+        import sys
+        sys.path.insert(0, str(REPO_DIR / "scripts"))
+        from historical_phonology import (
+            resolve_historical_decoder,
+            adapt_goidelic_to_tarraconian,
+            adapt_brythonic_to_tarraconian,
+            adapt_english_to_tarraconian,
+            adapt_north_germanic_to_tarraconian,
+        )
+
+        assert callable(resolve_historical_decoder)
+        assert callable(adapt_goidelic_to_tarraconian)
+        assert callable(adapt_brythonic_to_tarraconian)
+        assert callable(adapt_english_to_tarraconian)
+        assert callable(adapt_north_germanic_to_tarraconian)
+
+        with open(REPO_DIR / "data" / "pipeline_stage4_mediated.json", "r", encoding="utf-8") as f:
+            meta = json.load(f)["metadata"]
+        counts = meta.get("historical_phonology_counts") or {}
+        for key in ("goidelic_12c", "brythonic_12c", "anglo_saxon_12c", "north_germanic_12c"):
+            assert counts.get(key, 0) > 0, f"Missing Wave 2 decoder count for {key}"
+
+    def test_wave2_barony_resolutions(self):
+        with open(REPO_DIR / "data" / "barony_resolutions_v2.json", "r", encoding="utf-8") as f:
+            baronies = json.load(f)["baronies"]
+
+        expected_wave2 = {
+            # Goidelic Celtic (incl. Tarraconian-held Gaelic NTR substrates)
+            "b_adragh": "Sliav an Iarainnwal",
+            "b_ardee": "An Nîhâven",
+            "b_armagh": "Armâ",
+            "b_badenoch": "Am Monâ Liatcastel",
+            "b_biggar": "Dail Tuaikirchen",
+            "b_clackmannan": "Devanstat",
+            "b_gairloch": "Ma-Ruivehâven",
+            "b_kilcudbrite": "Gall-Gêlburch",
+            "b_kilkenny": "Kill Cnoc Werêanail",
+            "b_kilmarten": "Dunatwal",
+            "b_meneith": "Keiteireinstat",
+            "b_penicuick": "Pentlantstein",
+            "b_raphoe": "Rafô",
+            "b_tain": "Avainn Chonainnmarch",
+            "b_the_uists": "Caolas Varraikirchen",
+            "b_wigtown": "Bâ Lûskirchen",
+            # Brythonic Celtic
+            "b_caerphilly": "Avon Rymni",
+            "b_cardigan": "Môr Iwerdon",
+            "b_carmarthen": "Caervyrdin",
+            "b_cornouailles": "Cornualje",
+            "b_corwen": "Rodristat",
+            "b_ludlow": "Avon Teveidiatstat",
+            "b_pembroke": "Aberdaugledau",
+            "b_shrewsbury": "Dinle Ureconn",
+            "b_treguier": "Trêgier",
+            # Late Old / Early Middle English
+            "b_ampthill": "Flêtwîch",
+            "b_aylesbury": "Êlesburch",
+            "b_bamburgh": "Bamburch",
+            "b_banbury": "Tschearwelle",
+            "b_berkhamsted": "Tschiltern",
+            "b_boston": "Gewêschport",
+            "b_bridlington": "Nortsêport",
+            "b_carlisle": "Carlîl",
+            "b_chester": "Tschester",
+            "b_evesham": "Evesheim",
+            "b_jedburgh": "Jedburch",
+            "b_leeds": "Lêdsburch",
+            "b_malmesbury": "Malmesbiricastel",
+            "b_peterborough": "Medes-Heimstede",
+            "b_pockington": "Waltstein",
+            "b_reading": "Kynete",
+            "b_whitby": "Strônes-Halkirchen",
+            "b_winchester": "Wintschester",
+            "b_wolverhampton": "Kenec",
+            "b_worcester": "Wortschester",
+            # North Germanic (incl. Tarraconian-held Norse NTR substrates)
+            "b_aarak": "Byglantzfjortkirchen",
+            "b_aarborte": "Börgefelkirchen",
+            "b_arjepluovve": "Pieljekaisewîe",
+            "b_arviesjavrrie": "Byskeälfhâven",
+            "b_eynafylki": "Beit-Statfjortkirchen",
+            "b_falkoping": "Mösseberchstat",
+            "b_friskdal": "Tosseberchsklättberch",
+            "b_gauldala": "Gauldalberch",
+            "b_hedeby": "Sliestorpburch",
+            "b_heiane": "Sirdalsvatnkirchen",
+            "b_kaddlhutt": "Vita hafhâven",
+            "b_laholm": "Loghâven",
+            "b_messukyla": "Tafêistwerc",
+            "b_norwegian_lister": "Fedafjorthâven",
+            "b_olafsvik": "Breidafjörthâven",
+            "b_porvoo": "Tafêistvirki",
+            "b_ragunda": "Indalsälfkirchen",
+            "b_roskilde": "Îsafjortwerc",
+            "b_rounala": "Felsamerberch",
+            "b_ryfylki": "Boknafjortbrücke",
+            "b_sioboradh": "Ângermannaälfhâven",
+            "b_sognfylki": "Lûsakaupangberch",
+            "b_stolsheimen": "Nêröyfjortvurt",
+            "b_tunsberg": "Ormsburch",
+            "b_varnhem": "Hornborgasjömarct",
+            "b_vualtjere": "Malgomajkirchen",
+            "b_wigton": "Sulwat",
+            # Regression / collateral guards
+            "b_eisenach": "Türinger Waltkirchen",
+            "b_dumbarton": "Alcluit",
+            "b_kinsale": "Seitekirchen",
+            "b_thurso": "Tursowal",
+        }
+        for bk, exp in expected_wave2.items():
+            assert baronies[bk]["b_tarr_hist"] == exp, f"{bk}: got {baronies[bk]['b_tarr_hist']} != {exp}"
+
+
+class TestWave3SlavicAndMagyarPhonology:
+    """Verify Wave 3 Stage 4A decoders (Magyar, Lechitic, Czech/Slovak, South Slavic, East Slavic)."""
+
+    def test_wave3_decoder_provenance(self):
+        import sys
+        sys.path.insert(0, str(REPO_DIR / "scripts"))
+        from historical_phonology import (
+            resolve_historical_decoder,
+            adapt_magyar_to_tarraconian,
+            adapt_lechitic_to_tarraconian,
+            adapt_proto_slavic_to_tarraconian,
+            adapt_czech_slovak_to_tarraconian,
+            adapt_south_slavic_to_tarraconian,
+            adapt_south_slavic_bul_to_tarraconian,
+            adapt_east_slavic_to_tarraconian,
+        )
+
+        assert callable(resolve_historical_decoder)
+        assert callable(adapt_magyar_to_tarraconian)
+        assert callable(adapt_lechitic_to_tarraconian)
+        assert callable(adapt_proto_slavic_to_tarraconian)
+        assert callable(adapt_czech_slovak_to_tarraconian)
+        assert callable(adapt_south_slavic_to_tarraconian)
+        assert callable(adapt_south_slavic_bul_to_tarraconian)
+        assert callable(adapt_east_slavic_to_tarraconian)
+
+        with open(REPO_DIR / "data" / "pipeline_stage4_mediated.json", "r", encoding="utf-8") as f:
+            meta = json.load(f)["metadata"]
+        counts = meta.get("historical_phonology_counts") or {}
+        for key in (
+            "magyar_12c",
+            "west_slavic_lechitic_12c",
+            "west_slavic_cs_12c",
+            "south_slavic_12c",
+            "east_slavic_12c",
+        ):
+            assert counts.get(key, 0) > 0, f"Missing Wave 3 decoder count for {key}"
+
+    def test_wave3_barony_resolutions(self):
+        with open(REPO_DIR / "data" / "barony_resolutions_v2.json", "r", encoding="utf-8") as f:
+            baronies = json.load(f)["baronies"]
+
+        expected_wave3 = {
+            # Old Magyar (s=[ʃ]->sch, sz=[s]->s, gy->dj, ly->lj)
+            "b_borsod": "Schajô",
+            "b_szerencs": "Schajôburch",
+            "b_becse": "Tisavurt",
+            "b_borsova": "Tisamarct",
+            "b_beszterce": "Bestertzekö",
+            "b_lugos": "Temeschstat",
+            "b_krasso": "Kraschôwart",
+            "b_nagyszolos": "Awaschwart",
+            "b_szekelyudvarhely": "Agatürsökkö",
+            "b_vajdahunyad": "Ruska-Hawaschör",
+            "b_elesd": "Erdêlji-Közêphedjschêgburch",
+            "b_nysa": "Nysastein",
+            "b_wolgast": "Peenestromburch",
+            # Proto-Slavic (sla-pro) nasals, x->ch, c->tz, no Magyar s->sch leakage
+            "b_stezyca": "Lendjaneburch",
+            "b_cherven_VOL": "Lendjanestein",
+            "b_karachev": "Wentitjiburch",
+            "b_belev": "Wentitjiribât",
+            "b_miliez": "Slenschanewart",
+            "b_checiny": "Lysy Gorykirchen",
+            "b_kielce": "Lysy Gorystein",
+            "b_opatow": "Wislamarct",
+            "b_otmunchow": "Nisamarct",
+            "b_krakow": "Wisljanewart",
+            "b_radom": "Wisljaneburch",
+            "b_kreuzburg": "Prosnahêl",
+            "b_kobryn": "Muchawitzimarct",
+            "b_neustrelitz": "Moritzekirchen",
+            "b_novosil": "Borkowitzburch",
+            # West Slavic Lechitic (Option A pre-fricative rz -> rj/r)
+            "b_brzeg": "Bregburch",
+            "b_naklo": "Pomorjanieburch",
+            "b_lyck": "Biebrastat",
+            "b_breslau": "Slenschanieburch",
+            "b_schweibus": "Dschadoschanieburch",
+            "b_rawa": "Pilitzastat",
+            "b_slupsk": "Slowintzeburch",
+            "b_sochaczew": "Kampinoskakirchen",
+            "b_wieliczka": "Niepolomitzkakirchen",
+            # West Slavic Czech/Slovak (Option A pre-fricative ř -> rj/r; -ke/ca preserved)
+            "b_kromeriz": "Chribystat",
+            "b_bethen": "Opolanêtwert",
+            "b_opole": "Opoletwert",
+            "b_abauj": "Zemplînske werchy",
+            "b_arva": "Orawa",
+            "b_zolyom": "Stiavnickê werchy",
+            "b_turoc": "Turôtz",
+            # South Slavic
+            "b_bihac": "Plêschewitza",
+            "b_blagaj": "Weleschburch",
+            "b_breznica": "Durmitorzelle",
+            "b_elena": "Jantraburch",
+            "b_lapusna": "Lepuschnaveste",
+            "b_nevropkop": "Nicopel at Nestum",
+            "b_shumen": "Kamtschija",
+            "b_szerem": "Serem",
+            "b_vranje": "Petschinja",
+            "b_kalyatta": "Wutschapel",
+            "b_kavurskotokale": "Wutschacastel",
+            "b_philippopolis": "Filippopel",
+            "b_ribnica": "Kotschewski Rogkirchen",
+            "b_visoki": "Fojnitza",
+            # East Slavic (incl. Tarraconian-held Far East NTR, 12c yers, Y->J/ii->i)
+            "b_gomel": "Castel-Suschi",
+            "b_unenezh": "Wustribrücke",
+            "b_vyr": "Semimarct",
+            "b_boryspil": "Duneprmeschit",
+            "b_lyubech": "Dunepraltburch",
+            "b_rusa": "Ilmen sloweneostroch",
+            "b_demiianka": "Demiankaburch",
+            "b_kletsk": "Eufrosyneburch",
+            "b_lahishyn": "Jaseldastat",
+            "b_dorohychyn": "Jatwyahyaltburch",
+            "b_fic_eman_usalgin": "Jam-Alinwîe",
+            "b_fic_eman_chlya": "Amûrhâven",
+            "b_fic_eman_dusse_alin": "Burejatempel",
+            "b_gdov": "Tschudkirchen",
+            "b_pskov": "Peskowburch",
+            "b_noteborg": "Newâltburch",
+            "b_ovruch": "Uschkirchen",
+            "b_ust-donvokhi": "Tschirmasjit",
+        }
+        for bk, exp in expected_wave3.items():
+            assert baronies[bk]["b_tarr_hist"] == exp, f"{bk}: got {baronies[bk]['b_tarr_hist']} != {exp}"
+
+
+class TestWave4SinosphereTurkoIranianAndColonial:
+    """Verify Wave 4 Stage 4A decoders (Non-Track-S Sinosphere, Middle Turkic, Early New Persian, Colonial Wrapper Hygiene)."""
+
+    def test_wave4_decoder_provenance(self):
+        import sys
+        sys.path.insert(0, str(REPO_DIR / "scripts"))
+        from historical_phonology import (
+            resolve_historical_decoder,
+            adapt_chinese_to_tarraconian,
+            adapt_korean_to_tarraconian,
+            adapt_japanese_to_tarraconian,
+            adapt_vietnamese_to_tarraconian,
+            adapt_turkic_to_tarraconian,
+            adapt_iranian_to_tarraconian,
+            adapt_colonial_wrapper_to_tarraconian,
+        )
+
+        assert callable(resolve_historical_decoder)
+        for fn in (
+            adapt_chinese_to_tarraconian,
+            adapt_korean_to_tarraconian,
+            adapt_japanese_to_tarraconian,
+            adapt_vietnamese_to_tarraconian,
+            adapt_turkic_to_tarraconian,
+            adapt_iranian_to_tarraconian,
+            adapt_colonial_wrapper_to_tarraconian,
+        ):
+            assert callable(fn)
+
+        with open(REPO_DIR / "data" / "pipeline_stage4_mediated.json", "r", encoding="utf-8") as f:
+            meta = json.load(f)["metadata"]
+        counts = meta.get("historical_phonology_counts") or {}
+        for key in (
+            "chinese_12c_phonetic",
+            "korean_12c",
+            "japanese_12c",
+            "vietnamese_12c",
+            "turkic_12c",
+            "iranian_12c",
+            "colonial_wrapper_12c",
+        ):
+            assert counts.get(key, 0) > 0, f"Missing Wave 4 decoder count for {key}"
+
+    def test_wave4_barony_resolutions(self):
+        with open(REPO_DIR / "data" / "barony_resolutions_v2.json", "r", encoding="utf-8") as f:
+            baronies = json.load(f)["baronies"]
+
+        expected_wave4 = {
+            # Chinese Pinyin / Non-Track-S / Phonetic Sinosphere
+            "b_limu": "Wantschuân Hê",
+            "b_ariksar": "Tschüeêr Schân",
+            "b_nakhon_pathom": "Dôlôbôdî",
+            "b_FIC_Amur_Heisenlin": "Dschingbeitôr",
+            "b_FIC_Amur_Xijiadamo": "Schindschinmarct",
+            "b_Liao_Wuzhou2": "Jangtscheng Duveste",
+            "b_Liao_Dading": "Fengdschiveste",
+            "b_hukou": "Hukouwacht",
+            "b_FIC_Liao_Yaluan": "Sôkjông Jangberch",
+            # Korean Early Middle Korean
+            "b_Goryeo_Bukgye_Seogyeong": "Pjongjang",
+            "b_Goryeo_Jeolla_Seungpyeong": "Süngpjôngpo",
+            "b_Goryeo_Donggye_Heupgok": "Süpbigoch-Hjôn",
+            "b_FIC_Liao_Huanghekou": "Tschilbosanhâven",
+            "b_FIC_Liao_Nandongkou": "Huntschunganghâven",
+            "b_Goryeo_Yanggwan_Jukju": "Limarct",
+            # Japanese Early Middle Japanese
+            "b_pogibi": "Mamija Kaikyôberch",
+            "b_zenko_ji": "Togakuschi-Jama",
+            "b_ochi": "Sahime-Jamaburch",
+            "b_nukanobu": "Zuhohâven",
+            # Lý Dynasty Sino-Vietnamese & Middle Vietnamese
+            "b_banh_it": "Fu Kwîwerder",
+            "b_bo_chinh": "Njât Lêflôz",
+            "b_ma_linh": "Tatsch Hanflôz",
+            "b_malithit": "Cam Ranjbucht",
+            "b_vijaya": "Tschüöng Sönberch",
+            "b_quang_ngai": "Lî Sönwerdertempel",
+            # Middle Turkic (q->k, qu->ku, J->Dsch, Deryasi->flôz, -mescit->-meschit)
+            "b_arshan": "Kurikanburch",
+            "b_niya": "Teklimakan Kumlukistat",
+            "b_biia": "Bijaburch",
+            "b_bulun-tok": "Dschongar kakpasîmeschit",
+            "b_salmas": "Salmasmeschit",
+            "b_pecheneg": "Petschenegbühil",
+            "b_jitikul": "Dschetikölbühil",
+            "b_julym": "Tschulîmburch",
+            "b_argan": "Tarimflôzmarct",
+            "b_yengi_xahar": "Gezflôz",
+            "b_yarkhoto": "Dschiaohefu",
+            "b_kiia": "Kijaburch",
+            "b_ortakuyu": "Sarikamischsêemarct",
+            "b_taskyl": "Jenisei kirgizlarîveste",
+            "b_atamansku": "Baschkurdstein",
+            # Early New Persian / Tajik / Kurdish / Pashto
+            "b_abade-darabjerd": "Daryâtsche-je Bachtegânstein",
+            "b_andijan": "Karodarjô",
+            "b_naqad": "Karodarjôstat",
+            "b_bannajbur": "Pandschgur",
+            "b_bhera": "Kôh-e Dschûdstein",
+            "b_jarquh": "Dscharkûh",
+            "b_basawa": "Tschijajên Zagrosêstein",
+            "b_loralai": "Kale-Keigobadît",
+            "b_shughnan": "Kale-Schugnân",
+            "b_nasrabad": "Kale-Challuch",
+            "b_dun": "Dschazîre-je Lârach",
+            "b_jask": "Tange-je Hormoz",
+            "b_riqan": "Dschebâl Bârez",
+            "b_qazvin": "Kazwinburch",
+            # Colonial Wrapper Hygiene (West Africa, Flanders, Iberia, North Russia)
+            "b_accra": "Ginêebuchtmeschit",
+            "b_arondo": "Sênêgalflôzmeschit",
+            "b_diafunu": "Sênêgalflôzstat",
+            "b_kolokani": "Mandingberchmeschit",
+            "b_whyidah": "Bênînbuchthâven",
+            "b_veurne": "Moerenkirchen",
+            "b_dunkirk": "Nortmêrport",
+            "b_cieza": "Kordiljêre Bêtikewart",
+            "b_guardo": "Cordiljere Cantâbrikewart",
+            "b_korelskoye": "Koschsêeveste",
+            "b_arsjogk": "Kansêehâven",
+        }
+        for bk, exp in expected_wave4.items():
+            assert baronies[bk]["b_tarr_hist"] == exp, f"{bk}: got {baronies[bk]['b_tarr_hist']} != {exp}"
 
 
 

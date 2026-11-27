@@ -34,6 +34,23 @@ from pathlib import Path
 from typing import Any
 
 from sino_barony_kanji_ext import SINO_BARONY_KANJI_EXT
+from historical_phonology import (
+    GALLO_ROMANCE_IRREGULAR_STEMS,
+    GALLO_ROMANCE_ISOS,
+    LATIN_CURATED_PHRASES,
+    LATIN_SINGLE_CURATED,
+    LATIN_STRIPPABLE_GEO_WHEN_COMPOUNDED,
+    NON_GALLO_ROMANCE_WORDS,
+    NON_LATIN_MISATTRIBUTED,
+    TARRACONIAN_DIRECT_CULTURES,
+    adapt_gallo_romance_to_tarraconian,
+    adapt_gallo_romance_word,
+    adapt_latin_to_tarraconian,
+    adapt_latin_word,
+    is_gallo_romance_stem,
+    is_true_latin_stem,
+    resolve_wave1_decoder,
+)
 
 REPO_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_DIR / "data"
@@ -197,517 +214,8 @@ def _romanize_embedded_hanzi(
     return "".join(out)
 
 
-# ==============================================================================
-# Latin -> Tarraconian Chancellery Morphophonological Adaptation & Calquing
-# ==============================================================================
-
-NON_LATIN_MISATTRIBUTED: set[str] = {
-    "Al-Fustat", "Djesdjes", "Shadikanni", "Elath", "Hebet", "Hix",
-    "Roque Nublo", "Bakon", "Ghir", "Born", "Auva", "Rapniza",
-    "Hurnad", "Hulda", "Toar", "Topul", "Barboși",
-}
-
-LATIN_CURATED_PHRASES: dict[str, str] = {
-    "aquae": "Bâden",
-    "aquae tacapitanae": "Takapît-Bâden",
-    "caesarea": "Kaisarêe",
-    "edessa": "Edesse",
-    "ad nonum": "Bî-Nûn",
-    "contra margum": "Gêgenmarg",
-    "pone navata": "Pône-Navât",
-    "alta ripa": "Altrîf",
-    "alba fucens": "Albe-Fûzens",
-    "asta regia": "Aste-Rêge",
-    "flavia solva": "Flâvje-Solve",
-    "hippo regius": "Hippôn-Rêg",
-    "laus pompeia": "Laus-Pompêje",
-    "felix romuliana": "Romuljâne",
-    "mentesa bastia": "Mentêse-Bastîe",
-    "ballene praesidium": "Ballênwerc",
-    "unica colonia": "Einkolôn",
-    "oppidum novum": "Nîestat",
-    "portus magnus": "Grôzport",
-    "portus adurni": "Adurnport",
-    "portus syracusanus": "Syrakûsport",
-    "portus victoriae iuliobrigensium": "Viktorjaport",
-    "vicus saravus": "Sârwîch",
-    "vicus cuminarius": "Kumînwîch",
-    "forum limicorum": "Limîchmarct",
-    "castra ad montanesium": "Montanêscastel",
-    "saltus tugiensis": "Tûgiwalt",
-    "distercius mons": "Disterzberch",
-    "carpetani montes": "Karpetânberch",
-    "mare balearicum": "Balêarmêr",
-    "mare cantabricum": "Kantabermêr",
-    "mare germanicum": "Germânmêr",
-    "mare sardoum": "Sardômêr",
-    "mare tyrrhenum": "Tyrrhênmêr",
-    "sinus finnicus": "Finnbucht",
-    "sinus scylacius": "Skylâzbucht",
-    "sinus gaditanus": "Gaditânbucht",
-    "carcinites sinus": "Karzinîtbucht",
-    "limpicus sinus": "Limpîkbucht",
-    "noviomagus": "Nîemâgen",
-    "noviomagus reginorum": "Rêgen-Nîemâgen",
-    "venta icenorum": "Vente-Izên",
-    "isca augusta": "Iske-Augûste",
-    "myos hormos": "Myos-Horm",
-    "lato pros kamara": "Lâto-Kamâre",
-    "bosporus cimmerius": "Kimmer-Bôspor",
-    "maresc pictavensis": "Piktâfmarsch",
-    "lingonicus ager": "Lingônenvelt",
-    "urbs giudi": "Giudistat",
-    "tritonis palus": "Tritônmôr",
-    "vallis sauconnae": "Saukônntâl",
-    "gabreta silva": "Gabrêtawalt",
-    "sana silva": "Sânawalt",
-    "portae mesesinae": "Mesêspforte",
-    "pyrenaei montes": "Pyrênêen",
-    "heraei montes": "Hêrêenberch",
-    "alpes cottiae": "Kottalpen",
-    "alpes iuliae": "Julalpen",
-    "alpes liguriae": "Ligûralpen",
-    "alpes maritimae": "Mêralpen",
-    "mons marianus": "Mariânberch",
-    "mons vindius": "Windberch",
-    "mons lugdunensis": "Lugdûnberch",
-    "mons maior": "Grôzberch",
-    "duria maior": "Grôz-Dûre",
-    "lacus labeatis": "Labêtsêe",
-    "varar aestuarium": "Vararmünde",
-    "bodotria aestuarium": "Bodotrîemünde",
-}
-
-LATIN_STRIPPABLE_GEO_WHEN_COMPOUNDED: dict[str, str] = {
-    "mare germanicum": "Germân",
-    "mare sardoum": "Sardô",
-    "mare tyrrhenum": "Tyrrhên",
-    "mare balearicum": "Balêar",
-    "mare cantabricum": "Kantâber",
-    "tritonis palus": "Tritôn",
-    "vallis sauconnae": "Saukônne",
-    "gabreta silva": "Gabrêta",
-    "sana silva": "Sâna",
-    "portae mesesinae": "Mesêsen",
-    "heraei montes": "Hêrêen",
-    "pyrenaei montes": "Pyrênêen",
-    "carpetani montes": "Karpetân",
-    "mons lugdunensis": "Lugdûn",
-    "mons marianus": "Mariân",
-    "mons vindius": "Wind",
-    "mons maior": "Grôz",
-    "urbs giudi": "Giudi",
-    "lacus labeatis": "Labêt",
-    "lingonicus ager": "Lingônen",
-    "maresc pictavensis": "Piktâf",
-    "bosporus cimmerius": "Kimmer-Bôspor",
-    "contra margum": "Gêgenmarg",
-    "pone navata": "Pône-Navât",
-    "duria maior": "Grôz-Dûre",
-    "alpes cottiae": "Kottalpen",
-    "alpes iuliae": "Julalpen",
-    "alpes liguriae": "Ligûralpen",
-    "alpes maritimae": "Mêralpen",
-}
-
-LATIN_SINGLE_CURATED: dict[str, str] = {
-    "albis": "Albe",
-    "danubius": "Danûb",
-    "rhenus": "Rên",
-    "tibiscus": "Tibîsch",
-    "viadrus": "Viâder",
-    "thysdrus": "Tysder",
-    "danapris": "Danâper",
-    "danastris": "Danâster",
-    "apulum": "Apûl",
-    "pyretus": "Pyrêt",
-    "vesuvius": "Vesûf",
-    "viminacium": "Viminâzjen",
-    "icosium": "Ikôsjen",
-    "camulodunum": "Kamulodûn",
-    "vindobona": "Vindobône",
-    "tigris": "Tîger",
-    "oxus": "Ochs",
-    "creones": "Krêôn",
-    "oaeneon": "Oênêe",
-    "aequum": "Êkwe",
-    "hammeum": "Hammêe",
-    "aegeae": "Êgêe",
-    "caedris": "Kêder",
-    "turres": "Turr",
-    "primis": "Prîm",
-    "anas": "Anas",
-    "avus": "Avûs",
-    "pagus": "Pâch",
-    "urci": "Urzî",
-    "chazari": "Chazar",
-    "aestii": "Este",
-    "mazovii": "Masôven",
-    "osiliani": "Ôsiljân",
-    "sarmatae": "Sarmât",
-    "gepidae": "Gepîden",
-    "sacae": "Saken",
-    "ardiae": "Ardiê",
-    "ardiaei": "Ardiê",
-    "maezaei": "Mêzê",
-    "carpi": "Karpen",
-    "sudini": "Sudînen",
-    "sudeti": "Sudêten",
-    "varisci": "Varisken",
-    "harudes": "Harûden",
-    "nasamones": "Nasamôn",
-    "blemmyes": "Blemmy",
-    "daesitiates": "Desitjât",
-    "iazyges": "Jazygen",
-    "comani": "Komân",
-    "merens": "Mêren",
-    "mordens": "Môrden",
-    "letthigalli": "Lettigallen",
-    "semigalli": "Semgallen",
-    "corconti": "Korkônten",
-    "cimbri": "Kimbern",
-    "scrithifinni": "Skritfinnen",
-    "brenodor": "Brenodôr",
-    "tobius": "Tobî",
-    "tanais": "Tanais",
-    "ruscino": "Ruszîn",
-    "agnio": "Agnjôn",
-    "novios": "Nôvî",
-    "duroliponte": "Durolipônte",
-    "tyras": "Tyras",
-    "tarraca": "Tarrâke",
-    "tarsatica": "Tarsatîke",
-    "phylacae": "Fylâke",
-}
-
-_LATIN_HEAD_WORDS = {
-    "mare", "sinus", "lacus", "flumen", "mons", "montes",
-    "silva", "saltus", "vallis", "palus", "urbs",
-}
-
-
-def adapt_latin_word(w: str) -> str:
-    """Adapt a single Classical/Medieval Latin word to Tarraconian Chancellery phonology."""
-    low = w.lower()
-    if low in LATIN_SINGLE_CURATED:
-        return LATIN_SINGLE_CURATED[low]
-    if low in {"ad", "et", "de"}:
-        return low
-
-    s = w
-    # Map front-vowel c -> z BEFORE final -a / -ae reduces to -e
-    s = re.sub(r"\b[Cc](?=[eiy])", "Z", s)
-    s = re.sub(r"(?<=[A-Za-zÀ-ɏ])[Cc](?=[eiy])", "z", s)
-    s = re.sub(r"ae", lambda m: "Ê" if m.group(0)[0].isupper() else "ê", s, flags=re.I)
-    s = re.sub(r"oe", lambda m: "Ö" if m.group(0)[0].isupper() else "ö", s, flags=re.I)
-    s = re.sub(r"ph", lambda m: "F" if m.group(0)[0].isupper() else "f", s, flags=re.I)
-    s = re.sub(r"th", lambda m: "T" if m.group(0)[0].isupper() else "t", s, flags=re.I)
-
-    # Inflectional & derivational endings (longest first)
-    if re.match(r"^([A-Za-zÀ-ɏ]{3,})polis$", s, flags=re.I):
-        s = re.sub(r"polis$", "ôpel", s, flags=re.I)
-        s = s.replace("oô", "ô").replace("ôô", "ô")
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})dunum$", s, flags=re.I):
-        s = s[:-5] + "dûn"
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})magus$", s, flags=re.I):
-        s = s[:-5] + "mâch"
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})briga$", s, flags=re.I):
-        s = s[:-5] + "brîge"
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})([stz])ium$", s, flags=re.I):
-        m2 = re.match(r"^([A-Za-zÀ-ɏ]{3,})([stz])ium$", s, flags=re.I)
-        stem, cons = m2.group(1), m2.group(2).lower()
-        if stem.lower().endswith("n") and cons == "t":
-            s = stem + "tz"
-        elif cons == "s" and stem.lower()[-1:] not in {"a", "e", "i", "o", "u", "â", "ê", "î", "ô", "û"}:
-            s = stem + cons + "jen"
-        elif cons in {"t", "z"}:
-            s = stem + "zjen"
-        else:
-            s = stem + cons + "jen"
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})ium$", s, flags=re.I):
-        s = s[:-3] + "jen"
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})ion$", s, flags=re.I):
-        s = s[:-3] + "jen"
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})eum$", s, flags=re.I):
-        s = s[:-3] + "êe"
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})icum$", s, flags=re.I):
-        s = s[:-4] + "îch"
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})um$", s, flags=re.I):
-        stem = s[:-2]
-        if stem.lower().endswith(("pr", "tr", "dr", "br", "cr", "kr")):
-            stem = stem[:-1] + "e" + stem[-1]
-        elif stem.lower().endswith("v"):
-            stem = stem[:-1] + "f"
-        s = stem
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})([tz])ius$", s, flags=re.I):
-        s = re.match(r"^([A-Za-zÀ-ɏ]{3,})([tz])ius$", s, flags=re.I).group(1) + "z"
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})ius$", s, flags=re.I):
-        stem = s[:-3]
-        if stem.lower().endswith("v"):
-            stem = stem[:-1] + "f"
-        s = stem
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})ous$", s, flags=re.I):
-        s = s[:-3] + "ôs"
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})us$", s, flags=re.I):
-        stem = s[:-2]
-        if stem.lower().endswith(("pr", "tr", "dr", "br", "cr", "kr")):
-            stem = stem[:-1] + "e" + stem[-1]
-        elif stem.lower().endswith("v"):
-            stem = stem[:-1] + "f"
-        elif stem.lower().endswith("sc"):
-            stem = stem[:-2] + "sch"
-        s = stem
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})([tz])ia$", s, flags=re.I):
-        s = re.match(r"^([A-Za-zÀ-ɏ]{3,})([tz])ia$", s, flags=re.I).group(1) + "tzîe"
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})eia$", s, flags=re.I):
-        s = s[:-3] + "êje"
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})ia$", s, flags=re.I):
-        s = s[:-2] + "îe"
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})ea$", s, flags=re.I):
-        s = s[:-2] + "êe"
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})ê$", s, flags=re.I):
-        s = s[:-1] + "e"
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})a$", s, flags=re.I):
-        s = s[:-1] + "e"
-    elif re.match(r"^([A-Za-zÀ-ɏ]{3,})io$", s, flags=re.I):
-        s = s[:-2] + "ôn"
-    elif re.match(r"^([A-Za-zÀ-ɏ]{4,})o$", s, flags=re.I):
-        stem = s[:-1]
-        if stem.lower().endswith(("ll", "pp", "ss")):
-            stem = stem[:-1]
-        s = stem
-    elif re.match(r"^([A-Za-zÀ-ɏ]{4,})(?<![aeiou])is$", s, flags=re.I):
-        stem = s[:-2]
-        if stem.lower().endswith(("pr", "tr", "dr", "br", "cr", "kr")):
-            stem = stem[:-1] + "e" + stem[-1]
-        s = stem
-    elif re.match(r"^([A-Za-zÀ-ɏ]{4,})os$", s, flags=re.I):
-        s = s[:-2]
-    elif re.match(r"^([A-Za-zÀ-ɏ]{4,})on$", s, flags=re.I):
-        s = s[:-2] + "ôn"
-
-    # Circumflex stressed vowel in short CVC stems (Nil -> Nîl, Pat -> Pât, etc.)
-    m_mono = re.match(r"^([BCDFGHJKLMNPQRSTVWXZbdfghjklmnpqrstvwxz]+)([aeiou])([bcdfghjklmnpqrstvwxz]+)$", s)
-    if m_mono:
-        c_map = {"a": "â", "e": "ê", "i": "î", "o": "ô", "u": "û"}
-        s = m_mono.group(1) + c_map[m_mono.group(2)] + m_mono.group(3)
-
-    # Final Auslautverhärtung
-    s = re.sub(r"d$", "t", s)
-    s = re.sub(r"g$", "ch", s)
-    s = re.sub(r"b$", "p", s)
-    return s
-
-
-def adapt_latin_to_tarraconian(stem: str, *, suppress_geo_head: bool = False) -> str:
-    """Translate/adapt a Latin toponym or phrase into canonical Tarraconian orthography."""
-    s = stem.strip()
-    if not s:
-        return s
-    low = s.lower()
-    if suppress_geo_head and low in LATIN_STRIPPABLE_GEO_WHEN_COMPOUNDED:
-        return LATIN_STRIPPABLE_GEO_WHEN_COMPOUNDED[low]
-    if low in LATIN_CURATED_PHRASES:
-        return LATIN_CURATED_PHRASES[low]
-
-    words = s.split()
-    if suppress_geo_head and len(words) >= 2:
-        if words[0].lower() in _LATIN_HEAD_WORDS:
-            words = words[1:]
-        elif words[-1].lower() in _LATIN_HEAD_WORDS:
-            words = words[:-1]
-    res = " ".join(adapt_latin_word(w) for w in words)
-    if res and res[0].islower():
-        res = res[0].upper() + res[1:]
-    return res
-
-
-def is_true_latin_stem(rec: dict[str, Any]) -> bool:
-    """Return True when the record's Stage 2 source stem is genuinely Latin rather than vernacular/misattributed."""
-    if rec.get("selected_iso") != "lat":
-        return False
-    if rec.get("stem_source") == "existing_natural_proper_name":
-        return False
-    if (rec.get("selected_source_form") or "") in NON_LATIN_MISATTRIBUTED:
-        return False
-    return True
-
-
-# ==============================================================================
-# Old French / Gallo-Romance (12th c.) -> Tarraconian Chancellery Adaptation
-# ==============================================================================
-
-GALLO_ROMANCE_ISOS: set[str] = {"fra", "fro", "nrf", "pcd", "wln"}
-
-TARRACONIAN_DIRECT_CULTURES: set[str] = {
-    "Tarraconian",
-    "Lothringian",
-    "Croato-Tarraconian",
-    "Alpine-Tarraconian",
-    "Ungwârer",
-}
-
-GALLO_ROMANCE_IRREGULAR_STEMS: dict[str, str] = {
-    "auxerre": "Ôssêr",
-    "auxonne": "Ôssône",
-    "bruxelles": "Brüssels",
-    "doubs": "Dûs",
-    "reims": "Rêms",
-    "rouen": "Ruwân",
-    "caen": "Kân",
-    "metz": "Metz",
-    "chablis": "Tschablîs",
-    "quentin": "Kentîn",
-    "saint-quentin": "Zant-Kentîn",
-    "aix": "Ais",
-    "creuse": "Kröse",
-}
-
-# Non-French Italian, Latin, Arpitan, African, or already-calqued generic tokens
-# that may sit inside records tagged with French coinage/ISO metadata.
-NON_GALLO_ROMANCE_WORDS: set[str] = {
-    "acqui", "ajaccio", "alba", "di", "monferrato", "aosta", "asti", "biella",
-    "bologna", "brescello", "cortona", "empoli", "emilia", "ivrea", "luni",
-    "modena", "novara", "reggio", "tortona", "vercelli", "volterra",
-    "bandiagara", "loma", "everardo", "luitgard", "zwinisława", "zwinislawa",
-    "anicium", "tusiacum", "octodurus", "sinaca", "gartona", "condate",
-    "otmus", "mariana", "durivum", "ligericulus", "romanchia", "albantia",
-    "olonna", "geneva", "birni", "masallaci", "gari", "tenda", "eglwys", "porth",
-    "margarita", "margeride",
-    "burch", "stat", "kirchen", "kapelle", "wart", "munster", "meschit",
-    "tempel", "marct", "hâven", "werc", "palz", "clôster", "stein", "berch",
-    "bühil", "vurt", "walt", "velt", "lant", "zelle", "brunn", "port",
-}
-
-
-def adapt_gallo_romance_word(w: str) -> str | None:
-    """
-    Adapt one 12th-century Old French / Gallo-Romance token to Tarraconian
-    Chancellery orthography. Returns None if the token belongs to NON_GALLO_ROMANCE_WORDS
-    or Latin -um/-ium so callers can fall back to general transmission rules.
-    """
-    low = w.lower()
-    if low in GALLO_ROMANCE_IRREGULAR_STEMS:
-        return GALLO_ROMANCE_IRREGULAR_STEMS[low]
-    if low in {"de", "des", "du", "le", "la", "les", "sur", "en", "l", "d"}:
-        return w
-    if low in NON_GALLO_ROMANCE_WORDS or low.endswith(("um", "ium")):
-        return None
-
-    s = w
-    rep_pre = {
-        "é": "ê", "É": "Ê", "è": "e", "È": "E", "ê": "ê", "Ê": "Ê",
-        "à": "a", "À": "A", "á": "â", "Á": "Â", "â": "â", "Â": "Â",
-        "î": "î", "Î": "Î", "ï": "ï", "Ï": "Ï",
-        "ô": "ô", "Ô": "Ô", "û": "û", "Û": "Û", "ù": "u", "Ù": "U",
-        "œ": "ö", "Œ": "Ö",
-    }
-    s = "".join(rep_pre.get(c, c) for c in s)
-
-    # 1. Silent u in qu/gu before front vowels BEFORE j/g->dsch and BEFORE eux->ös
-    s = re.sub(r"qu(?=[eiyêî])", lambda m: "K" if m.group(0)[0].isupper() else "k", s, flags=re.I)
-    s = re.sub(r"gu(?=[eiyêî])", lambda m: "\uE013" if m.group(0)[0].isupper() else "\uE012", s, flags=re.I)
-    # Protect remaining qu/gu u (e.g. before a/o) from standalone u->ü
-    s = re.sub(r"([qgQG])u", lambda m: m.group(1) + "\uE015", s)
-
-    # 2. 12th-c. voiced postalveolar affricate j / g(e,i) / ge(a,o) -> dsch BEFORE any palatal j is emitted
-    s = re.sub(r"j|ge(?=[ao])|g(?=[eiyêî])", lambda m: "Dsch" if m.group(0)[0].isupper() else "dsch", s, flags=re.I)
-    s = s.replace("\uE013", "G").replace("\uE012", "g")
-
-    # 3. Coda -x endings (12th-c. scribal -x after u/eau/au represents [s], never [ks])
-    s = re.sub(r"[iy]eux\b", lambda m: ("J" if m.group(0)[0].isupper() else "j") + "ös", s, flags=re.I)
-    s = re.sub(r"eux\b", lambda m: ("Ö" if m.group(0)[0].isupper() else "ö") + "s", s, flags=re.I)
-    s = re.sub(r"e?aux\b", lambda m: ("Ô" if m.group(0)[0].isupper() else "ô") + "s", s, flags=re.I)
-    s = re.sub(r"([ao])ix\b", lambda m: m.group(1) + "is", s, flags=re.I)
-
-    # 4. Vocalized -l / rounded front vowel digraphs (protecting MHG -auwe/-euwe/-ouwe)
-    s = re.sub(r"eau", lambda m: "Ô" if m.group(0)[0].isupper() else "ô", s, flags=re.I)
-    s = re.sub(r"au(?!we)", lambda m: "Ô" if m.group(0)[0].isupper() else "ô", s, flags=re.I)
-    s = re.sub(r"(?:oeu|eu)(?!we)", lambda m: "Ö" if m.group(0)[0].isupper() else "ö", s, flags=re.I)
-    s = re.sub(r"ou(?!we)", lambda m: "\uE011" if m.group(0)[0].isupper() else "\uE010", s, flags=re.I)
-
-    # 5. Voiceless affricate ch -> tsch (skip already-Tarraconian sch/tsch/dsch)
-    s = re.sub(r"(?<![stdSTD])ch", lambda m: "Tsch" if m.group(0)[0].isupper() else "tsch", s, flags=re.I)
-
-    # 6. Alveolar affricate ç / c(e,i) -> z- / -tz- (string-start safe with sentinels)
-    s = s.replace("Ç", "Tz").replace("ç", "tz")
-    if re.match(r"^[cC](?=[eiyêî])", s):
-        s = ("Z" if s[0].isupper() else "z") + s[1:]
-    s = re.sub(r"(?<=.)c(?=[eiyêî])", "tz", s, flags=re.I)
-
-    # 7. Palatal nasal gn -> nj
-    s = re.sub(r"gn", lambda m: "Nj" if m.group(0)[0].isupper() else "nj", s, flags=re.I)
-
-    # 8. Palatal liquid -ill-/-il -> lj; plain French geminates -ville -> -vîle, -lle -> -le
-    s = re.sub(r"(?<=[aeiouâêîôûöü\uE010\uE011])ill", "lj", s, flags=re.I)
-    s = re.sub(r"(?<=[aeiouâêîôûöü\uE010\uE011])il\b", "lj", s, flags=re.I)
-    s = re.sub(r"ville\b", "vîle", s, flags=re.I)
-    s = re.sub(r"lle\b", "le", s, flags=re.I)
-
-    # 9. Silent French etymological -h- in th -> t
-    s = re.sub(r"[Tt]h", lambda m: "T" if m.group(0)[0].isupper() else "t", s)
-
-    # 10. Standalone French u -> ü, then restore protected u from ou/qu/gu
-    s = s.replace("u", "ü").replace("U", "Ü")
-    s = s.replace("\uE011", "U").replace("\uE010", "u").replace("\uE015", "u")
-
-    # 11. Final -y -> -î after consonant, -on(s) -> -ôn(s), polysyllabic -ers -> -êrs, -a -> -e
-    s = re.sub(r"(?<=[^aeiouâêîôûäöü])y\b", "î", s)
-    s = re.sub(r"on(s?)\b", r"ôn\1", s)
-    s = re.sub(r"(?<=[A-Za-zÀ-ɏ]{3})ers\b", "êrs", s)
-    s = re.sub(r"([A-Za-zÀ-ɏ]{2,})a\b", r"\1e", s)
-    return s
-
-
-def adapt_gallo_romance_to_tarraconian(stem: str) -> tuple[str, bool]:
-    """
-    Adapt a Gallo-Romance phrase or compound to Tarraconian, returning `(adapted, used_fallback)`
-    for any embedded non-French tokens so callers can run standard transmission on them.
-    """
-    s = stem.strip()
-    if not s:
-        return s, False
-    low = s.lower()
-    if low in GALLO_ROMANCE_IRREGULAR_STEMS:
-        return GALLO_ROMANCE_IRREGULAR_STEMS[low], False
-
-    parts = re.split(r"([\s\-]+)", s)
-    out: list[str] = []
-    any_fallback = False
-    for p in parts:
-        if not p or re.fullmatch(r"[\s\-]+", p):
-            out.append(p)
-        elif p[0].isalpha() or any(ord(c) > 127 for c in p):
-            res = adapt_gallo_romance_word(p)
-            if res is None:
-                out.append(p)
-                any_fallback = True
-            else:
-                out.append(res)
-        else:
-            out.append(p)
-    joined = "".join(out)
-    if joined and joined[0].islower():
-        joined = joined[0].upper() + joined[1:]
-    return joined, any_fallback
-
-
-def is_gallo_romance_stem(rec: dict[str, Any], trans_family: str = "") -> bool:
-    """Return True when the record holds a Gallo-Romance (fra/fro/nrf/pcd/wln) stem."""
-    if is_true_latin_stem(rec):
-        return False
-    cc = rec.get("coinage_culture") or ""
-    src = rec.get("stem_source") or ""
-    tf = (trans_family or "").lower()
-    is_vanilla_fr = (cc == "Tarraconian" and src == "pre867_attested_vanilla" and tf == "gallo_romance")
-    if cc in TARRACONIAN_DIRECT_CULTURES and not is_vanilla_fr:
-        return False
-    if is_vanilla_fr:
-        return True
-    return (
-        rec.get("selected_iso") in GALLO_ROMANCE_ISOS
-        or rec.get("coinage_morphology_family") == "gallo_romance"
-    )
+# Stage 4A Historical Phonology decoders (Latin, Gallo-Romance, Byzantine Greek,
+# Italo-/Occitano-/Ibero-/Eastern Romance) live under scripts/historical_phonology/.
 
 
 def transliterate_stem_to_tarr(
@@ -731,6 +239,7 @@ def transliterate_stem_to_tarr(
     s = stem.strip()
     if not s:
         return s, notes
+    s = re.sub(r"\bBashqurd", "Baschkurd", s, flags=re.I)
 
     tf = (transmission_family or coinage_family or "").lower()
     if kanji_readings is not None:
@@ -768,6 +277,9 @@ def transliterate_stem_to_tarr(
             try:
                 # only apply anchor-specific rules like vár$ -> wâr, burg$ -> burch
                 if pat.endswith("$"):
+                    if pat == "a$" and repl == "e" and tf not in {"east_slavic", "south_slavic", "west_slavic_lechitic", "west_slavic_czech_slovak"} and (coinage_family or "").lower() not in {"east_slavic", "south_slavic", "west_slavic_lechitic", "west_slavic_czech_slovak"}:
+                        # Never turn -ca into -ce [ts] outside Slavic (Slavic -ca is already [tsa] -> -tze)
+                        s = re.sub(r"([A-Za-zÀ-ɏ]{2,})[cC]a\b", r"\1ke", s)
                     s = re.sub(pat, repl, s)
             except re.error:
                 pass
@@ -787,12 +299,14 @@ def transliterate_stem_to_tarr(
         s = " ".join(out_gw)
 
     if tf in {"arabic", "berber", "aramaic_hebrew"}:
+        s = re.sub(r"\bBashqurd", "Baschkurd", s, flags=re.I)
         subs_map.update({"kh": "ch", "sh": "sch", "dj": "dsch", "dh": "d", "th": "t", "gh": "g", "j": "dsch", "q": "k"})
     elif tf in {"turkic", "oghur", "mongolic", "iranian"}:
         subs_map.update({"kh": "ch", "zh": "dsch", "sh": "sch", "ş": "sch", "š": "sch", "ç": "tsch", "č": "tsch", "q": "k"})
         if tf == "turkic":
             subs_map["ch"] = "tsch"
             subs_map["c"] = "dsch"
+            subs_map["j"] = "dsch"
         if (coinage_family or "").lower() in {
             "hellenic", "latin_classical", "gallo_romance", "occitano_catalan",
             "ibero_romance", "italo_romance", "eastern_romance",
@@ -804,7 +318,10 @@ def transliterate_stem_to_tarr(
             subs_map["ch"] = "tsch"
             subs_map["j"] = "dsch"
     elif tf in {"east_slavic", "south_slavic", "west_slavic_lechitic", "west_slavic_czech_slovak", "baltic"}:
-        subs_map.update({"sz": "sch", "cz": "tsch", "rz": "rsch", "zh": "sch", "sh": "sch", "š": "sch", "č": "tsch", "ž": "sch", "ř": "rsch", "v": "w"})
+        subs_map.update({"shch": "sch", "sz": "sch", "cz": "tsch", "rz": "rj", "zh": "sch", "sh": "sch", "š": "sch", "č": "tsch", "ž": "sch", "ř": "rj", "v": "w"})
+        if tf != "baltic" and (coinage_family or "").lower() in {"east_slavic", "south_slavic", "west_slavic_lechitic", "west_slavic_czech_slovak"}:
+            subs_map["ch"] = "ch"
+            subs_map["c"] = "tz"
     elif tf in {"magyar"}:
         subs_map.update({"cs": "tsch", "sz": "s", "zs": "sch", "sh": "sch", "v": "w"})
     elif tf in {"indo_aryan", "dravidian", "austronesian", "mon_khmer", "tai_hmong", "tibetic", "burmese_qiangic"}:
@@ -816,6 +333,11 @@ def transliterate_stem_to_tarr(
         subs_map = {"ß": "ss"}
     else:
         subs_map.update({"sh": "sch", "zh": "sch", "dj": "dsch", "sj": "sch", "š": "sch", "č": "tsch", "ž": "sch"})
+
+    # Never apply Romance/Turkic ch -> tsch onto Slavic [x] stems (e.g. Slovak vrchy)
+    if (coinage_family or "").lower() in {"east_slavic", "south_slavic", "west_slavic_lechitic", "west_slavic_czech_slovak"}:
+        if subs_map.get("ch") == "tsch":
+            subs_map.pop("ch", None)
 
     if subs_map:
         # Protect longer Chancellery digraphs so single-pass never tears apart sch/tsch/dsch/tz
@@ -832,7 +354,7 @@ def transliterate_stem_to_tarr(
             elif k == "c" and tf == "turkic":
                 regex_tokens.append(r"c(?=[aeiouäöüı]|$)")
             elif k == "c" and tf in {"east_slavic", "south_slavic", "west_slavic_lechitic", "west_slavic_czech_slovak"}:
-                regex_tokens.append(r"c(?=[eiy]|$)")
+                regex_tokens.append(r"(?<=[A-Za-zÀ-ɏ])(?<![sS])c(?=[aeiouyäöüâêîôû]|$)")
             else:
                 regex_tokens.append(re.escape(k))
         single_re = re.compile("|".join(regex_tokens), re.I)
@@ -871,6 +393,104 @@ def transliterate_stem_to_tarr(
     if s and s[0].islower():
         s = s[0].upper() + s[1:]
     return s, notes
+
+
+def norm_stage4a(s_in: str) -> str:
+    """Normalize macrons, acutes, and breathings on Stage 4A decoder outputs."""
+    rep = {
+        "ā": "â", "Ā": "Â", "á": "â", "Á": "Â",
+        "ē": "ê", "Ē": "Ê", "é": "ê", "É": "Ê",
+        "ī": "î", "Ī": "Î", "í": "î", "Í": "Î",
+        "ō": "ô", "Ō": "Ô", "ó": "ô", "Ó": "Ô",
+        "ū": "û", "Ū": "Û", "ú": "û", "Ú": "Û",
+        "ʿ": "", "ʾ": "", "'": "",
+    }
+    return "".join(rep.get(ch, ch) for ch in s_in)
+
+
+def adapt_stage4a_text(
+    txt: str,
+    use_prof: str,
+    coin_fam: str,
+    trans_fam: str,
+    inter_map: dict,
+    trans_rules: dict,
+    wave1_dec: Any = None,
+    *,
+    kanji_readings: dict | None = None,
+    rup: bool = False,
+    force_gallo: bool = False,
+) -> str:
+    """Adapt a stem via an active Stage 4A historical decoder (with token-level fallback)."""
+    if kanji_readings is not None and txt:
+        txt = _romanize_embedded_hanzi(txt, kanji_readings, (trans_fam or coin_fam or "").lower())
+    active_dec = (
+        ("gallo_romance_12c", adapt_gallo_romance_to_tarraconian, adapt_gallo_romance_word)
+        if force_gallo
+        else wave1_dec
+    )
+    if active_dec and (
+        use_prof != "tarraconian_direct"
+        or active_dec[0] in {
+            "goidelic_12c", "brythonic_12c", "north_germanic_12c",
+            "magyar_12c", "west_slavic_lechitic_12c", "west_slavic_cs_12c",
+            "south_slavic_12c", "east_slavic_12c",
+            "chinese_12c_phonetic", "korean_12c", "japanese_12c", "vietnamese_12c",
+            "turkic_12c", "iranian_12c", "colonial_wrapper_12c",
+        }
+    ):
+        dec_name, phrase_fn, tok_fn = active_dec
+        out_str, used_fb = phrase_fn(txt)
+        if not used_fb:
+            return norm_stage4a(out_str)
+        tokens = re.split(r"([\s\-]+)", txt)
+        rebuilt: list[str] = []
+        for tok in tokens:
+            if not tok or re.fullmatch(r"[\s\-]+", tok):
+                rebuilt.append(tok)
+            elif tok[0].isalpha() or any(ord(c) > 127 for c in tok):
+                d_tok = tok_fn(tok)
+                if d_tok is not None:
+                    rebuilt.append(norm_stage4a(d_tok) if tok[0].isupper() else d_tok)
+                else:
+                    same_fam_prof = {
+                        "gallo_romance_12c": "gallo_romance_to_tarraconian",
+                        "italo_romance_12c": "italo_romance_to_tarraconian",
+                        "occitano_catalan_12c": "occitano_catalan_to_tarraconian",
+                        "ibero_romance_12c": "ibero_romance_to_tarraconian",
+                        "eastern_romance_12c": "eastern_romance_to_tarraconian",
+                        "goidelic_12c": "celtic_to_tarraconian",
+                        "brythonic_12c": "celtic_to_tarraconian",
+                        "anglo_saxon_12c": "west_germanic_to_tarraconian",
+                        "north_germanic_12c": "north_germanic_to_tarraconian",
+                        "magyar_12c": "magyar_to_tarraconian",
+                        "west_slavic_lechitic_12c": "west_slavic_to_tarraconian",
+                        "west_slavic_cs_12c": "west_slavic_to_tarraconian",
+                        "south_slavic_12c": "south_slavic_to_tarraconian",
+                        "east_slavic_12c": "east_slavic_to_tarraconian",
+                        "chinese_12c_phonetic": "sinosphere_1154_to_tarraconian",
+                        "korean_12c": "sinosphere_1154_to_tarraconian",
+                        "japanese_12c": "sinosphere_1154_to_tarraconian",
+                        "vietnamese_12c": "southeast_asian_to_tarraconian",
+                        "turkic_12c": "turkic_to_tarraconian",
+                        "iranian_12c": "iranian_to_tarraconian",
+                    }.get(dec_name, "")
+                    # Keep greek_to_tarraconian for non-Greek loans so -polis->-pel & th->t/ph->f still apply
+                    fb_prof = "general_phonetic_adaptation" if (same_fam_prof and use_prof == same_fam_prof) else use_prof
+                    fb_tok, _ = transliterate_stem_to_tarr(
+                        tok, fb_prof, coin_fam, trans_fam, inter_map, trans_rules,
+                        kanji_readings=kanji_readings, is_rupture=rup,
+                    )
+                    rebuilt.append(fb_tok)
+            else:
+                rebuilt.append(tok)
+        res_mixed = "".join(rebuilt)
+        return res_mixed[:1].upper() + res_mixed[1:] if res_mixed and res_mixed[0].islower() else res_mixed
+    res, _ = transliterate_stem_to_tarr(
+        txt, use_prof, coin_fam, trans_fam, inter_map, trans_rules,
+        kanji_readings=kanji_readings, is_rupture=rup,
+    )
+    return res
 
 
 def calque_hanzi_string(
@@ -1064,6 +684,7 @@ def run_stage4() -> dict[str, Any]:
         coinage_rulers = json.load(f)["baronies"]
 
     calque_mode_counts: Counter[str] = Counter()
+    historical_phonology_counts: Counter[str] = Counter()
     rule3_blocked_count = 0
     intermediary_applied_count = 0
     stage4_baronies: dict[str, dict[str, Any]] = {}
@@ -1092,6 +713,16 @@ def run_stage4() -> dict[str, Any]:
 
         is_true_latin = is_true_latin_stem(r3)
         is_gallo_stem = is_gallo_romance_stem(r3, trans_fam)
+        has_intermediary = (coin_fam, trans_fam) in inter_map
+        wave1_dec = resolve_wave1_decoder(r3, trans_fam)
+        # Do not short-circuit Greek multi-hop intermediaries (greek_to_turkish / greek_to_south_slavic / greek_to_arabic)
+        if wave1_dec and wave1_dec[0] == "byzantine_greek_12c" and has_intermediary and is_rupture:
+            wave1_dec = None
+        dec_id = (
+            "latin_classical"
+            if is_true_latin
+            else (wave1_dec[0] if wave1_dec else "default_transmission")
+        )
         coined_form = r3["coined_source_form"]
         mod = r3["coined_modifier"]
         gen = r3["coined_generic"]
@@ -1100,7 +731,10 @@ def run_stage4() -> dict[str, Any]:
         # Do not run Magyar/Slavic transmission substitutions onto compounds already coined in Imperial German
         eff_trans_prof = (
             "tarraconian_direct"
-            if (r3["coinage_culture"] in TARRACONIAN_DIRECT_CULTURES and not is_gallo_stem)
+            if (
+                (r3["coinage_culture"] in TARRACONIAN_DIRECT_CULTURES and not is_gallo_stem)
+                or (r3.get("selected_iso") in {"deu", "gmh", "goh"} and trans_prof == "magyar_to_tarraconian")
+            )
             else trans_prof
         )
 
@@ -1108,7 +742,7 @@ def run_stage4() -> dict[str, Any]:
             meta_words = ENGLISH_META_GEO_WORDS | {"montes", "portus"}
             if not any(w.lower() in meta_words for w in s.split()):
                 return s
-            ws = [w for w in s.split() if w.lower() not in {"of"} and not (w.lower() == "de" and s.lower().startswith(("montes ", "monts ")))]
+            ws = [w for w in s.split() if w.lower() != "of" and not (w.lower() == "de" and s.lower().startswith(("montes ", "monts ")))]
             if len(ws) >= 2:
                 if ws[-1].lower() in TRANSPARENT_NTR_HEADS:
                     hsuf, _ = TRANSPARENT_NTR_HEADS[ws[-1].lower()]
@@ -1120,38 +754,18 @@ def run_stage4() -> dict[str, Any]:
             return s
 
         def adapt(txt: str, prof: str | None = None, rup: bool = False, force_gallo: bool = False) -> str:
-            use_prof = prof or eff_trans_prof
-            if force_gallo or (is_gallo_stem and use_prof != "tarraconian_direct"):
-                fr_out, used_fb = adapt_gallo_romance_to_tarraconian(txt)
-                if not used_fb:
-                    return fr_out
-                # Mixed phrase containing exempt non-French tokens (Italian/Latin/African heads):
-                # adapt each non-French token via standard transmission rules cleanly.
-                tokens = re.split(r"([\s\-]+)", txt)
-                rebuilt: list[str] = []
-                for tok in tokens:
-                    if not tok or re.fullmatch(r"[\s\-]+", tok):
-                        rebuilt.append(tok)
-                    elif tok[0].isalpha() or any(ord(c) > 127 for c in tok):
-                        fr_tok = adapt_gallo_romance_word(tok)
-                        if fr_tok is not None:
-                            rebuilt.append(fr_tok)
-                        else:
-                            fb_prof = "general_phonetic_adaptation" if (use_prof == "gallo_romance_to_tarraconian" and coin_fam == "gallo_romance") else use_prof
-                            fb_tok, _ = transliterate_stem_to_tarr(
-                                tok, fb_prof, coin_fam, trans_fam, inter_map, trans_rules,
-                                kanji_readings=kanji_readings, is_rupture=rup,
-                            )
-                            rebuilt.append(fb_tok)
-                    else:
-                        rebuilt.append(tok)
-                res_mixed = "".join(rebuilt)
-                return res_mixed[:1].upper() + res_mixed[1:] if res_mixed and res_mixed[0].islower() else res_mixed
-            res, _ = transliterate_stem_to_tarr(
-                txt, use_prof, coin_fam, trans_fam, inter_map, trans_rules,
-                kanji_readings=kanji_readings, is_rupture=rup,
+            return adapt_stage4a_text(
+                txt,
+                prof or eff_trans_prof,
+                coin_fam,
+                trans_fam,
+                inter_map,
+                trans_rules,
+                wave1_dec,
+                kanji_readings=kanji_readings,
+                rup=rup,
+                force_gallo=force_gallo,
             )
-            return res
 
         if is_true_latin:
             inter_notes = []
@@ -1184,7 +798,7 @@ def run_stage4() -> dict[str, Any]:
                         coined_form, eff_trans_prof, coin_fam, trans_fam, inter_map, trans_rules,
                         kanji_readings=kanji_readings, is_rupture=is_rupture,
                     )
-        elif is_gallo_stem:
+        elif wave1_dec:
             inter_notes = []
             tarr_direct = adapt(coined_form, eff_trans_prof, rup=is_rupture)
         else:
@@ -1251,7 +865,11 @@ def run_stage4() -> dict[str, Any]:
             if not tarr_hist:
                 # Transitional or opaque/post-867 synthesized Sinosphere: adapt modifier + calque generic if transparent & not rupture
                 if gen and not is_rupture:
-                    mod_adapt = (mod.get("tarr_equivalent") if is_s3_named_eponym else None) or adapt(mod["text"], trans_prof)
+                    raw_teq = mod.get("tarr_equivalent") if is_s3_named_eponym else None
+                    if raw_teq and raw_teq == mod.get("text") and wave1_dec and wave1_dec[0] in {"chinese_12c_phonetic", "korean_12c"}:
+                        mod_adapt = adapt(raw_teq, trans_prof)
+                    else:
+                        mod_adapt = raw_teq or adapt(mod["text"], trans_prof)
                     tc_raw = gen.get("tarr_calque", "")
                     g_tarr = tc_raw.strip("-")
                     if tc_raw.startswith("Zant") or tc_raw.endswith("-"):
@@ -1320,6 +938,15 @@ def run_stage4() -> dict[str, Any]:
             if mod.get("is_opaque_eponym"):
                 rule3_blocked_count += 1
                 mod_tarr = mod.get("tarr_equivalent")
+                if mod_tarr and wave1_dec:
+                    if wave1_dec[0] == "brythonic_12c":
+                        mod_tarr = re.sub(r"\bRh", "R", mod_tarr)
+                    elif wave1_dec[0] == "north_germanic_12c":
+                        mod_tarr = re.sub(r"([bcdfghjklmnpqrstvwxz])rs\b", r"\1s", mod_tarr)
+                    elif wave1_dec[0] == "east_slavic_12c" and mod_tarr == "Euphrosyne":
+                        mod_tarr = "Eufrosyne"
+                    elif wave1_dec[0] == "west_slavic_lechitic_12c" and mod_tarr.endswith("wic"):
+                        mod_tarr = mod_tarr[:-1] + "tz"
                 if not mod_tarr:
                     mod_tarr = adapt_latin_to_tarraconian(mod_text, suppress_geo_head=True) if is_true_latin else adapt(mod_text, eff_trans_prof)
                 if g_calque.startswith("Zant-"):
@@ -1460,6 +1087,7 @@ def run_stage4() -> dict[str, Any]:
         if inter_notes:
             intermediary_applied_count += 1
         calque_mode_counts[calque_mode] += 1
+        historical_phonology_counts[dec_id] += 1
 
         stage4_baronies[bk] = {
             **r3,
@@ -1468,6 +1096,7 @@ def run_stage4() -> dict[str, Any]:
             "coined_hanzi": hanzi_str,
             "calque_mode": calque_mode,
             "calque_concepts": calque_concepts,
+            "historical_phonology_decoder": dec_id,
             "intermediary_shifts_applied": inter_notes,
             "phonological_pathway": pathway,
         }
@@ -1480,6 +1109,7 @@ def run_stage4() -> dict[str, Any]:
             "occupied_baronies": sum(calque_mode_counts.values()),
             "unoccupied_baronies": len(stage4_baronies) - sum(calque_mode_counts.values()),
             "calque_mode_counts": dict(calque_mode_counts),
+            "historical_phonology_counts": dict(historical_phonology_counts),
             "rule3_opaque_calque_blocks": rule3_blocked_count,
             "intermediary_shift_applications": intermediary_applied_count,
         },
