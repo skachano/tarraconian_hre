@@ -85,9 +85,9 @@ Implemented in [`pipeline_stage0_occupancy.py`](file:///home/siarzhuk/code/perso
 
 ---
 
-### Stage 1: Track Routing (`anachronicity_audit` × `barony_toponymic_profiles`)
-
-Each occupied barony is routed by crossing its **strict 867 audit status** (`is_historical_at["867"]`) with its **save-derived structural origin** (`origin_type` from `barony_toponymic_profiles.json`):
+### Stage 1: Track Routing (`anachronicity_audit` × `barony_toponymic_profiles`) — *Implemented*
+Implemented in [`pipeline_stage1_routing.py`](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/pipeline_stage1_routing.py) $\rightarrow$ [`data/pipeline_stage1_routed.json`](file:///home/siarzhuk/code/personal/tarraconian_hre/data/pipeline_stage1_routed.json) (`9.02 MB`), crossing all `10,239` occupied baronies' **strict 867 audit status** (`is_historical_at["867"]`) with **save-derived structural origin** (`origin_type`), **coinage overrule flags**, and **Track S Sinosphere scope**:
+- **Observed Route Distribution (`10,239` occupied + `1,058` blank):** `Track_S` (`2,272`: `1,101` pre-867 attested, `220` pre-867 overruled, `248` post-867 `historical_names` anchor, `648` 867 NTR Sino variant, `55` coined compound), `Track_A` (`1,390`: `1,267` retained, `123` coinage overrule), `Track_B` (`2,234`: `352` `historical_names`, `271` existing natural name, `1,611` 867 NTR restitution), `Track_C1` (`69`), `Track_C2` (`979`), `Track_D1` (`340`), and `Track_D2` (`2,955`, including the `2` post-conquest Tarraconian `b_FIC_*` baronies inside Sinosphere excluded from fake Hanzi).
 
 | Audit Status (`867`) | `pre_867_established` / `pre_867_unfeudalized` | `feudalized_post_867` | `founded_post_867` |
 | :--- | :--- | :--- | :--- |

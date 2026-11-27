@@ -2184,6 +2184,46 @@ class TestBaronyCoinageAndContext:
         assert offline_res["metadata"]["occupied_baronies"] == 10239
         assert offline_res["metadata"]["unoccupied_baronies"] == 1058
 
+    def test_pipeline_stage1_routing(self):
+        path = REPO_DIR / "data" / "pipeline_stage1_routed.json"
+        assert path.exists(), "data/pipeline_stage1_routed.json missing"
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        meta = data["metadata"]
+        baronies = data["baronies"]
+        assert meta["total_baronies"] == 11297 == len(baronies)
+        assert meta["occupied_baronies"] == 10239
+        assert meta["unoccupied_baronies"] == 1058
+
+        expected_families = {"Track_S", "Track_A", "Track_B", "Track_C1", "Track_C2", "Track_D1", "Track_D2"}
+        assert set(meta["pipeline_family_counts"].keys()) == expected_families
+        assert sum(meta["pipeline_family_counts"].values()) == 10239
+
+        for bk, rec in baronies.items():
+            if not rec["is_occupied"]:
+                assert rec["stage1_track"] == "Unoccupied_Blank"
+                assert rec["final_record"]["name"] == ""
+            else:
+                assert rec["pipeline_family"] in expected_families
+                assert rec["coinage_culture"] and rec["substrate_culture"] and rec["transmission_culture"]
+                assert rec["stage2_culture_priority"] in {"substrate_first", "coinage_first"}
+
+        # Canonical track routing spot checks
+        assert baronies["b_london"]["stage1_track"] == "Track_A_retained"
+        assert baronies["b_woxbrigge"]["stage1_track"] == "Track_D2_post867_foundation"
+        assert baronies["b_szekesfehervar"]["stage1_track"] == "Track_C2_post867_feudalized"
+        assert baronies["b_szekesfehervar"]["stem_source"] == "historical_names_pre867"
+        assert baronies["b_kiev"]["stage1_track"] == "Track_C1_pre867_feudalized"
+        assert baronies["b_ka'abir"]["stage1_track"] == "Track_D2_post867_foundation"
+        assert baronies["b_EMan_Huligai"]["stage1_track"] == "Track_S_post867_historical_anchor"
+
+        # Non-Sinospheric post-conquest Tarraconian inside Sino frontier excluded from Track S
+        assert baronies["b_FIC_Amur_Lindu"]["sino_scope_basis"] == "excluded_post_conquest_tarraconian"
+        assert baronies["b_FIC_Amur_Lindu"]["stage1_track"] == "Track_D2_post867_foundation"
+        assert baronies["b_fic_eman_bixinshang"]["sino_scope_basis"] == "excluded_post_conquest_tarraconian"
+        assert baronies["b_fic_eman_bixinshang"]["stage1_track"] == "Track_D2_post867_foundation"
+
 
 
 
