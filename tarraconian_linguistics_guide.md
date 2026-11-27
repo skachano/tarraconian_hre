@@ -1,10 +1,10 @@
-# Tarraconian Linguistic & Sound-Change Guide (ca. 1142 Update)
+# Tarraconian Linguistic & Sound-Change Guide (1194 Chancellery Standard)
 
-**Culture:** Tarraconian (*Tarracono-Lothringian*, `ID 316` — 744 counties in 1142, up from 547 in 1122)  
+**Culture:** Tarraconian (*Tarracono-Lothringian*, `ID 316`)  
 **Daughter Dialects & Languages:**  
 * **Alpine-Tarraconian** (*Alpîn-Tarraconisch*, `ID 337` — hybridized 1042 with Cisalpine)  
-* **Croato-Tarraconian** (*Kroatisch-Tarraconisch*, `ID 345` — hybridized 1057 with Croatian, 14 counties in 1142)  
-* **Ungwârer** (*Ungwârerisch / Ungwâri*, `ID 367` — diverged 1094 in Upper Hungary, Magyar-speaking daughter language with Central Germanic heritage & Franconian onomasticon, 2 counties in 1142)  
+* **Croato-Tarraconian** (*Kroatisch-Tarraconisch*, `ID 345` — hybridized 1057 with Croatian)  
+* **Ungwârer** (*Ungwârerisch / Ungwâri*, `ID 367` — diverged 1094 in Upper Hungary, Magyar-speaking daughter language with Central Germanic heritage & Franconian onomasticon)  
 
 **Linguistic Classification:** High German (Moselle/Rhine Franconian superstrate) with a heavy Old Catalan / Occitano-Romance substrate and Hispano-Latin administrative lexicon.
 

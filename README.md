@@ -2,18 +2,18 @@
 
 [![CK3 Version](https://img.shields.io/badge/CK3-1.14+-blue.svg)](https://www.crusaderkings.com/)
 [![Active Campaign Save](https://img.shields.io/badge/Save-chatenois__867__01__01.ck3-orange.svg)]()
-[![Imperial Date](https://img.shields.io/badge/Campaign%20Date-1154.12.27-purple.svg)]()
+[![Imperial Date](https://img.shields.io/badge/Campaign%20Date-1194.07.28-purple.svg)]()
 [![Culture](https://img.shields.io/badge/Culture-Tarraconian%20%5BID%20316%5D-green.svg)]()
 
 Welcome to the central repository for the **Tarraconian Chancellery** project—an alternate-history worldbuilding, onomastic reconstruction, and modding suite for **Crusader Kings III**. 
 
-This repository maintains the master gazetteers, linguistic sound laws, historical audit pipelines, and game localization files governing the titles, dynasties, and cultures of the restored **Roman Empire** (*Dat Rômische Keiserrîch*).
+This repository maintains the master gazetteers, linguistic sound laws, the **v2 7-stage barony naming pipeline**, and game localization/web atlas files governing the titles, dynasties, and cultures of the restored **Roman Empire** (*Dat Rômische Keiserrîch*).
 
 ---
 
 ## 1. Project Overview & Historical Setting
 
-### 1.1 The Alternate-History Horizon (867–1154)
+### 1.1 The Alternate-History Horizon (867–1194)
 The campaign diverges from real-world history on **1 January 867 AD**. 
 
 The ruling **Chatenois** dynasty (originating from the Moselle-Franconian nobility of Metz and Lorraine) diverged **Lothringian** (`ID 249`) from Franconian in 877. Pushing southward across Gaul into the Mediterranean, they established dominion over the Spanish March (*Hispania Tarraconensis* — Barcelona, Tarragona, Urgell, and Lleida).
@@ -23,17 +23,18 @@ On **31 August 989**, the dynasty formally hybridized **Lothringian** with nativ
 * **Catalan Heritage (Courtly Occitano-Romance):** Adopted courtly ethos, Mediterranean maritime mercantilism, Iberian stone architecture, and an imperial administrative magistracy (*Veguerîe / Magistrat*).
 
 ### 1.2 The Restored Roman Hegemony (*Dat Rômische Keiserrîch*)
-Under **Kaiser Adémar "the Great"** (`ID 62400`) and **Augustus Wernhard "the Bear"** (`ID 67256089`), the dynasty united the Western Crown of the **Holy Roman Empire** (`e_hre`) with the Eastern Crown of the **Byzantine Empire** (`e_byzantium`), restoring the unified **Roman Empire** (`h_roman_empire` / Hegemony tier `ID 0`).
+Under **Kaiser Adémar "the Great"** (`ID 62400`), **Augustus Wernhard "the Bear"** (`ID 67256089`), and **Pope Lambert II**, the dynasty united the Western Crown of the **Holy Roman Empire** (`e_hre`) with the Eastern Crown of the **Byzantine Empire** (`e_byzantium`), restoring the unified **Roman Empire** (`h_roman_empire` / Hegemony tier `ID 0`).
 
-As of **27 December 1154**, the realm encompasses:
-* **930 counties** in the Tarraconian cultural family (915 standard Tarraconian, 13 Croato-Tarraconian, 2 Ungwârer).
-* **1,972 directly controlled counties** (72.2% of all 2,732 de jure counties across 35 empires and 160 kingdoms), spanning continuously from Iceland and Ireland to Scandinavia, Anatolia, the Levant, Egypt, the Steppes, Central Asia, and the borders of China and India.
+As of **28 July 1194**, the global map scope encompasses:
+* **47 De Jure Empires**, **213 De Jure Kingdoms**, **970 De Jure Duchies**, and **3,476 De Jure Counties** (**2,644 Roman Empire counties**, **76.1% control**).
+* **11,297 Barony Holdings (`b_*`)**: **10,239 save-occupied holdings** (`4,360` castles, `2,978` churches, `2,901` cities) plus **1,058 unoccupied territorial reserves**, resolved by the **v2 Barony Naming Pipeline** (`scripts/pipeline_stage0_occupancy.py` → `scripts/pipeline_stage6_disambiguation.py`).
 
 ### 1.3 The Tarraconian Language & Daughter Tongues
 Tarraconian is linguistically structured like an alternate-history "reverse Middle English" (Germanic grammar and phonology fused with an Occitano-Romance administrative superstrate):
 * **Imperial Tarraconian (`ID 316`):** West Central German (Rhine-Moselle Franconian) sound system written with Catalan-Aragonese scribal conventions. Long vowels carry circumflexes (**`â, ê, î, ô, û`**), word-final obstruents strictly devoice per *Auslautverhärtung* (**`-burch`**, **`-berch`**, **`-stat`**, **`-lant`**), and affricates are written **`z-`** initially and **`-tz`** medially/finally.
-* **Croato-Tarraconian (`ID 345`, formed 1057):** Dinaric-Adriatic dialect blending South Slavic precision with Franconian grammar.
-* **Ungwârer (`ID 367`, formed 1093):** Carpathian-Steppe daughter language that shifted to Old Hungarian (`language_magyar`) while retaining Central Germanic heritage and Franconian onomastics on the Upper Hungarian frontier.
+* **Alpine-Tarraconian (`ID 337`, formed 1042):** Gallo-Italic Alpine march register (`û -> [yː]`, final nasalization `-n -> [ŋ]`).
+* **Croato-Tarraconian (`ID 345`, formed 1057):** Dinaric-Adriatic dialect blending South Slavic labiodental onset (`w- -> [v]`) with Franconian morphology.
+* **Ungwârer (`ID 367`, formed 1094):** Carpathian-Steppe daughter language preserving circumflex length directly onto Old Hungarian long vowels on the Upper Hungarian frontier.
 
 ---
 
@@ -41,19 +42,21 @@ Tarraconian is linguistically structured like an alternate-history "reverse Midd
 
 | Master Document / Directory | Path | Purpose & Scope |
 | :--- | :--- | :--- |
-| **Imperial De Jure Gazetteer** | [hre_de_jure_and_archdioceses_1059.md](hre_de_jure_and_archdioceses_1059.md) | The master ledger of all 47 empires, 213 kingdoms, 970 duchies, and 3,476 counties worldwide, tracking imperial control percentages and historical attestations. |
-| **Tarraconian Titles Gazetteer** | [tarraconian_titles_1059.md](tarraconian_titles_1059.md) | Exhaustive register of official Tarraconian names, adjectives, and IPA transcriptions for all landed titles and archdioceses. |
-| **Linguistics & Sound-Shift Guide** | [tarraconian_linguistics_guide.md](tarraconian_linguistics_guide.md) | Complete reference for Tarraconian phonology, IPA values, vowel quantity laws, consonant shifts, and orthographic constraints. |
-| **Descriptive Title Calques Guide** | [tarraconian_descriptive_title_calques.md](tarraconian_descriptive_title_calques.md) | Master Morpheme Translation Matrix (forts, churches, waters, oronyms, colors, Sinosphere, Steppe, Boreal, Africa, India) across 14 audited culture groups. |
-| **Sinosphere 1154 Audit** | [sinosphere_titles_and_characters_1154.md](sinosphere_titles_and_characters_1154.md) | Comprehensive audit of all 39 kingdoms and 620 counties in the East Asian Sinosphere (279 in Roman Empire in 1154), mapping Chinese characters (汉字), development, and sovereign status. |
-| **Sinosphere Phonetics Guide** | [sinosphere_phonetics_and_transcription_guide_1154.md](sinosphere_phonetics_and_transcription_guide_1154.md) | Authoritative reference for 12th-century Late Middle Chinese, Goryeo Early Middle Korean, Late Heian Japanese, Lý Sino-Vietnamese, Khitan, and Jurchen phonology, with Tarraconian adaptation rules and audited phonetic transliteration registers. |
-| **Sinosphere Kanji Matrix** | [sinosphere_kanji_tarraconian_toponyms.md](sinosphere_kanji_tarraconian_toponyms.md) | Exhaustive 641-kanji toponymic lexicon mapping Sinitic, Japanese, and Korean characters to Tarraconian morphemes across 10 thematic categories. |
-| **Master Audit & Screening Plan** | [title_historical_accuracy_audit_plan.md](title_historical_accuracy_audit_plan.md) | 3-tier classification system for screening out modern/colonial vanilla anachronisms (e.g. *Ostsiedlung*, Soviet names, 12th-c. Crusader castles). |
-| **Procedure 2 Calque Register** | [tarraconian_procedure2_title_audit.md](tarraconian_procedure2_title_audit.md) | Master audit register implementing Procedure 2, classifying titles by Toponym Adoption Pattern (Preferred Calque, Hybrid, Phonetic). |
-| **Audit Discrepancy Register** | [audit_discrepancy_register.md](audit_discrepancy_register.md) | Exhaustive log of all 209+ flagged anachronistic titles, resolving them to pre-867 antiquity seats or ancient hydronyms. |
+| **Imperial De Jure Gazetteer** | [hre_de_jure_and_archdioceses_1059.md](hre_de_jure_and_archdioceses_1059.md) | The master ledger of all 47 empires, 213 kingdoms, 970 duchies, and 3,476 counties worldwide as of `1194.7.28`, tracking imperial control percentages and archdioceses. |
+| **Tarraconian Titles Gazetteer** | [tarraconian_titles_1059.md](tarraconian_titles_1059.md) | Exhaustive register of upper-tier Tarraconian names, adjectives, and IPA transcriptions across landed titles (`e_*`, `k_*`, `d_*`, `c_*`) and archdioceses. |
+| **Barony v2 Pipeline Spec** | [barony_tarraconian_naming_pipeline.md](barony_tarraconian_naming_pipeline.md) | Architecture and stage-by-stage specification for all **11,297 barony holdings** (`Stage 0` occupancy → `Stage 6` bottom-up disambiguation & web/localisation export). |
+| **Linguistics & Sound-Shift Guide** | [tarraconian_linguistics_guide.md](tarraconian_linguistics_guide.md) | Complete reference for Tarraconian phonology, IPA values, vowel quantity laws, consonant shifts, daughter dialects, and orthographic constraints. |
+| **Descriptive Title Calques Guide** | [tarraconian_descriptive_title_calques.md](tarraconian_descriptive_title_calques.md) | Master Morpheme Translation Matrix (forts, churches, waters, oronyms, colors, Sinosphere, Steppe, Boreal, Africa, India) backing `data/multilingual_morpheme_calque_lexicon.json`. |
+| **Personal Name Register** | [tarraconian_onomasticon_and_name_register.md](tarraconian_onomasticon_and_name_register.md) | Master onomastic concordance and `name_list_franconian` register backing `data/global_onomasticon_adaptation.json`. |
+| **Sinosphere Corpus & Gazetteer** | [sinosphere_titles_and_characters_1154.md](sinosphere_titles_and_characters_1154.md) | Comprehensive audit of Sinosphere kingdoms and counties, mapping Chinese characters (汉字), development, and sovereign status. |
+| **Sinosphere Phonetics Guide** | [sinosphere_phonetics_and_transcription_guide_1154.md](sinosphere_phonetics_and_transcription_guide_1154.md) | Authoritative reference for 12th-century Late Middle Chinese, Goryeo Early Middle Korean, Late Heian Japanese, Lý Sino-Vietnamese, Khitan, and Jurchen phonology. |
+| **Sinosphere Kanji Matrix** | [sinosphere_kanji_tarraconian_toponyms.md](sinosphere_kanji_tarraconian_toponyms.md) | Upper-tier 641-kanji toponymic lexicon (`data/sinosphere_kanji_tarraconian.json`), extended by `scripts/sino_barony_kanji_ext.py` (`1,390` merged CJK entries) for baronies. |
+| **Master Audit & Screening Plan** | [title_historical_accuracy_audit_plan.md](title_historical_accuracy_audit_plan.md) | Methodology for screening out post-867 colonial/modern vanilla anachronisms. |
+| **Procedure 2 Calque Register** | [tarraconian_procedure2_title_audit.md](tarraconian_procedure2_title_audit.md) | Upper-tier audit register implementing Procedure 2, classifying titles by Toponym Adoption Pattern (Preferred Calque, Hybrid, Phonetic). |
+| **Audit Discrepancy Register** | [audit_discrepancy_register.md](audit_discrepancy_register.md) | Upper-tier discrepancy log (`1171` baseline) resolving flagged anachronistic counties to pre-867 seats or ancient hydronyms. |
 | **Dynastic Realignment Register** | [dynastic_realignment_register.md](dynastic_realignment_register.md) | Enforces the Toponym-First Principle, realigning cadet branches and dynamic hybrid cultures to resolved historical seats. |
 | **Mod In-Game Files** | `tarraconian_chancellery/` | The active CK3 mod: scripted effects (`common/scripted_effects/`) and localization files (`localization/english/`). |
-| **Pipeline Scripts** | `scripts/` | Python and shell automation toolchain for save extraction, lineage tracing, gazetteer synchronization, and mod building. |
+| **Web Atlas & Pipeline** | `web/`, `docs/`, `scripts/` | Vector GeoJSON atlas (`docs/` for GitHub Pages), heraldic `Signa Imperii` generator, saint shrine data, and v2 barony pipeline scripts (`pipeline_stage0..6`). |
 
 ---
 
@@ -211,10 +214,23 @@ An interactive, high-resolution vector cartographic atlas of the Tarraconian wor
 
 ### Features
 * Vector rendering of all **3,476 counties** and **11,297 barony holdings** directly extracted from CK3 map data.
-* Instant autocomplete search across Tarraconian Chancellery toponyms, canonical names, Hanzi glyphs, and title keys.
+* Live **v2 Barony Pipeline** integration across all `10,239` occupied holdings (holding-type views, 3-stratum toponymic profiles, coinage-era rulers, physical/event context, saint shrine callouts, and `Signa Imperii` heraldry).
+* Instant autocomplete search across Tarraconian Chancellery toponyms, canonical names, Hanzi glyphs, saint shrines, and title keys.
 * Full hierarchical breadcrumb lineage (Empire $\rightarrow$ Kingdom $\rightarrow$ Duchy $\rightarrow$ County $\rightarrow$ Baronies).
-* De Jure rank filtering and slide-out Inspector Drawer with historical 1059 resolution notes and Sinosphere Hanzi calque analysis.
-* Dedicated **Imperial Linguistics & Toponymic Guide** modal with phonotactics and an interactive 641-character Hanzi lexicon.
+* De Jure rank filtering and slide-out Inspector Drawer with historical resolution notes and Sinosphere Hanzi calque analysis.
+* Dedicated **Imperial Linguistics & Toponymic Guide** modal with phonotactics, the v2 Historical Audit taxonomy, and an interactive 641-character upper-tier Hanzi lexicon.
+
+### Building the Barony Pipeline (v2) & Web App
+```bash
+python3 scripts/pipeline_stage0_occupancy.py
+python3 scripts/pipeline_stage1_routing.py
+python3 scripts/pipeline_stage2_variant_selection.py
+python3 scripts/pipeline_stage3_synthesis.py
+python3 scripts/pipeline_stage4_calque_mediation.py
+python3 scripts/pipeline_stage5_sound_laws.py
+python3 scripts/pipeline_stage6_disambiguation.py --apply-to-geojson
+python3 scripts/build_webapp.py
+```
 
 ### Automated GitHub Pages Deployment
 Continuous deployment is managed through GitHub Actions (`.github/workflows/deploy-pages.yml`):

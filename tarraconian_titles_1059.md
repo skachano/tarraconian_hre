@@ -3,10 +3,9 @@
 * **Campaign Save:** `chatenois_867_01_01.ck3` (**28 July 1194**, updated from 13 May 1059, 20 September 1122, 20 August 1142, 27 December 1154 & 18 June 1171)
 * **Culture:** **Tarraconian** (*Tarracono-Lothringian*, `ID 316`) & daughter dialects **Alpine-Tarraconian** (`ID 337`), **Croato-Tarraconian** (`ID 345`), and **Ungwârer** (`ID 367`)
 * **Companion References:**
-  * [barony_historical_audit_and_resolutions.md](barony_historical_audit_and_resolutions.md) (Comprehensive Audit & Toponymic Resolutions for all 11,297 Baronies)
+  * [barony_tarraconian_naming_pipeline.md](barony_tarraconian_naming_pipeline.md) (v2 7-Stage Barony Pipeline Specification across all 11,297 Baronies)
   * [tarraconian_linguistics_guide.md](tarraconian_linguistics_guide.md) (Phonology, Orthography & IPA Index)
-  * [hre_de_jure_and_archdioceses_1059.md](hre_de_jure_and_archdioceses_1059.md) (De Jure Hierarchy & 1059 Status)
-  * [anachronistic_titles_1059.md](archive/anachronistic_titles_1059.md) (Pre-1059 Historical & In-Game Toponymic Resolutions)
+  * [hre_de_jure_and_archdioceses_1059.md](hre_de_jure_and_archdioceses_1059.md) (De Jure Hierarchy & 1194 Status)
 
 ---
 
@@ -31,7 +30,7 @@ Tarraconian combines **Moselle/Rhine Franconian High German** morphology with **
 
 > [!TIP]
 > **How Anachronistic Titles Are Presented Below:**
-> Whenever a Duchy or County was flagged in [anachronistic_titles_1059.md](archive/anachronistic_titles_1059.md), **both** Tarraconian translations are given:
+> Whenever a Duchy or County was flagged in the Imperial Chancellery Anachronism Audit ([audit_discrepancy_register.md](audit_discrepancy_register.md)), **both** Tarraconian translations are given:
 > 1. **Direct Tarraconian adaptation** of the in-game title, followed by
 > 2. **`[1059 Historical: ...]`** giving the Tarraconian translation of its resolved pre-1059 provincial centre, sub-barony (`b_*`), or geographic/in-game toponym!
 

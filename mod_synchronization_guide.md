@@ -1,11 +1,11 @@
 # Tarraconian Chancellery Mod: Synchronization & Build Guide
 
 * **Project:** Tarraconian Imperial Chancellery (`tarraconian_chancellery`)
-* **Target Game:** Crusader Kings III (v1.20.*)
-* **Primary Script:** [scripts/build_mod.ps1](scripts/build_mod.ps1) (or [scripts/build_mod.py](scripts/build_mod.py))
-* **Source Register:** [tarraconian_titles_1059.md](tarraconian_titles_1059.md)
+* **Target Game:** Crusader Kings III (`1194.7.28` save state)
+* **Primary Scripts:** [scripts/build_mod.py](scripts/build_mod.py) (or [scripts/build_mod.ps1](scripts/build_mod.ps1)), [scripts/build_webapp.py](scripts/build_webapp.py)
+* **Source Registers:** [tarraconian_titles_1059.md](tarraconian_titles_1059.md), [data/tarraconian_barony_names_v2_l_english.yml](data/tarraconian_barony_names_v2_l_english.yml)
 * **Companion References:**
-  * [anachronistic_titles_1059.md](archive/anachronistic_titles_1059.md) (Pre-1059 Historical Toponymic Resolutions)
+  * [barony_tarraconian_naming_pipeline.md](barony_tarraconian_naming_pipeline.md) (v2 7-Stage Barony Naming & Localisation Export)
   * [hre_de_jure_and_archdioceses_1059.md](hre_de_jure_and_archdioceses_1059.md) (De Jure Hierarchy & Provincial Register)
   * [tarraconian_linguistics_guide.md](tarraconian_linguistics_guide.md) (Phonology, Orthography & Sound Laws)
 

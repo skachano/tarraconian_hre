@@ -1,7 +1,7 @@
-# Tarraconian Onomasticon & Personal Name Register (1154 Imperial Chancellery Standard)
+# Tarraconian Onomasticon & Personal Name Register (1194 Imperial Chancellery Standard)
 
 > **Document Type:** Master Onomastic Register & Linguistic Concordance  
-> **Culture:** Tarraconian (*Tarracono-Lothringian*, `ID 316` — 915 counties in 1154)  
+> **Culture:** Tarraconian (*Tarracono-Lothringian*, `ID 316`; active save horizon `1194.7.28`)  
 > **Ethos & Heritage:** Courtly (`ethos_courtly`) | Central Germanic (`heritage_central_germanic`) | High German (`language_high_german`)  
 > **Parentage:** Lothringian (`ID 249`, Franconian High German) + Catalan (`ID 82`, Old Catalan / Occitano-Romance)  
 > **Imperial State:** The Roman Empire (*Dat Rômische Keiserrîch*, `h_roman_empire`)  

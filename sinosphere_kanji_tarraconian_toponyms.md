@@ -1,9 +1,9 @@
 # Sinosphere Kanji Toponymic Lexicon & Tarraconian Interpretation Index
 
 > **Historical Linguistic Reference & Chancellery Gazetteering Guide**  
-> **Campaign Date:** 27 December 1154 (`1154.12.27`)  
+> **Campaign Date:** `1154.12.27` Baseline (Extended to `1194.7.28` Baronies in `scripts/sino_barony_kanji_ext.py`)  
 > **Campaign Save Game:** `chatenois_867_01_01.ck3` | **Imperial Realm:** The Roman Empire (*Dat Rômische Keiserrîch*)  
-> **Total Attested Sinosphere Kanji:** **641 Distinct Characters** (100% Comprehensive Coverage)  
+> **Total Attested Sinosphere Kanji:** **641 Distinct Characters** in the upper-tier UI corpus (`1,390` merged CJK entries in the v2 barony pipeline)  
 > **Governing Principles:** [Tarraconian Linguistics Guide](tarraconian_linguistics_guide.md) | [Semantic Calque Matrix](tarraconian_descriptive_title_calques.md) | [Sinosphere Title Gazetteer](sinosphere_titles_and_characters_1154.md)
 
 ---

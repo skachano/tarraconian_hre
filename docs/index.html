@@ -575,18 +575,18 @@
         <!-- Tab 5: Historical Audit & Antiquity (11,297 Holdings) -->
         <section id="tab-pane-audit" class="modal-tab-pane hidden" role="tabpanel">
           <div class="guide-prose">
-            <h3>1. The Burden of Proof on Antiquity Principle</h3>
+            <h3>1. The Burden of Proof on Antiquity Principle (v2 Pipeline)</h3>
             <p>
-              In vanilla Crusader Kings III, thousands of barony-tier holdings (<code>b_*</code>) bear anachronistic, post-867 names: 19th-century railway junctions (<em>Baranovichi</em>, <em>Dedovichi</em>, <em>Pokrovsk</em>), 17th/18th-century imperial fortresses (<em>Lorient</em>, <em>Zhlobin</em>, <em>Oranienburg</em>, <em>Fort Novoaleksandrovskiy</em>), High Medieval clearance boroughs, Cistercian reform abbeys, and Dutch dyke dams (<em>Rotterdam</em>).
+              In vanilla Crusader Kings III, thousands of barony-tier holdings (<code>b_*</code>) bear anachronistic, post-867 names: 19th-century railway junctions (<em>Baranovichi</em>), 17th/18th-century fortresses (<em>Zhlobin</em>), High Medieval clearance boroughs, Cistercian reform abbeys (<em>Clairvaux</em>, <em>Cîteaux</em>), and Dutch dyke dams (<em>Rotterdam</em>).
             </p>
             <p>
-              Under the <strong>Burden of Proof on Antiquity Principle</strong>, the Imperial Chancellery establishes that:
+              Under the <strong>867 Divergence &amp; 3-Stratum Toponymic Pipeline (v2)</strong>, every holding is resolved independently from the bottom up:
             </p>
             <ul>
-              <li><strong>Positive Pre-867 Proof Required:</strong> Every holding must be grounded in an authentic pre-867 Roman, Celtic, Germanic, Slavic, Greek, Baltic, Finnic, Semitic, Indic, or Sinitic historical settlement or physical geographic reality.</li>
-              <li><strong>Physical Primordial Substrates (Option B):</strong> Where a later feudal fortress or market was named after a post-867 lord or abbey, the holding is re-anchored to its immutable ancient river basin, lake reach, estuary sound, or mountain pass (e.g. <em>Rotte</em> for Rotterdam, <em>Vûrnês</em> for Furness, <em>Albetâl</em> for Clairvaux, <em>Dörsbach</em> for Katzenelnbogen, <em>Mênam</em> for Bangkok, <em>Sê-Dôn</em> for Salavan).</li>
-              <li><strong>Indigenous Restitution (Option A):</strong> Pre-crusade, pre-Teutonic, and pre-colonial indigenous names are systematically restored (e.g. <em>Twangste</em> for Königsberg, <em>Lindanisa</em> for Reval, <em>Mangystau</em> for Fort Novoaleksandrovskiy, <em>Heiligenberch</em> for Heidelberg, <em>Elefantîne</em> for West Aswan, <em>Strêschew</em> for Zhlobin).</li>
-              <li><strong>Campaign Founder Foundations (Option C):</strong> Post-867 feudal castles, church endowments, and civic markets lacking pre-867 continuity are evaluated through the actual feudal lords who founded or held them in the campaign save universe (e.g. <em>Ehrenfrîtszelle</em> for Baranovichi, <em>Archembaldstat</em> for Lorient).</li>
+              <li><strong>Strict 867 Historical Gate (Track A/B):</strong> Only positively attested pre-867 settlements (<code>Track_A</code>) retain classical/indigenous seats; post-867 vanilla names fall back to pre-867 <em>historical_names</em>, natural features, or validated 867 natural/tribal replacements (<code>Track_B</code>).</li>
+              <li><strong>Coinage vs. Substrate vs. Transmission:</strong> Names are coined in the ruler stratum active at coinage/feudalization (<code>Track_C</code>/<code>Track_D</code>), mediated phonologically through the transmission culture, and calqued semantically or phonetically adapted per <em>Procedure 1 &amp; 2</em>.</li>
+              <li><strong>Physical &amp; Maritime Discipline:</strong> Maritime generics (<code>-hâven</code>, <code>-port</code>, <code>-bucht</code>) are gated to true sea-coast holdings, while inland holdings receive river/land generics (<code>-vurt</code>, <code>-stat</code>, <code>-burch</code>) and faith-aligned sanctuaries (<code>-kirchen</code>/<code>-munster</code>, <code>-meschit</code>, <code>-tempel</code>/<code>-wîe</code>).</li>
+              <li><strong>Autonomous Barony Disambiguation:</strong> Stage 6 guarantees <code>0</code> intra-county exact or near-homophonic collisions and <code>0</code> phonotactic failures across all <code>3,476</code> counties.</li>
             </ul>
 
             <div class="audit-stats-grid">
@@ -595,15 +595,15 @@
                 <span class="stat-label">Total Map Holdings Audited</span>
               </div>
               <div class="audit-stat-card">
-                <span class="stat-number">10,237</span>
+                <span class="stat-number">10,239</span>
                 <span class="stat-label">Occupied Baronies Resolved</span>
               </div>
               <div class="audit-stat-card">
-                <span class="stat-number">2,013</span>
-                <span class="stat-label">Sinosphere Logographic Calques</span>
+                <span class="stat-number">2,272</span>
+                <span class="stat-label">Sinosphere Scope (1,227 Calqued)</span>
               </div>
               <div class="audit-stat-card">
-                <span class="stat-number">1,060</span>
+                <span class="stat-number">1,058</span>
                 <span class="stat-label">Unoccupied Territorial Reserves</span>
               </div>
             </div>
@@ -616,27 +616,24 @@
               The Chancellery antiquity audit distinguishes genuine archaic settlements whose parchments happened to survive late from explicit high-medieval innovations by screening morphological clearance and foundation formants (Romance <em>bastides</em>, <em>sauvetés</em>, Norman <em>boroughs</em>, German <em>-rode</em>, <em>-hagen</em>, <em>-neustadt</em> clearances, and Iberian <em>repoblaciones</em>).
             </p>
 
-            <h3>3. Resolution Taxonomy &amp; Chancellery Categories</h3>
+            <h3>3. Resolution Taxonomy &amp; v2 Pipeline Tracks</h3>
             <div class="table-responsive">
               <table class="guide-table">
                 <thead>
                   <tr>
-                    <th>Category</th>
+                    <th>Pipeline Track</th>
                     <th>Count</th>
                     <th>Toponymic Description</th>
                     <th>Chancellery Method</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td><strong>Sub-Barony Attestation</strong></td><td>4,913</td><td>Indigenous historical settlements and vills conforming to county culture.</td><td>Phonotactic adaptation &amp; Auslautverhärtung.</td></tr>
-                  <tr><td><strong>County Capital / Eponymous</strong></td><td>2,701</td><td>Primary administrative seats inheriting county-level chancellery names.</td><td>Direct capital inheritance &amp; disambiguation.</td></tr>
-                  <tr><td><strong>Sinosphere Logographic Calque</strong></td><td>2,013</td><td>East Asian titles translated root-for-root from classical Hanzi characters.</td><td>Logographic calquing &amp; Sinitic phonetics.</td></tr>
-                  <tr><td><strong>Unoccupied Reserve</strong></td><td>1,060</td><td>Uncolonized wilderness reserves strictly preserved as blank strings.</td><td>Zero-property neutral reserve.</td></tr>
-                  <tr><td><strong>Option B Ancient Hydronym</strong></td><td>136</td><td>Re-anchored to pre-867 physical rivers, estuaries, and mountains.</td><td>Physical substrate anchoring (Rotte, Hakrâ, Vûrnês).</td></tr>
-                  <tr><td><strong>Option A Classical Seat</strong></td><td>135</td><td>Classical civitates, legionary fortresses, and ancient oppida.</td><td>Historical Roman/Gallo-Roman restitution.</td></tr>
-                  <tr><td><strong>Classical Antiquity</strong></td><td>121</td><td>Ancient Greek, Roman, and Vedic settlements pre-dating 867.</td><td>Classical substrate preservation.</td></tr>
-                  <tr><td><strong>Indigenous Restitution</strong></td><td>62</td><td>Pre-crusade and pre-colonial native toponyms replacing late forts.</td><td>Twangste, Lindanisa, Mangystau, Elefantîne.</td></tr>
-                  <tr><td><strong>Option C Campaign Foundation</strong></td><td>40</td><td>Post-867 foundations evaluated via campaign save character traits.</td><td>Ruler name, house, and holding type synthesis.</td></tr>
+                  <tr><td><strong>Track D · Chartered / Founded Post-867</strong></td><td>3,295</td><td>Pre-867 hamlets chartered later (<code>340</code> D1) &amp; pure alt-history foundations (<code>2,955</code> D2).</td><td>Coinage-era archetype, shrine &amp; substrate synthesis.</td></tr>
+                  <tr><td><strong>Track S · Sinosphere Logographic &amp; Phonetic</strong></td><td>2,272</td><td>East Asian attested/restituted Hanzi (<code>1,227</code> logographic calques; <code>1,045</code> 12th-c. phonetic/hybrid).</td><td>Procedure 1 CJK calquing &amp; 12th-c. LMC/EMK/EMJ readings.</td></tr>
+                  <tr><td><strong>Track B · 867 Restitution &amp; Natural Anchor</strong></td><td>2,234</td><td>Post-867 vanilla names replaced by pre-867 anchors (<code>352</code>), natural names (<code>271</code>), or NTR stems (<code>1,611</code>).</td><td>Multi-stratum variant selection &amp; calque mediation.</td></tr>
+                  <tr><td><strong>Track A · Pre-867 Retained &amp; Overruled</strong></td><td>1,390</td><td>Attested 867 settlements retained (<code>1,267</code>) or overruled by long-term coinage shifts (<code>123</code>).</td><td>Phonotactic nativization &amp; Auslautverhärtung.</td></tr>
+                  <tr><td><strong>Unoccupied Reserve</strong></td><td>1,058</td><td>Uncolonized wilderness reserves reconciled directly from 1194 save holding types.</td><td>Strict blank reserve (<code>name = ""</code>).</td></tr>
+                  <tr><td><strong>Track C · Post-867 Feudalization</strong></td><td>1,048</td><td>Pre-867 seats feudalized later (<code>69</code> C1) &amp; tribal strongholds feudalized under sovereigns (<code>979</code> C2).</td><td>Feudalizer culture generic &amp; coinage ruler modeling.</td></tr>
                 </tbody>
               </table>
             </div>
@@ -646,95 +643,95 @@
               Click any audited holding card below to automatically inspect and zoom to its territory on the imperial map:
             </p>
             <div id="audit-exemplar-grid" class="audit-exemplar-grid">
-              <div class="audit-exemplar-card" data-key="b_rotterdam" data-tier="barony">
-                <div class="ex-header"><span class="ex-title">Rotte</span><span class="audit-badge audit-badge-hydronym">Option B</span></div>
-                <div class="ex-orig">Rotterdam (c. 1270 dam)</div>
-                <div class="ex-desc">Ancient pre-867 Rotte River peat stream in Lower Lotharingia.</div>
-              </div>
               <div class="audit-exemplar-card" data-key="b_heidelberg" data-tier="barony">
-                <div class="ex-header"><span class="ex-title">Heiligenberch</span><span class="audit-badge audit-badge-restitution">Restitution</span></div>
+                <div class="ex-header"><span class="ex-title">Bergheim</span><span class="audit-badge audit-badge-antiquity">Historical Anchor</span></div>
                 <div class="ex-orig">Heidelberg (1196 castle)</div>
-                <div class="ex-desc">Classical Celtic and Roman sacred mountain (Mons Sanctus) overlooking the Neckar.</div>
+                <div class="ex-desc">Early medieval Lorsch Codex settlement (769 CE) preceding the late castle.</div>
               </div>
-              <div class="audit-exemplar-card" data-key="b_furness" data-tier="barony">
-                <div class="ex-header"><span class="ex-title">Vûrnês</span><span class="audit-badge audit-badge-hydronym">Option B</span></div>
-                <div class="ex-orig">Furness (1127 abbey)</div>
-                <div class="ex-desc">Ancient Furness peninsula and headland reach (Old Norse Fuðrnes).</div>
-              </div>
-              <div class="audit-exemplar-card" data-key="b_clairvaux" data-tier="barony">
-                <div class="ex-header"><span class="ex-title">Albetâl</span><span class="audit-badge audit-badge-hydronym">Option B</span></div>
-                <div class="ex-orig">Clairvaux (1115 abbey)</div>
-                <div class="ex-desc">Ancient pre-867 Aube River valley (Alba) of Bernardine reform.</div>
-              </div>
-              <div class="audit-exemplar-card" data-key="b_citeaux" data-tier="barony">
-                <div class="ex-header"><span class="ex-title">Vonge</span><span class="audit-badge audit-badge-hydronym">Option B</span></div>
-                <div class="ex-orig">Cîteaux (1098 abbey)</div>
-                <div class="ex-desc">Ancient pre-867 Vouge River stream (Vonga) in Burgundy.</div>
-              </div>
-              <div class="audit-exemplar-card" data-key="b_zhlobin" data-tier="barony">
-                <div class="ex-header"><span class="ex-title">Strêschew</span><span class="audit-badge audit-badge-restitution">Chronicle Gord</span></div>
-                <div class="ex-orig">Zhlobin (1654 fort)</div>
-                <div class="ex-desc">Pre-867 chronicle border gord &amp; hillfort Stary Gorodok on Dnieper (Strezhev).</div>
-              </div>
-              <div class="audit-exemplar-card" data-key="b_baranovichi" data-tier="barony">
-                <div class="ex-header"><span class="ex-title">Ehrenfrîtszelle</span><span class="audit-badge audit-badge-founder">Option C</span></div>
-                <div class="ex-orig">Baranovichi (1871 railway)</div>
-                <div class="ex-desc">Monastic cell endowed by campaign ruler Ehrenfried of House Suerbeer.</div>
-              </div>
-              <div class="audit-exemplar-card" data-key="b_konigsberg" data-tier="barony">
-                <div class="ex-header"><span class="ex-title">Twangste</span><span class="audit-badge audit-badge-restitution">Restitution</span></div>
-                <div class="ex-orig">Königsberg (1255 Teutonic)</div>
-                <div class="ex-desc">Ancient Old Prussian sacred oak grove and hillfort Twangste.</div>
-              </div>
-              <div class="audit-exemplar-card" data-key="b_aswan-west" data-tier="barony">
-                <div class="ex-header"><span class="ex-title">Elefantîne</span><span class="audit-badge audit-badge-restitution">Restitution</span></div>
-                <div class="ex-orig">West Aswan (Modern sector)</div>
-                <div class="ex-desc">Ancient Pharaonic and Roman island fortress Elephantine on the Nile.</div>
-              </div>
-              <div class="audit-exemplar-card" data-key="b_timbuktu" data-tier="barony">
-                <div class="ex-header"><span class="ex-title">Djôlibe</span><span class="audit-badge audit-badge-hydronym">Option B</span></div>
-                <div class="ex-orig">Timbuktu (c. 1100 camp)</div>
-                <div class="ex-desc">Ancient native Mandé hydronym of the Niger River Joliba reach.</div>
-              </div>
-              <div class="audit-exemplar-card" data-key="b_amarkot" data-tier="barony">
-                <div class="ex-header"><span class="ex-title">Hakrâ</span><span class="audit-badge audit-badge-hydronym">Option B</span></div>
-                <div class="ex-orig">Amarkot (13th-c. Rajput)</div>
-                <div class="ex-desc">Ancient pre-867 Hakra River basin in the Thar Desert.</div>
+              <div class="audit-exemplar-card" data-key="b_stcatherine" data-tier="barony">
+                <div class="ex-header"><span class="ex-title">Verclêrungeclôster</span><span class="audit-badge audit-badge-antiquity">Historical Anchor</span></div>
+                <div class="ex-orig">St. Catherine (Sinai)</div>
+                <div class="ex-desc">Calqued from the 6th-c. Justinianic Monastery of the Transfiguration.</div>
               </div>
               <div class="audit-exemplar-card" data-key="b_pathankot" data-tier="barony">
-                <div class="ex-header"><span class="ex-title">Tschakkî</span><span class="audit-badge audit-badge-hydronym">Option B</span></div>
+                <div class="ex-header"><span class="ex-title">Pratischthana</span><span class="audit-badge audit-badge-antiquity">Historical Anchor</span></div>
                 <div class="ex-orig">Pathankot (11th-c. fort)</div>
-                <div class="ex-desc">Ancient pre-867 Chakki River confluence reach in Trigarta.</div>
+                <div class="ex-desc">Ancient Audumbara capital Pratishthana attested on 2nd–1st c. BCE coins.</div>
               </div>
               <div class="audit-exemplar-card" data-key="b_jaisalmer" data-tier="barony">
-                <div class="ex-header"><span class="ex-title">Kaknî</span><span class="audit-badge audit-badge-hydronym">Option B</span></div>
+                <div class="ex-header"><span class="ex-title">Tharburch</span><span class="audit-badge audit-badge-hydronym">867 Restitution</span></div>
                 <div class="ex-orig">Jaisalmer (1156 fort)</div>
-                <div class="ex-desc">Ancient pre-867 Kakni River basin in the Thar Desert.</div>
+                <div class="ex-desc">Pre-867 Thar Desert Sindhi substrate replacing a 12th-century Rajput fort.</div>
               </div>
-              <div class="audit-exemplar-card" data-key="b_gawilgarh" data-tier="barony">
-                <div class="ex-header"><span class="ex-title">Sâtpure</span><span class="audit-badge audit-badge-hydronym">Option B</span></div>
-                <div class="ex-orig">Gawilgarh (12th-c. fort)</div>
-                <div class="ex-desc">Ancient pre-867 Satpura mountain ridge in Maharashtra.</div>
-              </div>
-              <div class="audit-exemplar-card" data-key="b_borgarh" data-tier="barony">
-                <div class="ex-header"><span class="ex-title">Narmadâ-Tâl</span><span class="audit-badge audit-badge-hydronym">Option B</span></div>
-                <div class="ex-orig">Borgarh (High medieval fort)</div>
-                <div class="ex-desc">Ancient sacred Narmada River valley reach in Malwa.</div>
+              <div class="audit-exemplar-card" data-key="b_marrakesh" data-tier="barony">
+                <div class="ex-header"><span class="ex-title">Tansiftburch</span><span class="audit-badge audit-badge-hydronym">867 Restitution</span></div>
+                <div class="ex-orig">Marrakesh (1070 Almoravid)</div>
+                <div class="ex-desc">Ancient Berber Tensift River basin replacing the later Almoravid capital.</div>
               </div>
               <div class="audit-exemplar-card" data-key="b_bangkok" data-tier="barony">
-                <div class="ex-header"><span class="ex-title">Mênam</span><span class="audit-badge audit-badge-hydronym">Option B</span></div>
-                <div class="ex-orig">Bangkok (15th-c. village)</div>
-                <div class="ex-desc">Ancient Chao Phraya River basin, Mother of Waters (Mae Nam).</div>
+                <div class="ex-header"><span class="ex-title">Tha Tschintempel</span><span class="audit-badge audit-badge-hydronym">867 Restitution</span></div>
+                <div class="ex-orig">Bangkok (15th-c. port)</div>
+                <div class="ex-desc">Chao Phraya delta Tha Chin sanctuary anchored to pre-867 hydrography.</div>
               </div>
-              <div class="audit-exemplar-card" data-key="b_salavan" data-tier="barony">
-                <div class="ex-header"><span class="ex-title">Sê-Dôn</span><span class="audit-badge audit-badge-hydronym">Option B</span></div>
-                <div class="ex-orig">Salavan (Late outpost)</div>
-                <div class="ex-desc">Ancient pre-867 Se Don River basin in southern Laos.</div>
+              <div class="audit-exemplar-card" data-key="b_gawilgarh" data-tier="barony">
+                <div class="ex-header"><span class="ex-title">Tapistat</span><span class="audit-badge audit-badge-hydronym">867 Restitution</span></div>
+                <div class="ex-orig">Gawilgarh (12th-c. fort)</div>
+                <div class="ex-desc">Pre-867 Sanskrit Tāptī/Tapi river valley city in Berar.</div>
               </div>
-              <div class="audit-exemplar-card" data-key="b_BOR_Melak" data-tier="barony">
-                <div class="ex-header"><span class="ex-title">Mahakâm</span><span class="audit-badge audit-badge-hydronym">Option B</span></div>
-                <div class="ex-orig">Melak (Late trading post)</div>
-                <div class="ex-desc">Ancient pre-867 Mahakam River basin in eastern Borneo.</div>
+              <div class="audit-exemplar-card" data-key="b_borgarh" data-tier="barony">
+                <div class="ex-header"><span class="ex-title">Satpurâ</span><span class="audit-badge audit-badge-hydronym">867 Restitution</span></div>
+                <div class="ex-orig">Borgarh (High medieval fort)</div>
+                <div class="ex-desc">Ancient Satpura mountain massif dividing the Narmada and Tapi basins.</div>
+              </div>
+              <div class="audit-exemplar-card" data-key="b_rotterdam" data-tier="barony">
+                <div class="ex-header"><span class="ex-title">Eufêmimunster</span><span class="audit-badge audit-badge-founder">Post-867 Foundation</span></div>
+                <div class="ex-orig">Rotterdam (c. 1270 dam)</div>
+                <div class="ex-desc">Post-867 Tarraconian ecclesiastical foundation dedicated to Saint Euphemios.</div>
+              </div>
+              <div class="audit-exemplar-card" data-key="b_zhlobin" data-tier="barony">
+                <div class="ex-header"><span class="ex-title">Danaprismarct</span><span class="audit-badge audit-badge-founder">Post-867 Foundation</span></div>
+                <div class="ex-orig">Zhlobin (1654 fort)</div>
+                <div class="ex-desc">Chartered market town formed from classical Latin Dnieper (Danapris).</div>
+              </div>
+              <div class="audit-exemplar-card" data-key="b_baranovichi" data-tier="barony">
+                <div class="ex-header"><span class="ex-title">Wîgerîchskirchen</span><span class="audit-badge audit-badge-founder">Post-867 Foundation</span></div>
+                <div class="ex-orig">Baranovichi (1871 railway)</div>
+                <div class="ex-desc">Church endowment founded under Tarraconian coinage ruler Wigerich.</div>
+              </div>
+              <div class="audit-exemplar-card" data-key="b_konigsberg" data-tier="barony">
+                <div class="ex-header"><span class="ex-title">Twerdypils</span><span class="audit-badge audit-badge-founder">Post-867 Feudal Seat</span></div>
+                <div class="ex-orig">Königsberg (1255 Teutonic)</div>
+                <div class="ex-desc">Lithuanic Sambian feudal hillfort (Tvertas + Pilis) replacing Teutonic fort.</div>
+              </div>
+              <div class="audit-exemplar-card" data-key="b_aswan-west" data-tier="barony">
+                <div class="ex-header"><span class="ex-title">Schallâlât al-Nîlburch</span><span class="audit-badge audit-badge-founder">Post-867 Foundation</span></div>
+                <div class="ex-orig">West Aswan (Modern sector)</div>
+                <div class="ex-desc">Arabic First Cataract fortress overlooking the Upper Nile cataracts.</div>
+              </div>
+              <div class="audit-exemplar-card" data-key="b_timbuktu" data-tier="barony">
+                <div class="ex-header"><span class="ex-title">Azawâtveste</span><span class="audit-badge audit-badge-founder">Post-867 Foundation</span></div>
+                <div class="ex-orig">Timbuktu (c. 1100 camp)</div>
+                <div class="ex-desc">Sahelian citadel defending the Azawād desert corridor.</div>
+              </div>
+              <div class="audit-exemplar-card" data-key="b_kofuku_ji" data-tier="barony">
+                <div class="ex-header"><span class="ex-title">Upgancsêlichtempel</span><span class="audit-badge audit-badge-sinosphere">Sinosphere Attested</span></div>
+                <div class="ex-orig">Kōfuku-ji (興福寺)</div>
+                <div class="ex-desc">Procedure 1 logographic calque of Nara Buddhist temple Kōfuku-ji.</div>
+              </div>
+              <div class="audit-exemplar-card" data-key="b_linjing" data-tier="barony">
+                <div class="ex-header"><span class="ex-title">Bî-dem-Dsching</span><span class="audit-badge audit-badge-sinosphere">Sinosphere Overruled</span></div>
+                <div class="ex-orig">Linjing (临泾)</div>
+                <div class="ex-desc">Pre-867 Jing River crossing calqued cleanly under local continuity.</div>
+              </div>
+              <div class="audit-exemplar-card" data-key="b_Liao_Haibeizhou" data-tier="barony">
+                <div class="ex-header"><span class="ex-title">Yîwûlü Schântempel</span><span class="audit-badge audit-badge-sinosphere">Sinosphere Toponym</span></div>
+                <div class="ex-orig">Haibeizhou (醫巫閭山)</div>
+                <div class="ex-desc">12th-century phonetic reading of sacred Mount Yiwulü sanctuary.</div>
+              </div>
+              <div class="audit-exemplar-card" data-key="b_utsunomiya" data-tier="barony">
+                <div class="ex-header"><span class="ex-title">Futâra</span><span class="audit-badge audit-badge-sinosphere">Sinosphere Anchor</span></div>
+                <div class="ex-orig">Utsunomiya (二荒山)</div>
+                <div class="ex-desc">836 CE Shoku Nihon Kōki shrine name (Futaara) preserved phonetically.</div>
               </div>
             </div>
           </div>

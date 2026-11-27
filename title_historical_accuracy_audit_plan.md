@@ -13,7 +13,7 @@
   * [dynastic_realignment_register.md](dynastic_realignment_register.md) — Master Dynastic & Cadet Branch Realignment Register
   * [mod_synchronization_guide.md](mod_synchronization_guide.md) — Mod Build & In-Game Integration Guide
   * [tarraconian_linguistics_guide.md](tarraconian_linguistics_guide.md) — Phonology, Orthography & Sound Laws
-  * `archive/anachronistic_titles_1059.md` — Legacy Pre-Audit Anachronism Notes (Archived & Superseded)
+  * [barony_tarraconian_naming_pipeline.md](barony_tarraconian_naming_pipeline.md) — Automated v2 7-Stage Barony Naming Pipeline (All 11,297 Holdings)
 
 ---
 
