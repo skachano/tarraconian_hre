@@ -20,6 +20,9 @@ DATA_DIR = REPO_DIR / "data"
 SAVE_PATH = Path("/var/tmp/ck3_audit/melted_save.ck3")
 PHASE1_DIR = Path("/var/tmp/ck3_audit/phase1")
 
+from ck3_name_decoder import clean_ck3_name
+
+
 IMPERIAL_CULTURES = {
     "Tarraconian",
     "Lothringian",
@@ -39,44 +42,6 @@ MERCANTILE_TRAITS = {
     "education_stewardship_3", "education_stewardship_4",
     "avaricious", "diligent", "administrator", "profligate",
 }
-
-
-def clean_ck3_name(name: str) -> str:
-    if not name:
-        return ""
-    # In CK3 melted saves, <UPPER>_ mid-word denotes a lowercase accented letter (e.g. NiccolO_ -> Niccolò, AuT_r -> Auþr)
-    underscore_map = {
-        "A": ("Á", "á"),
-        "E": ("É", "é"),
-        "I": ("Í", "í"),
-        "O": ("Ó", "ó"),
-        "U": ("Ú", "ú"),
-        "Y": ("Ý", "ý"),
-        "T": ("Þ", "þ"),
-        "D": ("Ð", "ð"),
-        "C": ("Č", "č"),
-        "S": ("Š", "š"),
-        "Z": ("Ž", "ž"),
-        "L": ("Ł", "ł"),
-        "N": ("Ń", "ń"),
-        "G": ("Ğ", "ğ"),
-    }
-
-    def repl_upper(m):
-        ch = m.group(1)
-        idx = m.start()
-        up, lo = underscore_map[ch]
-        is_word_start = (idx == 0 or not name[idx - 1].isalpha())
-        return up if is_word_start else lo
-
-    out = re.sub(r"([AEIOUYTDCSZLNG])_", repl_upper, name)
-    for k, v in {
-        "a_": "á", "e_": "é", "i_": "í", "o_": "ó", "u_": "ú", "y_": "ý",
-        "t_": "þ", "d_": "ð", "c_": "č", "s_": "š", "z_": "ž", "l_": "ł", "n_": "ń", "g_": "ğ",
-        "OE": "Ö", "oe": "ö", "AE": "Æ", "ae": "æ", "AA": "Å", "aa": "å",
-    }.items():
-        out = out.replace(k, v)
-    return out
 
 
 def parse_date_tuple(d_str: str):
@@ -769,13 +734,14 @@ def main():
             for sid in fobj["saints"]:
                 sc = chars.get(str(sid), {})
                 sc_cid = str(sc.get("culture", "")) if sc.get("culture") is not None else ""
+                sc_cult = cult_by_id.get(sc_cid, {}).get("name")
                 s_list.append({
                     "char_id": int(sid) if sid.isdigit() else sid,
                     "raw_name": sc.get("first_name", ""),
-                    "clean_name": clean_ck3_name(sc.get("first_name", "")),
+                    "clean_name": clean_ck3_name(sc.get("first_name", ""), culture=sc_cult),
                     "birth": sc.get("birth"),
                     "death": sc.get("death"),
-                    "culture": cult_by_id.get(sc_cid, {}).get("name"),
+                    "culture": sc_cult,
                 })
             faith_saints[fid] = {
                 "faith_type": fobj.get("faith_type"),
@@ -1063,7 +1029,8 @@ def main():
             unresolved_count += 1
 
         raw_fname = ch.get("first_name", "")
-        clean_fname = clean_ck3_name(raw_fname)
+        ruler_c = cult_by_id.get(str(ch.get("culture", "")), {}).get("name") or (chosen_iv["culture"] if chosen_iv else None)
+        clean_fname = clean_ck3_name(raw_fname, culture=ruler_c or coin_c)
         house_id = ch.get("dynasty_house")
         h_obj = houses_data.get(str(house_id), {}) if house_id else {}
         house_name = h_obj.get("localized_name") or (h_obj.get("name", "").replace("dynn_", ""))

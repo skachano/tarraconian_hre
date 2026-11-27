@@ -1899,7 +1899,10 @@ class TestBaronyCoinageAndContext:
             assert bk.startswith("b_")
             assert rec["holder_id"] is not None
             assert rec["clean_first_name"]
+            assert "_" not in rec["clean_first_name"], f"Raw CK3 underscore leaked in {bk}: {rec['clean_first_name']}"
+            assert not any(ch.isdigit() for ch in rec["clean_first_name"]), f"Hex/homonym digit leaked in {bk}: {rec['clean_first_name']}"
             assert rec["archetype"] in valid_archetypes
+        assert baronies["b_london"]["clean_first_name"] == "Æthelred"
         assert baronies["b_kiev"]["is_circular_house"] is True
         assert baronies["b_lorient"]["archetype"] == "mercantile_civic"
 
@@ -2015,6 +2018,113 @@ class TestBaronyCoinageAndContext:
         assert "gmh" in cultures["Tarracono-Tajik"]["iso_codes"]
         assert "hrv" in cultures["Croato-Tarraconian"]["iso_codes"]
         assert "hun" in cultures["Ungwârer"]["iso_codes"]
+
+    def test_multilingual_morpheme_calque_lexicon(self):
+        path = REPO_DIR / "data" / "multilingual_morpheme_calque_lexicon.json"
+        assert path.exists(), "data/multilingual_morpheme_calque_lexicon.json missing"
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        meta = data["metadata"]
+        concepts = data["concepts"]
+        gloss_idx = data["gloss_index"]
+        anchors = data["regional_calque_anchors"]
+
+        assert meta["total_concepts"] == len(concepts) >= 165
+        assert meta["total_english_gloss_aliases"] == len(gloss_idx) >= 840
+        assert len(anchors) >= 100
+        assert meta["corpus_coverage"]["audit_lexical_hit_rate_pct"] >= 80.0
+
+        # Validate required schema and phonotactic hygiene on every concept
+        for cid, c in concepts.items():
+            assert c["tarr_ipa"]
+            assert c["gender_case"]["gender"] in {"m", "f", "n", "pl"}
+            assert c["gender_case"]["article"] and c["gender_case"]["dative_article"]
+            assert c["tarr_prefix"] or c["tarr_suffix"] or c["tarr_standalone"]
+            for fld in ("tarr_prefix", "tarr_suffix", "tarr_standalone"):
+                val = (c[fld] or "").lower().strip("-")
+                assert not val.endswith(("burg", "berg", "dsch")), f"Phonotactic violation in {cid}: {c[fld]}"
+
+        # Verify gloss index resolution & key canonical entries
+        for term in ("castle", "fortress", "white", "river", "mountain", "salt", "iron", "saint", "dragon", "oak"):
+            assert term in gloss_idx and gloss_idx[term] in concepts
+        assert concepts["castle"]["tarr_suffix"] == "-burch"
+        assert concepts["white"]["tarr_prefix"] == "Wîz-"
+        assert concepts["mountain_peak"]["tarr_suffix"] == "-berch"
+        assert concepts["harbor_port"]["requires_gate"] == "sea_coast"
+
+    def test_global_onomasticon_adaptation(self):
+        import importlib.util
+        import re
+
+        spec = importlib.util.spec_from_file_location(
+            "ck3_name_decoder", REPO_DIR / "scripts" / "ck3_name_decoder.py"
+        )
+        decoder_mod = importlib.util.module_from_spec(spec)
+        assert spec.loader is not None
+        spec.loader.exec_module(decoder_mod)
+        decode_ck3_personal_name = decoder_mod.decode_ck3_personal_name
+
+        path = REPO_DIR / "data" / "global_onomasticon_adaptation.json"
+        assert path.exists(), "data/global_onomasticon_adaptation.json missing"
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        meta = data["metadata"]
+        canon = data["canonical_franconian_239"]
+        by_raw = data["by_raw_name"]
+        by_clean = data["by_clean_name"]
+
+        assert len(canon) == 239
+        assert meta["canonical_franconian_239_count"] == 239
+        assert meta["unique_raw_names"] == len(by_raw) >= 3300
+        assert meta["unique_clean_names"] == len(by_clean) >= 3100
+        assert meta["hanzi_bearing_raw_names"] >= 500
+        assert meta["faith_saint_raw_names"] >= 150
+
+        # Ensure every unique coinage-era raw_first_name is present
+        with open(REPO_DIR / "data" / "barony_coinage_rulers.json", "r", encoding="utf-8") as f:
+            coinage = json.load(f)["baronies"]
+        coinage_raws = {rec["raw_first_name"] for rec in coinage.values() if rec.get("raw_first_name")}
+        assert coinage_raws.issubset(by_raw.keys())
+
+        allowed = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzâêîôûÂÊÎÔÛäöüÄÖÜïëÏ '-")
+        for raw, rec in by_raw.items():
+            tn = rec["tarr_name"]
+            cl = rec["clean_name"]
+            assert cl and tn
+            assert "_" not in cl and "_" not in tn, f"Underscore leak in {raw}: {cl} / {tn}"
+            assert not re.search(r"\d", cl) and not re.search(r"\d", tn), f"Digit leak in {raw}: {cl} / {tn}"
+            assert all(ch in allowed for ch in tn), f"Disallowed Chancellery char in {raw}: {tn}"
+            assert not re.match(r"^[Tt]s(?![ch])", tn), f"Initial Ts- violation in {raw}: {tn}"
+            assert not re.search(r"[Zz]h", tn), f"Raw zh digraph in {raw}: {tn}"
+            if raw != "Anselm":
+                assert not re.search(r"(?<!c)[Ss]h", tn), f"Bare sh digraph in {raw}: {tn}"
+            assert not re.search(r"[Qq](?![uU])", tn), f"Bare q in {raw}: {tn}"
+            assert rec["tarr_ipa"].startswith("[") and rec["tarr_ipa"].endswith("]")
+            assert rec["tarr_genitive_stem"] and rec["tarr_compound_prefix"]
+
+        # Spot-check tricky CK3 decoder edge cases and cultural adaptations
+        assert decode_ck3_personal_name("SE_bert", "anglo_saxon")["clean_name"] == "Sæbert"
+        assert decode_ck3_personal_name("MiL_obrat", "polish")["clean_name"] == "Miłobrat"
+        assert decode_ck3_personal_name("Michael", "greek")["clean_name"] == "Michael"
+        assert decode_ck3_personal_name("Isaac", "meshchera")["clean_name"] == "Isaac"
+        assert decode_ck3_personal_name("Aguda_963F_9AA8_6253", "han")["hanzi_chars"] == "阿骨打"
+
+        assert by_raw["A_rpA_d"]["tarr_name"] == "Ârpât"
+        assert by_raw["LO_rinc"]["tarr_name"] == "Lôrintz"
+        assert by_raw["E_thelred"]["tarr_name"] == "Êdelrêt"
+        assert by_raw["U_lfhE_D_inn"]["tarr_name"] == "Ulfhêdîn"
+        assert by_raw["T_ar_iq"]["clean_name"] == "Ṭāriq"
+        assert by_raw["T_ar_iq"]["tarr_name"] == "Târîk"
+        assert by_raw["Aguda_963F_9AA8_6253"]["clean_name"] == "Aguda"
+        assert by_raw["Aguda_963F_9AA8_6253"]["hanzi_chars"] == "阿骨打"
+        assert by_raw["Aguda_963F_9AA8_6253"]["tarr_name"] == "Agûdâ"
+        assert by_raw["TsunetO__2"]["clean_name"] == "Tsunetō"
+        assert by_raw["TsunetO__2"]["homonym_index"] == 2
+        assert by_raw["TsunetO__2"]["tarr_name"] == "Zûnêtô"
+
+
 
 
 
