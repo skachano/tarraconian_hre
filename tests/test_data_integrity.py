@@ -1971,6 +1971,52 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_lubeck"]["is_imperial_frontier_barony"] is True
         assert baronies["b_roma"]["is_imperial_frontier_barony"] is False
 
+    def test_ck3_culture_to_iso_and_generics(self):
+        path = REPO_DIR / "data" / "ck3_culture_to_iso_and_generics.json"
+        assert path.exists(), "data/ck3_culture_to_iso_and_generics.json missing"
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        meta = data["metadata"]
+        assert meta["total_cultures"] == 404
+        assert meta["total_ck3_languages"] == 91
+        assert meta["toponymic_profiles_covered"] == meta["cultures_used_in_toponymic_profiles"]
+        assert meta["cultures_with_observed_iso_dataset_match"] == 404
+
+        cultures = data["cultures"]
+        families = data["morphology_families"]
+        trans_rules = data["transmission_rules"]["to_tarraconian"]
+        assert len(cultures) == 404
+
+        # Every culture must link cleanly to a valid morphology family, transmission profile, and non-empty ISO list
+        for cname, crec in cultures.items():
+            assert crec["iso_codes"], f"{cname} missing iso_codes"
+            assert crec["primary_iso"] == crec["iso_codes"][0]
+            assert crec["liturgical_iso"]
+            assert crec["morphology_family"] in families, f"{cname} unknown family"
+            assert crec["transmission_profile"] in trans_rules, f"{cname} unknown transmission profile"
+
+        # Every morphology family must define castle, city, church, tribal generics with required keys
+        for fname, fam in families.items():
+            assert fam["compound_order"] in {"head_initial", "head_final"}
+            for htype in ("castle", "city", "church", "tribal"):
+                items = fam["generics"][htype]
+                assert items, f"{fname} missing {htype} generics"
+                for item in items:
+                    assert item["form"] and item["gloss"] and item["tarr_calque"]
+                    assert item["affix_position"] in {"prefix", "suffix"}
+
+        # Spot-check key mappings and dynamic hybrids
+        assert cultures["slovien"]["primary_iso"] == "slk"
+        assert cultures["Tarraconian"]["is_tarraconian_core"] is True
+        assert cultures["Tarraconian"]["morphology_family"] == "tarraconian_imperial"
+        assert cultures["han"]["is_sinosphere_heritage"] is True
+        assert "sog" in cultures["Sogdo-Oghuz"]["iso_codes"]
+        assert "gmh" in cultures["Tarracono-Tajik"]["iso_codes"]
+        assert "hrv" in cultures["Croato-Tarraconian"]["iso_codes"]
+        assert "hun" in cultures["Ungwârer"]["iso_codes"]
+
+
 
 
 

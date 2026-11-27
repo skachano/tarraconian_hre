@@ -240,11 +240,11 @@ To execute the v2 pipeline at maximum historical quality and minimal manual patc
 
 ### B. Curated / Derived Linguistic & Cartographic Bridge Datasets
 
-4. **`data/ck3_culture_to_iso_and_generics.json` (404-Culture Linguistic & Morphological Bridge)**
-   * **Why:** Connects all 404 CK3 cultures (including dynamic hybrids/divergences) to:
-     1. **Ordered ISO 639-3 / 639-5 / proto codes** for exact Stage 2 lookups into `anachronicity_audit` and `natural_tribal_replacements`.
-     2. **Native toponymic generic tables** by holding type (`castle`, `city`, `church`, `tribal`) per language family (e.g., Slavic `-grad/-grod/-selo/-cerkov`, Arabic `Qal'at-/Madinat-/Ribat-/Deir-`, Hungarian `-vár/-város/-szent`, Turkic `-kale/-kent/-saray`, Norse `-borg/-vík/-staðir/-kirkja`, Celtic `Dún-/Caer-/Cill-`, Persian `-abad/-gird/-shahr`, Indic `-garh/-kot/-pur/-nagar`). This lets Stage 3 coin names in the *coinage culture's actual language* before Stage 4 mediates/calques them into Tarraconian!
-     3. **Transmission phonological filter rules** (`transmission_culture → Tarraconian`, plus key intermediary shifts like Greek → Slavic/Arabic/Turkic).
+4. **`data/ck3_culture_to_iso_and_generics.json` (404-Culture Linguistic & Morphological Bridge — Generated)**
+   * **How Computed ([`generate_ck3_culture_bridge.py`](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/generate_ck3_culture_bridge.py)):** Connects all **404** CK3 cultures (including all 161 dynamic hybrids/divergences and all `324/324` cultures appearing in `barony_toponymic_profiles.json`) across `91` CK3 languages to:
+     1. **Ordered ISO 639-3 / 639-5 / proto codes** (`iso_codes`, `primary_iso`, `liturgical_iso`, and parent-culture `parent_isos`) prioritized for Stage 2 lookups into `anachronicity_audit` and `natural_tribal_replacements` (`404/404` cultures directly matching observed dataset ISO codes).
+     2. **Native toponymic generic tables (`morphology_families`, `52` families)** by holding type (`castle`, `city`, `church`, `tribal`) with compound-order metadata (`head_initial` vs. `head_final`), Tarraconian calque equivalents, and environmental gates (`sea_coast`, `waterborne`, `hill_or_mountain`, `frontier`, `pious`, `martial`, `mercantile`).
+     3. **Transmission phonological filter rules (`transmission_rules`, `31` `-> Tarraconian` profiles + `8` historical multi-hop intermediary shifts)** such as Greek → Turkish/South Slavic/Arabic, Arabic → Ibero-Romance, Persian → Turkic, Slavic → Magyar, Celtic → Anglo-Saxon, and Classical Chinese → EMK/EMJ/Viet.
 
 5. **`data/multilingual_morpheme_calque_lexicon.json` (Machine-Readable Procedure 2 Calque Dictionary)**
    * **Why:** `tarraconian_descriptive_title_calques.md` § 3 is currently prose/markdown tables covering ~135 county titles. Extracting it into a normalized JSON dictionary of `(semantic_concept / morpheme_gloss) → {tarr_prefix, tarr_suffix, tarr_standalone, gender_case}`—and expanding it to cover the top ~300 recurring morpheme translations in `anachronicity_audit.morphemes` and `natural_tribal_replacements.etymology_notes`—unlocks automated, consistent Procedure 2 calquing across all 10,239 baronies.
