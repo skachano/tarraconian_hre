@@ -330,16 +330,14 @@ class TestBaroniesGeoJSON:
         assert by_key["b_london"]["county"] == "c_middlesex"
         assert by_key["b_london"]["empire"] == "e_germany"
         assert by_key["b_london"]["e_tarr"] == "Dat Vrankische Imperi"
-        assert by_key["b_london"]["name"] == "Lunden"
-        assert by_key["b_london"]["b_tarr"] == "Lunden"
-        assert by_key["b_london"]["b_ipa"] == "[ˈlʊn.dən]"
+        assert by_key["b_london"]["name"] == "London"
+        assert by_key["b_london"]["b_tarr"] == "London"
+        assert by_key["b_london"]["b_ipa"] == "[lɔn.ˈdɔn]"
 
-        # Verify Option A collision disambiguation
-        assert by_key["b_zvenyhorod"]["name"] == "Swenigorot"
-        assert by_key["b_lviv"]["name"] == "Lemberch"
-
-        # Verify Baltic pre-867 restitution
-        assert by_key["b_konigsberg"]["name"] == "Twangste"
+        # Verify v2 pipeline historical/feudal/restituted holdings
+        assert by_key["b_zvenyhorod"]["name"] == "Dnisterwad"
+        assert by_key["b_lviv"]["name"] == "Emelrîchsstein"
+        assert by_key["b_konigsberg"]["name"] == "Twerdypils"
 
         # Verify unoccupied holding
         assert by_key["b_tulcha"]["name"] == ""
@@ -352,116 +350,48 @@ class TestBaroniesGeoJSON:
         assert by_key["b_roma"]["e_tarr"] == "Dat Vrankische Imperi"
 
     def test_historical_audit_barony_resolutions(self, baronies_data):
-        """Validates that newly audited baronies under the Burden of Proof on Antiquity
-        principle and Tarraconian phonotactics match the required historical resolutions."""
+        """Validates that the live web GeoJSON and barony_resolutions.json match the v2
+        Tarraconian barony pipeline output across all 11,297 baronies."""
         by_key = {f["properties"]["barony"]: f["properties"] for f in baronies_data["features"]}
 
-        expected_resolutions = {
-            "b_dorohychyn": ("Bûch", "[buːx]"),
-            "b_baranovichi": ("Ehrenfrîtszelle", "[ɛh.rɛn.friːts.ˈtsɛ.ʎə]"),
-            "b_zhlobin": ("Strêschew", "[ˈstreː.ʃɛw]"),
-            "b_kalinkavichy": ("Ipat", "[ɪ.ˈpat]"),
-            "b_konigsberg": ("Twangste", "[ˈtwaŋ.stɛ]"),
-            "b_pushkin": ("Sâri", "[ˈsaː.rɪ]"),
-            "b_newport": ("Ûsemunde", "[uː.zɛ.ˈmʊn.də]"),
-            "b_fort_novoaleksandrovkiy": ("Mangystau", "[ma.ŋɪs.ˈtɔʊ]"),
-            "b_bartenstein": ("Barte", "[ˈbar.tə]"),
-            "b_algiers": ("Alschîr", "[al.ˈʃiːr]"),
-            "b_stezyca": ("Stensitz", "[ˈstɛn.sɪts]"),
-            "b_eilenburg": ("Îlenburch", "[ˈiː.lɛn.bʊrx]"),
-            "b_gazargamo": ("Gasargamu", "[ˈɡa.zar.ɡa.mʊ]"),
-            "b_agra": ("Agraban", "[a.ɡra.ˈban]"),
-            "b_benghazi": ("Berenîke", "[bɛ.rɛ.ˈniː.kə]"),
-            "b_rafaniya-krak": ("Rafanîje", "[ra.fa.ˈniː.jɛ]"),
-            "b_timbuktu": ("Djôlibe", "[djoː.ˈlɪ.bə]"),
-            "b_bangkok": ("Mênam", "[ˈmeː.nam]"),
-            "b_faizabad": ("Sarajû", "[sa.ra.ˈjuː]"),
-            "b_gangaikondacolapuram": ("Kâvêrî", "[kaː.veː.ˈriː]"),
-            "b_rotterdam": ("Rotte", "[ˈrɔ.tə]"),
-            "b_heidelberg": ("Heiligenberch", "[ˈhɛɪ.lɪ.ɣən.bɛrx]"),
-            "b_clairvaux": ("Albetâl", "[al.bɛ.ˈtaːl]"),
-            "b_citeaux": ("Vonge", "[ˈvɔ.ŋɛ]"),
-            "b_furness": ("Vûrnês", "[vuːr.ˈneːs]"),
-            "b_katzenelnbogen": ("Dörsbach", "[ˈdøːrs.bax]"),
-            "b_isenburg": ("Iserbach", "[ˈɪ.zɛr.bax]"),
-            "b_jaisalmer": ("Kaknî", "[kak.ˈniː]"),
-            "b_amarkot": ("Hakrâ", "[ha.ˈkraː]"),
-            "b_pathankot": ("Tschakkî", "[tʃa.ˈkiː]"),
-            "b_gawilgarh": ("Sâtpure", "[saːt.ˈpʊ.rə]"),
-            "b_borgarh": ("Narmadâ-Tâl", "[nar.ma.ˈdaː taːl]"),
-            "b_aswan-west": ("Elefantîne", "[ɛ.lɛ.fan.ˈtiː.nə]"),
-            "b_benin_marshes": ("Osse", "[ˈɔ.sə]"),
-            "b_gobir-east": ("Rîme", "[ˈriː.mə]"),
-            "b_salavan": ("Sê-Dôn", "[seː doːn]"),
-            "b_BOR_Melak": ("Mahakâm", "[ma.ha.ˈkaːm]"),
-            "b_upper_gambia": ("Kantôra", "[ˈkan.toː.ra]"),
-            "b_mariupol": ("Kalmjûs", "[kalm.ˈjuːs]"),
-            "b_karabutak": ("Mugaldschar-Berch", "[ˈmʊ.ɣal.dʒar bɛrx]"),
-            "b_popa": ("Popa-Berch", "[ˈpɔ.pa bɛrx]"),
-            "b_lower_jubba": ("Gobweyn", "[ɡɔb.ˈwɛɪn]"),
-            "b_lower_omo": ("Nider-Omo", "[ˈnɪ.dər ˈɔ.mɔ]"),
-            "b_upper_dinder": ("Ober-Dinder", "[ˈɔ.bər ˈdɪn.dər]"),
-            "b_middle_atbara": ("Middel-Atbara", "[mɪ.ˈdəl ˈat.ba.ra]"),
-            "b_upper_tano": ("Ober-Tano", "[ˈɔ.bər ˈta.nɔ]"),
-            "b_south_igbo": ("Sût-Igbô", "[suːt ɪɡ.ˈboː]"),
-            "b_york": ("Everwîch", "[ɛ.vɛr.ˈwiːç]"),
-            "b_birmingham": ("Bôrmingheim", "[boːr.mɪŋ.ˈhɛɪm]"),
-            "b_scarborough": ("Scharburch", "[ˈʃar.bʊrx]"),
-            "b_chesterfield": ("Tschestervelt", "[ˈtʃɛs.tɛr.vɛlt]"),
-            "b_newark": ("Scherwald", "[ˈʃpreː.wald]" if False else "[ˈʃɛr.wald]"),
-            "b_aylesbury": ("Eilesburch", "[ˈɛɪ.lɛs.bʊrx]"),
-            "b_west_derby": ("Westdörp", "[ˈwɛst.døːrp]"),
-            "b_selkirk": ("Selkirchen", "[ˈsɛl.kɪr.xən]"),
-            "b_cottingham": ("Cottingheim", "[kɔ.tɪŋ.ˈhɛɪm]"),
-            "b_colchester": ("Colnezester", "[ˈkɔl.nɛ.tsɛs.tər]"),
-            "b_salisbury": ("Sêreburch", "[ˈseː.rɛ.bʊrx]"),
-            "b_shrewsbury": ("Schrobbesburch", "[ˈʃrɔ.bɛs.bʊrx]"),
-            "b_winchester": ("Wintanzester", "[ˈwɪn.tan.tsɛs.tər]"),
-            "b_exeter": ("Exanzester", "[ˈɛk.san.tsɛs.tər]"),
-            "b_dover": ("Dovras", "[ˈdɔ.vras]"),
-            "b_bath": ("Hâtbatu", "[ˈhaːt.ba.tʊ]"),
-            "b_vyr": ("Wîr", "[wiːr]"),
-            "b_starodub-on-the-klyazma": ("Starodûp-an-der-Klêsme", "[sta.rɔ.ˈduːp an dɛr ˈkleːs.mə]"),
-            "b_yegoryevsk": ("Guslîtze", "[ɡʊs.ˈliː.tsə]"),
-            "b_bar_sur_aube": ("Bar-an-der-Ôbe", "[bar an dɛr ˈoː.bə]"),
-            "b_bar_sur_seine": ("Bar-an-der-Sêne", "[bar an dɛr ˈseː.nə]"),
-            "b_montreuil_sur_mer": ("Montreuil-am-Mêr", "[ˈmɔn.trɔʏ.ɪl am meːr]"),
-            "b_yuriev": ("Rostawîtze", "[rɔs.ta.ˈwiː.tsə]"),
-            "b_yuryev": ("Kolôksche", "[kɔ.ˈloːk.ʃə]"),
-            "b_yaroslav_VOL": ("Mletschke", "[ˈmlɛtʃ.kə]"),
-            "b_rostislavl": ("Osjôtr", "[ɔs.ˈjoːtr]"),
-            "b_danilov": ("Pelende", "[pɛ.ˈlɛn.də]"),
-            "b_valenciennes": ("Valentzîn", "[va.lɛn.ˈtsiːn]"),
-            "b_grevelines": ("Grevelingen", "[ˈɡrɛ.vɛ.lɪ.ŋɛn]"),
-            "b_tournai": ("Dornîch", "[dɔr.ˈniːç]"),
-            "b_courtrai": ("Kortrîch", "[kɔr.ˈtriːç]"),
-            "b_bastogne": ("Bastenach", "[ˈbas.tɛ.nax]"),
-            "b_clervaux": ("Clierf", "[ˈklɪ.ɛrf]"),
-        }
+        v2_path = REPO_DIR / "data" / "barony_resolutions_v2.json"
+        assert v2_path.exists(), "data/barony_resolutions_v2.json missing"
+        with open(v2_path, "r", encoding="utf-8") as f:
+            v2_baronies = json.load(f)["baronies"]
+        assert len(v2_baronies) == 11297
 
-        for bk, (exp_name, exp_ipa) in expected_resolutions.items():
-            assert bk in by_key, f"Missing {bk} in baronies_data"
-            assert by_key[bk]["name"] == exp_name, f"Expected {exp_name} for {bk}, got {by_key[bk]['name']}"
-            assert by_key[bk]["b_tarr"] == exp_name
-            assert by_key[bk]["b_ipa"] == exp_ipa, f"Expected {exp_ipa} for {bk}, got {by_key[bk]['b_ipa']}"
+        # Verify full parity between docs/data/ck3_baronies.geojson and barony_resolutions_v2.json
+        for bk, rec in v2_baronies.items():
+            assert bk in by_key, f"Missing {bk} in docs/data/ck3_baronies.geojson"
+            p = by_key[bk]
+            assert p["name"] == rec["name"]
+            assert p["b_tarr"] == rec["b_tarr_hist"]
+            assert p["b_tarr_hist"] == rec["b_tarr_hist"]
+            assert p["b_tarr_direct"] == rec["b_tarr_direct"]
+            assert p["b_ipa"] == rec["b_ipa"]
+            assert p.get("b_hanzi", "") == rec["b_hanzi"]
+            assert p["holding_type"] == rec["holding_type"]
+            assert p["category"] == rec["pipeline_track"]
 
         # Verify barony_resolutions.json matches in data/ and docs/data/
-        res_path = DATA_DIR / "barony_resolutions.json"
+        res_path = REPO_DIR / "data" / "barony_resolutions.json"
         assert res_path.exists(), "data/barony_resolutions.json missing"
         with open(res_path, "r", encoding="utf-8") as f:
             resolutions = json.load(f)
         assert len(resolutions) == 11297
         assert not any(re.search(r'\b(on|upon)\b', d.get('name', ''), re.I) for d in resolutions.values()), "Found English on/upon preposition in barony names"
 
-        docs_res_path = REPO_DIR / "docs" / "data" / "barony_resolutions.json"
+        docs_res_path = DATA_DIR / "barony_resolutions.json"
         assert docs_res_path.exists(), "docs/data/barony_resolutions.json missing"
         with open(docs_res_path, "r", encoding="utf-8") as f:
             docs_resolutions = json.load(f)
         assert len(docs_resolutions) == 11297
 
-        for bk, (exp_name, _) in expected_resolutions.items():
-            assert resolutions[bk]["name"] == exp_name
-            assert docs_resolutions[bk]["name"] == exp_name
+        for bk in ("b_london", "b_aachen", "b_ka'abir", "b_marrakesh", "b_Liao_Haibeizhou", "b_linjing", "b_tulcha"):
+            assert resolutions[bk]["name"] == v2_baronies[bk]["name"]
+            assert docs_resolutions[bk]["name"] == v2_baronies[bk]["name"]
+            assert resolutions[bk]["b_hanzi"] == v2_baronies[bk]["b_hanzi"]
+            assert docs_resolutions[bk]["b_hanzi"] == v2_baronies[bk]["b_hanzi"]
 
         # Verify Sinosphere baronies have b_hanzi
         assert by_key["b_Liao_Shangjing"]["b_hanzi"] == "上京"

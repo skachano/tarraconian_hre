@@ -62,6 +62,8 @@ IN_KANJI = ROOT / "data" / "sinosphere_kanji_tarraconian.json"
 OUT_V2_JSON = ROOT / "data" / "barony_resolutions_v2.json"
 OUT_V2_YML = ROOT / "data" / "tarraconian_barony_names_v2_l_english.yml"
 OUT_V1_RES = ROOT / "data" / "barony_resolutions.json"
+DOCS_BARONIES_GJ = ROOT / "docs" / "data" / "ck3_baronies.geojson"
+DOCS_V1_RES = ROOT / "docs" / "data" / "barony_resolutions.json"
 
 # Sorted longest-first so suffix stripping matches multi-char generics cleanly.
 KNOWN_GENERICS = (
@@ -1083,6 +1085,12 @@ def main() -> None:
     write_v2_loc_yml(out_baronies, OUT_V2_YML)
 
     if args.apply_to_geojson:
+        ht_display = {
+            "castle": "Castle",
+            "city": "City",
+            "church": "Church",
+            "unoccupied": "Unoccupied",
+        }
         for feat in baronies_gj["features"]:
             props = feat["properties"]
             bk = props.get("barony")
@@ -1098,15 +1106,19 @@ def main() -> None:
             props["b_origin"] = rec["b_origin"]
             props["b_anachronism"] = rec["b_anachronism"]
             props["holding_type"] = rec["holding_type"]
+            props["holding_type_name"] = ht_display.get(rec["holding_type"], rec["holding_type"].title())
             props["b_color"] = rec["b_color"]
             props["category"] = rec["pipeline_track"]
-        IN_BARONIES_GJ.write_text(json.dumps(baronies_gj, ensure_ascii=False), encoding="utf-8")
+        gj_text = json.dumps(baronies_gj, ensure_ascii=False, separators=(",", ":"))
+        IN_BARONIES_GJ.write_text(gj_text, encoding="utf-8")
+        DOCS_BARONIES_GJ.write_text(gj_text, encoding="utf-8")
         v1_compat = {
             bk: {
                 "name": rec["name"],
                 "b_tarr": rec["b_tarr_hist"],
                 "b_tarr_direct": rec["b_tarr_direct"],
                 "b_tarr_hist": rec["b_tarr_hist"],
+                "b_hanzi": rec["b_hanzi"],
                 "b_origin": rec["b_origin"],
                 "b_anachronism": rec["b_anachronism"],
                 "b_ipa": rec["b_ipa"],
@@ -1115,8 +1127,10 @@ def main() -> None:
             }
             for bk, rec in out_baronies.items()
         }
-        OUT_V1_RES.write_text(json.dumps(v1_compat, ensure_ascii=False, indent=2), encoding="utf-8")
-        print(f"Applied Stage 6 v2 output to {IN_BARONIES_GJ} and {OUT_V1_RES}")
+        v1_text = json.dumps(v1_compat, ensure_ascii=False, indent=2)
+        OUT_V1_RES.write_text(v1_text, encoding="utf-8")
+        DOCS_V1_RES.write_text(v1_text, encoding="utf-8")
+        print(f"Applied Stage 6 v2 output to {IN_BARONIES_GJ}, {DOCS_BARONIES_GJ}, {OUT_V1_RES}, and {DOCS_V1_RES}")
 
     print(f"Wrote {OUT_V2_JSON} ({OUT_V2_JSON.stat().st_size / (1024*1024):.2f} MB)")
     print(f"Wrote {OUT_V2_YML}")

@@ -800,6 +800,20 @@ function openInspector(props, tier) {
       classical_antiquity: ['Classical Antiquity', 'audit-badge-antiquity'],
       option_a_seat: ['Classical Antiquity', 'audit-badge-antiquity'],
       chronicle_gord: ['Chronicle Gord', 'audit-badge-gord'],
+      Track_A_retained: ['Pre-867 Continuum', 'audit-badge-antiquity'],
+      Track_A_coinage_overrule: ['Coinage Overrule', 'audit-badge-restitution'],
+      Track_B_ntr_restitution: ['867 Restitution', 'audit-badge-hydronym'],
+      Track_B_historical_names: ['Historical Anchor', 'audit-badge-antiquity'],
+      Track_B_existing_natural: ['Natural Toponym', 'audit-badge-hydronym'],
+      Track_C1_pre867_feudalized: ['Pre-867 Feudal Seat', 'audit-badge-founder'],
+      Track_C2_post867_feudalized: ['Post-867 Feudal Seat', 'audit-badge-founder'],
+      Track_D1_pre867_chartered: ['Pre-867 Charter', 'audit-badge-gord'],
+      Track_D2_post867_foundation: ['Post-867 Foundation', 'audit-badge-founder'],
+      Track_S_pre867_attested: ['Sinosphere Attested', 'audit-badge-sinosphere'],
+      Track_S_pre867_overruled: ['Sinosphere Overruled', 'audit-badge-sinosphere'],
+      Track_S_post867_historical_anchor: ['Sinosphere Anchor', 'audit-badge-sinosphere'],
+      Track_S_post867_ntr_sino_variant: ['Sinosphere Toponym', 'audit-badge-sinosphere'],
+      Track_S_post867_coined_compound: ['Sinosphere Coined', 'audit-badge-sinosphere'],
     };
     const badgeSpec = (tier === 'barony' && !isUnoccupiedBarony)
       ? CATEGORY_BADGES[props.category || '']
@@ -932,7 +946,7 @@ function openInspector(props, tier) {
                        tier === 'duchy' ? (props.d_hanzi || props.hanzi) :
                        tier === 'kingdom' ? (props.k_hanzi || props.hanzi) :
                        tier === 'empire' ? (props.e_hanzi || props.hanzi) :
-                       tier === 'barony' ? (props.b_hanzi || props.c_hanzi) : '');
+                       tier === 'barony' ? (props.b_hanzi || '') : '');
     if (propHanzi) {
       sinoEntry = {
         hanzi: propHanzi,
@@ -1466,8 +1480,17 @@ function renderConstituentTitles(props, tier, section, label, listElem) {
           if (bp.holding_type && bp.holding_type !== 'unoccupied') {
             htBadge = `<span class="holding-type-tag tag-${bp.holding_type}">${bp.holding_type.charAt(0).toUpperCase()}</span>`;
           }
-          if (bp.category === 'option_b_hydronym' || bp.category === 'indigenous_restitution' || bp.category === 'option_c_foundation' || bp.b_anachronism) {
-            auditPill = `<span class="pill-audit-indicator" title="Audited under Burden of Proof on Antiquity">⚡</span>`;
+          if (
+            bp.category === 'option_b_hydronym' ||
+            bp.category === 'indigenous_restitution' ||
+            bp.category === 'option_c_foundation' ||
+            bp.category === 'Track_A_coinage_overrule' ||
+            bp.category === 'Track_B_ntr_restitution' ||
+            bp.category === 'Track_B_historical_names' ||
+            bp.category === 'Track_S_pre867_overruled' ||
+            bp.b_anachronism
+          ) {
+            auditPill = `<span class="pill-audit-indicator" title="Resolved via Historical / Anachronistic Audit">⚡</span>`;
           }
         }
         const sInfo = window.TarraconianSymbols && window.TarraconianSymbols.getSaintHoldingInfo(b);
