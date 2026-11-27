@@ -563,10 +563,12 @@ async function runE2ETests() {
         throw new Error(`Expected UNOCCUPIED tier badge, got "${tierBadge}"`);
       }
       const topoHiddenUnocc = await page.locator('#drawer-toponymic-group').evaluate(el => el.classList.contains('hidden'));
-      if (!topoHiddenUnocc) {
-        throw new Error('Expected #drawer-toponymic-group to be hidden for unoccupied barony');
+      const rulerHiddenUnocc = await page.locator('#drawer-coinage-ruler-group').evaluate(el => el.classList.contains('hidden'));
+      const ctxHiddenUnocc = await page.locator('#drawer-physical-context-group').evaluate(el => el.classList.contains('hidden'));
+      if (!topoHiddenUnocc || !rulerHiddenUnocc || !ctxHiddenUnocc) {
+        throw new Error('Expected toponymic, coinage ruler, and physical context groups to be hidden for unoccupied barony');
       }
-      console.log(`  Unoccupied barony verified: key="${titleKey}", title name is blank, origin & toponymic groups hidden.`);
+      console.log(`  Unoccupied barony verified: key="${titleKey}", title name is blank, origin/toponymic/ruler/context groups hidden.`);
     }
 
     // Test 3 new barony culture views (Coinage, Substrate, Transmission) + occupied barony toponymic profile
@@ -609,7 +611,9 @@ async function runE2ETests() {
     await page.locator('#search-results .search-item[data-key="b_roma"]').click();
     await page.waitForFunction(() => {
       return document.getElementById('drawer-title-key').innerText === 'b_roma' &&
-             !document.getElementById('drawer-toponymic-group').classList.contains('hidden');
+             !document.getElementById('drawer-toponymic-group').classList.contains('hidden') &&
+             !document.getElementById('drawer-coinage-ruler-group').classList.contains('hidden') &&
+             !document.getElementById('drawer-physical-context-group').classList.contains('hidden');
     }, { timeout: 5000 });
     const coinageText = await page.locator('#drawer-coinage-culture').innerText();
     const substrateText = await page.locator('#drawer-substrate-culture').innerText();
@@ -617,7 +621,12 @@ async function runE2ETests() {
     if (!coinageText.includes('Italian') || !substrateText.includes('Italian') || !transmissionText.includes('Greek')) {
       throw new Error(`Unexpected b_roma toponymic profile: C="${coinageText}", S="${substrateText}", T="${transmissionText}"`);
     }
-    console.log(`  Occupied barony b_roma profile verified: C=${coinageText}, S=${substrateText}, T=${transmissionText}.`);
+    const rulerName = await page.locator('#drawer-ruler-name').innerText();
+    const ctxBuildings = await page.locator('#drawer-context-buildings').innerText();
+    if (!rulerName.includes('Niccoló') || !ctxBuildings.includes('Curtain Walls')) {
+      throw new Error(`Unexpected b_roma ruler/context: ruler="${rulerName}", bldgs="${ctxBuildings}"`);
+    }
+    console.log(`  Occupied barony b_roma profile verified: C=${coinageText}, S=${substrateText}, T=${transmissionText}, Ruler=${rulerName}.`);
 
     // Switch back to County tier (must restore 3,476 county polygons)
     console.log('  Switching from Barony back to County tier...');

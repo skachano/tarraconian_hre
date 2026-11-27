@@ -1871,6 +1871,71 @@ class TestBaronyToponymicProfiles:
         assert "barony_toponymic_profiles.json" in build_script
 
 
+class TestBaronyCoinageAndContext:
+    """Validates Section 4.A datasets: barony_holdings, barony_coinage_rulers, and barony_physical_and_event_context."""
+
+    def test_reconciled_barony_holdings(self):
+        path = REPO_DIR / "data" / "barony_holdings.json"
+        assert path.exists(), "data/barony_holdings.json missing"
+        with open(path, "r", encoding="utf-8") as f:
+            bh = json.load(f)
+        assert len(bh) == 11297
+        assert bh["b_ka'abir"] == "city"
+        assert bh["b_mansa'l-kharaz"] == "city"
+        occupied = sum(1 for v in bh.values() if v != "unoccupied")
+        assert occupied == 10239
+
+    def test_barony_coinage_rulers(self):
+        path = REPO_DIR / "data" / "barony_coinage_rulers.json"
+        assert path.exists(), "data/barony_coinage_rulers.json missing"
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        assert data["metadata"]["total_occupied_baronies"] == 10239
+        assert data["metadata"]["unresolved_characters"] == 0
+        baronies = data["baronies"]
+        assert len(baronies) == 10239
+        valid_archetypes = {"topographic_default", "pious_devotional", "vain_dynastic", "martial_frontier", "mercantile_civic"}
+        for bk, rec in baronies.items():
+            assert bk.startswith("b_")
+            assert rec["holder_id"] is not None
+            assert rec["clean_first_name"]
+            assert rec["archetype"] in valid_archetypes
+        assert baronies["b_kiev"]["is_circular_house"] is True
+        assert baronies["b_lorient"]["archetype"] == "mercantile_civic"
+
+    def test_barony_physical_and_event_context(self):
+        path = REPO_DIR / "data" / "barony_physical_and_event_context.json"
+        assert path.exists(), "data/barony_physical_and_event_context.json missing"
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        assert data["metadata"]["total_occupied_baronies"] == 10239
+        assert len(data["baronies"]) == 10239
+        assert len(data["faith_saints"]) >= 25
+        ctx_london = data["baronies"]["b_london"]
+        assert ctx_london["is_coastal_tradeport"] is True
+        assert ctx_london["special_building_type"] == "the_tower_of_london_01"
+        assert data["baronies"]["b_kalocsa"]["is_coastal_tradeport"] is False
+
+    def test_web_assets_have_coinage_and_context_integration(self):
+        assert (DATA_DIR / "barony_coinage_rulers.json").exists(), "docs/data/barony_coinage_rulers.json missing"
+        assert (DATA_DIR / "barony_physical_and_event_context.json").exists(), "docs/data/barony_physical_and_event_context.json missing"
+
+        html = (REPO_DIR / "web" / "index.html").read_text(encoding="utf-8")
+        assert "drawer-coinage-ruler-group" in html
+        assert "drawer-physical-context-group" in html
+
+        js = (REPO_DIR / "web" / "js" / "app.js").read_text(encoding="utf-8")
+        assert "barony_coinage_rulers.json" in js
+        assert "barony_physical_and_event_context.json" in js
+        assert "renderBaronyCoinageRuler" in js
+        assert "renderBaronyPhysicalContext" in js
+
+        build_script = (REPO_DIR / "scripts" / "build_webapp.py").read_text(encoding="utf-8")
+        assert "barony_coinage_rulers.json" in build_script
+        assert "barony_physical_and_event_context.json" in build_script
+
+
+
 
 
 

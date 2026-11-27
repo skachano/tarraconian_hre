@@ -13,9 +13,13 @@ let titleTree = null;
 let countiesLayer = null;
 let baroniesLayer = null;
 
-// Toponymic Profile dataset (Alternative 1)
+// Toponymic Profile & Section 4.A datasets
 let baronyToponymicProfiles = null;
 let toponymicProfilesPromise = null;
+let baronyCoinageRulers = null;
+let coinageRulersPromise = null;
+let baronyPhysicalContext = null;
+let physicalContextPromise = null;
 
 // Multi-feature selection and hover state
 let selectedFeature = null;
@@ -198,8 +202,10 @@ async function loadData() {
     renderActiveLayer();
     buildSearchIndex();
 
-    // Pre-fetch Alternative 1 barony toponymic profiles in background
+    // Pre-fetch barony toponymic & context datasets in background
     ensureToponymicProfilesLoaded();
+    ensureCoinageRulersLoaded();
+    ensurePhysicalContextLoaded();
 
     const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
     const hoverBadge = document.getElementById('hover-info');
@@ -232,9 +238,47 @@ async function ensureToponymicProfilesLoaded() {
   return toponymicProfilesPromise;
 }
 
+async function ensureCoinageRulersLoaded() {
+  if (baronyCoinageRulers) return baronyCoinageRulers;
+  if (!coinageRulersPromise) {
+    coinageRulersPromise = fetch('data/barony_coinage_rulers.json')
+      .then(res => (res.ok ? res.json() : null))
+      .then(data => {
+        if (data) baronyCoinageRulers = data;
+        return baronyCoinageRulers;
+      })
+      .catch(err => {
+        console.warn('Could not load barony_coinage_rulers.json:', err);
+        return null;
+      });
+  }
+  return coinageRulersPromise;
+}
+
+async function ensurePhysicalContextLoaded() {
+  if (baronyPhysicalContext) return baronyPhysicalContext;
+  if (!physicalContextPromise) {
+    physicalContextPromise = fetch('data/barony_physical_and_event_context.json')
+      .then(res => (res.ok ? res.json() : null))
+      .then(data => {
+        if (data) baronyPhysicalContext = data;
+        return baronyPhysicalContext;
+      })
+      .catch(err => {
+        console.warn('Could not load barony_physical_and_event_context.json:', err);
+        return null;
+      });
+  }
+  return physicalContextPromise;
+}
+
 // Lazy-load baronies GeoJSON when requested
 async function ensureBaroniesLoaded() {
-  await ensureToponymicProfilesLoaded();
+  await Promise.all([
+    ensureToponymicProfilesLoaded(),
+    ensureCoinageRulersLoaded(),
+    ensurePhysicalContextLoaded()
+  ]);
   if (baroniesGeojson) return;
   const overlay = document.getElementById('loading-overlay') || createMiniOverlay();
   overlay.classList.remove('fade-out');
@@ -1020,8 +1064,10 @@ function openInspector(props, tier) {
     }
   }
 
-  // Toponymic Profile (Alternative 1) for occupied baronies
+  // Toponymic Profile (Alternative 1) + Coinage Ruler & Physical Context for occupied baronies
   renderToponymicProfile(props, tier, isUnoccupiedBarony);
+  renderBaronyCoinageRuler(props, tier, isUnoccupiedBarony);
+  renderBaronyPhysicalContext(props, tier, isUnoccupiedBarony);
 
   // Constituent Titles list in drawer
   renderConstituentTitles(props, tier, baroniesSection, baroniesLabel, baroniesList);
@@ -1120,6 +1166,200 @@ function renderToponymicProfile(props, tier, isUnoccupiedBarony) {
     } else {
       streaksEl.classList.add('hidden');
       streaksEl.innerHTML = '';
+    }
+  }
+}
+
+function formatSnakeLabel(raw) {
+  if (!raw) return '';
+  return raw
+    .replace(/_\d+$/, '')
+    .replace(/^poi_/, '')
+    .replace(/^ho_/, '')
+    .replace(/_/g, ' ')
+    .replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function renderBaronyCoinageRuler(props, tier, isUnoccupiedBarony) {
+  const group = document.getElementById('drawer-coinage-ruler-group');
+  if (!group) return;
+
+  if (tier !== 'barony' || isUnoccupiedBarony || !props.barony) {
+    group.classList.add('hidden');
+    return;
+  }
+
+  const rec = baronyCoinageRulers?.baronies?.[props.barony];
+  if (!rec) {
+    group.classList.add('hidden');
+    ensureCoinageRulersLoaded().then(data => {
+      if (data && selectedTitleTier === 'barony' && selectedTitleKey === props.barony) {
+        renderBaronyCoinageRuler(props, tier, isUnoccupiedBarony);
+      }
+    });
+    return;
+  }
+
+  group.classList.remove('hidden');
+
+  const archLabels = {
+    topographic_default: 'Topographic Default',
+    pious_devotional: 'Pious / Devotional',
+    vain_dynastic: 'Vain / Dynastic',
+    martial_frontier: 'Martial / Frontier',
+    mercantile_civic: 'Mercantile / Civic'
+  };
+  const archElem = document.getElementById('drawer-ruler-archetype');
+  if (archElem) {
+    archElem.textContent = archLabels[rec.archetype] || formatSnakeLabel(rec.archetype);
+    archElem.className = `archetype-pill arch-${rec.archetype || 'topographic_default'}`;
+  }
+
+  const nameElem = document.getElementById('drawer-ruler-name');
+  if (nameElem) {
+    const nick = rec.nickname ? ` "${rec.nickname}"` : '';
+    nameElem.textContent = `${rec.clean_first_name || rec.raw_first_name || 'Unknown'}${nick}`;
+  }
+
+  const houseElem = document.getElementById('drawer-ruler-house');
+  if (houseElem) {
+    if (rec.house_name) {
+      const circNote = rec.is_circular_house ? ' (Circular)' : '';
+      const chatNote = rec.is_chatenois ? '⚜ ' : '';
+      houseElem.textContent = `${chatNote}House ${rec.house_name}${circNote}`;
+      houseElem.classList.remove('hidden');
+    } else {
+      houseElem.classList.add('hidden');
+      houseElem.textContent = '';
+    }
+  }
+
+  const metaElem = document.getElementById('drawer-ruler-meta');
+  if (metaElem) {
+    const modeLabels = {
+      substrate_retained: 'Substrate Baseline',
+      pre_conquest_founder: 'Pre-Conquest Founder',
+      post_conquest_imperial_founder: 'Imperial Founder',
+      feudalizer_sovereign: 'Feudalizer',
+      overruling_sovereign: 'Overruling Sovereign',
+      direct_baron_founder: 'Incumbent Baron'
+    };
+    const pills = [];
+    pills.push(`<span class="toponymic-origin-badge">${modeLabels[rec.attribution_mode] || formatSnakeLabel(rec.attribution_mode)}</span>`);
+    if (rec.ruler_culture) {
+      pills.push(`<span class="toponymic-horizon-badge">${formatCultureLabel(rec.ruler_culture)}</span>`);
+    }
+    if (rec.faith_type) {
+      pills.push(`<span class="toponymic-liturgical-badge">${formatSnakeLabel(rec.faith_type)}</span>`);
+    }
+    if (rec.tenure_start && rec.tenure_end) {
+      pills.push(`<span class="toponymic-streak-pill">${rec.tenure_start}–${rec.tenure_end} (${rec.tenure_years}y)</span>`);
+    }
+    metaElem.innerHTML = pills.join('');
+  }
+
+  const traitsElem = document.getElementById('drawer-ruler-traits');
+  if (traitsElem) {
+    const sigSet = new Set(rec.archetype_signals || []);
+    const allTraits = Array.from(new Set([...(rec.archetype_signals || []), ...(rec.traits || [])])).slice(0, 12);
+    if (allTraits.length > 0) {
+      traitsElem.classList.remove('hidden');
+      traitsElem.innerHTML = allTraits
+        .map(t => `<span class="trait-pill ${sigSet.has(t) ? 'trait-signal' : ''}">${formatSnakeLabel(t)}</span>`)
+        .join('');
+    } else {
+      traitsElem.classList.add('hidden');
+      traitsElem.innerHTML = '';
+    }
+  }
+}
+
+function renderBaronyPhysicalContext(props, tier, isUnoccupiedBarony) {
+  const group = document.getElementById('drawer-physical-context-group');
+  if (!group) return;
+
+  if (tier !== 'barony' || isUnoccupiedBarony || !props.barony) {
+    group.classList.add('hidden');
+    return;
+  }
+
+  const ctx = baronyPhysicalContext?.baronies?.[props.barony];
+  if (!ctx) {
+    group.classList.add('hidden');
+    ensurePhysicalContextLoaded().then(data => {
+      if (data && selectedTitleTier === 'barony' && selectedTitleKey === props.barony) {
+        renderBaronyPhysicalContext(props, tier, isUnoccupiedBarony);
+      }
+    });
+    return;
+  }
+
+  group.classList.remove('hidden');
+
+  const tierElem = document.getElementById('drawer-context-tier');
+  if (tierElem) {
+    tierElem.textContent = ctx.holding_tier > 0 ? `Tier ${ctx.holding_tier} ${formatSnakeLabel(ctx.holding_type)}` : formatSnakeLabel(ctx.raw_holding_type || ctx.holding_type);
+  }
+
+  const badgesElem = document.getElementById('drawer-context-badges');
+  if (badgesElem) {
+    const pills = [];
+    if (ctx.is_capital_barony) pills.push('<span class="toponymic-origin-badge">County Capital</span>');
+    if (ctx.is_coastal_tradeport) pills.push('<span class="toponymic-horizon-badge">⚓ Coastal Tradeport</span>');
+    if (ctx.fort_level > 0) pills.push(`<span class="toponymic-streak-pill">Fort ${ctx.fort_level}</span>`);
+    if (ctx.income > 0) pills.push(`<span class="toponymic-streak-pill">Income ${ctx.income}</span>`);
+    badgesElem.innerHTML = pills.join('');
+  }
+
+  const specialElem = document.getElementById('drawer-context-special');
+  if (specialElem) {
+    const specials = [];
+    if (ctx.special_building_type) specials.push(`Special Building: <strong>${formatSnakeLabel(ctx.special_building_type)}</strong>`);
+    if (ctx.great_building_type) specials.push(`Great Monument: <strong>${formatSnakeLabel(ctx.great_building_type)}</strong>`);
+    if (ctx.duchy_capital_building) specials.push(`Duchy Building: <strong>${formatSnakeLabel(ctx.duchy_capital_building)}</strong>`);
+    if (specials.length > 0) {
+      specialElem.classList.remove('hidden');
+      specialElem.innerHTML = `<div class="context-special-banner">${specials.join(' &bull; ')}</div>`;
+    } else {
+      specialElem.classList.add('hidden');
+      specialElem.innerHTML = '';
+    }
+  }
+
+  const bldgsElem = document.getElementById('drawer-context-buildings');
+  if (bldgsElem) {
+    const fams = (ctx.building_families || []).filter(f => !['castle', 'city', 'temple', 'tribal'].includes(f));
+    if (fams.length > 0) {
+      bldgsElem.classList.remove('hidden');
+      bldgsElem.innerHTML = fams.map(f => `<span class="trait-pill">${formatSnakeLabel(f)}</span>`).join('');
+    } else {
+      bldgsElem.classList.add('hidden');
+      bldgsElem.innerHTML = '';
+    }
+  }
+
+  const eventsElem = document.getElementById('drawer-context-events');
+  if (eventsElem) {
+    const banners = [];
+    if (ctx.holy_order_lease) {
+      const ho = ctx.holy_order_lease;
+      banners.push(`<div class="context-event-banner">⚔ Leased to Holy Order: <strong>${formatSnakeLabel(ho.holy_order_type)}</strong>${ho.founder_name ? ` (Founder: ${ho.founder_name})` : ''}</div>`);
+    }
+    if (ctx.points_of_interest && ctx.points_of_interest.length > 0) {
+      banners.push(`<div class="context-event-banner">📍 Points of Interest: ${ctx.points_of_interest.map(formatSnakeLabel).join(', ')}</div>`);
+    }
+    if (ctx.active_epidemics && ctx.active_epidemics.length > 0) {
+      const epStr = ctx.active_epidemics.map(e => `${formatSnakeLabel(e.type)} (“${e.name}”)`).join(', ');
+      banners.push(`<div class="context-event-banner event-plague">☣ Active Epidemic: ${epStr}</div>`);
+    } else if (ctx.county_shattered_by_plague) {
+      banners.push('<div class="context-event-banner event-plague">☣ County recently shattered by plague</div>');
+    }
+    if (banners.length > 0) {
+      eventsElem.classList.remove('hidden');
+      eventsElem.innerHTML = banners.join('');
+    } else {
+      eventsElem.classList.add('hidden');
+      eventsElem.innerHTML = '';
     }
   }
 }

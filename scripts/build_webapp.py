@@ -44,6 +44,8 @@ def main():
         "ck3_baronies.geojson",
         "barony_resolutions.json",
         "barony_toponymic_profiles.json",
+        "barony_coinage_rulers.json",
+        "barony_physical_and_event_context.json",
         "ck3_title_tree.json",
         "ck3_adjacencies.json",
         "sinosphere_hanzi_calques.json",
