@@ -48,6 +48,10 @@ body {
   flex-direction: column;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /* --------------------------------------------------------------------------
    Header Bar
    -------------------------------------------------------------------------- */
@@ -2094,6 +2098,10 @@ body {
   border-radius: 4px;
   letter-spacing: 0.05em;
   border: 1px solid transparent;
+}
+
+.audit-badge.hidden {
+  display: none;
 }
 
 .audit-badge-hydronym {

@@ -771,37 +771,24 @@ function openInspector(props, tier) {
 
   // Barony Resolution Category Badge
   if (auditBadge) {
-    if (tier === 'barony' && !isUnoccupiedBarony) {
-      const cat = props.category || '';
-      if (cat === 'option_b_hydronym') {
-        auditBadge.textContent = 'Option B · Ancient Hydronym';
-        auditBadge.className = 'audit-badge audit-badge-hydronym';
-        auditBadge.classList.remove('hidden');
-      } else if (cat === 'indigenous_restitution') {
-        auditBadge.textContent = 'Historical Restitution';
-        auditBadge.className = 'audit-badge audit-badge-restitution';
-        auditBadge.classList.remove('hidden');
-      } else if (cat === 'option_c_foundation') {
-        auditBadge.textContent = 'Option C · Foundation';
-        auditBadge.className = 'audit-badge audit-badge-founder';
-        auditBadge.classList.remove('hidden');
-      } else if (cat === 'sinosphere_calque') {
-        auditBadge.textContent = 'Sinosphere Calque';
-        auditBadge.className = 'audit-badge audit-badge-sinosphere';
-        auditBadge.classList.remove('hidden');
-      } else if (cat === 'classical_antiquity' || cat === 'option_a_seat') {
-        auditBadge.textContent = 'Classical Antiquity';
-        auditBadge.className = 'audit-badge audit-badge-antiquity';
-        auditBadge.classList.remove('hidden');
-      } else if (cat === 'chronicle_gord') {
-        auditBadge.textContent = 'Chronicle Gord';
-        auditBadge.className = 'audit-badge audit-badge-gord';
-        auditBadge.classList.remove('hidden');
-      } else {
-        auditBadge.classList.add('hidden');
-      }
+    const CATEGORY_BADGES = {
+      option_b_hydronym: ['Option B · Ancient Hydronym', 'audit-badge-hydronym'],
+      indigenous_restitution: ['Historical Restitution', 'audit-badge-restitution'],
+      option_c_foundation: ['Option C · Foundation', 'audit-badge-founder'],
+      sinosphere_calque: ['Sinosphere Calque', 'audit-badge-sinosphere'],
+      classical_antiquity: ['Classical Antiquity', 'audit-badge-antiquity'],
+      option_a_seat: ['Classical Antiquity', 'audit-badge-antiquity'],
+      chronicle_gord: ['Chronicle Gord', 'audit-badge-gord'],
+    };
+    const badgeSpec = (tier === 'barony' && !isUnoccupiedBarony)
+      ? CATEGORY_BADGES[props.category || '']
+      : null;
+    if (badgeSpec) {
+      auditBadge.textContent = badgeSpec[0];
+      auditBadge.className = `audit-badge ${badgeSpec[1]}`;
     } else {
-      auditBadge.classList.add('hidden');
+      auditBadge.textContent = '';
+      auditBadge.className = 'audit-badge hidden';
     }
   }
 

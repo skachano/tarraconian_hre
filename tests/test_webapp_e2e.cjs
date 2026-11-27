@@ -628,6 +628,28 @@ async function runE2ETests() {
     }
     console.log(`  Occupied barony b_roma profile verified: C=${coinageText}, S=${substrateText}, T=${transmissionText}, Ruler=${rulerName}.`);
 
+    // Verify top bar audit badge updates and hides properly across barony categories (e.g. b_huoshan -> b_nimes)
+    await bSearch.fill('b_huoshan');
+    await page.waitForSelector('#search-results .search-item[data-key="b_huoshan"]', { timeout: 5000 });
+    await page.locator('#search-results .search-item[data-key="b_huoshan"]').click();
+    await page.waitForFunction(() => document.getElementById('drawer-title-key').innerText === 'b_huoshan', { timeout: 5000 });
+    const huoshanBadgeVisible = await page.locator('#drawer-audit-badge').isVisible();
+    const huoshanBadgeText = await page.locator('#drawer-audit-badge').textContent();
+    if (!huoshanBadgeVisible || huoshanBadgeText.trim() !== 'Sinosphere Calque') {
+      throw new Error(`Expected visible "Sinosphere Calque" badge on b_huoshan, got visible=${huoshanBadgeVisible}, text="${huoshanBadgeText}"`);
+    }
+
+    await bSearch.fill('b_nimes');
+    await page.waitForSelector('#search-results .search-item[data-key="b_nimes"]', { timeout: 5000 });
+    await page.locator('#search-results .search-item[data-key="b_nimes"]').click();
+    await page.waitForFunction(() => document.getElementById('drawer-title-key').innerText === 'b_nimes', { timeout: 5000 });
+    const nimesBadgeVisible = await page.locator('#drawer-audit-badge').isVisible();
+    if (nimesBadgeVisible) {
+      const staleText = await page.locator('#drawer-audit-badge').innerText();
+      throw new Error(`Expected #drawer-audit-badge to be hidden on b_nimes, but it remained visible with text="${staleText}"`);
+    }
+    console.log('  Barony audit badge verified: visible "Sinosphere Calque" on b_huoshan, hidden on b_nimes.');
+
     // Switch back to County tier (must restore 3,476 county polygons)
     console.log('  Switching from Barony back to County tier...');
     await countyBtn.click();
