@@ -144,12 +144,18 @@ def apply_full_stage5_sound_laws(
     if is_sinosphere:
         s = re.sub(r"\b[Xx](?=[iuüîû])", lambda m: "Sch" if m.group(0).isupper() else "sch", s)
 
+    # Protect genuine Tarraconian compound boundaries (-z + h-, -s + h-) from Pinyin zh->dsch / sh->sch
+    _COMPOUND_H = r"h(?:eim|ûsen|âven|aven|ügil|irsch|êilichdom|îa|êl|ôch|olm|of|ûs|ain|age|al|out)"
+    s = re.sub(rf"([ZzSs])(?={_COMPOUND_H})", "\\1\uE001", s)
+
     # Canonical Chancellery normalizer from resolve_barony_titles.py
     s = enforce_tarraconian_sound_laws(s)
 
     # Extra Auslautverhärtung, double-vowel circumflex alignment & cluster repair
     s = re.sub(r"burh\b", "burch", s)
     s = re.sub(r"mynster\b", "munster", s)
+    s = re.sub(r"lhakhang\b", "lhachang", s)
+    s = re.sub(r"kastel\b", "castel", s)
     s = re.sub(r"\b([NnMm])([AEIOU][a-z]{2,})", lambda m: m.group(1).upper() + m.group(2).lower(), s)
     s = re.sub(r"\b([A-Za-z]{1,2})([A-Z])(?=[a-z])", lambda m: m.group(1) + m.group(2).lower() if m.group(1) != "IJ" else m.group(0), s)
     s = re.sub(r"\bAa(?=[a-z])", "Â", s)
@@ -158,18 +164,28 @@ def apply_full_stage5_sound_laws(
     s = re.sub(r"(?<![qQ])uu", "û", s)
     s = re.sub(r"([a-zâêîôûäöü])\1\1+", r"\1\1", s, flags=re.I)
     s = re.sub(r"schsch", "sch", s, flags=re.I)
-    s = re.sub(r"(?:tz|ts)tsch", "tsch", s, flags=re.I)
+    s = re.sub(r"(?:tz|ts|z)tsch", "tsch", s, flags=re.I)
     s = re.sub(r"tschtsch", "tsch", s, flags=re.I)
+    s = re.sub(r"\b[Zz]tscho", "Tscho", s)
+    s = re.sub(r"([Tt]scho)sê\b", r"\1", s)
     s = re.sub(r"-tscho(?=\b|stat|sê|veit|burch|tempel)", "-Tscho", s)
+    s = re.sub(r"\s+Hûsê\b", "sê", s)
+    s = re.sub(r"(\s+Schân|-Schân)stein\b", r"\1", s)
+    s = re.sub(r"(\s+Uul)stein\b", r"\1", s)
     s = re.sub(r"burchburch\b", "burch", s, flags=re.I)
     s = re.sub(r"berchberch\b", "berch", s, flags=re.I)
+    s = re.sub(r"berchstein\b", "berch", s, flags=re.I)
+    s = re.sub(r"steinberch\b", "stein", s, flags=re.I)
+    s = re.sub(r"flôz(?:flôz|wazzer)\b", "flôz", s, flags=re.I)
     s = re.sub(r"tzburch\b", "tzburch", s, flags=re.I)
-    # Fix any surviving 'sh' not in -heim/-hûsen
-    s = re.sub(r"(?<!c)[Ss]h(?!eim|ûsen)", lambda m: "Sch" if m.group(0)[0].isupper() else "sch", s)
+    # Fix any surviving 'sh' not at a protected compound boundary
+    s = re.sub(r"(?<!c)[Ss]h(?!(?:eim|ûsen|âven|aven|ügil|irsch|êilichdom|îa|êl|ôch|olm|of|ûs|ain|age|al|out))", lambda m: "Sch" if m.group(0)[0].isupper() else "sch", s)
     # Fix any surviving 'eo' not after g/n/th (flagged by audit_phonotactics_titles.py)
     s = re.sub(r"(?<!g)(?<!n)(?<!th)(?<!G)(?<!N)(?<!Th)eo", "ô", s)
     # Initial Ts- -> Z-
     s = re.sub(r"\b[Tt]s(?!ch)", lambda m: "Z" if m.group(0)[0].isupper() else "z", s)
+    # Restore protected compound seams before final character filter
+    s = s.replace("\uE001", "")
     # Strip any non-allowed chars one last time
     s = "".join(c for c in s if c in ALLOWED_CHANCELLERY_CHARS)
     s = re.sub(r"\s{2,}", " ", out_s := s).strip(" -'")

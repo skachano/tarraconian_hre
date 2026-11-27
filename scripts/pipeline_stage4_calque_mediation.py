@@ -119,10 +119,10 @@ ENGLISH_META_GEO_WORDS = {"mount", "mt", "great", "little", "plain", "gulf", "ba
 
 # Supplementary Traditional/Simplified Hanzi & Stage 3 classifier entries
 SUPPLEMENTARY_HANZI: dict[str, tuple[str, str, str]] = {
-    "觀": ("-zelle", "Sacral Suffix", "Taoist abbey / Shrine"),
-    "观": ("-zelle", "Sacral Suffix", "Taoist abbey / Shrine"),
+    "觀": ("-tempel", "Sacral Suffix", "Taoist abbey / Shrine"),
+    "观": ("-tempel", "Sacral Suffix", "Taoist abbey / Shrine"),
     "關": ("-klûse", "Defensive Suffix", "Mountain pass / Frontier gate"),
-    "院": ("-clôster", "Sacral Suffix", "Cloister / Monastery"),
+    "院": ("-hof", "Sacral Suffix", "Cloister / Academy"),
     "宮": ("-palz", "Sacral Suffix", "Sacred palace / Shrine"),
     "宫": ("-palz", "Sacral Suffix", "Sacred palace / Shrine"),
     "府": ("-palz", "Administrative Suffix", "Prefectural seat"),
@@ -360,10 +360,26 @@ def calque_hanzi_string(
         if ch in kanji_map:
             m, role, mean = kanji_map[ch]
             clean_m = m.strip("-").strip()
+            # Keep Buddhist/Taoist temple char 寺 as -tempel (not Christian -munster)
+            if ch == "寺" and clean_m.lower() == "munster":
+                clean_m = "tempel"
             if idx == 0:
                 clean_m = clean_m[:1].upper() + clean_m[1:]
             else:
                 clean_m = clean_m.lower()
+            # Deduplicate tautological double hydro/oronym generics (e.g. Huangflôz + flôz/wazzer, Wâgestein + berch)
+            if parts:
+                prev_low = parts[-1].lower()
+                cur_low = clean_m.lower()
+                if cur_low in {"flôz", "wazzer"} and (prev_low.endswith("flôz") or prev_low.endswith("wazzer")):
+                    if prev_low in {"flôz", "wazzer"}:
+                        # Bare Flôz+flôz or Flôz+wazzer (e.g. 流江 / 河水): reject literal calque -> phonetic reading
+                        return None, []
+                    continue
+                if cur_low in {"berch", "stein"} and (prev_low.endswith("berch") or prev_low.endswith("stein")):
+                    if prev_low in {"berch", "stein"}:
+                        return None, []
+                    continue
             parts.append(clean_m)
             if mean:
                 meanings.append(mean.split("/")[0].strip())
@@ -396,14 +412,18 @@ def match_descriptive_audit_calque(
 
     matched_cids: list[str] = []
     for mor in audit_morphemes:
-        tr = (mor.get("translation") or "").lower()
+        tr_raw = (mor.get("translation") or "").lower()
         mlang = (mor.get("language") or "").lower()
-        if not tr:
+        if not tr_raw:
             return None, []
-        if any(om in tr for om in opaque_m) or "?" in tr or "reinterpreted" in mlang or "folk" in tr or "rabah" in tr:
+        if any(om in tr_raw for om in opaque_m) or "?" in tr_raw or "reinterpreted" in mlang or "folk" in tr_raw or "rabah" in tr_raw:
             return None, []
+        # Reject alternate-name/hagiographic parenthetical notes (e.g. "wisdom (Church of St. Sophia)" on b_sredets)
+        if re.search(r"\b(?:st\.|church of|named after)\b", tr_raw):
+            return None, []
+        tr = re.sub(r"\([^)]*\)", "", tr_raw).strip()
         words = re.findall(r"[a-z]+", tr)
-        if any(w in DISQUALIFIED_GLOSS_WORDS for w in words):
+        if not words or any(w in DISQUALIFIED_GLOSS_WORDS for w in words):
             return None, []
         # Disambiguate adverbial "well / good" (Latin bene) from noun "well" (water spring -> Brunn-)
         is_adverb_well = ("well" in words and any(w in words for w in ("good", "propitious", "fortunate", "favorable")))
@@ -562,9 +582,10 @@ def run_stage4() -> dict[str, Any]:
             )
             return res
 
-        # Pre-867 Track S: supplement Hanzi from verified v1 Sinosphere entry ONLY when pre-867 attested!
+        # Pre-867 Track S: supplement Hanzi from verified v1 Sinosphere entry ONLY when pre-867 attested & not saint/eponym!
+        is_s3_named_eponym = r3.get("stage3_mode") in {"synthesized_pious_saint", "synthesized_vain_eponym"}
         hanzi_str = r3.get("coined_hanzi")
-        if is_sino and not hanzi_str and r3["is_historical_867"]:
+        if is_sino and not hanzi_str and r3["is_historical_867"] and not is_s3_named_eponym:
             v1_hz = (v1_res.get(bk) or {}).get("b_hanzi") or ""
             if v1_hz and r3["stem_category"] != "tribe":
                 hanzi_str = v1_hz
@@ -577,12 +598,19 @@ def run_stage4() -> dict[str, Any]:
         # --- BRANCH A: Track S (Sinosphere Procedure 1 + 12th-century Phonetics) ---
         if is_sino:
             NO_LITERAL_HANZI_CALQUE = {"b_iyo", "b_kinasir", "b_xi"}
-            is_khingan_phonetic = bool(hanzi_str and "興安" in hanzi_str)
+            ATEJI_PHONETIC_SUBSTRINGS = (
+                "興安", "兴安", "祁連", "祁连", "烏蘇里", "乌苏里",
+                "穆稜", "穆棱", "貝爾", "贝尔", "粟末", "完達", "完达",
+                "張廣才", "张广才", "賀蘭", "贺兰", "沙魯里", "沙鲁里",
+                "率賓", "率宾", "夜郎",
+            )
+            is_ateji_phonetic = bool(hanzi_str and any(sub in hanzi_str for sub in ATEJI_PHONETIC_SUBSTRINGS))
             opaque_sino = (
                 r3["is_opaque_proper_stem"]
+                or is_s3_named_eponym
                 or (r3["stem_category"] == "tribe")
                 or (bk in NO_LITERAL_HANZI_CALQUE)
-                or is_khingan_phonetic
+                or is_ateji_phonetic
             )
             hz_count = len(re.findall(r"[\u3400-\u9FFF\uF900-\uFAFF]", hanzi_str or ""))
             if hanzi_str and hz_count >= 2 and not opaque_sino and not is_rupture:
@@ -595,7 +623,7 @@ def run_stage4() -> dict[str, Any]:
             if not tarr_hist:
                 # Transitional or opaque/post-867 synthesized Sinosphere: adapt modifier + calque generic if transparent & not rupture
                 if gen and not is_rupture:
-                    mod_adapt = adapt(mod["text"], trans_prof)
+                    mod_adapt = (mod.get("tarr_equivalent") if is_s3_named_eponym else None) or adapt(mod["text"], trans_prof)
                     tc_raw = gen.get("tarr_calque", "")
                     g_tarr = tc_raw.strip("-")
                     if tc_raw.startswith("Zant") or tc_raw.endswith("-"):

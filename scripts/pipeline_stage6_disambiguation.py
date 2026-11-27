@@ -278,8 +278,6 @@ def _church_pool_key(b_rec: dict, ruler_info: dict | None) -> str:
     """Return faith-appropriate generic pool key for church holdings."""
     if b_rec.get("holding_type") != "church":
         return b_rec.get("holding_type", "castle")
-    if b_rec.get("coinage_culture") in {"Tarraconian", "Lothringian", "Croato-Tarraconian", "Alpine-Tarraconian", "Ungwârer"}:
-        return "church"
     rel = ((ruler_info or {}).get("religion_type") or "").lower()
     if rel:
         if "christian" in rel:
@@ -289,6 +287,8 @@ def _church_pool_key(b_rec: dict, ruler_info: dict | None) -> str:
         if "juda" in rel:
             return "church_judaism"
         return "church_non_christian"
+    if b_rec.get("coinage_culture") in {"Tarraconian", "Lothringian", "Croato-Tarraconian", "Alpine-Tarraconian", "Ungwârer"}:
+        return "church"
     if b_rec.get("coinage_morphology_family") in NON_CHRISTIAN_FAMILIES or b_rec.get("is_sinosphere_scope"):
         return "church_non_christian"
     if strip_holding_generic(b_rec.get("tarr_hist", ""))[1] in {"tempel", "meschit", "schûle", "wîe", "halle", "palz"}:
@@ -320,12 +320,17 @@ def render_ntr_candidate(
     if existing_gen and (existing_gen not in COASTAL_GENERICS or is_sea_coast):
         candidate_raw = base_tarr
     else:
-        if subtype in ("lake", "lagoon") and "sê" not in base_tarr.lower():
+        if subtype in ("lake", "lagoon") and "sê" not in base_tarr.lower() and not re.search(r"(?:tscho|hû|hu)$", base_tarr, re.I):
             candidate_raw = f"{base_tarr}sê"
+        elif subtype in ("lake", "lagoon"):
+            candidate_raw = base_tarr
         elif subtype in ("river", "stream", "creek") and ht == "castle" and len(base_tarr) <= 8:
             candidate_raw = f"{base_tarr}burch"
         elif subtype in ("mountain", "peak", "hill", "ridge") and ht == "castle":
-            candidate_raw = f"{base_tarr}stein"
+            if re.search(r"(?:berch|stein|schân|uul|rücke)$", base_tarr, re.I):
+                candidate_raw = f"{base_tarr}burch"
+            else:
+                candidate_raw = f"{base_tarr}stein"
         else:
             church_gen = HOLDING_GENERIC_POOLS.get(ckey, ["kirchen"])[0]
             gen = {"castle": "burch", "city": "stat", "church": church_gen}.get(ht, "burch")
@@ -600,7 +605,7 @@ def _humanize_culture(val: str) -> str:
         return ""
     if val.startswith("language_"):
         val = val.removeprefix("language_")
-    if "_" in val and val.islower():
+    if val.islower():
         if val == "anglo_saxon":
             return "Anglo-Saxon"
         return val.replace("_", " ").title()
@@ -608,7 +613,11 @@ def _humanize_culture(val: str) -> str:
 
 
 def _humanize_pathway(pathway: str) -> str:
-    return re.sub(r"\[([a-z0-9_]+)\]", lambda m: "[" + m.group(1).replace("_", " ") + "]", pathway or "")
+    return re.sub(
+        r"\[([a-z][a-z0-9_]*)\]",
+        lambda m: "[" + ("Anglo-Saxon" if m.group(1) == "anglo_saxon" else m.group(1).replace("_", " ").title()) + "]",
+        pathway or "",
+    )
 
 
 def build_origin_and_anachronism(
@@ -999,6 +1008,12 @@ def main() -> None:
         if n_flags:
             stats["baronies_with_neighbor_flags"] += 1
 
+        s3_mode_out = b_rec.get("stage3_mode", "")
+        if s3_mode_out in {"synthesized_pious_saint", "synthesized_vain_eponym"} and not disambig:
+            out_hanzi = b_rec.get("coined_hanzi") or ""
+        else:
+            out_hanzi = b_rec.get("coined_hanzi") or b_rec.get("extracted_hanzi") or ""
+
         out_baronies[bk] = {
             "barony_key": bk,
             "is_occupied": True,
@@ -1006,7 +1021,7 @@ def main() -> None:
             "b_tarr_direct": b_rec["tarr_direct"],
             "b_tarr_hist": b_rec["tarr_hist"],
             "b_ipa": b_rec["b_ipa"],
-            "b_hanzi": b_rec.get("extracted_hanzi") or b_rec.get("coined_hanzi") or "",
+            "b_hanzi": out_hanzi,
             "holding_type": b_rec.get("holding_type", "castle"),
             "b_color": b_color_map.get(bk, "#b84f18"),
             "pipeline_track": b_rec.get("stage1_track", ""),

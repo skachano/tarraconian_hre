@@ -97,23 +97,42 @@ CJK_RE = re.compile(r"[\u3400-\u9FFF\uF900-\uFAFF]+")
 # so downstream Stage 3/6 compounding produces "Sulawesikirchen" rather than "Laut Sulawesikirchen".
 NTR_HEADWORD_RE = re.compile(
     r"^(?:"
-    r"Gunung\s+Bukit|Doi\s+Phu|Mae\s+Nam|Al-Irk\s+al-|Adrar\s+n|Asif\s+n|"
+    r"(?:Northern|Southern|Eastern|Western)\s+border\s+of|"
+    r"Gunung\s+Bukit|Doi\s+Phu|Mae\s+Nam|Al-Irk\s+al-|Al-Ba[hḥ]r\s+al-|Adrar\s+n|Asif\s+n|"
+    r"Thio\s+Khao|Milima\s+ya|Monts\s+du|Monts\s+de|Plateau\s+de|"
     r"Kipot\s+ng|Golpo\s+ng|Look\s+ng|Tangway\s+ng|"
     r"Cnoic\s+na|Slieve\s+|Carrick\s+|Monadh|Uisge|"
     r"Dary[āa]cheh-?ye|Dasht-?e|R[ūu]d-?e|K[ūu]h-?e|"
-    r"Nahr\s+al-|Nahr|W[āa]d[īi]|Bahr\s+al-|Bahr|Jabal|Jib[āa]l|Khal[īi]j|"
+    r"Nahr\s+al-|Nahr|W[āa]d[īi]|Bahr\s+al-|Bahr|Jabal|Jib[āa]l|Khal[īi]j|Munkhafa[dḍ]|"
+    r"Qatork[ūu]hi|Vodii|Puszcza|Fforest|"
     r"Laut|Dagat|Sungai|Bukit|Gunung|Pegunungan|Danau|Selat|Pulau|Teluk|Tanjung|Kuala|Muara|Suku|Urang|Bundok|"
     r"Tonle|Mae|Nam|Doi|Phu|"
     r"Webi|Kogin|Mto|Odo|Ilog|Asif|Adrar|Mun[țt]ii|Muntzii|"
-    r"Loch|Glen|Strath|Port|Plain\s+of|Gulf\s+of|Bay\s+of|Strait\s+of|Lake|Mount|Mountain|River|Island|"
+    r"Loch|Glen|Strath|Port|Plain\s+of|Gulf\s+of|Bay\s+of|Strait\s+of|Lake|Mount|Mountain|River|Island|Inner|"
     r"Ozero|Reka|Gora|Zaliv|Ostrov|R[íi]o|Lago|Monte|Sierra"
     r")\s+",
     re.I,
 )
 NTR_TRAILING_RE = re.compile(
-    r"\s+(?:people|tribe|group|river|lake|sea|mountain|mountains|range|hills|hill|plain|basin|valley|gulf|bay|strait|island|islands|peninsula|mTsho|mtsho)$",
+    r"(?:\s+|-)"
+    r"(?:people|tribe|group|river|lake|sea|mountain|mountains|range|hills|hill|plain|basin|valley|gulf|bay|strait|island|islands|peninsula|"
+    r"commandery|prefecture|province|district|downs|delta|"
+    r"vozvyshennost|wozwyschennost|vysochyna|khrebet|dolina|reka|bardzravandak|hegys[ée]g|śṛṅkhalā|schrngchal[āa]|kafetañā\s+botāwoc|kalquligi)$",
     re.I,
 )
+ENGLISH_NTR_PREFIX_MAP: list[tuple[re.Pattern[str], str]] = [
+    (re.compile(r"^Northern\s+", re.I), "Nord-"),
+    (re.compile(r"^Southern\s+", re.I), "Sût-"),
+    (re.compile(r"^Eastern\s+", re.I), "Ôst-"),
+    (re.compile(r"^Western\s+", re.I), "West-"),
+    (re.compile(r"^Zakhidnyy\s+", re.I), "West-"),
+    (re.compile(r"^North\s+(?=[A-Z])"), "Nord-"),
+    (re.compile(r"^South\s+(?=[A-Z])"), "Sût-"),
+    (re.compile(r"^Black\s+(?=[A-Z])"), "Swartz-"),
+    (re.compile(r"^White\s+(?=[A-Z])"), "Wîz-"),
+    (re.compile(r"^Red\s+(?=[A-Z])"), "Rôt-"),
+    (re.compile(r"^Blue\s+(?=[A-Z])"), "Blou-"),
+]
 WYLIE_PREFIX_TEST_RE = re.compile(r"(?:^|[\s\-])[srbdgml][KGCJTDNPBMZSYRW]")
 
 
@@ -157,11 +176,23 @@ def clean_ntr_stem_for_compounding(raw_form: str, iso_code: str | None, *, strip
             rest = s[m.end():].strip()
             if len(re.sub(r"[^A-Za-zÀ-ɏ]", "", rest)) >= 3:
                 s = rest
-        m2 = NTR_TRAILING_RE.search(s)
-        if m2:
+        # Strip trailing geographic/administrative classifiers
+        for _ in range(2):
+            m2 = NTR_TRAILING_RE.search(s)
+            if not m2:
+                break
             rest2 = s[:m2.start()].strip(" -")
             if len(re.sub(r"[^A-Za-zÀ-ɏ]", "", rest2)) >= 3:
                 s = rest2
+            else:
+                break
+        # Translate surviving English/Slavic directional or color NTR qualifiers (e.g. Black Volta -> Swartz-Volta)
+        for pat, repl in ENGLISH_NTR_PREFIX_MAP:
+            if pat.match(s):
+                rest3 = pat.sub("", s).strip()
+                if len(re.sub(r"[^A-Za-zÀ-ɏ]", "", rest3)) >= 3:
+                    s = f"{repl}{rest3}"
+                break
     return s
 
 

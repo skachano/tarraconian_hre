@@ -2290,7 +2290,7 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_EMan_Huligai"]["calque_mode"] == "sinosphere_procedure1_calque"
         assert baronies["b_EMan_Huligai"]["tarr_hist_pre_law"] == "Hûchânflôz"
         assert baronies["b_bagerhat"]["calque_mode"] == "sinosphere_procedure1_calque"
-        assert baronies["b_bagerhat"]["tarr_hist_pre_law"] == "Hôchzelle"
+        assert baronies["b_bagerhat"]["tarr_hist_pre_law"] == "Hôchtempel"
         assert baronies["b_algeciras"]["tarr_hist_pre_law"] == "Grûneinsel"
         assert baronies["b_kalocsa"]["tarr_hist_pre_law"] == "Donaustat"
         assert baronies["b_ka'abir"]["calque_mode"] == "hybrid_generic_calque"
@@ -2330,7 +2330,7 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_forest_of_dean"]["tarr_hist"] == "Zant-Briavels"
         assert baronies["b_EMan_Huligai"]["tarr_hist"] == "Hûchânflôz"
         assert baronies["b_algeciras"]["tarr_hist"] == "Grûneinsel"
-        assert baronies["b_bagerhat"]["tarr_hist"] == "Hôchzelle"
+        assert baronies["b_bagerhat"]["tarr_hist"] == "Hôchtempel"
 
     def test_pipeline_stage6_disambiguation(self):
         from difflib import SequenceMatcher
@@ -2421,6 +2421,21 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_chateaudun"]["b_tarr_hist"] == "Schâteaudun"
         assert baronies["b_baoshun"]["b_hanzi"] == "神農架"
         assert baronies["b_aso"]["b_tarr_hist"] == "Dangs-Ra Yu-Tscho"
+        # Round-4 polish regression checks
+        assert baronies["b_lidou"]["b_tarr_hist"] == "Juexipalz"
+        assert baronies["b_ijesha"]["b_tarr_hist"] == "Oduduwawîe"
+        assert baronies["b_al-hajar"]["b_tarr_hist"] == "Al-Hadscharmeschit"
+        assert baronies["b_PHI_Sugbu"]["b_tarr_hist"] == "Basîliclôster"
+        assert baronies["b_kofuku_ji"]["b_tarr_hist"] == "Upgancsêlichtempel"
+        assert baronies["b_simeulue"]["b_tarr_hist"] == "Kepulauan Hinakotempel"
+        assert baronies["b_sredets"]["b_tarr_hist"] == "Sredetz"
+        assert baronies["b_jiangjin"]["b_tarr_hist"] == "Flôzhaven"
+        assert baronies["b_eketorp"]["b_tarr_hist"] == "Kârlshâven"
+        assert baronies["b_datong"]["b_tarr_hist"] == "Tschîliân Schân"
+        assert baronies["b_Liao_Liping"]["b_tarr_hist"] == "Mengruhof"
+        assert baronies["b_marrong"]["b_tarr_hist"] == "Trideiöpolhachang"
+        assert baronies["b_alexandretta"]["b_tarr_hist"] == "Alexandriacastel"
+        assert baronies["b_potamuskastel"]["b_tarr_hist"] == "Potamucastel"
 
     def test_pipeline_stage1_routing(self):
         path = REPO_DIR / "data" / "pipeline_stage1_routed.json"

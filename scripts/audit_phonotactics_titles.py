@@ -46,12 +46,12 @@ def check_title_phonotactics(raw_title, key, source_context):
         if re.search(r"(?<!g)(?<!n)(?<!th)eo", name, re.I):
             issues.append(f"Illicit digraph 'eo' in '{name}' (prohibited modern Korean Romanization)")
 
-        # 3. Modern Pinyin: zh
-        if re.search(r"zh", name, re.I):
+        # 3. Modern Pinyin: zh (exempting Tarraconian compound boundaries like Flôz-hügil, Grôz-hâven, Swartz-hirsch)
+        if re.search(r"zh(?!(?:eim|ûsen|âven|aven|ügil|irsch|êilichdom|îa|êl|ôch|olm|of|ûs|ain|age|al|out))", name, re.I):
             issues.append(f"Modern Pinyin 'zh' in '{name}' (must be 'dsch')")
 
-        # 4. Bare 'sh' (not part of 'sch', exempting compound boundaries like -heim, -hûsen)
-        sh_matches = re.findall(r"(?<!c)sh(?!eim|ûsen)", name, re.I)
+        # 4. Bare 'sh' (not part of 'sch', exempting compound boundaries like -heim, -hûsen, -hâven, -hügil, -hêl, -holm)
+        sh_matches = re.findall(r"(?<!c)sh(?!(?:eim|ûsen|âven|aven|ügil|irsch|êilichdom|îa|êl|ôch|olm|of|ûs|ain|age|al|out))", name, re.I)
         if sh_matches:
             issues.append(f"Non-German 'sh' {sh_matches} in '{name}' (must be 'sch')")
 

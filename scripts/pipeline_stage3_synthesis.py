@@ -61,19 +61,21 @@ CHRISTIAN_TRADITIONAL_FAMILIES = {
     "magyar", "basque", "albanian", "finnic", "baltic",
 }
 
-CHRISTIAN_ONLY_TARR_GENERICS = {"-kirchen", "-clôster", "-munster", "-abtei", "-kapelle", "Zant-", "-zelle"}
+CHRISTIAN_ONLY_TARR_GENERICS = {"-kirchen", "-clôster", "-munster", "-abtei", "-kapelle", "Zant-", "-zelle", "Hilig-"}
+ISLAMIC_ONLY_TARR_GENERICS = {"-meschit", "-ribât", "-madrasa"}
+PAGAN_DHARMIC_TARR_GENERICS = {"-wîe", "-tempel", "-hêl", "-hain"}
 
 
 def is_christian_holding(coin_culture: str, fam_key: str, ruler_rec: dict[str, Any]) -> bool:
     """Determine whether church/devotional coinage follows Christian Chancellery conventions."""
-    if coin_culture in IMPERIAL_CULTURES:
-        return True
     rel = (ruler_rec.get("religion_type") or "").lower()
     ftype = (ruler_rec.get("faith_type") or "").lower()
     if rel:
         return "christian" in rel
     if ftype:
         return ftype in CHRISTIAN_FAITHS
+    if coin_culture in IMPERIAL_CULTURES:
+        return True
     return fam_key in CHRISTIAN_TRADITIONAL_FAMILIES
 
 
@@ -176,8 +178,9 @@ def deterministic_pick(options: list[Any], key: str) -> Any:
 
 
 def extract_clean_compound_stem(raw_stem: str) -> str:
-    """Clean geographic descriptor words and parenthetical glosses for smooth compounding."""
+    """Clean geographic descriptor words, Latin prepositional qualifiers, and parenthetical glosses for smooth compounding."""
     s = re.sub(r"\([^)]*\)", "", raw_stem).strip()
+    s = re.sub(r"\s+ad\s+[A-Z][a-zA-Z\-]+$", "", s).strip()
     s = GEO_GENERIC_SUFFIX_STRIP.sub("", s).strip(" ,-/")
     s = re.sub(r"\s{2,}", " ", s).strip()
     return s if len(s) >= 2 else raw_stem.split("(")[0].strip()
@@ -243,24 +246,48 @@ def select_family_generic(
     sanctuary generics on church holdings.
     """
     cands = list(fam_obj["generics"].get(holding_type) or fam_obj["generics"]["castle"])
+    rel_low = (religion_type or "").lower()
+    is_islam = "islam" in rel_low
+    is_juda = "juda" in rel_low
 
     allowed = []
     for g in cands:
         gate = g.get("gate")
         tc = g.get("tarr_calque", "")
+        g_form_low = (g.get("form") or "").strip().lower()
         if gate == "sea_coast" and not is_sea_coast:
             continue
-        if not allow_zant and tc.startswith("Zant"):
+        if not allow_zant and (tc.startswith("Zant") or tc == "Hilig-"):
             continue
-        if holding_type == "church" and not is_christian and tc in CHRISTIAN_ONLY_TARR_GENERICS:
+        if holding_type == "city" and g_form_low == "medina" and not is_islam:
             continue
+        if holding_type == "church":
+            if is_christian:
+                if tc in ISLAMIC_ONLY_TARR_GENERICS or tc in PAGAN_DHARMIC_TARR_GENERICS:
+                    continue
+            elif is_islam:
+                if tc in CHRISTIAN_ONLY_TARR_GENERICS or tc in PAGAN_DHARMIC_TARR_GENERICS:
+                    continue
+            else:
+                if tc in CHRISTIAN_ONLY_TARR_GENERICS or tc in ISLAMIC_ONLY_TARR_GENERICS:
+                    continue
         allowed.append(g)
 
-    if not allowed and holding_type == "church" and not is_christian:
-        rel_low = (religion_type or "").lower()
-        if "islam" in rel_low:
-            return {"form": "-masjid", "affix_position": "suffix", "joiner": "", "gloss": "mosque / sanctuary", "tarr_calque": "-meschit", "gate": None}
-        if "juda" in rel_low:
+    if not allowed and holding_type == "church":
+        if is_christian:
+            chr_fb = [
+                {"form": "-kirchen", "affix_position": "suffix", "joiner": "", "gloss": "church", "tarr_calque": "-kirchen", "gate": None},
+                {"form": "-clôster", "affix_position": "suffix", "joiner": "", "gloss": "monastery", "tarr_calque": "-clôster", "gate": "pious"},
+                {"form": "-munster", "affix_position": "suffix", "joiner": "", "gloss": "minster", "tarr_calque": "-munster", "gate": "pious"},
+            ]
+            return deterministic_pick(chr_fb, f"{barony_key}:chr_fb")
+        if is_islam:
+            isl_fb = [
+                {"form": "-masjid", "affix_position": "suffix", "joiner": "", "gloss": "mosque / sanctuary", "tarr_calque": "-meschit", "gate": None},
+                {"form": "-ribât", "affix_position": "suffix", "joiner": "", "gloss": "fortified monastery / ribat", "tarr_calque": "-ribât", "gate": "pious"},
+            ]
+            return deterministic_pick(isl_fb, f"{barony_key}:isl_fb")
+        if is_juda:
             return {"form": "Beit ", "affix_position": "prefix", "joiner": " ", "gloss": "house of assembly", "tarr_calque": "-schûle", "gate": None}
         if fam_key in {"indo_aryan", "dravidian", "austronesian", "mon_khmer", "tai_hmong", "burmese_qiangic"} or any(x in rel_low for x in ("buddh", "hindu", "jain")):
             return {"form": "-vihara", "affix_position": "suffix", "joiner": "", "gloss": "temple / sanctuary", "tarr_calque": "-tempel", "gate": None}
@@ -271,7 +298,7 @@ def select_family_generic(
         return {"form": "-wîe", "affix_position": "suffix", "joiner": "", "gloss": "sacred sanctuary", "tarr_calque": "-wîe", "gate": None}
 
     if not allowed:
-        allowed = [g for g in cands if allow_zant or not g.get("tarr_calque", "").startswith("Zant")] or cands
+        allowed = [g for g in cands if (allow_zant or (not g.get("tarr_calque", "").startswith("Zant") and g.get("tarr_calque", "") != "Hilig-")) and not (holding_type == "city" and (g.get("form") or "").strip().lower() == "medina" and not is_islam)] or cands
 
     # Score allowed generics against context
     scored: list[tuple[int, int, dict[str, Any]]] = []
@@ -852,7 +879,7 @@ def run_stage3() -> dict[str, Any]:
             "raw_ruler_archetype": raw_arch,
             "effective_archetype": effective_arch,
             "coined_source_form": coined_form,
-            "coined_hanzi": coined_hanzi or r2.get("extracted_hanzi"),
+            "coined_hanzi": coined_hanzi if coined_hanzi is not None else mod_record.get("hanzi"),
             "coined_compound_order": compound_order,
             "coined_modifier": mod_record,
             "coined_generic": coined_gen,
