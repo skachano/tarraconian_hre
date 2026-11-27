@@ -36,7 +36,7 @@ With the newly completed companion datasets, the v2 pipeline enforces five stric
 | **Sinosphere Corpus** (`data/sinosphere_*.json`, `sino_barony_kanji_ext.py`, `sinosphere_phonetics_and_transcription_guide_1154.md`) | 1,384 CJK characters + 12th-c. LMC / EMK / EMJ / Khitan / Jurchen sound tables | Hanzi morpheme → Tarraconian formant, thematic category (1–10), historical 1154 readings | Stage 1 (Track S), Stage 4 (Procedure 1 Logographic Calquing), Stage 5 (12th-c. Phonetics) |
 | **Melted Save & Phase 1** (`/var/tmp/ck3_audit/melted_save.ck3`, `phase1/*.json`) | 3,476 counties, 10,239 occupied baronies, 69,625+ resolved characters | County ruler timelines, traits, nicknames, dynasty houses, piety/prestige, `provinces` (`buildings`, `special_building_type`, `great_building_type`, `points_of_interest`), `faiths`, `holy_orders`, `epidemics` | Stage 0 (Occupancy), Stage 3 (Coinage-Era Archetype & Physical Context) |
 | **Saint Holding Imagery** (`data/saint_holding_imagery.json`) | 300 attested saint shrines & buried saints | `saint_name`, `shrine_type`, `relic_description` | Stage 3 (Ecclesiastical / Shrine Naming) |
-| **Chancellery Linguistic Canon** (`tarraconian_titles_1059.md`, `tarraconian_linguistics_guide.md`, `tarraconian_descriptive_title_calques.md`, `tarraconian_onomasticon_and_name_register.md`) | Master Gazetteer + 442 secondary variants + 239 Franconian names + sound laws + morpheme matrix | Locked canon exonyms, regional sound-change rules, daughter dialect rules, morpheme calque table, personal name forms | Stage 1 (Canon Lock), Stage 4 (Calquing), Stage 5 (Phonology, Orthography & IPA) |
+| **Chancellery Linguistic Canon** (`tarraconian_linguistics_guide.md`, `tarraconian_descriptive_title_calques.md`, `tarraconian_onomasticon_and_name_register.md`) | 239 Franconian names + sound laws + morpheme matrix | Regional sound-change rules, daughter dialect rules, morpheme calque table, personal name forms | Stage 4 (Calquing), Stage 5 (Phonology, Orthography & IPA) |
 
 ---
 
@@ -44,9 +44,8 @@ With the newly completed companion datasets, the v2 pipeline enforces five stric
 
 ```mermaid
 flowchart TD
-    S0["Stage 0: Occupancy & Canon Lock Gate"]
+    S0["Stage 0: Occupancy & Data Reconciliation Gate"]
     S0 -->|"Unoccupied (1,058)"| BLANK["Blank Record (name = '')"]
-    S0 -->|"Canon Exonym / Locked Gazetteer"| S5
     S0 -->|"Occupied (10,239)"| S1["Stage 1: Origin x Antiquity Track Router"]
 
     S1 -->|"Sinosphere Scope"| TS["Track S: Sinosphere Logographic & 12th-c. Phonetic Track"]
@@ -78,10 +77,9 @@ flowchart TD
 
 ---
 
-### Stage 0: Occupancy, Data Reconciliation & Canon Lock Gate
+### Stage 0: Occupancy & Data Reconciliation Gate
 1. **Occupancy Source of Truth:** Read raw occupancy directly from `melted_save.ck3` (`provinces` `holding.type` — `10,239` occupied, `1,058` unoccupied), fixing the legacy apostrophe regex omission that misclassified `b_ka'abir` and `b_mansa'l-kharaz` as unoccupied in `barony_holdings.json`.
 2. **Unoccupied Rule:** Unoccupied baronies emit strictly blank strings (`name = ""`, `b_origin = ""`, `b_ipa = ""`, `b_anachronism = ""`).
-3. **Immutable Canon Lock:** Pre-verified Imperial Chancellery exonyms and explicitly resolved secondary seats from `tarraconian_titles_1059.md` (e.g., `b_roma → Rôm`, `b_london → Lunden`, `b_byzantion → Konstantinôpel`, `b_konigsberg → Twangste`) are locked before algorithmic generation so automated re-runs never overwrite hand-curated canon.
 
 ---
 
@@ -259,6 +257,3 @@ To execute the v2 pipeline at maximum historical quality and minimal manual patc
      * **Area-weighted polygon centroids `(x, y)`** & intra-county 8-wind direction (`county_direction`, `county_offset`) → enables geometrically accurate **directional disambiguators** (`Ober-`/`Nider-`, `Ôst-`/`West-`, `Nord-`/`Sût-`) when two baronies in a county share a river or tribal stem.
      * **True Sea-Coast vs. Inland River/Lake Flag (`is_sea_coast`, `is_caspian_coast`, `coast_type`)** → derived via scanline rasterization + off-map Eurasian/African horizon & Egyptian Eastern Desert wasteland seals + morphological opening (`r = 3`, min channel width `>= 7 px`) with strait-bridged marine basins (Mediterranean, Black Sea, Azov, Marmara, Zuiderzee, Seto Inland Sea, Varangerfjord) and 4-step constrained geodesic dilation (`1,983` total / `1,904` occupied sea-coast baronies, `43` total / `35` occupied Caspian shoreline baronies; separating `1,496` true maritime tradeports from `763` inland river/lake tradeports).
      * **Frontier / March flag (`is_imperial_frontier_barony`, `is_imperial_frontier_county`)** (`412` occupied baronies bordering a non-Tarraconian realm at `1194`) → boosts march/watchtower formants (`-march`, `-wart`, `Schirmburch`) on frontier castles.
-
-8. **`data/tarraconian_exonym_canon.json` (Locked Exonym & Gazetteer Anchor Table)**
-   * **Why:** Centralizes all pre-established imperial exonyms (`Rôm`, `Lunden`, `Parîs`, `Konstantinôpel`, `Stûlwîtzenburch`, `Prâge`, `Mênz`, `Âchen`, etc.) and the 442 secondary variants from `tarraconian_titles_1059.md` into a single JSON lockfile read in Stage 0, preventing accidental churn and keeping county/barony naming synchronized across future regenerations.
