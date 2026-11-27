@@ -628,6 +628,28 @@ async function runE2ETests() {
     }
     console.log(`  Occupied barony b_roma profile verified: C=${coinageText}, S=${substrateText}, T=${transmissionText}, Ruler=${rulerName}.`);
 
+    // Verify true sea-coast badge separation (b_ostia = Sea Coast, b_london = inland Tradeport without Sea Coast)
+    await bSearch.fill('b_ostia');
+    await page.waitForSelector('#search-results .search-item[data-key="b_ostia"]', { timeout: 5000 });
+    await page.locator('#search-results .search-item[data-key="b_ostia"]').click();
+    await page.waitForFunction(() => {
+      return document.getElementById('drawer-title-key').innerText === 'b_ostia' &&
+             document.getElementById('drawer-context-badges').textContent.includes('Sea Coast');
+    }, { timeout: 8000 });
+
+    await bSearch.fill('b_london');
+    await page.waitForSelector('#search-results .search-item[data-key="b_london"]', { timeout: 5000 });
+    await page.locator('#search-results .search-item[data-key="b_london"]').click();
+    await page.waitForFunction(() => {
+      const b = document.getElementById('drawer-context-badges').textContent;
+      return document.getElementById('drawer-title-key').innerText === 'b_london' && b.includes('Tradeport');
+    }, { timeout: 8000 });
+    const londonBadges = await page.locator('#drawer-context-badges').textContent();
+    if (londonBadges.includes('Sea Coast')) {
+      throw new Error(`Expected b_london to have Tradeport without Sea Coast, got "${londonBadges}"`);
+    }
+    console.log('  Sea-coast vs inland Tradeport verified (b_ostia=Sea Coast, b_london=Tradeport only).');
+
     // Verify top bar audit badge updates and hides properly across barony categories (e.g. b_huoshan -> b_nimes)
     await bSearch.fill('b_huoshan');
     await page.waitForSelector('#search-results .search-item[data-key="b_huoshan"]', { timeout: 5000 });

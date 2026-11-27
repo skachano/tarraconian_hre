@@ -1912,9 +1912,9 @@ class TestBaronyCoinageAndContext:
         assert len(data["baronies"]) == 10239
         assert len(data["faith_saints"]) >= 25
         ctx_london = data["baronies"]["b_london"]
-        assert ctx_london["is_coastal_tradeport"] is True
+        assert ctx_london["has_tradeport"] is True
         assert ctx_london["special_building_type"] == "the_tower_of_london_01"
-        assert data["baronies"]["b_kalocsa"]["is_coastal_tradeport"] is False
+        assert data["baronies"]["b_kalocsa"]["has_tradeport"] is False
 
     def test_web_assets_have_coinage_and_context_integration(self):
         assert (DATA_DIR / "barony_coinage_rulers.json").exists(), "docs/data/barony_coinage_rulers.json missing"
@@ -1933,6 +1933,43 @@ class TestBaronyCoinageAndContext:
         build_script = (REPO_DIR / "scripts" / "build_webapp.py").read_text(encoding="utf-8")
         assert "barony_coinage_rulers.json" in build_script
         assert "barony_physical_and_event_context.json" in build_script
+        assert "barony_geography.json" in build_script
+        assert "barony_geography.json" in js
+        assert "ensureGeographyLoaded" in js
+        assert (DATA_DIR / "barony_geography.json").exists(), "docs/data/barony_geography.json missing"
+
+    def test_barony_geography(self):
+        path = REPO_DIR / "data" / "barony_geography.json"
+        assert path.exists(), "data/barony_geography.json missing"
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        meta = data["metadata"]
+        assert meta["total_baronies"] == 11297
+        assert meta["total_occupied_baronies"] == 10239
+        assert meta["sea_coast_baronies"] >= 1900
+
+        baronies = data["baronies"]
+        assert len(baronies) == 11297
+
+        # Verified true sea-coast baronies across Atlantic, Med, Baltic, Black, Red, Persian Gulf, Okhotsk
+        for b in ["b_ostia", "b_tarragona", "b_venezia", "b_palermo", "b_alexandria", "b_lubeck", "b_quzlum", "b_aydhab", "b_theodosia", "b_kerch", "b_hormuz", "b_hakata"]:
+            assert baronies[b]["is_sea_coast"] is True, f"{b} should be sea_coast"
+            assert baronies[b]["coast_type"] == "sea_coast"
+
+        # Verified inland baronies (rivers, lakes, interior wastelands, off-map Eurasia/Africa frontiers)
+        for b in ["b_roma", "b_london", "b_szekesfehervar", "b_vyshgorod", "b_paris", "b_mainz", "b_cairo", "b_baghdad", "b_basra", "b_kotlas", "b_bonga", "b_kaffa", "b_khentii"]:
+            assert baronies[b]["is_sea_coast"] is False, f"{b} should be inland, not sea_coast"
+
+        # Caspian endorheic sea distinction
+        assert baronies["b_derbent"]["is_sea_coast"] is False
+        assert baronies["b_derbent"]["is_caspian_coast"] is True
+        assert baronies["b_derbent"]["coast_type"] == "endorheic_sea"
+
+        # Centroids, county direction, and imperial frontier metadata
+        assert baronies["b_ostia"]["county_direction"] in {"S", "SW", "SE"}
+        assert baronies["b_lubeck"]["is_imperial_frontier_barony"] is True
+        assert baronies["b_roma"]["is_imperial_frontier_barony"] is False
 
 
 

@@ -788,7 +788,7 @@ def main():
     special_count = 0
     great_count = 0
     ho_lease_count = 0
-    coastal_tradeport_count = 0
+    tradeport_count = 0
     saint_shrine_count = 0
     battle_poi_count = 0
 
@@ -816,9 +816,10 @@ def main():
         for fam in families:
             bldg_family_counts[fam] += 1
 
-        is_tradeport = "common_tradeport" in families
-        if is_tradeport:
-            coastal_tradeport_count += 1
+        # Note: CK3 common_tradeport is buildable on sea coasts, navigable rivers, and lakes (not coastal-only)
+        has_tradeport = "common_tradeport" in families
+        if has_tradeport:
+            tradeport_count += 1
 
         sp_b = prov.get("special_building_type")
         gr_b = prov.get("great_building_type")
@@ -870,7 +871,7 @@ def main():
             "income": prov.get("income", 0.0),
             "buildings": bldgs,
             "building_families": families,
-            "is_coastal_tradeport": is_tradeport,
+            "has_tradeport": has_tradeport,
             "special_building_type": sp_b,
             "great_building_type": gr_b,
             "duchy_capital_building": prov.get("duchy_capital_building"),
@@ -888,7 +889,7 @@ def main():
             "schema_version": "1.0.0",
             "save_date": meta_date,
             "total_occupied_baronies": len(physical_context),
-            "coastal_tradeport_holdings": coastal_tradeport_count,
+            "tradeport_holdings": tradeport_count,
             "special_building_holdings": special_count,
             "great_building_holdings": great_count,
             "holy_order_leased_holdings": ho_lease_count,

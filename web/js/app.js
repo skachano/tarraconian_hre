@@ -13,13 +13,15 @@ let titleTree = null;
 let countiesLayer = null;
 let baroniesLayer = null;
 
-// Toponymic Profile & Section 4.A datasets
+// Toponymic Profile & Section 4.A / 4.B datasets
 let baronyToponymicProfiles = null;
 let toponymicProfilesPromise = null;
 let baronyCoinageRulers = null;
 let coinageRulersPromise = null;
 let baronyPhysicalContext = null;
 let physicalContextPromise = null;
+let baronyGeography = null;
+let geographyPromise = null;
 
 // Multi-feature selection and hover state
 let selectedFeature = null;
@@ -206,6 +208,7 @@ async function loadData() {
     ensureToponymicProfilesLoaded();
     ensureCoinageRulersLoaded();
     ensurePhysicalContextLoaded();
+    ensureGeographyLoaded();
 
     const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
     const hoverBadge = document.getElementById('hover-info');
@@ -272,12 +275,30 @@ async function ensurePhysicalContextLoaded() {
   return physicalContextPromise;
 }
 
+async function ensureGeographyLoaded() {
+  if (baronyGeography) return baronyGeography;
+  if (!geographyPromise) {
+    geographyPromise = fetch('data/barony_geography.json')
+      .then(res => (res.ok ? res.json() : null))
+      .then(data => {
+        if (data) baronyGeography = data;
+        return baronyGeography;
+      })
+      .catch(err => {
+        console.warn('Could not load barony_geography.json:', err);
+        return null;
+      });
+  }
+  return geographyPromise;
+}
+
 // Lazy-load baronies GeoJSON when requested
 async function ensureBaroniesLoaded() {
   await Promise.all([
     ensureToponymicProfilesLoaded(),
     ensureCoinageRulersLoaded(),
-    ensurePhysicalContextLoaded()
+    ensurePhysicalContextLoaded(),
+    ensureGeographyLoaded()
   ]);
   if (baroniesGeojson) return;
   const overlay = document.getElementById('loading-overlay') || createMiniOverlay();
@@ -1271,39 +1292,66 @@ function renderBaronyPhysicalContext(props, tier, isUnoccupiedBarony) {
   }
 
   const ctx = baronyPhysicalContext?.baronies?.[props.barony];
-  if (!ctx) {
+  const geo = baronyGeography?.baronies?.[props.barony];
+  if (!ctx && !geo) {
     group.classList.add('hidden');
     ensurePhysicalContextLoaded().then(data => {
       if (data && selectedTitleTier === 'barony' && selectedTitleKey === props.barony) {
         renderBaronyPhysicalContext(props, tier, isUnoccupiedBarony);
       }
     });
+    ensureGeographyLoaded().then(data => {
+      if (data && selectedTitleTier === 'barony' && selectedTitleKey === props.barony) {
+        renderBaronyPhysicalContext(props, tier, isUnoccupiedBarony);
+      }
+    });
     return;
+  }
+  if (!ctx) {
+    ensurePhysicalContextLoaded().then(data => {
+      if (data && selectedTitleTier === 'barony' && selectedTitleKey === props.barony) {
+        renderBaronyPhysicalContext(props, tier, isUnoccupiedBarony);
+      }
+    });
+  } else if (!geo) {
+    ensureGeographyLoaded().then(data => {
+      if (data && selectedTitleTier === 'barony' && selectedTitleKey === props.barony) {
+        renderBaronyPhysicalContext(props, tier, isUnoccupiedBarony);
+      }
+    });
   }
 
   group.classList.remove('hidden');
 
   const tierElem = document.getElementById('drawer-context-tier');
   if (tierElem) {
-    tierElem.textContent = ctx.holding_tier > 0 ? `Tier ${ctx.holding_tier} ${formatSnakeLabel(ctx.holding_type)}` : formatSnakeLabel(ctx.raw_holding_type || ctx.holding_type);
+    if (ctx) {
+      tierElem.textContent = ctx.holding_tier > 0 ? `Tier ${ctx.holding_tier} ${formatSnakeLabel(ctx.holding_type)}` : formatSnakeLabel(ctx.raw_holding_type || ctx.holding_type);
+    } else {
+      tierElem.textContent = formatSnakeLabel(props.holding_type || 'holding');
+    }
   }
 
   const badgesElem = document.getElementById('drawer-context-badges');
   if (badgesElem) {
     const pills = [];
-    if (ctx.is_capital_barony) pills.push('<span class="toponymic-origin-badge">County Capital</span>');
-    if (ctx.is_coastal_tradeport) pills.push('<span class="toponymic-horizon-badge">⚓ Coastal Tradeport</span>');
-    if (ctx.fort_level > 0) pills.push(`<span class="toponymic-streak-pill">Fort ${ctx.fort_level}</span>`);
-    if (ctx.income > 0) pills.push(`<span class="toponymic-streak-pill">Income ${ctx.income}</span>`);
+    if (ctx?.is_capital_barony) pills.push('<span class="toponymic-origin-badge">County Capital</span>');
+    if (geo?.is_sea_coast) pills.push('<span class="toponymic-horizon-badge">🌊 Sea Coast</span>');
+    else if (geo?.is_caspian_coast) pills.push('<span class="toponymic-streak-pill">🌊 Caspian Coast</span>');
+    if (ctx?.has_tradeport) pills.push('<span class="toponymic-horizon-badge">⚓ Tradeport</span>');
+    if (geo?.is_imperial_frontier_barony) pills.push('<span class="toponymic-rupture-badge">🛡 Imperial Frontier</span>');
+    if (geo?.county_direction && geo.county_direction !== 'Center') pills.push(`<span class="toponymic-streak-pill">Sector: ${geo.county_direction}</span>`);
+    if (ctx?.fort_level > 0) pills.push(`<span class="toponymic-streak-pill">Fort ${ctx.fort_level}</span>`);
+    if (ctx?.income > 0) pills.push(`<span class="toponymic-streak-pill">Income ${ctx.income}</span>`);
     badgesElem.innerHTML = pills.join('');
   }
 
   const specialElem = document.getElementById('drawer-context-special');
   if (specialElem) {
     const specials = [];
-    if (ctx.special_building_type) specials.push(`Special Building: <strong>${formatSnakeLabel(ctx.special_building_type)}</strong>`);
-    if (ctx.great_building_type) specials.push(`Great Monument: <strong>${formatSnakeLabel(ctx.great_building_type)}</strong>`);
-    if (ctx.duchy_capital_building) specials.push(`Duchy Building: <strong>${formatSnakeLabel(ctx.duchy_capital_building)}</strong>`);
+    if (ctx?.special_building_type) specials.push(`Special Building: <strong>${formatSnakeLabel(ctx.special_building_type)}</strong>`);
+    if (ctx?.great_building_type) specials.push(`Great Monument: <strong>${formatSnakeLabel(ctx.great_building_type)}</strong>`);
+    if (ctx?.duchy_capital_building) specials.push(`Duchy Building: <strong>${formatSnakeLabel(ctx.duchy_capital_building)}</strong>`);
     if (specials.length > 0) {
       specialElem.classList.remove('hidden');
       specialElem.innerHTML = `<div class="context-special-banner">${specials.join(' &bull; ')}</div>`;
@@ -1315,7 +1363,7 @@ function renderBaronyPhysicalContext(props, tier, isUnoccupiedBarony) {
 
   const bldgsElem = document.getElementById('drawer-context-buildings');
   if (bldgsElem) {
-    const fams = (ctx.building_families || []).filter(f => !['castle', 'city', 'temple', 'tribal'].includes(f));
+    const fams = (ctx?.building_families || []).filter(f => !['castle', 'city', 'temple', 'tribal'].includes(f));
     if (fams.length > 0) {
       bldgsElem.classList.remove('hidden');
       bldgsElem.innerHTML = fams.map(f => `<span class="trait-pill">${formatSnakeLabel(f)}</span>`).join('');
@@ -1328,17 +1376,17 @@ function renderBaronyPhysicalContext(props, tier, isUnoccupiedBarony) {
   const eventsElem = document.getElementById('drawer-context-events');
   if (eventsElem) {
     const banners = [];
-    if (ctx.holy_order_lease) {
+    if (ctx?.holy_order_lease) {
       const ho = ctx.holy_order_lease;
       banners.push(`<div class="context-event-banner">⚔ Leased to Holy Order: <strong>${formatSnakeLabel(ho.holy_order_type)}</strong>${ho.founder_name ? ` (Founder: ${ho.founder_name})` : ''}</div>`);
     }
-    if (ctx.points_of_interest && ctx.points_of_interest.length > 0) {
+    if (ctx?.points_of_interest && ctx.points_of_interest.length > 0) {
       banners.push(`<div class="context-event-banner">📍 Points of Interest: ${ctx.points_of_interest.map(formatSnakeLabel).join(', ')}</div>`);
     }
-    if (ctx.active_epidemics && ctx.active_epidemics.length > 0) {
+    if (ctx?.active_epidemics && ctx.active_epidemics.length > 0) {
       const epStr = ctx.active_epidemics.map(e => `${formatSnakeLabel(e.type)} (“${e.name}”)`).join(', ');
       banners.push(`<div class="context-event-banner event-plague">☣ Active Epidemic: ${epStr}</div>`);
-    } else if (ctx.county_shattered_by_plague) {
+    } else if (ctx?.county_shattered_by_plague) {
       banners.push('<div class="context-event-banner event-plague">☣ County recently shattered by plague</div>');
     }
     if (banners.length > 0) {
