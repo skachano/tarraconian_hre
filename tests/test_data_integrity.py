@@ -2297,6 +2297,41 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_Goryeo_Seohae_Jangyeon"]["calque_mode"] == "semantic_rupture_phonetic"
         assert baronies["b_Goryeo_Seohae_Jangyeon"]["tarr_hist_pre_law"] == "Dschangyeongang"
 
+    def test_pipeline_stage5_sound_laws(self):
+        import re
+
+        path = REPO_DIR / "data" / "pipeline_stage5_validated.json"
+        assert path.exists(), "data/pipeline_stage5_validated.json missing"
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        meta = data["metadata"]
+        baronies = data["baronies"]
+        assert meta["total_baronies"] == 11297 == len(baronies)
+        assert meta["occupied_baronies"] == 10239
+        assert meta["unoccupied_baronies"] == 1058
+        assert meta["total_phonotactic_audit_failures"] == 0
+
+        allowed = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzâêîôûÂÊÎÔÛäöüÄÖÜïëÏ '-")
+        for bk, rec in baronies.items():
+            if not rec["is_occupied"]:
+                assert rec["final_record"]["name"] == ""
+                continue
+            th = rec["tarr_hist"]
+            td = rec["tarr_direct"]
+            ipa = rec["b_ipa"]
+            assert th and td and ipa.startswith("[") and ipa.endswith("]")
+            assert rec["phonotactic_issues"] == []
+            assert all(c in allowed for c in th), f"Disallowed char in {bk} hist: {th}"
+            assert all(c in allowed for c in td), f"Disallowed char in {bk} direct: {td}"
+            assert not re.search(r"(?:burg|berg|bad|stadt|dsch)\b", th, re.I), f"Unshifted coda in {bk}: {th}"
+
+        assert baronies["b_ka'abir"]["tarr_hist"] == "Hawâkilhâven"
+        assert baronies["b_forest_of_dean"]["tarr_hist"] == "Zant-Briavels"
+        assert baronies["b_EMan_Huligai"]["tarr_hist"] == "Hûchânflôz"
+        assert baronies["b_algeciras"]["tarr_hist"] == "Grûneinsel"
+        assert baronies["b_bagerhat"]["tarr_hist"] == "Hôchzelle"
+
     def test_pipeline_stage1_routing(self):
         path = REPO_DIR / "data" / "pipeline_stage1_routed.json"
         assert path.exists(), "data/pipeline_stage1_routed.json missing"

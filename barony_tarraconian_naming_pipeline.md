@@ -176,7 +176,8 @@ Once Stages 1–3 produce a **source-stratum name** in `coinage_culture` (with i
 
 ---
 
-### Stage 5: Tarraconian Sound Laws, Daughter Dialects, IPA & Validation
+### Stage 5: Tarraconian Sound Laws, Daughter Dialects, IPA & Validation — *Implemented*
+Implemented in [`pipeline_stage5_sound_laws.py`](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/pipeline_stage5_sound_laws.py) $\rightarrow$ [`data/pipeline_stage5_validated.json`](file:///home/siarzhuk/code/personal/tarraconian_hre/data/pipeline_stage5_validated.json) (`34.41 MB`), applying pre-normalization across all exotic diacritics/IPA symbols, canonical `enforce_tarraconian_sound_laws` & `generate_tarraconian_ipa` from [`resolve_barony_titles.py`](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/resolve_barony_titles.py), daughter dialect overlays (`Alpine-Tarraconian`, `Croato-Tarraconian`, `Ungwârer`), and automated validation via [`audit_phonotactics_titles.py`](file:///home/siarzhuk/code/personal/tarraconian_hre/scripts/audit_phonotactics_titles.py) (`0` phonotactic audit failures and `0` disallowed Chancellery characters across all `10,239` `tarr_hist` and `tarr_direct` outputs).
 
 All candidate strings pass through a single deterministic Tarraconian normalizer:
 1. **Orthographic & Consonant Sound Laws** ([tarraconian_linguistics_guide.md](file:///home/siarzhuk/code/personal/tarraconian_hre/tarraconian_linguistics_guide.md) § 3):
