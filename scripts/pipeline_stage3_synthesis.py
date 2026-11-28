@@ -182,6 +182,8 @@ def extract_clean_compound_stem(raw_stem: str) -> str:
     s = re.sub(r"\([^)]*\)", "", raw_stem).strip()
     s = re.sub(r"\s+ad\s+[A-Z][a-zA-Z\-]+$", "", s).strip()
     s = GEO_GENERIC_SUFFIX_STRIP.sub("", s).strip(" ,-/")
+    if len(s.split()) >= 3:
+        s = re.sub(r"\s+(?:Sh[āa]nm[àa]i|Ri-r?gyud)$", "", s, flags=re.I).strip()
     s = re.sub(r"\s{2,}", " ", s).strip()
     return s if len(s) >= 2 else raw_stem.split("(")[0].strip()
 
@@ -326,6 +328,12 @@ def select_family_generic(
     return deterministic_pick(top_group, f"{barony_key}:{holding_type}:{archetype}")
 
 
+SETTLEMENT_SUFFIXES = (
+    "burch", "burg", "stat", "stât", "stadt", "dorf", "dorp",
+    "hûsen", "hausen", "heim", "kirchen", "munster", "clôster", "klôster",
+)
+
+
 def assemble_compound(modifier: str, generic: dict[str, Any], compound_order: str) -> str:
     """Assemble `(modifier, generic)` cleanly avoiding tautological hyphens/spaces."""
     g_form = generic["form"]
@@ -340,8 +348,10 @@ def assemble_compound(modifier: str, generic: dict[str, Any], compound_order: st
         return f"{g_clean} {mod}".strip()
     else:
         g_clean = g_form.lstrip("-")
-        # Avoid double suffix if mod already ends with generic stem (case-insensitive)
+        # Avoid double suffix if mod already ends with generic stem or equivalent Germanic settlement suffix
         if mod.lower().endswith(g_clean.lower()) and len(mod) > len(g_clean) + 2:
+            return mod
+        if mod.lower().endswith(SETTLEMENT_SUFFIXES) and g_clean.lower() in SETTLEMENT_SUFFIXES and len(mod) > 8:
             return mod
         if joiner == "-":
             return f"{mod}-{g_clean}"
@@ -710,6 +720,15 @@ def run_stage3() -> dict[str, Any]:
             # Clean landscape stem from Stage 2
             land_raw = r2["clean_source_stem"]
             land_stem = extract_clean_compound_stem(land_raw)
+            if land_stem.lower().endswith("bucht") and gen_obj.get("tarr_calque") == "-burch":
+                gen_obj = {
+                    "form": "-veste",
+                    "affix_position": "suffix",
+                    "joiner": "",
+                    "gloss": "fortified stronghold",
+                    "tarr_calque": "-veste",
+                    "gate": None,
+                }
 
             ruler_eponym_rec = None
             saint_rec = None
@@ -783,7 +802,9 @@ def run_stage3() -> dict[str, Any]:
 
             elif effective_arch == "vain_dynastic":
                 # Choose between cleaned first_name (70%) and non-circular house_name (30% on castles/cities when available)
-                use_dyn = use_house and (ht in {"castle", "church"} and int(hashlib.md5(bk.encode()).hexdigest()[:4], 16) % 10 < 3)
+                # Exclude multi-word nobiliary house predicates (e.g. Hungarian 'Wass-de Czege')
+                has_nobiliary = bool(re.search(r"[\s\-](?:de|von|van|of|af)[\s\-]", house_clean, re.I))
+                use_dyn = use_house and not has_nobiliary and (ht in {"castle", "church"} and int(hashlib.md5(bk.encode()).hexdigest()[:4], 16) % 10 < 3)
                 if use_dyn or not ruler_ono:
                     mod_nat = house_clean
                     mod_tarr = ono_by_clean.get(house_clean, {}).get("tarr_compound_prefix", house_clean)
@@ -873,14 +894,17 @@ def run_stage3() -> dict[str, Any]:
                 synthesis_pattern_counts["topographic_ntr_compound"] += 1
                 stage3_mode = "synthesized_topographic_default"
 
-            coined_gen = {
-                "native_form": gen_obj["form"],
-                "tarr_calque": gen_obj["tarr_calque"],
-                "affix_position": gen_obj["affix_position"],
-                "joiner": gen_obj["joiner"],
-                "gloss": gen_obj["gloss"],
-                "gate": gen_obj.get("gate"),
-            }
+            if coined_form == mod_record["text"]:
+                coined_gen = None
+            else:
+                coined_gen = {
+                    "native_form": gen_obj["form"],
+                    "tarr_calque": gen_obj["tarr_calque"],
+                    "affix_position": gen_obj["affix_position"],
+                    "joiner": gen_obj["joiner"],
+                    "gloss": gen_obj["gloss"],
+                    "gate": gen_obj.get("gate"),
+                }
 
         ctx_flags = []
         if is_sea:

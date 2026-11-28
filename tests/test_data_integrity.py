@@ -2335,7 +2335,7 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_canterbury"]["b_tarr_hist"] == "Canterbury"
         assert baronies["b_admont"]["b_tarr_hist"] == "Admontkirchen"
         assert baronies["b_BOR_Badak"]["b_tarr_hist"] == "Bugistempel"
-        assert baronies["b_Liao_Haibeizhou"]["b_tarr_hist"] == "Yîwûlü Schântempel"
+        assert baronies["b_Liao_Haibeizhou"]["b_tarr_hist"] == "Yîwûlüschântempel"
         assert baronies["b_spas"]["b_tarr_hist"] == "Zant-Andrêas"
         assert baronies["b_debrc"]["b_tarr_hist"] == "Sawagaj"
         assert baronies["b_iyo"]["b_tarr_hist"] == "Iyo"
@@ -2349,7 +2349,8 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_marrakesh"]["b_tarr_hist"] == "Tansiftburch"
         assert baronies["b_benevento"]["b_tarr_hist"] == "Benevent"
         assert baronies["b_chateaudun"]["b_tarr_hist"] == "Tschâtôdün"
-        assert baronies["b_baoshun"]["b_hanzi"] == "神農架"
+        assert baronies["b_baoshun"]["b_tarr_hist"] == "Snellbachtempel"
+        assert baronies["b_baoshun"]["b_hanzi"] == "溪州"
         assert baronies["b_aso"]["b_tarr_hist"] == "Dangs-Ra Yu-Tscho"
         # Round-4 polish regression checks
         assert baronies["b_lidou"]["b_tarr_hist"] == "Jueschipalz"
@@ -2361,7 +2362,7 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_sredets"]["b_tarr_hist"] == "Stredetz"
         assert baronies["b_jiangjin"]["b_tarr_hist"] == "Flôzhaven"
         assert baronies["b_eketorp"]["b_tarr_hist"] == "Kârlshâven"
-        assert baronies["b_datong"]["b_tarr_hist"] == "Tschîliân Schân"
+        assert baronies["b_datong"]["b_tarr_hist"] == "Tschîliânschân"
         assert baronies["b_Liao_Liping"]["b_tarr_hist"] == "Mengruhof"
         assert baronies["b_marrong"]["b_tarr_hist"] == "Trideiöpolhachang"
         assert baronies["b_alexandretta"]["b_tarr_hist"] == "Alexandriacastel"
@@ -2376,7 +2377,7 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_utsunomiya"]["b_tarr_hist"] == "Futâra"
         assert baronies["b_utsunomiya"]["b_hanzi"] == "二荒山"
         assert baronies["b_wakasa"]["b_tarr_hist"] == "Wakasa"
-        assert baronies["b_wolong"]["b_tarr_hist"] == "Yalu Zangbu Dschiângmarct"
+        assert baronies["b_wolong"]["b_tarr_hist"] == "Yaluzangbudschiângmarct"
         assert baronies["b_stcatherine"]["b_tarr_hist"] == "Verclêrungeclôster"
         assert baronies["b_athy"]["b_tarr_hist"] == "Allenmarct"
         assert baronies["b_rigar"]["b_tarr_hist"] == "Loutermeschit"
@@ -2384,7 +2385,7 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_djanet"]["b_tarr_hist"] == "Tasili n Adscherklûse"
         assert baronies["b_kaole"]["b_tarr_hist"] == "Zanzibarmeschit"
         # Round-6 final micro-polish checks
-        assert baronies["b_carrick"]["b_tarr_hist"] == "Baile An Ziûir"
+        assert baronies["b_carrick"]["b_tarr_hist"] == "Baile an Ziûir"
         assert baronies["b_labrang"]["b_tarr_hist"] == "Yar-Lung Zang-Po"
         assert baronies["b_Liao_Fengzhou3"]["b_tarr_direct"] == "Anningmarch"
         assert baronies["b_yongning"]["b_tarr_direct"] == "Nort-Lingtschiu"
@@ -2400,7 +2401,7 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_sokol"]["b_tarr_hist"] == "Sveti-Lûkas"
         assert baronies["b_st_andrews"]["b_tarr_hist"] == "Andrêasmunster"
         assert baronies["b_lemisele"]["b_tarr_hist"] == "Helga-Nîkôlôs"
-        assert baronies["b_lublin"]["b_tarr_hist"] == "Wass-de Tschegeburch"
+        assert baronies["b_lublin"]["b_tarr_hist"] == "Âgostonsburch"
         # Mary Magdalene & faith_saints Chancellery canonical stem checks
         assert baronies["b_morvan"]["b_tarr_hist"] == "Magdalênemunster"
         assert baronies["b_irdning"]["b_tarr_hist"] == "Magdalêneclôster"
@@ -2444,7 +2445,7 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_momunofu"]["b_tarr_hist"] == "Pirsichlêvende"
         assert baronies["b_mtskheta"]["b_tarr_hist"] == "Metzcheta"
         assert baronies["b_claudiopolis"]["b_tarr_hist"] == "Claudiobolu"
-        assert baronies["b_aqmescit"]["b_tarr_hist"] == "Skitian Neapelcastel"
+        assert baronies["b_aqmescit"]["b_tarr_hist"] == "Skitikê Neâpelcastel"
         assert baronies["b_battambang"]["b_tarr_hist"] == "Penom Samkostempel"
         assert baronies["b_amdo"]["b_tarr_hist"] == "Do-Smat"
 
@@ -2638,7 +2639,7 @@ class TestPhase0AndWave1HistoricalPhonology:
 
         # Phase 0: Slavic -ica/-c -> -tz-, Slovak vrchy preserved, Hungarian ő/ű preserved, Arabic/Slavic uncorrupted
         assert baronies["b_banjaluka"]["b_tarr_hist"] == "Tschemernitza"
-        assert baronies["b_bars"]["b_tarr_hist"] == "Stiavnickê werchy"
+        assert baronies["b_bars"]["b_tarr_hist"] == "Stiavnickê Werchy"
         assert baronies["b_bekes"]["b_tarr_hist"] == "Gepidâkör"
         assert baronies["b_constanta"]["b_tarr_hist"] == "Constanta"
         assert baronies["b_akik"]["b_tarr_hist"] == "Dschazîrat Mukawwarkirchen"
@@ -2658,7 +2659,7 @@ class TestPhase0AndWave1HistoricalPhonology:
             "b_aba-qomi": "Mêdîribât",
             "b_claudiopolis": "Claudiobolu",
             "b_claudiopolis_SELEUCIA": "Claudiopel",
-            "b_aqmescit": "Skitian Neapelcastel",
+            "b_aqmescit": "Skitikê Neâpelcastel",
             "b_athens": "Atên",
             "b_ephesos": "Efêstorn",
             "b_ankyra": "Ankira",
@@ -2802,7 +2803,7 @@ class TestWave2CelticAndGermanicPhonology:
             "b_gauldala": "Gauldalberch",
             "b_hedeby": "Sliestorpburch",
             "b_heiane": "Sirdalsvatnkirchen",
-            "b_kaddlhutt": "Vita hafhâven",
+            "b_kaddlhutt": "Vita Hafhâven",
             "b_laholm": "Loghâven",
             "b_messukyla": "Tafêistwerc",
             "b_norwegian_lister": "Fedafjorthâven",
@@ -2916,9 +2917,9 @@ class TestWave3SlavicAndMagyarPhonology:
             "b_kromeriz": "Chribystat",
             "b_bethen": "Opolanêtwert",
             "b_opole": "Opoletwert",
-            "b_abauj": "Zemplînske werchy",
+            "b_abauj": "Zemplînske Werchy",
             "b_arva": "Orawa",
-            "b_zolyom": "Stiavnickê werchy",
+            "b_zolyom": "Stiavnickê Werchy",
             "b_turoc": "Turôtz",
             # South Slavic
             "b_bihac": "Plêschewitza",
@@ -2941,7 +2942,7 @@ class TestWave3SlavicAndMagyarPhonology:
             "b_vyr": "Semimarct",
             "b_boryspil": "Duneprmeschit",
             "b_lyubech": "Dunepraltburch",
-            "b_rusa": "Ilmen sloweneostroch",
+            "b_rusa": "Ilmen Sloweneostroch",
             "b_demiianka": "Demiankaburch",
             "b_kletsk": "Eufrosyneburch",
             "b_lahishyn": "Jaseldastat",
@@ -3008,8 +3009,8 @@ class TestWave4SinosphereTurkoIranianAndColonial:
 
         expected_wave4 = {
             # Chinese Pinyin / Non-Track-S / Phonetic Sinosphere
-            "b_limu": "Wantschuân Hê",
-            "b_ariksar": "Tschüeêr Schân",
+            "b_limu": "Wantschuânhê",
+            "b_ariksar": "Tschüeêrschân",
             "b_nakhon_pathom": "Dôlôbôdî",
             "b_FIC_Amur_Heisenlin": "Dschingbeitôr",
             "b_FIC_Amur_Xijiadamo": "Schindschinmarct",
@@ -3025,7 +3026,7 @@ class TestWave4SinosphereTurkoIranianAndColonial:
             "b_FIC_Liao_Nandongkou": "Huntschunganghâven",
             "b_Goryeo_Yanggwan_Jukju": "Limarct",
             # Japanese Early Middle Japanese
-            "b_pogibi": "Mamija Kaikyôberch",
+            "b_pogibi": "Mamijakaikyôberch",
             "b_zenko_ji": "Togakuschi-Jama",
             "b_ochi": "Sahime-Jamaburch",
             "b_nukanobu": "Zuhohâven",
@@ -3040,7 +3041,7 @@ class TestWave4SinosphereTurkoIranianAndColonial:
             "b_arshan": "Kurikanburch",
             "b_niya": "Teklimakan Kumlukistat",
             "b_biia": "Bijaburch",
-            "b_bulun-tok": "Dschongar kakpasîmeschit",
+            "b_bulun-tok": "Dschongar Kakpasîmeschit",
             "b_salmas": "Salmasmeschit",
             "b_pecheneg": "Petschenegbühil",
             "b_jitikul": "Dschetikölbühil",
@@ -3050,7 +3051,7 @@ class TestWave4SinosphereTurkoIranianAndColonial:
             "b_yarkhoto": "Dschiaohefu",
             "b_kiia": "Kijaburch",
             "b_ortakuyu": "Sarikamischsêemarct",
-            "b_taskyl": "Jenisei kirgizlarîveste",
+            "b_taskyl": "Jenisei Kirgizlarîveste",
             "b_atamansku": "Baschkurdstein",
             # Early New Persian / Tajik / Kurdish / Pashto
             "b_abade-darabjerd": "Daryâtsche-je Bachtegânstein",
@@ -3081,6 +3082,65 @@ class TestWave4SinosphereTurkoIranianAndColonial:
             "b_arsjogk": "Kansêehâven",
         }
         for bk, exp in expected_wave4.items():
+            assert baronies[bk]["b_tarr_hist"] == exp, f"{bk}: got {baronies[bk]['b_tarr_hist']} != {exp}"
+
+    def test_multiword_cleanup_and_sinosphere_fusion(self):
+        with open(REPO_DIR / "data" / "barony_resolutions_v2.json", "r", encoding="utf-8") as f:
+            baronies = json.load(f)["baronies"]
+
+        expected_cleanup = {
+            # Stripped-head NTRs fixed
+            "b_almaraz": "Gredos",
+            "b_atapuerca": "Demandamarch",
+            "b_ballater": "Gâirestat",
+            "b_guinala": "Bubahâven",
+            "b_chom_thong": "Ang Kawîe",
+            "b_phrao": "Tschiang Daotempel",
+            # English/nobiliary leaks fixed
+            "b_PHI_Calayan": "Baschitempel",
+            "b_jarva": "Pandiverekirchen",
+            "b_kachma": "Oka-Donstat",
+            "b_keta": "Beninhâven",
+            "b_lome": "Beninmeschit",
+            "b_selkirk": "Yarrowstat",
+            "b_trotskhoper": "Oka-Donkirchen",
+            "b_winterstoke": "Somersetport",
+            "b_lublin": "Âgostonsburch",
+            # Apostrophe / particle / generic / digraph hygiene
+            "b_la_teste_de_buch": "Laca de Arcaischonburch",
+            "b_sassari": "Golfu de Asinare",
+            "b_belcoo": "Mac Nêanstat",
+            "b_alba_di_monferrato": "Alba di Monferratostat",
+            "b_sadrata": "Sûtwest-Aglan n Mesapburch",
+            "b_neue_weissenburg": "Wîzburch",
+            "b_wismar": "Mecklenburger Buchtveste",
+            "b_dholka": "Nal Sarovar",
+            "b_ranpur": "Nal Sarovar",
+            "b_bousaada": "Schatt al-Hudna",
+            "b_hisn_lawata": "Schatt al-Scharkî",
+            "b_tessalit": "Adach n Ifogasburch",
+            "b_uri": "Tilâl Tâgâbûmarct",
+            "b_gyirong": "Schiaojangtong",
+            # SE Asian 3-4 word atlas prefixes trimmed
+            "b_maha_sarakham": "Chorat",
+            "b_nong_bua": "Chorattempel",
+            "b_ban_pang": "Chouaytempel",
+            "b_kompong_saom": "Kampong Som",
+            "b_mondulkiri": "Annamtempel",
+            "b_tribhuvanamaheshvara": "Tonle Sap",
+            "b_krung_poi_pet": "Mongkol Borey",
+            # Sinosphere fusion & Stage-6 Procedure 1 calque preservation
+            "b_xamqu": "Niantschîng-Tânggulâlhachang",
+            "b_lingti": "Njan-Tschen Thang-Lhatempel",
+            "b_banbar": "Niantschîng-Tânggulâschânmai",
+            "b_nyang": "Yaluzangbudschiâng",
+            "b_FIC_Amur_Nalidu": "Tschâkanteburch",
+            "b_FIC_Liao_Huopingan": "Huangtempel",
+            "b_FIC_EMan_Shuilinhai": "Swartzdrachenmarct",
+            "b_fenyi": "Luschuistat",
+            "b_jinghai": "Huânghaistat",
+        }
+        for bk, exp in expected_cleanup.items():
             assert baronies[bk]["b_tarr_hist"] == exp, f"{bk}: got {baronies[bk]['b_tarr_hist']} != {exp}"
 
 

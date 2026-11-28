@@ -98,24 +98,27 @@ CJK_RE = re.compile(r"[\u3400-\u9FFF\uF900-\uFAFF]+")
 NTR_HEADWORD_RE = re.compile(
     r"^(?:"
     r"(?:Northern|Southern|Eastern|Western)\s+border\s+of|"
-    r"Gunung\s+Bukit|Doi\s+Phu|Mae\s+Nam|Al-Irk\s+al-|Al-Ba[hḥ]r\s+al-|Adrar\s+n|Asif\s+n|"
-    r"Thio\s+Khao|Milima\s+ya|Mfereji\s+wa|Monts\s+du|Monts\s+de|Plateau\s+de|Falaise\s+de|"
+    r"Gunung\s+Bukit|Doi\s+Luang|Doi\s+Phu|Phou\s+Luang|Phou\s+Khao|Mae\s+Nam|Lam\s+Nam|"
+    r"Thi\s+Rap\s+Sung|Thio\s+Khao\s+Phu|Thio\s+Khao|Chuor\s+Phnom|Chhoung\s+Samut|"
+    r"Al-Irk\s+al-|Al-Ba[hḥ]r\s+al-|Adrar\s+n|Asif\s+n|"
+    r"Milima\s+ya|Mfereji\s+wa|Monts\s+du|Monts\s+de|Plateau\s+de|Falaise\s+de|"
     r"Kipot\s+ng|Golpo\s+ng|Gulpo\s+sa|Look\s+ng|Lawa\s+ng|Tangway\s+ng|Suba\s+sang|Suba\s+sa|Isla\s+sa|"
     r"Cnoic\s+na|Slieve\s+|Carrick\s+|Monadh|Uisge|Bog\s+of|"
     r"Dary[āa]cheh?-?ye|Dasht-?e|R[ūu]d-?e|K[ūu]h-?e|"
     r"Nahr\s+al-|Nahr|W[āa]d[īi]|Bahr\s+al-|Bahr|Jabal|Jib[āa]l|Khal[īi]j|Munkhafa[dḍ]|"
     r"Qatork[ūu]hi|Vodii|Puszcza|Fforest|Fadamar|"
     r"Laut|Dagat|Sungai|Bukit|Gunung|Pegunungan|Kepulauan|Semenanjung|Danau|Selat|Pulau|Teluk|Tanjung|Kuala|Muara|Suku|Urang|Bundok|"
-    r"Tonle|Mae|Nam|Doi|Phu|"
+    r"Boeung|Stueng|Tonle|Mae|Nam|Doi|Phu|Khao|"
     r"Webi|Kogin|Mto|Odo|Ilog|Asif|Adrar|Mun[țt]ii|Muntzii|"
-    r"Loch|Glen|Strath|Port|Plain\s+of|Gulf\s+of|Bay\s+of|Strait\s+of|Lake|Mount|Mountain|River|Island|Inner|"
-    r"Ozero|Reka|Gora|Zaliv|Ostrov|R[íi]o|Lago|Monte|Sierra"
+    r"Loch(?:\s+(?:na|an|a['’]))?|Glen|Strath|Port|Plain\s+of|Gulf\s+of|Bay\s+of|Bight\s+of|Strait\s+of|Lake|Mount|Mountain|River|Island|Inner|"
+    r"Ozero|Reka|Gora|Zaliv|Ostrov|R[íi]o(?:\s+Grande\s+de|\s+de(?:\s+(?:l[ao]s?|el))?)?|Lago|Monte|Sierra(?:\s+de(?:\s+(?:l[ao]s?|el))?)?"
     r")\s+",
     re.I,
 )
 NTR_TRAILING_RE = re.compile(
     r"(?:\s+|-)"
     r"(?:people|tribe|group|river|lake|sea|mountain|mountains|range|hills|hill|plain|basin|valley|gulf|bay|strait|island|islands|peninsula|"
+    r"channel|upland|uplands|lowland|lowlands|levels|water|bight|"
     r"commandery|prefecture|province|district|downs|delta|"
     r"vozvyshennost|wozwyschennost|vysochyna|khrebet|dolina|reka|bardzravandak|hegys[ée]g|śṛṅkhalā|schrngchal[āa]|kafetañā\s+botāwoc|kalquligi)$",
     re.I,
@@ -169,6 +172,7 @@ def clean_ntr_stem_for_compounding(raw_form: str, iso_code: str | None, *, strip
     s = raw_form.lstrip("*").strip()
     if not s:
         return ""
+    s = re.sub(r"^Scythian\s+Neapolis\b", "Skythikê Neápolis", s)
     s = clean_wylie_tibetan(s, iso_code)
     if strip_heads:
         # Strip leading foreign/English classifier if >= 3 letters remain

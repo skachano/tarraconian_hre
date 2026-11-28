@@ -192,7 +192,9 @@ def adapt_eastern_romance_word(tok: str) -> str | None:
 
 
 def adapt_italo_romance_to_tarraconian(stem: str) -> tuple[str, bool]:
-    return _dispatch_phrase(stem, adapt_italo_romance_word)
+    # Strip Sardinian elided definite article s' before vowel-initial stems (e.g. s'Asinara -> Asinare)
+    s = re.sub(r"\bs['’](?=[A-ZÀ-ɏ])", "", stem)
+    return _dispatch_phrase(s, adapt_italo_romance_word, split_de_elision=True)
 
 
 def adapt_occitano_catalan_to_tarraconian(stem: str) -> tuple[str, bool]:

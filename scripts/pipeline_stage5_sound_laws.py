@@ -146,13 +146,15 @@ def pre_normalize_for_chancellery(s: str, is_sinosphere: bool = False, macro_fam
 
 _LOWERCASE_PARTICLES = {
     "van", "vom", "von", "am", "an", "in", "im", "der", "dem", "den",
-    "dat", "ende", "und", "al", "el", "de", "del", "du", "es", "er", "zu", "op",
+    "dat", "ende", "und", "al", "el", "de", "del", "della", "di", "da", "do",
+    "du", "des", "es", "er", "et", "at", "na", "no", "n", "wa", "cha",
+    "tscha", "ibn", "je", "i", "a", "zu", "op",
     "upon", "under", "the", "of",
 }
 
 _PROTECTED_H_SUFFIXES = (
     r"h(?:êilichdom|ôfstat|affburch|âven|aven|ûsen|ügil|ügel|irsch|imel|"
-    r"âgen|heim|irz|êde|ôch|olm|olz|ain|age|out|ôf|of|ûs|êl|îa)"
+    r"âgen|heim|irz|êde|ôch|olm|olz|ain|age|out|ôf|of|ûs|êl|îa|ê|û|ai)"
 )
 
 _PROTECTED_S_SUFFIXES = (
@@ -335,7 +337,7 @@ def apply_full_stage5_sound_laws(
     s = re.sub(r"mynster\b", "munster", s)
     s = re.sub(r"lhakhang\b", "lhachang", s)
     s = re.sub(r"kastel\b", "castel", s)
-    s = re.sub(r"\b([NnMm])([AEIOU][a-z]{2,})", lambda m: m.group(1).upper() + m.group(2).lower(), s)
+    s = re.sub(r"\b([NnMm])([AEIOUÂÊÎÔÛ][a-zâêîôû]{2,})", lambda m: m.group(1).upper() + m.group(2).lower(), s)
     s = re.sub(r"\b([A-Za-z]{1,2})([A-Z])(?=[a-z])", lambda m: m.group(1) + m.group(2).lower() if m.group(1) != "IJ" else m.group(0), s)
     s = re.sub(r"\b([A-Z][a-z]{1,2})([A-Z])\b", lambda m: m.group(1) + m.group(2).lower(), s)
     s = re.sub(r"[Aa]a", lambda m: "Â" if m.group(0)[0].isupper() else "â", s)
@@ -360,7 +362,7 @@ def apply_full_stage5_sound_laws(
     s = re.sub(r"flôz(?:flôz|wazzer)\b", "flôz", s, flags=re.I)
     s = re.sub(r"tzburch\b", "tzburch", s, flags=re.I)
     # Fix any surviving 'sh' not at a protected compound boundary
-    s = re.sub(r"(?<!c)[Ss]h(?!(?:eim|ûsen|âven|aven|ügil|irsch|êilichdom|îa|êl|ôch|olm|of|ûs|ain|age|al|out))", lambda m: "Sch" if m.group(0)[0].isupper() else "sch", s)
+    s = re.sub(r"(?<!c)[Ss]h(?!(?:eim|ûsen|âven|aven|ügil|irsch|êilichdom|îa|êl|ôch|olm|of|ûs|ain|age|al|out|ê|û|ai))", lambda m: "Sch" if m.group(0)[0].isupper() else "sch", s)
     # Fix any surviving 'eo' not after g/n/th
     s = re.sub(r"(?<!g)(?<!n)(?<!th)(?<!G)(?<!N)(?<!Th)eo", "ô", s)
     # Initial Ts- -> Z-, and medial post-vocalic/n/l -ts- -> -tz- (protected -t+s- seams exempt via \uE002)
@@ -370,6 +372,23 @@ def apply_full_stage5_sound_laws(
 
     # Restore protected compound seams before segment-level onset/coda hygiene
     s = s.replace("\uE001", "").replace("\uE002", "")
+
+    # Fuse separated Sinosphere <Stem> <Classifier> compounds (Item 3)
+    if is_sinosphere:
+        _sino_cls = (
+            "schânmai|schân|hê|dschiâng|hû|schui|ling|fêng|pêndi|gâojuân|"
+            "haischiâ|hai|guân|tschuân|tschang|tschau|tschêng|schâdi|dâo|kôu|wân|"
+            "pô|yâng|kaikyô|gowon|dogon|gaschan|gashan|he(?=bao|burch|stat|tempel)"
+        )
+        s = re.sub(
+            rf"\s+(({_sino_cls})[a-zâêîôûäöü]*)$",
+            lambda m: m.group(1).lower(),
+            s,
+            flags=re.I,
+        )
+        s = re.sub(r"\b(Da|Schiao)\s+([A-ZÂÊÎÔÛÄÖÜ])", lambda m: m.group(1) + m.group(2).lower(), s)
+        s = re.sub(r"\b(Yalu)\s+(Zangbu[a-zâêîôûäöü]+)", lambda m: m.group(1) + m.group(2).lower(), s)
+        s = re.sub(r"\b(Niantschîng)\s+(Tânggulâ[a-zâêîôûäöü]+)", lambda m: f"{m.group(1)}-{m.group(2)}", s)
 
     # Segment-level Rhine-Moselle onset & universal Auslautverhärtung across spaces & hyphens
     parts = re.split(r"([\s\-]+)", s)

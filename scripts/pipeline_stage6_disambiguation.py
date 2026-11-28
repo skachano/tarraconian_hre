@@ -330,6 +330,7 @@ def adapt_with_stage4(
         wave1_dec,
         kanji_readings=med_ctx["kanji_readings"],
         rup=is_rupture,
+        source_iso=eff_rec.get("selected_iso"),
     )
 
 
@@ -384,7 +385,15 @@ def render_ntr_candidate(
     if existing_gen and (existing_gen not in COASTAL_GENERICS or is_sea_coast):
         candidate_raw = base_tarr
     else:
-        if subtype in ("lake", "lagoon") and "sê" not in base_tarr.lower() and not re.search(r"(?:tscho|hû|hu)$", base_tarr, re.I):
+        if (
+            subtype in ("lake", "lagoon")
+            and "sê" not in base_tarr.lower()
+            and not re.search(
+                r"\b(?:sarovar|sâgar|schatt|shatt|chott|bahr|nuur|nor|kul|köl|göl|vatn|järvi|loch|lough|llyn|tscho|tsho|hû|hu|daryâtsche|tasich|lanaw|danau)\b",
+                base_tarr,
+                re.I,
+            )
+        ):
             candidate_raw = f"{base_tarr}sê"
         elif subtype in ("lake", "lagoon"):
             candidate_raw = base_tarr
@@ -395,6 +404,8 @@ def render_ntr_candidate(
                 candidate_raw = f"{base_tarr}burch"
             else:
                 candidate_raw = f"{base_tarr}stein"
+        elif ht == "castle" and base_tarr.lower().endswith("bucht"):
+            candidate_raw = f"{base_tarr}veste"
         else:
             church_gen = HOLDING_GENERIC_POOLS.get(ckey, ["kirchen"])[0]
             gen = {"castle": "burch", "city": "stat", "church": church_gen}.get(ht, "burch")
@@ -413,7 +424,15 @@ def build_generic_variants(
     """Generate Step 2 candidates by swapping or attaching holding-type generics."""
     ht = b_rec.get("holding_type", "castle")
     pool_key = _church_pool_key(b_rec, ruler_info)
-    non_christ = pool_key != "church" and ht == "church"
+    rel = ((ruler_info or {}).get("religion_type") or "").lower()
+    if rel:
+        is_christ = "christian" in rel
+    else:
+        is_christ = (
+            b_rec.get("coinage_culture") in {"Tarraconian", "Lothringian", "Croato-Tarraconian", "Alpine-Tarraconian", "Ungwârer"}
+            or (b_rec.get("coinage_morphology_family") not in NON_CHRISTIAN_FAMILIES and not b_rec.get("is_sinosphere_scope"))
+        )
+    non_christ = (not is_christ) or (pool_key != "church" and ht == "church")
     base, cur_gen = strip_holding_generic(current_name)
     pool = list(HOLDING_GENERIC_POOLS.get(pool_key, ["burch", "stat", "tempel" if non_christ else "kirchen"]))
     if is_sea_coast:
@@ -548,6 +567,12 @@ def resolve_barony_collision(
         if for_adjacent and any(normalize_phonetic_stem(cand) == normalize_phonetic_stem(n) for n in neighbor_names):
             return False
         return True
+
+    # Preserve Sinosphere Procedure 1 logographic calques by swapping holding generics before NTR fallback
+    if b_rec.get("calque_mode") == "sinosphere_procedure1_calque":
+        for cand_name in build_generic_variants(cur_name, b_rec, is_sea, ruler_info=ruler_info):
+            if passes(cand_name, strict_stem=False):
+                return cand_name, "step2_holding_generic", None
 
     # Step 1: Try 2nd or 3rd candidate in ranked_ntr_candidates (prefer non-adjacent collision too!)
     ntr_cands = b_rec.get("ranked_ntr_candidates") or []

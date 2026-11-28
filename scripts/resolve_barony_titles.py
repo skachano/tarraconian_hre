@@ -206,23 +206,45 @@ def enforce_tarraconian_sound_laws(name: str) -> str:
     # Strip any broken trailing punctuation
     s = s.rstrip(" (;,[{")
     
-    # Capitalize first letter of compound components while keeping grammatical prepositions lowercase
-    if "-" in s:
-        parts = s.split("-")
-        LOWERCASE_PARTICLES = {"in", "an", "der", "dem", "den", "am", "van", "vom", "von", "ende", "und", "el", "es", "er", "al", "de", "del", "du", "hügel"}
-        res_parts = []
-        for idx, p in enumerate(parts):
-            words = p.split(" ") if p else [""]
-            new_words = []
-            for w_idx, w in enumerate(words):
-                if (idx > 0 or w_idx > 0) and w.lower() in LOWERCASE_PARTICLES:
-                    new_words.append(w.lower())
+    # Capitalize first letter of compound/multi-word components while keeping grammatical particles lowercase
+    HYPHEN_LOWERCASE_PARTICLES = {
+        "in", "im", "an", "am", "auf", "der", "dem", "den", "des",
+        "van", "vom", "von", "ende", "und", "zu", "op",
+        "el", "es", "er", "al", "ul", "as", "ar", "de", "del", "du",
+        "e", "je", "n", "hügel",
+    }
+    SPACE_LOWERCASE_PARTICLES = HYPHEN_LOWERCASE_PARTICLES | {
+        "di", "da", "do", "dos", "das", "della", "dello", "dei", "degli", "delle",
+        "la", "le", "les", "at", "ad", "na", "nad", "pod", "yn", "yr",
+        "no", "wa", "cha", "tscha", "ibn", "bin", "ben", "abu", "umm",
+        "a", "y", "i", "o", "u", "sur", "sous", "en", "et", "ter", "ten", "zum", "zur",
+    }
+    space_tokens = s.split(" ")
+    new_space_tokens = []
+    for w_idx, tok in enumerate(space_tokens):
+        if not tok:
+            new_space_tokens.append("")
+            continue
+        if "-" not in tok:
+            low_t = tok.lower()
+            if w_idx > 0 and low_t in SPACE_LOWERCASE_PARTICLES:
+                new_space_tokens.append(low_t)
+            else:
+                new_space_tokens.append(tok[:1].upper() + tok[1:])
+        else:
+            subs = tok.split("-")
+            new_subs = []
+            for s_idx, sub in enumerate(subs):
+                if not sub:
+                    new_subs.append("")
+                    continue
+                low_sub = sub.lower()
+                if (w_idx > 0 or s_idx > 0) and low_sub in HYPHEN_LOWERCASE_PARTICLES:
+                    new_subs.append(low_sub)
                 else:
-                    new_words.append(w[:1].upper() + w[1:] if w else "")
-            res_parts.append(" ".join(new_words))
-        s = "-".join(res_parts)
-    else:
-        s = s[:1].upper() + s[1:] if s else ""
+                    new_subs.append(sub[:1].upper() + sub[1:])
+            new_space_tokens.append("-".join(new_subs))
+    s = " ".join(new_space_tokens)
         
     return s
 

@@ -227,6 +227,7 @@ def transliterate_stem_to_tarr(
     trans_rules: dict[str, Any],
     kanji_readings: dict[str, tuple[str, str, str]] | None = None,
     is_rupture: bool = False,
+    source_iso: str | None = None,
 ) -> tuple[str, list[str]]:
     """
     Cascade-free single-pass phonological adaptation:
@@ -339,6 +340,14 @@ def transliterate_stem_to_tarr(
         if subs_map.get("ch") == "tsch":
             subs_map.pop("ch", None)
 
+    # Adapt Berber/Tamazight 'gh' (Adagh -> Adach, Ifoghas -> Ifogas) and Sahara Arabic Tāghābū -> Tâgâbû
+    # even when transmitted through Pontic/African rulers
+    if (source_iso or "").lower() in {"ber", "tzm", "zgh", "kab", "shi"}:
+        s = re.sub(r"gh\b", "ch", s, flags=re.I)
+        subs_map.setdefault("gh", "g")
+    elif (source_iso or "").lower() == "ara" and re.search(r"t[aā]gh[aā]b", s, re.I):
+        subs_map.setdefault("gh", "g")
+
     if subs_map:
         # Protect longer Chancellery digraphs so single-pass never tears apart sch/tsch/dsch/tz
         for protected in ("dsch", "tsch", "sch", "tz"):
@@ -370,6 +379,7 @@ def transliterate_stem_to_tarr(
     if tf in {"sinosphere_chinese", "korean", "japonic", "viet", "khitan", "tungusic"}:
         s = re.sub(r"\b[Yy](?=[aeiou])", lambda m: "J" if m.group(0).isupper() else "j", s)
         s = re.sub(r"\b[Tt]z", lambda m: "Z" if m.group(0)[0].isupper() else "z", s)
+    s = re.sub(r"\bXiao\s+Yangtong\b", "Schiaojangtong", s)
 
     # Diacritic & acute -> circumflex normalization (Rule 1)
     char_rep = {
@@ -383,10 +393,11 @@ def transliterate_stem_to_tarr(
         "ł": "l", "Ł": "L", "ń": "n", "Ń": "N", "þ": "th", "Þ": "Th", "ð": "d", "Ð": "D",
         "ʿ": "", "ʾ": "", "'": "", "ı": "i",
     }
-    # Avoid mid-word CamelCase when stripping apostrophes or Gaelic eclipsis prefixes
-    # (N'Echach / nEchach -> Nechach, N'Zi -> Nzi, Pa'O -> Pao, d'Arcachon -> Darcaischon)
+    # Expand Romance de-elision (d'Arcaishon -> de Arcaishon) and fix mid-word CamelCase
+    # from stripped apostrophes or Gaelic eclipsis prefixes (N'Echach -> Nechach, Mac nÊan -> Mac Nêan)
+    s = re.sub(r"\bd['’](?=[A-ZÀ-ɏ])", "de ", s)
     s = re.sub(r"\b([A-Za-z])'([A-Z]+)", lambda m: m.group(1) + m.group(2).lower(), s)
-    s = re.sub(r"\b([NnMm])([AEIOU][a-z]{2,})", lambda m: m.group(1).upper() + m.group(2).lower(), s)
+    s = re.sub(r"\b([NnMm])([AEIOUÂÊÎÔÛ][a-zâêîôû]{2,})", lambda m: m.group(1).upper() + m.group(2).lower(), s)
     s = "".join(char_rep.get(c, c) for c in s)
     s = re.sub(r"(?:ch){2,}", "ch", s, flags=re.I)
     s = re.sub(r"(?:tsch){2,}", "tsch", s, flags=re.I)
@@ -405,7 +416,8 @@ def norm_stage4a(s_in: str) -> str:
         "ū": "û", "Ū": "Û", "ú": "û", "Ú": "Û",
         "ʿ": "", "ʾ": "", "'": "",
     }
-    return "".join(rep.get(ch, ch) for ch in s_in)
+    res = "".join(rep.get(ch, ch) for ch in s_in)
+    return re.sub(r"\b([NnMm])([AEIOUÂÊÎÔÛ][a-zâêîôû]{2,})", lambda m: m.group(1).upper() + m.group(2).lower(), res)
 
 
 def adapt_stage4a_text(
@@ -420,6 +432,7 @@ def adapt_stage4a_text(
     kanji_readings: dict | None = None,
     rup: bool = False,
     force_gallo: bool = False,
+    source_iso: str | None = None,
 ) -> str:
     """Adapt a stem via an active Stage 4A historical decoder (with token-level fallback)."""
     if kanji_readings is not None and txt:
@@ -479,7 +492,7 @@ def adapt_stage4a_text(
                     fb_prof = "general_phonetic_adaptation" if (same_fam_prof and use_prof == same_fam_prof) else use_prof
                     fb_tok, _ = transliterate_stem_to_tarr(
                         tok, fb_prof, coin_fam, trans_fam, inter_map, trans_rules,
-                        kanji_readings=kanji_readings, is_rupture=rup,
+                        kanji_readings=kanji_readings, is_rupture=rup, source_iso=source_iso,
                     )
                     rebuilt.append(fb_tok)
             else:
@@ -488,7 +501,7 @@ def adapt_stage4a_text(
         return res_mixed[:1].upper() + res_mixed[1:] if res_mixed and res_mixed[0].islower() else res_mixed
     res, _ = transliterate_stem_to_tarr(
         txt, use_prof, coin_fam, trans_fam, inter_map, trans_rules,
-        kanji_readings=kanji_readings, is_rupture=rup,
+        kanji_readings=kanji_readings, is_rupture=rup, source_iso=source_iso,
     )
     return res
 
@@ -765,6 +778,7 @@ def run_stage4() -> dict[str, Any]:
                 kanji_readings=kanji_readings,
                 rup=rup,
                 force_gallo=force_gallo,
+                source_iso=r3.get("selected_iso"),
             )
 
         if is_true_latin:
@@ -797,6 +811,7 @@ def run_stage4() -> dict[str, Any]:
                     tarr_direct, inter_notes = transliterate_stem_to_tarr(
                         coined_form, eff_trans_prof, coin_fam, trans_fam, inter_map, trans_rules,
                         kanji_readings=kanji_readings, is_rupture=is_rupture,
+                        source_iso=r3.get("selected_iso"),
                     )
         elif wave1_dec:
             inter_notes = []
@@ -805,6 +820,7 @@ def run_stage4() -> dict[str, Any]:
             tarr_direct, inter_notes = transliterate_stem_to_tarr(
                 coined_form, eff_trans_prof, coin_fam, trans_fam, inter_map, trans_rules,
                 kanji_readings=kanji_readings, is_rupture=is_rupture,
+                source_iso=r3.get("selected_iso"),
             )
 
         tarr_direct = _strip_eng_meta(tarr_direct)
