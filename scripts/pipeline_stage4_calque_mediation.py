@@ -672,7 +672,7 @@ def _attach_tarr_generic(
             stem, _ = reduce_stem_for_suffixing(stem, is_ruler_eponym=is_ruler, morphology_family=morph_fam)
         return f"{stem}burch"
     stem = mod_tarr
-    if " " in stem:
+    if " " in stem or ("-" in stem and not is_ruler):
         stem, _ = reduce_stem_for_suffixing(stem, is_ruler_eponym=is_ruler, morphology_family=morph_fam)
     return f"{stem}{g_clean}"
 

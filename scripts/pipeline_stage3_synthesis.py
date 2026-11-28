@@ -363,7 +363,7 @@ def assemble_compound(
     else:
         g_clean = g_form.lstrip("-")
         # Single-Stem Compounding Law: bound suffixes only attach to a single word
-        if joiner == "" and " " in mod:
+        if joiner == "" and (" " in mod or ("-" in mod and not is_ruler_eponym)):
             mod, _ = reduce_stem_for_suffixing(
                 mod, is_ruler_eponym=is_ruler_eponym, morphology_family=morphology_family
             )
@@ -821,9 +821,10 @@ def run_stage3() -> dict[str, Any]:
 
             elif effective_arch == "vain_dynastic":
                 # Choose between cleaned first_name (70%) and non-circular house_name (30% on castles/cities when available)
-                # Exclude multi-word nobiliary house predicates (e.g. Hungarian 'Wass-de Czege')
+                # Exclude multi-word nobiliary house predicates (e.g. 'Wass-de Czege') and hyphenated cadet branches (e.g. 'Kestenholz-Metz')
                 has_nobiliary = bool(re.search(r"[\s\-](?:de|von|van|of|af)[\s\-]", house_clean, re.I))
-                use_dyn = use_house and not has_nobiliary and (ht in {"castle", "church"} and int(hashlib.md5(bk.encode()).hexdigest()[:4], 16) % 10 < 3)
+                is_cadet_hyphen = "-" in house_clean
+                use_dyn = use_house and not has_nobiliary and not is_cadet_hyphen and (ht in {"castle", "church"} and int(hashlib.md5(bk.encode()).hexdigest()[:4], 16) % 10 < 3)
                 if use_dyn or not ruler_ono:
                     mod_nat = house_clean
                     mod_tarr = ono_by_clean.get(house_clean, {}).get("tarr_compound_prefix", house_clean)
@@ -832,6 +833,11 @@ def run_stage3() -> dict[str, Any]:
                 else:
                     mod_nat = ruler_ono["clean_name"]
                     mod_tarr = ruler_ono["tarr_compound_prefix"] if gen_obj["affix_position"] == "suffix" else ruler_ono["tarr_name"]
+                    # Split double-barreled European given names (e.g. 'Joan-Guerau' -> 'Joan' / 'Johann')
+                    if "-" in mod_nat and fam_key not in {"korean", "arabic", "berber", "west_central_african", "east_bantu_swahili"}:
+                        mod_nat = mod_nat.split("-")[0]
+                        if mod_tarr and "-" in mod_tarr:
+                            mod_tarr = mod_tarr.split("-")[0]
                     mod_hz_eponym = ruler_ono.get("hanzi_chars")
                     eponym_kind = "ruler_personal_name"
                 coined_form = assemble_compound(mod_nat, gen_obj, compound_order, is_ruler_eponym=True, morphology_family=fam_key)

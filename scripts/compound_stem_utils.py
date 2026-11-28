@@ -37,7 +37,7 @@ EXPANDED_HEAD_PAT = re.compile(
     r"Massif\s+des?|Mer\s+de|Golfu\s+de|Picos\s+de|Strasse\s+von|Ports?\s+de|Portz\s+de|Koad\s+ar|Koat\s+ar|"
     r"Kipot\s+ng|Golpo\s+ng|Gulpo\s+sa|Look\s+ng|Lawa\s+ng|Tangway\s+ng|Suba\s+sang|Suba\s+sa|Isla\s+sa|"
     r"Cnoic\s+na|Sliav\s+an|Sliabh\s+an|Slieve|Carrick|Monadh|Uisge|Bog\s+of|"
-    r"Daryatsche-?ye|Daryatsche-?je|Daryacheh?-?ye|Hamun-?e|Dasht-?e|Rud-?e|Kuh-?e|Koh-?e|"
+    r"Daryatsche-?ye|Daryatsche-?je|Daryacheh?-?ye|Kuhha-?ye|Kuhha-?je|Hamun-?e|Dasht-?e|Rud-?e|Kuh-?e|Koh-?e|"
     r"Nahr\s+al-|Nahr|Wadi|Bahr\s+al-|Bahr|Jabal|Jibal|Khalij|Munkhafad|"
     r"Qatorkuhi|Vodii|Puszcza|Fforest|Fadamar|"
     r"Laut|Dagat|Sungai|Bukit|Bukid|Bulkang|Gunung|Gunong|Pegunungan|Kepulauan|Semenanjung|"
@@ -188,6 +188,104 @@ def strip_classifiers_diacritic_insensitive(s: str, *, max_passes: int = 3) -> s
     return cur
 
 
+
+PRESERVED_HYPHEN_PREFIX_RE = re.compile(
+    r"^(?:Nordôst|Nordwest|Sûtôst|Sûtwest|Nord|Nort|Sût|Ôst|West|Ober|Nider|Mittel|Alt|Nîe|Neu|"
+    r"Swartz|Wîz|Rôt|Blou|Grôz|Klein|Hilich|Hilig|Zant|Sankt|Saint|San|Castel|"
+    r"Al|El|As|Ar|At|Ad|An|Az|Ash|Aš|Asch|Atz)-",
+    re.I,
+)
+
+HYPHEN_TAIL_STRIP_RE = re.compile(
+    r"-(?:hyeon|hjôn|hjon|gun|r[ûu]d|r[ûu]t|gawa|k[ûu]h|k[ôo]h|m?tsho|tscho|tschu|chu|"
+    r"k[öo]l|g[öo]l|t?schai|chai|dascht|dasht|schatt|shatt|hegys[ée]g|k[öo]z[êe]phedjsch[êe]g|"
+    r"k[öo]z[ée]phegys[ée]g|fjorden|fjort|fjord)$",
+    re.I,
+)
+
+HYPHEN_PREP_LINK_RE = re.compile(r"-(?:e|ye|je|n|de|du|des|al|l)-.+$", re.I)
+
+
+def _fuse_hyphen_parts(parts: list[str]) -> str:
+    """Fuse hyphenated syllable parts cleanly (lowercasing non-initial parts, avoiding vowel/consonant clashes)."""
+    if not parts:
+        return ""
+    res = parts[0]
+    for p in parts[1:]:
+        if not p:
+            continue
+        low_p = p[:1].lower() + p[1:]
+        # Avoid creating aa/oo/uu double vowels at seam
+        if res[-1].lower() == low_p[0].lower() and res[-1].lower() in "aou":
+            low_p = low_p[1:]
+        res = res + low_p
+    return res
+
+
+def reduce_hyphenated_stem(stem: str, *, morphology_family: str = "") -> tuple[str, str]:
+    """
+    Clean non-prefix hyphenated stems before bound suffixation:
+    - Preserves Germanic/Latin/Arabic prefixes (Zant-, Castel-, Nord-, Al-, etc.).
+    - Strips hyphenated Korean admin tags (-hyeon/-gun) and geo generic tails (-rūd/-gawa/-tscho/-chu).
+    - Strips hyphenated prepositional tails (-e-Shatt, -n-Taghes).
+    - Reduces reduplicated forms (Hilong-Hilong -> Hilong).
+    - Fuses clean syllable-hyphenated stems (Yar-Lung -> Yarlung, Seng-Ge -> Sengge) unless fusing
+      would create a >3-consonant medial cluster or an overlong (>14-char) compound.
+    """
+    s = stem.strip()
+    if "-" not in s:
+        return s, "no_hyphen"
+
+    # Extract and preserve any leading directional/Zant/Castel/Al- prefix
+    pref = ""
+    m_pref = PRESERVED_HYPHEN_PREFIX_RE.match(s)
+    if m_pref:
+        pref = m_pref.group(0)
+        s = s[len(pref):]
+        if "-" not in s:
+            return pref + s, "preserved_prefix"
+
+    # 1. Strip hyphenated prepositional tails (-e-Shatt, -n-Taghes, -l-Marwa)
+    m_pl = HYPHEN_PREP_LINK_RE.search(s)
+    if m_pl:
+        head = s[: m_pl.start()].strip("-")
+        if _alpha_len(head) >= 3:
+            s = head
+            if "-" not in s:
+                return pref + s, "hyphen_prep_clipped"
+
+    # 2. Iteratively strip hyphenated admin/geographic generic tails (-Hjôn, -Gun, -Rûd, -Gawa, -Tschu, -Tscho)
+    for _ in range(2):
+        m_ht = HYPHEN_TAIL_STRIP_RE.search(s)
+        if not m_ht:
+            break
+        rest = s[: m_ht.start()].strip("-")
+        if _alpha_len(rest) >= 3:
+            s = rest
+        else:
+            break
+    if "-" not in s:
+        return pref + s, "hyphen_tail_stripped"
+
+    parts = [p for p in s.split("-") if p]
+    if len(parts) == 1:
+        return pref + parts[0], "hyphen_single"
+
+    # 3. Reduplicated Austronesian stems (Hilong-Hilong -> Hilong, Waray-Waray -> Waray)
+    if len(parts) == 2 and parts[0].lower() == parts[1].lower() and _alpha_len(parts[0]) >= 3:
+        return pref + parts[0], "hyphen_reduplicated_trimmed"
+
+    # 4. Fuse syllable-hyphenated stems (Tibetan/Sinosphere/Turkic) if compact & phonotactically safe
+    fused = _fuse_hyphen_parts(parts)
+    consonant_run = max((len(m.group(0)) for m in re.finditer(r"[bcdfghjklmnpqrstvwxz]+", strip_diacritics(fused).lower())), default=0)
+    if _alpha_len(fused) <= 14 and consonant_run <= 3 and not re.search(r"(?:aa|oo|(?<!q)uu|ts(?![ch]))", fused.lower()):
+        return pref + fused, "hyphen_fused"
+
+    # 5. Long/heavy hyphenated compound -> take first salient part if >= 3 letters, else last
+    picked = parts[0] if _alpha_len(parts[0]) >= 3 else parts[-1]
+    return pref + picked, "hyphen_head_selected"
+
+
 def reduce_stem_for_suffixing(
     stem: str,
     *,
@@ -195,12 +293,18 @@ def reduce_stem_for_suffixing(
     morphology_family: str = "",
 ) -> tuple[str, str]:
     """
-    Reduce any multi-word stem to a single phonological word before bound suffixation.
+    Reduce any multi-word or hyphenated compound stem to a clean single phonological word
+    before bound suffixation.
 
     Returns `(reduced_stem, rule_applied)`.
     """
     s = stem.strip()
-    if not s or " " not in s:
+    if not s:
+        return s, "empty"
+    if " " not in s:
+        if "-" in s and not is_ruler_eponym:
+            red_h, h_rule = reduce_hyphenated_stem(s, morphology_family=morphology_family)
+            return strip_leading_al_prefix(red_h), h_rule
         return strip_leading_al_prefix(s), "already_single"
 
     # 1. Ruler eponyms: extract personal/clan head token rather than Dynasty + GivenName
@@ -237,6 +341,8 @@ def reduce_stem_for_suffixing(
     content_toks = [t for t in toks if t.lower() not in STOP_TOKENS] or toks
     is_head_initial = (morphology_family or "").lower() in HEAD_INITIAL_FAMILIES
     picked = content_toks[-1] if is_head_initial else content_toks[0]
+    if "-" in picked:
+        picked, _ = reduce_hyphenated_stem(picked, morphology_family=morphology_family)
     return strip_leading_al_prefix(picked), (
         "head_select_last" if is_head_initial else "head_select_first"
     )

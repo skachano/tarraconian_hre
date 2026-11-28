@@ -389,7 +389,7 @@ def render_ntr_candidate(
         candidate_raw = base_tarr
     else:
         # Single-Stem Compounding Law: reduce multi-word NTR stem before suffixing
-        if " " in base_tarr:
+        if " " in base_tarr or "-" in base_tarr:
             base_tarr, _ = reduce_stem_for_suffixing(base_tarr, morphology_family=morph_fam)
         if (
             subtype in ("lake", "lagoon")
@@ -453,7 +453,7 @@ def build_generic_variants(
     out = []
     # Strip trailing hyphenated joiners cleanly and enforce single-stem compounding
     stem = base.rstrip(" -")
-    if " " in stem:
+    if " " in stem or "-" in stem:
         stem, _ = reduce_stem_for_suffixing(stem, morphology_family=b_rec.get("coinage_morphology_family", ""))
     for gen in pool:
         if gen == cur_gen:
