@@ -2351,7 +2351,7 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_chateaudun"]["b_tarr_hist"] == "Tschâtôdün"
         assert baronies["b_baoshun"]["b_tarr_hist"] == "Snellbachtempel"
         assert baronies["b_baoshun"]["b_hanzi"] == "溪州"
-        assert baronies["b_aso"]["b_tarr_hist"] == "Dangs-Ra Yu-Tscho"
+        assert baronies["b_aso"]["b_tarr_hist"] == "Dangs-Ra"
         # Round-4 polish regression checks
         assert baronies["b_lidou"]["b_tarr_hist"] == "Jueschipalz"
         assert baronies["b_ijesha"]["b_tarr_hist"] == "Oduduwawîe"
@@ -2368,7 +2368,7 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_alexandretta"]["b_tarr_hist"] == "Alexandriacastel"
         assert baronies["b_potamuskastel"]["b_tarr_hist"] == "Potamucastel"
         # Round-5 polish regression checks
-        assert baronies["b_altenburg"]["b_tarr_hist"] == "Pleissestat"
+        assert baronies["b_altenburg"]["b_tarr_hist"] == "Osterlant"
         assert baronies["b_tecso"]["b_tarr_hist"] == "Theissmarct"
         assert baronies["b_wusuta"]["b_tarr_hist"] == "Eveawôveste"
         assert baronies["b_hor"]["b_tarr_hist"] == "Ma-Pham-Yu-Tscho"
@@ -2377,15 +2377,15 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_utsunomiya"]["b_tarr_hist"] == "Futâra"
         assert baronies["b_utsunomiya"]["b_hanzi"] == "二荒山"
         assert baronies["b_wakasa"]["b_tarr_hist"] == "Wakasa"
-        assert baronies["b_wolong"]["b_tarr_hist"] == "Yaluzangbudschiângmarct"
+        assert baronies["b_wolong"]["b_tarr_hist"] == "Yalumarct"
         assert baronies["b_stcatherine"]["b_tarr_hist"] == "Verclêrungeclôster"
         assert baronies["b_athy"]["b_tarr_hist"] == "Allenmarct"
         assert baronies["b_rigar"]["b_tarr_hist"] == "Loutermeschit"
         assert baronies["b_lingui"]["b_tarr_hist"] == "Bî-dem-Lôrber"
-        assert baronies["b_djanet"]["b_tarr_hist"] == "Tasili n Adscherklûse"
+        assert baronies["b_djanet"]["b_tarr_hist"] == "Adscherklûse"
         assert baronies["b_kaole"]["b_tarr_hist"] == "Zanzibarmeschit"
         # Round-6 final micro-polish checks
-        assert baronies["b_carrick"]["b_tarr_hist"] == "Baile an Ziûir"
+        assert baronies["b_carrick"]["b_tarr_hist"] == "Baile Ziûir"
         assert baronies["b_labrang"]["b_tarr_hist"] == "Yar-Lung Zang-Po"
         assert baronies["b_Liao_Fengzhou3"]["b_tarr_direct"] == "Anningmarch"
         assert baronies["b_yongning"]["b_tarr_direct"] == "Nort-Lingtschiu"
@@ -2422,15 +2422,15 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_annaba"]["b_tarr_hist"] == "Hippôn-Rêch"
         assert baronies["b_branicevo"]["b_tarr_hist"] == "Viminâzjenveste"
         assert baronies["b_alghero"]["b_tarr_hist"] == "Castel-Sardô"
-        assert baronies["b_ditmarschen"]["b_tarr_hist"] == "Germântorn"
+        assert baronies["b_ditmarschen"]["b_tarr_hist"] == "Egdortorn"
         assert baronies["b_palo"]["b_tarr_hist"] == "Tyrrhênhâven"
         assert baronies["b_douz"]["b_tarr_hist"] == "Tritônkirchen"
-        assert baronies["b_kraszna"]["b_tarr_hist"] == "Mesêsenstein"
+        assert baronies["b_kraszna"]["b_tarr_hist"] == "Sâmstein"
         assert baronies["b_feher"]["b_tarr_hist"] == "Apûlvâr"
         assert baronies["b_kolomyia"]["b_tarr_hist"] == "Pyrêtkirkja"
         assert baronies["b_al-hajar_nubia"]["b_tarr_hist"] == "Nîlmarct"
         assert baronies["b_abrantes"]["b_tarr_hist"] == "Ozecarmeschit"
-        assert baronies["b_qasr_ash-shams"]["b_tarr_hist"] == "Marmarikestat"
+        assert baronies["b_qasr_ash-shams"]["b_tarr_hist"] == "Marmarike"
         assert baronies["b_al-bahriya"]["b_tarr_hist"] == "Dschesdsches"
         # Revised 4-layer phonotactics remediation checks
         assert baronies["b_ak-taylak"]["b_tarr_hist"] == "Ach-Taylatschburch"
@@ -2440,13 +2440,13 @@ class TestBaronyCoinageAndContext:
         assert baronies["b_beichtinen"]["b_tarr_hist"] == "Smückeschanze"
         assert baronies["b_al-hadr"]["b_tarr_hist"] == "Al-Hader"
         assert baronies["b_hargeisa"]["b_tarr_hist"] == "Ôgomeschit"
-        assert baronies["b_kandat_uul"]["b_tarr_hist"] == "Kandat Ûl"
+        assert baronies["b_kandat_uul"]["b_tarr_hist"] == "Kandatstein"
         assert baronies["b_leiyang"]["b_tarr_hist"] == "Plûgsunnen"
         assert baronies["b_momunofu"]["b_tarr_hist"] == "Pirsichlêvende"
         assert baronies["b_mtskheta"]["b_tarr_hist"] == "Metzcheta"
         assert baronies["b_claudiopolis"]["b_tarr_hist"] == "Claudiobolu"
-        assert baronies["b_aqmescit"]["b_tarr_hist"] == "Skitikê Neâpelcastel"
-        assert baronies["b_battambang"]["b_tarr_hist"] == "Penom Samkostempel"
+        assert baronies["b_aqmescit"]["b_tarr_hist"] == "Neâpelcastel"
+        assert baronies["b_battambang"]["b_tarr_hist"] == "Penomsamkostempel"
         assert baronies["b_amdo"]["b_tarr_hist"] == "Do-Smat"
 
     def test_pipeline_stage1_routing(self):
@@ -2642,7 +2642,7 @@ class TestPhase0AndWave1HistoricalPhonology:
         assert baronies["b_bars"]["b_tarr_hist"] == "Stiavnickê Werchy"
         assert baronies["b_bekes"]["b_tarr_hist"] == "Gepidâkör"
         assert baronies["b_constanta"]["b_tarr_hist"] == "Constanta"
-        assert baronies["b_akik"]["b_tarr_hist"] == "Dschazîrat Mukawwarkirchen"
+        assert baronies["b_akik"]["b_tarr_hist"] == "Mukawwarkirchen"
         assert baronies["b_al-janad"]["b_tarr_hist"] == "Al-Dschanat"
         assert baronies["b_cherykaw"]["b_tarr_hist"] == "Soschmarct"
         assert baronies["b_slonim"]["b_tarr_hist"] == "Scharastat"
@@ -2659,7 +2659,7 @@ class TestPhase0AndWave1HistoricalPhonology:
             "b_aba-qomi": "Mêdîribât",
             "b_claudiopolis": "Claudiobolu",
             "b_claudiopolis_SELEUCIA": "Claudiopel",
-            "b_aqmescit": "Skitikê Neâpelcastel",
+            "b_aqmescit": "Neâpelcastel",
             "b_athens": "Atên",
             "b_ephesos": "Efêstorn",
             "b_ankyra": "Ankira",
@@ -2705,7 +2705,7 @@ class TestPhase0AndWave1HistoricalPhonology:
             "b_bucuresti": "Dâmbovitze",
             "b_calafat": "Dunere",
             "b_pitesti": "Vedeburch",
-            "b_orsova": "Portzile de Fierstat",
+            "b_orsova": "Albotschensistat",
             "b_viipuri": "Varjagitburch",
             "b_sortavala": "Karjalaischetburch",
         }
@@ -2745,29 +2745,29 @@ class TestWave2CelticAndGermanicPhonology:
 
         expected_wave2 = {
             # Goidelic Celtic (incl. Tarraconian-held Gaelic NTR substrates)
-            "b_adragh": "Sliav an Iarainnwal",
-            "b_ardee": "An Nîhâven",
+            "b_adragh": "Iarainnwal",
+            "b_ardee": "Nîhâven",
             "b_armagh": "Armâ",
-            "b_badenoch": "Am Monâ Liatcastel",
-            "b_biggar": "Dail Tuaikirchen",
+            "b_badenoch": "Liatcastel",
+            "b_biggar": "Dailtuaikirchen",
             "b_clackmannan": "Devanstat",
             "b_gairloch": "Ma-Ruivehâven",
             "b_kilcudbrite": "Gall-Gêlburch",
-            "b_kilkenny": "Kill Cnoc Werêanail",
+            "b_kilkenny": "Kill Werêanail",
             "b_kilmarten": "Dunatwal",
             "b_meneith": "Keiteireinstat",
             "b_penicuick": "Pentlantstein",
             "b_raphoe": "Rafô",
-            "b_tain": "Avainn Chonainnmarch",
-            "b_the_uists": "Caolas Varraikirchen",
-            "b_wigtown": "Bâ Lûskirchen",
+            "b_tain": "Decantemarch",
+            "b_the_uists": "Beinnvôrkirchen",
+            "b_wigtown": "Bâlûskirchen",
             # Brythonic Celtic
             "b_caerphilly": "Avon Rymni",
             "b_cardigan": "Môr Iwerdon",
             "b_carmarthen": "Caervyrdin",
             "b_cornouailles": "Cornualje",
             "b_corwen": "Rodristat",
-            "b_ludlow": "Avon Teveidiatstat",
+            "b_ludlow": "Teveidiatstat",
             "b_pembroke": "Aberdaugledau",
             "b_shrewsbury": "Dinle Ureconn",
             "b_treguier": "Trêgier",
@@ -2803,7 +2803,7 @@ class TestWave2CelticAndGermanicPhonology:
             "b_gauldala": "Gauldalberch",
             "b_hedeby": "Sliestorpburch",
             "b_heiane": "Sirdalsvatnkirchen",
-            "b_kaddlhutt": "Vita Hafhâven",
+            "b_kaddlhutt": "Vitahafhâven",
             "b_laholm": "Loghâven",
             "b_messukyla": "Tafêistwerc",
             "b_norwegian_lister": "Fedafjorthâven",
@@ -2821,7 +2821,7 @@ class TestWave2CelticAndGermanicPhonology:
             "b_vualtjere": "Malgomajkirchen",
             "b_wigton": "Sulwat",
             # Regression / collateral guards
-            "b_eisenach": "Türinger Waltkirchen",
+            "b_eisenach": "Türingerkirchen",
             "b_dumbarton": "Alcluit",
             "b_kinsale": "Seitekirchen",
             "b_thurso": "Tursowal",
@@ -2893,8 +2893,8 @@ class TestWave3SlavicAndMagyarPhonology:
             "b_karachev": "Wentitjiburch",
             "b_belev": "Wentitjiribât",
             "b_miliez": "Slenschanewart",
-            "b_checiny": "Lysy Gorykirchen",
-            "b_kielce": "Lysy Gorystein",
+            "b_checiny": "Nidekirchen",
+            "b_kielce": "Lysitzastein",
             "b_opatow": "Wislamarct",
             "b_otmunchow": "Nisamarct",
             "b_krakow": "Wisljanewart",
@@ -2934,7 +2934,7 @@ class TestWave3SlavicAndMagyarPhonology:
             "b_kalyatta": "Wutschapel",
             "b_kavurskotokale": "Wutschacastel",
             "b_philippopolis": "Filippopel",
-            "b_ribnica": "Kotschewski Rogkirchen",
+            "b_ribnica": "Kotschewskikirchen",
             "b_visoki": "Fojnitza",
             # East Slavic (incl. Tarraconian-held Far East NTR, 12c yers, Y->J/ii->i)
             "b_gomel": "Castel-Suschi",
@@ -2942,15 +2942,15 @@ class TestWave3SlavicAndMagyarPhonology:
             "b_vyr": "Semimarct",
             "b_boryspil": "Duneprmeschit",
             "b_lyubech": "Dunepraltburch",
-            "b_rusa": "Ilmen Sloweneostroch",
+            "b_rusa": "Ilmenostroch",
             "b_demiianka": "Demiankaburch",
             "b_kletsk": "Eufrosyneburch",
             "b_lahishyn": "Jaseldastat",
             "b_dorohychyn": "Jatwyahyaltburch",
             "b_fic_eman_usalgin": "Jam-Alinwîe",
-            "b_fic_eman_chlya": "Amûrhâven",
+            "b_fic_eman_chlya": "Udylhâven",
             "b_fic_eman_dusse_alin": "Burejatempel",
-            "b_gdov": "Tschudkirchen",
+            "b_gdov": "Scheltschakirchen",
             "b_pskov": "Peskowburch",
             "b_noteborg": "Newâltburch",
             "b_ovruch": "Uschkirchen",
@@ -3014,10 +3014,10 @@ class TestWave4SinosphereTurkoIranianAndColonial:
             "b_nakhon_pathom": "Dôlôbôdî",
             "b_FIC_Amur_Heisenlin": "Dschingbeitôr",
             "b_FIC_Amur_Xijiadamo": "Schindschinmarct",
-            "b_Liao_Wuzhou2": "Jangtscheng Duveste",
+            "b_Liao_Wuzhou2": "Duveste",
             "b_Liao_Dading": "Fengdschiveste",
             "b_hukou": "Hukouwacht",
-            "b_FIC_Liao_Yaluan": "Sôkjông Jangberch",
+            "b_FIC_Liao_Yaluan": "Jangberch",
             # Korean Early Middle Korean
             "b_Goryeo_Bukgye_Seogyeong": "Pjongjang",
             "b_Goryeo_Jeolla_Seungpyeong": "Süngpjôngpo",
@@ -3026,58 +3026,58 @@ class TestWave4SinosphereTurkoIranianAndColonial:
             "b_FIC_Liao_Nandongkou": "Huntschunganghâven",
             "b_Goryeo_Yanggwan_Jukju": "Limarct",
             # Japanese Early Middle Japanese
-            "b_pogibi": "Mamijakaikyôberch",
+            "b_pogibi": "Mamijaberch",
             "b_zenko_ji": "Togakuschi-Jama",
             "b_ochi": "Sahime-Jamaburch",
             "b_nukanobu": "Zuhohâven",
             # Lý Dynasty Sino-Vietnamese & Middle Vietnamese
             "b_banh_it": "Fu Kwîwerder",
-            "b_bo_chinh": "Njât Lêflôz",
-            "b_ma_linh": "Tatsch Hanflôz",
+            "b_bo_chinh": "Njâtlêstat",
+            "b_ma_linh": "Tatsch Han",
             "b_malithit": "Cam Ranjbucht",
-            "b_vijaya": "Tschüöng Sönberch",
-            "b_quang_ngai": "Lî Sönwerdertempel",
+            "b_vijaya": "Côn",
+            "b_quang_ngai": "Lîsönwerdertempel",
             # Middle Turkic (q->k, qu->ku, J->Dsch, Deryasi->flôz, -mescit->-meschit)
             "b_arshan": "Kurikanburch",
-            "b_niya": "Teklimakan Kumlukistat",
+            "b_niya": "Saktarstat",
             "b_biia": "Bijaburch",
-            "b_bulun-tok": "Dschongar Kakpasîmeschit",
+            "b_bulun-tok": "Dschongarmeschit",
             "b_salmas": "Salmasmeschit",
             "b_pecheneg": "Petschenegbühil",
             "b_jitikul": "Dschetikölbühil",
             "b_julym": "Tschulîmburch",
-            "b_argan": "Tarimflôzmarct",
+            "b_argan": "Lopnurmarct",
             "b_yengi_xahar": "Gezflôz",
             "b_yarkhoto": "Dschiaohefu",
             "b_kiia": "Kijaburch",
             "b_ortakuyu": "Sarikamischsêemarct",
-            "b_taskyl": "Jenisei Kirgizlarîveste",
+            "b_taskyl": "Alataustein",
             "b_atamansku": "Baschkurdstein",
             # Early New Persian / Tajik / Kurdish / Pashto
-            "b_abade-darabjerd": "Daryâtsche-je Bachtegânstein",
+            "b_abade-darabjerd": "Zâgrosstein",
             "b_andijan": "Karodarjô",
             "b_naqad": "Karodarjôstat",
             "b_bannajbur": "Pandschgur",
-            "b_bhera": "Kôh-e Dschûdstein",
+            "b_bhera": "Dschûdstein",
             "b_jarquh": "Dscharkûh",
-            "b_basawa": "Tschijajên Zagrosêstein",
+            "b_basawa": "Kurdstein",
             "b_loralai": "Kale-Keigobadît",
             "b_shughnan": "Kale-Schugnân",
             "b_nasrabad": "Kale-Challuch",
             "b_dun": "Dschazîre-je Lârach",
-            "b_jask": "Tange-je Hormoz",
-            "b_riqan": "Dschebâl Bârez",
+            "b_jask": "Rûdchâneh-je Dschâgîn",
+            "b_riqan": "Dschebâlburch",
             "b_qazvin": "Kazwinburch",
             # Colonial Wrapper Hygiene (West Africa, Flanders, Iberia, North Russia)
-            "b_accra": "Ginêebuchtmeschit",
-            "b_arondo": "Sênêgalflôzmeschit",
-            "b_diafunu": "Sênêgalflôzstat",
-            "b_kolokani": "Mandingberchmeschit",
-            "b_whyidah": "Bênînbuchthâven",
-            "b_veurne": "Moerenkirchen",
-            "b_dunkirk": "Nortmêrport",
-            "b_cieza": "Kordiljêre Bêtikewart",
-            "b_guardo": "Cordiljere Cantâbrikewart",
+            "b_accra": "Densumeschit",
+            "b_arondo": "Karakoromeschit",
+            "b_diafunu": "Kolinbinêstat",
+            "b_kolokani": "Mandinguesmeschit",
+            "b_whyidah": "Lacahêmêhâven",
+            "b_veurne": "Moereskirchen",
+            "b_dunkirk": "Blôtlantport",
+            "b_cieza": "Segurawart",
+            "b_guardo": "Carriônwart",
             "b_korelskoye": "Koschsêeveste",
             "b_arsjogk": "Kansêehâven",
         }
@@ -3094,8 +3094,8 @@ class TestWave4SinosphereTurkoIranianAndColonial:
             "b_atapuerca": "Demandamarch",
             "b_ballater": "Gâirestat",
             "b_guinala": "Bubahâven",
-            "b_chom_thong": "Ang Kawîe",
-            "b_phrao": "Tschiang Daotempel",
+            "b_chom_thong": "Angkawîe",
+            "b_phrao": "Yonakatempel",
             # English/nobiliary leaks fixed
             "b_PHI_Calayan": "Baschitempel",
             "b_jarva": "Pandiverekirchen",
@@ -3107,19 +3107,19 @@ class TestWave4SinosphereTurkoIranianAndColonial:
             "b_winterstoke": "Somersetport",
             "b_lublin": "Âgostonsburch",
             # Apostrophe / particle / generic / digraph hygiene
-            "b_la_teste_de_buch": "Laca de Arcaischonburch",
-            "b_sassari": "Golfu de Asinare",
-            "b_belcoo": "Mac Nêanstat",
-            "b_alba_di_monferrato": "Alba di Monferratostat",
-            "b_sadrata": "Sûtwest-Aglan n Mesapburch",
-            "b_neue_weissenburg": "Wîzburch",
-            "b_wismar": "Mecklenburger Buchtveste",
-            "b_dholka": "Nal Sarovar",
-            "b_ranpur": "Nal Sarovar",
-            "b_bousaada": "Schatt al-Hudna",
-            "b_hisn_lawata": "Schatt al-Scharkî",
-            "b_tessalit": "Adach n Ifogasburch",
-            "b_uri": "Tilâl Tâgâbûmarct",
+            "b_la_teste_de_buch": "Lacaburch",
+            "b_sassari": "Asinare",
+            "b_belcoo": "Macnêanstat",
+            "b_alba_di_monferrato": "Albastat",
+            "b_sadrata": "Al-Irkburch",
+            "b_neue_weissenburg": "Neuestat",
+            "b_wismar": "Obodritiburch",
+            "b_dholka": "Kolîburch",
+            "b_ranpur": "Nalsarovarsê",
+            "b_bousaada": "Hudnasê",
+            "b_hisn_lawata": "Scharkîsê",
+            "b_tessalit": "Adachburch",
+            "b_uri": "Innîdîmarct",
             "b_gyirong": "Schiaojangtong",
             # SE Asian 3-4 word atlas prefixes trimmed
             "b_maha_sarakham": "Chorat",
@@ -3127,18 +3127,18 @@ class TestWave4SinosphereTurkoIranianAndColonial:
             "b_ban_pang": "Chouaytempel",
             "b_kompong_saom": "Kampong Som",
             "b_mondulkiri": "Annamtempel",
-            "b_tribhuvanamaheshvara": "Tonle Sap",
+            "b_tribhuvanamaheshvara": "Sap",
             "b_krung_poi_pet": "Mongkol Borey",
             # Sinosphere fusion & Stage-6 Procedure 1 calque preservation
-            "b_xamqu": "Niantschîng-Tânggulâlhachang",
-            "b_lingti": "Njan-Tschen Thang-Lhatempel",
-            "b_banbar": "Niantschîng-Tânggulâschânmai",
+            "b_xamqu": "Niantschînglhachang",
+            "b_lingti": "Njan-Tschentempel",
+            "b_banbar": "Tôrnflôz",
             "b_nyang": "Yaluzangbudschiâng",
             "b_FIC_Amur_Nalidu": "Tschâkanteburch",
             "b_FIC_Liao_Huopingan": "Huangtempel",
             "b_FIC_EMan_Shuilinhai": "Swartzdrachenmarct",
             "b_fenyi": "Luschuistat",
-            "b_jinghai": "Huânghaistat",
+            "b_jinghai": "Tschângdschiângstat",
         }
         for bk, exp in expected_cleanup.items():
             assert baronies[bk]["b_tarr_hist"] == exp, f"{bk}: got {baronies[bk]['b_tarr_hist']} != {exp}"

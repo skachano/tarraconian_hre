@@ -34,17 +34,17 @@ EXPANDED_HEAD_PAT = re.compile(
     r"Schatt\s+al-|Shatt\s+al-|Chott\s+al-|Hadabat\s+al-|Hawr\s+al-|"
     r"Jazirat\s+al-|Dschazirat\s+al-|Batn\s+al-|Kudyat\s+al-|Umm\s+al-|Ras\s+al-|"
     r"Milima\s+ya|Mfereji\s+wa|Monts\s+du|Monts\s+de|Plateau\s+de|Falaise\s+de|"
-    r"Massif\s+des?|Mer\s+de|Golfu\s+de|Strasse\s+von|Ports?\s+de|Portz\s+de|Koad\s+ar|Koat\s+ar|"
+    r"Massif\s+des?|Mer\s+de|Golfu\s+de|Picos\s+de|Strasse\s+von|Ports?\s+de|Portz\s+de|Koad\s+ar|Koat\s+ar|"
     r"Kipot\s+ng|Golpo\s+ng|Gulpo\s+sa|Look\s+ng|Lawa\s+ng|Tangway\s+ng|Suba\s+sang|Suba\s+sa|Isla\s+sa|"
     r"Cnoic\s+na|Sliav\s+an|Sliabh\s+an|Slieve|Carrick|Monadh|Uisge|Bog\s+of|"
-    r"Daryatsche-?ye|Daryatsche-?je|Daryacheh?-?ye|Hamun-?e|Dasht-?e|Rud-?e|Kuh-?e|"
+    r"Daryatsche-?ye|Daryatsche-?je|Daryacheh?-?ye|Hamun-?e|Dasht-?e|Rud-?e|Kuh-?e|Koh-?e|"
     r"Nahr\s+al-|Nahr|Wadi|Bahr\s+al-|Bahr|Jabal|Jibal|Khalij|Munkhafad|"
     r"Qatorkuhi|Vodii|Puszcza|Fforest|Fadamar|"
     r"Laut|Dagat|Sungai|Bukit|Bukid|Bulkang|Gunung|Gunong|Pegunungan|Kepulauan|Semenanjung|"
     r"Danau|Selat|Pulau|Teluk|Tanjung|Kuala|Muara|Suku|Urang|Bundok|"
     r"Foho|Mota|Kali|Batang|Tasik|Tasich|Lanaw|Krueng|Segenting|Song|Nui|Ao|Prey|Daen|"
     r"Boeung|Stueng|Tonle|Mae|Nam|Doi|Phu|Khao|"
-    r"Webi|Kogin|Mto|Odo|Laga|Ilog|Asif\s+n|Adrar\s+n|Aglan\s+n|Tasili\s+n|Asif|Adrar|Muntii|Muntzii|"
+    r"Webi|Kogin|Mto|Odo|Laga|Ilog|Asif\s+n|Adrar\s+n|Idraren\s+n|Aglan\s+n|Tasili\s+n|Asif|Adrar|Muntii|Muntzii|"
     r"Shatt|Schatt|Chott|Hadabat|Hawr|Chawr|Khawr|Jazirat|Dschazirat|Juzur|Dschuzur|Batn|Kudyat|Ras|"
     r"Loch(?:\s+(?:na|an|a'))?|Glen|Strath|Port|Plain\s+of|Gulf\s+of|Bay\s+of|Bight\s+of|Strait\s+of|"
     r"Lake|Mount|Mountain|River|Island|Inner|"
@@ -66,7 +66,7 @@ EXPANDED_TAIL_PAT = re.compile(
     r"vozvyshennost|wozwyschennost|vysochyna|khrebet|dolina|reka|bardzravandak|hegyseg|"
     r"srnkhala|schrngchala|kafetana\s+botawoc|kalquligi|"
     r"Gol|Nuruu|Nuru|Ula|Uul|Ul|Nuur|Nur|Kuh|Nadi|Yoma|Denu|Doab|Pahariya|"
-    r"Vrchy|Werchy|Taung|Tscho|Tsho|Take|Oypaty|Tizmisi|Eremos|Central|Prebetic|"
+    r"Taung|Tscho|Tsho|Take|Oypaty|Tizmisi|Eremos|Central|Prebetic|"
     r"Slovene|Slowene|Dschun|Jun|Dao|Dschimi|Jimi"
     r")$",
     re.I,
@@ -91,7 +91,7 @@ HEAD_INITIAL_FAMILIES = {
 
 BOUND_TARR_SUFFIX_RE = re.compile(
     r"(?:burch|stat|stein|tempel|veste|meschit|kirchen|marct|ribât|"
-    r"hâven|wîe|wart|berch|march|zelle|flôz|wal|castel|klûse|vurt|"
+    r"hâven|wîe|wart|march|zelle|flôz|wal|castel|klûse|vurt|"
     r"munde|palz|tôr)$",
     re.I,
 )
@@ -163,9 +163,13 @@ def strip_classifiers_diacritic_insensitive(s: str, *, max_passes: int = 3) -> s
     cur = s.strip()
     if " " not in cur:
         return cur
+    _BARE_ARABIC_GENERICS = {
+        "schatt", "shatt", "chott", "bahr", "al-bahr", "jabal", "wadi",
+        "nahr", "sahra", "al-sahra", "hawr", "hadabat", "jazirat", "ras",
+    }
     for _ in range(max_passes):
         nxt_adj = match_suffix_diacritic_insensitive(cur, ARABIC_ADJ_TAIL)
-        if nxt_adj and nxt_adj != cur:
+        if nxt_adj and nxt_adj != cur and strip_diacritics(nxt_adj).lower() not in _BARE_ARABIC_GENERICS:
             cur = nxt_adj
         else:
             break

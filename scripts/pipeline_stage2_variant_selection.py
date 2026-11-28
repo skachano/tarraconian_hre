@@ -415,10 +415,15 @@ def score_ntr_candidate(
     chosen_lang = lv.get("language") if lv else None
     clean_stem = clean_ntr_stem_for_compounding(chosen_form, chosen_iso, strip_heads=True)
 
-    # Brevity & macro-feature penalties (prefer compact local stems over sprawling phrases/macro-seas)
+    # Brevity & macro-feature penalties (only penalize multi-word stems; never demote clean 1-word stems like Gredos)
     stem_words = len(clean_stem.split())
-    brevity_pen = -18 if stem_words >= 3 else (-8 if stem_words == 2 else 0)
-    macro_pen = -10 if sub in {"sea", "strait", "desert", "dune_field", "region", "mountain_range"} else 0
+    if stem_words >= 3:
+        brevity_pen = -18
+    elif stem_words == 2 and (stage1_rec.get("requires_stage3_synthesis") or cat == "tribe"):
+        brevity_pen = -8
+    else:
+        brevity_pen = 0
+    macro_pen = -10 if (stem_words >= 2 and sub in {"sea", "strait", "desert", "dune_field", "region"}) else 0
 
     total_score = float(base + iso_bonus + brevity_pen + macro_pen)
 
