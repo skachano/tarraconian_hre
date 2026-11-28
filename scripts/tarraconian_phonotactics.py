@@ -29,6 +29,8 @@ import sys
 from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
+
+from compound_stem_utils import BOUND_TARR_SUFFIX_RE
 from typing import Any, Iterable
 
 try:
@@ -512,6 +514,42 @@ class TarraconianPhonotacticsValidator:
                         cleaned,
                         ctx,
                         detail=f"Disallowed character(s) {others} outside 1194 Chancellery inventory.",
+                    ),
+                )
+
+        # Title-level Layer 4 multi-word compounding integrity (barony tier)
+        is_barony_ctx = (ctx.title_key or "").startswith("b_")
+        if is_barony_ctx and " " in cleaned:
+            raw_words = cleaned.split()
+            attested_tracks = {
+                "Track_A_retained",
+                "Track_A_coinage_overrule",
+                "Track_B_historical_names",
+                "Track_B_existing_natural",
+                "Track_S_pre867_attested",
+                "Track_S_pre867_overruled",
+                "Track_S_post867_historical_anchor",
+            }
+            if len(raw_words) >= 2 and BOUND_TARR_SUFFIX_RE.search(raw_words[-1]):
+                self._add(
+                    violations,
+                    self._make_violation(
+                        "L4_GLUED_SUFFIX_ON_MULTIWORD",
+                        cleaned,
+                        raw_words[-1],
+                        ctx,
+                        detail=f"Bound settlement suffix glued to multi-word barony '{cleaned}'.",
+                    ),
+                )
+            if len(raw_words) >= 3 and ctx.pipeline_track and ctx.pipeline_track not in attested_tracks:
+                self._add(
+                    violations,
+                    self._make_violation(
+                        "L4_NON_ATTESTED_MAX_WORDS",
+                        cleaned,
+                        cleaned,
+                        ctx,
+                        detail=f"Non-attested barony '{cleaned}' has {len(raw_words)} words (max 2).",
                     ),
                 )
 

@@ -25,6 +25,8 @@ import json
 import re
 from collections import Counter
 from pathlib import Path
+
+from compound_stem_utils import strip_classifiers_diacritic_insensitive
 from typing import Any
 
 REPO_DIR = Path(__file__).resolve().parent.parent
@@ -179,7 +181,7 @@ def clean_ntr_stem_for_compounding(raw_form: str, iso_code: str | None, *, strip
         m = NTR_HEADWORD_RE.match(s)
         if m:
             rest = s[m.end():].strip()
-            if len(re.sub(r"[^A-Za-zÀ-ɏ]", "", rest)) >= 3:
+            if len(re.sub(r"[^A-Za-zÀ-ɏ]", "", rest)) >= 3 and not re.match(r"^(?:nf|ng|mb|nd|nk|nt|nz|mp|mg|mv|ml|mr|mn)", rest, re.I):
                 s = rest
         # Strip trailing geographic/administrative classifiers
         for _ in range(2):
@@ -191,6 +193,8 @@ def clean_ntr_stem_for_compounding(raw_form: str, iso_code: str | None, *, strip
                 s = rest2
             else:
                 break
+        # Diacritic-tolerant stripping of Arabic postnominal adjectives & expanded foreign classifiers
+        s = strip_classifiers_diacritic_insensitive(s, max_passes=3)
         # Translate surviving English/Slavic directional or color NTR qualifiers (e.g. Black Volta -> Swartz-Volta)
         for pat, repl in ENGLISH_NTR_PREFIX_MAP:
             if pat.match(s):
@@ -405,11 +409,18 @@ def score_ntr_candidate(
     if is_sino and lv and lv.get("native_script") and extract_cjk_chars(lv["native_script"]):
         iso_bonus += 18
 
-    total_score = float(base + iso_bonus)
     chosen_form = (lv["form"] if lv and lv.get("form") else None) or cand.get("localisation_stem") or cand.get("name") or ""
     chosen_native = lv.get("native_script") if lv else None
     chosen_iso = (lv.get("language_code") or lv.get("iso_639_3")) if lv else None
     chosen_lang = lv.get("language") if lv else None
+    clean_stem = clean_ntr_stem_for_compounding(chosen_form, chosen_iso, strip_heads=True)
+
+    # Brevity & macro-feature penalties (prefer compact local stems over sprawling phrases/macro-seas)
+    stem_words = len(clean_stem.split())
+    brevity_pen = -18 if stem_words >= 3 else (-8 if stem_words == 2 else 0)
+    macro_pen = -10 if sub in {"sea", "strait", "desert", "dune_field", "region", "mountain_range"} else 0
+
+    total_score = float(base + iso_bonus + brevity_pen + macro_pen)
 
     resolved_entry = {
         "candidate_name": cand.get("name"),
@@ -418,7 +429,7 @@ def score_ntr_candidate(
         "feature_subtype": sub,
         "score": total_score,
         "selected_form": chosen_form,
-        "clean_stem": clean_ntr_stem_for_compounding(chosen_form, chosen_iso, strip_heads=True),
+        "clean_stem": clean_stem,
         "native_script": chosen_native,
         "selected_iso": chosen_iso,
         "selected_language": chosen_lang,

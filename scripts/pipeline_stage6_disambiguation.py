@@ -33,6 +33,8 @@ from collections import Counter, defaultdict
 from difflib import SequenceMatcher
 import json
 from pathlib import Path
+
+from compound_stem_utils import reduce_stem_for_suffixing
 import re
 import sys
 
@@ -382,9 +384,13 @@ def render_ntr_candidate(
     _base_clean, existing_gen = strip_holding_generic(base_tarr)
     subtype = (cand.get("feature_subtype") or "").lower()
 
+    morph_fam = b_rec.get("coinage_morphology_family", "")
     if existing_gen and (existing_gen not in COASTAL_GENERICS or is_sea_coast):
         candidate_raw = base_tarr
     else:
+        # Single-Stem Compounding Law: reduce multi-word NTR stem before suffixing
+        if " " in base_tarr:
+            base_tarr, _ = reduce_stem_for_suffixing(base_tarr, morphology_family=morph_fam)
         if (
             subtype in ("lake", "lagoon")
             and "sê" not in base_tarr.lower()
@@ -445,8 +451,10 @@ def build_generic_variants(
             pool.append(extra)
 
     out = []
-    # Strip trailing hyphenated joiners cleanly
+    # Strip trailing hyphenated joiners cleanly and enforce single-stem compounding
     stem = base.rstrip(" -")
+    if " " in stem:
+        stem, _ = reduce_stem_for_suffixing(stem, morphology_family=b_rec.get("coinage_morphology_family", ""))
     for gen in pool:
         if gen == cur_gen:
             continue
@@ -477,7 +485,12 @@ def build_directional_variants(
     )
     out = []
     # Try combining directional prefix with plain stem AND with a varied generic if needed
-    base, _ = strip_holding_generic(stripped_dir)
+    morph_fam = b_rec.get("coinage_morphology_family", "")
+    base, cur_gen = strip_holding_generic(stripped_dir)
+    if " " in base:
+        base, _ = reduce_stem_for_suffixing(base, morphology_family=morph_fam)
+    if " " in stripped_dir:
+        stripped_dir = f"{base}{cur_gen}" if cur_gen else base
     ht = b_rec.get("holding_type", "castle")
     alt_gen = {"castle": "stein", "city": "marct", "church": "zelle"}.get(ht, "stat")
 

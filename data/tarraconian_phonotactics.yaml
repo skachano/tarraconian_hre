@@ -663,6 +663,16 @@ rules:
     severity: "warning"
     guide_ref: "§ 2.2, Rule 3"
     description: "Bare 'j' appears on an affricate-prone stratum (Sinosphere/Indic/Korean/Arabic/African); verify whether [j] glide or [dʒ] ('dsch')."
+  L4_GLUED_SUFFIX_ON_MULTIWORD:
+    layer: "L4_metrical_stratum"
+    severity: "error"
+    guide_ref: "Single-Stem Compounding Law"
+    description: "Bound Tarraconian settlement suffix is glued onto the final token of a multi-word barony name."
+  L4_NON_ATTESTED_MAX_WORDS:
+    layer: "L4_metrical_stratum"
+    severity: "error"
+    guide_ref: "Single-Stem Compounding Law"
+    description: "Non-attested barony name exceeds the 2-word syntactic ceiling."
 
 # ---------------------------------------------------------------------------
 # 6. Audited Exemption Registry

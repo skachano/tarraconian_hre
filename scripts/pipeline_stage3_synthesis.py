@@ -31,6 +31,8 @@ import json
 import re
 from collections import Counter, defaultdict
 from pathlib import Path
+
+from compound_stem_utils import reduce_stem_for_suffixing
 from typing import Any
 
 from ck3_name_decoder import decode_ck3_personal_name
@@ -334,7 +336,14 @@ SETTLEMENT_SUFFIXES = (
 )
 
 
-def assemble_compound(modifier: str, generic: dict[str, Any], compound_order: str) -> str:
+def assemble_compound(
+    modifier: str,
+    generic: dict[str, Any],
+    compound_order: str,
+    *,
+    is_ruler_eponym: bool = False,
+    morphology_family: str = "",
+) -> str:
     """Assemble `(modifier, generic)` cleanly avoiding tautological hyphens/spaces."""
     g_form = generic["form"]
     pos = generic.get("affix_position", "suffix")
@@ -342,12 +351,22 @@ def assemble_compound(modifier: str, generic: dict[str, Any], compound_order: st
 
     mod = modifier.strip()
     if pos == "prefix":
+        # Cap head-initial prefix loans at 2 words by reducing multi-word modifiers
+        if " " in mod:
+            mod, _ = reduce_stem_for_suffixing(
+                mod, is_ruler_eponym=is_ruler_eponym, morphology_family=morphology_family
+            )
         g_clean = g_form.strip()
         if g_clean.endswith("-"):
             return f"{g_clean}{mod}"
         return f"{g_clean} {mod}".strip()
     else:
         g_clean = g_form.lstrip("-")
+        # Single-Stem Compounding Law: bound suffixes only attach to a single word
+        if joiner == "" and " " in mod:
+            mod, _ = reduce_stem_for_suffixing(
+                mod, is_ruler_eponym=is_ruler_eponym, morphology_family=morphology_family
+            )
         # Avoid double suffix if mod already ends with generic stem or equivalent Germanic settlement suffix
         if mod.lower().endswith(g_clean.lower()) and len(mod) > len(g_clean) + 2:
             return mod
@@ -748,7 +767,7 @@ def run_stage3() -> dict[str, Any]:
                 )
 
             def make_landscape_record() -> tuple[str, dict[str, Any]]:
-                form = assemble_compound(land_stem, gen_obj, compound_order)
+                form = assemble_compound(land_stem, gen_obj, compound_order, morphology_family=fam_key)
                 rec = {
                     "text": land_stem,
                     "tarr_equivalent": None,
@@ -815,7 +834,7 @@ def run_stage3() -> dict[str, Any]:
                     mod_tarr = ruler_ono["tarr_compound_prefix"] if gen_obj["affix_position"] == "suffix" else ruler_ono["tarr_name"]
                     mod_hz_eponym = ruler_ono.get("hanzi_chars")
                     eponym_kind = "ruler_personal_name"
-                coined_form = assemble_compound(mod_nat, gen_obj, compound_order)
+                coined_form = assemble_compound(mod_nat, gen_obj, compound_order, is_ruler_eponym=True, morphology_family=fam_key)
                 mod_record = {
                     "text": mod_nat,
                     "tarr_equivalent": mod_tarr,
@@ -880,7 +899,7 @@ def run_stage3() -> dict[str, Any]:
 
             else:
                 # Topographic / Natural Default: Stage 2 NTR stem (or pre-867 stem) + native generic!
-                coined_form = assemble_compound(land_stem, gen_obj, compound_order)
+                coined_form = assemble_compound(land_stem, gen_obj, compound_order, morphology_family=fam_key)
                 b_hint = building_concept_hint(phys, r2["stem_category"])
                 mod_record = {
                     "text": land_stem,

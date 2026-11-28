@@ -3144,13 +3144,54 @@ class TestWave4SinosphereTurkoIranianAndColonial:
             assert baronies[bk]["b_tarr_hist"] == exp, f"{bk}: got {baronies[bk]['b_tarr_hist']} != {exp}"
 
 
+class TestMultiWordBaronyHygiene:
+    """Enforce Single-Stem Compounding Law and multi-word reduction invariants on barony_resolutions_v2.json."""
 
+    def test_zero_glued_suffixes_and_word_ceiling(self):
+        import sys
+        sys.path.insert(0, str(REPO_DIR / "scripts"))
+        from compound_stem_utils import BOUND_TARR_SUFFIX_RE
 
+        with open(REPO_DIR / "data" / "barony_resolutions_v2.json", "r", encoding="utf-8") as f:
+            baronies = json.load(f)["baronies"]
 
+        attested_tracks = {
+            "Track_A_retained",
+            "Track_A_coinage_overrule",
+            "Track_B_historical_names",
+            "Track_B_existing_natural",
+            "Track_S_pre867_attested",
+            "Track_S_pre867_overruled",
+            "Track_S_post867_historical_anchor",
+        }
+        glued_failures = []
+        word_ceiling_failures = []
 
+        for bk, rec in baronies.items():
+            if not rec.get("is_occupied"):
+                continue
+            name = (rec.get("name") or "").strip()
+            words = name.split()
+            if len(words) >= 2 and BOUND_TARR_SUFFIX_RE.search(words[-1]):
+                glued_failures.append((bk, name))
+            if len(words) >= 4:
+                word_ceiling_failures.append((bk, name, rec.get("pipeline_track")))
+            elif len(words) == 3 and rec.get("pipeline_track") not in attested_tracks:
+                word_ceiling_failures.append((bk, name, rec.get("pipeline_track")))
 
+        assert glued_failures == [], f"Multi-word baronies with glued bound suffixes: {glued_failures[:10]}"
+        assert word_ceiling_failures == [], f"Baronies exceeding multi-word ceiling: {word_ceiling_failures[:10]}"
 
+    def test_pinned_multiword_reduction_fixtures(self):
+        with open(REPO_DIR / "data" / "barony_resolutions_v2.json", "r", encoding="utf-8") as f:
+            baronies = json.load(f)["baronies"]
 
-
-
-
+        assert baronies["b_rusa"]["name"] == "Ilmenostroch"
+        assert " " not in baronies["b_ajlu"]["name"]
+        assert baronies["b_aqmescit"]["name"] == "Neâpelcastel"
+        assert baronies["b_nako"]["name"] == "Pur-Gyalla"
+        assert baronies["b_alba_di_monferrato"]["name"] == "Albastat"
+        assert baronies["b_PHI_Binalbagan"]["name"] == "Kanlaontempel"
+        assert " " not in baronies["b_berwick"]["name"]
+        assert baronies["b_alcacerdosal"]["name"] == "Alcâcer do Sal"
+        assert baronies["b_aintab"]["name"] == "Antiochia at Taurum"

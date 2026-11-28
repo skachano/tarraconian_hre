@@ -31,6 +31,8 @@ import json
 import re
 from collections import Counter
 from pathlib import Path
+
+from compound_stem_utils import reduce_stem_for_suffixing
 from typing import Any
 
 from sino_barony_kanji_ext import SINO_BARONY_KANJI_EXT
@@ -650,6 +652,31 @@ def match_descriptive_audit_calque(
     return "".join(pieces), ordered
 
 
+
+def _attach_tarr_generic(
+    mod_tarr: str,
+    g_calque: str,
+    *,
+    is_ruler: bool = False,
+    morph_fam: str = "",
+) -> str:
+    """Attach a Tarraconian generic cleanly, enforcing single-stem compounding for bound suffixes."""
+    g_clean = g_calque.strip("-")
+    if g_calque.startswith("Zant-"):
+        return f"Zant-{mod_tarr}"
+    if g_calque.endswith("-"):
+        return f"{g_calque}{mod_tarr}"
+    if g_calque.startswith("Castel-"):
+        stem = mod_tarr
+        if " " in stem:
+            stem, _ = reduce_stem_for_suffixing(stem, is_ruler_eponym=is_ruler, morphology_family=morph_fam)
+        return f"{stem}burch"
+    stem = mod_tarr
+    if " " in stem:
+        stem, _ = reduce_stem_for_suffixing(stem, is_ruler_eponym=is_ruler, morphology_family=morph_fam)
+    return f"{stem}{g_clean}"
+
+
 def run_stage4() -> dict[str, Any]:
     with open(DATA_DIR / "pipeline_stage3_synthesized.json", "r", encoding="utf-8") as f:
         s3 = json.load(f)["baronies"]
@@ -891,7 +918,9 @@ def run_stage4() -> dict[str, Any]:
                     if tc_raw.startswith("Zant") or tc_raw.endswith("-"):
                         tarr_hist = f"{tc_raw}{mod_adapt}"
                     else:
-                        tarr_hist = f"{mod_adapt}{g_tarr}"
+                        tarr_hist = _attach_tarr_generic(
+                            mod_adapt, tc_raw, is_ruler=bool(r3.get("ruler_eponym")), morph_fam=coin_fam
+                        )
                     calque_mode = "sinosphere_hybrid_generic_calque" if mod.get("is_opaque_eponym") else "sinosphere_12c_phonetic"
                     pathway = f"{coined_form} ({hanzi_str or '12c phonetic'}) -> [{trans_prof}] -> {tarr_hist}"
                 else:
@@ -933,10 +962,17 @@ def run_stage4() -> dict[str, Any]:
                     g_nat = gen["native_form"]
                     g_is_fr = (coin_fam == "gallo_romance")
                     if gen["affix_position"] == "prefix":
-                        sep = "" if g_nat.endswith("-") else (gen.get("joiner") or " ")
-                        g_part = adapt(g_nat.strip(), trans_prof, rup=True, force_gallo=g_is_fr)
-                        tarr_hist = f"{g_part}{sep}{mod_lat}"
+                        if mod_lat.lower().endswith(("bucht", "berch", "tal", "wald", "sê", "vurt")):
+                            tarr_hist = _attach_tarr_generic(mod_lat, gen["tarr_calque"], morph_fam=coin_fam)
+                        else:
+                            if " " in mod_lat:
+                                mod_lat, _ = reduce_stem_for_suffixing(mod_lat, morphology_family=coin_fam)
+                            sep = "" if g_nat.endswith("-") else (gen.get("joiner") or " ")
+                            g_part = adapt(g_nat.strip(), trans_prof, rup=True, force_gallo=g_is_fr)
+                            tarr_hist = f"{g_part}{sep}{mod_lat}"
                     else:
+                        if " " in mod_lat:
+                            mod_lat, _ = reduce_stem_for_suffixing(mod_lat, morphology_family=coin_fam)
                         g_part = adapt(g_nat.lstrip("-"), trans_prof, rup=True, force_gallo=g_is_fr).lower()
                         tarr_hist = f"{mod_lat}{g_part}"
             else:
@@ -965,14 +1001,8 @@ def run_stage4() -> dict[str, Any]:
                         mod_tarr = mod_tarr[:-1] + "tz"
                 if not mod_tarr:
                     mod_tarr = adapt_latin_to_tarraconian(mod_text, suppress_geo_head=True) if is_true_latin else adapt(mod_text, eff_trans_prof)
-                if g_calque.startswith("Zant-"):
-                    tarr_hist = f"Zant-{mod_tarr}"
-                elif g_calque.endswith("-"):
-                    tarr_hist = f"{g_calque}{mod_tarr}"
-                elif g_calque.startswith("Castel-"):
-                    tarr_hist = f"{mod_tarr}burch"
-                else:
-                    tarr_hist = f"{mod_tarr}{g_clean}"
+                is_ruler_mod = bool(r3.get("ruler_eponym"))
+                tarr_hist = _attach_tarr_generic(mod_tarr, g_calque, is_ruler=is_ruler_mod, morph_fam=coin_fam)
                 calque_mode = "hybrid_generic_calque"
                 pathway = f"{coined_form} -> [Rule 3 Proper Stem + Calqued Generic '{g_calque}'] -> {tarr_hist}"
 
@@ -994,7 +1024,7 @@ def run_stage4() -> dict[str, Any]:
                 else:
                     # Transitional (<50y): keep adapted modifier, calque generic
                     mod_ad = adapt_latin_to_tarraconian(mod_text, suppress_geo_head=True) if is_true_latin else adapt(mod_text, eff_trans_prof)
-                    tarr_hist = f"{mod_ad}{g_clean}" if not g_calque.endswith("-") else f"{g_calque}{mod_ad}"
+                    tarr_hist = _attach_tarr_generic(mod_ad, g_calque, morph_fam=coin_fam)
                     calque_mode = "hybrid_generic_calque"
                     pathway = f"{coined_form} -> [Transitional <50y Hybrid: {mod_ad} + {g_calque}] -> {tarr_hist}"
 
@@ -1002,11 +1032,11 @@ def run_stage4() -> dict[str, Any]:
             elif is_true_latin:
                 mod_ad = adapt_latin_to_tarraconian(mod_text, suppress_geo_head=True)
                 if g_calque.startswith("Castel-"):
+                    if " " in mod_ad:
+                        mod_ad, _ = reduce_stem_for_suffixing(mod_ad, morphology_family=coin_fam)
                     tarr_hist = f"Castel-{mod_ad}"
-                elif g_calque.endswith("-"):
-                    tarr_hist = f"{g_calque}{mod_ad}"
                 else:
-                    tarr_hist = f"{mod_ad}{g_clean}"
+                    tarr_hist = _attach_tarr_generic(mod_ad, g_calque, morph_fam=coin_fam)
                 calque_mode = "hybrid_generic_calque"
                 pathway = f"{coined_form} (Latin) -> [Latin Hybrid Calque: {mod_ad} + {g_calque}] -> {tarr_hist}"
             else:
@@ -1015,7 +1045,7 @@ def run_stage4() -> dict[str, Any]:
                 if is_direct_trans and head_calq:
                     rest_stem = " ".join(words[1:])
                     rest_ad = adapt(rest_stem)
-                    tarr_hist = f"{rest_ad}{g_clean}"
+                    tarr_hist = _attach_tarr_generic(rest_ad, g_calque, morph_fam=coin_fam)
                     calque_mode = "hybrid_generic_calque"
                     calque_concepts = [head_calq[1], gen.get("gloss", "")]
                     pathway = f"{coined_form} -> [Direct NTR Head '{words[0]}' + {g_calque}] -> {tarr_hist}"
@@ -1023,18 +1053,18 @@ def run_stage4() -> dict[str, Any]:
                     rest_stem = " ".join(words[:-1])
                     tail_calq = TRANSPARENT_NTR_HEADS[words[-1].lower()]
                     rest_ad = adapt(rest_stem)
-                    tarr_hist = f"{rest_ad}{g_clean}"
+                    tarr_hist = _attach_tarr_generic(rest_ad, g_calque, morph_fam=coin_fam)
                     calque_mode = "hybrid_generic_calque"
                     calque_concepts = [tail_calq[1], gen.get("gloss", "")]
                     pathway = f"{coined_form} -> [Direct NTR Tail '{words[-1]}' + {g_calque}] -> {tarr_hist}"
                 else:
                     mod_ad = adapt(mod_text)
                     if g_calque.startswith("Castel-"):
+                        if " " in mod_ad:
+                            mod_ad, _ = reduce_stem_for_suffixing(mod_ad, morphology_family=coin_fam)
                         tarr_hist = f"Castel-{mod_ad}"
-                    elif g_calque.endswith("-"):
-                        tarr_hist = f"{g_calque}{mod_ad}"
                     else:
-                        tarr_hist = f"{mod_ad}{g_clean}"
+                        tarr_hist = _attach_tarr_generic(mod_ad, g_calque, morph_fam=coin_fam)
                     calque_mode = "hybrid_generic_calque"
                     pathway = f"{coined_form} -> [Hybrid Generic Calque: {mod_ad} + {g_calque}] -> {tarr_hist}"
 
